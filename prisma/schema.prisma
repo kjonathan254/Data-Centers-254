@@ -1,0 +1,208 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ────────────────────────────────────────────────────────────────
+// Kenya Digital Infrastructure Database
+// Data Centre 254 — dc254.ke
+// ────────────────────────────────────────────────────────────────
+
+// Core entity: A single data centre facility
+model Facility {
+  id              String   @id @default(cuid())
+  name            String                       // e.g. "NBOX1"
+  slug            String   @unique              // e.g. "nbox1"
+  description     String?                      // Brief description
+  status          String   @default("Operational") // Operational, Under Construction, Planned, Announced
+
+  // Location
+  address         String?
+  city            String   @default("Nairobi")
+  region          String   @default("Nairobi County")
+  coordinates     String?                      // "-1.2855,36.8245"
+
+  // Capacity
+  itLoadMw        Float?                       // IT load in megawatts
+  totalCapacityMw Float?                       // Total facility capacity MW
+  rackCount       Int?                         // Total racks
+  occupiedRacks   Int?                         // Occupied racks
+  floorSpaceSqM   Int?                         // Floor space in square metres
+
+  // Classification
+  tierRating      String?                      // Tier I, II, III, IV, or "Designed for Tier III"
+  facilityType    String?                      // Colocation, Hyperscale, Edge, Telco, Enterprise
+  aiReady         Boolean  @default(false)      // High-density racks for AI/GPU workloads
+
+  // Key dates
+  openedDate      String?                      // YYYY or YYYY-MM
+  expansionDate   String?                      // Expected expansion completion
+
+  // Details
+  coolingType     String?                      // Air, Liquid, Direct-to-Chip, Immersion, Hybrid
+  powerSource     String?                      // Grid, Geothermal, Solar, Hybrid
+  renewableClaim  String?                      // Operator's renewable energy claim
+  notable         String?                      // Key notable fact
+
+  // Metadata
+  lastVerified    String?                      // Date this data was last verified
+  dataSource      String?                      // Where this data came from
+  dataConfidence  String   @default("Medium")   // High, Medium, Low
+
+  // Relations
+  operatorId      String
+  operator        Operator @relation(fields: [operatorId], references: [id])
+
+  connectivityFacility ConnectivityProviderFacility[]
+  certifications    FacilityCertification[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([city])
+  @@index([status])
+  @@index([operatorId])
+}
+
+// Companies that own or operate data centres
+model Operator {
+  id          String     @id @default(cuid())
+  name        String
+  slug        String     @unique
+  description String?
+  hqCountry   String   @default("Kenya")
+ parentCompany String?   // e.g. "Liquid Intelligent Technologies" for "Africa Data Centres"
+ website     String?
+  type        String?    // DC Operator, Telco, Cloud Provider, REIT
+
+  facilities   Facility[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Connectivity providers available at a facility
+model ConnectivityProvider {
+  id          String     @id @default(cuid())
+  name        String
+  type        String?    // Subsea Cable, Fibre Operator, IXP, Cloud On-Ramp, CDN
+  description String?
+
+  facilities   ConnectivityProviderFacility[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Many-to-many: facilities <-> connectivity providers
+model ConnectivityProviderFacility {
+  facilityId       String
+  providerId       String
+  
+  facility         Facility             @relation(fields: [facilityId], references: [id])
+  provider         ConnectivityProvider @relation(fields: [providerId], references: [id])
+
+  @@id([facilityId, providerId])
+}
+
+// Industry certifications held by a facility
+model Certification {
+  id          String     @id @default(cuid())
+  name        String                      // e.g. "ISO 27001", "Tier III Design", "SOC 2"
+  type        String?                    // Security, Design, Environmental, Operational
+  description String?
+
+  facilities   FacilityCertification[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Many-to-many: facilities <-> certifications
+model FacilityCertification {
+  facilityId      String
+  certificationId String
+
+  facility        Facility     @relation(fields: [facilityId], references: [id])
+  certification    Certification @relation(fields: [certificationId], references: [id])
+
+  @@id([facilityId, certificationId])
+}
+
+// ────────────────────────────────────────────────────────────────
+// Articles & Verification System
+// ────────────────────────────────────────────────────────────────
+
+model Article {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  tlDr            String?                         // One-sentence TL;DR
+  description     String?                         // Short description for meta/listing
+  cluster         String                           // Beginner, Kenya, Internet, Energy, Careers
+  status          String   @default("Draft")       // Draft, InReview, Published
+  content         String                           // Markdown body
+  readingTimeMin  Int?                             // Estimated reading time in minutes
+
+  // Verification
+  lastVerified    String?
+  dataSource      String?
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  // Ordering within cluster
+  sortOrder       Int      @default(0)
+
+  // Foundational articles — the 12 that launch DC254 Brief
+  isFoundational  Boolean  @default(false)
+  foundationalOrder Int     @default(0)
+
+  // Relations
+  claims          ArticleClaim[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([cluster])
+  @@index([status])
+  @@index([cluster, sortOrder])
+}
+
+// ────────────────────────────────────────────────────────────────
+// Newsletter Subscribers
+// ────────────────────────────────────────────────────────────────
+
+model Subscriber {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  status        String   @default("Active")  // Active, Unsubscribed
+  source        String?                          // Where they subscribed (homepage, article, etc.)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([email])
+  @@index([status])
+}
+
+model ArticleClaim {
+  id              String   @id @default(cuid())
+  claim           String                           // The factual statement
+  source          String?                          // URL or document reference
+  sourceTitle     String?                          // Human-readable source name
+  verifiedDate    String?                          // YYYY-MM or YYYY-MM-DD
+  confidence      String   @default("Medium")     // High, Medium, Low, Unverified
+  notes           String?                          // Additional context
+
+  articleId       String
+  article         Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
