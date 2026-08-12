@@ -2,6 +2,8 @@ import { db } from "@/lib/db";
 import FoundationsClient from "./FoundationsClient";
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "Foundations — DC254",
   description:
