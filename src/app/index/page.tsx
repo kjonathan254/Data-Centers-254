@@ -4,6 +4,8 @@ import Footer from "@/components/footer";
 import Directory from "@/components/sections/directory";
 import { db } from "@/lib/db";
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "Kenya's Data Centre Index",
   description:

@@ -117,6 +117,9 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Directory API error:', error);
-    return NextResponse.json({ error: 'Failed to fetch directory data' }, { status: 500 });
+    return NextResponse.json(
+      { facilities: [], filters: { operators: [], statuses: [], cities: [], types: [] }, stats: { totalFacilities: 0, operationalCount: 0, totalMw: 0, totalRacks: 0, aiReadyCount: 0 }, error: 'Directory temporarily unavailable' },
+      { status: 503 }
+    );
   }
 }
