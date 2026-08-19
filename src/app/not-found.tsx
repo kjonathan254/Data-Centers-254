@@ -65,7 +65,7 @@ export default function Custom404() {
             </Link>
 
             <Link
-              href="/beginners"
+              href="/data-centres"
               className="glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
             >
               <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-cyan transition-colors shrink-0" />

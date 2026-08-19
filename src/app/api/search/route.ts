@@ -7,69 +7,77 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ articles: [], facilities: [] });
   }
 
-  // Search articles by title, description, tlDr, and content
-  const articles = await db.article.findMany({
-    where: {
-      status: "Published",
-      OR: [
-        { title: { contains: q } },
-        { description: { contains: q } },
-        { tlDr: { contains: q } },
-        { content: { contains: q } },
-      ],
-    },
-    select: {
-      title: true,
-      slug: true,
-      tlDr: true,
-      description: true,
-      cluster: true,
-      readingTimeMin: true,
-      lastVerified: true,
-    },
-    take: 20,
-    orderBy: { sortOrder: "asc" },
-  });
-
-  // Search facilities by name, operator name, city, type
-  const facilities = await db.facility.findMany({
-    where: {
-      OR: [
-        { name: { contains: q } },
-        { city: { contains: q } },
-        { facilityType: { contains: q } },
-        { tierRating: { contains: q } },
-        { notable: { contains: q } },
-        { operator: { name: { contains: q } } },
-        { connectivityProviders: {
-          some: {
-            provider: { name: { contains: q } },
-          },
-        } },
-        { certifications: {
-          some: {
-            certification: { name: { contains: q } },
-          },
-        } },
-      ],
-    },
-    select: {
-      name: true,
-      slug: true,
-      city: true,
-      status: true,
-      itLoadMw: true,
-      tierRating: true,
-      facilityType: true,
-      notable: true,
-      operator: { select: { name: true } },
-      connectivityProviders: {
-        select: { provider: { select: { name: true } } },
-        take: 3,
+  try {
+    // Search articles by title, description, tlDr, and content
+    const articles = await db.article.findMany({
+      where: {
+        status: "Published",
+        OR: [
+          { title: { contains: q } },
+          { description: { contains: q } },
+          { tlDr: { contains: q } },
+          { content: { contains: q } },
+        ],
       },
-    },
-    take: 10,
-  });
+      select: {
+        title: true,
+        slug: true,
+        tlDr: true,
+        description: true,
+        cluster: true,
+        readingTimeMin: true,
+        lastVerified: true,
+      },
+      take: 20,
+      orderBy: { sortOrder: "asc" },
+    });
 
-  return NextResponse.json({ articles, facilities });
+    // Search facilities by name, operator name, city, type
+    const facilities = await db.facility.findMany({
+      where: {
+        OR: [
+          { name: { contains: q } },
+          { city: { contains: q } },
+          { facilityType: { contains: q } },
+          { tierRating: { contains: q } },
+          { notable: { contains: q } },
+          { operator: { name: { contains: q } } },
+          { connectivityProviders: {
+            some: {
+              provider: { name: { contains: q } },
+            },
+          } },
+          { certifications: {
+            some: {
+              certification: { name: { contains: q } },
+            },
+          } },
+        ],
+      },
+      select: {
+        name: true,
+        slug: true,
+        city: true,
+        status: true,
+        itLoadMw: true,
+        tierRating: true,
+        facilityType: true,
+        notable: true,
+        operator: { select: { name: true } },
+        connectivityProviders: {
+          select: { provider: { select: { name: true } } },
+          take: 3,
+        },
+      },
+      take: 10,
+    });
+
+    return NextResponse.json({ articles, facilities });
+  } catch (error) {
+    console.error('Search API error:', error);
+    return NextResponse.json(
+      { articles: [], facilities: [], error: 'Search temporarily unavailable' },
+      { status: 503 }
+    );
+  }
 }
