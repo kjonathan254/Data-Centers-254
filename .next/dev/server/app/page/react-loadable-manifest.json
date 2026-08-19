@@ -1,0 +1,10 @@
+{
+  "[project]/src/components/mobile-nav-sheet.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/components/mobile-nav-sheet.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_6686e1bc._.js",
+      "static/chunks/src_components_0a7260c5._.js",
+      "static/chunks/src_components_mobile-nav-sheet_tsx_8642f23e._.js"
+    ]
+  }
+}
