@@ -3,8 +3,8 @@ import sys
 import os
 import os
 
-# Use the dev.db in the workspace root
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "dev.db")
+# Use the dev.db in the prisma directory
+DB_PATH = os.path.join(os.path.dirname(__file__), "dev.db")
 
 
 def get_connection():
