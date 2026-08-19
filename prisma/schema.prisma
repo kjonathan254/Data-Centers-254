@@ -59,6 +59,13 @@ model Facility {
 
   connectivityFacility ConnectivityProviderFacility[]
   certifications    FacilityCertification[]
+  
+  // Phase 1 relations
+  pricingData     PricingData[]
+  outageReports   OutageReport[]
+  energyMetrics   EnergyMetric[]
+  tenants         Tenant[]
+  jobPostings     JobPosting[]
 
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
@@ -205,4 +212,338 @@ model ArticleClaim {
 
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+}
+
+// ────────────────────────────────────────────────────────────────
+// Phase 1 Enhancement Models - Intelligence Platform
+// ────────────────────────────────────────────────────────────────
+
+// Pricing data for facilities (colocation pricing intelligence)
+model PricingData {
+  id              String   @id @default(cuid())
+  facilityId      String
+  facility        Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  
+  // Pricing type
+  pricingType     String                           // Colocation, Cloud, Managed Services
+  serviceLevel    String?                          // Standard, Premium, Enterprise
+  
+  // Power-based pricing
+  pricePerRackMw  Float?                           // Price per rack per month (USD)
+  rackDensityKw   Float?                           // kW per rack
+  minimumCommitmentKw Float?                       // Minimum power commitment
+  
+  // Space-based pricing
+  pricePerSqM     Float?                           // Price per square meter per month (USD)
+  pricePerCabinet Float?                           // Price per cabinet per month (USD)
+  
+  // Cross-connect pricing
+  crossConnectPrice Float?                         // Price per cross-connect (USD/month)
+  
+  // Currency and validity
+  currency        String   @default("USD")
+  validFrom       String                           // YYYY-MM
+  validUntil      String?                          // YYYY-MM
+  isPublic        Boolean  @default(false)         // Is this publicly available pricing?
+  
+  // Data quality
+  dataSource      String?                          // Where this pricing came from
+  dataConfidence  String   @default("Medium")     // High, Medium, Low
+  
+  notes           String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([facilityId])
+  @@index([pricingType])
+}
+
+// Outage and incident tracking
+model OutageReport {
+  id              String   @id @default(cuid())
+  facilityId      String?
+  facility        Facility? @relation(fields: [facilityId], references: [id], onDelete: SetNull)
+  
+  // Outage details
+  outageType      String                           // Planned, Unplanned, Maintenance
+  severity        String   @default("Medium")     // Critical, High, Medium, Low
+  status          String   @default("Investigating") // Investigating, Identified, Monitoring, Resolved
+  
+  // Timing
+  startedAt       String                           // ISO 8601 timestamp
+  resolvedAt      String?                          // ISO 8601 timestamp
+  durationMinutes Int?                             // Total duration if resolved
+  
+  // Impact
+  affectedServices String?                        // What services were affected
+  impactDescription String?                        // Description of impact
+  customersAffected Int?                           // Estimated number of customers affected
+  
+  // Root cause and resolution
+  rootCause       String?
+  resolution      String?
+  
+  // Reporting
+  reportedBy      String?                          // Who reported this
+  isVerified      Boolean  @default(false)
+  verificationSource String?
+  
+  notes           String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([facilityId])
+  @@index([status])
+  @@index([severity])
+  @@index([startedAt])
+}
+
+// Energy metrics and sustainability data
+model EnergyMetric {
+  id              String   @id @default(cuid())
+  facilityId      String
+  facility        Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  
+  // Measurement period
+  measurementDate String                           // YYYY-MM
+  reportingPeriod String?                          // Monthly, Quarterly, Annual
+  
+  // Power usage
+  totalPowerMwh   Float?                           // Total power consumed (MWh)
+  itPowerMwh      Float?                           // IT equipment power (MWh)
+  coolingPowerMwh Float?                           // Cooling system power (MWh)
+  
+  // Efficiency metrics
+  pue             Float?                           // Power Usage Effectiveness
+  wue             Float?                           // Water Usage Effectiveness (L/kWh)
+  cue             Float?                           // Carbon Usage Effectiveness
+  
+  // Renewable energy
+  renewablePercentage Float?                       // % of power from renewable sources
+  renewableSource String?                          // Solar, Wind, Geothermal, Hydro, Mix
+  onSiteGenerationMwh Float?                       // On-site renewable generation (MWh)
+  
+  // Carbon footprint
+  carbonTonnesCO2 Float?                           // Total CO2 emissions (tonnes)
+  carbonOffset    Float?                           // Carbon offsets purchased (tonnes)
+  
+  // Data quality
+  isAudited       Boolean  @default(false)
+  auditStandard   String?                          // ISO 50001, etc.
+  dataSource      String?
+  dataConfidence  String   @default("Medium")
+  
+  notes           String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([facilityId])
+  @@index([measurementDate])
+  @@index([pue])
+}
+
+// Tenant/customer information (aggregate, non-sensitive)
+model Tenant {
+  id              String   @id @default(cuid())
+  facilityId      String
+  facility        Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  
+  // Tenant info (public/aggregate only)
+  tenantName      String?                          // Company name if public
+  tenantType      String                           // Enterprise, Hyperscaler, Government, Financial, Telco, Cloud
+  industry        String?                          // Industry sector
+  
+  // Presence details
+  presenceType    String                           // Colocation, Cloud Region, Edge Node, Interconnection
+  rackCount       Int?                             // Number of racks occupied
+  powerCommitmentKw Float?                         // Committed power (kW)
+  floorSpaceSqM   Int?                             // Floor space occupied (sqm)
+  
+  // Timeline
+  moveInDate      String?                          // YYYY-MM
+  contractLengthMonths Int?                        // Contract length in months
+  expansionPlanned Boolean @default(false)
+  
+  // Strategic importance
+  isAnchorTenant  Boolean  @default(false)
+  isHyperscaler   Boolean  @default(false)
+  
+  // Data quality
+  isPublic        Boolean  @default(false)        // Is this publicly confirmed?
+  dataSource      String?
+  dataConfidence  String   @default("Medium")
+  
+  notes           String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([facilityId])
+  @@index([tenantType])
+  @@index([isHyperscaler])
+}
+
+// Job postings for the careers board
+model JobPosting {
+  id              String   @id @default(cuid())
+  
+  // Job details
+  title           String
+  slug            String   @unique
+  company         String
+  companyId       String?                          // Link to Operator if applicable
+  
+  location        String
+  locationType    String   @default("On-site")     // On-site, Hybrid, Remote
+  facilityId      String?                          // Specific facility if on-site
+  facility        Facility? @relation(fields: [facilityId], references: [id], onDelete: SetNull)
+  
+  // Role details
+  jobType         String   @default("Full-time")   // Full-time, Part-time, Contract, Internship
+  experienceLevel String   @default("Mid-level")   // Entry, Mid, Senior, Executive
+  department      String?                          // Engineering, Operations, Sales, etc.
+  
+  salaryMin       Int?                             // Minimum salary (USD/year)
+  salaryMax       Int?                             // Maximum salary (USD/year)
+  salaryCurrency  String   @default("USD")
+  salaryPeriod    String   @default("yearly")      // yearly, monthly, hourly
+  
+  description     String                           // Full job description (markdown)
+  requirements    String?                          // Requirements list (markdown)
+  benefits        String?                          // Benefits list (markdown)
+  
+  // Application
+  applicationUrl  String?
+  applicationEmail String?
+  applicationDeadline String?                      // YYYY-MM-DD
+  
+  // Status
+  status          String   @default("Active")      // Active, Closed, On Hold
+  isFeatured      Boolean  @default(false)
+  
+  // Metadata
+  postedDate      String                           // YYYY-MM-DD
+  expirationDate  String?                          // YYYY-MM-DD
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([status])
+  @@index([jobType])
+  @@index([experienceLevel])
+  @@index([postedDate])
+  @@index([facilityId])
+}
+
+// Premium report metadata
+model Report {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  subtitle        String?
+  
+  // Content
+  executiveSummary String?                        // Free preview
+  fullContent     String?                        // Full report (markdown/pdf path)
+  pageCount       Int?
+  
+  // Classification
+  reportType      String   @default("Market Research") // Market Research, Technical Guide, Regulatory Update
+  topic           String?                          // Primary topic
+  regions         String?                          // Covered regions (comma-separated)
+  
+  // Pricing & Access
+  priceUsd        Float?                           // Price in USD
+  isFree          Boolean  @default(false)
+  accessLevel     String   @default("Premium")     // Free, Newsletter, Premium, Enterprise
+  
+  // Publication
+  publishedDate   String                           // YYYY-MM-DD
+  updatedDate     String?                          // YYYY-MM-DD
+  version         String   @default("1.0")
+  
+  // Authors
+  authors         String?                          // Comma-separated author names
+  sponsor         String?                          // If sponsored
+  
+  // Metrics
+  downloadCount   Int      @default(0)
+  viewCount       Int      @default(0)
+  
+  // Status
+  status          String   @default("Draft")       // Draft, Published, Archived
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([status])
+  @@index([reportType])
+  @@index([publishedDate])
+}
+
+// User accounts for premium access (future authentication)
+model User {
+  id              String   @id @default(cuid())
+  email           String   @unique
+  passwordHash    String?                          // Null if OAuth only
+  
+  // Profile
+  name            String?
+  company         String?
+  jobTitle        String?
+  country         String?
+  
+  // Subscription
+  subscriptionTier String  @default("Free")        // Free, Newsletter, Premium, Enterprise
+  subscriptionStart String?                        // ISO date
+  subscriptionEnd   String?                        // ISO date
+  
+  // Permissions
+  isAdmin         Boolean  @default(false)
+  isVerified      Boolean  @default(false)        // Email verified
+  
+  // Activity
+  lastLoginAt     String?                          // ISO timestamp
+  loginCount      Int      @default(0)
+  
+  // Relations
+  apiTokens       ApiToken[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([email])
+  @@index([subscriptionTier])
+}
+
+// API access tokens for enterprise API users
+model ApiToken {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name            String                           // Token name/description
+  tokenHash       String                           // Hashed token value
+  tokenPrefix     String                           // First few chars for identification
+  
+  // Permissions
+  scope           String   @default("read")        // read, write, admin
+  rateLimitPerMinute Int @default(60)
+  
+  // Usage tracking
+  lastUsedAt      String?                          // ISO timestamp
+  requestCount    Int      @default(0)
+  
+  // Lifecycle
+  expiresAt       String?                          // ISO timestamp (null = never)
+  isActive        Boolean  @default(true)
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([isActive])
 }
