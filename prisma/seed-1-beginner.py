@@ -1,7 +1,10 @@
 import sqlite3
 import sys
+import os
+import os
 
-DB_PATH = "/home/z/my-project/db/custom.db"
+# Use the dev.db in the workspace root
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "dev.db")
 
 
 def get_connection():
