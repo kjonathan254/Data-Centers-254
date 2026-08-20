@@ -10,6 +10,12 @@ function createPrismaClient() {
   const url = process.env.DATABASE_URL
   const token = process.env.TURSO_AUTH_TOKEN
 
+  // Check if using SQLite (local development)
+  if (url?.startsWith('file:')) {
+    const { PrismaClient: SqlitePrismaClient } = require('@prisma/client')
+    return new SqlitePrismaClient()
+  }
+
   if (!url) {
     throw new Error(
       'DATABASE_URL is not set. Please add it to your .env file or Vercel environment variables.'
