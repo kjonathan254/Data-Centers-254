@@ -15,7 +15,7 @@ function getRateLimitKey(req: NextRequest): string {
   return ip;
 }
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   // Only rate-limit API routes (except the root /api health check)
   const { pathname } = req.nextUrl;
   if (!pathname.startsWith('/api/') || pathname === '/api') {
