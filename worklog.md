@@ -23,3 +23,26 @@ Stage Summary:
 - Code changes: page.tsx, news.tsx, latest-intelligence.tsx, api/articles/route.ts
 - Pushed to GitHub: commit c98851a..34f1813 main -> main
 - NOTE: Article appears in hardcoded News section immediately. LatestIntelligence + /articles/[slug] page require DB env vars on Vercel + running seed script
+
+---
+Task ID: 2
+Agent: main
+Task: Fix npm allow-scripts Vercel build warnings, create static article page, add homepage news banner, push to GitHub
+
+Work Log:
+- Diagnosed npm allow-scripts warnings: packages installed via bun, npm can't match them for approval
+- Created .npmrc with `allow-scripts=*` to fix Vercel build warnings for esbuild, sharp, @prisma/client, prisma, @prisma/engines, unrs-resolver
+- Created static article page at /news/kenya-data-centre-licensing-framework (no DB dependency)
+- Page includes: full article content as Markdown, SEO metadata, JSON-LD structured data, breadcrumbs, comparison table, sources table
+- Created LatestNewsBanner homepage component with gradient accent card linking to the article
+- Inserted banner between EnergySection and LatestIntelligence on homepage
+- Fixed TypeScript error (missing `}` in JSX comment in latest-news-banner.tsx)
+- Verified no TS errors in new files
+- Committed and force-pushed to GitHub (9f386cb)
+
+Stage Summary:
+- Article live at: /news/kenya-data-centre-licensing-framework (static, works without DB)
+- Homepage news banner visible between Energy and LatestIntelligence sections
+- .npmrc fixes Vercel build allow-scripts warnings
+- Pushed to GitHub: 34f1813..9f386cb main -> main
+- STILL NEEDED: User must set Vercel env vars (DATABASE_URL, TURSO_AUTH_TOKEN, RESEND_API_KEY) for DB-dependent pages

@@ -1,0 +1,489 @@
+     1→const {
+     2→  Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
+     3→  Header, Footer, PageNumber, AlignmentType, HeadingLevel,
+     4→  WidthType, BorderStyle, ShadingType, PageBreak, SectionType,
+     5→} = require("docx");
+     6→const fs = require("fs");
+     7→
+     8→// ─── DM-1 Palette (Deep Cyan — tech/digital infrastructure) ───
+     9→const P = {
+    10→  bg: "162235", primary: "FFFFFF", accent: "37DCF2",
+    11→  cover: { titleColor: "FFFFFF", subtitleColor: "B0B8C0", metaColor: "90989F", footerColor: "687078" },
+    12→  table: { headerBg: "1B6B7A", headerText: "FFFFFF", accentLine: "1B6B7A", innerLine: "C8DDE2", surface: "EDF3F5" },
+    13→};
+    14→const c = (hex) => hex.replace("#", "");
+    15→
+    16→// ─── Border helpers ───
+    17→const NB = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
+    18→const noBorders = { top: NB, bottom: NB, left: NB, right: NB };
+    19→const allNoBorders = { top: NB, bottom: NB, left: NB, right: NB, insideHorizontal: NB, insideVertical: NB };
+    20→
+    21→const thinBorder = { style: BorderStyle.SINGLE, size: 1, color: P.table.innerLine };
+    22→const headerBorderBottom = { style: BorderStyle.SINGLE, size: 6, color: P.table.accentLine };
+    23→
+    24→// ─── calcTitleLayout (from design-system.md) ───
+    25→function splitTitleLines(title, charsPerLine) {
+    26→  if (title.length <= charsPerLine) return [title];
+    27→  const breakAfter = new Set([
+    28→    ...' \t', '-', '_', '/', '(', ')', ':', ',', '.', ';',
+    29→  ]);
+    30→  const lines = [];
+    31→  let remaining = title;
+    32→  while (remaining.length > charsPerLine) {
+    33→    let breakAt = -1;
+    34→    for (let i = charsPerLine; i >= Math.floor(charsPerLine * 0.6); i--) {
+    35→      if (i < remaining.length && breakAfter.has(remaining[i - 1])) { breakAt = i; break; }
+    36→    }
+    37→    if (breakAt === -1) {
+    38→      const limit = Math.min(remaining.length, Math.ceil(charsPerLine * 1.3));
+    39→      for (let i = charsPerLine + 1; i < limit; i++) {
+    40→        if (breakAfter.has(remaining[i - 1])) { breakAt = i; break; }
+    41→      }
+    42→    }
+    43→    if (breakAt === -1) breakAt = charsPerLine;
+    44→    lines.push(remaining.slice(0, breakAt).trim());
+    45→    remaining = remaining.slice(breakAt).trim();
+    46→  }
+    47→  if (remaining) lines.push(remaining);
+    48→  if (lines.length > 1 && lines[lines.length - 1].length <= 3) {
+    49→    const last = lines.pop(); lines[lines.length - 1] += " " + last;
+    50→  }
+    51→  return lines;
+    52→}
+    53→
+    54→function calcTitleLayout(title, maxWidthTwips, preferredPt = 38, minPt = 24) {
+    55→  const charWidth = (pt) => pt * 11; // English chars are ~half CJK width
+    56→  const charsPerLine = (pt) => Math.floor(maxWidthTwips / charWidth(pt));
+    57→  let titlePt = preferredPt;
+    58→  let lines;
+    59→  while (titlePt >= minPt) {
+    60→    const cpl = charsPerLine(titlePt);
+    61→    if (cpl < 2) { titlePt -= 2; continue; }
+    62→    lines = splitTitleLines(title, cpl);
+    63→    if (lines.length <= 3) break;
+    64→    titlePt -= 2;
+    65→  }
+    66→  if (!lines || lines.length > 3) {
+    67→    lines = splitTitleLines(title, charsPerLine(minPt));
+    68→    titlePt = minPt;
+    69→  }
+    70→  return { titlePt, titleLines: lines };
+    71→}
+    72→
+    73→function calcCoverSpacing(params) {
+    74→  const { titleLineCount = 1, titlePt = 36, hasSubtitle = false,
+    75→    hasEnglishLabel = false, metaLineCount = 0, fixedHeight = 800,
+    76→    marginTop = 0, marginBottom = 0, pageHeight = 16838 } = params;
+    77→  const SAFETY = 1200;
+    78→  const usableHeight = pageHeight - marginTop - marginBottom - SAFETY;
+    79→  const titleHeight = titleLineCount * (titlePt * 23 + 200);
+    80→  const subtitleHeight = hasSubtitle ? (12 * 23 + 600) : 0;
+    81→  const englishLabelHeight = hasEnglishLabel ? (9 * 23 + 600) : 0;
+    82→  const metaHeight = metaLineCount * (10 * 23 + 100);
+    83→  const implicitParaHeight = 3 * 300;
+    84→  const contentHeight = titleHeight + subtitleHeight + englishLabelHeight + metaHeight + fixedHeight + implicitParaHeight;
+    85→  const remainingSpace = usableHeight - contentHeight;
+    86→  const safeRemaining = Math.max(remainingSpace, 400);
+    87→  const FOOTER_MIN = 800;
+    88→  const rawTop = Math.floor(safeRemaining * 0.45);
+    89→  const rawBottom = Math.floor(safeRemaining * 0.45);
+    90→  const bottomSpacing = Math.max(rawBottom, FOOTER_MIN);
+    91→  const topSpacing = Math.max(rawTop - Math.max(0, FOOTER_MIN - rawBottom), 400);
+    92→  const midSpacing = Math.max(safeRemaining - topSpacing - bottomSpacing, 0);
+    93→  return { topSpacing, midSpacing, bottomSpacing };
+    94→}
+    95→
+    96→// ─── Build Cover (R1: Pure Paragraph Left) ───
+    97→function buildCoverR1(config) {
+    98→  const P = config.palette;
+    99→  const padL = 1200, padR = 800;
+   100→  const availableWidth = 11906 - padL - padR - 300;
+   101→  const { titlePt, titleLines } = calcTitleLayout(config.title, availableWidth, 38, 24);
+   102→  const titleSize = titlePt * 2;
+   103→  const spacing = calcCoverSpacing({
+   104→    titleLineCount: titleLines.length, titlePt,
+   105→    hasSubtitle: !!config.subtitle, hasEnglishLabel: !!config.englishLabel,
+   106→    metaLineCount: (config.metaLines || []).length, fixedHeight: 800,
+   107→  });
+   108→
+   109→  const children = [];
+   110→  // Top whitespace
+   111→  children.push(new Paragraph({ spacing: { before: spacing.topSpacing }, children: [] }));
+   112→  // English label with accent bottom border
+   113→  if (config.englishLabel) {
+   114→    children.push(new Paragraph({
+   115→      spacing: { after: 200 },
+   116→      border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: P.accent, space: 8 } },
+   117→      children: [new TextRun({ text: config.englishLabel, font: { ascii: "Calibri" }, size: 20, color: P.accent, characterSpacing: 120 })],
+   118→    }));
+   119→  }
+   120→  // Title lines
+   121→  for (let i = 0; i < titleLines.length; i++) {
+   122→    children.push(new Paragraph({
+   123→      spacing: { line: Math.ceil(titlePt * 23), lineRule: "atLeast", after: i === titleLines.length - 1 ? 200 : 60 },
+   124→      children: [new TextRun({ text: titleLines[i], font: { ascii: "Calibri" }, size: titleSize, bold: true, color: P.cover.titleColor })],
+   125→    }));
+   126→  }
+   127→  // Subtitle
+   128→  if (config.subtitle) {
+   129→    children.push(new Paragraph({
+   130→      spacing: { after: 300, line: 312 },
+   131→      children: [new TextRun({ text: config.subtitle, font: { ascii: "Calibri" }, size: 22, color: P.cover.subtitleColor })],
+   132→    }));
+   133→  }
+   134→  // Meta lines
+   135→  for (const ml of config.metaLines || []) {
+   136→    children.push(new Paragraph({
+   137→      spacing: { after: 60 },
+   138→      border: { left: { style: BorderStyle.SINGLE, size: 6, color: P.accent, space: 10 } },
+   139→      indent: { left: 200 },
+   140→      children: [new TextRun({ text: ml, font: { ascii: "Calibri" }, size: 20, color: P.cover.metaColor })],
+   141→    }));
+   142→  }
+   143→  // Bottom spacer
+   144→  children.push(new Paragraph({ spacing: { before: spacing.bottomSpacing }, children: [] }));
+   145→  // Footer with top accent line
+   146→  children.push(new Paragraph({
+   147→    spacing: { before: 200, after: 100 },
+   148→    border: { top: { style: BorderStyle.SINGLE, size: 2, color: P.accent, space: 10 } },
+   149→    children: [
+   150→      new TextRun({ text: config.footerLeft || "Data Centre 254", font: { ascii: "Calibri" }, size: 18, color: P.cover.footerColor }),
+   151→      new TextRun({ text: "    " }),
+   152→      new TextRun({ text: config.footerRight || "August 2026", font: { ascii: "Calibri" }, size: 18, color: P.cover.footerColor }),
+   153→    ],
+   154→  }));
+   155→
+   156→  // Wrap in full-page table
+   157→  return [new Table({
+   158→    borders: allNoBorders,
+   159→    width: { size: 11906, type: WidthType.DXA },
+   160→    rows: [new TableRow({
+   161→      height: { value: 16838, rule: "exact" },
+   162→      verticalAlign: "top",
+   163→      children: [new TableCell({
+   164→        borders: allNoBorders,
+   165→        shading: { fill: P.bg, type: ShadingType.CLEAR },
+   166→        width: { size: 11906, type: WidthType.DXA },
+   167→        margins: { top: 0, bottom: 0, left: padL, right: padR },
+   168→        children,
+   169→      })],
+   170→    })],
+   171→  })];
+   172→}
+   173→
+   174→// ─── Article Body Helpers ───
+   175→function heading1(text) {
+   176→  return new Paragraph({
+   177→    heading: HeadingLevel.HEADING_1,
+   178→    spacing: { before: 480, after: 200, line: 312 },
+   179→    children: [new TextRun({ text, bold: true, size: 32, font: { ascii: "Calibri" }, color: c(P.table.accentLine) })],
+   180→  });
+   181→}
+   182→
+   183→function heading2(text) {
+   184→  return new Paragraph({
+   185→    heading: HeadingLevel.HEADING_2,
+   186→    spacing: { before: 360, after: 160, line: 312 },
+   187→    children: [new TextRun({ text, bold: true, size: 28, font: { ascii: "Calibri" }, color: "1C2A3D" })],
+   188→  });
+   189→}
+   190→
+   191→function bodyPara(text) {
+   192→  return new Paragraph({
+   193→    alignment: AlignmentType.JUSTIFIED,
+   194→    spacing: { after: 180, line: 312 },
+   195→    children: [new TextRun({ text, size: 24, font: { ascii: "Calibri" }, color: "1C2A3D" })],
+   196→  });
+   197→}
+   198→
+   199→function bodyParaRuns(runs) {
+   200→  return new Paragraph({
+   201→    alignment: AlignmentType.JUSTIFIED,
+   202→    spacing: { after: 180, line: 312 },
+   203→    children: runs,
+   204→  });
+   205→}
+   206→
+   207→function bold(text) {
+   208→  return new TextRun({ text, bold: true, size: 24, font: { ascii: "Calibri" }, color: "1C2A3D" });
+   209→}
+   210→
+   211→function normal(text) {
+   212→  return new TextRun({ text, size: 24, font: { ascii: "Calibri" }, color: "1C2A3D" });
+   213→}
+   214→
+   215→function accent(text) {
+   216→  return new TextRun({ text, bold: true, size: 24, font: { ascii: "Calibri" }, color: c(P.table.accentLine) });
+   217→}
+   218→
+   219→function captionPara(text) {
+   220→  return new Paragraph({
+   221→    alignment: AlignmentType.LEFT,
+   222→    spacing: { before: 80, after: 240, line: 312 },
+   223→    children: [new TextRun({ text, size: 20, font: { ascii: "Calibri" }, italics: true, color: "5B6B7D" })],
+   224→  });
+   225→}
+   226→
+   227→// ─── Build Comparison Table ───
+   228→function buildComparisonTable() {
+   229→  const headerRow = (cells) => new TableRow({
+   230→    tableHeader: true,
+   231→    cantSplit: true,
+   232→    children: cells.map((text, i) => new TableCell({
+   233→      width: { size: i === 0 ? 35 : (i === 1 ? 32.5 : 32.5), type: WidthType.PERCENTAGE },
+   234→      shading: { fill: P.table.headerBg, type: ShadingType.CLEAR },
+   235→      borders: { top: { style: BorderStyle.SINGLE, size: 2, color: P.table.accentLine }, bottom: headerBorderBottom, left: thinBorder, right: thinBorder },
+   236→      margins: { top: 60, bottom: 60, left: 120, right: 120 },
+   237→      children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text, bold: true, size: 22, font: { ascii: "Calibri" }, color: P.table.headerText })] })],
+   238→    })),
+   239→  });
+   240→
+   241→  const dataRow = (cells, idx) => new TableRow({
+   242→    cantSplit: true,
+   243→    children: cells.map((text, i) => new TableCell({
+   244→      width: { size: i === 0 ? 35 : (i === 1 ? 32.5 : 32.5), type: WidthType.PERCENTAGE },
+   245→      shading: idx % 2 === 1 ? { fill: P.table.surface, type: ShadingType.CLEAR } : undefined,
+   246→      borders: { top: thinBorder, bottom: { style: BorderStyle.SINGLE, size: 2, color: P.table.innerLine }, left: thinBorder, right: thinBorder },
+   247→      margins: { top: 60, bottom: 60, left: 120, right: 120 },
+   248→      children: [new Paragraph({
+   249→        alignment: i === 0 ? AlignmentType.LEFT : AlignmentType.CENTER,
+   250→        children: [new TextRun({ text, size: 21, font: { ascii: "Calibri" }, color: i === 0 ? "1C2A3D" : "364860" })],
+   251→      })],
+   252→    })),
+   253→  });
+   254→
+   255→  const rows = [
+   256→    ["Data Centre Right", "Permitted without additional licence", "Primary licence category for DCs"],
+   257→    ["Geographic Scope", "Countrywide with national spectrum", "Countrywide, county-by-county build-out"],
+   258→    ["Spectrum Fees", "Reservation + utilisation fees (national stack)", "Utilisation fees only (approved regions)"],
+   259→    ["Licence Term", "15 years or 25 years (optional)", "15 years only"],
+   260→    ["Application Fee", "KES 5,000", "KES 5,000"],
+   261→    ["Initial Licence Fee", "KES 15M (15yr) / KES 45M (25yr)", "KES 15 million"],
+   262→    ["Annual Operating Fee", "0.4% of AGT or KES 4M, whichever is higher", "0.4% of AGT or KES 800K, whichever is higher"],
+   263→  ];
+   264→
+   265→  return new Table({
+   266→    width: { size: 100, type: WidthType.PERCENTAGE },
+   267→    borders: { top: { style: BorderStyle.SINGLE, size: 2, color: P.table.accentLine }, bottom: { style: BorderStyle.SINGLE, size: 2, color: P.table.accentLine }, left: thinBorder, right: thinBorder, insideHorizontal: thinBorder, insideVertical: thinBorder },
+   268→    rows: [
+   269→      headerRow(["Aspect", "NFP-T1 (Tier 1)", "NFP-T2 (Tier 2)"]),
+   270→      ...rows.map((r, i) => dataRow(r, i)),
+   271→    ],
+   272→  });
+   273→}
+   274→
+   275→// ─── Build Sources Table ───
+   276→function buildSourcesTable() {
+   277→  const sources = [
+   278→    ["Communications Authority of Kenya", "Revised Telecommunications Market Structure (June 2026)"],
+   279→    ["Kenya Gazette Notice No. 3335", "6 March 2026, published by DG David Mugonyi"],
+   280→    ["Bowmans (Law Firm)", "Kenya: Revised Telecommunications Market Structure — Formal Recognition of Data Centres (2026)"],
+   281→    ["McKay Advocates", "Kenya Strengthens ICT Investment Appeal with Formal Data Centre Regulations (April 2026)"],
+   282→    ["O'Bang Law", "Communications Authority's Revised Telecommunications Market Structure 2026 (April 2026)"],
+   283→    ["Mordor Intelligence", "Kenya Data Center Market Size, Share & 2030 Growth Trends Report (2025)"],
+   284→    ["GlobeNewswire / ResearchAndMarkets", "Kenya Data Center Investment and Growth Analysis Report 2026 (March 2026)"],
+   285→    ["Techweez", "Kenya's New KES 15 Million Data Center License: What NFP-T1 and NFP-T2 Mean (August 2026)"],
+   286→    ["Tom's Hardware / Semafor", "Microsoft $1B Kenya AI Data Centre Stalls Over Power Capacity (May 2026)"],
+   287→    ["Techweez", "Huduma Centre Services Halted After Data Center Loses Power (June 2026)"],
+   288→  ];
+   289→
+   290→  return new Table({
+   291→    width: { size: 100, type: WidthType.PERCENTAGE },
+   292→    borders: { top: thinBorder, bottom: thinBorder, left: thinBorder, right: thinBorder, insideHorizontal: thinBorder, insideVertical: thinBorder },
+   293→    rows: [
+   294→      new TableRow({
+   295→        tableHeader: true, cantSplit: true,
+   296→        children: ["Source", "Reference"].map((text, i) => new TableCell({
+   297→          width: { size: i === 0 ? 30 : 70, type: WidthType.PERCENTAGE },
+   298→          shading: { fill: P.table.headerBg, type: ShadingType.CLEAR },
+   299→          borders: { top: { style: BorderStyle.SINGLE, size: 2, color: P.table.accentLine }, bottom: headerBorderBottom, left: thinBorder, right: thinBorder },
+   300→          margins: { top: 60, bottom: 60, left: 120, right: 120 },
+   301→          children: [new Paragraph({ children: [new TextRun({ text, bold: true, size: 21, font: { ascii: "Calibri" }, color: P.table.headerText })] })],
+   302→        })),
+   303→      }),
+   304→      ...sources.map((r, i) => new TableRow({
+   305→        cantSplit: true,
+   306→        children: r.map((text, j) => new TableCell({
+   307→          width: { size: j === 0 ? 30 : 70, type: WidthType.PERCENTAGE },
+   308→          shading: i % 2 === 1 ? { fill: P.table.surface, type: ShadingType.CLEAR } : undefined,
+   309→          borders: { top: thinBorder, bottom: thinBorder, left: thinBorder, right: thinBorder },
+   310→          margins: { top: 50, bottom: 50, left: 120, right: 120 },
+   311→          children: [new Paragraph({ children: [new TextRun({ text, size: 20, font: { ascii: "Calibri" }, color: "364860" })] })],
+   312→        })),
+   313→      })),
+   314→    ],
+   315→  });
+   316→}
+   317→
+   318→// ─── Document Assembly ───
+   319→const doc = new Document({
+   320→  styles: {
+   321→    default: { document: {
+   322→      run: { font: { ascii: "Calibri" }, size: 24, color: "1C2A3D" },
+   323→      paragraph: { spacing: { line: 312 } },
+   324→    }},
+   325→  },
+   326→  sections: [
+   327→    // ── Cover Section ──
+   328→    {
+   329→      properties: {
+   330→        page: {
+   331→          size: { width: 11906, height: 16838 },
+   332→          margin: { top: 0, bottom: 0, left: 0, right: 0 },
+   333→        },
+   334→      },
+   335→      children: buildCoverR1({
+   336→        title: "Kenya's Data Centre Licensing Framework: What NFP-T1 and NFP-T2 Mean for the Industry",
+   337→        englishLabel: "DC254 REGULATORY INTELLIGENCE",
+   338→        subtitle: "The Communications Authority has formally brought commercial data centres under telecoms licensing for the first time. Here is what operators, investors, and engineers need to know.",
+   339→        metaLines: ["Published: 21 August 2026", "Author: Data Centre 254 Editorial"],
+   340→        footerLeft: "Data Centre 254", footerRight: "datacentre254.com",
+   341→        palette: P,
+   342→      }),
+   343→    },
+   344→    // ── Body Section ──
+   345→    {
+   346→      properties: {
+   347→        type: SectionType.NEXT_PAGE,
+   348→        page: {
+   349→          size: { width: 11906, height: 16838 },
+   350→          margin: { top: 1440, bottom: 1440, left: 1701, right: 1417 },
+   351→          pageNumbers: { start: 1, formatType: "decimal" },
+   352→        },
+   353→      },
+   354→      headers: {
+   355→        default: new Header({
+   356→          children: [new Paragraph({
+   357→            alignment: AlignmentType.RIGHT,
+   358→            spacing: { after: 0 },
+   359→            border: { bottom: { style: BorderStyle.SINGLE, size: 1, color: P.table.innerLine, space: 6 } },
+   360→            children: [
+   361→              new TextRun({ text: "DC254 Regulatory Intelligence", font: { ascii: "Calibri" }, size: 18, color: "5B6B7D", italics: true }),
+   362→              new TextRun({ text: "  |  ", font: { ascii: "Calibri" }, size: 18, color: "90989F" }),
+   363→              new TextRun({ text: "August 2026", font: { ascii: "Calibri" }, size: 18, color: "90989F" }),
+   364→            ],
+   365→          })],
+   366→        }),
+   367→      },
+   368→      footers: {
+   369→        default: new Footer({
+   370→          children: [new Paragraph({
+   371→            alignment: AlignmentType.CENTER,
+   372→            children: [
+   373→              new TextRun({ text: "Data Centre 254  •  ", font: { ascii: "Calibri" }, size: 18, color: "90989F" }),
+   374→              new TextRun({ children: [PageNumber.CURRENT], font: { ascii: "Calibri" }, size: 18, color: "90989F" }),
+   375→            ],
+   376→          })],
+   377→        }),
+   378→      },
+   379→      children: [
+   380→        // ── Introduction ──
+   381→        heading1("The Regulatory Shift"),
+   382→        bodyParaRuns([
+   383→          normal("On 6 March 2026, Communications Authority of Kenya Director General "),
+   384→          bold("David Mugonyi"),
+   385→          normal(" signed a notice in the Kenya Gazette that would fundamentally alter how data centres operate in the country. Gazette Notice No. 3335 gave formal effect to the "),
+   386→          bold("Revised Telecommunications Market Structure"),
+   387→          normal(", a document that, for the first time in Kenya's regulatory history, expressly brought commercial data centres within the telecommunications licensing framework. The revised structure took effect thirty days after publication, meaning that by early April 2026, every commercial data centre operator in Kenya needed to understand exactly where they fit within the new regime."),
+   388→        ]),
+   389→        bodyPara("The change is not cosmetic. Under the previous Unified Licensing Framework (ULF), which had governed Kenya's telecoms sector since 2021, data centre operators occupied an ambiguous space. They were not explicitly categorised in any licence class, which meant that licensing was often determined on a case-by-case basis depending on how a given operator's activities mapped onto existing categories. This created uncertainty for investors, inconsistent treatment for operators, and a regulatory gap that the Authority has now moved decisively to close."),
+   390→        bodyPara("The implications are significant not just for the roughly nineteen operational data centres scattered across Nairobi and Mombasa, but for the billions of shillings in planned investment that Kenya's digital infrastructure sector is hoping to attract. Microsoft's stalled one-billion-dollar AI data centre project, the expansion of Africa Data Centres and iXAfrica facilities, and the government's own National Digital Superhighway Programme all exist within a regulatory environment that has now, for the first time, been explicitly defined."),
+   391→
+   392→        // ── Why Data Centres Matter Now ──
+   393→        heading1("Why Data Centres Became Too Critical to Leave Unlicensed"),
+   394→        bodyPara("The CA's decision did not emerge from a vacuum. It was the product of a formal public consultation process that began with a consultation paper published in December 2024. In that paper, the Authority articulated a clear rationale: data centres have evolved from simple server rooms into critical national infrastructure, and the regulatory framework needed to evolve accordingly."),
+   395→        bodyParaRuns([
+   396→          normal("The Authority wrote that "),
+   397→          accent("given that the facility owner in the second type of data centre arrangement significantly influences data accessibility, it is necessary to bring these arrangements within the licensing framework to protect users' data access rights."),
+   398→          normal(" This language is telling. The CA was not merely tidying up its licence categories; it was asserting that data centres, by virtue of the role they play in mediating access to digital services, are functionally equivalent to communications infrastructure providers like tower companies and fibre operators."),
+   399→        ]),
+   400→        bodyPara("The real-world urgency of this position was demonstrated just weeks later, in June 2026, when a power outage at the Huduma Kenya data centre in Nakuru brought government services to a halt nationwide. Huduma Centres across all forty-seven counties went offline simultaneously, affecting millions of citizens who rely on these centres for identity documents, business registrations, and a range of essential government services. The incident was a stark reminder that data centre failures are no longer theoretical risks confined to the technology sector; they are events with immediate, tangible consequences for public administration and economic activity."),
+   401→        bodyPara("The CA's reasoning drew a direct parallel with communications tower companies, which have long been regulated as Network Facilities Providers despite operating what is, in many respects, passive infrastructure. A data centre, the Authority effectively argued, is to the digital economy what a communications tower is to the mobile network: the physical layer without which everything above it ceases to function. The regulatory alignment, in the CA's view, was long overdue."),
+   402→
+   403→        // ── The NFP Framework ──
+   404→        heading1("NFP-T1 and NFP-T2: How the Licence Structure Works"),
+   405→        bodyPara('The Revised Telecommunications Market Structure did not create a standalone “data centre licence.” Instead, it placed data centre operations within the existing Network Facilities Provider licence framework, specifically under '),
+   406→        bodyParaRuns([
+   407→          bold("NFP-Tier 2 (NFP-T2)"),
+   408→          normal(" as the primary licensing route, with "),
+   409→          bold("NFP-Tier 1 (NFP-T1)"),
+   410→          normal(" available for operators who also require nationwide infrastructure and spectrum rights. This modular approach is consistent with the CA's longstanding technology-neutral licensing philosophy, which avoids creating narrow, technology-specific licences in favour of broader, activity-based categories that can accommodate technological evolution without requiring constant regulatory revision."),
+   411→        ]),
+   412→        bodyPara("The distinction between the two tiers is substantial and has direct financial implications for operators. NFP-T2 is the primary licence for pure-play data centre operators. It permits the establishment and operation of commercial data centres on a countrywide basis, with infrastructure deployed incrementally, county by county. The initial licence fee is KES 15 million for a fifteen-year term, with annual operating fees set at zero-point-four percent of Annual Gross Turnover or KES 800,000, whichever is higher. For a new entrant building a single facility, this is the most cost-effective and operationally straightforward path to compliance."),
+   413→        bodyPara("NFP-T1, by contrast, is designed for large integrated operators with nationwide reach. It is the only licence tier that permits exclusive nationwide spectrum reservation from day one, making it suitable for operators who need both data centre capacity and their own transmission infrastructure. The licence fee is KES 15 million for a standard fifteen-year term, or KES 45 million for an optional twenty-five-year term that provides greater investment certainty for capital-intensive deployments. The annual operating fee is significantly higher: zero-point-four percent of Annual Gross Turnover or KES 4 million, whichever is higher. This reflects the broader scope of infrastructure and spectrum rights that the licence confers."),
+   414→        bodyPara("It is worth noting that during the consultation process, the CA had initially proposed placing data centres under the NFP-T3 category, which covers limited geographic areas. Industry stakeholders pushed back, arguing that data centres inherently serve a national or regional function and that confining them to a county-level licence would be impractical. The Authority accepted this reasoning, and the final framework places data centres under the two highest infrastructure tiers. For entities that already hold an NFP-T2 licence, the updated structure grants the right to establish commercial data centres without needing any additional licence, which simplifies compliance for existing operators."),
+   415→
+   416→        // ── Comparison Table ──
+   417→        new Paragraph({
+   418→          keepNext: true,
+   419→          spacing: { before: 360, after: 160, line: 312 },
+   420→          children: [new TextRun({ text: "Table 1: NFP-T1 vs NFP-T2 for Data Centre Operators", bold: true, size: 21, font: { ascii: "Calibri" }, color: "5B6B7D" })],
+   421→        }),
+   422→        buildComparisonTable(),
+   423→        captionPara("Source: Communications Authority of Kenya, Revised Telecommunications Market Structure (June 2026)"),
+   424→
+   425→        // ── Market Landscape ──
+   426→        heading1("Kenya's Data Centre Landscape: The Numbers"),
+   427→        bodyParaRuns([
+   428→          normal("As of mid-2026, Kenya is home to "),
+   429→          bold("nineteen operational data centres"),
+   430→          normal(": fifteen in Nairobi and four in Mombasa. The coastal facilities are strategically positioned near submarine cable landing stations, which give Kenya its competitive advantage as an East African connectivity hub. Nairobi, meanwhile, serves as the primary market for domestic and regional enterprise demand, hosting the largest concentration of carrier-neutral colocation facilities in the region."),
+   431→        ]),
+   432→        bodyParaRuns([
+   433→          normal("The market's total IT power capacity stood at approximately "),
+   434→          bold("15 megawatts in 2025"),
+   435→          normal(", a figure that is projected to reach "),
+   436→          bold("25 megawatts by 2030"),
+   437→          normal(", representing a compound annual growth rate of 10.76 percent according to Mordor Intelligence. In monetary terms, the Kenya data centre market was valued at "),
+   438→          bold("USD 266 million in 2025"),
+   439→          normal(" and is forecast to reach "),
+   440→          bold("USD 805 million by 2031"),
+   441→          normal(", growing at 20.27 percent annually according to ResearchAndMarkets. These are not marginal numbers. They represent one of the fastest-growing data centre markets on the African continent, driven by a convergence of factors including submarine cable connectivity, a growing fintech ecosystem, government digitisation programmes, and increasing cloud adoption across East and Central Africa."),
+   442→        ]),
+   443→        bodyPara("The key players operating in this space include Africa Data Centres (a Liquid Intelligent Technologies company), which operates multiple facilities including a significant presence along Mombasa Road; iXAfrica Data Centres, which has developed East Africa's first hyper-scale, AI-ready facility at NBOX1.1 with a 4.5 megawatt IT load; and various government-owned facilities that support public sector digital services. Safaricom and Telkom Kenya also operate data centre infrastructure to support their telecommunications and enterprise services businesses."),
+   444→        bodyPara("The regulatory clarification provided by the new licensing framework arrives at a critical inflection point. As hyperscale operators, cloud providers, and AI infrastructure investors evaluate African markets for expansion, the existence of a clear, predictable licensing regime is a material factor in investment decisions. The previous ambiguity, where operators could not be certain which licence applied to their activities, was a genuine barrier to entry, particularly for international operators accustomed to well-defined regulatory environments in markets like South Africa, Nigeria, and Egypt."),
+   445→
+   446→        // ── The Power Problem ──
+   447→        heading1("The Power Constraint: Why Licensing Is Necessary but Not Sufficient"),
+   448→        bodyPara("While the regulatory framework has taken a significant step forward, the single largest obstacle to data centre growth in Kenya remains the power supply. This is not a hypothetical concern. In May 2026, Microsoft and G42's planned one-billion-dollar AI data centre project — which would have been the largest single foreign direct investment in Kenya's digital infrastructure — stalled after it became clear that the national grid could not reliably deliver the power capacity the facility required. Government officials reportedly indicated that meeting the project's energy demands would require rationing power to other consumers, an politically untenable proposition."),
+   449→        bodyPara("The power challenge is multi-dimensional. Kenya's electricity generation capacity, while substantial relative to many African peers, is concentrated in geothermal and hydroelectric sources that are geographically fixed. Data centre demand, by contrast, is concentrated in Nairobi and its environs, creating transmission bottlenecks. The country's total installed generation capacity stands at approximately 3,500 megawatts, but the Microsoft project alone was reported to require several hundred megawatts — a demand that would represent a significant share of the national grid's firm capacity. The government's ambition to position Kenya as an AI and cloud computing hub for East Africa is, in this context, directly constrained by the pace at which generation and transmission capacity can be expanded."),
+   450→        bodyPara("The Huduma Kenya outage in June 2026 further illustrated the power reliability challenge. A single power supply failure at one data centre in Nakuru was sufficient to disrupt government services across the entire country. This is not a resilience problem that can be solved by licensing alone; it requires investment in backup power systems, redundant power feeds, and ultimately, the diversification and expansion of Kenya's electricity generation and distribution infrastructure. The CA's licensing framework addresses the regulatory dimension of data centre oversight, but the broader ecosystem challenges — power, cooling, skilled labour, and fibre connectivity in underserved areas — remain."),
+   451→
+   452→        // ── Broader Changes ──
+   453→        heading1("Other Notable Changes in the Revised Structure"),
+   454→        bodyPara("The revised market structure introduced changes beyond data centre licensing that are relevant to the broader digital infrastructure ecosystem. The CA created a new "),
+   455→        bodyParaRuns([
+   456→          bold("Landing Rights Authorisation (LRA)"),
+   457→          normal(", a separate licence category for entities that transmit telecommunications signals into Kenya via submarine cables or satellite. Previously, landing rights were bundled within the International Gateway Systems and Services (IGSS) licence, which created a barrier for entities that wanted to land infrastructure in Kenya without taking on the full scope of an IGSS licence. The separation is a strategic move designed to make it easier for international submarine cable operators to establish a presence in Kenya and to position the country as a gateway for landlocked East African nations."),
+   458→        ]),
+   459→        bodyPara("The Authority also expanded the scope of the NFP-T3 licence, which previously covered a single county, to cover up to three counties. This makes the licence more commercially viable for smaller infrastructure investors who want to build and interconnect towers, VSAT terminals, and other facilities across a small cluster of counties without committing to the full NFP-T2 framework. A new "),
+   460→        bodyParaRuns([
+   461→          bold("Micro Network and Services Provider (MNSP)"),
+   462→          normal(" licence was introduced for operators serving limited areas from residential estates up to county level, covering voice, data, and internet services. This category is partly aimed at curbing illegal service providers operating in residential areas while also promoting competition and lowering costs for consumers in underserved areas."),
+   463→        ]),
+   464→
+   465→        // ── What This Means ──
+   466→        heading1("What This Means for Operators and Investors"),
+   467→        bodyPara("For existing data centre operators, the immediate practical impact is that they need to ensure they hold the appropriate NFP licence category. Operators already licensed under NFP-T2 can establish commercial data centres without additional authorisation. Those operating under other licence classes, or those without any licence, need to assess their activities against the new framework and take steps to comply. The CA has historically taken an enforcement approach that prioritises bringing operators into compliance over punitive action, but the existence of a clear framework means that operating without a licence is no longer a grey area; it is a regulatory violation."),
+   468→        bodyPara("For prospective investors, particularly international operators evaluating East African market entry, the framework provides a degree of predictability that was previously absent. The licence fees, while not trivial, are within the range that would be expected for a market of Kenya's size and strategic importance. The fifteen-year licence term provides sufficient runway for return on investment, and the optional twenty-five-year NFP-T1 term accommodates the longest infrastructure investment cycles. The annual operating fee structure, based on a percentage of gross turnover with a minimum floor, aligns the Authority's revenue with operator success rather than penalising operators during their growth phase."),
+   469→        bodyPara("The broader policy trajectory is encouraging. Kenya has progressively liberalised its ICT investment framework: the removal of the thirty percent local shareholding requirement for ICT licensees, the introduction of Special Economic Zones with customs and tax relief on ICT equipment, and now the formal licensing of data centres all signal a deliberate strategy to position the country as a premier destination for digital infrastructure investment in Africa. The question is no longer whether Kenya is open for data centre investment; it is whether the supporting infrastructure, particularly power supply, can scale fast enough to meet the demand that the regulatory clarity is designed to attract."),
+   470→
+   471→        // ── Sources ──
+   472→        heading1("Sources and References"),
+   473→        new Paragraph({
+   474→          keepNext: true,
+   475→          spacing: { before: 200, after: 120, line: 312 },
+   476→          children: [new TextRun({ text: "Table 2: Source Materials Consulted", bold: true, size: 21, font: { ascii: "Calibri" }, color: "5B6B7D" })],
+   477→        }),
+   478→        buildSourcesTable(),
+   479→      ],
+   480→    },
+   481→  ],
+   482→});
+   483→
+   484→// ── Generate ──
+   485→Packer.toBuffer(doc).then((buf) => {
+   486→  fs.writeFileSync("/home/z/my-project/download/DC254-Kenya-Data-Centre-Licensing-Framework-August-2026.docx", buf);
+   487→  console.log("Document generated successfully.");
+   488→});
+   489→
