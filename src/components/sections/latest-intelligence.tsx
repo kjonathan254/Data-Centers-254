@@ -30,7 +30,7 @@ export default function LatestIntelligence() {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const res = await fetch("/api/articles?limit=3&status=Published");
+        const res = await fetch("/api/articles?limit=3&latest=true");
         if (res.ok) {
           const data = await res.json();
           setArticles(Array.isArray(data) ? data : data.articles || []);
