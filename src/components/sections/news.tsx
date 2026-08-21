@@ -28,6 +28,15 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    date: "August 2026",
+    category: "Policy",
+    icon: FileText,
+    title: "Kenya Formally Licences Data Centres Under NFP-T1 and NFP-T2",
+    description:
+      "The Communications Authority's Revised Telecommunications Market Structure (Gazette Notice No. 3335) brings commercial data centres under telecoms licensing for the first time. NFP-T2 is the primary route for pure-play operators at KES 15M for 15 years, while NFP-T1 serves large integrated players with an optional 25-year term at KES 45M.",
+    keyDetail: "First explicit data centre licensing framework in Kenya's history",
+  },
+  {
     date: "January 2026",
     category: "Milestone",
     icon: Building2,

@@ -10,6 +10,7 @@ import TheNumber from "@/components/sections/the-number";
 import ReadTheLibrary from "@/components/sections/read-the-library";
 import CareersSection from "@/components/sections/careers-section";
 import NewsletterV2 from "@/components/sections/newsletter-v2";
+import LatestIntelligence from "@/components/sections/latest-intelligence";
 
 export default function Home() {
   return (
@@ -28,11 +29,13 @@ export default function Home() {
         <AIInfrastructure />
         {/* 6 — Energy: Rift Valley → Grid → Data Centre */}
         <EnergySection />
-        {/* 7 — Visual silence: one massive number */}
+        {/* 7 — Latest Intelligence: newest articles from the DB */
+        <LatestIntelligence />
+        {/* 8 — Visual silence: one massive number */}
         <TheNumber />
-        {/* 8 — The library: 50 articles, discoverable */}
+        {/* 9 — The library: 50 articles, discoverable */}
         <ReadTheLibrary />
-        {/* 9 — Careers: the people behind the infrastructure */}
+        {/* 10 — Careers: the people behind the infrastructure */}
         <CareersSection />
         {/* Closer: editorial invitation — almost an afterthought */}
         <NewsletterV2 />

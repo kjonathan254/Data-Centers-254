@@ -6,6 +6,7 @@ export async function GET(request: NextRequest) {
   const slug = searchParams.get('slug');
   const cluster = searchParams.get('cluster');
   const limit = searchParams.get('limit') ? parseInt(searchParams.get('limit')!, 10) : undefined;
+  const latest = searchParams.get('latest') === 'true';
 
   try {
     // Single article by slug
@@ -34,10 +35,12 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(articles);
     }
 
-    // All published articles
+    // All published articles (sorted by date when ?latest=true, otherwise by cluster+sortOrder)
     const articles = await db.article.findMany({
       where: { status: 'Published' },
-      orderBy: [{ cluster: 'asc' }, { sortOrder: 'asc' }],
+      orderBy: latest
+        ? { createdAt: 'desc' }
+        : [{ cluster: 'asc' }, { sortOrder: 'asc' }],
       take: limit,
       select: {
         id: true, title: true, slug: true, tlDr: true, description: true,
