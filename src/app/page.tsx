@@ -11,6 +11,7 @@ import ReadTheLibrary from "@/components/sections/read-the-library";
 import CareersSection from "@/components/sections/careers-section";
 import NewsletterV2 from "@/components/sections/newsletter-v2";
 import LatestIntelligence from "@/components/sections/latest-intelligence";
+import LatestNewsBanner from "@/components/sections/latest-news-banner";
 
 export default function Home() {
   return (
@@ -29,7 +30,9 @@ export default function Home() {
         <AIInfrastructure />
         {/* 6 — Energy: Rift Valley → Grid → Data Centre */}
         <EnergySection />
-        {/* 7 — Latest Intelligence: newest articles from the DB */
+        {/* 6.5 — Latest News: featured editorial (static, no DB required) */}
+        <LatestNewsBanner />
+        {/* 7 — Latest Intelligence: newest articles from the DB */}
         <LatestIntelligence />
         {/* 8 — Visual silence: one massive number */}
         <TheNumber />
