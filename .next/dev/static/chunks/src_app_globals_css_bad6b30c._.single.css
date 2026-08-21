@@ -1039,6 +1039,10 @@
     margin-top: calc(var(--spacing) * 4);
   }
 
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -1129,6 +1133,10 @@
 
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
+  }
+
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
   }
 
   .-ml-1 {
@@ -1329,6 +1337,21 @@
   .size-32 {
     width: calc(var(--spacing) * 32);
     height: calc(var(--spacing) * 32);
+  }
+
+  .size-500 {
+    width: calc(var(--spacing) * 500);
+    height: calc(var(--spacing) * 500);
+  }
+
+  .size-715 {
+    width: calc(var(--spacing) * 715);
+    height: calc(var(--spacing) * 715);
+  }
+
+  .size-1000 {
+    width: calc(var(--spacing) * 1000);
+    height: calc(var(--spacing) * 1000);
   }
 
   .size-\[14px\] {
@@ -1806,6 +1829,34 @@
     flex: 2;
   }
 
+  .flex-25 {
+    flex: 25;
+  }
+
+  .flex-30 {
+    flex: 30;
+  }
+
+  .flex-40 {
+    flex: 40;
+  }
+
+  .flex-49 {
+    flex: 49;
+  }
+
+  .flex-50 {
+    flex: 50;
+  }
+
+  .flex-70 {
+    flex: 70;
+  }
+
+  .flex-74 {
+    flex: 74;
+  }
+
   .flex-shrink {
     flex-shrink: 1;
   }
@@ -2059,6 +2110,14 @@
     justify-content: center;
   }
 
+  .justify-start {
+    justify-content: flex-start;
+  }
+
+  .justify-stretch {
+    justify-content: stretch;
+  }
+
   .justify-items-start {
     justify-items: start;
   }
@@ -2227,6 +2286,10 @@
 
   .overflow-x-auto {
     overflow-x: auto;
+  }
+
+  .overflow-x-clip {
+    overflow-x: clip;
   }
 
   .overflow-x-hidden {
@@ -3694,6 +3757,10 @@
     padding-block: calc(var(--spacing) * 24);
   }
 
+  .ps-5 {
+    padding-inline-start: calc(var(--spacing) * 5);
+  }
+
   .pt-0 {
     padding-top: calc(var(--spacing) * 0);
   }
@@ -4222,6 +4289,10 @@
 
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+
+  .text-gray-800 {
+    color: var(--color-gray-800);
   }
 
   .text-gray-900 {
@@ -7561,6 +7632,10 @@
 
   .dark\:text-muted-foreground:is(.dark *) {
     color: var(--muted-foreground);
+  }
+
+  .dark\:text-white:is(.dark *) {
+    color: var(--color-white);
   }
 
   @media (hover: hover) {
