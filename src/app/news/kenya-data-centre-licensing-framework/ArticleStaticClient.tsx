@@ -120,40 +120,40 @@ export default function ArticleStaticClient({
           <div className="mt-10 space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
             <ReactMarkdown
               components={{
-                h2: ({ children }) => (
+                h2: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight mt-14 mb-4 first:mt-0">
                     {children}
                   </h2>
                 ),
-                h3: ({ children }) => (
+                h3: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <h3 className="text-xl font-semibold text-foreground mt-10 mb-3">
                     {children}
                   </h3>
                 ),
-                p: ({ children }) => <p className="mb-6">{children}</p>,
-                blockquote: ({ children }) => (
+                p: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => <p className="mb-6">{children}</p>,
+                blockquote: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <div className="my-8 border-l-2 border-cyan/50 pl-6 py-2">
                     <p className="text-lg sm:text-xl font-medium text-foreground/90 italic leading-relaxed">
                       {children}
                     </p>
                   </div>
                 ),
-                strong: ({ children }) => (
+                strong: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <strong className="text-foreground font-semibold">{children}</strong>
                 ),
-                em: ({ children }) => (
+                em: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <em>{children}</em>
                 ),
-                ul: ({ children }) => (
+                ul: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <ul className="my-6 space-y-2">{children}</ul>
                 ),
-                li: ({ children }) => (
+                li: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <li className="flex items-start gap-2">
                     <span className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan" />
                     <span>{children}</span>
                   </li>
                 ),
-                a: ({ href, children }) => (
+                a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => (
                   <a
                     href={href}
                     className="text-cyan hover:underline underline-offset-4"
@@ -163,7 +163,7 @@ export default function ArticleStaticClient({
                     {children}
                   </a>
                 ),
-                code: ({ className, children }) => {
+                code: ({ className, children, ..._rest }: { className?: string; children?: React.ReactNode; [key: string]: unknown }) => {
                   const isInline = !className;
                   if (isInline) {
                     return (
@@ -174,20 +174,20 @@ export default function ArticleStaticClient({
                   }
                   return <code className={className}>{children}</code>;
                 },
-                table: ({ children }) => (
+                table: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <div className="my-8 overflow-x-auto rounded-xl border border-border/50">
                     <table className="w-full text-sm">{children}</table>
                   </div>
                 ),
-                thead: ({ children }) => (
+                thead: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <thead className="bg-secondary/50">{children}</thead>
                 ),
-                th: ({ children }) => (
+                th: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <th className="px-4 py-3 text-left font-semibold text-foreground text-xs uppercase tracking-wider">
                     {children}
                   </th>
                 ),
-                td: ({ children }) => (
+                td: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
                   <td className="px-4 py-3 border-t border-border/30 text-muted-foreground">
                     {children}
                   </td>
