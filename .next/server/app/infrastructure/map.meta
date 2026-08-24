@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/infrastructure/layout,_N_T_/infrastructure/map/layout,_N_T_/infrastructure/map/page,_N_T_/infrastructure/map"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/infrastructure/map/__PAGE__",
+    "/infrastructure/map",
+    "/infrastructure",
+    "/_index",
+    "/_head"
+  ]
+}
