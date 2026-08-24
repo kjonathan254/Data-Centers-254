@@ -14,7 +14,26 @@ interface Article {
   readingTimeMin: number | null;
   lastVerified: string | null;
   createdAt: string;
+  href?: string;
 }
+
+// Static fallback articles per cluster — shown when DB is unavailable
+const STATIC_FALLBACKS: Record<string, Article[]> = {
+  Kenya: [
+    {
+      id: "static-kenya-licensing",
+      title: "Kenya's Data Centre Licensing Framework: What NFP-T1 and NFP-T2 Mean for the Industry",
+      slug: "kenya-data-centre-licensing-framework",
+      tlDr: "For the first time in Kenya's regulatory history, commercial data centres are explicitly licensed under the NFP-T2 tier (KES 15M initial, 15-year term).",
+      description: "The CA's new NFP-T2 framework changes everything for operators, investors, and engineers.",
+      cluster: "Kenya",
+      readingTimeMin: 12,
+      lastVerified: "2026-08",
+      createdAt: "2026-08-21",
+      href: "/news/kenya-data-centre-licensing-framework",
+    },
+  ],
+};
 
 const clusterConfig: Record<
   string,
@@ -57,18 +76,26 @@ const clusterConfig: Record<
 };
 
 export default function ArticleClusterPage({ cluster }: { cluster: string }) {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState<Article[]>(STATIC_FALLBACKS[cluster] || []);
+  const [loading, setLoading] = useState(false);
   const config = clusterConfig[cluster] || clusterConfig.Beginner;
 
   useEffect(() => {
+    setLoading(true);
     fetch(`/api/articles?cluster=${cluster}`)
       .then((r) => r.json())
       .then((data) => {
-        setArticles(Array.isArray(data) ? data : []);
+        const list = Array.isArray(data) ? data : [];
+        if (list.length > 0) {
+          setArticles(list);
+        }
+        // If DB returns empty, keep showing static fallbacks
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        // DB unavailable — keep showing static fallbacks
+        setLoading(false);
+      });
   }, [cluster]);
 
   return (
@@ -116,7 +143,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
             {articles.map((a) => (
               <Link
                 key={a.id}
-                href={`/articles/${a.slug}`}
+                href={a.href || `/articles/${a.slug}`}
                 className="block glass-card glass-card-hover rounded-xl p-5 sm:p-6 border border-border/50 hover:border-cyan/30 transition-all duration-300 group"
               >
                 <div className="flex items-start justify-between gap-3">
