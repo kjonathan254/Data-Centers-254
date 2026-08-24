@@ -78,6 +78,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/news/kenya-data-centre-licensing-framework`,
+      lastModified: new Date("2026-08-21"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // Dynamic article routes from database
