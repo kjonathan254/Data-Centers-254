@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Clock, Shield, ArrowRight, Server } from "lucide-react";
 
 interface Article {
@@ -23,7 +22,6 @@ const clusterConfig: Record<
     title: string;
     subtitle: string;
     description: string;
-    icon: string;
   }
 > = {
   Beginner: {
@@ -31,43 +29,31 @@ const clusterConfig: Record<
     subtitle: "START HERE",
     description:
       "New to data centres? Start here. These guides explain the basics in plain language — no engineering degree required. Every concept is tied to examples you already know, like M-Pesa, WhatsApp, and Netflix.",
-    icon: "\U0001F4DA",
   },
   Kenya: {
-    title: "Kenya’s Data Centre Industry",
+    title: "Kenya\u2019s Data Centre Industry",
     subtitle: "KENYA FOCUS",
     description:
       "Everything about data centres in Kenya — where they are, who owns them, how the market works, and why Kenya is becoming the data centre hub of East Africa. This is the core of Data Centre 254.",
-    icon: "\U0001F1F0\U0001F1EA",
   },
   Internet: {
     title: "Internet & Connectivity",
     subtitle: "CONNECTIVITY",
     description:
       "How the internet reaches Kenya, why submarine cables matter, what KIXP does, and why every cloud service needs local infrastructure. The physical path your data takes.",
-    icon: "\U0001F310",
   },
   Energy: {
     title: "Energy & Power",
     subtitle: "ENERGY",
     description:
-      "Data centres are massive electricity consumers. Kenya’s geothermal advantage could make it Africa’s green data centre hub — but the grid has limits. Understand the energy question.",
-    icon: "\u26A1",
+      "Data centres are massive electricity consumers. Kenya\u2019s geothermal advantage could make it Africa\u2019s green data centre hub — but the grid has limits. Understand the energy question.",
   },
   Careers: {
     title: "Careers & Business",
     subtitle: "CAREERS & BUSINESS",
     description:
-      "Jobs, certifications, business models, and investment opportunities in Kenya’s data centre industry. Whether you’re looking for a career or a business opportunity.",
-    icon: "\U0001F4BC",
+      "Jobs, certifications, business models, and investment opportunities in Kenya\u2019s data centre industry. Whether you\u2019re looking for a career or a business opportunity.",
   },
-};
-
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } as const,
 };
 
 export default function ArticleClusterPage({ cluster }: { cluster: string }) {
@@ -79,7 +65,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
     fetch(`/api/articles?cluster=${cluster}`)
       .then((r) => r.json())
       .then((data) => {
-        setArticles(data);
+        setArticles(Array.isArray(data) ? data : []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -95,7 +81,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         {/* Header */}
-        <motion.div className="mb-12" {...fadeUp}>
+        <div className="mb-12">
           <span className="inline-block font-mono text-xs sm:text-sm tracking-widest text-cyan mb-4 uppercase">
             {config.subtitle}
           </span>
@@ -108,7 +94,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
           <div className="mt-4 text-sm text-muted-foreground">
             {loading ? "Loading..." : `${articles.length} article${articles.length !== 1 ? "s" : ""}`}
           </div>
-        </motion.div>
+        </div>
 
         {/* Article List */}
         {loading ? (
@@ -127,45 +113,38 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
           </div>
         ) : (
           <div className="space-y-3">
-            {articles.map((a, i) => (
-              <motion.div
+            {articles.map((a) => (
+              <Link
                 key={a.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: i * 0.04 }}
+                href={`/articles/${a.slug}`}
+                className="block glass-card glass-card-hover rounded-xl p-5 sm:p-6 border border-border/50 hover:border-cyan/30 transition-all duration-300 group"
               >
-                <Link
-                  href={`/articles/${a.slug}`}
-                  className="block glass-card glass-card-hover rounded-xl p-5 sm:p-6 border border-border/50 hover:border-cyan/30 transition-all group"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0 flex-1">
-                      <h2 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">
-                        {a.title}
-                      </h2>
-                      {a.tlDr && (
-                        <p className="text-sm text-muted-foreground mt-1.5 line-clamp-2 leading-relaxed">
-                          {a.tlDr}
-                        </p>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <h2 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">
+                      {a.title}
+                    </h2>
+                    {a.tlDr && (
+                      <p className="text-sm text-muted-foreground mt-1.5 line-clamp-2 leading-relaxed">
+                        {a.tlDr}
+                      </p>
+                    )}
+                    <div className="flex items-center gap-4 mt-3 text-xs text-muted-foreground">
+                      {a.readingTimeMin && (
+                        <span className="flex items-center gap-1">
+                          <Clock className="size-3" />{a.readingTimeMin} min
+                        </span>
                       )}
-                      <div className="flex items-center gap-4 mt-3 text-xs text-muted-foreground">
-                        {a.readingTimeMin && (
-                          <span className="flex items-center gap-1">
-                            <Clock className="size-3" />{a.readingTimeMin} min
-                          </span>
-                        )}
-                        {a.lastVerified && (
-                          <span className="flex items-center gap-1">
-                            <Shield className="size-3" />Verified {a.lastVerified}
-                          </span>
-                        )}
-                      </div>
+                      {a.lastVerified && (
+                        <span className="flex items-center gap-1">
+                          <Shield className="size-3" />Verified {a.lastVerified}
+                        </span>
+                      )}
                     </div>
-                    <ArrowRight className="size-5 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
                   </div>
-                </Link>
-              </motion.div>
+                  <ArrowRight className="size-5 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+                </div>
+              </Link>
             ))}
           </div>
         )}
