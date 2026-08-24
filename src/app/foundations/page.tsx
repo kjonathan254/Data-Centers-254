@@ -17,29 +17,44 @@ const phases = [
 ];
 
 export default async function FoundationsPage() {
-  const articles = await db.article.findMany({
-    where: { isFoundational: true },
-    orderBy: { foundationalOrder: "asc" },
-    include: {
-      _count: { select: { claims: true } },
-    },
-  });
+  let articles: Array<{
+    foundationalOrder: number | null;
+    title: string;
+    slug: string;
+    tlDr: string | null;
+    cluster: string;
+    status: string;
+    readingTimeMin: number | null;
+    lastVerified: string | null;
+    claimCount: number;
+  }> = [];
+  let publishedCount = 0;
 
-  const publishedCount = articles.filter((a) => a.status === "Published").length;
+  try {
+    const dbArticles = await db.article.findMany({
+      where: { isFoundational: true },
+      orderBy: { foundationalOrder: "asc" },
+      include: { _count: { select: { claims: true } } },
+    });
+    articles = dbArticles.map((a) => ({
+      foundationalOrder: a.foundationalOrder,
+      title: a.title,
+      slug: a.slug,
+      tlDr: a.tlDr,
+      cluster: a.cluster,
+      status: a.status,
+      readingTimeMin: a.readingTimeMin,
+      lastVerified: a.lastVerified,
+      claimCount: a._count.claims,
+    }));
+    publishedCount = articles.filter((a) => a.status === "Published").length;
+  } catch {
+    // Database unavailable — show empty state
+  }
 
   return (
     <FoundationsClient
-      articles={articles.map((a) => ({
-        foundationalOrder: a.foundationalOrder,
-        title: a.title,
-        slug: a.slug,
-        tlDr: a.tlDr,
-        cluster: a.cluster,
-        status: a.status,
-        readingTimeMin: a.readingTimeMin,
-        lastVerified: a.lastVerified,
-        claimCount: a._count.claims,
-      }))}
+      articles={articles}
       phases={phases}
       publishedCount={publishedCount}
       total={articles.length}
