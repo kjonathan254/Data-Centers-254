@@ -21,22 +21,42 @@ interface Article {
   cluster: string;
   readingTimeMin: number | null;
   createdAt: string;
+  href?: string; // Override link — used for static articles
 }
 
+// Static fallback article — shown when DB is unavailable or empty
+const FALLBACK_ARTICLES: Article[] = [
+  {
+    id: "static-kenya-licensing",
+    title: "Kenya's Data Centre Licensing Framework: What NFP-T1 and NFP-T2 Mean for the Industry",
+    slug: "kenya-data-centre-licensing-framework",
+    tlDr: "For the first time, commercial data centres are explicitly licensed under the NFP-T2 tier (KES 15M initial, 15-year term).",
+    cluster: "Kenya",
+    readingTimeMin: 12,
+    createdAt: "2026-08-21",
+    href: "/news/kenya-data-centre-licensing-framework",
+  },
+];
+
 export default function LatestIntelligence() {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState<Article[]>(FALLBACK_ARTICLES);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function fetchArticles() {
+      setLoading(true);
       try {
         const res = await fetch("/api/articles?limit=3&latest=true");
         if (res.ok) {
           const data = await res.json();
-          setArticles(Array.isArray(data) ? data : data.articles || []);
+          const list = Array.isArray(data) ? data : data.articles || [];
+          if (list.length > 0) {
+            setArticles(list);
+          }
+          // If DB returns empty, keep the fallback articles
         }
       } catch {
-        // silently fail
+        // DB unavailable — keep showing fallback articles
       } finally {
         setLoading(false);
       }
@@ -95,7 +115,7 @@ export default function LatestIntelligence() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <Link href={`/articles/${article.slug}`} className="block group">
+                  <Link href={article.href || `/articles/${article.slug}`} className="block group">
                     <div className="glass-card glass-card-hover rounded-xl overflow-hidden p-6 transition-all duration-300 relative">
                       {article.readingTimeMin && (
                         <div className="absolute top-4 right-4">
