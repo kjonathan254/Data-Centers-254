@@ -1,0 +1,239 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/beginners",
+      "destination": "/data-centres",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/beginners(?:/)?$"
+    },
+    {
+      "source": "/kenya",
+      "destination": "/data-centres",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/kenya(?:/)?$"
+    },
+    {
+      "source": "/internet",
+      "destination": "/infrastructure",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/internet(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/articles/[slug]",
+      "regex": "^/articles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/articles/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/ai",
+      "regex": "^/ai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ai(?:/)?$"
+    },
+    {
+      "page": "/api",
+      "regex": "^/api(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api(?:/)?$"
+    },
+    {
+      "page": "/api/articles",
+      "regex": "^/api/articles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/articles(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/directory",
+      "regex": "^/api/directory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/directory(?:/)?$"
+    },
+    {
+      "page": "/api/search",
+      "regex": "^/api/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/search(?:/)?$"
+    },
+    {
+      "page": "/api/subscribe",
+      "regex": "^/api/subscribe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/subscribe(?:/)?$"
+    },
+    {
+      "page": "/beginners",
+      "regex": "^/beginners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/beginners(?:/)?$"
+    },
+    {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/data-centres",
+      "regex": "^/data\\-centres(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/data\\-centres(?:/)?$"
+    },
+    {
+      "page": "/directory",
+      "regex": "^/directory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/directory(?:/)?$"
+    },
+    {
+      "page": "/energy",
+      "regex": "^/energy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/energy(?:/)?$"
+    },
+    {
+      "page": "/foundations",
+      "regex": "^/foundations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/foundations(?:/)?$"
+    },
+    {
+      "page": "/index",
+      "regex": "^/index(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/index(?:/)?$"
+    },
+    {
+      "page": "/infrastructure",
+      "regex": "^/infrastructure(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/infrastructure(?:/)?$"
+    },
+    {
+      "page": "/infrastructure/map",
+      "regex": "^/infrastructure/map(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/infrastructure/map(?:/)?$"
+    },
+    {
+      "page": "/internet",
+      "regex": "^/internet(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/internet(?:/)?$"
+    },
+    {
+      "page": "/kenya",
+      "regex": "^/kenya(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kenya(?:/)?$"
+    },
+    {
+      "page": "/news/kenya-data-centre-licensing-framework",
+      "regex": "^/news/kenya\\-data\\-centre\\-licensing\\-framework(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/news/kenya\\-data\\-centre\\-licensing\\-framework(?:/)?$"
+    },
+    {
+      "page": "/research",
+      "regex": "^/research(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/research(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/search",
+      "regex": "^/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/search(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
