@@ -20,6 +20,7 @@ interface ClusterEntry {
     slug: string;
     tlDr: string | null;
     readingTimeMin: number | null;
+    href?: string;
   };
 }
 
@@ -54,45 +55,61 @@ const clusterRoutes: Record<string, string> = {
   Careers: "/careers",
 };
 
+const FALLBACK_CLUSTERS: ClusterEntry[] = [
+  {
+    cluster: "Kenya",
+    _count: { cluster: 1 },
+    firstArticle: {
+      title: "Kenya's Data Centre Licensing Framework: What NFP-T1 and NFP-T2 Mean for the Industry",
+      slug: "kenya-data-centre-licensing-framework",
+      tlDr: "For the first time, commercial data centres are explicitly licensed under the NFP-T2 tier.",
+      readingTimeMin: 12,
+      href: "/news/kenya-data-centre-licensing-framework",
+    },
+  },
+];
+
 export default function ReadTheLibrary() {
-  const [clusters, setClusters] = useState<ClusterEntry[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [clusters, setClusters] = useState<ClusterEntry[]>(FALLBACK_CLUSTERS);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function load() {
+      setLoading(true);
       try {
         const res = await fetch("/api/articles");
         if (res.ok) {
           const data = await res.json();
           const clusterList = data.clusters || [];
-
-          // Fetch first article for each cluster
-          const enriched = await Promise.all(
-            clusterList.map(
-              async (c: { cluster: string; _count: { cluster: number } }) => {
-                try {
-                  const aRes = await fetch(
-                    `/api/articles?cluster=${c.cluster}&limit=1`
-                  );
-                  if (aRes.ok) {
-                    const articles = await aRes.json();
-                    return {
-                      ...c,
-                      firstArticle: articles[0] || undefined,
-                    };
+          if (clusterList.length > 0) {
+            // Fetch first article for each cluster
+            const enriched = await Promise.all(
+              clusterList.map(
+                async (c: { cluster: string; _count: { cluster: number } }) => {
+                  try {
+                    const aRes = await fetch(
+                      `/api/articles?cluster=${c.cluster}&limit=1`
+                    );
+                    if (aRes.ok) {
+                      const articles = await aRes.json();
+                      return {
+                        ...c,
+                        firstArticle: articles[0] || undefined,
+                      };
+                    }
+                  } catch {
+                    // skip
                   }
-                } catch {
-                  // skip
+                  return c;
                 }
-                return c;
-              }
-            )
-          );
-
-          setClusters(enriched);
+              )
+            );
+            setClusters(enriched);
+          }
+          // If DB returns empty, keep showing fallback
         }
       } catch {
-        // silently fail
+        // DB unavailable — keep fallback
       } finally {
         setLoading(false);
       }
@@ -181,7 +198,7 @@ export default function ReadTheLibrary() {
                     {/* First article as a starting point */}
                     {cluster.firstArticle && (
                       <Link
-                        href={`/articles/${cluster.firstArticle.slug}`}
+                        href={cluster.firstArticle.href || `/articles/${cluster.firstArticle.slug}`}
                         className="group flex items-start gap-3 mt-4"
                       >
                         <span className="text-foreground/30 group-hover:text-cyan/60 transition-colors duration-300 mt-px">
