@@ -1,6 +1,4 @@
 import { PrismaClient } from '@prisma/client'
-import { PrismaLibSql } from '@prisma/adapter-libsql'
-import { createClient } from '@libsql/client'
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
@@ -8,13 +6,6 @@ const globalForPrisma = globalThis as unknown as {
 
 function createPrismaClient() {
   const url = process.env.DATABASE_URL
-  const token = process.env.TURSO_AUTH_TOKEN
-
-  // Check if using SQLite (local development)
-  if (url?.startsWith('file:')) {
-    const { PrismaClient: SqlitePrismaClient } = require('@prisma/client')
-    return new SqlitePrismaClient()
-  }
 
   if (!url) {
     throw new Error(
@@ -22,12 +13,10 @@ function createPrismaClient() {
     )
   }
 
-  const libsql = createClient({
-    url,
-    authToken: token,
-  })
-  const adapter = new PrismaLibSql(libsql)
-  return new PrismaClient({ adapter })
+  // Prisma 5.x connects directly to Neon's pooler via pg driver.
+  // The pooler URL (contains -pooler) handles connection management
+  // for serverless environments like Vercel automatically.
+  return new PrismaClient()
 }
 
 // Lazy initialization — only connects when first query runs
