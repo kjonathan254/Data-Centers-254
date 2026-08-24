@@ -1,58 +1,42 @@
 ```
-# Next.js
-.next/
-out/
-
 # Dependencies
 node_modules/
 
-# Environment variables
-.env.local
+# Environment
 .env
+.env.local
 .env.*
 
-# Build outputs
+# Build artifacts
 dist/
 build/
+target/
 
-# Logs
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
 *.log
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Cache
-.nyc_output
-coverage/
-*.lcov
-.nyc_output/
-coverage/
-
-# IDE
-.vscode/
-.idea/
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
-*~
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# TypeScript
-*.tsbuildinfo
-.next/types/
-
-# Turbopack
-.turbopack/
-
-# Standalone output
-standalone/
-
+*.pot
+*.pyc
+*.pyo
+*.pyd
+.MF
+.TemporaryItems
+.trash
 ```
