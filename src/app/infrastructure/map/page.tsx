@@ -3,6 +3,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import EastAfricaInfrastructureMap from "@/components/east-africa-infrastructure-map";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "East Africa Digital Infrastructure Map | Data Centre 254",
   description:

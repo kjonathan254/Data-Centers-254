@@ -218,30 +218,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/infrastructure/map": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/infrastructure/map",
-      "dataRoute": "/infrastructure/map.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/infrastructure": {
       "experimentalBypassFor": [
         {
@@ -472,8 +448,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "9b0ebb916cb5f64ab77a026b6791ca3a",
-    "previewModeSigningKey": "732ba3fe6f8aafe54f4d447fbfd5dca307fa11d8de40465a371c27d14483fc9c",
-    "previewModeEncryptionKey": "9a37238d6d93c647a1d70394d1db790d4b17f76b905f51ec6d28c02bbf613cdb"
+    "previewModeId": "1b419c0f1a0148deacb7b21cd4cd75ed",
+    "previewModeSigningKey": "e50c47ddefa8147b08f36261b12252a98998706c411119aed533e6028b4f1a48",
+    "previewModeEncryptionKey": "e5f7c5684757f7cedf46a21ee68b9d66af264e4aa002277901a5ef5592ebd5fb"
   }
 }

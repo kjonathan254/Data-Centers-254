@@ -141,7 +141,7 @@ self.__SERVER_FILES_MANIFEST={
       "isExperimentalCompile": false
     }
   },
-  "appDir": "/workspace",
+  "appDir": "/home/z/my-project",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
