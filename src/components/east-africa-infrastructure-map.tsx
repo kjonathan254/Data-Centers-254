@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin, Cable, Network, Server, X, Search,
-  List, Map, ArrowRight, Zap,
+  List, MapIcon, ArrowRight, Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -32,6 +32,7 @@ interface InfraItem {
   description: string;
   members?: number;
   peakGbps?: number;
+  href?: string;
 }
 
 interface CityNode {
@@ -43,13 +44,11 @@ interface CityNode {
 }
 
 interface CableRoute {
+  id: string;
   fromCity: string;
   toCity: string;
-  fromLat: number;
-  fromLng: number;
-  toLat: number;
-  toLng: number;
   type: "terrestrial" | "submarine";
+  waypoints: [number, number][];
 }
 
 // ─── PROJECTION ───
@@ -113,67 +112,73 @@ const CITIES: Record<string, CityNode> = {
 // ─── INFRASTRUCTURE DATA ───
 const ITEMS: InfraItem[] = [
   // Kenya Data Centres
-  { id:"ke-dc1", name:"iXAfrica NBOX1.1", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2921, lng:36.8219, tier:"Tier III", powerMW:4.5, year:2024, description:"East Africa's first hyper-scale AI-ready facility along Mombasa Road" },
-  { id:"ke-dc2", name:"Africa Data Centres — Nairobi", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2677, lng:36.8078, tier:"Tier III", powerMW:5, year:2012, description:"Carrier-neutral colocation, part of Liquid Intelligent Technologies" },
-  { id:"ke-dc3", name:"Africa Data Centres — Mombasa", type:"datacenter", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, tier:"Tier II", powerMW:1.5, year:2015, description:"Coastal facility near submarine cable landing stations" },
-  { id:"ke-dc4", name:"Safaricom Data Centre", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2456, lng:36.8123, tier:"Tier III", powerMW:2, year:2018, description:"Kenya's largest mobile operator's enterprise facility" },
-  { id:"ke-dc5", name:"Telkom Kenya DC", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2833, lng:36.8167, tier:"Tier II", powerMW:1, year:2016, description:"National carrier's colocation facility" },
+  { id:"ke-dc1", name:"iXAfrica NBOX1.1", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2921, lng:36.8219, tier:"Tier III", powerMW:4.5, year:2024, description:"East Africa's first hyper-scale AI-ready facility along Mombasa Road", href:"/directory" },
+  { id:"ke-dc2", name:"Africa Data Centres — Nairobi", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2677, lng:36.8078, tier:"Tier III", powerMW:5, year:2012, description:"Carrier-neutral colocation, part of Liquid Intelligent Technologies", href:"/directory" },
+  { id:"ke-dc3", name:"Africa Data Centres — Mombasa", type:"datacenter", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, tier:"Tier II", powerMW:1.5, year:2015, description:"Coastal facility near submarine cable landing stations", href:"/directory" },
+  { id:"ke-dc4", name:"Safaricom Data Centre", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2456, lng:36.8123, tier:"Tier III", powerMW:2, year:2018, description:"Kenya's largest mobile operator's enterprise facility", href:"/directory" },
+  { id:"ke-dc5", name:"Telkom Kenya DC", type:"datacenter", city:"nairobi", country:"kenya", lat:-1.2833, lng:36.8167, tier:"Tier II", powerMW:1, year:2016, description:"National carrier's colocation facility", href:"/directory" },
   // Kenya Cables
-  { id:"ke-c1", name:"SEACOM", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1280, year:2009, description:"First private submarine cable serving East Africa" },
-  { id:"ke-c2", name:"TEAMS", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1280, year:2009, description:"The East Africa Marine System, government-backed" },
-  { id:"ke-c3", name:"EASSy", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:4720, year:2010, description:"Eastern Africa Submarine Cable System, 7,000km" },
-  { id:"ke-c4", name:"DARE1", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:960, year:2015, description:"Djibouti Africa Regional Express 1" },
-  { id:"ke-c5", name:"LION2", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1500, year:2012, description:"Lower Indian Ocean Network 2, connects to Madagascar" },
-  { id:"ke-c6", name:"2Africa", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:180000, year:2024, description:"Meta-backed next-gen cable, largest capacity in region" },
+  { id:"ke-c1", name:"SEACOM", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1280, year:2009, description:"First private submarine cable serving East Africa", href:"/infrastructure" },
+  { id:"ke-c2", name:"TEAMS", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1280, year:2009, description:"The East Africa Marine System, government-backed", href:"/infrastructure" },
+  { id:"ke-c3", name:"EASSy", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:4720, year:2010, description:"Eastern Africa Submarine Cable System, 7,000km", href:"/infrastructure" },
+  { id:"ke-c4", name:"DARE1", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:960, year:2015, description:"Djibouti Africa Regional Express 1", href:"/infrastructure" },
+  { id:"ke-c5", name:"LION2", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:1500, year:2012, description:"Lower Indian Ocean Network 2, connects to Madagascar", href:"/infrastructure" },
+  { id:"ke-c6", name:"2Africa", type:"cable", city:"mombasa", country:"kenya", lat:-4.0435, lng:39.6682, capacityGbps:180000, year:2024, description:"Meta-backed next-gen cable, largest capacity in region", href:"/infrastructure" },
   // Kenya IXP
-  { id:"ke-ixp", name:"KIXP", type:"ixp", city:"nairobi", country:"kenya", lat:-1.2921, lng:36.8219, year:2000, members:85, peakGbps:25, description:"One of Africa's largest and most active Internet Exchange Points" },
+  { id:"ke-ixp", name:"KIXP", type:"ixp", city:"nairobi", country:"kenya", lat:-1.2921, lng:36.8219, year:2000, members:85, peakGbps:25, description:"One of Africa's largest and most active Internet Exchange Points", href:"/internet" },
 
   // Tanzania Data Centres
-  { id:"tz-dc1", name:"Vodacom Tanzania DC", type:"datacenter", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, tier:"Tier II", powerMW:1.5, year:2014, description:"Leading mobile operator's enterprise facility" },
-  { id:"tz-dc2", name:"SimbaNet Dar es Salaam", type:"datacenter", city:"dar", country:"tanzania", lat:-6.7924, lng:39.2083, tier:"Tier II", powerMW:1, year:2016, description:"Commercial ISP colocation facility" },
-  { id:"tz-dc3", name:"TTCL Data Centre", type:"datacenter", city:"dar", country:"tanzania", lat:-6.8, lng:39.25, tier:"Tier II", powerMW:1, year:2012, description:"National carrier facility near cable landing" },
+  { id:"tz-dc1", name:"Vodacom Tanzania DC", type:"datacenter", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, tier:"Tier II", powerMW:1.5, year:2014, description:"Leading mobile operator's enterprise facility", href:"/directory" },
+  { id:"tz-dc2", name:"SimbaNet Dar es Salaam", type:"datacenter", city:"dar", country:"tanzania", lat:-6.7924, lng:39.2083, tier:"Tier II", powerMW:1, year:2016, description:"Commercial ISP colocation facility", href:"/directory" },
+  { id:"tz-dc3", name:"TTCL Data Centre", type:"datacenter", city:"dar", country:"tanzania", lat:-6.8, lng:39.25, tier:"Tier II", powerMW:1, year:2012, description:"National carrier facility near cable landing", href:"/directory" },
   // Tanzania Cables
-  { id:"tz-c1", name:"SEACOM", type:"cable", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, capacityGbps:1280, year:2009, description:"Same system landing in Mombasa, onward to Dar" },
-  { id:"tz-c2", name:"EASSy", type:"cable", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, capacityGbps:4720, year:2010, description:"Regional submarine cable" },
+  { id:"tz-c1", name:"SEACOM", type:"cable", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, capacityGbps:1280, year:2009, description:"Same system landing in Mombasa, onward to Dar", href:"/infrastructure" },
+  { id:"tz-c2", name:"EASSy", type:"cable", city:"dar", country:"tanzania", lat:-6.8161, lng:39.2803, capacityGbps:4720, year:2010, description:"Regional submarine cable", href:"/infrastructure" },
   // Tanzania IXP
-  { id:"tz-ixp", name:"TIX", type:"ixp", city:"dar", country:"tanzania", lat:-6.7924, lng:39.2083, year:2016, members:45, peakGbps:8, description:"Tanzania Internet Exchange Point" },
+  { id:"tz-ixp", name:"TIX", type:"ixp", city:"dar", country:"tanzania", lat:-6.7924, lng:39.2083, year:2016, members:45, peakGbps:8, description:"Tanzania Internet Exchange Point", href:"/internet" },
 
   // Uganda Data Centres
-  { id:"ug-dc1", name:"Liquid Intelligent Technologies DC", type:"datacenter", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, tier:"Tier III", powerMW:2.5, year:2017, description:"Premier carrier-neutral facility in Uganda" },
-  { id:"ug-dc2", name:"MTN Uganda Data Centre", type:"datacenter", city:"kampala", country:"uganda", lat:0.3136, lng:32.5811, tier:"Tier II", powerMW:1.5, year:2015, description:"Largest mobile operator's facility" },
+  { id:"ug-dc1", name:"Liquid Intelligent Technologies DC", type:"datacenter", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, tier:"Tier III", powerMW:2.5, year:2017, description:"Premier carrier-neutral facility in Uganda", href:"/directory" },
+  { id:"ug-dc2", name:"MTN Uganda Data Centre", type:"datacenter", city:"kampala", country:"uganda", lat:0.3136, lng:32.5811, tier:"Tier II", powerMW:1.5, year:2015, description:"Largest mobile operator's facility", href:"/directory" },
   // Uganda Cables
-  { id:"ug-c1", name:"EASSy Terrestrial Extension", type:"cable", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, capacityGbps:2400, year:2011, description:"Fibre from Mombasa via Nairobi to Kampala" },
-  { id:"ug-c2", name:"TEAMS Terrestrial", type:"cable", city:"kampala", country:"uganda", lat:0.3136, lng:32.5811, capacityGbps:1280, year:2010, description:"Alternative fibre route via Malaba border" },
+  { id:"ug-c1", name:"EASSy Terrestrial Extension", type:"cable", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, capacityGbps:2400, year:2011, description:"Fibre from Mombasa via Nairobi to Kampala", href:"/infrastructure" },
+  { id:"ug-c2", name:"TEAMS Terrestrial", type:"cable", city:"kampala", country:"uganda", lat:0.3136, lng:32.5811, capacityGbps:1280, year:2010, description:"Alternative fibre route via Malaba border", href:"/infrastructure" },
   // Uganda IXP
-  { id:"ug-ixp", name:"UIXP", type:"ixp", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, year:2014, members:35, peakGbps:5, description:"Uganda Internet Exchange Point" },
+  { id:"ug-ixp", name:"UIXP", type:"ixp", city:"kampala", country:"uganda", lat:0.3476, lng:32.5825, year:2014, members:35, peakGbps:5, description:"Uganda Internet Exchange Point", href:"/internet" },
 
   // Rwanda Data Centres
-  { id:"rw-dc1", name:"IHS Rwanda Data Centre", type:"datacenter", city:"kigali", country:"rwanda", lat:-1.9536, lng:30.0606, tier:"Tier III", powerMW:1.5, year:2018, description:"Smart Kigali initiative facility" },
-  { id:"rw-dc2", name:"Liquid Rwanda DC", type:"datacenter", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, tier:"Tier II", powerMW:1, year:2016, description:"Regional enterprise facility" },
+  { id:"rw-dc1", name:"IHS Rwanda Data Centre", type:"datacenter", city:"kigali", country:"rwanda", lat:-1.9536, lng:30.0606, tier:"Tier III", powerMW:1.5, year:2018, description:"Smart Kigali initiative facility", href:"/directory" },
+  { id:"rw-dc2", name:"Liquid Rwanda DC", type:"datacenter", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, tier:"Tier II", powerMW:1, year:2016, description:"Regional enterprise facility", href:"/directory" },
   // Rwanda Cables
-  { id:"rw-c1", name:"Rwanda National Backbone", type:"cable", city:"kigali", country:"rwanda", lat:-1.9536, lng:30.0606, capacityGbps:640, year:2015, description:"Fibre from Kampala to Kigali" },
-  { id:"rw-c2", name:"BSCA Fibre", type:"cable", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, capacityGbps:640, year:2018, description:"Broadband System Corporation, Dar-Kigali link" },
+  { id:"rw-c1", name:"Rwanda National Backbone", type:"cable", city:"kigali", country:"rwanda", lat:-1.9536, lng:30.0606, capacityGbps:640, year:2015, description:"Fibre from Kampala to Kigali", href:"/infrastructure" },
+  { id:"rw-c2", name:"BSCA Fibre", type:"cable", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, capacityGbps:640, year:2018, description:"Broadband System Corporation, Dar-Kigali link", href:"/infrastructure" },
   // Rwanda IXP
-  { id:"rw-ixp", name:"RINEX", type:"ixp", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, year:2015, members:20, peakGbps:2, description:"Rwanda Internet Exchange Point" },
+  { id:"rw-ixp", name:"RINEX", type:"ixp", city:"kigali", country:"rwanda", lat:-1.9449, lng:30.0589, year:2015, members:20, peakGbps:2, description:"Rwanda Internet Exchange Point", href:"/internet" },
 
   // Ethiopia Data Centres
-  { id:"et-dc1", name:"Ethio Telecom Data Centre", type:"datacenter", city:"addis", country:"ethiopia", lat:9.01, lng:38.76, tier:"Tier II", powerMW:2, year:2016, description:"Government-backed national facility" },
-  { id:"et-dc2", name:"Safaricom Ethiopia DC", type:"datacenter", city:"addis", country:"ethiopia", lat:9.02, lng:38.75, tier:"Tier II", powerMW:1.5, year:2023, description:"New market entrant after telecoms liberalisation" },
+  { id:"et-dc1", name:"Ethio Telecom Data Centre", type:"datacenter", city:"addis", country:"ethiopia", lat:9.01, lng:38.76, tier:"Tier II", powerMW:2, year:2016, description:"Government-backed national facility", href:"/directory" },
+  { id:"et-dc2", name:"Safaricom Ethiopia DC", type:"datacenter", city:"addis", country:"ethiopia", lat:9.02, lng:38.75, tier:"Tier II", powerMW:1.5, year:2023, description:"New market entrant after telecoms liberalisation", href:"/directory" },
   // Ethiopia Cables
-  { id:"et-c1", name:"DARE1 Terrestrial", type:"cable", city:"addis", country:"ethiopia", lat:9.01, lng:38.76, capacityGbps:960, year:2016, description:"Fibre link from Djibouti to Addis Ababa" },
-  { id:"et-c2", name:"PEACE Cable Extension", type:"cable", city:"addis", country:"ethiopia", lat:9.02, lng:38.75, capacityGbps:16000, year:2022, description:"High-capacity link connecting to Djibouti submarine systems" },
+  { id:"et-c1", name:"DARE1 Terrestrial", type:"cable", city:"addis", country:"ethiopia", lat:9.01, lng:38.76, capacityGbps:960, year:2016, description:"Fibre link from Djibouti to Addis Ababa", href:"/infrastructure" },
+  { id:"et-c2", name:"PEACE Cable Extension", type:"cable", city:"addis", country:"ethiopia", lat:9.02, lng:38.75, capacityGbps:16000, year:2022, description:"High-capacity link connecting to Djibouti submarine systems", href:"/infrastructure" },
   // Ethiopia IXP
-  { id:"et-ixp", name:"ET-IXP", type:"ixp", city:"addis", country:"ethiopia", lat:9.032, lng:38.7469, year:2018, members:42, peakGbps:12, description:"Ethiopian Internet Exchange Point" },
+  { id:"et-ixp", name:"ET-IXP", type:"ixp", city:"addis", country:"ethiopia", lat:9.032, lng:38.7469, year:2018, members:42, peakGbps:12, description:"Ethiopian Internet Exchange Point", href:"/internet" },
 ];
 
 // ─── CABLE ROUTES ───
 const CABLE_ROUTES: CableRoute[] = [
-  { fromCity:"mombasa", toCity:"nairobi", fromLat:-4.0435, fromLng:39.6682, toLat:-1.27, toLng:36.82, type:"terrestrial" },
-  { fromCity:"nairobi", toCity:"kampala", fromLat:-1.27, fromLng:36.82, toLat:0.33, toLng:32.58, type:"terrestrial" },
-  { fromCity:"kampala", toCity:"kigali", fromLat:0.33, fromLng:32.58, toLat:-1.95, toLng:30.06, type:"terrestrial" },
-  { fromCity:"dar", toCity:"kigali", fromLat:-6.81, fromLng:39.27, toLat:-1.95, toLng:30.06, type:"terrestrial" },
-  { fromCity:"mombasa", toCity:"dar", fromLat:-4.0435, fromLng:39.6682, toLat:-6.81, toLng:39.27, type:"submarine" },
-  { fromCity:"djibouti", toCity:"addis", fromLat:11.5, fromLng:42.0, toLat:9.02, toLng:38.75, type:"terrestrial" },
+  { id:"r1", fromCity:"mombasa", toCity:"nairobi", type:"terrestrial",
+    waypoints:[[-4.04,39.67],[-2.5,38.5],[-1.8,37.8],[-1.27,36.82]] },
+  { id:"r2", fromCity:"nairobi", toCity:"kampala", type:"terrestrial",
+    waypoints:[[-1.27,36.82],[-0.5,35.5],[0.05,34.2],[0.33,32.58]] },
+  { id:"r3", fromCity:"kampala", toCity:"kigali", type:"terrestrial",
+    waypoints:[[0.33,32.58],[-0.3,31.8],[-1.0,31.0],[-1.5,30.5],[-1.95,30.06]] },
+  { id:"r4", fromCity:"dar", toCity:"kigali", type:"terrestrial",
+    waypoints:[[-6.81,39.27],[-5.5,36.5],[-4.0,34.5],[-2.5,32.5],[-1.95,30.06]] },
+  { id:"r5", fromCity:"mombasa", toCity:"dar", type:"submarine",
+    waypoints:[[-4.04,39.67],[-4.6,40.0],[-5.5,40.3],[-6.2,39.8],[-6.81,39.27]] },
+  { id:"r6", fromCity:"djibouti", toCity:"addis", type:"terrestrial",
+    waypoints:[[11.5,42.0],[11.2,41.0],[10.5,40.0],[9.8,39.5],[9.02,38.75]] },
 ];
 
 // ─── HELPERS ───
@@ -273,46 +278,48 @@ function FilterBar({
   return (
     <div className="space-y-3">
       {/* Country filter + view toggle row */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
         <Button size="sm" variant={country === "all" ? "default" : "outline"}
           onClick={() => setCountry("all")}
-          className={country === "all" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}>
+          className={country === "all" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs sm:text-sm" : "text-xs sm:text-sm"}>
           View All
         </Button>
         {ALL_COUNTRIES.map((c) => (
           <Button key={c} size="sm" variant={country === c ? "default" : "outline"}
             onClick={() => setCountry(c)}
-            className={country === c ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}>
-            {COUNTRY_META[c].flag} {COUNTRY_META[c].label}
+            className={country === c ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs sm:text-sm" : "text-xs sm:text-sm"}>
+            {COUNTRY_META[c].flag} <span className="hidden sm:inline">{COUNTRY_META[c].label}</span>
           </Button>
         ))}
         <div className="ml-auto flex items-center gap-1">
           <Button size="sm" variant={viewMode === "map" ? "default" : "ghost"}
             onClick={() => setViewMode("map")}
-            className={viewMode === "map" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}>
-            <Map className="w-4 h-4" />
+            className={viewMode === "map" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}
+            aria-label="Map view">
+            <MapIcon className="w-4 h-4" />
           </Button>
           <Button size="sm" variant={viewMode === "list" ? "default" : "ghost"}
             onClick={() => setViewMode("list")}
-            className={viewMode === "list" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}>
+            className={viewMode === "list" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}
+            aria-label="List view">
             <List className="w-4 h-4" />
           </Button>
         </div>
       </div>
       {/* Type filter + search row */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
         {typeButtons.map((t) => (
           <Button key={t.key} size="sm" variant={typeFilter === t.key ? "default" : "outline"}
             onClick={() => setTypeFilter(t.key)}
-            className={typeFilter === t.key ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""}>
+            className={typeFilter === t.key ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs sm:text-sm" : "text-xs sm:text-sm"}>
             {t.label}
           </Button>
         ))}
-        <div className="relative ml-auto">
+        <div className="relative ml-auto w-full sm:w-auto">
           <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
           <input type="text" placeholder="Search assets…" value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="h-8 pl-8 pr-3 text-sm rounded-md bg-surface border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-cyan/50 w-48 md:w-56" />
+            className="h-9 sm:h-8 w-full sm:w-48 md:w-56 pl-8 pr-3 text-sm rounded-md bg-surface border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-cyan/50" />
         </div>
       </div>
     </div>
@@ -387,35 +394,38 @@ function DetailPanel({
       className="glass-card rounded-xl p-4 md:p-5 w-full md:w-80 lg:w-96 border-cyan/10 max-h-[40vh] md:max-h-[70vh] overflow-y-auto scrollbar-thin md:absolute md:top-4 md:right-4 md:bottom-4 fixed bottom-0 left-0 right-0 md:z-10 rounded-b-none md:rounded-b-xl"
     >
       <div className="flex items-start justify-between mb-4">
-        <div>
-          <h3 className="text-foreground font-semibold text-lg">{cityName}</h3>
+        <div className="min-w-0">
+          <h3 className="text-foreground font-semibold text-base md:text-lg truncate">{cityName}</h3>
           {country && <p className="text-muted-foreground text-sm">{COUNTRY_META[country].flag} {COUNTRY_META[country].label}</p>}
         </div>
-        <button onClick={onClose} className="text-muted-foreground hover:text-foreground transition-colors p-1 md:p-0">
+        <button onClick={onClose} className="text-muted-foreground hover:text-foreground transition-colors p-1 -mr-1 shrink-0 md:p-0">
           <X className="w-5 h-5" />
         </button>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {items.map((item) => (
-          <div key={item.id} className="bg-surface/50 rounded-lg p-3 border border-border/20 hover:border-cyan/20 transition-colors">
-            <div className="flex items-center gap-2 mb-1">
-              <span className={`w-2 h-2 rounded-full shrink-0 ${TYPE_COLORS[item.type]}`} />
-              <span className="text-foreground font-medium text-sm truncate">{item.name}</span>
+          <a key={item.id} href={item.href ?? "#"} className="block">
+            <div className="bg-surface/50 rounded-lg p-3 border border-border/20 hover:border-cyan/20 transition-colors">
+              <div className="flex items-center gap-2 mb-1">
+                <span className={`w-2 h-2 rounded-full shrink-0 ${TYPE_COLORS[item.type]}`} />
+                <span className="text-foreground font-medium text-sm truncate">{item.name}</span>
+                {item.href && <ArrowRight className="w-3 h-3 text-muted-foreground ml-auto shrink-0" />}
+              </div>
+              <p className="text-muted-foreground text-xs mb-2 line-clamp-2">{item.description}</p>
+              <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                <Badge variant="outline" className="text-[10px] px-1.5 py-0">{TYPE_LABELS[item.type]}</Badge>
+                {item.tier && <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.tier}</Badge>}
+                {item.powerMW && <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{item.powerMW} MW</span>}
+                {item.capacityGbps != null && <span className="flex items-center gap-1"><Cable className="w-3 h-3 text-purple-400" />{formatCapacity(item.capacityGbps)}</span>}
+                {item.members != null && <span className="flex items-center gap-1"><Network className="w-3 h-3 text-emerald-400" />{item.members} members</span>}
+                <span className="ml-auto">{item.year}</span>
+              </div>
             </div>
-            <p className="text-muted-foreground text-xs mb-2 line-clamp-2">{item.description}</p>
-            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <Badge variant="outline" className="text-[10px] px-1.5 py-0">{TYPE_LABELS[item.type]}</Badge>
-              {item.tier && <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.tier}</Badge>}
-              {item.powerMW && <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{item.powerMW} MW</span>}
-              {item.capacityGbps != null && <span className="flex items-center gap-1"><Cable className="w-3 h-3 text-purple-400" />{formatCapacity(item.capacityGbps)}</span>}
-              {item.members != null && <span className="flex items-center gap-1"><Network className="w-3 h-3 text-emerald-400" />{item.members} members</span>}
-              <span className="ml-auto">{item.year}</span>
-            </div>
-          </div>
+          </a>
         ))}
         <a href="/directory">
           <Button variant="outline" size="sm" className="w-full mt-2 border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan">
-            Learn more <ArrowRight className="w-4 h-4 ml-1" />
+            View Full Directory <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         </a>
       </div>
@@ -494,9 +504,9 @@ export default function EastAfricaInfrastructureMap() {
       if (r.fromCity === "djibouti" && country !== "all" && country !== "ethiopia") return false;
       return true;
     }).map((r) => {
-      const p1 = proj(r.fromLat, r.fromLng);
-      const p2 = proj(r.toLat, r.toLng);
-      return { ...r, x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y };
+      const pts = r.waypoints.map(([lat, lng]) => proj(lat, lng));
+      const d = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+      return { ...r, d, points: pts };
     });
   }, [country]);
 
@@ -532,7 +542,7 @@ export default function EastAfricaInfrastructureMap() {
         {/* Content */}
         {viewMode === "map" ? (
           <div className="relative">
-            <div className="relative bg-[#0a0a0f] rounded-xl border border-border/30 overflow-hidden min-h-[400px] md:min-h-[600px]">
+            <div className="relative bg-[#0a0a0f] rounded-xl border border-border/30 overflow-hidden min-h-[320px] sm:min-h-[400px] md:min-h-[600px]">
               <svg viewBox="0 0 1000 1000" className="w-full h-full absolute inset-0" preserveAspectRatio="xMidYMid meet">
                 {/* Grid */}
                 {gridLines.map((l, i) => (
@@ -548,11 +558,19 @@ export default function EastAfricaInfrastructureMap() {
                     </g>
                   );
                 })}
-                {/* Cable routes */}
-                {routeData.map((r, i) => (
-                  <line key={`route-${i}`} x1={r.x1} y1={r.y1} x2={r.x2} y2={r.y2}
-                    stroke={r.type === "submarine" ? "rgba(168,85,247,0.25)" : "rgba(168,85,247,0.15)"}
-                    strokeWidth={1.5} strokeDasharray={r.type === "submarine" ? "8,6" : "6,4"} />
+                {/* Cable routes with waypoints */}
+                {routeData.map((r) => (
+                  <g key={`route-${r.id}`}>
+                    <path d={r.d} fill="none"
+                      stroke={r.type === "submarine" ? "rgba(168,85,247,0.3)" : "rgba(168,85,247,0.18)"}
+                      strokeWidth={1.5} strokeDasharray={r.type === "submarine" ? "8,6" : "6,4"}
+                      strokeLinecap="round" strokeLinejoin="round" />
+                    {r.type === "submarine" && r.points.length > 1 && (
+                      <path d={r.d} fill="none"
+                        stroke="rgba(168,85,247,0.08)" strokeWidth={6}
+                        strokeLinecap="round" strokeLinejoin="round" />
+                    )}
+                  </g>
                 ))}
                 {/* City markers */}
                 {Object.entries(CITIES).map(([cityId, city]) => {
@@ -611,7 +629,7 @@ export default function EastAfricaInfrastructureMap() {
               </AnimatePresence>
             </div>
             {/* Legend below map */}
-            <div className="mt-3 flex items-center justify-between">
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
               <Legend />
               <p className="text-[10px] text-muted-foreground hidden sm:block">
                 Simplified borders · Projection: equirectangular
