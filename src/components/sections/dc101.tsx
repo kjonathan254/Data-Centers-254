@@ -36,7 +36,7 @@ const components = [
     icon: Zap,
     title: "Power Systems",
     subtitle: "The Heartbeat",
-    image: "/images/dc-power-systems.png",
+    image: "/images/dc-power-systems.webp",
     imageAlt: "Data centre power distribution units and backup generators",
     description:
       "Data centres need enormous, uninterrupted power. They connect to the national grid (KPLC) but also have diesel generators and UPS (Uninterruptible Power Supply) battery systems for backup.",
@@ -45,7 +45,7 @@ const components = [
     icon: Thermometer,
     title: "Cooling Systems",
     subtitle: "The Air Conditioning on Steroids",
-    image: "/images/dc-cooling.png",
+    image: "/images/dc-cooling.webp",
     imageAlt: "Data centre cooling infrastructure and HVAC systems",
     description:
       "Servers generate massive heat. Without cooling, they'd overheat and fail in minutes. Kenya's climate is actually an advantage — Nairobi's mild temperatures mean less energy spent on cooling compared to hotter regions.",
@@ -54,7 +54,7 @@ const components = [
     icon: Wifi,
     title: "Networking",
     subtitle: "The Highway System",
-    image: "/images/dc-networking.png",
+    image: "/images/dc-networking.webp",
     imageAlt: "Fibre optic networking cables and switches in a data centre",
     description:
       "Fibre optic cables connect data centres to the internet and to each other. In Kenya, companies like Liquid Intelligent Technologies and the Kenya Internet Exchange Point (KIXP) handle this connectivity.",
@@ -63,7 +63,7 @@ const components = [
     icon: Shield,
     title: "Security",
     subtitle: "The Fortress",
-    image: "/images/dc-security.png",
+    image: "/images/dc-security.webp",
     imageAlt: "Data centre physical security systems and biometric access controls",
     description:
       "Physical security (guards, biometric access, CCTV) and cybersecurity (firewalls, encryption) protect the data. Tier 3+ facilities have multiple security layers.",
@@ -72,7 +72,7 @@ const components = [
     icon: LayoutGrid,
     title: "Racks & Cabling",
     subtitle: "The Skeleton",
-    image: "/images/dc-networking.png",
+    image: "/images/racks-cabling.webp",
     imageAlt: "Organised server rack cabling and structured wiring",
     description:
       "Servers are mounted in standardised metal frames called racks. The cabling alone in a large DC can stretch hundreds of kilometres — all colour-coded and meticulously organised.",

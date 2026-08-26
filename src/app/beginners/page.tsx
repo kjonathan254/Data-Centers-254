@@ -13,11 +13,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/images/dc-servers-racks.png", width: 1200, height: 675, alt: "Beginner Guides — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Beginner Guides | Data Centre 254",
     description: "New to data centres? Start here. Plain-language guides using M-Pesa, WhatsApp, and Netflix examples.",
+    images: ["/images/dc-servers-racks.png"],
   },
 };
 

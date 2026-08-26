@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -14,12 +15,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/images/founder-photo.jpg", width: 800, height: 800, alt: "Kevin Jonathan Otieno — Founder of Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About | Data Centre 254",
     description:
       "Kenya's independent knowledge platform for digital infrastructure.",
+    images: ["/images/founder-photo.jpg"],
   },
 };
 
@@ -84,7 +87,18 @@ export default function AboutPage() {
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4">
                 Who Is Behind This
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="flex flex-col sm:flex-row items-start gap-6 mb-6">
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-cyan/20 shrink-0">
+                  <Image
+                    src="/images/founder-photo.jpg"
+                    alt="Kevin Jonathan Otieno — Founder of Data Centre 254"
+                    fill
+                    className="object-cover"
+                    sizes="144px"
+                    priority
+                  />
+                </div>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Data Centre 254 was founded and is operated by <strong className="text-foreground">Kevin Jonathan Otieno</strong>,
                   a Kenyan founder, writer and content creator with a background in communications,
@@ -103,6 +117,7 @@ export default function AboutPage() {
                   aspiring professionals. Every topic is researched, verified, and explained with
                   transparency about where information comes from and how confident we are in each claim.
                 </p>
+                </div>
               </div>
 
               {/* Social Links */}

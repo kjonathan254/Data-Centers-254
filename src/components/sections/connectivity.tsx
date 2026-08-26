@@ -111,7 +111,7 @@ export default function Connectivity() {
         >
           <div className="relative rounded-xl overflow-hidden border border-border aspect-video bg-surface">
             <Image
-              src="/images/dc-networking.png"
+              src="/images/dc-networking.webp"
               alt="Fibre optic networking infrastructure"
               fill
               className="object-cover"

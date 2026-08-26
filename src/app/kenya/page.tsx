@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/images/nairobi-skyline.webp", width: 1200, height: 675, alt: "Kenya Data Centres — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kenya's Data Centre Industry | Data Centre 254",
     description: "Where are Kenya's data centres? Who owns them? Why Nairobi is becoming East Africa's data centre hub.",
+    images: ["/images/nairobi-skyline.webp"],
   },
 };
 

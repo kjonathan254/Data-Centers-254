@@ -89,7 +89,7 @@ export default function Power() {
         >
           <div className="relative rounded-xl overflow-hidden border border-border aspect-video bg-surface">
             <Image
-              src="/images/dc-power-systems.png"
+              src="/images/dc-power-systems.webp"
               alt="Data centre power systems infrastructure"
               fill
               className="object-cover"

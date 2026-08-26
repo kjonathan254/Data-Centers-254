@@ -18,12 +18,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "DC Directory | Data Centre 254",
     description:
       "Kenya's most comprehensive data centre directory. Search, filter, and compare facilities.",
+    images: ["/images/africa-dc-map.webp"],
   },
 };
 
