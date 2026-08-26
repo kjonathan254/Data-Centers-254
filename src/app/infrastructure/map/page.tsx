@@ -17,12 +17,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
+    images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "East Africa Infrastructure Map — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "East Africa Digital Infrastructure Map",
     description:
       "Interactive map of data centres, cables, and IXPs across East Africa.",
+    images: ["/images/og-infrastructure-map.webp"],
   },
 };
 

@@ -149,7 +149,7 @@ export default function EastAfrica() {
       >
         <figure className="flex flex-col gap-3">
           <Image
-            src="/images/nairobi-skyline.png"
+            src="/images/nairobi-skyline.webp"
             alt="Nairobi, Kenya -- the emerging data centre capital of East Africa."
             width={1280}
             height={720}

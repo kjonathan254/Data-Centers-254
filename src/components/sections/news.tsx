@@ -186,7 +186,7 @@ export default function News() {
         >
           <figure className="flex flex-col gap-3">
             <Image
-              src="/images/nairobi-skyline.png"
+              src="/images/nairobi-skyline.webp"
               alt="Nairobi skyline"
               width={1280}
               height={720}

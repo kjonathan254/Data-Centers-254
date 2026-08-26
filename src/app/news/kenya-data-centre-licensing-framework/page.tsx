@@ -27,11 +27,13 @@ export const metadata: Metadata = {
     modifiedTime: ARTICLE_META.publishedDate,
     authors: [ARTICLE_META.author],
     section: ARTICLE_META.cluster,
+    images: [{ url: "/images/dc-policy-regulation.png", width: 1200, height: 675, alt: "Kenya Data Centre Licensing Framework — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: ARTICLE_META.title,
     description: ARTICLE_META.subtitle,
+    images: ["/images/dc-policy-regulation.png"],
   },
 };
 

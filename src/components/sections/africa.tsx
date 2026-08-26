@@ -210,7 +210,7 @@ export default function AfricaSection() {
         >
           <figure className="flex flex-col gap-3">
             <Image
-              src="/images/africa-dc-map.png"
+              src="/images/africa-dc-map.webp"
               alt="Africa's data centre infrastructure is concentrated in a few key hubs, but expanding rapidly."
               width={1280}
               height={720}

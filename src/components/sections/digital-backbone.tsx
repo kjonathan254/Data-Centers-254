@@ -66,7 +66,7 @@ export default function DigitalBackbone() {
             <div className="relative rounded-xl overflow-hidden border border-border/30">
               <div className="relative aspect-[16/9]">
                 <Image
-                  src="/images/africa-dc-map.png"
+                  src="/images/africa-dc-map.webp"
                   alt="Map of Kenya showing data centre locations, submarine cable landing points, and fibre connectivity routes"
                   fill
                   className="object-cover"

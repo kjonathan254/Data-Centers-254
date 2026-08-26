@@ -208,7 +208,7 @@ export default function AICloud() {
           >
             <div className="rounded-xl overflow-hidden">
               <Image
-                src="/images/nairobi-skyline.png"
+                src="/images/nairobi-skyline.webp"
                 alt="Nairobi's transforming skyline"
                 width={800}
                 height={500}
