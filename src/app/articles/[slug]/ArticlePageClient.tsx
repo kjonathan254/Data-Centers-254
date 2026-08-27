@@ -1,78 +1,391 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import {
-  ArrowLeft, Clock, Calendar, Shield, ExternalLink,
-  ChevronRight, BookOpen, AlertTriangle, CheckCircle2, HelpCircle,
+  ArrowLeft, Clock, Calendar, ChevronRight, BookOpen,
+  Share2, LinkIcon, CheckCircle2, ChevronUp,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-interface Claim {
-  id: string;
-  claim: string;
-  source: string | null;
-  sourceTitle: string | null;
-  verifiedDate: string | null;
-  confidence: string;
-  notes: string | null;
-}
+import type {
+  Article, ArticleFaq, ArticleImage,
+} from "@/lib/articles";
+import { CLUSTER_META } from "@/lib/cluster-meta";
 
-interface Article {
-  id: string;
+// ─── Types ────────────────────────────────────────────────────────────────
+
+interface RelatedArticle {
   title: string;
   slug: string;
-  tlDr: string | null;
-  description: string | null;
-  cluster: string;
-  content: string;
-  readingTimeMin: number | null;
-  lastVerified: string | null;
-  dataSource: string | null;
-  claims: Claim[];
-  createdAt: string;
+  reading_time: string;
 }
 
-interface Related {
-  title: string;
-  slug: string;
-  tlDr: string | null;
-  readingTimeMin: number | null;
-}
-
-const clusterMeta: Record<string, { label: string; href: string; color: string }> = {
-  Beginner: { label: "Beginner Guides", href: "/data-centres", color: "text-cyan bg-cyan/10 border-cyan/25" },
-  Kenya: { label: "Kenya", href: "/ai", color: "text-neon bg-neon/10 border-neon/25" },
-  Internet: { label: "Internet & Connectivity", href: "/infrastructure", color: "text-blue-400 bg-blue-400/10 border-blue-400/25" },
-  Energy: { label: "Energy & Power", href: "/energy", color: "text-amber-400 bg-amber-400/10 border-amber-400/25" },
-  Careers: { label: "Careers & Business", href: "/careers", color: "text-purple-400 bg-purple-400/10 border-purple-400/25" },
-};
-
-const confidenceCfg: Record<string, { icon: typeof CheckCircle2; color: string; bg: string }> = {
-  High: { icon: CheckCircle2, color: "text-neon", bg: "bg-neon/10 border-neon/25" },
-  Medium: { icon: Shield, color: "text-cyan", bg: "bg-cyan/10 border-cyan/25" },
-  Low: { icon: AlertTriangle, color: "text-amber-400", bg: "bg-amber-400/10 border-amber-400/25" },
-  Unverified: { icon: HelpCircle, color: "text-muted-foreground", bg: "bg-accent/50 border-border" },
-};
-
-export default function ArticlePageClient({
-  article,
-  related,
-  cluster,
-}: {
+interface Props {
   article: Article;
-  related: Related[];
-  cluster: string;
-}) {
-  const [showClaims, setShowClaims] = useState(false);
-  const meta = clusterMeta[cluster] || clusterMeta.Beginner;
+  related: RelatedArticle[];
+}
+
+// ─── Heading ToC Item ─────────────────────────────────────────────────────
+
+interface HeadingItem {
+  id: string;
+  text: string;
+  level: number;
+}
+
+// ─── Progress Bar ──────────────────────────────────────────────────────────
+
+function ProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      const el = document.documentElement;
+      const scrollTop = el.scrollTop;
+      const scrollHeight = el.scrollHeight - el.clientHeight;
+      setProgress(scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0);
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="fixed top-0 left-0 right-0 z-50 h-[3px]">
+      <div
+        className="h-full bg-cyan transition-[width] duration-100 ease-out"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+}
+
+// ─── Table of Contents ────────────────────────────────────────────────────
+
+function TableOfContents({ headings }: { headings: HeadingItem[] }) {
+  const h2s = headings.filter((h) => h.level === 2);
+  if (h2s.length < 2) return null;
+
+  return (
+    <nav className="glass-card rounded-xl p-5 sm:p-6 mb-10 border border-border/50">
+      <h2 className="text-xs font-mono uppercase tracking-widest text-cyan mb-4">
+        On this page
+      </h2>
+      <ul className="space-y-2">
+        {h2s.map((h) => (
+          <li key={h.id}>
+            <a
+              href={`#${h.id}`}
+              className="text-sm text-muted-foreground hover:text-cyan transition-colors duration-200 block py-0.5"
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+// ─── Article Image ────────────────────────────────────────────────────────
+
+function ArticleImageBlock({ image }: { image: ArticleImage }) {
+  const isHero = image.position === "hero";
+  const isInfographic = image.position === "infographic";
+  const isSectionBreak = image.position === "section-break";
+
+  return (
+    <figure
+      className={`my-8 ${
+        isHero
+          ? "-mx-4 sm:-mx-6 lg:-mx-8"
+          : isSectionBreak || isInfographic
+          ? "-mx-4 sm:-mx-6"
+          : ""
+      } ${isInfographic ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
+    >
+      <div
+        className={`relative overflow-hidden ${
+          isHero
+            ? "rounded-xl h-48 sm:h-64 lg:h-80"
+            : isSectionBreak
+            ? "rounded-xl h-48 sm:h-56"
+            : isInfographic
+            ? "h-48 sm:h-64"
+            : "rounded-xl h-40 sm:h-48"
+        }`}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          className="object-cover"
+          sizes={
+            isHero
+              ? "(max-width: 1024px) 100vw, 896px"
+              : "(max-width: 768px) 100vw, 768px"
+          }
+          priority={isHero}
+        />
+      </div>
+      {image.caption && (
+        <figcaption
+          className={`text-xs text-muted-foreground mt-2 leading-relaxed ${
+            isHero ? "px-4 sm:px-6 lg:px-8" : isSectionBreak ? "px-4 sm:px-6" : ""
+          }`}
+        >
+          {image.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
+// ─── FAQ Section ──────────────────────────────────────────────────────────
+
+function FaqSection({ faq }: { faq: ArticleFaq[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  if (faq.length === 0) return null;
+
+  return (
+    <div className="mt-14">
+      <Separator className="bg-border/50 mb-8" />
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground tracking-tight mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="space-y-3">
+        {faq.map((item, i) => (
+          <div
+            key={i}
+            className="glass-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <button
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              className="w-full flex items-start justify-between gap-3 p-4 sm:p-5 text-left"
+            >
+              <span className="text-sm sm:text-base font-medium text-foreground leading-snug">
+                {item.question}
+              </span>
+              <ChevronUp
+                className={`size-4 shrink-0 mt-0.5 text-muted-foreground transition-transform duration-200 ${
+                  openIndex === i ? "" : "rotate-180"
+                }`}
+              />
+            </button>
+            {openIndex === i && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                className="px-4 sm:px-5 pb-4 sm:pb-5"
+              >
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.answer}
+                </p>
+              </motion.div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Share Buttons ────────────────────────────────────────────────────────
+
+function ShareButtons({ title, slug }: { title: string; slug: string }) {
+  const [copied, setCopied] = useState(false);
+  const url = `https://datacentre254.com/articles/${slug}`;
+
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // fallback
+    }
+  }
+
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-xs text-muted-foreground mr-1">
+        <Share2 className="size-3.5 inline mr-1" />
+        Share
+      </span>
+      <a
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center size-8 rounded-lg border border-border/50 hover:border-cyan/30 hover:bg-cyan/5 transition-all text-muted-foreground hover:text-cyan"
+        aria-label="Share on X"
+      >
+        <svg className="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a
+        href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center size-8 rounded-lg border border-border/50 hover:border-cyan/30 hover:bg-cyan/5 transition-all text-muted-foreground hover:text-cyan"
+        aria-label="Share on LinkedIn"
+      >
+        <svg className="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <button
+        onClick={copyLink}
+        className="inline-flex items-center justify-center size-8 rounded-lg border border-border/50 hover:border-cyan/30 hover:bg-cyan/5 transition-all text-muted-foreground hover:text-cyan"
+        aria-label="Copy link"
+      >
+        {copied ? (
+          <CheckCircle2 className="size-3.5 text-neon" />
+        ) : (
+          <LinkIcon className="size-3.5" />
+        )}
+      </button>
+    </div>
+  );
+}
+
+// ─── Markdown Components ──────────────────────────────────────────────────
+
+function getMarkdownComponents(images: ArticleImage[]) {
+  // Build a map of image src -> caption for rendering inline images from markdown
+  const imageMap = new Map<string, ArticleImage>();
+  for (const img of images) {
+    if (img.position === "inline" || img.position === "section-break" || img.position === "infographic") {
+      imageMap.set(img.src, img);
+    }
+  }
+
+  return {
+    h2: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => {
+      const text = String(children).replace(/\*\*/g, "").trim();
+      const id = text.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+      return (
+        <h2 id={id} className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight mt-14 mb-4 scroll-mt-24">
+          {children}
+        </h2>
+      );
+    },
+    h3: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <h3 className="text-xl font-semibold text-foreground mt-10 mb-3 scroll-mt-24">
+        {children}
+      </h3>
+    ),
+    p: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <p className="mb-6 leading-relaxed">{children}</p>
+    ),
+    blockquote: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <div className="my-8 border-l-2 border-cyan/50 pl-6 py-2">
+        <p className="text-lg sm:text-xl font-medium text-foreground/90 italic leading-relaxed">
+          {children}
+        </p>
+      </div>
+    ),
+    strong: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <strong className="text-foreground font-semibold">{children}</strong>
+    ),
+    em: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <em className="text-foreground/90">{children}</em>
+    ),
+    ul: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <ul className="my-6 space-y-2">{children}</ul>
+    ),
+    ol: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <ol className="my-6 space-y-2 list-decimal list-inside">{children}</ol>
+    ),
+    li: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <li className="flex items-start gap-2">
+        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan" />
+        <span className="flex-1">{children}</span>
+      </li>
+    ),
+    a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => {
+      const isInternal = href?.startsWith("/");
+      if (isInternal) {
+        return (
+          <Link href={href} className="text-cyan hover:underline underline-offset-4">
+            {children}
+          </Link>
+        );
+      }
+      return (
+        <a href={href} className="text-cyan hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    },
+    code: ({ className, children, ..._rest }: { className?: string; children?: React.ReactNode; [key: string]: unknown }) => {
+      const isInline = !className;
+      if (isInline) {
+        return (
+          <code className="text-cyan bg-cyan/10 px-1.5 py-0.5 rounded text-sm font-mono">
+            {children}
+          </code>
+        );
+      }
+      return (
+        <code className={`${className} block my-4 p-4 rounded-lg bg-surface overflow-x-auto text-sm`}>
+          {children}
+        </code>
+      );
+    },
+    table: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <div className="my-6 overflow-x-auto rounded-lg border border-border/50">
+        <table className="w-full text-sm">{children}</table>
+      </div>
+    ),
+    thead: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <thead className="bg-surface">{children}</thead>
+    ),
+    th: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <th className="px-4 py-3 text-left font-semibold text-foreground text-xs uppercase tracking-wider">{children}</th>
+    ),
+    td: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <td className="px-4 py-3 text-muted-foreground border-t border-border/30">{children}</td>
+    ),
+    // Render images from markdown as styled figure blocks
+    img: ({ src, alt, ..._rest }: { src?: string; alt?: string; [key: string]: unknown }) => {
+      if (!src) return null;
+      const matched = imageMap.get(src);
+      if (matched) {
+        return <ArticleImageBlock image={matched} />;
+      }
+      // Generic image without frontmatter mapping
+      return (
+        <figure className="my-8">
+          <div className="relative overflow-hidden rounded-xl h-48 sm:h-64">
+            <Image src={src} alt={alt || ""} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
+          </div>
+          {alt && <figcaption className="text-xs text-muted-foreground mt-2">{alt}</figcaption>}
+        </figure>
+      );
+    },
+  };
+}
+
+// ─── Main Component ───────────────────────────────────────────────────────
+
+export default function ArticlePageClient({ article, related }: Props) {
+  const { frontmatter, content, headings } = article;
+  const meta = CLUSTER_META[frontmatter.cluster] || CLUSTER_META.Beginner;
+
+  // Separate hero image from body images
+  const heroImage = frontmatter.images.find((i) => i.position === "hero");
+  const bodyImages = frontmatter.images.filter((i) => i.position !== "hero");
+
+  // We need to strip markdown image references from the content since
+  // ReactMarkdown will render them via the img component
+  // The images are rendered by the frontmatter-driven positions
+
+  const mdComponents = getMarkdownComponents(bodyImages);
 
   return (
     <div className="relative">
+      <ProgressBar />
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_10%,oklch(0.78_0.14_195/3%),transparent_70%)]" aria-hidden="true" />
 
@@ -88,162 +401,108 @@ export default function ArticlePageClient({
           <ChevronRight className="size-3.5" />
           <Link href={meta.href} className="hover:text-foreground transition-colors">{meta.label}</Link>
           <ChevronRight className="size-3.5" />
-          <span className="text-foreground/60 truncate max-w-[200px]">{article.title}</span>
+          <span className="text-foreground/60 truncate max-w-[200px]">{frontmatter.title}</span>
         </motion.div>
 
-        {/* Header */}
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
+          {/* Cluster badge */}
           <span className="text-section-label">{meta.label.toUpperCase()}</span>
 
+          {/* Title */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight mb-4 mt-4">
-            {article.title}
+            {frontmatter.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-8">
-            {article.readingTimeMin && (
-              <span className="flex items-center gap-1.5"><Clock className="size-4" />{article.readingTimeMin} min read</span>
-            )}
-            {article.lastVerified && (
-              <span className="flex items-center gap-1.5"><Shield className="size-4" />Verified {article.lastVerified}</span>
-            )}
-            <span className="flex items-center gap-1.5"><Calendar className="size-4" />{new Date(article.createdAt).toLocaleDateString("en-KE", { year: "numeric", month: "long" })}</span>
+          {/* Meta row */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-4">
+            <span className="font-medium text-foreground/80">
+              <Link href={frontmatter.author_bio_link} className="hover:text-cyan transition-colors">
+                {frontmatter.author}
+              </Link>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Calendar className="size-3.5" />
+              {new Date(frontmatter.published_date).toLocaleDateString("en-KE", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock className="size-3.5" />
+              {frontmatter.reading_time}
+            </span>
           </div>
 
-          <Separator className="bg-border/50 mb-10" />
+          {/* Share buttons */}
+          <div className="mb-8">
+            <ShareButtons title={frontmatter.title} slug={frontmatter.slug} />
+          </div>
 
-          {/* TL;DR Pull Quote */}
-          {article.tlDr && (
-            <div className="my-10 py-6 border-y border-border/30">
-              <p className="pull-quote text-center max-w-2xl mx-auto">{article.tlDr}</p>
-            </div>
-          )}
+          <Separator className="bg-border/50 mb-0" />
+
+          {/* Hero image */}
+          {heroImage && <ArticleImageBlock image={heroImage} />}
+
+          {/* Table of Contents */}
+          <TableOfContents headings={headings} />
 
           {/* Article Body */}
-          <div className="mt-10 space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
-            <ReactMarkdown
-              components={{
-                h2: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight mt-14 mb-4 first:mt-0">
-                    {children}
-                  </h2>
-                ),
-                h3: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <h3 className="text-xl font-semibold text-foreground mt-10 mb-3">
-                    {children}
-                  </h3>
-                ),
-                p: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <p className="mb-6">{children}</p>
-                ),
-                blockquote: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <div className="my-8 border-l-2 border-cyan/50 pl-6 py-2">
-                    <p className="text-lg sm:text-xl font-medium text-foreground/90 italic leading-relaxed">
-                      {children}
-                    </p>
-                  </div>
-                ),
-                strong: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <strong className="text-foreground font-semibold">{children}</strong>
-                ),
-                ul: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <ul className="my-6 space-y-2">{children}</ul>
-                ),
-                li: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-                  <li className="flex items-start gap-2">
-                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan" />
-                    <span>{children}</span>
-                  </li>
-                ),
-                a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => (
-                  <a href={href} className="text-cyan hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
-                    {children}
-                  </a>
-                ),
-                code: ({ className, children, ..._rest }: { className?: string; children?: React.ReactNode; [key: string]: unknown }) => {
-                  const isInline = !className;
-                  if (isInline) {
-                    return (
-                      <code className="text-cyan bg-cyan/10 px-1.5 py-0.5 rounded text-sm font-mono">
-                        {children}
-                      </code>
-                    );
-                  }
-                  return <code className={className}>{children}</code>;
-                },
-              }}
-            >
-              {article.content}
+          <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
+            <ReactMarkdown components={mdComponents}>
+              {content}
             </ReactMarkdown>
           </div>
 
-          {/* Claims & Sources Section */}
-          {article.claims.length > 0 && (
+          {/* Internal links section */}
+          {frontmatter.internal_links && frontmatter.internal_links.length > 0 && (
             <div className="mt-14">
               <Separator className="bg-border/50 mb-8" />
-              <button
-                onClick={() => setShowClaims(!showClaims)}
-                className="flex items-center gap-2 text-foreground font-semibold text-lg mb-6 group"
-              >
-                <Shield className="size-5 text-cyan" />
-                Claims & Sources
-                <span className="text-xs font-mono text-muted-foreground ml-2">{article.claims.length} claim{article.claims.length !== 1 ? "s" : ""}</span>
-                <svg
-                  className={`size-4 text-muted-foreground transition-transform ${showClaims ? "rotate-180" : ""}`}
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {showClaims && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  className="space-y-3"
-                >
-                  {article.claims.map((c) => {
-                    const cfg = confidenceCfg[c.confidence] || confidenceCfg.Medium;
-                    const CIcon = cfg.icon;
-                    return (
-                      <div key={c.id} className={`glass-card rounded-xl p-4 border border-border/50`}>
-                        <div className="flex items-start gap-3">
-                          <CIcon className={`size-4 mt-0.5 shrink-0 ${cfg.color}`} />
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm text-foreground leading-relaxed">{c.claim}</p>
-                            <div className="flex flex-wrap items-center gap-3 mt-2">
-                              {c.source && (
-                                <a
-                                  href={c.source}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 text-xs text-cyan hover:underline"
-                                >
-                                  {c.sourceTitle || c.source}
-                                  <ExternalLink className="size-3" />
-                                </a>
-                              )}
-                              {c.verifiedDate && <span className="text-xs text-muted-foreground">Verified {c.verifiedDate}</span>}
-                              <Badge variant="outline" className={`rounded-full px-2 py-0 text-[10px] font-medium border ${cfg.bg} ${cfg.color}`}>
-                                {c.confidence}
-                              </Badge>
-                            </div>
-                            {c.notes && <p className="text-xs text-muted-foreground/70 mt-1.5">{c.notes}</p>}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                  <p className="text-xs text-muted-foreground/50 mt-4">
-                    Every factual claim in this article is tracked individually. Confidence levels: High = independently confirmed, Medium = from reliable source but not independently verified, Low = single source, Unverified = needs confirmation.
-                  </p>
-                </motion.div>
-              )}
+              <h2 className="text-lg font-semibold text-foreground mb-4">Continue Exploring</h2>
+              <div className="flex flex-wrap gap-3">
+                {frontmatter.internal_links.map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.href}
+                    className="inline-flex items-center gap-1.5 text-sm text-cyan hover:underline underline-offset-4"
+                  >
+                    <ChevronRight className="size-3" />
+                    {link.text}
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
+
+          {/* External Sources */}
+          {frontmatter.external_sources && frontmatter.external_sources.length > 0 && (
+            <div className="mt-10">
+              <h3 className="text-sm font-mono uppercase tracking-widest text-muted-foreground mb-3">
+                References
+              </h3>
+              <ul className="space-y-1.5">
+                {frontmatter.external_sources.map((src, i) => (
+                  <li key={i}>
+                    <a
+                      href={src.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-muted-foreground hover:text-cyan transition-colors"
+                    >
+                      {src.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* FAQ Section */}
+          <FaqSection faq={frontmatter.faq || []} />
 
           {/* Related Articles */}
           {related.length > 0 && (
@@ -251,7 +510,7 @@ export default function ArticlePageClient({
               <Separator className="bg-border/50 mb-8" />
               <div className="flex items-center gap-2 mb-6">
                 <BookOpen className="size-5 text-cyan" />
-                <h2 className="text-lg font-semibold text-foreground">Continue Reading</h2>
+                <h2 className="text-lg font-semibold text-foreground">Related Articles</h2>
               </div>
               <div className="space-y-3">
                 {related.map((r) => (
@@ -261,11 +520,10 @@ export default function ArticlePageClient({
                     className="block glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <div className="min-w-0">
-                        <h3 className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors">{r.title}</h3>
-                        {r.tlDr && <p className="text-xs text-muted-foreground mt-1 line-clamp-1">{r.tlDr}</p>}
-                      </div>
-                      {r.readingTimeMin && <span className="text-xs text-muted-foreground shrink-0">{r.readingTimeMin} min</span>}
+                      <h3 className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors">
+                        {r.title}
+                      </h3>
+                      <span className="text-xs text-muted-foreground shrink-0 font-mono">{r.reading_time}</span>
                     </div>
                   </Link>
                 ))}

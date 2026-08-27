@@ -98,6 +98,54 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/articles/kenya-data-centre-licensing-framework": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/articles/kenya-data-centre-licensing-framework.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/articles/what-is-a-data-centre": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/articles/[slug]",
+      "dataRoute": "/articles/what-is-a-data-centre.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/beginners": {
       "experimentalBypassFor": [
         {
@@ -445,11 +493,39 @@
       ]
     }
   },
-  "dynamicRoutes": {},
+  "dynamicRoutes": {
+    "/articles/[slug]": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/articles/([^/]+?)(?:/)?$",
+      "dataRoute": "/articles/[slug].rsc",
+      "fallback": null,
+      "fallbackRouteParams": [],
+      "dataRouteRegex": "^/articles/([^/]+?)\\.rsc$",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "1b419c0f1a0148deacb7b21cd4cd75ed",
-    "previewModeSigningKey": "e50c47ddefa8147b08f36261b12252a98998706c411119aed533e6028b4f1a48",
-    "previewModeEncryptionKey": "e5f7c5684757f7cedf46a21ee68b9d66af264e4aa002277901a5ef5592ebd5fb"
+    "previewModeId": "899569e186295ff1f989567a9b75a6de",
+    "previewModeSigningKey": "c62a0c987ef7a87015cf063f35f302b4e83d151c87dd062c70d170cefb769182",
+    "previewModeEncryptionKey": "bd8e07c3e79d2ee743822fa0f375c6e26da4bb523690b01f2f9e291b3a8e9a62"
   }
 }

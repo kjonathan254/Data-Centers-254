@@ -46,3 +46,33 @@ Stage Summary:
 - .npmrc fixes Vercel build allow-scripts warnings
 - Pushed to GitHub: 34f1813..9f386cb main -> main
 - STILL NEEDED: User must set Vercel env vars (DATABASE_URL, TURSO_AUTH_TOKEN, RESEND_API_KEY) for DB-dependent pages
+
+---
+Task ID: 3
+Agent: main
+Task: Build file-based article system (replacing DB dependency for articles)
+
+Work Log:
+- Installed gray-matter for YAML frontmatter parsing
+- Created src/lib/articles.ts — reads content/articles/*.md, parses frontmatter, extracts headings, provides typed helpers (getAllArticles, getArticlesByCluster, getLatestArticles, getRelatedArticles, getClusterSummaries, getAllSlugs)
+- Created src/lib/cluster-meta.ts — client-safe cluster metadata (no fs dependency)
+- Created content/articles/ directory with 2 articles:
+  1. kenya-data-centre-licensing-framework.md (migrated from old static page, full frontmatter with 5 images, 5 FAQs, 3 internal links, 2 external sources)
+  2. what-is-a-data-centre.md (new beginner article, 5 images, 5 FAQs, 3 internal links, 2 external sources)
+- Rewrote src/app/articles/[slug]/page.tsx — now reads from file system, generates Article + FAQPage + Breadcrumb JSON-LD, full OG/Twitter metadata from frontmatter, uses generateStaticParams for SSG
+- Rewrote src/app/articles/[slug]/ArticlePageClient.tsx — new template with reading progress bar, table of contents, image rendering (hero/section-break/inline/infographic positions), FAQ accordion, share buttons (X, LinkedIn, copy link), internal links section, references section, related articles
+- Updated src/app/api/articles/route.ts — now reads from file system instead of Neon DB
+- Updated src/components/sections/latest-intelligence.tsx — server component that reads from files, delegates to new client inner component
+- Created src/components/sections/latest-intelligence-inner.tsx — client component with framer-motion animations
+- Updated src/components/sections/read-the-library.tsx — server component that reads from files, delegates to new client inner component
+- Created src/components/sections/read-the-library-inner.tsx — client component with framer-motion animations
+- Updated src/components/article-cluster-page.tsx — now a server component reading from file system (removed all DB fetch logic and client-side state)
+- Fixed fs module error: separated CLUSTER_META into client-safe file, split server/client components for homepage sections
+- Build passes cleanly: both articles statically generated, all 26 pages render
+
+Stage Summary:
+- Article system is now fully file-based — no database dependency for articles
+- Add new article: create content/articles/{slug}.md following the frontmatter schema in skills/dc254-articles/SKILL.md
+- 2 articles live: /articles/kenya-data-centre-licensing-framework, /articles/what-is-a-data-centre
+- Homepage sections (Latest Intelligence, The Library) and cluster pages (/kenya, /beginners, etc.) all pull from file system
+- Push pending — user should review before pushing
