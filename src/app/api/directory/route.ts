@@ -1,9 +1,8 @@
-import { db } from '@/lib/db';
 import { NextRequest, NextResponse } from 'next/server';
+import { getFacilities, getFilterMeta, getDirectoryStats } from '@/lib/directory-data';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-
   const search = searchParams.get('search') || '';
   const status = searchParams.get('status') || '';
   const city = searchParams.get('city') || '';
@@ -13,113 +12,37 @@ export async function GET(request: NextRequest) {
   const sortBy = searchParams.get('sortBy') || 'itLoadMw';
   const sortOrder = searchParams.get('sortOrder') || 'desc';
 
-  const where: Record<string, unknown> = {};
+  let results = getFacilities();
 
+  // Filter
   if (search) {
-    where.OR = [
-      { name: { contains: search } },
-      { description: { contains: search } },
-      { city: { contains: search } },
-      { notable: { contains: search } },
-    ];
-  }
-  if (status && status !== 'all') {
-    where.status = status;
-  }
-  if (city && city !== 'all') {
-    where.city = city;
-  }
-  if (operator && operator !== 'all') {
-    where.operatorId = operator;
-  }
-  if (facilityType && facilityType !== 'all') {
-    where.facilityType = facilityType;
-  }
-  if (aiReady === 'true') {
-    where.aiReady = true;
-  }
-
-  const orderBy: Record<string, string> = {};
-  if (sortBy === 'name') {
-    orderBy.name = sortOrder;
-  } else if (sortBy === 'itLoadMw') {
-    orderBy.itLoadMw = sortOrder;
-  } else if (sortBy === 'rackCount') {
-    orderBy.rackCount = sortOrder;
-  } else if (sortBy === 'openedDate') {
-    orderBy.openedDate = sortOrder;
-  } else {
-    orderBy.itLoadMw = sortOrder;
-  }
-
-  try {
-    const facilities = await db.facility.findMany({
-      where,
-      orderBy,
-      include: {
-        operator: { select: { name: true, slug: true, type: true, parentCompany: true } },
-        connectivityFacility: {
-          include: {
-            provider: { select: { name: true, type: true } },
-          },
-        },
-        certifications: {
-          include: {
-            certification: { select: { name: true, type: true } },
-          },
-        },
-      },
-    });
-
-    // Filter metadata for the UI
-    const operators = await db.operator.findMany({
-      select: { id: true, name: true },
-      orderBy: { name: 'asc' },
-    });
-
-    const statuses = await db.facility.groupBy({
-      by: ['status'],
-      _count: { status: true },
-    });
-
-    const cities = await db.facility.groupBy({ by: ['city'] });
-
-    const types = await db.facility.groupBy({ by: ['facilityType'] });
-
-    // Summary stats
-    const totalFacilities = await db.facility.count();
-    const operationalCount = await db.facility.count({ where: { status: 'Operational' } });
-    const totalMw = await db.facility.aggregate({
-      where: { itLoadMw: { not: null } },
-      _sum: { itLoadMw: true },
-    });
-    const totalRacks = await db.facility.aggregate({
-      where: { rackCount: { not: null } },
-      _sum: { rackCount: true },
-    });
-    const aiReadyCount = await db.facility.count({ where: { aiReady: true } });
-
-    return NextResponse.json({
-      facilities,
-      filters: {
-        operators,
-        statuses: statuses.map((s) => ({ value: s.status, count: s._count.status })),
-        cities: cities.map((c) => c.city),
-        types: types.map((t) => t.facilityType).filter(Boolean),
-      },
-      stats: {
-        totalFacilities,
-        operationalCount,
-        totalMw: totalMw._sum.itLoadMw || 0,
-        totalRacks: totalRacks._sum.rackCount || 0,
-        aiReadyCount,
-      },
-    });
-  } catch (error) {
-    console.error('Directory API error:', error);
-    return NextResponse.json(
-      { facilities: [], filters: { operators: [], statuses: [], cities: [], types: [] }, stats: { totalFacilities: 0, operationalCount: 0, totalMw: 0, totalRacks: 0, aiReadyCount: 0 }, error: 'Directory temporarily unavailable' },
-      { status: 503 }
+    const q = search.toLowerCase();
+    results = results.filter((f) =>
+      f.name.toLowerCase().includes(q) ||
+      (f.description || '').toLowerCase().includes(q) ||
+      f.city.toLowerCase().includes(q) ||
+      (f.notable || '').toLowerCase().includes(q) ||
+      f.operator.name.toLowerCase().includes(q)
     );
   }
+  if (status && status !== 'all') results = results.filter((f) => f.status === status);
+  if (city && city !== 'all') results = results.filter((f) => f.city === city);
+  if (operator && operator !== 'all') results = results.filter((f) => f.operatorId === operator);
+  if (facilityType && facilityType !== 'all') results = results.filter((f) => f.facilityType === facilityType);
+  if (aiReady === 'true') results = results.filter((f) => f.aiReady);
+
+  // Sort
+  results.sort((a, b) => {
+    const dir = sortOrder === 'asc' ? 1 : -1;
+    if (sortBy === 'name') return dir * a.name.localeCompare(b.name);
+    const aVal = a[sortBy as keyof typeof a] as number | null;
+    const bVal = b[sortBy as keyof typeof b] as number | null;
+    return dir * ((aVal || 0) - (bVal || 0));
+  });
+
+  return NextResponse.json({
+    facilities: results,
+    filters: getFilterMeta(),
+    stats: getDirectoryStats(),
+  });
 }

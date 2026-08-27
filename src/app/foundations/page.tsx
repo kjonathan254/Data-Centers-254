@@ -1,8 +1,6 @@
-import { db } from "@/lib/db";
 import FoundationsClient from "./FoundationsClient";
 import type { Metadata } from "next";
-
-export const dynamic = 'force-dynamic'
+import { getAllArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Foundations — DC254",
@@ -16,41 +14,20 @@ const phases = [
   { name: "Infrastructure", range: [11, 12] as const, description: "The systems that make data centres possible." },
 ];
 
-export default async function FoundationsPage() {
-  let articles: Array<{
-    foundationalOrder: number | null;
-    title: string;
-    slug: string;
-    tlDr: string | null;
-    cluster: string;
-    status: string;
-    readingTimeMin: number | null;
-    lastVerified: string | null;
-    claimCount: number;
-  }> = [];
-  let publishedCount = 0;
+export default function FoundationsPage() {
+  const articles = getAllArticles().map((a) => ({
+    foundationalOrder: null as number | null,
+    title: a.frontmatter.title,
+    slug: a.frontmatter.slug,
+    tlDr: a.frontmatter.meta_description,
+    cluster: a.frontmatter.cluster,
+    status: "Published",
+    readingTimeMin: parseInt(a.frontmatter.reading_time) || null,
+    lastVerified: a.frontmatter.updated_date,
+    claimCount: 0,
+  }));
 
-  try {
-    const dbArticles = await db.article.findMany({
-      where: { isFoundational: true },
-      orderBy: { foundationalOrder: "asc" },
-      include: { _count: { select: { claims: true } } },
-    });
-    articles = dbArticles.map((a) => ({
-      foundationalOrder: a.foundationalOrder,
-      title: a.title,
-      slug: a.slug,
-      tlDr: a.tlDr,
-      cluster: a.cluster,
-      status: a.status,
-      readingTimeMin: a.readingTimeMin,
-      lastVerified: a.lastVerified,
-      claimCount: a._count.claims,
-    }));
-    publishedCount = articles.filter((a) => a.status === "Published").length;
-  } catch {
-    // Database unavailable — show empty state
-  }
+  const publishedCount = articles.length;
 
   return (
     <FoundationsClient

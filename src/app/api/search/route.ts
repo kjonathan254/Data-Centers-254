@@ -1,83 +1,60 @@
-import { db } from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
+import { getAllArticles } from "@/lib/articles";
+import { getFacilities } from "@/lib/directory-data";
 
 export async function GET(req: NextRequest) {
-  const q = req.nextUrl.searchParams.get("q")?.trim();
+  const q = req.nextUrl.searchParams.get("q")?.trim()?.toLowerCase();
   if (!q || q.length < 2) {
     return NextResponse.json({ articles: [], facilities: [] });
   }
 
-  try {
-    // Search articles by title, description, tlDr, and content
-    const articles = await db.article.findMany({
-      where: {
-        status: "Published",
-        OR: [
-          { title: { contains: q } },
-          { description: { contains: q } },
-          { tlDr: { contains: q } },
-          { content: { contains: q } },
-        ],
-      },
-      select: {
-        title: true,
-        slug: true,
-        tlDr: true,
-        description: true,
-        cluster: true,
-        readingTimeMin: true,
-        lastVerified: true,
-      },
-      take: 20,
-      orderBy: { sortOrder: "asc" },
-    });
+  // Search articles
+  const allArticles = getAllArticles();
+  const articles = allArticles
+    .filter(
+      (a) =>
+        a.frontmatter.title.toLowerCase().includes(q) ||
+        a.frontmatter.meta_description.toLowerCase().includes(q) ||
+        a.frontmatter.primary_keyword.toLowerCase().includes(q) ||
+        a.frontmatter.secondary_keywords.some((k) => k.toLowerCase().includes(q)) ||
+        a.content.toLowerCase().includes(q)
+    )
+    .slice(0, 20)
+    .map((a) => ({
+      title: a.frontmatter.title,
+      slug: a.frontmatter.slug,
+      tlDr: a.frontmatter.meta_description,
+      description: a.frontmatter.meta_description,
+      cluster: a.frontmatter.cluster,
+      readingTimeMin: parseInt(a.frontmatter.reading_time) || null,
+      lastVerified: a.frontmatter.updated_date,
+    }));
 
-    // Search facilities by name, operator name, city, type
-    const facilities = await db.facility.findMany({
-      where: {
-        OR: [
-          { name: { contains: q } },
-          { city: { contains: q } },
-          { facilityType: { contains: q } },
-          { tierRating: { contains: q } },
-          { notable: { contains: q } },
-          { operator: { name: { contains: q } } },
-          { connectivityProviders: {
-            some: {
-              provider: { name: { contains: q } },
-            },
-          } },
-          { certifications: {
-            some: {
-              certification: { name: { contains: q } },
-            },
-          } },
-        ],
-      },
-      select: {
-        name: true,
-        slug: true,
-        city: true,
-        status: true,
-        itLoadMw: true,
-        tierRating: true,
-        facilityType: true,
-        notable: true,
-        operator: { select: { name: true } },
-        connectivityProviders: {
-          select: { provider: { select: { name: true } } },
-          take: 3,
-        },
-      },
-      take: 10,
-    });
+  // Search facilities
+  const allFacilities = getFacilities();
+  const facilities = allFacilities
+    .filter(
+      (f) =>
+        f.name.toLowerCase().includes(q) ||
+        f.city.toLowerCase().includes(q) ||
+        (f.facilityType || "").toLowerCase().includes(q) ||
+        (f.tierRating || "").toLowerCase().includes(q) ||
+        (f.notable || "").toLowerCase().includes(q) ||
+        f.operator.name.toLowerCase().includes(q)
+    )
+    .slice(0, 10)
+    .map((f) => ({
+      name: f.name,
+      slug: f.slug,
+      city: f.city,
+      status: f.status,
+      itLoadMw: f.itLoadMw,
+      tierRating: f.tierRating,
+      facilityType: f.facilityType,
+      notable: f.notable,
+      operator: { name: f.operator.name },
+      connectivityProviders: f.connectivityFacility.map((cf) => ({ provider: { name: cf.provider.name } })),
+    }));
 
-    return NextResponse.json({ articles, facilities });
-  } catch (error) {
-    console.error('Search API error:', error);
-    return NextResponse.json(
-      { articles: [], facilities: [], error: 'Search temporarily unavailable' },
-      { status: 503 }
-    );
-  }
+  return NextResponse.json({ articles, facilities });
 }
