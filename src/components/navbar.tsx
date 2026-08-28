@@ -30,6 +30,7 @@ const topicLinks = [
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
   { label: "DC254 Index", href: "/index" },
+  { label: "Glossary", href: "/glossary" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },
   { label: "About", href: "/about" },
