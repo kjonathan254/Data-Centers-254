@@ -21,6 +21,7 @@ const MobileNavSheet = dynamic(() => import("@/components/mobile-nav-sheet"), {
 const topicLinks = [
   { label: "Data Centres", href: "/data-centres" },
   { label: "Infrastructure", href: "/infrastructure" },
+  { label: "Map", href: "/infrastructure/map" },
   { label: "AI", href: "/ai" },
   { label: "Energy", href: "/energy" },
   { label: "Careers", href: "/careers" },
