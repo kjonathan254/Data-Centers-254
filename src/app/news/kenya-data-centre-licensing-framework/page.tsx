@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function NewsRedirect() {
-  redirect("/articles/kenya-data-centre-licensing-framework", 301);
+  permanentRedirect("/articles/kenya-data-centre-licensing-framework");
 }

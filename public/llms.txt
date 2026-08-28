@@ -1,0 +1,32 @@
+# Data Centre 254 (DC254)
+
+> An independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy — data centres, connectivity, power, AI, and the systems that make the digital world work. Published from Nairobi, Kenya.
+
+DC254 translates complex digital infrastructure topics into accessible, well-sourced research and explainers for African audiences: students, engineers, investors, policymakers, and the curious.
+
+## Key Pages
+
+- [Home](https://data-centers-254.vercel.app/): Start here — an editorial walkthrough of Kenya's digital infrastructure.
+- [DC Directory](https://data-centers-254.vercel.app/directory): A searchable, filterable directory of every data centre facility in Kenya, with operator, city, tier rating, and IT load data.
+- [Infrastructure Map](https://data-centers-254.vercel.app/infrastructure/map): Kenya's data centre and connectivity infrastructure mapped.
+- [Search](https://data-centers-254.vercel.app/search): Unified search across all articles and facilities.
+- [Research](https://data-centers-254.vercel.app/research): Research notes and verification methodology.
+- [Glossary](https://data-centers-254.vercel.app/glossary): Plain-language definitions of infrastructure terms.
+- [About](https://data-centers-254.vercel.app/about): About the platform and its founder.
+- [RSS Feed](https://data-centers-254.vercel.app/feed.xml): Latest articles as RSS 2.0.
+
+## Topic Clusters (Article Collections)
+
+- [Data Centres](https://data-centers-254.vercel.app/data-centres): Fundamentals — what data centres are, how they work, colocation, tiers.
+- [Internet & Connectivity](https://data-centers-254.vercel.app/internet): Subsea cables, ISPs, IXPs, and how the internet reaches Kenya.
+- [Energy](https://data-centers-254.vercel.app/energy): Grid, geothermal, and the power economics of data centres.
+- [AI](https://data-centers-254.vercel.app/ai): AI infrastructure, GPU compute, and what AI means for East Africa.
+- [Careers](https://data-centers-254.vercel.app/careers): Data centre jobs, skills, and career paths in Kenya.
+- [Kenya](https://data-centers-254.vercel.app/kenya): Kenya's digital economy and infrastructure policy.
+- [Beginners](https://data-centers-254.vercel.app/beginners): Foundational explainers for newcomers.
+
+## Usage Notes
+
+- Individual articles live under `/articles/<slug>` and include JSON-LD structured data (Article, FAQPage, BreadcrumbList).
+- Content is authored by Kevin Jonathan Otieno, founder of DC254.
+- Contact: elmaccommunicationslimited@gmail.com

@@ -4,19 +4,18 @@
 
 DC254 is an independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy — data centres, connectivity, power, AI, and the systems that make the digital world work.
 
-Live at [datacentre254.com](https://datacentre254.com).
+Live at [data-centers-254.vercel.app](https://data-centers-254.vercel.app).
 
 ---
 
 ## What It Does
 
-- **DC Directory** — Verified database of Kenya's data centre facilities, operators, and connectivity providers
-- **DC254 Index** — Live infrastructure statistics pulled from the database
-- **50 Articles** — Across 5 clusters: Beginner, Kenya, Internet, Energy, Careers
+- **DC Directory** — Verified directory of Kenya's data centre facilities, operators, and connectivity providers
+- **50+ Articles** — Researched explainers across 7 clusters: Beginners, Kenya, Internet, Energy, AI, Careers, Data Centres
 - **Search** — Unified search across articles and facilities
-- **Newsletter** — DC254 Brief subscriber capture (email → database)
-- **Foundations** — Editorial pipeline tracking 12 foundational articles
-- **SEO** — Dynamic sitemap, robots.txt, JSON-LD structured data (Organization + WebSite + Article), Open Graph
+- **Newsletter** — DC254 Brief subscriber capture (email → Resend Contacts)
+- **Contact Form** — Email delivery via Resend
+- **SEO** — Dynamic sitemap, robots.txt, RSS feed (`/feed.xml`), `llms.txt`, JSON-LD structured data (Organization + WebSite + Article + FAQPage + BreadcrumbList), Open Graph
 
 ## Tech Stack
 
@@ -26,38 +25,37 @@ Live at [datacentre254.com](https://datacentre254.com).
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 + custom design system |
 | Components | shadcn/ui + Framer Motion |
-| Database | SQLite (local) / Turso (production) |
-| ORM | Prisma |
+| Content | Markdown articles (`content/articles/`) + TypeScript data modules (`src/lib/`) |
+| Email | Resend (contact form + newsletter subscribers) |
 | Fonts | Geist Sans + Geist Mono |
 | Analytics | Google Analytics (optional) |
-| Deployment | Vercel (standalone output) |
+| Deployment | Vercel |
+
+There is **no database** — articles are markdown files, directory data lives in typed TypeScript modules, and newsletter subscribers are stored as contacts in [Resend](https://resend.com). Everything is statically rendered where possible, so it deploys cleanly to serverless.
 
 ## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── page.tsx             # Homepage (9 narrative sections)
+│   ├── page.tsx             # Homepage (10 narrative sections)
 │   ├── articles/[slug]/     # Individual article pages
-│   ├── foundations/         # Editorial pipeline (12 foundational articles)
-│   ├── directory/           # DC Directory
-│   ├── index/               # DC254 Index
+│   ├── directory/           # DC Directory (facilities, operators, connectivity)
+│   ├── infrastructure/      # Infrastructure hub + map
+│   ├── beginners|kenya|internet|energy|ai|careers/  # Topic clusters
+│   ├── glossary/            # Infrastructure glossary
 │   ├── search/              # Unified search
-│   ├── data-centres/        # Beginner cluster
-│   ├── infrastructure/      # Internet cluster
-│   ├── kenya/               # Kenya cluster
-│   ├── ai/                  # AI articles
-│   ├── energy/              # Energy cluster
-│   ├── careers/             # Careers cluster
-│   ├── research/            # Research page
 │   ├── about/               # About page
 │   ├── contact/             # Contact page
+│   ├── feed.xml/            # RSS 2.0 feed (generated from articles)
+│   ├── sitemap.ts           # Dynamic sitemap
+│   ├── robots.ts            # robots.txt
 │   └── api/                 # API routes
-│       ├── articles/        # Article CRUD + cluster queries
-│       ├── directory/       # Facility directory API
+│       ├── articles/        # Article queries (cluster, latest)
+│       ├── directory/       # Facility directory API (filter/sort)
 │       ├── search/          # Unified search API
-│       ├── subscribe/       # Newsletter subscription
-│       └── contact/         # Contact form
+│       ├── subscribe/       # Newsletter subscription (→ Resend Contacts)
+│       └── contact/         # Contact form (→ Resend email)
 ├── components/
 │   ├── sections/            # Homepage sections (hero, what-is-dc, etc.)
 │   ├── article-cluster-page.tsx  # Cluster listing pages
@@ -65,34 +63,33 @@ src/
 │   ├── footer.tsx           # Site footer
 │   └── brand-logo.tsx       # DC254 logo (3 variants)
 ├── lib/
-│   └── db.ts                # Prisma client singleton
-└── app/globals.css          # Design system (custom utilities)
-
-prisma/
-├── schema.prisma            # Database schema
-├── seed.ts                  # Facility/operator/connectivity seed
-└── seed-{1-5}-*.py          # Article seed scripts (5 clusters × 10 articles)
-
-db/
-└── custom.db               # SQLite database (not committed)
+│   ├── articles.ts          # Markdown article loader (gray-matter)
+│   ├── directory-data.ts    # Facility/operator/connectivity data
+│   ├── glossary-data.ts     # Glossary terms
+│   └── site.ts              # Canonical site URL utility
+content/
+└── articles/                # 50+ markdown articles with YAML frontmatter
 ```
 
-## Database Schema
+## Newsletter & Contact (Resend)
 
-- **Facility** — Data centre facilities (9 seeded)
-- **Operator** — Companies that own/operate facilities
-- **ConnectivityProvider** — Subsea cables, fibre, IXPs
-- **Certification** — Industry certifications (ISO, SOC, Tier)
-- **Article** — 50 articles across 5 clusters, with verification metadata
-- **ArticleClaim** — Verified factual claims with sources and confidence levels
-- **Subscriber** — Newsletter email subscriptions
+Both `/api/subscribe` and `/api/contact` use [Resend](https://resend.com) — no database required.
+
+| Environment Variable | Required | Purpose |
+|---|---|---|
+| `RESEND_API_KEY` | Yes | API key for contact emails and storing newsletter subscribers |
+| `RESEND_FROM_EMAIL` | No | Verified sender address for contact emails (defaults to `onboarding@resend.dev`) |
+| `RESEND_SEGMENT_ID` | No | Segment/Audience ID to group newsletter subscribers (Dashboard → Contacts → Segments) |
+| `NEXT_PUBLIC_SITE_URL` | No | Canonical site URL used for sitemap/OG/RSS (defaults to the Vercel URL) |
+| `NEXT_PUBLIC_GA_ID` | No | Google Analytics measurement ID |
+
+Newsletter subscribers appear in the Resend dashboard under **Contacts** (optionally grouped in your Segment). Contact form submissions are emailed to the address configured in `src/app/api/contact/route.ts`.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ or Bun
-- Python 3 (for article seed scripts)
+- Node.js 18+
 
 ### Setup
 
@@ -100,27 +97,10 @@ db/
 # 1. Install dependencies
 npm install
 
-# 2. Copy environment variables
-mv .env.example .env
+# 2. Copy environment variables and add your Resend API key
+cp .env.example .env
 
-# 3. Push database schema
-npx prisma db push
-
-# 4. Seed facilities, operators, and connectivity
-npx prisma db seed
-
-# 5. Seed articles (run each script)
-python prisma/seed-1-beginner.py
-python prisma/seed-2-kenya.py
-python prisma/seed-3-internet.py
-python prisma/seed-4-energy.py
-python prisma/seed-5-careers.py
-
-# 6. Mark foundational articles
-cd /path/to/project
-node -e "const{PrismaClient}=require('@prisma/client');const db=new PrismaClient();const foundational=[{slug:'what-is-a-data-centre',order:1},{slug:'how-does-a-data-centre-work',order:2},{slug:'where-is-your-data-stored',order:3},{slug:'what-happens-to-your-m-pesa-data',order:4},{slug:'what-is-cloud-computing',order:5},{slug:'what-is-colocation',order:6},{slug:'kenya-data-centre-industry-explained',order:7},{slug:'where-are-kenyas-data-centres',order:8},{slug:'why-kenya-is-becoming-an-east-african-data-centre-hub',order:9},{slug:'how-the-internet-gets-to-kenya',order:10},{slug:'why-data-centres-need-so-much-power',order:11},{slug:'kenyas-submarine-cables-explained',order:12}];(async()=>{for(const a of foundational){await db.article.update({where:{slug:a.slug},data:{isFoundational:true,foundationalOrder:a.order}})}console.log('Done');await db.\$disconnect()})()"
-
-# 7. Start development server
+# 3. Start development server
 npm run dev
 ```
 
@@ -134,29 +114,18 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Production build |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
-| `npm run db:push` | Push schema changes to database |
-| `npm run db:generate` | Regenerate Prisma Client |
-| `npm run db:seed` | Seed facilities, operators, connectivity |
 
-## Deploying to Production
+## Deploying to Vercel
 
-### Vercel + Turso
-
-DC254 uses SQLite, which requires a persistent filesystem. For serverless deployment (Vercel), use [Turso](https://turso.tech) as a hosted SQLite database.
-
-1. Create a Turso account and database
-2. Get your connection URL and auth token
-3. Update Prisma provider to `***REMOVED***` in `schema.prisma`
-4. Set `DATABASE_URL` in Vercel environment variables
-5. Push schema and re-seed data to Turso
-6. Deploy
+1. Import the repository into Vercel
+2. Add `RESEND_API_KEY` (plus optional `RESEND_SEGMENT_ID` and `NEXT_PUBLIC_SITE_URL`) in **Project → Settings → Environment Variables**
+3. Deploy — no database or persistent filesystem needed
 
 ## Design Decisions
 
 - **"Don't design a website. Design a way of seeing."** — The homepage is an editorial narrative, not a dashboard.
 - **Fact sourcing** — Every statistic is labeled (FACT / REPORTED / ESTIMATE / DC254 DATABASE) with source attribution.
 - **Dark theme** — Cyan and neon accents on deep black, inspired by data centre server rooms.
-- **Article verification** — Each article has claims with confidence levels (High / Medium / Low / Unverified) and source URLs.
 - **No authentication** — DC254 is a read-only publication. Newsletter captures emails; no user accounts.
 
 ## License

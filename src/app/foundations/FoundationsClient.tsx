@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Circle, Clock, FileText } from "lucide-react";
 
 interface FoundationArticle {
-  foundationalOrder: number;
+  foundationalOrder: number | null;
   title: string;
   slug: string;
   tlDr: string | null;
@@ -99,11 +99,16 @@ export default function FoundationsClient({
         {/* Phases */}
         <div className="mt-16 flex flex-col gap-14">
           {phases.map((phase) => {
-            const phaseArticles = articles.filter(
-              (a) =>
-                a.foundationalOrder >= phase.range[0] &&
-                a.foundationalOrder <= phase.range[1]
-            );
+            const phaseArticles = articles
+              .filter(
+                (a) =>
+                  a.foundationalOrder !== null &&
+                  a.foundationalOrder >= phase.range[0] &&
+                  a.foundationalOrder <= phase.range[1]
+              )
+              .sort(
+                (a, b) => (a.foundationalOrder ?? 0) - (b.foundationalOrder ?? 0)
+              );
 
             return (
               <motion.div key={phase.name} {...fadeUp}>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Hero from "@/components/sections/hero";
@@ -12,6 +13,10 @@ import CareersSection from "@/components/sections/careers-section";
 import NewsletterV2 from "@/components/sections/newsletter-v2";
 import LatestIntelligence from "@/components/sections/latest-intelligence";
 import LatestNewsBanner from "@/components/sections/latest-news-banner";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
@@ -30,9 +35,9 @@ export default function Home() {
         <AIInfrastructure />
         {/* 6 — Energy: Rift Valley → Grid → Data Centre */}
         <EnergySection />
-        {/* 6.5 — Latest News: featured editorial (static, no DB required) */}
+        {/* 6.5 — Latest News: featured editorial */}
         <LatestNewsBanner />
-        {/* 7 — Latest Intelligence: newest articles from the DB */}
+        {/* 7 — Latest Intelligence: newest articles */}
         <LatestIntelligence />
         {/* 8 — Visual silence: one massive number */}
         <TheNumber />

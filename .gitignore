@@ -1,43 +1,41 @@
-```
 # Dependencies
 node_modules/
+.pnp
+.pnp.js
 
 # Environment
 .env
 .env.local
-.env.*
+.env.*.local
 
 # Build artifacts
+.next/
+out/
 dist/
 build/
-target/
-.next/
+next-env.d.ts
+*.tsbuildinfo
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-Python
-env/
-venv/
-venv/
-venv.bak/
-pip-log.txt
-pip-delete-this-directory.txt
-tox/
-coverage
-coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
+# Vercel
+.vercel
+
+# Logs
 *.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
-MF
-TemporaryItems
-trash
-```
+dev.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local data (never commit subscriber or runtime data)
+data/
+
+# Editors & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Misc
+coverage/
+.cache/

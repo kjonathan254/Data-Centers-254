@@ -14,7 +14,7 @@ export interface Operator {
   type: string;
   parentCompany: string | null;
   hqCountry: string;
-  websiteUrl: string;
+  websiteUrl: string | null;
 }
 
 export interface Facility {

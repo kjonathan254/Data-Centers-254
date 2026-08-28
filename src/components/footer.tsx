@@ -15,7 +15,6 @@ const topicLinks = [
 
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
-  { label: "DC254 Index", href: "/index" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },
   { label: "About", href: "/about" },

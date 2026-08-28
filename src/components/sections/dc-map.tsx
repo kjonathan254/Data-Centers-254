@@ -76,10 +76,10 @@ export default function DCMap() {
         {/* CTA */}
         <motion.div {...fadeUp} className="mt-12 text-center">
           <Link
-            href="/index"
+            href="/directory"
             className="inline-flex items-center gap-2 text-cyan text-sm font-medium hover:gap-3 transition-all duration-300"
           >
-            Explore every facility in the DC254 Index
+            Explore every facility in the DC Directory
             <ArrowRight className="size-4" />
           </Link>
         </motion.div>

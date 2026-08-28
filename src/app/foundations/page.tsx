@@ -30,9 +30,29 @@ const phases = [
   { name: "Infrastructure", range: [11, 12] as const, description: "The systems that make data centres possible." },
 ];
 
+// Foundational reading order — maps published article slugs to the
+// 1–12 phase order shown on the Foundations page.
+const FOUNDATIONAL_ORDER: Record<string, number> = {
+  // Phase 1–6: Foundations (core concepts)
+  "what-is-a-data-centre": 1,
+  "what-is-a-server": 2,
+  "data-centre-tier-ratings-explained": 3,
+  "what-is-colocation-kenya": 4,
+  "data-centre-cooling-systems-explained": 5,
+  "data-centre-security-explained": 6,
+  // Phase 7–10: Kenya
+  "kenya-east-africa-digital-hub": 7,
+  "konza-technopolis-data-centres-kenya": 8,
+  "kenya-data-centre-licensing-framework": 9,
+  "kenya-data-centre-market-outlook-2025-2030": 10,
+  // Phase 11–12: Infrastructure
+  "nairobi-vs-mombasa-data-centre-locations": 11,
+  "edge-computing-east-africa": 12,
+};
+
 export default function FoundationsPage() {
   const articles = getAllArticles().map((a) => ({
-    foundationalOrder: null as number | null,
+    foundationalOrder: FOUNDATIONAL_ORDER[a.frontmatter.slug] ?? null,
     title: a.frontmatter.title,
     slug: a.frontmatter.slug,
     tlDr: a.frontmatter.meta_description,

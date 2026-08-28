@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { type Components } from "react-markdown";
 import {
   ArrowLeft, Clock, Calendar, ChevronRight, BookOpen,
   Share2, LinkIcon, CheckCircle2, ChevronUp,
@@ -304,8 +304,7 @@ function getMarkdownComponents(images: ArticleImage[]) {
       </li>
     ),
     a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => {
-      const isInternal = href?.startsWith("/");
-      if (isInternal) {
+      if (href && href.startsWith("/")) {
         return (
           <Link href={href} className="text-cyan hover:underline underline-offset-4">
             {children}
@@ -453,7 +452,7 @@ export default function ArticlePageClient({ article, related }: Props) {
 
           {/* Article Body */}
           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
-            <ReactMarkdown components={mdComponents}>
+            <ReactMarkdown components={mdComponents as Components}>
               {content}
             </ReactMarkdown>
           </div>
