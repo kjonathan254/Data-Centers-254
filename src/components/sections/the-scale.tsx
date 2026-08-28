@@ -83,7 +83,7 @@ export default function TheScale() {
           className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
         >
           <div className="flex items-baseline gap-2 flex-shrink-0">
-            <span className="stat-display text-gradient-cyan">9</span>
+            <span className="stat-display text-gradient-cyan">14</span>
             <span className="text-sm font-medium text-foreground">known facilities</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
