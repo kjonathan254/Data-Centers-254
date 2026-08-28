@@ -40,6 +40,24 @@ const clusterConfig: Record<
     description:
       "Jobs, certifications, business models, and investment opportunities in Kenya\u2019s data centre industry.",
   },
+  AI: {
+    title: "AI & Cloud",
+    subtitle: "AI & CLOUD",
+    description:
+      "GPU computing, AI-ready data centres, cloud regions, and the computing demand shaping Africa\u2019s next technology frontier.",
+  },
+  Infrastructure: {
+    title: "Infrastructure",
+    subtitle: "INFRASTRUCTURE",
+    description:
+      "The physical systems that make data centres work — cooling, power, cabling, fire suppression, and building design.",
+  },
+  Policy: {
+    title: "Policy & Regulation",
+    subtitle: "POLICY & REGULATION",
+    description:
+      "Licensing frameworks, data protection laws, tax incentives, building codes, and the regulatory landscape shaping Kenya\u2019s data centre industry.",
+  },
 };
 
 export default function ArticleClusterPage({ cluster }: { cluster: string }) {

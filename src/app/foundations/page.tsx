@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "Foundations — DC254",
   description:
     "The 12 foundational articles that will launch DC254 Brief — Kenya's digital infrastructure explained.",
+  alternates: { canonical: "/foundations" },
+  openGraph: {
+    title: "Foundations | Data Centre 254",
+    description:
+      "The 12 foundational articles that will launch DC254 Brief — Kenya's digital infrastructure explained.",
+    siteName: "Data Centre 254",
+    type: "website",
+    locale: "en_KE",
+    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Data Centre 254 Foundations" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Foundations | Data Centre 254",
+    description: "The 12 foundational articles that will launch DC254 Brief.",
+    images: ["/images/og-default.png"],
+  },
 };
 
 const phases = [

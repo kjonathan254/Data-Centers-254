@@ -39,7 +39,7 @@ export const CLUSTER_META: Record<
   },
   Policy: {
     label: "Policy & Regulation",
-    href: "/kenya",
+    href: "/research",
     color: "text-amber-400 bg-amber-400/10 border-amber-400/25",
   },
 };
