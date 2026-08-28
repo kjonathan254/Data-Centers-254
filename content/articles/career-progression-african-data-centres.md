@@ -102,7 +102,7 @@ faq:
     high-performance computing (HPC) engineers and AI infrastructure specialists are
     also seeing surging demand. Sustainability and ESG reporting roles are emerging
     as operators pursue green certifications.
-canonical_url: https://datacentre254.com/articles/career-progression-african-data-centres
+canonical_url: https://data-centers-254.vercel.app/articles/career-progression-african-data-centres
 ---
 
 

@@ -57,7 +57,7 @@ faq:
     answer: "A dedicated 1Gbps fibre connection from a Nairobi data centre to an office in the city centre typically costs KES 80,000 to KES 200,000 per month, depending on the provider, contract length, and whether it includes redundancy. Cross-country links to Mombasa or other towns are more expensive. Dark fibre (unlit fibre that the customer manages) is available from some providers for long-term leases."
   - question: "Why do data centres need multiple fibre providers?"
     answer: "Redundancy. If a single provider's fibre is cut — whether by road construction, accidental damage, or equipment failure — traffic must automatically reroute through an alternative path. Carrier-neutral data centres typically require connections from at least two independent providers entering the building via different physical routes, ensuring that no single incident can isolate the facility from the internet."
-canonical_url: "https://datacentre254.com/articles/fibre-optic-networks-kenya-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/fibre-optic-networks-kenya-data-centres"
 ---
 
 A data centre without fibre connectivity is a warehouse full of expensive computers that nobody can reach. Every transaction on M-Pesa, every query to a bank's application, every page load on a Kenyan government website — all of it travels over fibre optic cables that connect data centres to users, to each other, and to the global internet. Kenya's fibre optic network is the circulatory system of its digital economy, and understanding how it works, who operates it, and where the weaknesses are, is essential for anyone investing in or depending on digital infrastructure.

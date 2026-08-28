@@ -61,7 +61,7 @@ faq:
     answer: "Cables are owned by consortia of telecom operators, governments, and tech companies. TEAMS is owned by the Kenyan government (via Telkom Kenya), EASSy by a 21-member consortium, 2Africa by Meta and a consortium, and Africa-1 by China Telecom and partners."
   - question: "How fast are the connections through these cables?"
     answer: "Modern cables like 2Africa deliver 180 Tbps of design capacity. EASSy was upgraded to 48 Tbps. The actual lit capacity varies, but Kenya's aggregate international bandwidth exceeds 20 Tbps — more than enough for current demand."
-canonical_url: "https://datacentre254.com/articles/submarine-cables-landing-mombasa"
+canonical_url: "https://data-centers-254.vercel.app/articles/submarine-cables-landing-mombasa"
 ---
 
 Mombasa sits at the eastern edge of Kenya's coastline, and beneath its waters run the fibre optic cables that connect over 300 million people in East and Central Africa to the global internet. At least eight major submarine cable systems land at stations along the Mombasa coast, making this city the single most important internet gateway in the region. Every WhatsApp message sent from Nairobi, every M-Pesa transaction processed, and every Netflix stream watched in Kenya begins or ends its oceanic journey here.

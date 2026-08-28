@@ -61,7 +61,7 @@ faq:
     answer: "Kenya produces thousands of STEM graduates annually and has a growing tech ecosystem. However, AI-specific infrastructure skills (GPU cluster management, high-performance networking, ML operations) are still developing. International operators typically bring in initial expertise while building local capacity."
   - question: "What makes Kenya attractive compared to South Africa or Nigeria?"
     answer: "Kenya has three structural advantages: geothermal energy (clean, baseload, cheaper than coal or gas), submarine cable connectivity (8+ cables in Mombasa), and its position as a gateway for landlocked East African nations with 300M+ people. South Africa has more established data centre infrastructure but relies on coal for power."
-canonical_url: "https://datacentre254.com/articles/ai-data-centres-east-africa"
+canonical_url: "https://data-centers-254.vercel.app/articles/ai-data-centres-east-africa"
 ---
 
 ![GPU servers for AI training in a data centre](/images/ai-gpu-servers.png)

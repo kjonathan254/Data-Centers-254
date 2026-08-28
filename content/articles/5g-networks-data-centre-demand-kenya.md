@@ -53,7 +53,7 @@ faq:
     answer: "Three models are emerging: telcos like Safaricom and Airtel building their own MEC infrastructure at cell tower sites; colocation providers like Africa Data Centres and PAIX extending to edge facilities; and neutral host companies that build shared edge infrastructure leased to multiple operators. The colocation and neutral host models are likely to dominate as they offer economies of scale and multi-tenant flexibility."
   - question: "How many edge nodes will Kenya need for nationwide 5G coverage?"
     answer: "Based on Safaricom's existing base station footprint and projected 5G densification, estimates suggest Kenya will need between 500 and 2,000 MEC edge nodes for meaningful nationwide coverage. This projection draws from benchmarks in South Korea, which deployed approximately 1,500 edge nodes for a comparable population density, adjusted for Kenya's urban-rural distribution and lower initial 5G penetration."
-canonical_url: "https://datacentre254.com/articles/5g-networks-data-centre-demand-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/5g-networks-data-centre-demand-kenya"
 ---
 
 ## The 5G Revolution Arrives in Kenya

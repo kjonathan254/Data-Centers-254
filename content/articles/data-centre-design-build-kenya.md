@@ -106,7 +106,7 @@ faq:
     building in-house data centre capabilities, though highly specialised roles like
     raised-floor installation, hot-aisle containment fabrication, and precision air-conditioning
     commissioning still rely partly on imported expertise.
-canonical_url: https://datacentre254.com/articles/data-centre-design-build-kenya
+canonical_url: https://data-centers-254.vercel.app/articles/data-centre-design-build-kenya
 ---
 
 

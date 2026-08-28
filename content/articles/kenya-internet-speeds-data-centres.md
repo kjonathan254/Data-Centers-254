@@ -57,7 +57,7 @@ faq:
     answer: "Speed (bandwidth) is how much data can be transferred per second — like the width of a pipe. Latency is how long it takes for a single piece of data to travel from one point to another — like the length of the pipe. You can have high speed (a wide pipe) but high latency (a long pipe). Data centres care about both: speed determines how much data they can serve, and latency determines how responsive applications feel to users."
   - question: "What is 5G and how does it affect data centres?"
     answer: "5G is the fifth generation of mobile network technology, offering speeds of 100-1000 Mbps, latency under 10 milliseconds, and the ability to connect many more devices per cell tower than 4G. Safaricom has launched 5G in parts of Nairobi and other towns. 5G increases demand for data centre services by enabling data-intensive applications (HD video, AR/VR, IoT) and requires edge computing infrastructure at cell tower sites, creating new demand for distributed data processing."
-canonical_url: "https://datacentre254.com/articles/kenya-internet-speeds-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-internet-speeds-data-centres"
 ---
 
 When you open a banking app on your phone and your account balance loads instantly, when a YouTube video starts playing within seconds, or when a video call connects in high definition — you are experiencing the result of internet speed. The speed at which data travels between your device, the network, and the data centre where the service is hosted determines the quality of your digital experience. For Kenya's data centre industry, internet speeds are both an enabler and a measure of the country's digital maturity.

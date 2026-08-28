@@ -90,7 +90,7 @@ faq:
     that AI training demands. If a GPU cloud provider were to establish a presence
     in Kenya, Konza would be a logical location given its planned power infrastructure
     and fibre connectivity.
-canonical_url: https://datacentre254.com/articles/ai-model-training-kenya-use-cases
+canonical_url: https://data-centers-254.vercel.app/articles/ai-model-training-kenya-use-cases
 ---
 
 

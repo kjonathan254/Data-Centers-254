@@ -96,7 +96,7 @@ faq:
     reaches the servers. The generator provides power for as long as the outage lasts
     — limited only by fuel supply. Most Kenyan data centres store 24 to 72 hours of
     diesel fuel on site.
-canonical_url: https://datacentre254.com/articles/ups-backup-power-kenyan-data-centres
+canonical_url: https://data-centers-254.vercel.app/articles/ups-backup-power-kenyan-data-centres
 ---
 
 

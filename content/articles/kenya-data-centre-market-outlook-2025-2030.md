@@ -61,7 +61,7 @@ faq:
     answer: "The primary drivers are cloud adoption by enterprises (AWS, Azure, Google Cloud all have presence or partnerships), government digitalisation (e-Citizen, Huduma Namba), AI and machine learning workloads, and financial services modernisation. Kenya's mobile money ecosystem alone generates enormous transaction processing demand."
   - question: "Is Kenya a good location for a new data centre investment?"
     answer: "Kenya offers compelling advantages: strategic location serving East Africa, competitive renewable energy costs, strong internet connectivity via four submarine cables, a growing skilled workforce, and regulatory clarity from the CA's licensing framework. The main risks are currency volatility, power grid reliability outside Nairobi, and relatively small enterprise market compared to South Africa."
-canonical_url: "https://datacentre254.com/articles/kenya-data-centre-market-outlook-2025-2030"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-centre-market-outlook-2025-2030"
 ---
 
 Kenya's data centre market is entering its most significant growth phase since the first commercial facilities were built in Nairobi a decade ago. With an estimated market value of $180–220 million in 2025 and projections pointing toward $400–500 million by 2030, the country is positioning itself as the digital infrastructure capital of East Africa. This is not speculation — it is a trend backed by concrete capacity expansions, new market entrants, and structural demand drivers that are unlikely to reverse.

@@ -57,7 +57,7 @@ faq:
     answer: "PUE (Power Usage Effectiveness) measures energy efficiency. WUE (Water Usage Effectiveness) measures water efficiency — how many litres of water are used per kilowatt-hour of IT energy. WUE matters for facilities using evaporative cooling, which consumes water. PUE is the more widely used metric, but WUE is gaining attention as water scarcity becomes a concern in some data centre markets."
   - question: "Can PUE be gamed or misleading?"
     answer: "Yes. PUE can be misleading if not measured consistently. Common issues include measuring PUE only during cool periods (when cooling loads are lowest), excluding certain power-consuming systems from the calculation, or measuring IT power at the UPS output (which excludes power distribution losses). The Green Grid recommends measuring PUE continuously and reporting annual average PUE to prevent cherry-picking of favourable periods."
-canonical_url: "https://datacentre254.com/articles/data-centre-pue-power-usage-effectiveness"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-pue-power-usage-effectiveness"
 ---
 
 If you run a data centre that consumes 1 megawatt of power for your servers but your total electricity bill is for 1.7 megawatts, you are spending 70% more on electricity than your IT equipment actually needs. The extra 0.7 megawatts is going to cooling, lighting, power conversion losses, and other overhead. This ratio — total power divided by IT power — is the Power Usage Effectiveness (PUE), and it is the single most important metric for understanding how efficiently a data centre uses energy.

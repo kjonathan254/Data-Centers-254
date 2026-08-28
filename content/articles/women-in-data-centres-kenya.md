@@ -53,7 +53,7 @@ faq:
     answer: "Entry-level data centre roles in Kenya typically offer KES 60,000-120,000 per month for technical positions such as junior network engineers or operations technicians. Mid-level roles in project management, compliance, or sustainability command KES 150,000-350,000. Senior positions such as data centre managers or head of infrastructure can earn KES 400,000-800,000 or more. These figures are comparable across genders, though the gender pay gap in Kenya's tech sector means women may start 5-15% below male counterparts in some organisations."
   - question: "How is the African data centre industry addressing gender diversity?"
     answer: "Across Africa, major operators including Africa Data Centres, PAIX, and teraco have implemented diversity hiring targets and mentorship programmes. The African Data Centre Association (ADCA) has identified workforce diversity as a strategic priority. Countries like South Africa and Nigeria lead in gender diversity initiatives, but Kenya is gaining momentum through a combination of grassroots organisations, corporate programmes, and regulatory encouragement from bodies like the Communications Authority and the ICT Authority."
-canonical_url: "https://datacentre254.com/articles/women-in-data-centres-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/women-in-data-centres-kenya"
 ---
 
 ## The Gender Gap in Kenya's Data Centre Industry

@@ -57,7 +57,7 @@ faq:
     answer: "Data centre jobs in Kenya are posted on LinkedIn, the operators' own careers pages (iXAfrica, Africa Data Centres, Safaricom), and general job boards like BrighterMonday, JobwebKenya, and Fuzu. Networking through industry events, the Technology Service Providers of Kenya (TESPOK), and the Kenya ICT Board can also uncover unadvertised positions. Following the operators on LinkedIn and setting job alerts is recommended."
   - question: "Is there a skills gap in Kenya's data centre industry?"
     answer: "Yes, there is a significant skills gap, particularly in specialised areas. Kenya produces many software engineers and general IT graduates, but data centre-specific skills — power engineering, precision cooling management, structured cabling, facility operations, and Tier certification standards — are in short supply. This skills gap is one of the biggest constraints on the industry's growth and represents a genuine opportunity for people who invest in the right training."
-canonical_url: "https://datacentre254.com/articles/how-to-get-job-kenyan-data-centre"
+canonical_url: "https://data-centers-254.vercel.app/articles/how-to-get-job-kenyan-data-centre"
 ---
 
 Kenya's data centre industry is growing fast, and it needs people. Not just any people — it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.

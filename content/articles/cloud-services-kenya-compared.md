@@ -57,7 +57,7 @@ faq:
     answer: "Safaricom Cloud offers genuine value for Kenyan organisations that prioritise data residency, low latency, and local support. It provides virtual machines, storage, networking, and some managed services. However, it has a much smaller ecosystem of services compared to AWS (200+ services) or Azure (600+ services), and lacks the global reach, partner ecosystem, and advanced capabilities (AI/ML platforms, serverless computing, advanced analytics) that global providers offer."
   - question: "How does cloud latency from Nairobi compare to local hosting?"
     answer: "Hosting in a Nairobi data centre provides sub-5ms latency for Kenyan users. Accessing AWS Cape Town from Nairobi typically adds 50-80ms, and reaching European regions adds 120-180ms. For most business applications (CRM, ERP, email), this extra latency is imperceptible to users. For latency-sensitive applications like real-time trading, gaming, or VoIP, the difference matters and local hosting is preferable."
-canonical_url: "https://datacentre254.com/articles/cloud-services-kenya-compared"
+canonical_url: "https://data-centers-254.vercel.app/articles/cloud-services-kenya-compared"
 ---
 
 When a Kenyan bank decides to move its core banking platform to the cloud, when a startup chooses where to host its application, or when a government agency evaluates options for its digital services, the same question arises: which cloud provider is right for us? The answer is rarely straightforward. It depends on latency requirements, data residency regulations, budget constraints, technical requirements, and the organisation's long-term strategy.

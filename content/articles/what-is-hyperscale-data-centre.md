@@ -84,7 +84,7 @@ faq:
     cloud market. The Communications Authority of Kenya and Kenya Investment Authority
     would need to work closely with hyperscalers to create incentive packages comparable
     to what South Africa has offered.
-canonical_url: https://datacentre254.com/articles/what-is-hyperscale-data-centre
+canonical_url: https://data-centers-254.vercel.app/articles/what-is-hyperscale-data-centre
 ---
 
 

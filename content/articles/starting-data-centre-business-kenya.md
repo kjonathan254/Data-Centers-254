@@ -57,7 +57,7 @@ faq:
     answer: "The primary customer segments are: banks and financial institutions (the largest segment by revenue), telecom operators, government agencies, cloud and content providers, SMEs moving from on-premises to colocation, and international companies entering the Kenyan market. The [data centre directory](/directory) shows the facilities already serving these customers."
   - question: "Is there room for another data centre operator in Kenya?"
     answer: "Yes. Kenya's current capacity of approximately 15MW is projected to need 25-30MW by 2030. The market is growing at 15-20% annually, and there are underserved segments (GPU-ready facilities, mid-market SME colocation, edge facilities in secondary cities). The key is differentiation — a new entrant that simply replicates what iXAfrica and Africa Data Centres offer will struggle. One that targets an underserved segment or offers unique capabilities (like GPU-ready zones, renewable-first design, or specialised compliance) can find a viable position."
-canonical_url: "https://datacentre254.com/articles/starting-data-centre-business-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/starting-data-centre-business-kenya"
 ---
 
 Building a data centre is one of the most capital-intensive infrastructure investments possible in Kenya's technology sector. A small colocation facility requires hundreds of millions of shillings in upfront capital, takes 18-36 months from concept to operational, and generates returns over a 15-25 year asset life. It is not a startup in the traditional sense — it is an infrastructure play that requires patience, deep pockets, and a clear understanding of the market.

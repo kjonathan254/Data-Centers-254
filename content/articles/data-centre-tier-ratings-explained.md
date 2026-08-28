@@ -61,7 +61,7 @@ faq:
     answer: "Tier III is 'concurrently maintainable' — any single component can be taken offline for maintenance without causing downtime. Tier IV is 'fault tolerant' — the facility can withstand any single failure without any impact on operations. Tier IV requires 2N redundancy (two independent, fully-sized systems) and is significantly more expensive to build and operate."
   - question: "Why does tier rating matter for enterprises choosing a data centre?"
     answer: "Enterprise customers, especially banks, telecom operators, and cloud providers, typically require at minimum Tier III certification. This guarantees 99.982% availability — no more than 1.6 hours of downtime per year. For mission-critical applications, some require Tier IV. The tier rating is often a contractual requirement in service level agreements."
-canonical_url: "https://datacentre254.com/articles/data-centre-tier-ratings-explained"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-tier-ratings-explained"
 ---
 
 When you hear that a data centre is "Tier III certified," what does that actually mean for the servers inside it? The tier rating system, developed and administered by the Uptime Institute, is the global standard for classifying data centre reliability. It defines four levels of infrastructure redundancy, each guaranteeing a specific amount of annual uptime. Understanding these tiers is essential for anyone evaluating where to host their digital infrastructure — and for anyone considering [a career in data centres](/careers).

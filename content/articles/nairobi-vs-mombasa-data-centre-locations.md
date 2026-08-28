@@ -57,7 +57,7 @@ faq:
     answer: "The primary factors in order of importance are: proximity to customers and connectivity (fibre networks, submarine cable access), power availability and cost (including redundancy options), land availability and cost, skilled workforce availability, regulatory environment (licensing, taxes, incentives), and environmental factors (climate for cooling, seismic risk, flooding risk). Each factor must be evaluated for the specific type of data centre being planned."
   - question: "Are there data centres outside Nairobi in Kenya?"
     answer: "Yes, though very few. Safaricom operates facilities in Mombasa and other towns to support its mobile network. Some banks and government agencies have small server rooms or disaster recovery facilities in other towns. But there are no commercial colocation data centres outside Nairobi. Kisumu, Nakuru, and Eldoret have been discussed as potential locations, but none has yet attracted a commercial facility."
-canonical_url: "https://datacentre254.com/articles/nairobi-vs-mombasa-data-centre-locations"
+canonical_url: "https://data-centers-254.vercel.app/articles/nairobi-vs-mombasa-data-centre-locations"
 ---
 
 Kenya's data centre industry is geographically concentrated to an extraordinary degree. Approximately 80% of the country's total IT power capacity is located within a 15-kilometre radius in Nairobi, primarily along the Mombasa Road corridor. This concentration is not accidental — it reflects the economics of connectivity, demand, and infrastructure that make Nairobi the natural location for data-intensive facilities. But as the industry grows and new use cases emerge, the question of where the next data centre should be built is becoming increasingly relevant.

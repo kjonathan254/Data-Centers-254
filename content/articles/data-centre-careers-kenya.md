@@ -61,7 +61,7 @@ faq:
     answer: "Several institutions offer relevant training, though dedicated data centre programmes are limited. The most common pathway is a general engineering or IT degree supplemented by industry certifications. Some operators, including iXAfrica and Africa Data Centres, offer internal training programmes for new hires."
   - question: "Is there demand for data centre professionals in Kenya?"
     answer: "Yes, and demand is growing rapidly. Kenya's 19 operational data centres and several under-construction facilities need skilled staff. The planned expansion of the industry — including potential hyperscale facilities — will require hundreds of additional professionals over the next 5-10 years."
-canonical_url: "https://datacentre254.com/articles/data-centre-careers-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-careers-kenya"
 ---
 
 Kenya's data centre industry is creating jobs that most Kenyans do not know exist. When a young person thinks about a career in technology, they think of software development, cybersecurity, or digital marketing. They do not think about designing cooling systems that prevent servers from melting, managing power distribution for buildings that consume more electricity than small towns, or maintaining the fibre optic networks that connect a country to the global internet. Yet these are the roles that keep Kenya's digital infrastructure running — and they are in growing demand.

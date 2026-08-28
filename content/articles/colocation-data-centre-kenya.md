@@ -61,7 +61,7 @@ faq:
     answer: "Key factors include: reliability (Tier III minimum), power capacity and redundancy, connectivity diversity (multiple ISPs and submarine cables), physical security, carrier neutrality (ability to use any provider), and scalability (room to grow without relocating)."
   - question: "Is colocation available outside Nairobi?"
     answer: "Limited. Africa Data Centres has a facility in Mombasa near the cable landing stations. Most other facilities are in Nairobi. The concentration in Nairobi reflects the market demand and availability of fibre connectivity."
-canonical_url: "https://datacentre254.com/articles/colocation-data-centre-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/colocation-data-centre-kenya"
 ---
 
 Colocation lets you place your own servers inside a professionally built and managed facility. You bring the hardware; the provider supplies the space, power, cooling, connectivity, and physical security. For companies in Kenya that need control over their infrastructure without the capital outlay of building a data centre, colocation is the standard solution.

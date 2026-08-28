@@ -61,7 +61,7 @@ faq:
     answer: "Tier III means the facility has redundant power and cooling systems (N+1 minimum), so any single component can fail without causing downtime. It guarantees 99.982% availability — no more than 1.6 hours of downtime per year. Most commercial data centres in Nairobi target Tier III certification, which is the standard enterprises require."
   - question: "How much electricity does a data centre use?"
     answer: "A typical large data centre consumes 20 to 50 megawatts — comparable to a small town. Kenya's entire data centre industry currently uses about 15 megawatts of IT power, but this is expected to reach 25 megawatts by 2030. Power is the single biggest operating cost and the primary constraint on growth."
-canonical_url: "https://datacentre254.com/articles/what-is-a-data-centre"
+canonical_url: "https://data-centers-254.vercel.app/articles/what-is-a-data-centre"
 ---
 
 A data centre is a specialised building — or purpose-designed space within a building — that houses thousands of networked computers called servers. These servers process, store, and transmit the data behind every app, website, streaming service, and digital payment system you use. When you send money on M-Pesa, search Google, or stream a YouTube video, a data centre is doing the work. Every single time.

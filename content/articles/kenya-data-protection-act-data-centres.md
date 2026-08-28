@@ -57,7 +57,7 @@ faq:
     answer: "Kenya's Data Protection Act is modelled closely on the EU's GDPR, sharing core principles like lawful basis for processing, data subject rights, and breach notification. Key differences include lower maximum fines (KES 5 million vs GDPR's €20 million), a smaller regulator with limited enforcement capacity, and less developed case law and guidance. International companies operating in Kenya typically apply GDPR-level compliance as a baseline."
   - question: "Do cloud providers operating in Kenya need to comply?"
     answer: "Yes. Any entity processing personal data of Kenyan residents is subject to the Act, regardless of where they are physically located. AWS, Azure, and Google Cloud all comply with the Act when serving Kenyan customers. However, the question of where the data physically resides (in Kenya vs South Africa vs Europe) adds complexity to compliance, which is why data localisation is a growing topic."
-canonical_url: "https://datacentre254.com/articles/kenya-data-protection-act-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-protection-act-data-centres"
 ---
 
 When Kenya's Data Protection Act came into effect in November 2019, it fundamentally changed the legal landscape for any organisation that handles personal data — and that includes every data centre operator and every customer who places servers in a Kenyan facility. The Act, modelled closely on the European Union's General Data Protection Regulation (GDPR), established rights for individuals, obligations for organisations, and enforcement powers for the Office of the Data Protection Commissioner (ODPC) that, in principle, match the standards set by the world's most comprehensive data protection laws.

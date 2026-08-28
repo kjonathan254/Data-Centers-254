@@ -100,7 +100,7 @@ faq:
     in structure to the EU's GDPR, allowing transfers based on adequacy decisions,
     appropriate safeguards, or consent. However, Kenya has not yet published a formal
     adequacy whitelist, leaving compliance more interpretive.
-canonical_url: https://datacentre254.com/articles/kenya-data-sovereignty-localisation
+canonical_url: https://data-centers-254.vercel.app/articles/kenya-data-sovereignty-localisation
 ---
 
 

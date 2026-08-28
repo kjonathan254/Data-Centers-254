@@ -53,7 +53,7 @@ faq:
     answer: "Kenyan insurance companies underwriting data centre risks typically require: certified fire suppression systems with annual inspection certificates, VESDA or equivalent early warning detection, maintained fire extinguishers at designated points, fire-rated compartmentalisation between the white space and other building areas, emergency evacuation plans approved by a fire safety officer, and compliance with the Kenya Fire Brigade Act and relevant county by-laws. Insurers may also mandate NFPA 75 or NFPA 76 compliance as a policy condition. Failure to maintain these systems can result in policy voidance or significantly higher premiums."
   - question: "How much does a clean agent fire suppression system cost in Kenya?"
     answer: "A complete clean agent fire suppression system for a Kenyan data centre typically costs between KES 40 million and KES 150 million or more, depending on the size of the protected area, the agent selected (Novec 1230 is approximately 30–50% more expensive than FM-200), and the complexity of the detection and control systems. This is 5 to 10 times more expensive than a conventional water sprinkler system. However, when weighed against the potential loss of equipment valued at hundreds of millions of shillings — and the reputational damage from a major outage — clean agent systems are considered essential for any facility housing customer infrastructure."
-canonical_url: "https://datacentre254.com/articles/fire-suppression-systems-kenyan-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/fire-suppression-systems-kenyan-data-centres"
 ---
 
 ![Server racks inside a Kenyan data centre hall equipped with fire suppression infrastructure](/images/dc-servers-racks.png)

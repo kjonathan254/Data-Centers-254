@@ -53,7 +53,7 @@ faq:
     answer: "Konza Technopolis is gazetted as a Special Economic Zone, offering reduced corporate tax rates (10% for 10 years, then 15% for 10 years), exemption from VAT on services and goods supplied within the zone, exemption from stamp duty on land transactions, and streamlined import procedures. These benefits can reduce the effective tax burden on a data centre operation by 40-60% compared to operating outside the SEZ."
   - question: "How do Kenya's data centre tax incentives compare with Rwanda and Nigeria?"
     answer: "Rwanda offers up to 8 years of corporate tax holiday for ICT companies and VAT exemption on imported ICT equipment — currently the most aggressive incentive package in East Africa. Nigeria provides tax holidays of 3-5 years in special economic zones. Kenya's SEZ incentives at Konza are competitive but narrower in scope, while its broader fiscal framework (capital allowances, VAT exemptions on specific equipment) provides meaningful but less dramatic benefits."
-canonical_url: "https://datacentre254.com/articles/tax-incentives-data-centre-investment-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/tax-incentives-data-centre-investment-kenya"
 ---
 
 ![Data centre investment and business planning in Kenya](/images/dc-business-investment.png)

@@ -53,7 +53,7 @@ faq:
     answer: "Konza offers several advantages over Nairobi: significantly cheaper land (a fraction of Nairobi's commercial real estate costs), purpose-built infrastructure designed for technology companies, planned redundancy in power and connectivity, pre-handled environmental clearances, and SEZ tax incentives. However, Nairobi has the advantage of an established business ecosystem, proximity to customers, existing fibre interconnection points like KIXP, and a larger pool of skilled workers. The two locations are likely to serve different market segments."
   - question: "How does Konza compare to other African tech city projects?"
     answer: "Konza is often compared to Rwanda's Kigali Innovation City (a smaller, more focused project with strong government backing), Nigeria's Eko Atlantic City in Lagos (a larger, more commercially-driven development), and Ethiopia's ICT Park in Addis Ababa (a government-led industrial park focused on IT outsourcing). Konza is distinguished by its scale (5,000 acres), its explicit focus on becoming a technology and science hub, and its integration with Kenya's broader Vision 2030 development strategy."
-canonical_url: "https://datacentre254.com/articles/konza-technopolis-data-centres-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/konza-technopolis-data-centres-kenya"
 ---
 
 ## Kenya's Most Ambitious Infrastructure Project

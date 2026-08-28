@@ -61,7 +61,7 @@ faq:
     answer: "The $1 billion Microsoft-G42 AI data centre project stalled in May 2026 because Kenya's national grid could not reliably deliver the hundreds of megawatts the facility required. Government officials indicated that meeting the demand would require rationing power to other consumers."
   - question: "Is Kenya's grid reliable enough for data centres?"
     answer: "Kenya's grid has improved significantly but still experiences outages. Data centres address this with N+1 or 2N redundancy: utility power plus UPS batteries for instant failover, plus diesel generators for extended outages. The Huduma Centre outage in June 2026 showed that not all facilities have adequate backup power."
-canonical_url: "https://datacentre254.com/articles/kenya-power-infrastructure-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-power-infrastructure-data-centres"
 ---
 
 Kenya's data centre industry faces a paradox. The country has one of Africa's most attractive energy profiles — nearly 90% renewable electricity, dominated by geothermal from the Rift Valley — yet power supply is the single largest constraint on data centre growth. The stalled Microsoft-G42 one-billion-dollar AI data centre project made this painfully clear: you can have the best regulatory framework and the most strategic location, but if the grid cannot deliver the watts, the data centre cannot be built.

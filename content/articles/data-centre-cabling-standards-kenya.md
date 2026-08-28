@@ -53,7 +53,7 @@ faq:
     answer: "Fluke DSX cable testing provides independent, standardised verification that every cable link meets its rated performance (e.g., Cat6a at 10GBASE-T). This certification documentation is essential for colocation providers to guarantee service-level agreements, support warranty claims from cable manufacturers, and demonstrate compliance to enterprise tenants. In Kenya, colocation customers — particularly banks and telecom operators — routinely request Fluke test reports before signing leases."
   - question: "What certifications should a data centre cabling installer have in Kenya?"
     answer: "The most recognised credentials include BICSI RCDD (Registered Communications Distribution Designer), manufacturer-specific certifications from CommScope, Panduit, and Corning, and CompTIA Network+ for foundational networking knowledge. In Kenya, Africa Data Centres and Liquid Intelligent Technologies typically require BICSI-certified installers for their facility builds. The East Africa Data Centre Association also advocates for structured cabling training through local technical institutions."
-canonical_url: "https://datacentre254.com/articles/data-centre-cabling-standards-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-cabling-standards-kenya"
 ---
 
 ![High-density server racks with neatly organised cabling in a Kenyan data centre](/images/racks-cabling.webp)

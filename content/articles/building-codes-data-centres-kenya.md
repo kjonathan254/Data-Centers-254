@@ -104,7 +104,7 @@ faq:
     processes were not designed with data centres in mind, which can create friction
     — for example, building inspectors may not be familiar with raised-floor ventilation
     requirements or clean agent fire suppression systems.
-canonical_url: https://datacentre254.com/articles/building-codes-data-centres-kenya
+canonical_url: https://data-centers-254.vercel.app/articles/building-codes-data-centres-kenya
 ---
 
 

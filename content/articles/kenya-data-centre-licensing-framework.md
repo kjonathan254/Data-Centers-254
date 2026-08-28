@@ -61,7 +61,7 @@ faq:
     answer: "No. Entities that already hold an NFP-T2 licence can establish commercial data centres without any additional authorisation under the updated framework."
   - question: "How many data centres operate in Kenya?"
     answer: "As of mid-2026, Kenya has 19 operational data centres: 15 in Nairobi and 4 in Mombasa. The market was valued at USD 266 million in 2025 and is projected to reach USD 805 million by 2031."
-canonical_url: "https://datacentre254.com/articles/kenya-data-centre-licensing-framework"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-centre-licensing-framework"
 ---
 
 On 6 March 2026, the Communications Authority of Kenya formally brought commercial data centres under its telecommunications licensing framework for the first time. Gazette Notice No. 3335 gave effect to the **Revised Telecommunications Market Structure**, a document that explicitly categorises data centre operations as a licensable activity under the Network Facilities Provider regime. For the roughly nineteen operational facilities across Nairobi and Mombasa, and for the billions of shillings in planned investment, this is the regulatory framework they will operate under.

@@ -61,7 +61,7 @@ faq:
     answer: "Most large AI models are trained predominantly on data from North America and Europe. When these models are applied to Kenyan users, they can produce biased outcomes — misidentifying African faces, misunderstanding Kenyan English or Kiswahili, or making incorrect financial risk assessments based on patterns that do not apply to the local context. This bias can lead to discriminatory lending decisions, inaccurate medical diagnoses, and exclusionary service delivery."
   - question: "What role do data centres play in AI governance?"
     answer: "Data centres provide the infrastructure on which AI systems run, which comes with governance responsibilities. Data centre operators hosting AI workloads must ensure appropriate security controls, data residency compliance, audit logging capabilities, and the ability to support data deletion requests. As AI regulation tightens globally, data centre customers will increasingly require contractual guarantees that their infrastructure provider supports their AI governance obligations."
-canonical_url: "https://datacentre254.com/articles/ai-ethics-governance-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
 ---
 
 ![Policy and regulation framework for AI governance in Kenya](/images/dc-policy-regulation.png)

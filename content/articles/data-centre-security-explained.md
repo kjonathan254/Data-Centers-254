@@ -57,7 +57,7 @@ faq:
     answer: "A mantrap is a small room or corridor with two interlocking doors. A person enters through the first door, which locks behind them, and must be authenticated (typically by biometric scan, badge, or both) before the second door opens. This prevents tailgating — where an unauthorised person follows an authorised person through a door — which is one of the most common physical security breaches."
   - question: "Are Kenyan data centres secure enough for international standards?"
     answer: "The leading Kenyan facilities — iXAfrica NBOX1, Africa Data Centres facilities, and Safaricom's data centres — are designed and operated to international security standards. They employ biometric access, 24/7 security personnel, CCTV surveillance, and are pursuing ISO 27001 certification. However, security standards vary across the market, and smaller or older facilities may not meet the same levels. Customers should always verify specific certifications and security practices directly with the operator."
-canonical_url: "https://datacentre254.com/articles/data-centre-security-explained"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-security-explained"
 ---
 
 When a bank chooses to house its core banking servers in a data centre, it is trusting that facility with the digital equivalent of its vault. When a government agency places citizen data — tax records, health information, biometric data — on servers in a colocation facility, it is trusting that the data will not be accessed, modified, or stolen by anyone who should not have access. This trust is not given freely. It is earned through security systems, policies, and certifications that operate on multiple layers simultaneously.

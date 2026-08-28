@@ -69,12 +69,12 @@ export default function TheScale() {
           className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
         >
           <div className="flex items-baseline gap-2 flex-shrink-0">
-            <span className="stat-display text-gradient-cyan">4</span>
-            <span className="text-sm font-medium text-foreground">submarine cables</span>
+            <span className="stat-display text-gradient-cyan">6</span>
+            <span className="text-sm font-medium text-foreground">active submarine cables</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            land in Mombasa — carrying the vast majority of Kenya&apos;s international internet traffic along the Indian Ocean floor.
-            <span className="ml-2 text-[10px] font-mono uppercase tracking-wider text-cyan/50">REPORTED</span>
+            land in Mombasa — SEACOM, TEAMS, EASSy, LION2, DARE1, and PEACE — with a 7th (Meta&apos;s Daraja) in development.
+            <span className="ml-2 text-[10px] font-mono uppercase tracking-wider text-cyan/50">VERIFIED</span>
           </p>
         </motion.div>
 

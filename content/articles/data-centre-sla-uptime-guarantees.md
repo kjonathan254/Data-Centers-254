@@ -57,7 +57,7 @@ faq:
     answer: "The major operators — Africa Data Centres, PAIX, Liquid Intelligent Technologies, and IXAfrica — generally meet or exceed their published SLAs, particularly for power and cooling. However, Kenya's national grid (Kenya Power) still experiences occasional outages, which is why robust on-site power infrastructure is critical. Always ask prospective providers for their historical SLA performance reports before signing."
   - question: "Is a 99.999% uptime SLA realistic for a Kenyan data centre?"
     answer: 'Genuine 99.999% (five nines) uptime is extremely demanding — it allows only 5.26 minutes of downtime per year. Very few facilities globally achieve this, and it typically requires a Tier IV design with 2N redundancy. In Kenya, some operators may market five nines but the contractual SLA may be lower. Always distinguish between marketing language and the legally binding commitment in your contract.'
-canonical_url: "https://datacentre254.com/articles/data-centre-sla-uptime-guarantees"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-sla-uptime-guarantees"
 ---
 
 ## What Exactly Is a Data Centre SLA?

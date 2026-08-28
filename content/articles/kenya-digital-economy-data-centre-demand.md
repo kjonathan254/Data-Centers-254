@@ -101,7 +101,7 @@ faq:
     and technology companies. The strategic logic is sound: Konza offers land at a
     fraction of Nairobi industrial zone costs, planned power capacity, and proximity
     to the fibre corridors running between Nairobi and Mombasa.'
-canonical_url: https://datacentre254.com/articles/kenya-digital-economy-data-centre-demand
+canonical_url: https://data-centers-254.vercel.app/articles/kenya-digital-economy-data-centre-demand
 ---
 
 

@@ -53,7 +53,7 @@ faq:
     answer: "Konza Technopolis, governed by the Konza Technopolis Development Authority (KoTDA), is a flagship Vision 2030 project designed as a technology city with dedicated data centre zones. It offers a streamlined regulatory environment, pre-approved building standards for technology facilities, and integrated infrastructure including dedicated power and fibre, making it a policy-enabled investment zone for data centre developers."
   - question: "How does Kenya's ICT policy compare with Rwanda and Nigeria for data centre investment?"
     answer: "Kenya offers a more mature but complex policy environment with established institutions like CA and the ICT Authority. Rwanda is highly proactive with simplified, fast-tracked regulations and aggressive incentives. Nigeria has a growing framework with strong market size but regulatory complexity across federal and state levels. South Africa has the most mature framework but with significant compliance burden. Each presents distinct trade-offs between regulatory certainty and ease of market entry."
-canonical_url: "https://datacentre254.com/articles/kenya-ict-policy-framework-data-centres"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ict-policy-framework-data-centres"
 ---
 
 ![Kenya data centre policy and regulatory framework overview](/images/dc-policy-regulation.png)

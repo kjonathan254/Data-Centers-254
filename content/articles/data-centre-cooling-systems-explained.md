@@ -61,7 +61,7 @@ faq:
     answer: "For high-density deployments (above 20 kW per rack), liquid cooling is significantly more efficient than air. Liquid transfers heat 1,000x more effectively than air, allowing denser computing. However, liquid cooling is more complex, expensive, and requires specialised equipment. Most Kenyan facilities still use air cooling."
   - question: "Can Kenya's climate help with cooling?"
     answer: "Kenya's temperate climate in Nairobi (average 20-25°C) is favourable for free cooling — using outside air to cool the data centre without running compressors. This can significantly reduce cooling energy costs for parts of the year, especially at night and during cooler months."
-canonical_url: "https://datacentre254.com/articles/data-centre-cooling-systems-explained"
+canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-cooling-systems-explained"
 ---
 
 ![Data centre cooling systems](/images/dc-cooling.webp)

@@ -57,7 +57,7 @@ faq:
     answer: "The primary challenges are power reliability (edge sites often lack the redundant power infrastructure of major data centres), physical security (small facilities in remote locations are harder to secure), connectivity (edge sites need reliable fibre or high-capacity microwave links), and skilled operations (who manages and maintains equipment at remote sites). These challenges increase costs and complexity compared to centralised facilities."
   - question: "Who is building edge infrastructure in Kenya?"
     answer: "Safaricom is the primary driver through its 5G network deployment, which requires edge computing resources at base station sites. Liquid Intelligent Technologies has discussed edge capabilities as part of its fibre network strategy. Content delivery networks like Cloudflare and Akamai have caching nodes in Mombasa and Nairobi that function as edge computing for content delivery. Purpose-built edge data centres for enterprise use are still in early stages."
-canonical_url: "https://datacentre254.com/articles/edge-computing-east-africa"
+canonical_url: "https://data-centers-254.vercel.app/articles/edge-computing-east-africa"
 ---
 
 Every millisecond matters more than it used to. A decade ago, a 200-millisecond delay between a user in Mombasa and a server in Nairobi was acceptable for almost every application. Today, applications like autonomous vehicles, real-time video analytics, augmented reality, remote surgery, and industrial automation require responses in under 10 milliseconds — delays that are physically impossible to achieve over a 500-kilometre round trip to a Nairobi data centre. This is the problem that edge computing solves, and it is a problem that is becoming increasingly relevant in East Africa.

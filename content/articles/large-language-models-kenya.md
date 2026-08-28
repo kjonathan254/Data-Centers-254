@@ -61,7 +61,7 @@ faq:
     answer: "Safaricom uses AI chatbots for customer service, NCBA Group has deployed AI-driven banking assistants, Twiga Foods applies LLM technology for supply chain optimisation, and several media houses use generative AI for content drafting and translation. Government agencies, particularly the Kenya Revenue Authority and the e-Citizen platform, are exploring LLM-powered citizen service tools."
   - question: "What skills are needed for LLM deployment in Kenya, and where can people learn them?"
     answer: "Key skills include prompt engineering, model fine-tuning, MLOps (model deployment and monitoring), GPU server management, and data engineering. Training programmes are available through the Microsoft ADC skills programme, Google Developer Groups in Nairobi, the University of Nairobi's AI research lab, Strathmore University's iLabAfrica, and online platforms like DeepLearning.AI. The skills gap remains significant, with demand far outstripping supply."
-canonical_url: "https://datacentre254.com/articles/large-language-models-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/large-language-models-kenya"
 ---
 
 ![GPU servers powering LLM inference in a Kenyan data centre](/images/ai-gpu-servers.png)

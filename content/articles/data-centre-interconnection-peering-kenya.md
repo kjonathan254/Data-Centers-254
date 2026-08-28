@@ -115,7 +115,7 @@ faq:
     role as the [landing point for multiple submarine cables](/articles/submarine-cables-landing-mombasa),
     making it a natural aggregation point for traffic flowing between East Africa,
     Southern Africa, and the rest of the world.
-canonical_url: https://datacentre254.com/articles/data-centre-interconnection-peering-kenya
+canonical_url: https://data-centers-254.vercel.app/articles/data-centre-interconnection-peering-kenya
 ---
 
 

@@ -61,7 +61,7 @@ faq:
     answer: "Indirectly, yes. By keeping traffic local, ISPs avoid paying for international bandwidth on every local connection. This cost saving can be passed on to consumers. KIXP has been cited as a factor in Kenya's relatively affordable internet prices."
   - question: "What is peering vs transit?"
     answer: "Peering is a direct, typically free, exchange of traffic between two networks at an IX. Transit is when you pay another network to carry your traffic to destinations you cannot reach directly. Networks use a mix of both."
-canonical_url: "https://datacentre254.com/articles/kixp-internet-exchange-point-kenya"
+canonical_url: "https://data-centers-254.vercel.app/articles/kixp-internet-exchange-point-kenya"
 ---
 
 ![Data centre networking equipment](/images/dc-networking.webp)

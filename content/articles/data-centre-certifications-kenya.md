@@ -111,7 +111,7 @@ faq:
     adds to the total investment. AWS and Microsoft both offer free digital training
     through their respective platforms, which many Kenyan professionals use for self-study
     before sitting the paid exam.'
-canonical_url: https://datacentre254.com/articles/data-centre-certifications-kenya
+canonical_url: https://data-centers-254.vercel.app/articles/data-centre-certifications-kenya
 ---
 
 
