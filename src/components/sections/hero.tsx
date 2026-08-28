@@ -14,7 +14,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen section-full overflow-hidden">
+    <section className="relative min-h-[88svh] section-full overflow-hidden">
       {/* Grid background with radial gradient glows */}
       <div className="absolute inset-0 grid-bg" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,oklch(0.78_0.14_195/6%),transparent_70%)]" />
@@ -70,14 +70,20 @@ export default function Hero() {
         {/* CTA */}
         <motion.div
           {...fadeUp}
-          className="mt-12"
+          className="mt-12 flex flex-col sm:flex-row items-center gap-4"
         >
           <Link
-            href="#digital-backbone"
+            href="/directory"
             className="inline-flex items-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-8 h-12 text-base font-semibold hover:bg-cyan/90 transition-all duration-300"
           >
-            Explore Kenya&apos;s Digital Backbone
+            Explore the DC Directory
             <ArrowRight className="size-4" />
+          </Link>
+          <Link
+            href="/data-centres"
+            className="inline-flex items-center gap-2 rounded-lg border border-border px-8 h-12 text-base font-medium text-muted-foreground hover:text-foreground hover:border-cyan/40 transition-all duration-300"
+          >
+            Start with the Basics
           </Link>
         </motion.div>
       </div>

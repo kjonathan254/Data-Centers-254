@@ -26,7 +26,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DirectoryPage() {
+export default async function DirectoryPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ search?: string }>;
+}) {
+  const { search } = await searchParams;
   const facilities = getFacilities();
   const opNames = [...new Set(facilities.map((f) => f.operator.name))];
 
@@ -50,7 +55,7 @@ export default function DirectoryPage() {
             ))}
           </ul>
         </div>
-        <Directory />
+        <Directory initialSearch={search ?? ""} />
       </main>
       <Footer />
     </div>

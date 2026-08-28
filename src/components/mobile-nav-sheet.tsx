@@ -9,6 +9,7 @@ import BrandLogo from "@/components/brand-logo";
 const topicLinks = [
   { label: "Data Centres", href: "/data-centres" },
   { label: "Infrastructure", href: "/infrastructure" },
+  { label: "Map", href: "/infrastructure/map" },
   { label: "AI", href: "/ai" },
   { label: "Energy", href: "/energy" },
   { label: "Careers", href: "/careers" },
@@ -17,6 +18,7 @@ const topicLinks = [
 
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
+  { label: "Glossary", href: "/glossary" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },
   { label: "About", href: "/about" },

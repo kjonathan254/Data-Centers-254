@@ -57,11 +57,11 @@ const statusCfg: Record<string, { color: string; bg: string; icon: LucideIcon }>
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-100px" } as const, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } as const };
 const stagger = (i: number) => ({ initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-60px" } as const, transition: { duration: 0.4, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] } as const });
 
-export default function DirectorySection() {
+export default function DirectorySection({ initialSearch = "" }: { initialSearch?: string }) {
   const [data, setData] = useState<DirData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(initialSearch);
   const [status, setStatus] = useState("all");
   const [operator, setOperator] = useState("all");
   const [facilityType, setFacilityType] = useState("all");

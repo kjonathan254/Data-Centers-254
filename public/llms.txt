@@ -13,6 +13,9 @@ DC254 translates complex digital infrastructure topics into accessible, well-sou
 - [Research](https://data-centers-254.vercel.app/research): Research notes and verification methodology.
 - [Glossary](https://data-centers-254.vercel.app/glossary): Plain-language definitions of infrastructure terms.
 - [About](https://data-centers-254.vercel.app/about): About the platform and its founder.
+- [Advertise](https://data-centers-254.vercel.app/advertise): Sponsorship and partnership options.
+- [Editorial Policy](https://data-centers-254.vercel.app/editorial-policy): Fact-labelling methodology, sourcing standards, and corrections process.
+- [Privacy Policy](https://data-centers-254.vercel.app/privacy): Data handling under the Kenya Data Protection Act, 2019.
 - [RSS Feed](https://data-centers-254.vercel.app/feed.xml): Latest articles as RSS 2.0.
 
 ## Topic Clusters (Article Collections)

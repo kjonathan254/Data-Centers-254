@@ -7,6 +7,7 @@ import BrandLogo from "@/components/brand-logo";
 const topicLinks = [
   { label: "Data Centres", href: "/data-centres" },
   { label: "Infrastructure", href: "/infrastructure" },
+  { label: "Map", href: "/infrastructure/map" },
   { label: "AI", href: "/ai" },
   { label: "Energy", href: "/energy" },
   { label: "Careers", href: "/careers" },
@@ -15,6 +16,7 @@ const topicLinks = [
 
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
+  { label: "Glossary", href: "/glossary" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },
   { label: "About", href: "/about" },
@@ -120,6 +122,12 @@ export default function Footer() {
               Nairobi, Kenya
             </span>
           </div>
+        </div>
+        <div className="pb-6 flex flex-wrap items-center justify-center sm:justify-between gap-x-5 gap-y-2 text-xs text-muted-foreground">
+          <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Use</Link>
+          <Link href="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>
+          <Link href="/advertise" className="hover:text-foreground transition-colors">Advertise</Link>
         </div>
       </div>
     </footer>
