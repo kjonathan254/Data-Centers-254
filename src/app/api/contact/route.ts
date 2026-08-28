@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
             <tr><td style="color: #888; vertical-align: top;">Message</td><td>${cleanMessage.replace(/\n/g, "<br>")}</td></tr>
           </table>
           <div style="margin-top: 32px; padding-top: 16px; border-top: 1px solid #222; font-size: 12px; color: #666;">
-            Sent from Data Centre 254 contact form — datacentre254.com
+            Sent from Data Centre 254 contact form
           </div>
         </div>
       `,

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "AI Infrastructure",
   description:
     "AI infrastructure in Kenya — GPU capacity, cloud regions, AI-ready data centres, and the computing demand shaping Africa's next technology frontier.",
-  alternates: { canonical: "https://datacentre254.com/ai" },
+  alternates: { canonical: "/ai" },
   openGraph: {
     title: "AI Infrastructure | Data Centre 254",
     description:

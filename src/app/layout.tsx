@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://datacentre254.com"),
+  metadataBase: new URL(siteUrl()),
   title: {
     default: "Data Centre 254 | Inside Kenya's Digital Infrastructure",
     template: "%s | Data Centre 254",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     "digital economy Kenya",
     "hyperscale East Africa",
   ],
-  authors: [{ name: "Kevin Jonathan Otieno", url: "https://datacentre254.com/about" }],
+  authors: [{ name: "Kevin Jonathan Otieno", url: siteUrl("/about") }],
   creator: "Kevin Jonathan Otieno",
   publisher: "Data Centre 254",
   icons: {
@@ -90,8 +91,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Data Centre 254",
-              url: "https://datacentre254.com",
-              logo: "https://datacentre254.com/logo.png",
+              url: siteUrl(),
+              logo: siteUrl("/logo.png"),
               description:
                 "Kenya's independent knowledge and intelligence platform for digital infrastructure. Translating complex data centre, connectivity, and power infrastructure into accessible knowledge.",
               founder: {
@@ -132,7 +133,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Data Centre 254",
-              url: "https://datacentre254.com",
+              url: siteUrl(),
               description:
                 "Understanding the infrastructure behind Kenya's digital economy. Data centres, connectivity, power, cloud computing, AI, and the physical systems that make the digital world work.",
               publisher: {
@@ -143,7 +144,7 @@ export default function RootLayout({
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: "https://datacentre254.com/search?q={search_term_string}",
+                  urlTemplate: `${siteUrl()}/search?q={search_term_string}`,
                 },
                 "query-input": "required name=search_term_string",
               },

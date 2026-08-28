@@ -31,7 +31,7 @@ const nairobiAdvantages = [
     icon: ArrowRightLeft,
     title: "Connectivity Convergence",
     description:
-      "Four subsea cables land in Mombasa (SEA-ME-WE 5, EASSy, DARE1, TEAMS), multiple fibre operators compete nationally (Liquid, Safaricom, Jamii Telecom), and KIXP keeps local traffic local. This connectivity density is unusual for East Africa and reduces the cost and latency advantages that might otherwise favour Johannesburg or Lagos.",
+      "Six subsea cables land in Mombasa (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE), with a seventh (Meta's Daraja) in development. Multiple fibre operators compete nationally (Liquid, Safaricom, Jamii Telecom), and KIXP keeps local traffic local. This connectivity density is unusual for East Africa and reduces the cost and latency advantages that might otherwise favour Johannesburg or Lagos.",
   },
 ];
 

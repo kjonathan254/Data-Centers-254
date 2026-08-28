@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Data Centre 254 is Kenya's independent knowledge platform for digital infrastructure. Founded by Kevin Jonathan Otieno, we translate complex data centre, connectivity, and power infrastructure into accessible knowledge.",
-  alternates: { canonical: "https://datacentre254.com/about" },
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About | Data Centre 254",
     description:

@@ -6,7 +6,7 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Kenya's Data Centre Industry",
   description: "Where are Kenya's data centres? Who owns them? Why is Nairobi becoming East Africa's data centre hub? Deep dives into Kenya's digital infrastructure market.",
-  alternates: { canonical: "https://datacentre254.com/kenya" },
+  alternates: { canonical: "/kenya" },
   keywords: ["data centres Kenya", "iXAfrica", "Africa Data Centres", "Nairobi data centre", "Kenya DC market", "hyperscale Kenya", "Microsoft G42 Kenya"],
   openGraph: {
     title: "Kenya's Data Centre Industry | Data Centre 254",

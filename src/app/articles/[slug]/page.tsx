@@ -7,6 +7,7 @@ import {
   getRelatedArticles,
 } from "@/lib/articles";
 import { CLUSTER_META } from "@/lib/cluster-meta";
+import { siteUrl } from "@/lib/site";
 import { notFound } from "next/navigation";
 import ArticlePageClient from "./ArticlePageClient";
 
@@ -28,14 +29,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) return {};
 
   const { frontmatter: fm } = article;
-  const url = `https://datacentre254.com/articles/${fm.slug}`;
+  const url = siteUrl(`/articles/${fm.slug}`);
   const canonical = fm.canonical_url || url;
 
   return {
     title: fm.title,
     description: fm.meta_description,
     keywords: [fm.primary_keyword, ...fm.secondary_keywords],
-    authors: [{ name: fm.author, url: `https://datacentre254.com${fm.author_bio_link}` }],
+    authors: [{ name: fm.author, url: siteUrl(fm.author_bio_link) }],
     alternates: { canonical },
     openGraph: {
       title: fm.title,
@@ -75,7 +76,7 @@ export default async function ArticlePage({ params }: PageProps) {
   }));
 
   const clusterMeta = CLUSTER_META[fm.cluster] || CLUSTER_META.Beginner;
-  const articleUrl = `https://datacentre254.com/articles/${fm.slug}`;
+  const articleUrl = siteUrl(`/articles/${fm.slug}`);
 
   // ─── JSON-LD: Article ──────────────────────────────────────────────
   const articleLd = {
@@ -89,21 +90,21 @@ export default async function ArticlePage({ params }: PageProps) {
     author: {
       "@type": "Person",
       name: fm.author,
-      url: `https://datacentre254.com${fm.author_bio_link}`,
+      url: siteUrl(fm.author_bio_link),
     },
     publisher: {
       "@type": "Organization",
       name: "Data Centre 254",
-      url: "https://datacentre254.com",
+      url: siteUrl(),
       logo: {
         "@type": "ImageObject",
-        url: "https://datacentre254.com/logo.png",
+        url: siteUrl("/logo.png"),
       },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
     articleSection: fm.cluster,
     keywords: [fm.primary_keyword, ...fm.secondary_keywords].join(", "),
-    image: fm.og_image ? `https://datacentre254.com${fm.og_image}` : undefined,
+    image: fm.og_image ? siteUrl(fm.og_image) : undefined,
   };
 
   // ─── JSON-LD: FAQPage ──────────────────────────────────────────────
@@ -125,8 +126,8 @@ export default async function ArticlePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://datacentre254.com" },
-      { "@type": "ListItem", position: 2, name: clusterMeta.label, item: `https://datacentre254.com${clusterMeta.href}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl() },
+      { "@type": "ListItem", position: 2, name: clusterMeta.label, item: siteUrl(clusterMeta.href) },
       { "@type": "ListItem", position: 3, name: fm.title, item: articleUrl },
     ],
   };

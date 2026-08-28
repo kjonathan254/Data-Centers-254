@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "East Africa Digital Infrastructure Map | Data Centre 254",
   description:
     "Interactive visualization of data centres, submarine cables, fibre networks, and internet exchange points across Kenya, Tanzania, Uganda, Rwanda, and Ethiopia.",
-  alternates: { canonical: "https://datacentre254.com/infrastructure/map" },
+  alternates: { canonical: "/infrastructure/map" },
   openGraph: {
     title: "East Africa Digital Infrastructure Map | Data Centre 254",
     description:

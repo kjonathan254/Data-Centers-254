@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Infrastructure",
   description:
     "Internet and connectivity infrastructure in Kenya — submarine cables, KIXP, terrestrial fibre, and the physical network that connects data centres to the world.",
-  alternates: { canonical: "https://datacentre254.com/infrastructure" },
+  alternates: { canonical: "/infrastructure" },
   openGraph: {
     title: "Infrastructure | Data Centre 254",
     description:

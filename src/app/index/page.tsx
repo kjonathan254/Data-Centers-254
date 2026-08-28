@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Kenya's Data Centre Index",
   description:
     "A searchable database of every data centre facility in Kenya. Filter by operator, status, type, and capacity.",
-  alternates: { canonical: "https://datacentre254.com/index" },
+  alternates: { canonical: "/index" },
   openGraph: {
     title: "Kenya's Data Centre Index | Data Centre 254",
     description: "Kenya's most comprehensive data centre index. Search, filter, and compare facilities.",

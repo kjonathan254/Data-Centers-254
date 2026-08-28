@@ -198,7 +198,7 @@ function FaqSection({ faq }: { faq: ArticleFaq[] }) {
 
 function ShareButtons({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false);
-  const url = `https://datacentre254.com/articles/${slug}`;
+  const url = (typeof window !== 'undefined' ? window.location.origin : '') + `/articles/${slug}`;
 
   async function copyLink() {
     try {

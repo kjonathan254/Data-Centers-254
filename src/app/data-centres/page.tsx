@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Data Centre Directory - Coming Soon",
   description:
     "The most comprehensive directory of data centres in Kenya and East Africa is launching soon. Get early access to facility listings, pricing intelligence, and infrastructure insights.",
-  alternates: { canonical: "https://datacentre254.com/data-centres" },
+  alternates: { canonical: "/data-centres" },
   openGraph: {
     title: "Data Centre Directory | Data Centre 254",
     description:

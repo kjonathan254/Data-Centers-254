@@ -6,7 +6,7 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Energy & Power",
   description: "How much electricity do data centres use? Can Kenya's geothermal energy power AI? Understanding the energy question behind data centres.",
-  alternates: { canonical: "https://datacentre254.com/energy" },
+  alternates: { canonical: "/energy" },
   keywords: ["data centre power Kenya", "geothermal energy data centre", "PUE", "Kenya electricity grid", "renewable energy data centre", "AI power consumption", "Olkaria geothermal"],
   openGraph: {
     title: "Energy & Power | Data Centre 254",

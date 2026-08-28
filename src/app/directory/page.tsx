@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "DC Directory",
   description:
     "A searchable database of every data centre facility in Kenya. Filter by operator, status, type, and capacity. Every facility verified and sourced.",
-  alternates: { canonical: "https://datacentre254.com/directory" },
+  alternates: { canonical: "/directory" },
   openGraph: {
     title: "DC Directory | Data Centre 254",
     description:

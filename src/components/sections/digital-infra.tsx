@@ -56,7 +56,7 @@ const infraStack = [
     icon: Anchor,
     title: "Subsea Cables",
     description:
-      "Kenya connects to the global internet through undersea fibre optic cables landing in Mombasa. Cables like SEA-ME-WE 5, EASSy, DARE1, and TEAMS carry Kenya's data to the world. Without them, no international connectivity.",
+      "Kenya connects to the global internet through six undersea fibre optic cables landing in Mombasa — SEACOM, TEAMS, EASSy, LION2, DARE1, and PEACE — with Meta's Daraja cable in development. These cables carry Kenya's data to the world, and without them, there would be no international connectivity.",
   },
   {
     icon: Network,

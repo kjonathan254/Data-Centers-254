@@ -19,32 +19,46 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const subseaCables = [
   {
-    icon: Globe,
-    title: "SEA-ME-WE 5",
+    icon: Network,
+    title: "SEACOM",
     status: "Active",
     description:
-      "The South East Asia-Middle East-Western Europe 5 cable is one of the world's longest submarine cable systems at 20,000km. It lands in Mombasa and connects East Africa to Europe and Asia. Owned by a consortium of 16 telecom operators.",
+      "The first private submarine cable to land in East Africa (2009). SEACOM connects South Africa, Mozambique, Tanzania, Kenya, and onward to Europe and India. It was instrumental in breaking the telecom monopoly on international bandwidth and dramatically lowering internet costs in Kenya.",
   },
   {
     icon: Anchor,
-    title: "EASSy",
-    status: "Active",
-    description:
-      "The Eastern Africa Submarine Cable System runs along the East African coast from South Africa to Sudan, with a landing in Mombasa. It provides direct connectivity to over 20 coastal and landlocked African countries.",
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "DARE1",
-    status: "Active",
-    description:
-      "The Djibouti Africa Regional Express 1 cable connects Djibouti to Mombasa and South Africa. It's designed to provide redundancy and additional capacity to the East African coast.",
-  },
-  {
-    icon: Network,
     title: "TEAMS",
     status: "Active",
     description:
-      "The East African Marine System is owned by the Kenyan government and private investors. It was Kenya's first dedicated undersea cable, landing in Mombasa in 2009, and marked a turning point for Kenya's internet connectivity and costs.",
+      "The East African Marine System is owned by the Kenyan government and private investors. Landing in Mombasa in 2009 alongside SEACOM, it was Kenya's first dedicated government-backed undersea cable and marked a turning point for the country's internet connectivity.",
+  },
+  {
+    icon: Globe,
+    title: "EASSy",
+    status: "Active",
+    description:
+      "The Eastern Africa Submarine Cable System runs along the East African coast from South Africa to Sudan, landing in Mombasa. It provides direct connectivity to over 20 coastal and landlocked African countries and is backed by a consortium of African and international telecom operators.",
+  },
+  {
+    icon: ArrowRightLeft,
+    title: "LION2",
+    status: "Active",
+    description:
+      "The Lower Indian Ocean Network 2 connects Madagascar, Reunion, Mayotte, Mozambique, Kenya (Mombasa), and Tanzania. It provides additional redundancy and capacity on the East African coast, ensuring Kenya has multiple diverse routes to international networks.",
+  },
+  {
+    icon: Radio,
+    title: "DARE1",
+    status: "Active",
+    description:
+      "The Djibouti Africa Regional Express 1 cable connects Djibouti to Mombasa and South Africa. Designed to provide redundancy and additional capacity to the East African coast, it strengthens Kenya's position as a regional connectivity hub.",
+  },
+  {
+    icon: CircleDot,
+    title: "PEACE",
+    status: "Active",
+    description:
+      "The Pakistan and East Africa Connecting Europe cable lands in Mombasa and connects Kenya to Pakistan, Egypt, and Europe. It entered service in 2022 and adds a new eastward route, diversifying Kenya's international connectivity beyond the traditional European corridors.",
   },
 ];
 
@@ -138,11 +152,12 @@ export default function Connectivity() {
             <span className="text-gradient-cyan">Global Internet</span>
           </h3>
           <p className="text-sm sm:text-base text-muted-foreground mb-8 text-center max-w-2xl mx-auto">
-            Four major subsea cable systems land in Mombasa, carrying
-            Kenya&apos;s data to every corner of the world.
+            Six major subsea cable systems land in Mombasa, carrying
+            Kenya&apos;s data to every corner of the world. A seventh
+            cable, Meta's Daraja, is in development.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {subseaCables.map((cable, i) => {
               const Icon = cable.icon;
               return (

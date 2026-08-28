@@ -6,7 +6,7 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Internet & Connectivity",
   description: "How the internet reaches Kenya, submarine cables explained, KIXP, internet peering, CDNs, and why cloud services need local infrastructure.",
-  alternates: { canonical: "https://datacentre254.com/internet" },
+  alternates: { canonical: "/internet" },
   keywords: ["subsea cables Kenya", "KIXP", "internet peering Kenya", "CDN Kenya", "submarine cables Mombasa", "TEAMS cable", "EASSy", "DARE1"],
   openGraph: {
     title: "Internet & Connectivity | Data Centre 254",

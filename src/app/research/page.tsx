@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Research",
   description:
     "Independent research and analysis on Kenya's digital infrastructure — data centre markets, AI infrastructure, energy, and cloud computing.",
-  alternates: { canonical: "https://datacentre254.com/research" },
+  alternates: { canonical: "/research" },
   openGraph: {
     title: "Research | Data Centre 254",
     description:

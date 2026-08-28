@@ -7,7 +7,7 @@ import SearchClient from "./SearchClient";
 export const metadata: Metadata = {
   title: "Search",
   description: "Search Data Centre 254 — articles, facilities, and digital infrastructure knowledge.",
-  alternates: { canonical: "https://datacentre254.com/search" },
+  alternates: { canonical: "/search" },
   robots: { index: false, follow: true },
 };
 
