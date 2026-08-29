@@ -6,24 +6,24 @@ import EastAfricaInfrastructureMap from "@/components/east-africa-infrastructure
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "East Africa Digital Infrastructure Map | Data Centre 254",
+  title: "Kenya Data Centre Map — 14 Facilities, 6 Subsea Cables | Data Centre 254",
   description:
-    "Interactive visualization of data centres, submarine cables, fibre networks, and internet exchange points across Kenya, Tanzania, Uganda, Rwanda, and Ethiopia.",
+    "Interactive map of every data centre in Kenya — 13 in Nairobi, 1 in Mombasa — plus the six submarine cables landing at the coast and the fibre backbone of East Africa.",
   alternates: { canonical: "/infrastructure/map" },
   openGraph: {
-    title: "East Africa Digital Infrastructure Map | Data Centre 254",
+    title: "Every data centre in Kenya, mapped | Data Centre 254",
     description:
-      "Explore the digital infrastructure powering East Africa — from carrier-neutral data centres to submarine cable landing stations and internet exchange points.",
+      "Zoom from East Africa to the Nairobi cluster: 14 facilities, six subsea cables, and the fibre routes connecting them.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "East Africa Infrastructure Map — Data Centre 254" }],
+    images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "Kenya data centre map — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "East Africa Digital Infrastructure Map",
+    title: "Every data centre in Kenya, mapped",
     description:
-      "Interactive map of data centres, cables, and IXPs across East Africa.",
+      "14 facilities, six submarine cables, and the fibre backbone — zoom from East Africa down to the Nairobi cluster.",
     images: ["/images/og-infrastructure-map.webp"],
   },
 };
