@@ -79,6 +79,49 @@ export default function TheScale() {
           ))}
         </dl>
 
+        {/* Global context — where Kenya sits in the world's largest facilities */}
+        <div className="mt-16 grid items-center gap-10 lg:grid-cols-[1fr_340px] lg:gap-14">
+          <div>
+            <p className="eyebrow">Global context</p>
+            <h3 className="mt-3 text-xl font-semibold text-foreground sm:text-2xl">
+              Kenya&apos;s 14 facilities sit inside a much bigger machine.
+            </h3>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              The largest data centre campuses on Earth — led by China
+              Telecom&apos;s Inner Mongolia complex at a reported ~10.7 million
+              square feet — are industrial installations on a scale no African
+              facility yet approaches. It is precisely this capacity gap that
+              new ventures, from the Microsoft&ndash;G42 project planned for
+              Kenya to the MTN-backed Africa Data Hub, are now moving to
+              close.
+            </p>
+            <Link
+              href="/articles/mtn-africa-data-hub-ai-data-centres"
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"
+            >
+              Read the analysis: Africa&apos;s AI data centre race
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+          <figure>
+            <div className="img-frame">
+              <div className="relative aspect-[725/864]">
+                <Image
+                  src="/images/worlds-largest-data-centers-2026.jpg"
+                  alt="Ranked list of the world's largest data centres in 2026, led by China Telecom Inner Mongolia, The Citadel Campus and the Utah Data Center"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 340px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              The world&apos;s largest data centre campuses, per industry
+              rankings (2026). Figures as reported.
+            </figcaption>
+          </figure>
+        </div>
+
         <Link
           href="/directory"
           className="mt-12 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"

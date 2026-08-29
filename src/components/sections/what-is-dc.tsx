@@ -102,6 +102,23 @@ export default function WhatIsDC() {
               ))}
             </ol>
 
+            {/* Cutaway infographic — what's actually inside the building */}
+            <div className="img-frame mt-10 max-w-sm">
+              <div className="relative aspect-[736/1104]">
+                <Image
+                  src="/images/whats-inside-ai-data-center.jpg"
+                  alt="Cutaway diagram of an AI data centre showing GPU servers, cooling, power distribution, UPS, networking, monitoring, security and fire suppression"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 384px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <p className="mt-3 max-w-sm text-xs leading-relaxed text-muted-foreground">
+              Open the building up: the systems inside a modern AI-ready data
+              centre — compute, cooling, power chains, networking, security.
+            </p>
+
             <Link
               href="/data-centres"
               className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"

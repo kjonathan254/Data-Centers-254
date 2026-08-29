@@ -27,6 +27,10 @@ images:
     alt: "GPU servers in an AI computing facility"
     caption: "AI workloads demand far higher power density than traditional enterprise colocation"
     position: "section-break"
+  - src: "/images/whats-inside-ai-data-center.jpg"
+    alt: "Cutaway diagram of an AI data centre showing GPUs, cooling, power, UPS, networking, monitoring, security and fire suppression"
+    caption: "What an AI-ready facility contains: compute, cooling, power chains, networking, security and fire suppression"
+    position: "infographic"
 internal_links:
   - text: "AI data centres in East Africa"
     href: "/articles/ai-data-centres-east-africa"
@@ -84,6 +88,8 @@ Building also fits MTN's balance sheet strategy. The operator has spent years mo
 ![GPU servers in an AI computing facility](/images/ai-gpu-servers.png)
 
 AI workloads also change the engineering requirements dramatically. Training clusters demand power densities per rack that far exceed traditional enterprise colocation, along with advanced liquid cooling, high-capacity interconnects, and hardened power chains. Operators who can deliver AI-ready halls today are effectively selling scarce capacity into unmet demand, which is precisely the opportunity Africa Data Hub is chasing.
+
+![What's inside an AI data centre: GPUs, cooling systems, power distribution, UPS, networking, monitoring, security and fire suppression](/images/whats-inside-ai-data-center.jpg)
 
 ## Africa's AI Capacity Problem in Numbers
 
