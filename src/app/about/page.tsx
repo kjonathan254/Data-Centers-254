@@ -32,26 +32,35 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         <div className="relative">
-          <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
-          <div
-            className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_10%,oklch(0.78_0.14_195/3%),transparent_70%)]"
-            aria-hidden="true"
-          />
-
-          <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-            {/* Header */}
-            <div className="mb-16">
-              <span className="inline-block font-mono text-xs sm:text-sm tracking-widest text-cyan mb-4 uppercase">
-                About
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight mb-6">
+          {/* Photographic header band */}
+          <header className="relative overflow-hidden border-b border-border/40">
+            <div className="absolute inset-0">
+              <Image
+                src="/images/nairobi-skyline.webp"
+                alt="Nairobi skyline at dusk"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/40"
+              />
+            </div>
+            <div className="relative z-10 container-site py-20 sm:py-28">
+              <span className="eyebrow">About</span>
+              <h1 className="h-display mt-3 max-w-2xl text-foreground">
                 Why Data Centre 254 Exists
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 There is no single place where a Kenyan can go to understand the physical infrastructure
                 that makes their digital life possible. Data Centre 254 exists to fill that gap.
               </p>
             </div>
+          </header>
+
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
             {/* The Problem */}
             <section className="mb-16">
@@ -168,7 +177,7 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="glass-card rounded-xl p-5 border border-border/50"
+                    className="card-solid rounded-xl p-5"
                   >
                     <h3 className="text-sm font-semibold text-cyan mb-1">{item.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>

@@ -1,45 +1,49 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { getClusterImage } from "@/lib/imagery";
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as const,
-};
-
-const clusterMeta: Record<string, { label: string; entry: string }> = {
+const clusterMeta: Record<string, { label: string; entry: string; route: string }> = {
   Beginner: {
-    label: "START HERE",
+    label: "Start here",
     entry: "You use data centres every day. Most people have no idea what they are.",
+    route: "/beginners",
   },
   Kenya: {
-    label: "KENYA",
-    entry: "Nairobi and Mombasa. The two cities where Kenya's digital economy actually lives.",
+    label: "Kenya",
+    entry: "Nairobi and Mombasa — the two cities where Kenya's digital economy actually lives.",
+    route: "/kenya",
   },
   Internet: {
-    label: "CONNECTIVITY",
+    label: "Connectivity",
     entry: "Undersea cables, fibre routes, and the physical paths that carry your data.",
+    route: "/infrastructure",
   },
   Energy: {
-    label: "ENERGY",
+    label: "Energy",
     entry: "Geothermal from the Rift Valley. The power behind the servers.",
+    route: "/energy",
+  },
+  AI: {
+    label: "AI & cloud",
+    entry: "GPU racks, cloud regions and the compute demand shaping East Africa.",
+    route: "/ai",
+  },
+  Policy: {
+    label: "Policy",
+    entry: "Licensing, data protection and the rules shaping who builds what, where.",
+    route: "/research",
+  },
+  Infrastructure: {
+    label: "Data centres",
+    entry: "Cooling, power, cabling and design — how the buildings actually work.",
+    route: "/data-centres",
   },
   Careers: {
-    label: "CAREERS",
+    label: "Careers",
     entry: "The jobs inside these buildings — roles most Kenyans have never heard of.",
+    route: "/careers",
   },
-};
-
-const clusterRoutes: Record<string, string> = {
-  Beginner: "/beginners",
-  Kenya: "/kenya",
-  Internet: "/infrastructure",
-  Energy: "/energy",
-  Careers: "/careers",
 };
 
 interface Cluster {
@@ -48,102 +52,68 @@ interface Cluster {
   firstArticle?: { title: string; slug: string; reading_time: string };
 }
 
+/**
+ * The library — every cluster as an image-led card. Server component.
+ */
 export default function ReadTheLibraryInner({ clusters }: { clusters: Cluster[] }) {
+  const total = clusters.reduce((sum, c) => sum + c.count, 0);
+
   return (
-    <section className="section-y-lg section-surface">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Label */}
-        <motion.div {...fadeUp} className="text-center">
-          <span className="text-section-label">THE LIBRARY</span>
-        </motion.div>
+    <section id="the-library" className="section-pad">
+      <div className="container-site">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <p className="eyebrow">The library</p>
+            <h2 className="h-display-sm mt-3 max-w-xl text-foreground">
+              {total} explanations of infrastructure most people never think about.
+            </h2>
+          </div>
+        </div>
 
-        {/* Headline */}
-        <motion.h2
-          {...fadeUp}
-          className="mt-8 text-center text-display-sm text-foreground"
-        >
-          {clusters.reduce((sum, c) => sum + c.count, 0)} explanations of infrastructure
-        </motion.h2>
-        <motion.h2
-          {...fadeUp}
-          className="mt-2 text-center text-display-sm text-gradient-cyan"
-        >
-          most people never think about.
-        </motion.h2>
-
-        <motion.p {...fadeUp} className="mt-6 text-subtitle-center">
-          Data centres, connectivity, energy, AI, careers — broken down
-          for anyone who wants to understand what actually powers Kenya&apos;s
-          digital economy.
-        </motion.p>
-      </div>
-
-      {/* Cluster entries */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        <div className="flex flex-col">
-          {clusters.map((cluster, i) => {
-            const meta = clusterMeta[cluster.cluster] || {
-              label: cluster.cluster.toUpperCase(),
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {clusters.map((cluster) => {
+            const meta = clusterMeta[cluster.cluster] ?? {
+              label: cluster.cluster,
               entry: "",
+              route: "/search",
             };
-            const route = clusterRoutes[cluster.cluster] || "/";
+            const img = getClusterImage(cluster.cluster);
 
             return (
-              <motion.div
+              <Link
                 key={cluster.cluster}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.06,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
+                href={meta.route}
+                className="group block"
               >
-                <div className="py-8 border-b border-border/30 first:pt-0 last:border-b-0">
-                  <div className="flex items-center gap-3">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-cyan/60">
-                      {meta.label}
-                    </span>
-                    <span className="text-[11px] font-mono text-muted-foreground/50">
-                      {cluster.count} article{cluster.count !== 1 ? "s" : ""}
+                <article className="card-solid card-solid-hover h-full overflow-hidden">
+                  <div className="relative aspect-[16/10]">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-mono text-xs uppercase tracking-wider text-cyan/80">
+                        {meta.label}
+                      </span>
+                      <span className="font-mono text-xs text-muted-foreground/60">
+                        {cluster.count} {cluster.count === 1 ? "article" : "articles"}
+                      </span>
+                    </div>
+                    <p className="mt-2.5 text-sm leading-relaxed text-foreground/90">
+                      {meta.entry}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-all group-hover:gap-2 group-hover:text-cyan">
+                      Browse
+                      <ArrowRight className="size-3.5" />
                     </span>
                   </div>
-
-                  <p className="mt-2 text-sm text-foreground/90 leading-relaxed">
-                    {meta.entry}
-                  </p>
-
-                  {cluster.firstArticle && (
-                    <Link
-                      href={`/articles/${cluster.firstArticle.slug}`}
-                      className="group flex items-start gap-3 mt-4"
-                    >
-                      <span className="text-foreground/30 group-hover:text-cyan/60 transition-colors duration-300 mt-px">
-                        <ArrowRight className="size-3.5" />
-                      </span>
-                      <div>
-                        <span className="text-sm font-medium text-foreground/80 group-hover:text-cyan transition-colors duration-300">
-                          {cluster.firstArticle.title}
-                        </span>
-                        <span className="ml-3 text-xs text-muted-foreground/60 font-mono">
-                          {cluster.firstArticle.reading_time}
-                        </span>
-                      </div>
-                    </Link>
-                  )}
-
-                  {cluster.count > 1 && (
-                    <Link
-                      href={route}
-                      className="inline-flex items-center gap-1.5 mt-3 text-xs text-muted-foreground/60 hover:text-cyan/80 transition-colors duration-300"
-                    >
-                      {cluster.count - 1} more
-                      <ArrowRight className="size-3" />
-                    </Link>
-                  )}
-                </div>
-              </motion.div>
+                </article>
+              </Link>
             );
           })}
         </div>

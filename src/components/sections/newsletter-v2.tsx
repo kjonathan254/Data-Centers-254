@@ -1,14 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState, useRef } from "react";
-
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-40px" } as const,
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } as const,
-};
 
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
@@ -48,84 +40,58 @@ export default function NewsletterV2() {
     }
   }
 
-  // Success / already subscribed — show confirmation
-  if (state === "subscribed" || state === "already") {
-    return (
-      <section className="section-y px-4 sm:px-6 lg:px-8">
-        <div className="max-w-lg mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-[11px] font-mono uppercase tracking-widest text-cyan/50"
-          >
-            DC254 Brief
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 text-sm text-foreground/80"
-          >
-            {messages[state]}
-          </motion.p>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section className="section-y px-4 sm:px-6 lg:px-8">
-      <div className="max-w-lg mx-auto text-center">
-        {/* Brand name — quiet, confident */}
-        <motion.p {...fadeUp} className="text-[11px] font-mono uppercase tracking-widest text-cyan/50">
-          DC254 Brief
-        </motion.p>
+    <section className="section-y border-t border-border/40">
+      <div className="container-site">
+        <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
+          <p className="eyebrow">DC254 Brief</p>
+          <h2 className="h-display-sm mt-3 text-foreground">
+            Know what powers Kenya.
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            A concise weekly briefing on Kenya&apos;s digital infrastructure —
+            new facilities, cables, policy and jobs.
+          </p>
 
-        {/* Headline — one statement */}
-        <motion.h2
-          {...fadeUp}
-          className="mt-4 text-lg sm:text-xl font-semibold text-foreground tracking-tight"
-        >
-          Know what powers Kenya.
-        </motion.h2>
-
-        {/* Subtitle — what it is */}
-        <motion.p {...fadeUp} className="mt-2 text-sm text-muted-foreground">
-          A concise weekly briefing on Kenya&apos;s digital infrastructure.
-        </motion.p>
-
-        {/* Form — minimal */}
-        <motion.div {...fadeUp} className="mt-6">
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch gap-2">
-            <input
-              ref={inputRef}
-              name="email"
-              type="email"
-              required
-              placeholder="Email address"
-              disabled={state === "submitting"}
-              className="flex-1 bg-transparent border border-border/60 rounded-lg h-10 px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-cyan/30 focus:border-cyan/30 transition-colors disabled:opacity-50"
-            />
-            <button
-              type="submit"
-              disabled={state === "submitting"}
-              className="bg-cyan text-background font-semibold text-sm rounded-lg h-10 px-5 hover:bg-cyan/90 active:scale-[0.98] transition-all duration-200 cursor-pointer whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+          {state === "subscribed" || state === "already" ? (
+            <p
+              className="mt-6 rounded-lg border border-neon/25 bg-neon/10 px-4 py-3 text-sm text-foreground"
+              role="status"
             >
-              {state === "submitting" ? "..." : "Subscribe"}
-            </button>
-          </form>
-          {/* Error message */}
-          {state === "error" && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="mt-2 text-xs text-destructive"
-            >
-              {messages.error}
-            </motion.p>
+              {messages[state]}
+            </p>
+          ) : (
+            <>
+              <form
+                onSubmit={handleSubmit}
+                className="mt-6 flex flex-col items-stretch gap-2 sm:flex-row"
+              >
+                <input
+                  ref={inputRef}
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Email address"
+                  disabled={state === "submitting"}
+                  aria-label="Email address"
+                  className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={state === "submitting"}
+                  className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {state === "submitting" ? "Subscribing…" : "Subscribe"}
+                </button>
+              </form>
+              {state === "error" && (
+                <p className="mt-3 text-xs text-destructive" role="alert">
+                  {messages.error}
+                </p>
+              )}
+            </>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

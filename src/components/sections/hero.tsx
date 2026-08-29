@@ -1,98 +1,89 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Map } from "lucide-react";
+import { getFacilities } from "@/lib/directory-data";
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as const,
-};
-
+/**
+ * Fullscreen photographic hero — real server-hall image, text overlay,
+ * verified-platform stat strip anchored to the bottom edge.
+ * Server component: zero client JS, zero scroll effects, zero pinning.
+ */
 export default function Hero() {
+  const facilities = getFacilities();
+  const operators = new Set(facilities.map((f) => f.operator.name)).size;
+
+  const stats = [
+    { value: String(facilities.length), label: "Verified facilities" },
+    { value: String(operators), label: "Operators tracked" },
+    { value: "6", label: "Subsea cables live" },
+    { value: "56+", label: "Explainers published" },
+  ];
+
   return (
-    <section className="relative min-h-[88svh] section-full overflow-hidden">
-      {/* Grid background with radial gradient glows */}
-      <div className="absolute inset-0 grid-bg" aria-hidden="true">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,oklch(0.78_0.14_195/6%),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_30%_70%,oklch(0.75_0.18_155/4%),transparent_70%)]" />
-      </div>
+    <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
+      {/* Fullscreen photograph */}
+      <Image
+        src="/images/hero-server-hall.webp"
+        alt="Corridor between server racks inside a modern data centre"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col items-center text-center">
-        {/* Label */}
-        <motion.span
-          {...fadeUp}
-          className="text-section-label"
-        >
-          DATA CENTRE 254
-        </motion.span>
+      {/* Scrims: left column for text legibility, floor fade into page background */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-background/15"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-background to-transparent"
+      />
 
-        {/* Hero image — full-width with cyan ring glow */}
-        <motion.div
-          {...fadeUp}
-          className="mt-10 w-full -mx-4 sm:-mx-6 lg:-mx-8"
-        >
-          <div className="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden ring-1 ring-cyan/20 shadow-[0_0_60px_-10px_oklch(0.78_0.14_195/0.35)]">
-            <div className="relative aspect-[16/9]">
-              <Image
-                src="/images/hero-dc-nairobi.png"
-                alt="Modern data centre facility in Nairobi, Kenya — the digital heart of East Africa"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-            </div>
-          </div>
-        </motion.div>
+      {/* Overlay content */}
+      <div className="relative z-10 container-site pb-14 pt-36 sm:pb-16">
+        <p className="eyebrow">Kenya&apos;s Data Centre Intelligence Platform</p>
 
-        {/* Headline */}
-        <motion.h1
-          {...fadeUp}
-          className="mt-12 text-display-lg text-foreground leading-[1.05] tracking-tight"
-        >
-          Inside Kenya&apos;s{" "}
-          <span className="text-gradient-cyan">Digital Infrastructure</span>
-        </motion.h1>
+        <h1 className="h-display-xl mt-5 max-w-3xl text-foreground">
+          Inside Kenya&apos;s digital infrastructure.
+        </h1>
 
-        {/* Supporting copy */}
-        <motion.p
-          {...fadeUp}
-          className="mt-8 text-subtitle-center max-w-2xl"
-        >
-          Every M-Pesa transaction. Every WhatsApp message. Every AI query.
-          Every website you visit depends on infrastructure you rarely see.
-        </motion.p>
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Every M-Pesa transaction, every stream, every AI query runs through
+          buildings most people will never enter. DC254 maps, explains and
+          tracks them — in plain language, with verified data.
+        </p>
 
-        {/* CTA */}
-        <motion.div
-          {...fadeUp}
-          className="mt-12 flex flex-col sm:flex-row items-center gap-4"
-        >
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/directory"
-            className="inline-flex items-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-8 h-12 text-base font-semibold hover:bg-cyan/90 transition-all duration-300"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-cyan px-7 text-base font-semibold text-background transition-colors hover:bg-cyan/90"
           >
             Explore the DC Directory
             <ArrowRight className="size-4" />
           </Link>
           <Link
-            href="/data-centres"
-            className="inline-flex items-center gap-2 rounded-lg border border-border px-8 h-12 text-base font-medium text-muted-foreground hover:text-foreground hover:border-cyan/40 transition-all duration-300"
+            href="/infrastructure/map"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-border bg-background/40 px-7 text-base font-medium text-foreground backdrop-blur-sm transition-colors hover:border-cyan/40 hover:text-cyan"
           >
-            Start with the Basics
+            <Map className="size-4" />
+            View the Infrastructure Map
           </Link>
-        </motion.div>
-      </div>
+        </div>
 
-      {/* Bottom fade */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent"
-        aria-hidden="true"
-      />
+        {/* Stat strip — the platform's verified numbers as the hero's base */}
+        <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border/60 pt-6 sm:grid-cols-4 sm:gap-8">
+          {stats.map((s) => (
+            <div key={s.label} className="flex flex-col">
+              <dd className="stat-value order-1">{s.value}</dd>
+              <dt className="order-2 mt-1 text-xs leading-snug text-muted-foreground">
+                {s.label}
+              </dt>
+            </div>
+          ))}
+        </dl>
+      </div>
     </section>
   );
 }

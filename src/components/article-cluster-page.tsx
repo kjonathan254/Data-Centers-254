@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { Clock, ArrowRight, Server } from "lucide-react";
+import Image from "next/image";
+import { Clock, ArrowRight } from "lucide-react";
 import { getArticlesByCluster } from "@/lib/articles";
+import { getClusterImage } from "@/lib/imagery";
 
 const clusterConfig: Record<
   string,
@@ -47,10 +49,10 @@ const clusterConfig: Record<
       "GPU computing, AI-ready data centres, cloud regions, and the computing demand shaping Africa\u2019s next technology frontier.",
   },
   Infrastructure: {
-    title: "Infrastructure",
-    subtitle: "INFRASTRUCTURE",
+    title: "Inside Data Centres",
+    subtitle: "DATA CENTRES & INFRASTRUCTURE",
     description:
-      "The physical systems that make data centres work — cooling, power, cabling, fire suppression, and building design.",
+      "The physical systems that make data centres work — cooling, power, cabling, fire suppression, and building design — plus the facilities operating in Kenya today.",
   },
   Policy: {
     title: "Policy & Regulation",
@@ -63,69 +65,95 @@ const clusterConfig: Record<
 export default function ArticleClusterPage({ cluster }: { cluster: string }) {
   const articles = getArticlesByCluster(cluster);
   const config = clusterConfig[cluster] || clusterConfig.Beginner;
+  const heroImg = getClusterImage(cluster);
 
   return (
-    <div className="relative">
-      <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_10%,oklch(0.78_0.14_195/3%),transparent_70%)]"
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-        {/* Header */}
-        <div className="mb-12">
-          <span className="inline-block font-mono text-xs sm:text-sm tracking-widest text-cyan mb-4 uppercase">
-            {config.subtitle}
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight mb-4">
-            {config.title}
-          </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            {config.description}
-          </p>
-          <div className="mt-4 text-sm text-muted-foreground">
-            {articles.length} article{articles.length !== 1 ? "s" : ""}
-          </div>
+    <div>
+      {/* Photographic page header */}
+      <header className="relative overflow-hidden border-b border-border/40">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImg.src}
+            alt={heroImg.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/40"
+          />
         </div>
 
-        {/* Article List */}
+        <div className="relative z-10 container-site py-20 sm:py-28">
+          <p className="eyebrow">{config.subtitle}</p>
+          <h1 className="h-display mt-3 max-w-2xl text-foreground">{config.title}</h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            {config.description}
+          </p>
+          <p className="mt-5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            {articles.length} article{articles.length !== 1 ? "s" : ""}
+          </p>
+        </div>
+      </header>
+
+      {/* Article list — image thumbs + text rows */}
+      <div className="container-site py-14 sm:py-16">
         {articles.length === 0 ? (
-          <div className="glass-card rounded-xl p-8 text-center">
-            <Server className="size-8 text-muted-foreground mx-auto mb-3" />
-            <p className="text-muted-foreground">Articles coming soon.</p>
-          </div>
+          <p className="text-muted-foreground">Articles coming soon.</p>
         ) : (
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {articles.map((a) => (
               <Link
                 key={a.frontmatter.slug}
                 href={`/articles/${a.frontmatter.slug}`}
-                className="block glass-card glass-card-hover rounded-xl p-5 sm:p-6 border border-border/50 hover:border-cyan/30 transition-all duration-300 group"
+                className="group block"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <h2 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">
+                <article className="card-solid card-solid-hover flex h-full overflow-hidden">
+                  <div className="relative hidden w-36 shrink-0 sm:block">
+                    <Image
+                      src={heroImg.src}
+                      alt={heroImg.alt}
+                      fill
+                      sizes="144px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1 p-5">
+                    <h2 className="text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-cyan">
                       {a.frontmatter.title}
                     </h2>
-                    <p className="text-sm text-muted-foreground mt-1.5 line-clamp-2 leading-relaxed">
+                    <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                       {a.frontmatter.meta_description}
                     </p>
-                    <div className="flex items-center gap-4 mt-3 text-xs text-muted-foreground">
+                    <div className="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
                       <span className="flex items-center gap-1">
-                        <Clock className="size-3" />{a.frontmatter.reading_time}
+                        <Clock className="size-3" />
+                        {a.frontmatter.reading_time}
                       </span>
                       <span className="font-mono">
-                        {new Date(a.frontmatter.published_date).toLocaleDateString("en-KE", { year: "numeric", month: "short" })}
+                        {new Date(a.frontmatter.published_date).toLocaleDateString("en-KE", {
+                          year: "numeric",
+                          month: "short",
+                        })}
                       </span>
                     </div>
                   </div>
-                  <ArrowRight className="size-5 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
-                </div>
+                </article>
               </Link>
             ))}
           </div>
         )}
+
+        {/* Back to all topics */}
+        <Link
+          href="/#the-library"
+          className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-cyan"
+        >
+          <ArrowRight className="size-4 rotate-180" />
+          All topics
+        </Link>
       </div>
     </div>
   );

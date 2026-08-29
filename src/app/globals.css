@@ -296,6 +296,92 @@
   .prose-max-narrow {
     max-width: 32rem;
   }
+
+  /* ─── Professional redesign system ─────────────────────────────
+     Structured, photography-led, editorial. One accent (cyan), solid
+     surfaces, 1px borders, left-aligned hierarchy. No gradients on
+     text, no glows, no glass, no decorative grids. */
+
+  .container-site {
+    width: 100%;
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .container-site { padding-inline: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .container-site { padding-inline: 2rem; }
+  }
+
+  .section-pad {
+    padding-block: clamp(4.5rem, 9vw, 7rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-geist-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: oklch(0.78 0.14 195);
+  }
+
+  .h-display-xl {
+    font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+    line-height: 1.04;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .h-display {
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  .h-display-sm {
+    font-size: clamp(1.5rem, 3vw, 2.125rem);
+    line-height: 1.15;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+  }
+
+  .card-solid {
+    background: oklch(0.13 0.008 260);
+    border: 1px solid oklch(1 0 0 / 8%);
+    border-radius: 0.75rem;
+  }
+  .card-solid-hover {
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .card-solid-hover:hover {
+    background: oklch(0.15 0.01 260);
+    border-color: oklch(0.78 0.14 195 / 30%);
+  }
+
+  .img-frame {
+    border: 1px solid oklch(1 0 0 / 10%);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .stat-value {
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: oklch(0.95 0.005 260);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .link-cyan {
+    color: oklch(0.78 0.14 195);
+    font-weight: 500;
+  }
+  .link-cyan:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 }
 
 @keyframes pulse-dot {

@@ -1,152 +1,116 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Smartphone, Radio, Cable, Server, Cloud } from "lucide-react";
-
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as const,
-};
+import { ArrowRight } from "lucide-react";
 
 const flowSteps = [
   {
-    icon: Smartphone,
-    label: "Your Phone",
+    label: "Your phone",
     reveal: "Every tap, swipe and search starts here — on a device you hold in your hand.",
   },
   {
-    icon: Radio,
-    label: "Mobile Network",
+    label: "Mobile network",
     reveal: "Cell towers across Kenya convert your signal into data in milliseconds.",
   },
   {
-    icon: Cable,
-    label: "Fibre Network",
+    label: "Fibre network",
     reveal: "Your request travels as light through cables buried beneath Kenyan roads.",
   },
   {
-    icon: Server,
-    label: "Data Centre",
-    highlighted: true,
+    label: "Data centre",
+    highlight: true,
     reveal: "A building in Nairobi processes it all — in a room you will never enter.",
   },
   {
-    icon: Cloud,
-    label: "Cloud / Internet",
+    label: "Cloud / internet",
     reveal: "The response returns through the same chain — in reverse — in under a second.",
   },
 ];
 
+/**
+ * "What is a data centre" — the journey from pocket to server rack,
+ * told as a numbered sequence beside a real facility photograph.
+ * Server component.
+ */
 export default function WhatIsDC() {
   return (
-    <section className="section-y-lg">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        {/* Label */}
-        <motion.span {...fadeUp} className="text-section-label">
-          THE BASICS
-        </motion.span>
+    <section className="section-y border-t border-border/40">
+      <div className="container-site">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* Photograph column */}
+          <div className="lg:sticky lg:top-24">
+            <p className="eyebrow">The basics</p>
+            <h2 className="h-display mt-3 text-foreground">
+              You use them every day.
+              <span className="block text-muted-foreground">You just don&apos;t see them.</span>
+            </h2>
+            <div className="img-frame mt-8">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/images/hero-dc-nairobi.png"
+                  alt="Aerial view of a data centre facility in Nairobi at dusk"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 560px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              A carrier-neutral data centre campus, Nairobi. Backup generators,
+              cooling plant and security perimeters — the physical form of the cloud.
+            </p>
+          </div>
 
-        {/* Headlines */}
-        <motion.h2 {...fadeUp} className="mt-8 text-display text-foreground">
-          You use them every day.
-        </motion.h2>
-        <motion.h2
-          {...fadeUp}
-          className="mt-2 text-display text-gradient-cyan"
-        >
-          You just don&apos;t see them.
-        </motion.h2>
+          {/* Journey column */}
+          <div className="lg:pt-16">
+            <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Every digital service depends on a physical chain of
+              infrastructure — cables, buildings, power lines — that most
+              people never think about. Follow one tap from your pocket to
+              the rack and back:
+            </p>
 
-        {/* Paragraph */}
-        <motion.p {...fadeUp} className="mt-6 text-subtitle">
-          Every digital service you use depends on a physical chain of
-          infrastructure — cables, buildings, power lines — that most people
-          never think about.
-        </motion.p>
-
-        {/* Vertical Data Flow with revelations */}
-        <motion.div {...fadeUp} className="mt-16 flex flex-col items-center">
-          {flowSteps.map((step, i) => {
-            const Icon = step.icon;
-            const isLast = i === flowSteps.length - 1;
-
-            return (
-              <div key={step.label} className="flex flex-col items-center">
-                {/* Step card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
+            <ol className="mt-10">
+              {flowSteps.map((step, i) => (
+                <li
+                  key={step.label}
                   className={[
-                    "glass-card flex items-center gap-4 rounded-xl px-6 py-4 w-full max-w-md transition-all duration-300",
-                    step.highlighted
-                      ? "border-cyan/40 ring-1 ring-cyan/20 glow-cyan-sm"
-                      : "hover:border-cyan/20"
+                    "flex gap-5 border-b border-border/40 py-6 first:pt-0 last:border-b-0",
                   ].join(" ")}
                 >
-                  <div
+                  <span
                     className={[
-                      "flex items-center justify-center size-10 rounded-full flex-shrink-0",
-                      step.highlighted
-                        ? "bg-cyan/20 text-cyan"
-                        : "bg-cyan/10 text-cyan/80"
+                      "font-mono text-sm",
+                      step.highlight ? "text-cyan" : "text-muted-foreground/60",
                     ].join(" ")}
                   >
-                    <Icon className="size-5" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={[
-                          "text-sm font-semibold",
-                          step.highlighted ? "text-cyan" : "text-foreground"
-                        ].join(" ")}
-                      >
-                        {step.label}
-                      </span>
-                      {step.highlighted && (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-cyan/15 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-cyan">
-                          <span className="relative flex h-1.5 w-1.5">
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
-                            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan" />
-                          </span>
-                          Active
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3
+                      className={[
+                        "text-base font-semibold",
+                        step.highlight ? "text-cyan" : "text-foreground",
+                      ].join(" ")}
+                    >
+                      {step.label}
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                       {step.reveal}
                     </p>
                   </div>
-                </motion.div>
+                </li>
+              ))}
+            </ol>
 
-                {/* Flow line connector */}
-                {!isLast && (
-                  <div className="flow-line flow-line-dot my-2" />
-                )}
-              </div>
-            );
-          })}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div {...fadeUp} className="mt-14">
-          <Link
-            href="/data-centres"
-            className="inline-flex items-center gap-2 text-cyan text-sm font-medium hover:gap-3 transition-all duration-300"
-          >
-            Understand Data Centres
-            <ArrowRight className="size-4" />
-          </Link>
-        </motion.div>
+            <Link
+              href="/data-centres"
+              className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"
+            >
+              Understand data centres
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

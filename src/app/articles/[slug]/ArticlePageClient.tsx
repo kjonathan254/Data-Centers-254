@@ -16,6 +16,7 @@ import type {
   Article, ArticleFaq, ArticleImage,
 } from "@/lib/articles";
 import { CLUSTER_META } from "@/lib/cluster-meta";
+import { getClusterImage } from "@/lib/imagery";
 
 // ─── Types ────────────────────────────────────────────────────────────────
 
@@ -375,6 +376,7 @@ export default function ArticlePageClient({ article, related }: Props) {
   // Separate hero image from body images
   const heroImage = frontmatter.images.find((i) => i.position === "hero");
   const bodyImages = frontmatter.images.filter((i) => i.position !== "hero");
+  const clusterImg = getClusterImage(frontmatter.cluster);
 
   // We need to strip markdown image references from the content since
   // ReactMarkdown will render them via the img component
@@ -385,10 +387,8 @@ export default function ArticlePageClient({ article, related }: Props) {
   return (
     <div className="relative">
       <ProgressBar />
-      <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_10%,oklch(0.78_0.14_195/3%),transparent_70%)]" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         {/* Breadcrumb */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -444,8 +444,23 @@ export default function ArticlePageClient({ article, related }: Props) {
 
           <Separator className="bg-border/50 mb-0" />
 
-          {/* Hero image */}
-          {heroImage && <ArticleImageBlock image={heroImage} />}
+          {/* Hero image — article's own, or the cluster photograph as fallback */}
+          {heroImage ? (
+            <ArticleImageBlock image={heroImage} />
+          ) : (
+            <figure className="mb-10">
+              <div className="img-frame relative aspect-[16/9]">
+                <Image
+                  src={clusterImg.src}
+                  alt={clusterImg.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+          )}
 
           {/* Table of Contents */}
           <TableOfContents headings={headings} />

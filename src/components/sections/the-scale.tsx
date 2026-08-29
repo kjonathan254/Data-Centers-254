@@ -1,116 +1,87 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as const,
-};
-
+/**
+ * The scale — "There is no cloud": full-width infrastructure map plus a
+ * four-metric sourced row. Absorbs the old standalone "2 seconds" section.
+ * Server component.
+ */
 export default function TheScale() {
+  const metrics = [
+    {
+      value: "6",
+      label: "Active submarine cables",
+      note: "SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE land in Mombasa — a 7th (Meta's Daraja) is in development.",
+      source: "Verified",
+    },
+    {
+      value: "14",
+      label: "Known facilities",
+      note: "The buildings that house the servers, storage and networking behind Kenya's digital economy.",
+      source: "DC254 database",
+    },
+    {
+      value: "2",
+      label: "Nairobi + Mombasa",
+      note: "The two cities where nearly all of Kenya's data centre capacity is physically located.",
+      source: "DC254 database",
+    },
+    {
+      value: "<2s",
+      label: "M-Pesa round trip",
+      note: "Safaricom reports average USSD latency under two seconds — phone to data centre and back.",
+      source: "Estimate",
+    },
+  ];
+
   return (
-    <section id="the-scale" className="section-y-lg section-surface">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        {/* Label */}
-        <motion.div {...fadeUp} className="text-center">
-          <span className="text-section-label">THE ECOSYSTEM</span>
-        </motion.div>
+    <section id="the-scale" className="section-y section-surface border-y border-border/40">
+      <div className="container-site">
+        <p className="eyebrow">The ecosystem</p>
+        <h2 className="h-display mt-3 max-w-2xl text-foreground">
+          There is no cloud — just infrastructure you&apos;ve never noticed.
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          When someone says &ldquo;the cloud,&rdquo; they mean buildings in
+          Nairobi, cables under the Indian Ocean, and power lines from the
+          Rift Valley. It is physical, measurable, and growing.
+        </p>
 
-        {/* Headline */}
-        <motion.h2
-          {...fadeUp}
-          className="mt-8 text-center text-display text-foreground"
-        >
-          There is no cloud.
-        </motion.h2>
-        <motion.h2
-          {...fadeUp}
-          className="mt-2 text-center text-display text-gradient-cyan"
-        >
-          Just infrastructure you&apos;ve never noticed.
-        </motion.h2>
-
-        <motion.p {...fadeUp} className="mt-6 text-subtitle-center">
-          When someone says &ldquo;the cloud,&rdquo; they mean buildings in Nairobi,
-          cables under the Indian Ocean, and power lines from the Rift Valley.
-        </motion.p>
-      </div>
-
-      {/* Full-bleed map — breaks out of container for dramatic effect */}
-      <motion.div
-        {...fadeUp}
-        className="mt-14 mx-4 sm:mx-6 lg:mx-8 xl:mx-auto xl:max-w-6xl"
-      >
-        <div className="relative rounded-2xl overflow-hidden border border-border/20">
+        {/* Full-width map */}
+        <div className="img-frame mt-10">
           <div className="relative aspect-[16/9]">
             <Image
               src="/images/africa-dc-map.webp"
               alt="Map of Kenya showing data centre locations, submarine cable landing points, and fibre connectivity routes"
               fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/20" />
           </div>
         </div>
-        <p className="mt-3 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
-          From submarine cables landing in Mombasa to data centres in Nairobi — Kenya&apos;s digital infrastructure is physical, measurable and growing.
+        <p className="mt-3 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+          From submarine cables landing in Mombasa to data centres in Nairobi —
+          Kenya&apos;s digital infrastructure, mapped.
         </p>
-      </motion.div>
 
-      {/* 3 dramatic revelations — inline, not in cards */}
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 mt-16 flex flex-col gap-10">
-        <motion.div
-          {...fadeUp}
-          className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
-        >
-          <div className="flex items-baseline gap-2 flex-shrink-0">
-            <span className="stat-display text-gradient-cyan">6</span>
-            <span className="text-sm font-medium text-foreground">active submarine cables</span>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            land in Mombasa — SEACOM, TEAMS, EASSy, LION2, DARE1, and PEACE — with a 7th (Meta&apos;s Daraja) in development.
-            <span className="ml-2 text-[10px] font-mono uppercase tracking-wider text-cyan/50">VERIFIED</span>
-          </p>
-        </motion.div>
+        {/* Sourced metric row */}
+        <dl className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map((m) => (
+            <div key={m.label} className="border-t border-border/60 pt-5">
+              <dd className="stat-value">{m.value}</dd>
+              <dt className="mt-2 text-sm font-medium text-foreground">{m.label}</dt>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{m.note}</p>
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-cyan/50">
+                {m.source}
+              </p>
+            </div>
+          ))}
+        </dl>
 
-        <motion.div
-          {...fadeUp}
-          className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
-        >
-          <div className="flex items-baseline gap-2 flex-shrink-0">
-            <span className="stat-display text-gradient-cyan">14</span>
-            <span className="text-sm font-medium text-foreground">known facilities</span>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            house the servers, storage and networking equipment that make Kenya&apos;s digital economy possible.
-            <span className="ml-2 text-[10px] font-mono uppercase tracking-wider text-cyan/50">DC254 DATABASE</span>
-          </p>
-        </motion.div>
-
-        <motion.div
-          {...fadeUp}
-          className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
-        >
-          <div className="flex items-baseline gap-2 flex-shrink-0">
-            <span className="text-sm font-medium text-foreground">Nairobi + Mombasa</span>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            — two cities where the buildings that process your M-Pesa, banking, government services and streaming are physically located.
-            <span className="ml-2 text-[10px] font-mono uppercase tracking-wider text-cyan/50">DC254 DATABASE</span>
-          </p>
-        </motion.div>
-      </div>
-
-      {/* CTA */}
-      <div className="mt-14 text-center">
         <Link
           href="/directory"
-          className="inline-flex items-center gap-2 text-cyan text-sm font-medium hover:gap-3 transition-all duration-300"
+          className="mt-12 inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"
         >
           Explore the DC Directory
           <ArrowRight className="size-4" />
