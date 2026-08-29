@@ -1,0 +1,20 @@
+{
+  "name": "Data Centre 254",
+  "short_name": "DC254",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0B1E3C",
+  "background_color": "#0B1E3C",
+  "display": "standalone",
+  "start_url": "/"
+}
