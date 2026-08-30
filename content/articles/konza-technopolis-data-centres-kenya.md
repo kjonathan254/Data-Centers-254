@@ -18,17 +18,17 @@ cluster: "Kenya"
 og_image: "/images/nairobi-sunset-wide.webp"
 reading_time: "15 min"
 images:
-  - src: "/images/mombasa-old-town.webp"
-    alt: "Nairobi skyline representing Kenya's digital ambitions and the Konza Technopolis vision"
-    caption: "Konza Technopolis aims to extend Kenya's digital economy beyond Nairobi's existing business districts"
+  - src: "/images/hero-dc-nairobi.png"
+    alt: "Aerial view of a modern data centre campus at dusk"
+    caption: "Konza Technopolis is Kenya's bet on a purpose-built tech city."
     position: "hero"
   - src: "/images/dc-cooling-crac-2.webp"
     alt: "Dedicated power infrastructure and substation at Konza Technopolis"
     caption: "Konza's planned dedicated substation and dual-feed power infrastructure addresses a critical data centre requirement"
     position: "section-break"
-  - src: "/images/kenya-solar-farm-5.webp"
-    alt: "Sustainable and green data centre development at Konza Technopolis"
-    caption: "Environmental clearances and sustainability planning at Konza simplify data centre development timelines"
+  - src: "/images/kenya-transmission-pylons-2.webp"
+    alt: "High-voltage transmission pylons crossing open country"
+    caption: "Power transmission and uptake remain Konza's hardest challenges."
     position: "infographic"
 internal_links:
   - text: "colocation data centre options in Kenya"
@@ -60,7 +60,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/konza-technopolis-d
 
 Sixty kilometres south of Nairobi, on the arid plains of Machakos County, one of Africa's most ambitious smart city projects is taking shape. **Konza Technopolis** — a 5,000-acre development conceived as the cornerstone of Kenya's Vision 2030 strategy — aims to create a world-class technology hub that the government has dubbed **"Silicon Savannah."**
 
-![Nairobi skyline representing Kenya's digital ambitions and the Konza Technopolis vision](/images/mombasa-old-town.webp)
+![Aerial view of a modern data centre campus at dusk](/images/hero-dc-nairobi.png)
 
 For Kenya's data centre industry, Konza represents both an enormous opportunity and a complex question. Can a purpose-built smart city, still in its early phases of development, attract the investment and demand needed to become a meaningful data centre location? Or will the established infrastructure and ecosystem of Nairobi continue to dominate?
 
@@ -161,7 +161,7 @@ Environmental Impact Assessments (EIAs) and other regulatory clearances have bee
 
 ### Distance from Nairobi's Business District
 
-![Sustainable and green data centre development at Konza Technopolis](/images/kenya-solar-farm-5.webp)
+![High-voltage transmission pylons crossing open country](/images/kenya-transmission-pylons-2.webp)
 
 At 60 kilometres from Nairobi's Central Business District, Konza is not a trivial commute. For data centre operations that require on-site staff 24/7, the distance creates challenges in talent attraction and retention. Many experienced data centre professionals currently live and work in Nairobi, and convincing them to relocate or commute to Konza requires significant incentives.
 

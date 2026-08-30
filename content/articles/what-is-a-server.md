@@ -22,10 +22,10 @@ images:
     alt: "Rack-mounted servers in a data centre"
     caption: "Modern servers are designed to be mounted in standard 19-inch racks, with dozens of servers stacked vertically in a single rack to maximise space efficiency"
     position: "hero"
-  - src: "/images/mombasa-cable-landing-2.webp"
-    alt: "Servers connected by network cables in a rack"
-    caption: "Each server connects to the network via multiple cables — power cables, data cables, and management cables — all organised within the rack"
-    position: "section-break"
+  - src: "/images/dc-gpu-cluster.webp"
+    alt: "Consumer graphics cards — familiar hardware that differs from server-class machines"
+    caption: "Consumer parts share DNA with server hardware but trade reliability and manageability for price."
+    position: "section"
   - src: "/images/dc-server-chip-4-wide.webp"
     alt: "Network switches connecting servers"
     caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"
@@ -79,7 +79,7 @@ Servers use **ECC memory** (Error-Correcting Code RAM), which can detect and cor
 
 Servers have **redundant power supplies** — two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime — there are multiple layers of redundancy between the grid and the processor.
 
-![Servers connected by network cables in a rack](/images/mombasa-cable-landing-2.webp)
+![Consumer graphics cards — familiar hardware that differs from server-class machines](/images/dc-gpu-cluster.webp)
 
 Servers use **hot-swappable components** — drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
 

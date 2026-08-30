@@ -15,17 +15,17 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/dc-gpu-cluster-5.webp"
+og_image: "/images/dc-servers-racks.png"
 reading_time: "11 min"
 images:
   - src: "/images/whats-inside-ai-data-center-wide.webp"
     alt: "Server racks in a modern colocation facility"
     caption: "Africa Data Centres provides carrier-neutral colocation across Kenya"
     position: "hero"
-  - src: "/images/dc-gpu-cluster-5.webp"
-    alt: "Data centre networking and fibre connectivity"
-    caption: "ADC facilities connect to multiple submarine cables via Nairobi-Mombasa fibre routes"
-    position: "section-break"
+  - src: "/images/dc-servers-racks.png"
+    alt: "Blue-lit server racks in an Africa Data Centres hall"
+    caption: "Carrier-neutral halls in Nairobi and Mombasa anchor the operator's footprint."
+    position: "section"
 internal_links:
   - text: "data centre directory"
     href: "/directory"
@@ -86,7 +86,7 @@ Nairobi 2 represents a more modern addition to the company's Kenyan portfolio, a
 
 The Mombasa Road location for both Nairobi facilities is strategically significant. It is the primary fibre corridor connecting Nairobi to the coastal submarine cable landing stations. All four major subsea cables serving Kenya, EASSy, SEACOM, TEAMS, and DARE1, land in Mombasa and their terrestrial extensions pass through this corridor. Facilities on Mombasa Road benefit from direct access to diverse fibre routes, low-latency connectivity to international gateways, and proximity to networks serving landlocked East African markets.
 
-![Data centre networking and fibre connectivity](/images/dc-gpu-cluster-5.webp)
+![Blue-lit server racks in an Africa Data Centres hall](/images/dc-servers-racks.png)
 
 ### Mombasa Facility
 

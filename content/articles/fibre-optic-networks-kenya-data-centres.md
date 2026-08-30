@@ -30,10 +30,10 @@ images:
     alt: "East Africa fibre and submarine cable infrastructure map"
     caption: "Kenya's fibre network connects to four submarine cable systems landing in Mombasa, providing redundancy and multiple routing options to Europe, Asia, and the Middle East"
     position: "infographic"
-  - src: "/images/whats-inside-ai-data-center.webp"
-    alt: "Server racks in a connected data centre"
-    caption: "Without reliable fibre connectivity, even the most powerful servers are unreachable — connectivity is as important as power and cooling"
-    position: "inline"
+  - src: "/images/dc-networking.webp"
+    alt: "Labelled fibre patch panel diagram with SC and FC connectors"
+    caption: "Patch panels, splice discipline, and labelling make or break a fibre plant."
+    position: "diagram"
   - src: "/images/diagram-microwave-data-link.webp"
     alt: "Diagram of a long distance microwave data link between two sites 50 kilometres apart"
     caption: "Where fibre has not yet reached, licensed microwave links moving around 1 Gbps over a 50 km hop remain a practical backhaul bridge."
@@ -149,7 +149,7 @@ Despite the progress, Kenya's fibre infrastructure faces significant challenges.
 
 Right-of-way challenges persist. Despite regulations requiring utility companies to coordinate and share duct space, fibre deployments are frequently delayed by county government permits, road construction, and disputes with other utility operators. These delays increase costs and slow the expansion of connectivity to new areas.
 
-![Server racks in a connected data centre](/images/whats-inside-ai-data-center.webp)
+![Labelled fibre patch panel diagram with SC and FC connectors](/images/dc-networking.webp)
 
 Rural and peri-urban areas remain underserved. While NOFBI has connected county headquarters, the last-mile from county towns to individual facilities, schools, and businesses is often still missing. This matters for data centres because edge computing — placing smaller data processing facilities closer to end users — requires fibre connectivity in locations that currently lack it.
 

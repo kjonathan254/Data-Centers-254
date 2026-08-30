@@ -17,7 +17,7 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Kenya Market
 cluster: Kenya
-og_image: /images/mombasa-old-town-wide.webp
+og_image: /images/nairobi-skyline-night.webp
 reading_time: "13 min"
 images:
 - src: /images/nairobi-skyline-night.webp
@@ -34,6 +34,11 @@ images:
   alt: Map showing data centre locations across Africa including Kenya
   caption: Kenya is positioning itself as the premier data centre hub in East Africa.
   position: inline
+- src: /images/kenya-wind-turbines-3.webp
+  alt: "Wind turbines on grazing land in rural Kenya"
+  caption: "Digital growth leans on one of the world's greenest grids — a genuine selling point for investors."
+  position: inline
+
 internal_links:
 - text: Kenya Data Centre Market Outlook 2025 2030
   href: /articles/kenya-data-centre-market-outlook-2025-2030
@@ -108,6 +113,8 @@ canonical_url: https://data-centers-254.vercel.app/articles/kenya-digital-econom
 ## The Macro Picture: Why Kenya's Data Centre Market Is Accelerating
 
 Kenya's data centre industry is entering a phase of structural growth driven not by a single sector but by a convergence of macroeconomic forces. From mobile money volumes that rival some European nations to a government digitisation agenda touching every public service, the demand for [colocation and cloud infrastructure](/articles/colocation-data-centre-kenya) in Kenya is compounding year on year. Understanding these demand drivers is essential for investors, operators, and enterprises making infrastructure decisions.
+
+![Wind turbines on grazing land in rural Kenya](/images/kenya-wind-turbines-3.webp)
 
 ![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline-night.webp)
 

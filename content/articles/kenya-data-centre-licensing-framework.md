@@ -34,9 +34,9 @@ images:
     alt: "Data centre power distribution and backup systems"
     caption: "Power supply remains the single largest constraint on data centre growth in Kenya"
     position: "inline"
-  - src: "/images/dc-gpu-cluster.webp"
-    alt: "Server racks inside a modern Tier III data centre"
-    caption: "Kenya's total IT power capacity stands at approximately 15 megawatts as of 2025"
+  - src: "/images/kenya-transmission-pylons.webp"
+    alt: "Transmission pylons carrying power across Kenya"
+    caption: "Licensing aside, power supply remains the binding constraint."
     position: "inline"
 internal_links:
   - text: "submarine cables landing in Mombasa"
@@ -118,7 +118,7 @@ Kenya's total installed generation capacity stands at approximately 3,500 megawa
 
 The Huduma Kenya outage in June 2026 further illustrated the power reliability challenge: a single power supply failure at one data centre in Nakuru disrupted government services nationwide. This is not a resilience problem that licensing alone can solve — it requires investment in backup power systems, redundant feeds, and the expansion of Kenya's electricity generation and distribution infrastructure.
 
-![Server racks inside a modern Tier III data centre](/images/dc-gpu-cluster.webp)
+![Transmission pylons carrying power across Kenya](/images/kenya-transmission-pylons.webp)
 
 ## What Other Changes Did the CA Introduce?
 

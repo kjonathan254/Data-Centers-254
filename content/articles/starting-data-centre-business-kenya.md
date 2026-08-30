@@ -22,17 +22,17 @@ images:
     alt: "Data centre business investment and planning"
     caption: "Building a data centre in Kenya is a significant infrastructure investment — understanding the capital requirements, regulatory steps, and market dynamics is essential before committing funds"
     position: "hero"
-  - src: "/images/mombasa-old-town-wide.webp"
-    alt: "Data centre facility under development in Nairobi"
-    caption: "A new data centre from concept to operational typically takes 18-36 months, including land acquisition, design, construction, commissioning, and certification"
-    position: "section-break"
-  - src: "/images/dc-cooling-crac.webp"
-    alt: "Power infrastructure for a new data centre"
-    caption: "Power infrastructure — grid connection, generators, UPS systems, and electrical distribution — typically accounts for 30-40% of total construction costs"
+  - src: "/images/dc-environment-sustainability.png"
+    alt: "Aerial of a purpose-built data centre campus"
+    caption: "Capital goes into land, power, shells, and the systems inside — in that order."
+    position: "section"
+  - src: "/images/dc-policy-regulation.png"
+    alt: "Government building at dusk"
+    caption: "Licensing, data protection, and county codes shape the regulatory path."
     position: "inline"
-  - src: "/images/mombasa-old-town.webp"
-    alt: "Regulatory and licensing requirements"
-    caption: "The NFP-T2 licence from the Communications Authority of Kenya is required before offering data centre services commercially"
+  - src: "/images/nairobi-expressway-wide.webp"
+    alt: "Nairobi Expressway and skyline"
+    caption: "Market entry usually starts where demand is densest: Nairobi."
     position: "inline"
 internal_links:
   - text: "Kenya data centre licensing framework"
@@ -82,7 +82,7 @@ For a typical small colocation facility of 500-800 square metres of white space 
 
 ### Power Infrastructure
 
-![Data centre facility under development in Nairobi](/images/mombasa-old-town-wide.webp)
+![Aerial of a purpose-built data centre campus](/images/dc-environment-sustainability.png)
 
 Power infrastructure typically accounts for 30-40% of total construction costs. This includes the high-voltage connection from Kenya Power (which the operator must pay for), transformers, UPS systems, diesel generators, fuel storage tanks, and the power distribution system (switchgear, PDUs, and cabling). A 2MW facility with N+1 generator redundancy might spend KES 150-300 million on power infrastructure alone.
 
@@ -116,7 +116,7 @@ The [NFP-T2 licence](/articles/kenya-data-centre-licensing-framework) from the C
 
 Building a data centre requires standard construction approvals from the relevant county government (Nairobi City County for facilities in Nairobi), including building plans approval, environmental impact assessment (EIA) from the National Environment Management Authority (NEMA), and fire safety certification from the Kenya Fire Service.
 
-![Power infrastructure for a new data centre](/images/dc-cooling-crac.webp)
+![Government building at dusk](/images/dc-policy-regulation.png)
 
 ### Kenya Power Connection
 
@@ -140,7 +140,7 @@ Build a facility designed specifically as a hub for hybrid cloud deployments —
 
 ### Strategy 3: Edge and Regional
 
-![Regulatory and licensing requirements](/images/mombasa-old-town.webp)
+![Nairobi Expressway and skyline](/images/nairobi-expressway-wide.webp)
 
 Build smaller facilities (100-500kW) in locations outside Nairobi — Mombasa, Kisumu, Nakuru, or Konza Technopolis — serving regional demand and edge computing use cases. This strategy avoids direct competition with the Nairobi incumbents and serves a market that is currently underserved. The challenge is that demand in secondary cities is smaller and less proven.
 

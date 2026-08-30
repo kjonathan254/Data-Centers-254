@@ -27,11 +27,10 @@ images:
   caption: Network switching infrastructure enabling interconnection and peering within
     a Kenyan data centre
   position: hero
-- src: /images/dc-policy-regulation.png
-  alt: Map showing East Africa's digital infrastructure and submarine cable routes
-  caption: Kenya's position at the crossroads of multiple submarine cables makes it
-    a natural interconnection hub
-  position: section-break
+- src: /images/mombasa-port.webp
+  alt: "Port of Mombasa, where submarine cables meet Kenya"
+  caption: "Mombasa's landing stations make Kenya the region's interconnection gateway."
+  position: section
 - src: /images/nairobi-sunset-wide.webp
   alt: Map of data centre and IXP locations across Africa
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key
@@ -225,7 +224,7 @@ Kenya's position as an interconnection hub is no accident. Several factors conve
 - **Regional connectivity**: Kenya borders Uganda, Tanzania, Ethiopia, and South Sudan. Cross-border fibre links from these countries terminate in Nairobi, making it a natural aggregation point.
 - **Market size and sophistication**: Kenya has East Africa's largest and most developed digital economy, with the highest internet penetration rate in the region.
 
-![Map showing East Africa's digital infrastructure and submarine cable routes](/images/dc-policy-regulation.png)
+![Port of Mombasa, where submarine cables meet Kenya](/images/mombasa-port.webp)
 *Kenya's position at the crossroads of multiple submarine cables makes it a natural interconnection hub*
 
 ### KIXP's Regional Role

@@ -34,10 +34,10 @@ images:
     alt: "Nairobi skyline"
     caption: "Nairobi hosts KIXP and the majority of Kenya's data centres, creating a natural peering hub"
     position: "infographic"
-  - src: "/images/mombasa-cable-landing-3.webp"
-    alt: "Network cabling in a data centre"
-    caption: "Every KIXP member connects their network to the exchange point via dedicated fibre or cross-connects"
-    position: "inline"
+  - src: "/images/diagram-protocol-pairs.webp"
+    alt: "Infographic comparing IPsec, HTTPS, FTP/SFTP, mail, and DNS protocols"
+    caption: "Exchange points carry everything from DNS lookups to encrypted mail."
+    position: "diagram"
 internal_links:
   - text: "submarine cables landing in Mombasa"
     href: "/articles/submarine-cables-landing-mombasa"
@@ -140,7 +140,7 @@ The technical specifications matter for reliability. KIXP's switching infrastruc
 
 The physical locations of KIXP's switching equipment are within commercial data centres in Nairobi. You can find these and similar facilities in the [Kenya data centre directory](/directory). Members collocate their own routers and servers in these same facilities, or they run dedicated fibre from their own premises to the KIXP point of presence.
 
-![Network cabling in a data centre](/images/mombasa-cable-landing-3.webp)
+![Infographic comparing IPsec, HTTPS, FTP/SFTP, mail, and DNS protocols](/images/diagram-protocol-pairs.webp)
 
 ## The Role of Content Caching at KIXP
 

@@ -15,20 +15,20 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Careers"
 cluster: "Careers"
-og_image: "/images/dc-careers-tech.png"
+og_image: "/images/dc-women-engineers-corridor.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-careers-tech.png"
-    alt: "Diverse technical team working in a Kenyan data centre operations room"
-    caption: "Building diverse teams is critical to addressing Kenya's data centre talent shortage"
+  - src: "/images/dc-women-engineers-corridor.webp"
+    alt: "Two women engineers walking through a data centre with laptops"
+    caption: "Women remain under-represented in African data halls — visibility of the ones already there matters."
     position: "hero"
-  - src: "/images/ai-gpu-servers.png"
-    alt: "Server rack infrastructure managed by technical operations teams"
-    caption: "Technical operations roles in data centres are increasingly attracting female professionals"
-    position: "section-break"
-  - src: "/images/dc-server-chip.webp"
-    alt: "Business investment in data centre workforce development and training programmes"
-    caption: "Companies investing in diversity programmes see measurable improvements in team performance"
+  - src: "/images/dc-woman-engineer-laptop.webp"
+    alt: "Woman engineer working on a laptop in a server hall"
+    caption: "Pathways in: apprenticeships, certifications, and transferable IT skills."
+    position: "section"
+  - src: "/images/dc-woman-engineer-racks.webp"
+    alt: "Woman engineer configuring server racks"
+    caption: "Operators are rolling out mentorship and inclusive hiring to close the gap."
     position: "infographic"
 internal_links:
   - text: "data centre careers in Kenya"
@@ -60,7 +60,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/women-in-data-centr
 
 Kenya's data centre industry is growing rapidly, driven by the country's position as East Africa's digital hub and the increasing demand for cloud services, colocation, and digital infrastructure. Yet behind the gleaming server racks and sophisticated cooling systems lies a persistent challenge: **the significant underrepresentation of women in technical data centre roles**.
 
-![Diverse technical team working in a Kenyan data centre operations room](/images/dc-careers-tech.png)
+![Two women engineers walking through a data centre with laptops](/images/dc-women-engineers-corridor.webp)
 
 While comprehensive data centre-specific workforce statistics are not publicly available in Kenya, broader Kenyan tech sector data provides a reliable indicator. According to multiple industry surveys, **women make up approximately 20-30% of Kenya's technology workforce**. Within data centres specifically — where roles span electrical engineering, mechanical systems, networking, and facilities management — the representation is estimated at the lower end of this range, around **20-25%**.
 
@@ -124,7 +124,7 @@ Microsoft's **Africa Development Centre** in Nairobi has implemented comprehensi
 
 ## Career Pathways with Growing Female Participation
 
-![Server rack infrastructure managed by technical operations teams](/images/ai-gpu-servers.png)
+![Woman engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
 
 ### Project Management
 
@@ -158,7 +158,7 @@ Formal mentorship programmes pair experienced professionals with women who are e
 
 ### Flexible Working Arrangements
 
-![Business investment in data centre workforce development and training programmes](/images/dc-server-chip.webp)
+![Woman engineer configuring server racks](/images/dc-woman-engineer-racks.webp)
 
 The shift towards cloud-managed infrastructure and remote monitoring tools has made it increasingly possible for data centre professionals to perform many of their duties remotely. Companies that offer **hybrid working models**, flexible hours, and remote management capabilities are finding it easier to attract and retain women in data centre roles.
 

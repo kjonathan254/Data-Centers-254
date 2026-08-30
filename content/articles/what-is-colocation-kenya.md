@@ -15,7 +15,7 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Data Centres"
 cluster: "Beginner"
-og_image: "/images/dc-gpu-cluster.webp"
+og_image: "/images/nairobi-skyline-night-kicc.webp"
 reading_time: "11 min"
 images:
   - src: "/images/dc-servers-racks.png"
@@ -26,9 +26,9 @@ images:
     alt: "Structured cabling connecting colocation racks"
     caption: "Colocation providers handle the physical infrastructure including cabling, while customers manage their own equipment and software"
     position: "section-break"
-  - src: "/images/dc-gpu-cluster.webp"
-    alt: "Network connectivity in a colocation data centre"
-    caption: "Carrier-neutral colocation facilities connect to multiple network providers, letting customers choose their own connectivity or connect to multiple networks simultaneously"
+  - src: "/images/nairobi-skyline-night-kicc.webp"
+    alt: "KICC and the Nairobi skyline at night"
+    caption: "Kenya's colocation market concentrates in Nairobi, with Mombasa emerging."
     position: "inline"
   - src: "/images/dc-security-camera.webp"
     alt: "Security controls at a colocation facility"
@@ -102,7 +102,7 @@ Kenya's colocation market is served by several providers, each with different st
 
 iXAfrica operates the NBOX1 and NBOX1.1 facilities along Mombasa Road in Nairobi. NBOX1 opened in 2023 as a purpose-built, carrier-neutral colocation facility designed to Tier III standards. It offers retail colocation (individual racks and half-racks) and wholesale colocation (dedicated rooms or cages for large customers). iXAfrica's facility is notable for its focus on sustainability and is designed to achieve low PUE values, leveraging Nairobi's climate for free cooling.
 
-![Network connectivity in a colocation data centre](/images/dc-gpu-cluster.webp)
+![KICC and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
 
 ### Africa Data Centres
 

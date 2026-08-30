@@ -22,13 +22,13 @@ images:
     alt: "Data centre power distribution and backup systems"
     caption: "Power is the backbone of any data centre — UPS systems, generators, and PDUs ensure uninterrupted electricity supply"
     position: "hero"
-  - src: "/images/dc-chillers-roof-3.webp"
-    alt: "Data centre cooling systems in a modern facility"
-    caption: "Cooling accounts for up to 40% of a data centre's total energy consumption, making efficient power supply critical"
-    position: "section-break"
-  - src: "/images/kenya-solar-farm.webp"
-    alt: "Nairobi skyline at dusk"
-    caption: "Nairobi's growing data centre industry requires significantly more power than Kenya's grid currently delivers to the city"
+  - src: "/images/dc-switchgear-2.webp"
+    alt: "Electrical switchgear hall"
+    caption: "Racks, cooling, and growth all draw from the same strained grid."
+    position: "section"
+  - src: "/images/kenya-transmission-pylons.webp"
+    alt: "High-voltage pylons on the backbone grid"
+    caption: "The bottleneck is transmission, not generation."
     position: "infographic"
   - src: "/images/dc-switchgear.webp"
     alt: "Server racks inside a modern data centre"
@@ -42,6 +42,11 @@ images:
     alt: "Diagram of data centre electrical infrastructure from the national grid to the GPU rack"
     caption: "Every AI workload depends on this chain holding together: generation, transmission, the substation, switchgear, UPS conditioning, and finally rack-level PDU distribution."
     position: "diagram"
+
+  - src: "/images/kenya-wind-turbines-2.webp"
+    alt: "Lake Turkana Wind Power turbines in northern Kenya"
+    caption: "Wind — led by the Lake Turkana project — adds intermittent capacity to Kenya's renewable-heavy grid."
+    position: "inline"
 
 internal_links:
   - text: "Kenya data centre licensing framework"
@@ -79,6 +84,8 @@ This is not a theoretical problem. Kenya's total installed generation capacity s
 
 Kenya's electricity generation is one of the greenest in Africa. The energy mix is dominated by renewable sources: geothermal accounts for approximately 45% of installed capacity, hydroelectric for about 30%, wind for 5-8%, and solar a growing but still small share. Thermal (fossil fuel) generation fills the gaps during peak demand or when renewable output dips.
 
+![Lake Turkana Wind Power turbines in northern Kenya](/images/kenya-wind-turbines-2.webp)
+
 Geothermal is Kenya's strategic asset for data centres. Unlike solar and wind, geothermal power is available 24 hours a day, 365 days a year, with minimal seasonal variation. The Olkaria geothermal field in the Rift Valley produces over 800 megawatts, and the Geothermal Development Company (GDC) continues to develop new wells. For data centre operators evaluating African locations, Kenya's geothermal baseload offers something few other African nations can match: clean, consistent power without the intermittency that makes solar and wind unsuitable as primary data centre energy sources.
 
 However, the geothermal resource is geographically fixed in the Rift Valley, approximately 100-150 km from Nairobi where data centre demand is concentrated. This creates a transmission bottleneck. The power exists, but moving it from generation source to load centre requires sufficient transmission infrastructure — and this is where the constraint becomes apparent.
@@ -98,7 +105,7 @@ Data centres are extraordinary electricity consumers. To understand why power is
 
 But IT load is only part of the story. Data centres need additional power for cooling (removing the heat servers generate), lighting, security systems, and office space. The total facility power is measured by **PUE (Power Usage Effectiveness)**, defined as the ratio of total facility power to IT power. A PUE of 1.5 means for every 1 watt consumed by servers, 0.5 watts go to everything else. So a 5-megawatt IT load with a PUE of 1.5 requires 7.5 megawatts from the grid.
 
-![Cooling systems consume significant power](/images/dc-chillers-roof-3.webp)
+![Electrical switchgear hall](/images/dc-switchgear-2.webp)
 
 ## The Transmission Bottleneck
 
@@ -112,7 +119,7 @@ Kenya's national grid is managed by Kenya Power and Lighting Company (KPLC), whi
 
 The June 2026 Huduma Centre data centre outage in Nakuru demonstrated the practical consequences. A single power supply failure at one facility disrupted government services nationwide. While this was attributed to inadequate backup power at the facility, it highlighted the broader fragility of power supply to critical digital infrastructure.
 
-![Nairobi needs more power for data centre growth](/images/kenya-solar-farm.webp)
+![High-voltage pylons on the backbone grid](/images/kenya-transmission-pylons.webp)
 
 ## Why the Microsoft-G42 Project Stalled
 

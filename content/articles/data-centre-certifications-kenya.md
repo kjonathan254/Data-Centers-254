@@ -17,24 +17,22 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Careers
 cluster: Careers
-og_image: /images/dc-switchgear.webp
+og_image: /images/diagram-network-protocols.webp
 reading_time: "14 min"
 images:
-- src: /images/dc-switchgear-2.webp
-  alt: Data centre professional studying for certifications in Nairobi
-  caption: Certifications are the fastest way to advance your data centre career in
-    Kenya
+- src: /images/dc-ups-batteries-wide.webp
+  alt: "Battery-backed power systems in a facility"
+  caption: "Power and cooling credentials prove you can keep the lights on."
   position: hero
 - src: /images/hero-server-hall.webp
   alt: Server infrastructure requiring certified professionals to manage
   caption: Certified professionals command higher salaries and greater responsibility
     in Kenyan data centres
   position: section-break
-- src: /images/dc-switchgear.webp
-  alt: Network engineering certification study materials and data centre networking
-    equipment
-  caption: Networking certifications remain the backbone of data centre career advancement
-  position: section-break
+- src: /images/diagram-network-protocols.webp
+  alt: "Infographic of core network protocols — HTTP, DNS, DHCP, SSH and more"
+  caption: "Networking certifications test the protocols that move traffic between racks and continents."
+  position: diagram
 - src: /images/dc-switchgear-2.webp
   alt: Power systems and cooling infrastructure in a Kenyan data centre
   caption: Power and cooling certifications are increasingly valuable as data centre
@@ -119,7 +117,7 @@ In Kenya's rapidly expanding data centre industry, certifications are more than 
 
 This comprehensive guide covers every data centre-relevant certification available to Kenyan professionals, organised by speciality area. For each certification, you'll find the cost in Kenyan Shillings, where to take training locally, exam requirements, and the real career impact as observed in the Kenyan market.
 
-![Data centre professional studying for certifications in Nairobi](/images/dc-switchgear-2.webp)
+![Battery-backed power systems in a facility](/images/dc-ups-batteries-wide.webp)
 *Certifications are the fastest way to advance your data centre career in Kenya*
 
 ## Infrastructure Certifications
@@ -214,7 +212,7 @@ The **CCNP Enterprise** is the professional-level Cisco certification, covering 
 - **Availability in Kenya:** Pearson VUE Nairobi, extensive online study resources
 - **Career Impact:** Good entry point for [data centre careers in Kenya](/articles/data-centre-careers-kenya), particularly for those transitioning from general IT or fresh graduates.
 
-![Network engineering certification study materials and data centre networking equipment](/images/dc-switchgear.webp)
+![Infographic of core network protocols — HTTP, DNS, DHCP, SSH and more](/images/diagram-network-protocols.webp)
 *Networking certifications remain the backbone of data centre career advancement*
 
 ## Power and Cooling Certifications
@@ -255,7 +253,7 @@ Eaton provides certifications for UPS systems, power distribution units, and ele
 - **Availability:** Online and occasional in-person sessions
 - **Career Impact:** Useful complement to broader certifications for power systems specialists
 
-![Power systems and cooling infrastructure in a Kenyan data centre](/images/dc-switchgear-2.webp)
+![Battery-backed power systems in a facility](/images/dc-ups-batteries-wide.webp)
 *Power and cooling certifications are increasingly valuable as data centre densities rise*
 
 ## Security Certifications

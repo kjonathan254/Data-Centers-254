@@ -18,9 +18,9 @@ cluster: "AI"
 og_image: "/images/kenya-wind-turbines-wide.webp"
 reading_time: "16 min"
 images:
-  - src: "/images/kenya-geothermal-plant-2.webp"
-    alt: "Policy and regulation framework for AI governance in Kenya"
-    caption: "Kenya's AI governance framework is evolving through multiple regulatory channels simultaneously"
+  - src: "/images/kenya-wind-turbines-4.webp"
+    alt: "Wind turbines on Kenya's green hills"
+    caption: "A renewable-heavy grid shapes what responsible, sustainable AI infrastructure looks like."
     position: "hero"
   - src: "/images/dc-biometric-access.webp"
     alt: "Data centre security systems for AI workloads"
@@ -30,9 +30,9 @@ images:
     alt: "Data centre map of Africa showing regulatory diversity"
     caption: "AI governance approaches vary significantly across African nations, creating compliance complexity for regional operators"
     position: "infographic"
-  - src: "/images/kenya-geothermal-map.webp"
-    alt: "Challenges facing data centre and AI governance in Kenya"
-    caption: "Balancing innovation with responsible AI deployment remains Kenya's central governance challenge"
+  - src: "/images/whats-inside-ai-data-center.webp"
+    alt: "Cutaway infographic of an AI data centre"
+    caption: "Operators translate AI ethics into access control, data handling, and audit trails."
     position: "inline"
   - src: "/images/dc-environment-sustainability.png"
     alt: "Sustainability considerations in AI infrastructure"
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
 ---
 
-![Policy and regulation framework for AI governance in Kenya](/images/kenya-geothermal-plant-2.webp)
+![Wind turbines on Kenya's green hills](/images/kenya-wind-turbines-4.webp)
 
 ## Why AI Ethics and Governance Matter Now
 
@@ -221,7 +221,7 @@ As AI regulation tightens, data centre customers will increasingly require their
 
 The environmental impact of AI compute is an emerging governance concern. Training a single large language model can emit as much carbon as five automobiles over their entire lifetimes. For Kenyan data centre operators, this creates both an ethical obligation and a commercial opportunity. Kenya's geothermal energy — which provides over 40% of the country's electricity — offers a genuinely green power source for AI compute. Data centres that can demonstrate low-carbon AI infrastructure will increasingly attract environmentally conscious customers and support their own ESG reporting obligations.
 
-![Challenges facing data centre and AI governance in Kenya](/images/kenya-geothermal-map.webp)
+![Cutaway infographic of an AI data centre](/images/whats-inside-ai-data-center.webp)
 
 ## AI Ethics Committees and Impact Assessments
 

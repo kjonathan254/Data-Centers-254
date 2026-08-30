@@ -22,10 +22,10 @@ images:
     alt: "Server racks in a modern edge data centre"
     caption: "Wingu Africa provides carrier-neutral edge infrastructure in Nairobi"
     position: "hero"
-  - src: "/images/dc-gpu-cluster.webp"
-    alt: "Data centre networking and connectivity"
-    caption: "Wingu connects to multiple fibre and submarine cable providers"
-    position: "section-break"
+  - src: "/images/hero-server-hall.webp"
+    alt: "Corridor inside a data centre hall"
+    caption: "Wingu's edge facilities keep cloud and content close to users."
+    position: "section"
 internal_links:
   - text: "data centre directory"
     href: "/directory"
@@ -102,7 +102,7 @@ Wingu Africa has positioned itself to capture this demand. The facility is desig
 
 The content delivery role is closely linked to Wingu's carrier-neutral model. CDN operators benefit from connecting to multiple networks within a single facility, ensuring cached content reaches users regardless of which telecom operator they subscribe to. In Kenya's competitive telecom market, where Safaricom, Airtel, and others each serve significant subscriber bases, this multi-network accessibility is essential.
 
-![Data centre networking and connectivity](/images/dc-gpu-cluster.webp)
+![Corridor inside a data centre hall](/images/hero-server-hall.webp)
 
 ## Target Market: SMEs, Cloud Providers, and Content Companies
 

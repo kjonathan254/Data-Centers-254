@@ -18,9 +18,9 @@ cluster: Beginner
 og_image: "/images/dc-switchgear-2.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-gpu-cluster-3.webp"
-    alt: "Server racks inside a Kenyan data centre with monitoring systems"
-    caption: "Data centre SLAs define the contractual obligations for keeping infrastructure like these racks operational."
+  - src: "/images/dc-power-systems.webp"
+    alt: "UPS cabinets in a data centre power room"
+    caption: "An SLA is a promise about power, cooling, and uptime — measured, not marketed."
     position: "hero"
   - src: "/images/dc-chillers-roof-2.webp"
     alt: "Redundant power systems in a colocation facility"
@@ -64,7 +64,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-sla-upt
 
 A **Service Level Agreement (SLA)** is a formal contract between a data centre operator and its customer that defines the minimum standards of service the operator promises to deliver. Think of it as a written guarantee: if the facility fails to keep the lights on, keep your servers cool, or respond when you need help, the SLA spells out exactly what consequences follow.
 
-![Server racks inside a Kenyan data centre with monitoring systems](/images/dc-gpu-cluster-3.webp)
+![UPS cabinets in a data centre power room](/images/dc-power-systems.webp)
 
 For any business placing IT equipment in a [colocation facility in Kenya](/articles/what-is-colocation-kenya), the SLA is arguably the single most important document you will sign. It transforms vague marketing promises like "we never go down" into measurable, enforceable commitments. Without a solid SLA, you have no contractual recourse when things go wrong — and in the data centre world, things eventually do.
 

@@ -18,9 +18,9 @@ cluster: "Beginner"
 og_image: "/images/dc-power-systems.webp"
 reading_time: "9 min"
 images:
-  - src: "/images/dc-gpu-cluster-5.webp"
-    alt: "Server racks inside a modern Tier III data centre"
-    caption: "Tier III facilities maintain redundant power and cooling, allowing any single component to fail without downtime"
+  - src: "/images/dc-power-systems.webp"
+    alt: "Rows of UPS and power cabinets in a data centre"
+    caption: "Tier ratings grade the redundancy of power and cooling paths — the systems that keep sites alive."
     position: "hero"
   - src: "/images/racks-cabling.webp"
     alt: "Structured cabling connecting server racks"
@@ -30,9 +30,9 @@ images:
     alt: "Data centre power distribution systems"
     caption: "Power redundancy is the primary differentiator between tiers — from no backup to fully fault-tolerant"
     position: "infographic"
-  - src: "/images/dc-cooling-crac.webp"
-    alt: "Precision cooling systems inside a data centre"
-    caption: "Cooling redundancy follows the same tier structure as power: no redundancy (Tier I) to fully redundant (Tier IV)"
+  - src: "/images/dc-chillers-roof.webp"
+    alt: "Rooftop chillers at a data centre"
+    caption: "Tiers don't grade location risk, security quality, or operational discipline."
     position: "inline"
   - src: "/images/dc-biometric-access-2.webp"
     alt: "Data centre physical security systems"
@@ -68,7 +68,7 @@ When you hear that a data centre is "Tier III certified," what does that actuall
 
 The tier system answers one fundamental question: **if something breaks, what happens to the servers?** The answer ranges from "everything goes down" at Tier I to "nothing happens" at Tier IV. The difference between these extremes is measured in redundant power supplies, backup cooling systems, and the physical paths that connect them.
 
-![Server racks in a Tier III facility](/images/dc-gpu-cluster-5.webp)
+![Rows of UPS and power cabinets in a data centre](/images/dc-power-systems.webp)
 
 ## The Four Tiers: What They Guarantee
 
@@ -135,7 +135,7 @@ The Uptime Institute tier rating is specifically about infrastructure reliabilit
 
 This matters for Kenya because the country's competitive advantage in data centres is not just about reliability — it is about the combination of reliability with renewable, low-cost geothermal energy. A facility that achieves Tier III reliability while maintaining a PUE of 1.3 on geothermal power is more attractive to many customers than a Tier IV facility running on diesel.
 
-![Cooling redundancy mirrors the power tier structure](/images/dc-cooling-crac.webp)
+![Rooftop chillers at a data centre](/images/dc-chillers-roof.webp)
 
 ## Certification vs. Design: The Trust Gap
 

@@ -30,9 +30,9 @@ images:
     alt: "Network infrastructure supporting real-time ML inference"
     caption: "Real-time ML applications like fraud detection require low-latency connectivity between banking systems and the data centre infrastructure running the models"
     position: "inline"
-  - src: "/images/dc-server-chip-3.webp"
-    alt: "Challenges in deploying ML in financial services"
-    caption: "Data quality, regulatory requirements, and talent shortages are the primary challenges for ML adoption in Kenyan financial services"
+  - src: "/images/dc-woman-engineer-laptop.webp"
+    alt: "Engineer focused on her laptop in a server hall"
+    caption: "The talent gap is real — banks compete with telcos and startups for the same ML engineers."
     position: "inline"
 internal_links:
   - text: "GPU computing in Kenya"
@@ -122,7 +122,7 @@ Data infrastructure for ML includes data lakes (large-scale storage for raw data
 
 ## The ML Talent Challenge
 
-![Challenges in deploying ML in financial services](/images/dc-server-chip-3.webp)
+![Engineer focused on her laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
 
 Kenya produces many software developers, but the specific skills required for ML engineering — statistical modelling, feature engineering, model optimisation, MLOps (the practice of deploying and managing ML models in production) — are in short supply. The Microsoft Africa Development Centre in Nairobi employs ML engineers working on global products, and some of these skills are transferring to the local ecosystem. Strathmore University, the University of Nairobi, and other institutions have introduced data science and ML programmes, but the pipeline is still thin relative to demand.
 

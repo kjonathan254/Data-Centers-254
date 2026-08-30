@@ -30,13 +30,13 @@ images:
     alt: "Data centre facility in Nairobi"
     caption: "Nairobi is emerging as East Africa's AI infrastructure hub, attracting investment from global tech companies"
     position: "infographic"
-  - src: "/images/dc-chillers-roof.webp"
-    alt: "Data centre cooling systems"
-    caption: "GPU clusters generate extreme heat, requiring advanced liquid cooling systems that add to power demand"
+  - src: "/images/kenya-geothermal-plant-3.webp"
+    alt: "Geothermal steam plant in Kenya's Rift Valley"
+    caption: "Cheap baseload geothermal is East Africa's unfair advantage in the AI race."
     position: "inline"
-  - src: "/images/dc-gpu-cluster-2-wide.webp"
-    alt: "Nairobi skyline at dusk"
-    caption: "Kenya's growing digital ecosystem provides the talent and market demand that makes AI infrastructure investment viable"
+  - src: "/images/kenya-geothermal-plant-2.webp"
+    alt: "Steam rising over a Rift Valley geothermal field"
+    caption: "Kenya's green baseload undercuts rival markets on power cost and carbon."
     position: "inline"
 internal_links:
   - text: "Kenya power and data centres"
@@ -106,7 +106,7 @@ East Africa has a combination of structural advantages that no other region on t
 
 **Geothermal energy.** Kenya sits on the East African Rift, one of the world's most geothermally active zones. The Olkaria geothermal complex alone generates over 800 MW, and Kenya's total installed geothermal capacity exceeds 1,000 MW, the largest in Africa and among the top 10 globally. Geothermal power is baseload, meaning it runs 24 hours a day regardless of weather, unlike solar or wind. It is also among the cheapest sources of electricity in Africa, with generation costs of USD 0.07-0.09 per kWh.
 
-![Data centre cooling systems](/images/dc-chillers-roof.webp)
+![Geothermal steam plant in Kenya's Rift Valley](/images/kenya-geothermal-plant-3.webp)
 
 For AI data centres, which consume power continuously and care deeply about cost predictability, geothermal is the ideal energy source. A GPU cluster running a three-month training job needs guaranteed, affordable power around the clock. Geothermal provides exactly that.
 
@@ -138,7 +138,7 @@ South Africa has the most developed data centre market in Africa, with establish
 
 Kenya occupies a middle ground that is increasingly favourable for AI-specific infrastructure. It has less existing data centre capacity than South Africa, which means less legacy infrastructure to work around. Its geothermal resource is genuinely world-class and directly aligned with the 24/7 high-power demands of AI compute.
 
-![Nairobi skyline at dusk](/images/dc-gpu-cluster-2-wide.webp)
+![Steam rising over a Rift Valley geothermal field](/images/kenya-geothermal-plant-2.webp)
 
 ## The Microsoft-G42 Lesson: Power Is the Constraint
 

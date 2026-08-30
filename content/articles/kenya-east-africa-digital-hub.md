@@ -26,9 +26,9 @@ images:
     alt: "East Africa digital infrastructure connectivity map"
     caption: "Kenya's four submarine cable landing stations in Mombasa and its central position in the East African fibre network create unmatched connectivity advantages"
     position: "section-break"
-  - src: "/images/kenya-coast-beach.webp"
-    alt: "Nairobi's growing skyline reflecting digital growth"
-    caption: "Nairobi's emergence as a technology and financial hub has been driven by infrastructure investment that includes data centres, fibre networks, and mobile money systems"
+  - src: "/images/dc-careers-tech.png"
+    alt: "Engineer at work in a data centre"
+    caption: "Kenya's young technical workforce is the hub's quiet advantage."
     position: "inline"
   - src: "/images/nairobi-sunset-wide.webp"
     alt: "Investment flowing into Kenya's digital infrastructure"
@@ -90,7 +90,7 @@ Kenya's human capital is a critical component of its digital hub positioning. Th
 
 Beyond formal education, Kenya has a vibrant self-taught and community-trained technology culture. Developer communities, coding bootcamps, and technology hubs (like iHub, Nairobi Garage, and Nailab) have produced thousands of software developers, designers, and product managers who work for local companies, international technology firms, and remote-first companies based in the US and Europe.
 
-![Nairobi's growing skyline reflecting digital growth](/images/kenya-coast-beach.webp)
+![Engineer at work in a data centre](/images/dc-careers-tech.png)
 
 Microsoft's Africa Development Centre (ADC) in Nairobi, employing hundreds of engineers working on global products, is both a symbol and a driver of Kenya's talent position. Google, IBM, Intel, and other technology companies have research or development presences in Nairobi, attracted by the talent pool and the opportunity to build products for African markets. The presence of these companies, in turn, attracts more talent and creates a virtuous cycle.
 

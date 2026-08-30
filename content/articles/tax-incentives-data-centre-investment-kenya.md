@@ -18,13 +18,13 @@ cluster: "Policy"
 og_image: "/images/nairobi-skyline-night.webp"
 reading_time: "20 min"
 images:
-  - src: "/images/kenya-coast-beach.webp"
-    alt: "Data centre investment and business planning in Kenya"
-    caption: "Understanding Kenya's tax incentive landscape is critical for data centre investment decisions"
+  - src: "/images/dc-business-investment.png"
+    alt: "Nairobi skyline with construction cranes at sunset"
+    caption: "Tax incentives are reshaping the investment case for Kenyan data centres."
     position: "hero"
-  - src: "/images/mombasa-old-town.webp"
-    alt: "Data centre investment cost challenges and tax considerations"
-    caption: "Tax policy can significantly improve the business case for data centre development"
+  - src: "/images/dc-challenges.png"
+    alt: "Transmission towers and commercial skyline in Kenya"
+    caption: "Tax policy shapes where towers, fibres, and buildings get built across Kenya."
     position: "infographic"
   - src: "/images/kenya-transmission-pylons-4.webp"
     alt: "Sustainable data centre investment environment in Kenya"
@@ -56,7 +56,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/tax-incentives-data-centre-investment-kenya"
 ---
 
-![Data centre investment and business planning in Kenya](/images/kenya-coast-beach.webp)
+![Nairobi skyline with construction cranes at sunset](/images/dc-business-investment.png)
 
 The decision to build or expand a data centre in Kenya ultimately comes down to numbers. While market demand, connectivity, and power infrastructure are critical factors, the **tax and investment incentive landscape** often determines whether a project's financial model works or fails. For investors evaluating Kenya's data centre market, understanding the full spectrum of fiscal benefits — and how they compare with competing African jurisdictions — is essential.
 
@@ -64,7 +64,7 @@ This guide provides a comprehensive breakdown of every significant tax incentive
 
 ## Corporate Tax Rates: Standard and Incentivised
 
-![Data centre investment cost challenges and tax considerations](/images/mombasa-old-town.webp)
+![Transmission towers and commercial skyline in Kenya](/images/dc-challenges.png)
 
 Kenya's standard **corporate tax rate** for resident companies stands at **30%** under the Income Tax Act (Cap 470). This is the baseline rate that applies to data centre operators established outside any special incentive zone.
 

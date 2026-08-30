@@ -22,13 +22,13 @@ images:
     alt: "Renewable energy and sustainability in Kenyan data centres"
     caption: "Kenya's geothermal resources in the Great Rift Valley provide the foundation for some of the greenest data centre power in the world"
     position: "hero"
-  - src: "/images/dc-chillers-roof-3.webp"
-    alt: "Power distribution from geothermal generation to data centres"
-    caption: "Geothermal power from the Rift Valley flows through Kenya Power's grid to Nairobi's data centres, providing baseload power that is both cheap and clean"
-    position: "section-break"
-  - src: "/images/dc-chillers-roof-2.webp"
-    alt: "Cooling systems powered by geothermal electricity"
-    caption: "The entire data centre power chain — IT load, cooling, lighting, and support systems — is powered by Kenya's renewable grid"
+  - src: "/images/kenya-transmission-pylons-3.webp"
+    alt: "Transmission lines carrying geothermal power toward Nairobi"
+    caption: "Olkaria's power reaches data centres over the national transmission grid."
+    position: "section"
+  - src: "/images/kenya-geothermal-plant-5.webp"
+    alt: "Steam stacks at a Kenyan geothermal plant"
+    caption: "Baseload geothermal pairs perfectly with data centre loads."
     position: "inline"
   - src: "/images/kenya-geothermal-map.webp"
     alt: "Energy infrastructure map showing Rift Valley geothermal to Nairobi"
@@ -83,7 +83,7 @@ At the geothermal field, production wells (typically drilled to depths of 1,500�
 
 ### Transmission
 
-![Power distribution from geothermal generation to data centres](/images/dc-chillers-roof-3.webp)
+![Transmission lines carrying geothermal power toward Nairobi](/images/kenya-transmission-pylons-3.webp)
 
 The electricity generated at Olkaria enters the national grid through high-voltage transmission lines operated by Kenya Electricity Transmission Company (KETRACO). The primary transmission corridor from Olkaria to Nairobi runs through Naivasha, Limuru, and into the city, where it connects to the distribution network operated by Kenya Power. This transmission infrastructure was originally built to serve general national demand, but the growth of data centre loads along Nairobi's Mombasa Road corridor has created concentrated demand nodes that benefit from this geothermal backbone.
 
@@ -100,7 +100,7 @@ This baseload reliability aligns perfectly with data centre loads, which are con
 
 ### Low Carbon Intensity
 
-![Cooling systems powered by geothermal electricity](/images/dc-chillers-roof-2.webp)
+![Steam stacks at a Kenyan geothermal plant](/images/kenya-geothermal-plant-5.webp)
 
 Geothermal energy produces approximately 38 grams of CO2 per kilowatt-hour of electricity generated. This is among the lowest carbon intensities of any power source, including other renewables (solar PV produces approximately 40–50 g/kWh over its lifecycle, wind produces 10–15 g/kWh). For comparison, coal-fired power produces 900–1,100 g/kWh, and natural gas produces 400–500 g/kWh.
 

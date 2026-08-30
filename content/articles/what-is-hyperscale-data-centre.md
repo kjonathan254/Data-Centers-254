@@ -29,10 +29,9 @@ images:
   alt: GPU servers powering cloud and AI workloads at scale
   caption: The explosive growth of AI is driving even larger hyperscale builds worldwide.
   position: section-break
-- src: /images/mombasa-port.webp
-  alt: Map showing data centre locations across the African continent
-  caption: Africa's hyperscale presence remains concentrated in South Africa, with
-    East Africa still waiting.
+- src: /images/dc-environment-sustainability.png
+  alt: "Aerial of a hyperscale-style campus"
+  caption: "Hyperscale campuses dwarf Kenya's largest facilities — for now."
   position: inline
 internal_links:
 - text: What Is a Data Centre?
@@ -219,7 +218,7 @@ For Kenya, this means that attracting a hyperscale investment would likely invol
 
 Africa Data Centres' facilities in Nairobi — including the campus along Mombasa Road — represent the largest data centre investments in East Africa at approximately 10 MW. PAIX operates facilities in both Nairobi and Mombasa at around 5 MW each. Liquid Intelligent Technologies also maintains a significant presence. But even combined, these facilities are a fraction of the scale of a single hyperscale campus.
 
-![Map showing data centre locations across the African continent](/images/mombasa-port.webp)
+![Aerial of a hyperscale-style campus](/images/dc-environment-sustainability.png)
 
 ## The Road Ahead for Kenya
 

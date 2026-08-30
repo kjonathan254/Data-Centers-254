@@ -18,18 +18,18 @@ cluster: "Policy"
 og_image: "/images/africa-ai-data-hub-mtn.webp"
 reading_time: "18 min"
 images:
-  - src: "/images/mombasa-port.webp"
-    alt: "Kenya data centre policy and regulatory framework overview"
-    caption: "Kenya's evolving policy landscape shapes every aspect of data centre operations and investment"
+  - src: "/images/dc-policy-regulation.png"
+    alt: "National government building at dusk"
+    caption: "ICT policy sets the rules of the game for every data centre investor."
     position: "hero"
-  - src: "/images/mombasa-old-town-wide.webp"
-    alt: "Africa data centre regulatory comparison map"
-    caption: "Comparative policy environments across Africa's leading data centre markets"
+  - src: "/images/nairobi-skyline-night-kicc.webp"
+    alt: "KICC and the Nairobi skyline at night"
+    caption: "Cybersecurity strategy and data centre standards now sit at the heart of Kenya's ICT agenda."
     position: "comparison"
-  - src: "/images/mombasa-port-industrial.webp"
-    alt: "Nairobi skyline representing Kenya's digital transformation ambitions"
-    caption: "Nairobi stands at the centre of Kenya's digital economy policy ambitions"
-    position: "section-break"
+  - src: "/images/dc-challenges.png"
+    alt: "Transmission towers beside a commercial skyline"
+    caption: "Policy spans power, connectivity, and enterprise — the regional comparison covers all three."
+    position: "section"
 internal_links:
   - text: "Kenya data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"
@@ -56,7 +56,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ict-policy-framework-data-centres"
 ---
 
-![Kenya data centre policy and regulatory framework overview](/images/mombasa-port.webp)
+![National government building at dusk](/images/dc-policy-regulation.png)
 
 Kenya's data centre industry does not operate in a vacuum. Every rack installed, every fibre optic cable landed, and every megawatt of power allocated is shaped by a complex web of policies, statutes, and regulatory directives. For investors, operators, and technology companies evaluating Kenya as a data centre destination, understanding the **ICT policy framework** is not optional — it is the foundation upon which every business case is built.
 
@@ -108,7 +108,7 @@ Data centres designated as **Critical Information Infrastructure (CII)** are sub
 
 For operators, this means that **security compliance is not merely a commercial differentiator** but a regulatory requirement. Data centre security investments — including physical security systems, access controls, surveillance, fire suppression, and cybersecurity operations centres — must align with both the National Cybersecurity Strategy and the [Kenya data sovereignty and localisation requirements](/articles/kenya-data-sovereignty-localisation). The cost implications are significant but also create barriers to entry that benefit established, compliant operators.
 
-![Africa data centre regulatory comparison map](/images/mombasa-old-town-wide.webp)
+![KICC and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
 
 ## Konza Technopolis Development Authority and Its Policy Framework
 
@@ -150,7 +150,7 @@ Both organisations demonstrate that **industry-led policy engagement** is essent
 
 ## Comparative Analysis: Kenya, Rwanda, Nigeria, and South Africa
 
-![Nairobi skyline representing Kenya's digital transformation ambitions](/images/mombasa-port-industrial.webp)
+![Transmission towers beside a commercial skyline](/images/dc-challenges.png)
 
 Understanding Kenya's policy position requires examining it alongside comparable African markets. Each country offers distinct advantages and challenges for data centre investors.
 

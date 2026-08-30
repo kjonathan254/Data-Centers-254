@@ -34,6 +34,11 @@ images:
     alt: "Data centre facility exterior in Nairobi"
     caption: "Kenya's first dedicated GPU-capable data centre zones are being planned, with iXAfrica leading the way in designing facilities for AI workloads"
     position: "inline"
+  - src: "/images/dc-gpu-cluster-5.webp"
+    alt: "A consumer GeForce graphics card — the visible face of the global GPU shortage"
+    caption: "Consumer cards sit at one end of a spectrum that ends with passive, liquid-cooled datacentre accelerators."
+    position: "inline"
+
 internal_links:
   - text: "AI data centres in East Africa"
     href: "/articles/ai-data-centres-east-africa"
@@ -105,6 +110,8 @@ This networking requirement affects data centre design in several ways. The cabl
 ## Kenya's Emerging GPU Landscape
 
 Kenya does not yet have a purpose-built GPU data centre, but the building blocks are being put in place.
+
+![A consumer GeForce graphics card — the visible face of the global GPU shortage](/images/dc-gpu-cluster-5.webp)
 
 ### Research and Academic Institutions
 

@@ -30,9 +30,9 @@ images:
     alt: "Network infrastructure inside a colocation facility"
     caption: "Colocation providers offer diverse connectivity options from multiple ISPs and submarine cable providers"
     position: "infographic"
-  - src: "/images/submarine-cable-diagram.webp"
-    alt: "Structured cabling in a data centre"
-    caption: "Colocation providers handle all cabling, power distribution, and cooling infrastructure"
+  - src: "/images/dc-security-camera.webp"
+    alt: "Security camera covering a data centre floor"
+    caption: "Site visits should test security, power history, and support — not just price."
     position: "inline"
   - src: "/images/dc-biometric-access-2.webp"
     alt: "Data centre security systems"
@@ -225,7 +225,7 @@ A carrier-neutral facility is non-negotiable for most enterprises. Verify that y
 
 Confirm the facility's proximity to [submarine cable landing stations](/articles/submarine-cables-landing-mombasa) and the diversity of its fibre entry points. A facility with a single fibre path is vulnerable to a single cut.
 
-![Structured cabling in a data centre](/images/submarine-cable-diagram.webp)
+![Security camera covering a data centre floor](/images/dc-security-camera.webp)
 
 ### Physical security
 

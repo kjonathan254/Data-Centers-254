@@ -22,10 +22,10 @@ images:
     alt: "Nairobi skyline showing commercial and technology district"
     caption: "Nairobi's Mombasa Road corridor has emerged as the primary data centre cluster in East Africa, hosting iXAfrica, Africa Data Centres, and Safaricom facilities within a 10-kilometre stretch"
     position: "hero"
-  - src: "/images/mombasa-port-industrial.webp"
-    alt: "East Africa infrastructure map showing connectivity routes"
-    caption: "Kenya's four submarine cable landing stations in Mombasa and the fibre backbone connecting to Nairobi determine the connectivity options available at each potential site"
-    position: "section-break"
+  - src: "/images/nairobi-skyline.webp"
+    alt: "Nairobi skyline at dusk"
+    caption: "Nairobi: the established hub with the deepest fibre, power, and talent pool."
+    position: "section"
   - src: "/images/mombasa-port-industrial.webp"
     alt: "Africa data centre distribution map"
     caption: "Data centre development in Africa is concentrated in a few cities — Nairobi is already established and the question is whether secondary cities can attract investment"
@@ -80,7 +80,7 @@ For colocation providers, this customer concentration means that a facility in N
 
 Nairobi's connectivity advantage is significant. Multiple fibre operators — Liquid Intelligent Technologies, Safaricom, Telkom Kenya, and Jamii Telecommunications — have dense metro fibre networks covering the city's commercial and industrial areas. The Mombasa Road corridor, where most data centres are located, is served by multiple diverse fibre routes from multiple providers, enabling the redundancy that enterprise customers require.
 
-![East Africa infrastructure map showing connectivity routes](/images/mombasa-port-industrial.webp)
+![Nairobi skyline at dusk](/images/nairobi-skyline.webp)
 
 Nairobi is also the primary hub for the [Kenya Internet Exchange Point (KIXP)](/articles/kixp-internet-exchange-point-kenya), which allows networks to exchange traffic locally rather than routing through South Africa or Europe. For data centres, KIXP presence means that traffic between Kenyan networks can be exchanged with sub-5ms latency, significantly improving performance for local users.
 
@@ -102,7 +102,7 @@ Within Nairobi, the Mombasa Road corridor — specifically the area around Enter
 
 Mombasa's data centre potential rests on a single, powerful advantage: it is where the submarine cables land. SEACOM, TEAMS, EASSy, and DARE1 all have their Kenyan landing stations in or near Mombasa. A data centre in Mombasa could connect directly to these cable systems, achieving the lowest possible latency to international traffic — a genuine and measurable advantage for content delivery, financial trading, and any application where every millisecond of latency matters.
 
-![Africa data centre distribution map](/images/mombasa-port-industrial.webp)
+![Nairobi skyline at dusk](/images/nairobi-skyline.webp)
 
 However, Mombasa faces significant challenges as a general-purpose data centre location. The demand side is the most fundamental problem: Mombasa's economy is dominated by tourism, port logistics, and manufacturing — industries that generate less data centre demand than the financial services, technology, and government sectors concentrated in Nairobi. There are simply fewer potential customers in Mombasa who need colocation services.
 

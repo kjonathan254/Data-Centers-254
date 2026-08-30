@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/dc-gpu-cluster-3.webp", width: 1200, height: 675, alt: "Careers — Data Centre 254" }],
+    images: [{ url: "/images/dc-woman-engineer-laptop.webp", width: 1200, height: 675, alt: "Careers — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Careers & Business | Data Centre 254",
     description: "Data centre jobs, certifications, and business opportunities in Kenya's growing DC industry.",
-    images: ["/images/dc-gpu-cluster-3.webp"],
+    images: ["/images/dc-woman-engineer-laptop.webp"],
   },
 };
 

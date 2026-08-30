@@ -30,10 +30,15 @@ images:
     alt: "Network security equipment in a data centre"
     caption: "Firewalls, intrusion detection systems, and DDoS mitigation appliances form the network security layer that protects data centre traffic from external threats"
     position: "inline"
-  - src: "/images/mombasa-cargo-ship.webp"
-    alt: "Organised cabling and secure infrastructure"
-    caption: "Even cabling infrastructure has security implications — unauthorised physical access to network cables could enable tapping or interception of data"
+  - src: "/images/dc-security-camera.webp"
+    alt: "Dome security camera mounted in a data centre ceiling"
+    caption: "Kenyan facilities layer cameras, mantraps, and biometrics — the reality is stricter than the brochure."
     position: "inline"
+  - src: "/images/diagram-ssh-tcp-vpn.webp"
+    alt: "Infographic explaining SSH, TCP, and VPN fundamentals"
+    caption: "Encrypted transport — SSH, TLS, VPNs — is the second wall after the mantrap."
+    position: "diagram"
+
 internal_links:
   - text: "what a data centre is"
     href: "/articles/what-is-a-data-centre"
@@ -92,6 +97,8 @@ Every access event — every door opened, every badge scanned, every biometric a
 
 While physical security protects the hardware, network security protects the data flowing through it. A data centre without network security is like a bank vault with the door left open — the servers may be physically secure, but the data they process and store is accessible to anyone who can reach them over the network.
 
+![Infographic explaining SSH, TCP, and VPN fundamentals](/images/diagram-ssh-tcp-vpn.webp)
+
 ### Perimeter Network Defence
 
 The first line of network defence is the perimeter firewall. A data centre typically deploys enterprise-grade firewalls (from vendors like Palo Alto Networks, Fortinet, Cisco, or Check Point) at the network boundary to control traffic entering and leaving the facility. These firewalls enforce rules about what types of traffic are allowed, block known malicious traffic patterns, and can perform deep packet inspection to detect threats embedded in legitimate-looking traffic.
@@ -148,7 +155,7 @@ The Payment Card Industry Data Security Standard (PCI-DSS) applies to any entity
 
 Kenya's leading data centre operators — iXAfrica, Africa Data Centres, and Safaricom — have invested significantly in security infrastructure. iXAfrica's NBOX1 facility, for example, was designed from the ground up with Tier III security requirements, including biometric access, mantraps, 24/7 CCTV surveillance, and on-site security personnel. Africa Data Centres, as part of the pan-African Cassava Technologies group, applies group-wide security standards that align with international best practices.
 
-![Organised cabling and secure infrastructure](/images/mombasa-cargo-ship.webp)
+![Dome security camera mounted in a data centre ceiling](/images/dc-security-camera.webp)
 
 However, security maturity varies across the Kenyan market. Smaller operator-built facilities and enterprise data centres may not have the same level of investment in security infrastructure, and the skills required to operate and maintain sophisticated security systems — network security engineers, security operations analysts, compliance auditors — are in short supply. As the market matures and customers become more demanding, security differentiation will become an increasingly important competitive factor.
 

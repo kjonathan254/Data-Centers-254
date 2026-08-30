@@ -30,9 +30,9 @@ images:
     alt: "Nairobi skyline showing digital infrastructure growth"
     caption: "Nairobi's data centres rely on Mombasa's cable landing stations for international connectivity"
     position: "infographic"
-  - src: "/images/dc-challenges.png"
-    alt: "Server racks in a modern data centre"
-    caption: "Every international request from Kenya passes through Mombasa's submarine cables before reaching servers here"
+  - src: "/images/mombasa-cable-landing.webp"
+    alt: "Cable landing crew working on the shore in Mombasa"
+    caption: "When a cable is cut, repair ships and beach crews are the first responders."
     position: "inline"
   - src: "/images/mombasa-cable-landing-2.webp"
     alt: "Data centre security systems"
@@ -128,7 +128,7 @@ The real risk is not a single cable cut but a simultaneous outage affecting mult
 
 Repair times vary. Shallow-water repairs near shore can be completed in days. Deep-water repairs in the open ocean typically take two to six weeks, depending on the availability of repair ships and weather conditions.
 
-![Every international request passes through Mombasa](/images/dc-challenges.png)
+![Cable landing crew working on the shore in Mombasa](/images/mombasa-cable-landing.webp)
 
 ## The Satellite Question: Is Mombasa Still Relevant?
 

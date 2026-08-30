@@ -22,13 +22,13 @@ images:
     alt: "Data centre locations across the African continent"
     caption: "Africa's data centre market spans over 40 facilities across a dozen countries, each with different regulatory frameworks that affect investment decisions"
     position: "hero"
-  - src: "/images/nairobi-sunset-wide.webp"
-    alt: "Regulatory and policy frameworks for data centres"
-    caption: "Regulatory clarity and predictability are among the top factors international investors consider when choosing where to build data centre infrastructure"
-    position: "section-break"
-  - src: "/images/nairobi-skyline-night-kicc.webp"
-    alt: "Investment and business environment across Africa"
-    caption: "Tax incentives, special economic zones, and regulatory fast-track programmes can significantly improve the investment case for data centres"
+  - src: "/images/africa-dc-map.webp"
+    alt: "Map of African data centre hubs"
+    caption: "South Africa anchors the continent's most mature data centre market."
+    position: "section"
+  - src: "/images/dc-policy-regulation.png"
+    alt: "Government building at dusk"
+    caption: "Egypt's government-led, subsidised build-out differs sharply from Kenya's private-led model."
     position: "inline"
   - src: "/images/nairobi-westlands.webp"
     alt: "Nairobi as a regional regulatory leader"
@@ -90,7 +90,7 @@ South Africa's Protection of Personal Information Act (POPIA), fully effective s
 
 ### Power Challenges as a Regulatory Issue
 
-![Regulatory and policy frameworks for data centres](/images/nairobi-sunset-wide.webp)
+![Map of African data centre hubs](/images/africa-dc-map.webp)
 
 South Africa's ongoing load shedding crisis — scheduled power outages implemented by Eskom to manage supply shortages — has become, in effect, a regulatory issue for data centres. While not a regulation per se, the unreliable grid forces data centres to depend heavily on diesel generators, increasing operating costs, emissions, and maintenance requirements. The South African government has introduced tax incentives for self-generation (including solar and battery storage), but these are partial remedies for a systemic problem.
 
@@ -132,7 +132,7 @@ Egypt's Personal Data Protection Law (PDPL), enacted in 2020 and progressively i
 
 ### Energy Subsidies
 
-![Investment and business environment across Africa](/images/nairobi-skyline-night-kicc.webp)
+![Government building at dusk](/images/dc-policy-regulation.png)
 
 Egypt's data centre industry benefits from subsidised natural gas for power generation, which keeps electricity costs among the lowest in Africa at approximately $0.05–0.07 per kWh for industrial consumers. This subsidy is a significant competitive advantage, though it is contingent on government policy that could change. The government has also invested heavily in renewable energy, particularly solar, as part of its energy strategy.
 
