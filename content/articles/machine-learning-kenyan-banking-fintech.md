@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "AI & Finance"
 cluster: "AI"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-business-investment.png"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-server-chip-2.webp"
     alt: "Servers processing machine learning workloads for Kenyan banks"
     caption: "Every M-Pesa transaction, every loan application, and every card payment potentially passes through machine learning models running on servers in data centres"
     position: "hero"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-server-chip-2.webp"
     alt: "Financial technology and AI investment in Kenya"
     caption: "Kenyan banks are investing heavily in AI and machine learning capabilities, creating demand for data centre infrastructure to train and deploy models"
     position: "section-break"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-server-chip.webp"
     alt: "Network infrastructure supporting real-time ML inference"
     caption: "Real-time ML applications like fraud detection require low-latency connectivity between banking systems and the data centre infrastructure running the models"
     position: "inline"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/dc-server-chip-3.webp"
     alt: "Challenges in deploying ML in financial services"
     caption: "Data quality, regulatory requirements, and talent shortages are the primary challenges for ML adoption in Kenyan financial services"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/machine-learning-ke
 
 When a customer sends KES 50,000 via M-Pesa at 2 AM from a location they have never used before, and the transaction is completed in under two seconds, there is a good chance that a machine learning model has already analysed the transaction in real time — checking the amount against the customer's typical patterns, the location against their known locations, the recipient against their transaction history — and decided that the transaction is legitimate. This analysis happens in milliseconds, on servers in a data centre, before the customer even sees the confirmation message.
 
-![Servers processing machine learning workloads for Kenyan banks](/images/dc-servers-racks.png)
+![Servers processing machine learning workloads for Kenyan banks](/images/dc-server-chip-2.webp)
 
 Machine learning (ML) is transforming Kenya's banking and financial technology sector from the inside. It is not a customer-facing feature that users see or interact with directly. Instead, it operates behind the scenes — in fraud detection systems, credit scoring engines, customer analytics platforms, and operational automation tools — making decisions that affect millions of transactions every day. And every one of these ML systems runs on servers in data centres, creating a growing and often overlooked demand for data centre infrastructure.
 
@@ -80,7 +80,7 @@ Real-time fraud detection requires ML models to score every transaction in milli
 
 ### Credit Scoring and Lending
 
-![Financial technology and AI investment in Kenya](/images/dc-business-investment.png)
+![Financial technology and AI investment in Kenya](/images/dc-server-chip-2.webp)
 
 Credit scoring is the ML application with the most transformative potential for Kenya's financial inclusion. Traditional credit scoring relies on formal financial records — bank statements, loan repayment history, employment verification — that exclude millions of Kenyans who are unbanked or underbanked.
 
@@ -98,7 +98,7 @@ These models typically run in batch mode (processing data overnight or periodica
 
 ### Training Infrastructure
 
-![Network infrastructure supporting real-time ML inference](/images/dc-networking.webp)
+![Network infrastructure supporting real-time ML inference](/images/dc-server-chip.webp)
 
 Training an ML model is the most computationally intensive phase. It involves processing large datasets — often terabytes of transaction history — through multiple iterations of the model to optimise its parameters. For simple models (like logistic regression for credit scoring), training can be done on standard CPU servers in hours. For complex models (like deep neural networks for fraud detection), training may require GPU servers and take days or weeks.
 
@@ -122,7 +122,7 @@ Data infrastructure for ML includes data lakes (large-scale storage for raw data
 
 ## The ML Talent Challenge
 
-![Challenges in deploying ML in financial services](/images/dc-challenges.png)
+![Challenges in deploying ML in financial services](/images/dc-server-chip-3.webp)
 
 Kenya produces many software developers, but the specific skills required for ML engineering — statistical modelling, feature engineering, model optimisation, MLOps (the practice of deploying and managing ML models in production) — are in short supply. The Microsoft Africa Development Centre in Nairobi employs ML engineers working on global products, and some of these skills are transferring to the local ecosystem. Strathmore University, the University of Nairobi, and other institutions have introduced data science and ML programmes, but the pipeline is still thin relative to demand.
 

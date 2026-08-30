@@ -15,7 +15,7 @@ published_date: "2026-08-25"
 updated_date: "2026-08-27"
 category: "Data Centres"
 cluster: "Beginner"
-og_image: "/images/dc-servers-racks.png"
+og_image: "/images/hero-server-hall.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-servers-racks.png"
@@ -26,15 +26,15 @@ images:
     alt: "Data centre power distribution systems"
     caption: "Power is the backbone of any data centre — UPS systems, generators, and PDUs ensure uninterrupted electricity supply"
     position: "section-break"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-cooling-crac-2.webp"
     alt: "Precision cooling systems inside a data centre"
     caption: "Cooling accounts for up to 40% of a data centre's total energy consumption"
     position: "inline"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing.webp"
     alt: "Network cabling connecting server racks"
     caption: "Structured cabling connects thousands of servers to each other and to the outside internet via fibre optic links"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access-4.webp"
     alt: "Data centre physical security systems"
     caption: "Tier III and IV facilities use biometric access, 24/7 CCTV, mantraps, and on-site security personnel"
     position: "inline"
@@ -88,19 +88,19 @@ Data centres consume enormous amounts of electricity. A single rack might draw 5
 
 Servers generate heat — lots of it. A rack drawing 10 kilowatts produces as much heat as ten space heaters running continuously. If the temperature inside a server room rises above about 27 degrees Celsius, servers will throttle their performance or shut down entirely to prevent damage. Cooling systems, which can account for up to 40% of a facility's total energy consumption, use precision air conditioning (CRAC units), hot and cold aisle containment, and increasingly, liquid cooling to remove heat from the server environment.
 
-![Precision cooling systems maintain optimal server temperatures](/images/dc-cooling.webp)
+![Precision cooling systems maintain optimal server temperatures](/images/dc-cooling-crac-2.webp)
 
 ### Networking
 
 Data centres need to connect to the outside world. This happens through fibre optic cables — typically multiple redundant links from different providers — that connect to [internet exchange points](/infrastructure) like KIXP in Nairobi, and through submarine cables that link Kenya to the rest of the world. Inside the facility, structured cabling connects every server and storage system to switches and routers that direct traffic between them and to the outside internet.
 
-![Network cabling connects thousands of servers to each other](/images/racks-cabling.webp)
+![Network cabling connects thousands of servers to each other](/images/mombasa-cable-landing.webp)
 
 ### Security
 
 Physical security is a critical differentiator. Enterprise data centres use multiple layers: perimeter fencing, 24/7 CCTV surveillance, biometric access control (fingerprint, iris, or facial recognition), mantraps (single-person entry portals), and on-site security personnel. The goal is to ensure that only authorised personnel can physically access the servers. This matters because the data stored inside — financial records, personal information, government databases — is valuable and sensitive.
 
-![Data centre security includes biometrics, CCTV, and mantraps](/images/dc-security.webp)
+![Data centre security includes biometrics, CCTV, and mantraps](/images/dc-biometric-access-4.webp)
 
 ## Types of Data Centres
 

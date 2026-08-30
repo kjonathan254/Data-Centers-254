@@ -15,18 +15,18 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Beginner Guide"
 cluster: "Beginner"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-server-chip-2.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/ai-gpu-servers.png"
     alt: "Rack-mounted servers in a data centre"
     caption: "Modern servers are designed to be mounted in standard 19-inch racks, with dozens of servers stacked vertically in a single rack to maximise space efficiency"
     position: "hero"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-2.webp"
     alt: "Servers connected by network cables in a rack"
     caption: "Each server connects to the network via multiple cables — power cables, data cables, and management cables — all organised within the rack"
     position: "section-break"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-server-chip-4-wide.webp"
     alt: "Network switches connecting servers"
     caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"
     position: "inline"
@@ -58,7 +58,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/what-is-a-server"
 
 Every time you open a website, send an email, make a mobile money transfer, or stream a video, a server somewhere is doing the work. Servers are the invisible machines behind every digital service you have ever used. They are the reason Google can find your search results in milliseconds, the reason M-Pesa can process your payment instantly, and the reason Netflix can start playing a movie within seconds of you clicking play. Yet most people who depend on servers every day have never seen one and could not describe what one actually is.
 
-![Rack-mounted servers in a data centre](/images/dc-servers-racks.png)
+![Rack-mounted servers in a data centre](/images/ai-gpu-servers.png)
 
 A server is, at its most fundamental level, a computer that provides services to other computers. The word "server" refers not to a specific type of hardware but to a role: a computer that serves. Any computer can be a server if it is running software that provides services to other computers over a network. Your laptop could be a server if you ran web server software on it and other computers connected to it to view web pages. In practice, however, when people say "server" they mean a purpose-built computer designed specifically for the demands of providing services reliably, continuously, and at scale.
 
@@ -74,7 +74,7 @@ Servers use **ECC memory** (Error-Correcting Code RAM), which can detect and cor
 
 Servers have **redundant power supplies** — two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime — there are multiple layers of redundancy between the grid and the processor.
 
-![Servers connected by network cables in a rack](/images/racks-cabling.webp)
+![Servers connected by network cables in a rack](/images/mombasa-cable-landing-2.webp)
 
 Servers use **hot-swappable components** — drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
 
@@ -100,7 +100,7 @@ A web server receives HTTP requests from browsers (like the one you are using no
 
 ### Database Servers
 
-![Network switches connecting servers](/images/dc-networking.webp)
+![Network switches connecting servers](/images/dc-server-chip-4-wide.webp)
 
 Database servers store, organise, and retrieve structured data. Every time you check your bank balance, search for a product on Jumia, or look up a contact on your phone, a database server is querying a database to find and return the relevant information. Database servers are typically the most resource-hungry type, requiring fast processors, large amounts of memory (to cache frequently accessed data), and fast storage (to read and write data quickly). Major database software includes PostgreSQL, MySQL, Microsoft SQL Server, and Oracle Database.
 

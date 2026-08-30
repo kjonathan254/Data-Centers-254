@@ -46,7 +46,7 @@ export default function WhatIsDC() {
             <div className="img-frame mt-8">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/hero-dc-nairobi.png"
+                  src="/images/dc-environment-sustainability.png"
                   alt="Aerial view of a data centre facility in Nairobi at dusk"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"

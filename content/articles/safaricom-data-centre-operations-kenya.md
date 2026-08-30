@@ -15,14 +15,14 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/nairobi-westlands.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-server-chip-3.webp"
     alt: "Server racks in a modern data centre"
     caption: "Safaricom's data centre infrastructure underpins M-Pesa and Kenya's mobile network"
     position: "hero"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/dc-challenges.png"
     alt: "Nairobi skyline"
     caption: "Safaricom's Waiyaki Way facility is a cornerstone of Nairobi's digital infrastructure"
     position: "section-break"
@@ -48,7 +48,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/safaricom-data-cent
 
 Safaricom is not a data centre company. It is Kenya's largest telecommunications operator, serving over 30 million mobile subscribers and generating revenue exceeding KES 300 billion annually. Yet within its portfolio sits what is arguably the single most critical data centre in East Africa: a Tier III facility on Waiyaki Way in Nairobi that processes over KES 20 trillion in M-Pesa transactions each year, hosts the core of Kenya's 4G and 5G mobile networks, and underpins an expanding portfolio of enterprise cloud services. No other data centre in the region carries this level of systemic importance to a national economy.
 
-![Server racks in a modern data centre](/images/dc-servers-racks.png)
+![Server racks in a modern data centre](/images/dc-server-chip-3.webp)
 
 This profile examines Safaricom's data centre operations, the workloads they support, the company's role in Kenya's emerging AI infrastructure ecosystem, and how its facility strategy differs fundamentally from the carrier-neutral operators entering the Kenyan market.
 
@@ -76,7 +76,7 @@ Key specifications of the Waiyaki Way facility include:
 
 At 1.5 MW and 120 racks, the Waiyaki Way facility is modest by comparison to the hyperscale facilities being developed by iXAfrica (targeting 16 MW across its campus) or Africa Data Centres (planning 30 MW at its Mzansi campus). But raw capacity is not the metric that matters here. What matters is the criticality of the workloads running inside those 120 racks.
 
-![Nairobi skyline](/images/nairobi-skyline.webp)
+![Nairobi skyline](/images/dc-challenges.png)
 
 ## Workloads: M-Pesa, Mobile Network Core, and Enterprise Cloud
 

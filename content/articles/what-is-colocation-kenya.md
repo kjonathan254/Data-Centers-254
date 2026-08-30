@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Data Centres"
 cluster: "Beginner"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-gpu-cluster.webp"
 reading_time: "11 min"
 images:
   - src: "/images/dc-servers-racks.png"
     alt: "Server racks in a colocation data centre"
     caption: "In a colocation facility, you own the servers and storage — you are renting the physical space, power, cooling, and connectivity that keeps them running"
     position: "hero"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-3.webp"
     alt: "Structured cabling connecting colocation racks"
     caption: "Colocation providers handle the physical infrastructure including cabling, while customers manage their own equipment and software"
     position: "section-break"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-gpu-cluster.webp"
     alt: "Network connectivity in a colocation data centre"
     caption: "Carrier-neutral colocation facilities connect to multiple network providers, letting customers choose their own connectivity or connect to multiple networks simultaneously"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-security-camera.webp"
     alt: "Security controls at a colocation facility"
     caption: "Professional security including biometric access, CCTV, and 24/7 monitoring is included in colocation pricing — something that would be prohibitively expensive to replicate in-house"
     position: "inline"
@@ -82,7 +82,7 @@ For larger deployments, customers can rent a **cage** — a wire mesh enclosure 
 
 Colocation pricing is closely tied to power allocation. Each rack comes with a specific power allocation, typically measured in kilowatts (kW). A standard rack allocation in Kenya is 4–6kW, which is sufficient for 10–20 modern servers. High-density racks, needed for GPU servers or dense compute platforms, may require 10–20kW per rack, which costs more because of the additional cooling and power distribution infrastructure required.
 
-![Structured cabling connecting colocation racks](/images/racks-cabling.webp)
+![Structured cabling connecting colocation racks](/images/mombasa-cable-landing-3.webp)
 
 Power is delivered to the rack through power distribution units (PDUs) that are part of the facility's infrastructure. Most colocation racks are equipped with dual PDUs, each connected to a separate power path (A and B feeds), so that a failure in one power path does not affect the other. Servers with dual power supplies can connect to both PDUs, providing power redundancy at the server level.
 
@@ -102,7 +102,7 @@ Kenya's colocation market is served by several providers, each with different st
 
 iXAfrica operates the NBOX1 and NBOX1.1 facilities along Mombasa Road in Nairobi. NBOX1 opened in 2023 as a purpose-built, carrier-neutral colocation facility designed to Tier III standards. It offers retail colocation (individual racks and half-racks) and wholesale colocation (dedicated rooms or cages for large customers). iXAfrica's facility is notable for its focus on sustainability and is designed to achieve low PUE values, leveraging Nairobi's climate for free cooling.
 
-![Network connectivity in a colocation data centre](/images/dc-networking.webp)
+![Network connectivity in a colocation data centre](/images/dc-gpu-cluster.webp)
 
 ### Africa Data Centres
 
@@ -126,7 +126,7 @@ Colocation pricing in Kenya varies by provider, space unit, power allocation, an
 
 These prices are competitive by African standards, roughly 20–30% lower than equivalent colocation in Lagos and comparable to mid-tier facilities in Johannesburg. The main additional costs to budget for are cross-connect fees (KES 5,000–15,000 one-time per connection), remote hands charges (KES 2,000–5,000 per incident), and excess power charges if you exceed your allocated power.
 
-![Security controls at a colocation facility](/images/dc-security.webp)
+![Security controls at a colocation facility](/images/dc-security-camera.webp)
 
 ## Choosing a Provider: What to Look For
 

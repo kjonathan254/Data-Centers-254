@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "AI & Machine Learning"
 cluster: "AI"
-og_image: "/images/og-default.png"
+og_image: "/images/kenya-wind-turbines-wide.webp"
 reading_time: "16 min"
 images:
-  - src: "/images/dc-policy-regulation.png"
+  - src: "/images/kenya-geothermal-plant-2.webp"
     alt: "Policy and regulation framework for AI governance in Kenya"
     caption: "Kenya's AI governance framework is evolving through multiple regulatory channels simultaneously"
     position: "hero"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access.webp"
     alt: "Data centre security systems for AI workloads"
     caption: "AI governance extends to the physical infrastructure that processes sensitive personal data"
     position: "section-break"
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/nairobi-skyline-night.webp"
     alt: "Data centre map of Africa showing regulatory diversity"
     caption: "AI governance approaches vary significantly across African nations, creating compliance complexity for regional operators"
     position: "infographic"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/kenya-geothermal-map.webp"
     alt: "Challenges facing data centre and AI governance in Kenya"
     caption: "Balancing innovation with responsible AI deployment remains Kenya's central governance challenge"
     position: "inline"
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
 ---
 
-![Policy and regulation framework for AI governance in Kenya](/images/dc-policy-regulation.png)
+![Policy and regulation framework for AI governance in Kenya](/images/kenya-geothermal-plant-2.webp)
 
 ## Why AI Ethics and Governance Matter Now
 
@@ -101,7 +101,7 @@ When an AI system makes a decision that affects a person's life — denying a lo
 
 This is technically challenging. Deep neural networks, the architecture behind most modern AI systems, are inherently opaque. The field of explainable AI (XAI) is developing tools to address this, but Kenya's regulatory framework does not yet specify what level of explainability is required for different types of AI-assisted decisions.
 
-![Data centre security systems for AI workloads](/images/dc-security.webp)
+![Data centre security systems for AI workloads](/images/dc-biometric-access.webp)
 
 ## Kenya's Evolving Regulatory Framework
 
@@ -163,7 +163,7 @@ Telecoms operators using AI for network optimisation, customer analytics, and fr
 - **AI-driven pricing and offers**: When AI determines which mobile plans or promotions are offered to specific subscribers, fairness and transparency requirements apply.
 - **Real-time surveillance concerns**: AI-powered network monitoring systems must be designed with safeguards against misuse for surveillance of individuals or communities.
 
-![Data centre map of Africa showing regulatory diversity](/images/africa-dc-map.webp)
+![Data centre map of Africa showing regulatory diversity](/images/nairobi-skyline-night.webp)
 
 ## International Frameworks Shaping Kenyan AI Governance
 
@@ -221,7 +221,7 @@ As AI regulation tightens, data centre customers will increasingly require their
 
 The environmental impact of AI compute is an emerging governance concern. Training a single large language model can emit as much carbon as five automobiles over their entire lifetimes. For Kenyan data centre operators, this creates both an ethical obligation and a commercial opportunity. Kenya's geothermal energy — which provides over 40% of the country's electricity — offers a genuinely green power source for AI compute. Data centres that can demonstrate low-carbon AI infrastructure will increasingly attract environmentally conscious customers and support their own ESG reporting obligations.
 
-![Challenges facing data centre and AI governance in Kenya](/images/dc-challenges.png)
+![Challenges facing data centre and AI governance in Kenya](/images/kenya-geothermal-map.webp)
 
 ## AI Ethics Committees and Impact Assessments
 

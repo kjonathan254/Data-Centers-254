@@ -15,14 +15,14 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-gpu-cluster-5.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center-wide.webp"
     alt: "Server racks in a modern colocation facility"
     caption: "Africa Data Centres provides carrier-neutral colocation across Kenya"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-gpu-cluster-5.webp"
     alt: "Data centre networking and fibre connectivity"
     caption: "ADC facilities connect to multiple submarine cables via Nairobi-Mombasa fibre routes"
     position: "section-break"
@@ -50,7 +50,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/africa-data-centres
 
 Africa Data Centres (ADC) is the largest data centre platform on the African continent by geographic reach, operating more than 40 facilities across 13 countries. As a subsidiary of Cassava Technologies, the pan-African technology group chaired by Zimbabwean telecoms billionaire Strive Masiyiwa, ADC brings a scale and continental footprint that no other operator on the continent can match. In Kenya, the company operates three facilities, two in Nairobi and one in Mombasa, forming a critical part of the country's digital infrastructure backbone.
 
-![Server racks in a modern colocation facility](/images/dc-servers-racks.png)
+![Server racks in a modern colocation facility](/images/whats-inside-ai-data-center-wide.webp)
 
 This profile examines ADC's origins, its Kenyan operations, its carrier-neutral model, and the competitive dynamics shaping its position in one of East Africa's fastest-growing data centre markets.
 
@@ -86,7 +86,7 @@ Nairobi 2 represents a more modern addition to the company's Kenyan portfolio, a
 
 The Mombasa Road location for both Nairobi facilities is strategically significant. It is the primary fibre corridor connecting Nairobi to the coastal submarine cable landing stations. All four major subsea cables serving Kenya, EASSy, SEACOM, TEAMS, and DARE1, land in Mombasa and their terrestrial extensions pass through this corridor. Facilities on Mombasa Road benefit from direct access to diverse fibre routes, low-latency connectivity to international gateways, and proximity to networks serving landlocked East African markets.
 
-![Data centre networking and fibre connectivity](/images/dc-networking.webp)
+![Data centre networking and fibre connectivity](/images/dc-gpu-cluster-5.webp)
 
 ### Mombasa Facility
 

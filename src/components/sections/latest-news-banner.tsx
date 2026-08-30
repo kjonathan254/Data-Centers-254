@@ -17,7 +17,7 @@ export default function LatestNewsBanner() {
             {/* Photograph */}
             <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[320px] lg:col-span-2">
               <Image
-                src="/images/dc-policy-regulation.png"
+                src="/images/nairobi-skyline-night.webp"
                 alt="Regulatory authority building at dusk"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"

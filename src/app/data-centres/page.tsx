@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/dc-cooling.webp", width: 1200, height: 653, alt: "Cooling plant inside a data centre" }],
+    images: [{ url: "/images/dc-cooling-crac.webp", width: 1200, height: 653, alt: "Cooling plant inside a data centre" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Inside Data Centres | Data Centre 254",
     description: "How the buildings behind Kenya's digital economy actually work.",
-    images: ["/images/dc-cooling.webp"],
+    images: ["/images/dc-cooling-crac.webp"],
   },
 };
 

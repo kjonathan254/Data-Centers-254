@@ -17,19 +17,19 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: AI & Machine Learning
 cluster: AI
-og_image: /images/og-default.png
+og_image: /images/dc-gpu-cluster-2-wide.webp
 reading_time: "12 min"
 images:
-- src: /images/ai-gpu-servers.png
+- src: /images/dc-gpu-cluster-3.webp
   alt: NVIDIA GPU servers in a data centre rack
   caption: GPU-dense server racks form the backbone of any AI model training facility.
   position: hero
-- src: /images/dc-networking.webp
+- src: /images/dc-gpu-cluster-5.webp
   alt: High-speed networking switches in a Kenyan data centre
   caption: InfiniBand and high-throughput networking are essential for distributed
     model training.
   position: section-break
-- src: /images/dc-power-systems.webp
+- src: /images/dc-switchgear.webp
   alt: Data centre power distribution systems
   caption: AI training clusters demand 5-10 MW of reliable power supply.
   position: inline
@@ -98,7 +98,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/ai-model-training-ke
 
 Kenya's digital economy has matured rapidly, and with that maturity comes an inevitable question: can the country support not just AI *inference* but full-scale AI *model training* on its own soil? For years, Kenyan organisations have relied on cloud providers in distant regions to handle computationally intensive workloads. That dynamic is beginning to shift as data sovereignty concerns grow, bandwidth costs remain stubbornly high, and the strategic value of indigenous AI capability becomes clear.
 
-![NVIDIA GPU servers in a data centre rack](/images/ai-gpu-servers.png)
+![NVIDIA GPU servers in a data centre rack](/images/dc-gpu-cluster-3.webp)
 
 Model training — the process of feeding large datasets through neural networks to adjust weights and produce a useful AI model — is fundamentally different from running inference. It demands orders of magnitude more compute, memory, storage throughput, and networking bandwidth. Understanding what this requires, and where Kenya stands in meeting those requirements, is essential for anyone tracking the [East African data centre market](/articles/ai-data-centres-east-africa).
 
@@ -122,7 +122,7 @@ Training a large language model might require ingesting terabytes of text data p
 
 At H100 density levels, traditional air cooling becomes impractical. **Liquid cooling** — either direct-to-chip or immersion cooling — is essential to manage the 40-50 kW per rack thermal output that GPU training clusters generate. Kenya's relatively mild climate in Nairobi (average temperatures of 18-25°C) offers some advantage for free cooling, but liquid systems remain necessary for GPU-dense deployments.
 
-![High-speed networking switches in a Kenyan data centre](/images/dc-networking.webp)
+![High-speed networking switches in a Kenyan data centre](/images/dc-gpu-cluster-5.webp)
 
 ## Current AI Use Cases Driving Demand in Kenya
 
@@ -196,7 +196,7 @@ Building a facility capable of supporting serious AI model training in Kenya wou
 
 **Connectivity:** Multiple diverse fibre paths, direct peering at KIXP, and ideally submarine cable diversity through both the EASSy and SEACOM systems landing in Mombasa.
 
-![Data centre power distribution systems](/images/dc-power-systems.webp)
+![Data centre power distribution systems](/images/dc-switchgear.webp)
 
 ## Projecting Future Demand
 

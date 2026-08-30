@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "AI & Infrastructure"
 cluster: "AI"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-gpu-cluster-3.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/dc-gpu-cluster-2.webp"
     alt: "GPU servers in a data centre for AI workloads"
     caption: "A single NVIDIA H100 GPU server can consume 10kW of power — AI data centres must be designed for power densities 4-10x higher than traditional facilities"
     position: "hero"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-cooling-crac.webp"
     alt: "Data centre cooling systems for high-density GPU computing"
     caption: "Traditional air cooling cannot handle GPU rack densities above 20kW — liquid cooling, either direct-to-chip or immersion, becomes necessary for AI workloads"
     position: "section-break"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-cooling-crac-2.webp"
     alt: "Power distribution for high-density computing"
     caption: "A 1MW GPU cluster requires 1.2-1.5MW of total facility power, pushing power infrastructure to its limits and requiring specialised electrical design"
     position: "inline"
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/dc-gpu-cluster-2-wide.webp"
     alt: "Data centre facility exterior in Nairobi"
     caption: "Kenya's first dedicated GPU-capable data centre zones are being planned, with iXAfrica leading the way in designing facilities for AI workloads"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/gpu-computing-kenya
 
 Artificial intelligence does not exist in the cloud. It exists on physical servers, in physical data centres, consuming physical electricity and generating physical heat. Every time you use ChatGPT, every time a bank's fraud detection system flags a suspicious M-Pesa transaction, every time an AI model translates a document from Swahili to English, a GPU somewhere is performing billions of calculations per second. The gap between the promise of AI and the reality of running it is bridged by data centre infrastructure — and in Kenya, that bridge is still being built.
 
-![GPU servers in a data centre for AI workloads](/images/ai-gpu-servers.png)
+![GPU servers in a data centre for AI workloads](/images/dc-gpu-cluster-2.webp)
 
 GPU computing represents a fundamental shift in what data centres must be designed to handle. Traditional data centres were built for CPU workloads — web servers, databases, virtual machines — where a typical rack consumes 5–10 kilowatts of power. GPU computing pushes rack power densities to 20, 40, or even 100 kilowatts. This changes everything: the power infrastructure, the cooling systems, the cabling, the floor loading, and the economics of running the facility. Kenya's data centre industry, still in its early growth phase, must reckon with this shift or risk being left behind as AI becomes the primary driver of new data centre demand globally.
 
@@ -80,7 +80,7 @@ The scale of modern AI is staggering. GPT-4, for example, was trained on an esti
 
 The most obvious impact of GPU computing on data centres is power density. A traditional server rack with 20–40 CPU servers might consume 5–10 kilowatts. A rack with 4–8 NVIDIA H100 GPU servers can consume 30–60 kilowatts. The latest NVIDIA Blackwell B200 GPUs, released in 2024, push single-rack power beyond 100 kilowatts when fully populated.
 
-![Data centre cooling systems for high-density GPU computing](/images/dc-cooling.webp)
+![Data centre cooling systems for high-density GPU computing](/images/dc-cooling-crac.webp)
 
 This power density has cascading effects on every aspect of data centre design. Standard power distribution units (PDUs) rated for 20–30kW per rack must be replaced with higher-capacity units. Electrical cable sizes must increase to carry more current without excessive voltage drop. Floor loading — the weight per square metre that the raised floor can support — must be designed for heavier transformers and switchgear. And the total power demand of the facility increases, requiring larger transformer connections from Kenya Power and larger generator capacity for backup.
 
@@ -122,7 +122,7 @@ Kenya's startup ecosystem includes several AI-focused companies working on natur
 
 The most significant development is the planning and design of GPU-capable zones within Kenyan colocation facilities. iXAfrica, in the design of its NBOX1.1 expansion, has included provisions for high-density zones that can support GPU rack power densities of 20–40kW per rack, with provisions for future liquid cooling upgrades. Africa Data Centres, with its pan-African scale, has been deploying GPU-ready infrastructure in South Africa and can bring that expertise to Kenya as demand materialises.
 
-![Data centre facility exterior in Nairobi](/images/hero-dc-nairobi.png)
+![Data centre facility exterior in Nairobi](/images/dc-gpu-cluster-2-wide.webp)
 
 ## The Economic Opportunity
 

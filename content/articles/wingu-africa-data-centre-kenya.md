@@ -15,14 +15,14 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/racks-cabling.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center-wide.webp"
     alt: "Server racks in a modern edge data centre"
     caption: "Wingu Africa provides carrier-neutral edge infrastructure in Nairobi"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-gpu-cluster.webp"
     alt: "Data centre networking and connectivity"
     caption: "Wingu connects to multiple fibre and submarine cable providers"
     position: "section-break"
@@ -48,7 +48,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/wingu-africa-data-c
 
 Not every data centre in Kenya needs to be a multi-megawatt hyperscale campus. As the country's digital economy matures, a significant and growing portion of infrastructure demand comes from organisations that need something different: proximity to users, fast access to cloud platforms, flexible deployment terms, and carrier-neutral connectivity without the cost and complexity of a large-scale facility. Wingu Africa was built to serve precisely this segment, positioning itself as Nairobi's dedicated edge data centre for cloud on-ramp, content delivery, and enterprise workloads.
 
-![Server racks in a modern edge data centre](/images/dc-servers-racks.png)
+![Server racks in a modern edge data centre](/images/whats-inside-ai-data-center-wide.webp)
 
 This profile examines Wingu Africa's origins as a Kenyan-born company, its edge computing focus, how it differentiates from larger operators in the market, and its role in the broader Kenyan digital ecosystem.
 
@@ -102,7 +102,7 @@ Wingu Africa has positioned itself to capture this demand. The facility is desig
 
 The content delivery role is closely linked to Wingu's carrier-neutral model. CDN operators benefit from connecting to multiple networks within a single facility, ensuring cached content reaches users regardless of which telecom operator they subscribe to. In Kenya's competitive telecom market, where Safaricom, Airtel, and others each serve significant subscriber bases, this multi-network accessibility is essential.
 
-![Data centre networking and connectivity](/images/dc-networking.webp)
+![Data centre networking and connectivity](/images/dc-gpu-cluster.webp)
 
 ## Target Market: SMEs, Cloud Providers, and Content Companies
 

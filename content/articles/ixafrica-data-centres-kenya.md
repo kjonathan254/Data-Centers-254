@@ -15,14 +15,14 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/nairobi-skyline-night-kicc.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/hero-server-hall.webp"
     alt: "Server racks in a modern data centre facility"
     caption: "iXAfrica NBOX1 delivers hyperscale capacity to the East African market"
     position: "hero"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/whats-inside-ai-data-center.webp"
     alt: "Nairobi skyline showing digital infrastructure growth"
     caption: "Nairobi's Mombasa Road corridor is becoming Kenya's data centre district"
     position: "section-break"
@@ -50,7 +50,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/ixafrica-data-centr
 
 When the first phase of iXAfrica's NBOX1 facility went live in early 2025, it marked a turning point for East Africa's digital infrastructure. For the first time, the region had a purpose-built, carrier-neutral, hyperscale data centre engineered to handle the power and cooling demands of modern AI workloads. Backed by Actis, one of the world's most active emerging market investors, iXAfrica has moved quickly from a greenfield startup to the largest operational data centre platform in East and Central Africa, serving everyone from Kenyan banks to global satellite operators.
 
-![Server racks in a modern data centre facility](/images/dc-servers-racks.png)
+![Server racks in a modern data centre facility](/images/hero-server-hall.webp)
 
 This profile examines how iXAfrica was built, what its facilities deliver, who leads it, and why its trajectory matters for Kenya's position as a digital hub for a region of over 300 million people.
 

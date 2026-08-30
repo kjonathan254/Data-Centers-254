@@ -15,14 +15,14 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/dc-networking.webp"
+og_image: "/images/submarine-cables-map.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-networking.webp"
+  - src: "/images/mombasa-cable-landing.webp"
     alt: "Data centre networking equipment"
     caption: "KIXP is physically located inside data centres in Nairobi where member networks interconnect"
     position: "hero"
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/submarine-cables-map.webp"
     alt: "East Africa data centre and connectivity map"
     caption: "KIXP makes internet traffic between Kenyan users and Kenyan services stay local rather than routing through Europe"
     position: "section-break"
@@ -30,11 +30,11 @@ images:
     alt: "Server racks in a Nairobi data centre"
     caption: "KIXP switching equipment is housed in carrier-neutral data centres alongside member networks' servers"
     position: "inline"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/mombasa-cable-landing-2.webp"
     alt: "Nairobi skyline"
     caption: "Nairobi hosts KIXP and the majority of Kenya's data centres, creating a natural peering hub"
     position: "infographic"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-3.webp"
     alt: "Network cabling in a data centre"
     caption: "Every KIXP member connects their network to the exchange point via dedicated fibre or cross-connects"
     position: "inline"
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/kixp-internet-exchange-point-kenya"
 ---
 
-![Data centre networking equipment](/images/dc-networking.webp)
+![Data centre networking equipment](/images/mombasa-cable-landing.webp)
 
 Every time a Safaricom subscriber in Nairobi opens the Kenya Revenue Authority iTax portal, and every time an Airtel user in Mombasa streams a video hosted on Google's local cache, that traffic flows through KIXP — the Kenya Internet Exchange Point. KIXP is the single most important piece of internet infrastructure that most Kenyans have never heard of, and it fundamentally shapes how fast, how cheap, and how reliable the internet feels in Kenya.
 
@@ -78,7 +78,7 @@ The mechanics are straightforward, but the economics are profound. Without KIXP,
 
 With KIXP, the same traffic crosses a single Ethernet switch in Nairobi. Latency drops to under 5 milliseconds. No international bandwidth is consumed. Both networks save money, and the user gets a faster experience.
 
-![East Africa data centre and connectivity map](/images/africa-dc-map.webp)
+![East Africa data centre and connectivity map](/images/submarine-cables-map.webp)
 
 ## The History of KIXP
 
@@ -125,7 +125,7 @@ Consider the arithmetic. If Safaricom handles 500 Gbps of total traffic during p
 
 KIXP also reduces the load on Kenya's international links. This is important for national resilience. The [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa) have finite capacity. During cable cuts — which happen several times a year — KIXP-local traffic is completely unaffected. Kenyans can still access local banking, government services, and locally cached content even when the country's connection to the global internet is degraded.
 
-![Nairobi skyline](/images/nairobi-skyline.webp)
+![Nairobi skyline](/images/mombasa-cable-landing-2.webp)
 
 ## KIXP's Technical Infrastructure
 
@@ -140,7 +140,7 @@ The technical specifications matter for reliability. KIXP's switching infrastruc
 
 The physical locations of KIXP's switching equipment are within commercial data centres in Nairobi. You can find these and similar facilities in the [Kenya data centre directory](/directory). Members collocate their own routers and servers in these same facilities, or they run dedicated fibre from their own premises to the KIXP point of presence.
 
-![Network cabling in a data centre](/images/racks-cabling.webp)
+![Network cabling in a data centre](/images/mombasa-cable-landing-3.webp)
 
 ## The Role of Content Caching at KIXP
 

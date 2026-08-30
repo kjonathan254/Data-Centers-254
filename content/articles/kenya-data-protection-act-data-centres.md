@@ -15,14 +15,14 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Policy"
 cluster: "Policy"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-security-camera.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-policy-regulation.png"
+  - src: "/images/dc-security-camera-2.webp"
     alt: "Kenya data protection and regulatory framework"
     caption: "The Data Protection Act 2019 established Kenya's framework for protecting personal data, with significant implications for data centre operators and their customers"
     position: "hero"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access.webp"
     alt: "Data security and compliance controls"
     caption: "Compliance with the Data Protection Act requires both technical measures (encryption, access controls) and organisational measures (policies, training, breach response plans)"
     position: "section-break"
@@ -30,7 +30,7 @@ images:
     alt: "Server racks in a compliant data centre"
     caption: "Data centre operators must implement measures to prevent unauthorised access to customer data stored on servers within their facilities"
     position: "inline"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-security-camera.webp"
     alt: "Business compliance and regulatory requirements"
     caption: "Non-compliance with the Data Protection Act can result in fines of up to KES 5 million or 1% of annual turnover, making compliance a business necessity"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-protecti
 
 When Kenya's Data Protection Act came into effect in November 2019, it fundamentally changed the legal landscape for any organisation that handles personal data — and that includes every data centre operator and every customer who places servers in a Kenyan facility. The Act, modelled closely on the European Union's General Data Protection Regulation (GDPR), established rights for individuals, obligations for organisations, and enforcement powers for the Office of the Data Protection Commissioner (ODPC) that, in principle, match the standards set by the world's most comprehensive data protection laws.
 
-![Kenya data protection and regulatory framework](/images/dc-policy-regulation.png)
+![Kenya data protection and regulatory framework](/images/dc-security-camera-2.webp)
 
 In practice, Kenya's data protection regime is still maturing. The ODPC, established in 2020, has been building its institutional capacity gradually. Enforcement actions have been limited, guidance documents are still being developed, and many organisations remain unclear on exactly what compliance requires. But the law is the law, and for data centre operators and their customers, understanding the Data Protection Act is not optional — it is a legal obligation with financial penalties for non-compliance of up to KES 5 million or 1% of annual turnover, whichever is higher.
 
@@ -84,7 +84,7 @@ The Act requires data processors to implement "appropriate technical and organis
 
 A data centre must not access, copy, or process customer data beyond what is necessary to provide the contracted services. When a technician performs remote hands services — physically pressing a button or checking a status light on a customer's server — they must not access the data on that server. Data centre operators enforce this through access controls (technicians cannot log into customer servers), monitoring (CCTV and access logs record all physical access to equipment), and contractual provisions (the master service agreement and DPA prohibit unauthorised access).
 
-![Data security and compliance controls](/images/dc-security.webp)
+![Data security and compliance controls](/images/dc-biometric-access.webp)
 
 ### Supporting Breach Notification
 
@@ -116,7 +116,7 @@ The right to data portability means data subjects can request their data in a st
 
 The Data Protection Act requires data controllers and processors to register with the ODPC. Data centre operators must register as data processors, and their customers (banks, telcos, government agencies) must register as data controllers. Registration involves providing details about the organisation, the types of data processed, the purposes of processing, and the security measures in place.
 
-![Business compliance and regulatory requirements](/images/dc-business-investment.png)
+![Business compliance and regulatory requirements](/images/dc-security-camera.webp)
 
 Beyond registration, compliance requires several ongoing activities. Data protection impact assessments (DPIAs) must be conducted for processing activities that are likely to result in a high risk to data subjects. Records of processing activities must be maintained. Staff who handle personal data must receive data protection training. And data centres must maintain documentation of their security measures, breach response procedures, and sub-processor agreements.
 

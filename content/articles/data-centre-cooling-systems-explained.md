@@ -15,14 +15,14 @@ published_date: "2026-08-27"
 updated_date: "2026-08-27"
 category: "Data Centres"
 cluster: "Beginner"
-og_image: "/images/dc-cooling.webp"
+og_image: "/images/dc-cooling-crac.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-cooling.webp"
     alt: "Data centre cooling systems"
     caption: "Precision air conditioning and cooling systems are the second-largest energy consumer in any data centre"
     position: "hero"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-switchgear-2.webp"
     alt: "Data centre power and cooling infrastructure"
     caption: "Power and cooling are the two largest energy consumers — together they determine a facility's PUE"
     position: "section-break"
@@ -30,11 +30,11 @@ images:
     alt: "Server rack cabling and airflow management"
     caption: "Hot aisle and cold aisle containment improves cooling efficiency by preventing hot and cold air from mixing"
     position: "infographic"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center.webp"
     alt: "Server racks generating heat in a data centre"
     caption: "Modern high-density servers generate significantly more heat than older equipment, requiring more sophisticated cooling"
     position: "inline"
-  - src: "/images/dc-environment-sustainability.webp"
+  - src: "/images/dc-cooling-crac-2.webp"
     alt: "Data centre environmental sustainability"
     caption: "Cooling efficiency directly impacts a data centre's carbon footprint and operating costs"
     position: "inline"
@@ -77,7 +77,7 @@ In a typical data centre, IT equipment accounts for roughly 50–60% of total el
 
 The relationship between cooling and overall efficiency is measured through PUE. A facility with a PUE of 2.0 spends exactly as much on cooling and other overhead as it does on actual computing. A facility with a PUE of 1.2 directs only 20% of its total power to non-IT loads — and the majority of that 20% is cooling. Every 0.1 improvement in PUE translates to meaningful cost savings at scale.
 
-![Data centre power and cooling infrastructure](/images/dc-power-systems.webp)
+![Data centre power and cooling infrastructure](/images/dc-switchgear-2.webp)
 *Power and cooling are the two largest energy consumers — together they determine a facility's PUE*
 
 Understanding the [Kenya power and data centres](/articles/kenya-power-infrastructure-data-centres) landscape is critical here. Kenya's electricity tariffs are among the highest in East Africa, so cooling inefficiency directly erodes the commercial viability of any colocation or hyperscale facility operating in Nairobi, Mombasa, or elsewhere in the country.
@@ -101,7 +101,7 @@ The cooling chain typically works in stages. First, heat is captured at the serv
 
 Each technology occupies a specific niche based on rack power density, climate, and budget. Most commercial colocation facilities in sub-Saharan Africa rely on precision air cooling with some form of free cooling supplement.
 
-![Server racks generating heat in a data centre](/images/dc-servers-racks.png)
+![Server racks generating heat in a data centre](/images/whats-inside-ai-data-center.webp)
 *Modern high-density servers generate significantly more heat than older equipment, requiring more sophisticated cooling*
 
 ## CRAC and CRAH Units: The Industry Standard
@@ -175,7 +175,7 @@ PUE remains the industry's primary metric for cooling efficiency, and understand
 
 A facility using only CRAC units with no containment and no free cooling will typically achieve a PUE of 1.8–2.0. Adding hot aisle containment might bring that down to 1.6–1.7. Upgrading to a CRAH system with water-side economisers and containment can achieve PUE values of 1.4–1.5. The most efficient facilities globally — using liquid cooling, free cooling, and advanced containment — operate at PUE values below 1.2.
 
-![Data centre environmental sustainability](/images/dc-environment-sustainability.webp)
+![Data centre environmental sustainability](/images/dc-cooling-crac-2.webp)
 *Cooling efficiency directly impacts a data centre's carbon footprint and operating costs*
 
 For Kenyan operators, the economics are stark. At commercial electricity rates in Kenya, every 0.1 improvement in PUE on a 1 MW facility translates to approximately KES 15–20 million in annual energy savings. Over a 10–15 year facility lifecycle, the cumulative savings from cooling efficiency investments easily justify the upfront capital expenditure.

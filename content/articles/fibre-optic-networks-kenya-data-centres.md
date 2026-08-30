@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-fibre-optics.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-fibre-optics.webp"
     alt: "Network switching and fibre optic termination equipment inside a data centre"
     caption: "Every data centre depends on multiple fibre connections from different providers to ensure redundancy — a single fibre cut should never take a facility offline"
     position: "hero"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-3.webp"
     alt: "Structured fibre optic cabling in a data centre"
     caption: "Structured cabling within a data centre connects every rack to network aggregation points, which then connect to external fibre providers via diverse routes"
     position: "section-break"
-  - src: "/images/og-infrastructure-map.webp"
+  - src: "/images/mombasa-cable-landing-2.webp"
     alt: "East Africa fibre and submarine cable infrastructure map"
     caption: "Kenya's fibre network connects to four submarine cable systems landing in Mombasa, providing redundancy and multiple routing options to Europe, Asia, and the Middle East"
     position: "infographic"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center.webp"
     alt: "Server racks in a connected data centre"
     caption: "Without reliable fibre connectivity, even the most powerful servers are unreachable — connectivity is as important as power and cooling"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/fibre-optic-network
 
 A data centre without fibre connectivity is a warehouse full of expensive computers that nobody can reach. Every transaction on M-Pesa, every query to a bank's application, every page load on a Kenyan government website — all of it travels over fibre optic cables that connect data centres to users, to each other, and to the global internet. Kenya's fibre optic network is the circulatory system of its digital economy, and understanding how it works, who operates it, and where the weaknesses are, is essential for anyone investing in or depending on digital infrastructure.
 
-![Network switching and fibre optic termination equipment inside a data centre](/images/dc-networking.webp)
+![Network switching and fibre optic termination equipment inside a data centre](/images/dc-fibre-optics.webp)
 
 Kenya has built one of the most extensive fibre networks in sub-Saharan Africa over the past two decades. The combination of submarine cable landing stations in Mombasa, a competitive operator landscape, and government investment through the National Optic Fibre Backbone Infrastructure has created a network that reaches all 47 counties and connects to the global internet through multiple redundant paths. But coverage is uneven, pricing is opaque, and the "last mile" — the final connection from the fibre backbone to the actual data centre or office building — remains the most expensive and problematic part of the chain.
 
@@ -82,7 +82,7 @@ Safaricom is Kenya's largest telecom operator by revenue and subscriber base, an
 
 Safaricom's unique advantage is its mobile network. The company operates the largest 4G and 5G network in Kenya, and many data centre customers want connectivity that spans both fixed fibre and mobile networks. Safaricom can offer integrated solutions that include dedicated fibre links, mobile backhaul, and even direct interconnection with the M-Pesa platform — a compelling proposition for financial services companies.
 
-![Structured fibre optic cabling in a data centre](/images/racks-cabling.webp)
+![Structured fibre optic cabling in a data centre](/images/mombasa-cable-landing-3.webp)
 
 ### Telkom Kenya
 
@@ -114,7 +114,7 @@ Once traffic reaches Nairobi, it is distributed over metropolitan fibre networks
 
 The final segment is inside the data centre itself. Fibre from external providers terminates in a meet-me room (MMR) or carrier room, where patch panels allow connections to be made between providers and customers. A "cross-connect" is a physical cable (often a short fibre patch cord) that connects a customer's rack or cage to a specific provider's network. Cross-connects are how customers choose which networks they connect to, and they are typically provisioned within 24–48 hours in a well-managed facility.
 
-![East Africa fibre and submarine cable infrastructure map](/images/og-infrastructure-map.webp)
+![East Africa fibre and submarine cable infrastructure map](/images/mombasa-cable-landing-2.webp)
 
 ## Redundancy: The Most Critical Requirement
 
@@ -144,7 +144,7 @@ Despite the progress, Kenya's fibre infrastructure faces significant challenges.
 
 Right-of-way challenges persist. Despite regulations requiring utility companies to coordinate and share duct space, fibre deployments are frequently delayed by county government permits, road construction, and disputes with other utility operators. These delays increase costs and slow the expansion of connectivity to new areas.
 
-![Server racks in a connected data centre](/images/dc-servers-racks.png)
+![Server racks in a connected data centre](/images/whats-inside-ai-data-center.webp)
 
 Rural and peri-urban areas remain underserved. While NOFBI has connected county headquarters, the last-mile from county towns to individual facilities, schools, and businesses is often still missing. This matters for data centres because edge computing — placing smaller data processing facilities closer to end users — requires fibre connectivity in locations that currently lack it.
 

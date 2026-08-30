@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Career Guide"
 cluster: "Careers"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-gpu-cluster-5.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-careers-tech.png"
+  - src: "/images/dc-server-chip-4.webp"
     alt: "Technology professionals working in a modern data centre environment"
     caption: "Data centres employ a diverse range of professionals from network engineers and systems administrators to facility managers and physical security specialists"
     position: "hero"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-gpu-cluster-5.webp"
     alt: "Server racks in a data centre facility"
     caption: "Hands-on experience with server hardware, cabling, and infrastructure is highly valued by Kenyan data centre employers"
     position: "section-break"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-4.webp"
     alt: "Fibre optic and network cabling in a data centre"
     caption: "Structured cabling certifications and hands-on fibre termination skills are among the most immediately employable qualifications in the industry"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access-4.webp"
     alt: "Data centre physical security systems"
     caption: "Physical security roles in data centres require a combination of technical skills and operational discipline, often with shift work involved"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/how-to-get-job-keny
 
 Kenya's data centre industry is growing fast, and it needs people. Not just any people — it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.
 
-![Technology professionals working in a modern data centre environment](/images/dc-careers-tech.png)
+![Technology professionals working in a modern data centre environment](/images/dc-server-chip-4.webp)
 
 This guide is for anyone in Kenya who wants to work in a data centre — whether you are a fresh graduate trying to figure out where to start, an IT professional looking to transition from enterprise IT into infrastructure, or an engineer in a related field (power, cooling, telecommunications) who sees the opportunity. We will cover the roles that exist, the certifications employers actually look for, realistic salary expectations, and practical steps to get your foot in the door.
 
@@ -90,7 +90,7 @@ The gold-standard certifications for facility roles come from the Uptime Institu
 
 The NOC is the nerve centre of a data centre. Staffed 24 hours a day, 7 days a week, the NOC team monitors the entire facility — power systems, cooling, network connectivity, security cameras, and environmental sensors — and responds to alarms, outages, and customer requests. NOC operators are often the first point of contact when something goes wrong, and their ability to quickly diagnose and escalate issues directly impacts the facility's uptime record.
 
-![Server racks in a data centre facility](/images/dc-servers-racks.png)
+![Server racks in a data centre facility](/images/dc-gpu-cluster-5.webp)
 
 NOC roles are excellent entry points into the data centre industry. The technical barrier to entry is lower than for engineering roles — a diploma in IT or telecommunications, plus basic networking knowledge (TCP/IP, DNS, HTTP), can be sufficient for a junior NOC position. The trade-off is that NOC roles involve shift work, including nights and weekends, which not everyone can sustain long-term. However, many senior data centre professionals started their careers in NOC roles and used the experience as a foundation for engineering or management positions.
 
@@ -120,7 +120,7 @@ For IT professionals with some experience who want to specialise in data centre 
 
 For professionals targeting senior or specialised roles, the investment is higher but the returns are proportionate. The Uptime Institute ATD or AOS certification (approximately KES 300,000–500,000 including travel to a training centre) is the gold standard for facility engineering roles. The CDCP from EPI (approximately KES 200,000–300,000) is the most widely recognised data centre-specific certification in Africa. CCNP Data Centre (approximately KES 100,000–150,000) is valued for senior networking roles.
 
-![Structured fibre optic and network cabling](/images/racks-cabling.webp)
+![Structured fibre optic and network cabling](/images/mombasa-cable-landing-4.webp)
 
 ## Salary Ranges in Kenya's Data Centre Industry
 
@@ -145,7 +145,7 @@ Kenya's data centre industry is concentrated in Nairobi, with the majority of fa
 
 To find job openings, monitor these channels: LinkedIn (follow the operators and set job alerts for "data centre", "NOC", "network engineer", "facility manager" in Nairobi), the operators' own careers pages, and Kenyan job boards like BrighterMonday and Fuzu. Industry events organised by TESPOK (Technology Service Providers of Kenya), the Kenya ICT and Innovation Forum, and data centre-specific conferences are also valuable for networking and discovering unadvertised positions.
 
-![Data centre physical security systems](/images/dc-security.webp)
+![Data centre physical security systems](/images/dc-biometric-access-4.webp)
 
 ## Practical Steps to Get Started
 

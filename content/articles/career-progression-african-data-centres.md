@@ -17,10 +17,10 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Careers
 cluster: Careers
-og_image: /images/og-default.png
+og_image: /images/dc-server-chip-3.webp
 reading_time: "12 min"
 images:
-- src: /images/dc-careers-tech.png
+- src: /images/dc-server-chip-2.webp
   alt: Data centre professionals managing server infrastructure in Nairobi
   caption: Data centre careers in Kenya span from hands-on technical roles to strategic
     leadership positions
@@ -30,12 +30,12 @@ images:
   caption: Cable technicians form the critical entry point into the data centre career
     ladder
   position: section-break
-- src: /images/dc-servers-racks.png
+- src: /images/dc-gpu-cluster-3.webp
   alt: Server rack operations in an African data centre facility
   caption: Operations managers oversee critical infrastructure across multiple African
     markets
   position: section-break
-- src: /images/dc-business-investment.png
+- src: /images/dc-server-chip.webp
   alt: Strategic data centre investment and management across Africa
   caption: Senior leadership in African data centres requires both technical depth
     and business acumen
@@ -110,7 +110,7 @@ Africa's data centre industry is undergoing explosive growth, and Kenya sits at 
 
 This article maps out the complete career progression ladder in the African data centre industry, with specific salary data for the Kenyan market, certification milestones at each level, and practical advice on regional mobility across East Africa and beyond.
 
-![Data centre professionals managing server infrastructure in Nairobi](/images/dc-careers-tech.png)
+![Data centre professionals managing server infrastructure in Nairobi](/images/dc-server-chip-2.webp)
 *Data centre careers in Kenya span from hands-on technical roles to strategic leadership positions*
 
 ## The African Data Centre Career Ladder Overview
@@ -178,7 +178,7 @@ Operations managers oversee the day-to-day running of a data centre facility. Th
 
 **Salary Range (Kenya):** KES 150,000–350,000 per month, depending on facility size and operator.
 
-![Server rack operations in an African data centre facility](/images/dc-servers-racks.png)
+![Server rack operations in an African data centre facility](/images/dc-gpu-cluster-3.webp)
 *Operations managers oversee critical infrastructure across multiple African markets*
 
 ### Compliance and Regulatory Officer
@@ -225,7 +225,7 @@ For those who pivot from pure technology into general management, the MD or Coun
 
 **Salary Range (Kenya):** KES 1,500,000–4,000,000+ per month, with significant performance-linked components.
 
-![Strategic data centre investment and management across Africa](/images/dc-business-investment.png)
+![Strategic data centre investment and management across Africa](/images/dc-server-chip.webp)
 *Senior leadership in African data centres requires both technical depth and business acumen*
 
 ## Career Paths by Employer Type

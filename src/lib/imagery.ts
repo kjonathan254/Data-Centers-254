@@ -11,8 +11,8 @@ export interface ClusterImage {
 
 export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
   Beginner: {
-    src: "/images/dc-servers-racks.png",
-    alt: "Row of illuminated server racks inside a data centre hall",
+    src: "/images/dc-gpu-cluster-2-wide.webp",
+    alt: "Rows of illuminated server racks inside a data centre hall",
   },
   Kenya: {
     src: "/images/nairobi-skyline.webp",
@@ -23,8 +23,8 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "Fibre optic strands carrying light — the physical path of Kenya's connectivity",
   },
   Energy: {
-    src: "/images/dc-power-systems.webp",
-    alt: "Industrial battery and power distribution systems backing up a data centre",
+    src: "/images/kenya-geothermal-plant.webp",
+    alt: "Geothermal power plant in the Rift Valley — baseload energy behind Kenya's green data centres",
   },
   AI: {
     src: "/images/ai-gpu-servers.png",
@@ -35,7 +35,7 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "Government building at dusk — regulators shape Kenya's digital infrastructure",
   },
   Infrastructure: {
-    src: "/images/dc-cooling.webp",
+    src: "/images/dc-cooling-crac.webp",
     alt: "Industrial cooling units and pipework inside a data centre plant room",
   },
   Careers: {

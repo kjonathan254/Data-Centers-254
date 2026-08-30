@@ -15,26 +15,26 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Energy"
 cluster: "Energy"
-og_image: "/images/dc-power-systems.webp"
+og_image: "/images/kenya-transmission-pylons.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-power-systems.webp"
     alt: "Data centre power distribution and backup systems"
     caption: "Power is the backbone of any data centre — UPS systems, generators, and PDUs ensure uninterrupted electricity supply"
     position: "hero"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-chillers-roof-3.webp"
     alt: "Data centre cooling systems in a modern facility"
     caption: "Cooling accounts for up to 40% of a data centre's total energy consumption, making efficient power supply critical"
     position: "section-break"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/kenya-solar-farm.webp"
     alt: "Nairobi skyline at dusk"
     caption: "Nairobi's growing data centre industry requires significantly more power than Kenya's grid currently delivers to the city"
     position: "infographic"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-switchgear.webp"
     alt: "Server racks inside a modern data centre"
     caption: "A single rack can draw 5-10 kilowatts — a 200-rack facility needs 1-2 megawatts just for servers"
     position: "inline"
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/kenya-geothermal-plant-olkaria.webp"
     alt: "Data centre facility exterior in Nairobi"
     caption: "Kenya's data centre growth is constrained not by demand but by the available power supply to facilities"
     position: "inline"
@@ -91,7 +91,7 @@ Data centres are extraordinary electricity consumers. To understand why power is
 
 But IT load is only part of the story. Data centres need additional power for cooling (removing the heat servers generate), lighting, security systems, and office space. The total facility power is measured by **PUE (Power Usage Effectiveness)**, defined as the ratio of total facility power to IT power. A PUE of 1.5 means for every 1 watt consumed by servers, 0.5 watts go to everything else. So a 5-megawatt IT load with a PUE of 1.5 requires 7.5 megawatts from the grid.
 
-![Cooling systems consume significant power](/images/dc-cooling.webp)
+![Cooling systems consume significant power](/images/dc-chillers-roof-3.webp)
 
 ## The Transmission Bottleneck
 
@@ -105,7 +105,7 @@ Kenya's national grid is managed by Kenya Power and Lighting Company (KPLC), whi
 
 The June 2026 Huduma Centre data centre outage in Nakuru demonstrated the practical consequences. A single power supply failure at one facility disrupted government services nationwide. While this was attributed to inadequate backup power at the facility, it highlighted the broader fragility of power supply to critical digital infrastructure.
 
-![Nairobi needs more power for data centre growth](/images/nairobi-skyline.webp)
+![Nairobi needs more power for data centre growth](/images/kenya-solar-farm.webp)
 
 ## Why the Microsoft-G42 Project Stalled
 
@@ -127,7 +127,7 @@ Data centres do not rely solely on the grid. Every serious facility has a layere
 
 The combination of these systems means that a well-designed data centre should never experience downtime due to power issues. The Huduma Centre outage suggests that not all facilities in Kenya meet this standard. For new operators entering the market, backup power is a significant capital cost — diesel generators, UPS systems, and automatic transfer switches can represent 10-15% of total facility cost.
 
-![Server racks need consistent, clean power](/images/dc-servers-racks.png)
+![Server racks need consistent, clean power](/images/dc-switchgear.webp)
 
 ## The Path Forward
 
@@ -143,4 +143,4 @@ Solving Kenya's data centre power constraint requires action on multiple fronts:
 
 The policy environment is supportive. The [data centre licensing framework](/articles/kenya-data-centre-licensing-framework) provides regulatory clarity. The National Digital Superhighway Programme signals government commitment. But until the power constraint is addressed through tangible infrastructure investment, Kenya's data centre ambitions will remain capped by the available watts.
 
-![Kenya's growth is constrained by power supply](/images/hero-dc-nairobi.png)
+![Kenya's growth is constrained by power supply](/images/kenya-geothermal-plant-olkaria.webp)

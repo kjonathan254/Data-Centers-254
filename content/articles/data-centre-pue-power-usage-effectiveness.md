@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Energy Efficiency"
 cluster: "Energy"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-chillers-roof-2.webp"
 reading_time: "11 min"
 images:
   - src: "/images/dc-environment-sustainability.png"
     alt: "Data centre energy efficiency and sustainability"
     caption: "PUE is the most widely used metric for measuring how efficiently a data centre uses energy — a lower PUE means less waste and lower operating costs"
     position: "hero"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-chillers-roof-2.webp"
     alt: "Cooling systems are the largest source of PUE overhead"
     caption: "Cooling accounts for the majority of PUE overhead in most data centres — improving cooling efficiency is the fastest path to a lower PUE"
     position: "section-break"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-chillers-roof-3.webp"
     alt: "Power monitoring and measurement for PUE calculation"
     caption: "Accurate PUE measurement requires power meters at multiple points: the utility entry, the UPS output, and at individual racks or PDUs"
     position: "inline"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/dc-chillers-roof.webp"
     alt: "Challenges in optimising data centre energy efficiency"
     caption: "Older facilities face structural challenges in improving PUE — retrofitting hot/cold aisle containment or upgrading cooling systems can be expensive and disruptive"
     position: "inline"
@@ -84,7 +84,7 @@ Facilities in this range are among the most efficient in the world. They typical
 
 ### PUE 1.2–1.5: Good
 
-![Cooling systems are the largest source of PUE overhead](/images/dc-cooling.webp)
+![Cooling systems are the largest source of PUE overhead](/images/dc-chillers-roof-2.webp)
 
 This is the range that well-designed and well-operated facilities in temperate climates achieve. In Kenya, newer facilities like iXAfrica's NBOX1 target this range. These facilities use a combination of free cooling and mechanical cooling, have good airflow management (hot/cold aisle containment or chimney cabinets), and use efficient power distribution equipment. Most new colocation facilities being built in Kenya should aim for this range.
 
@@ -112,7 +112,7 @@ The typical power chain efficiency in a Kenyan data centre is approximately 88�
 
 ### Lighting and Other Loads
 
-![Power monitoring and measurement for PUE calculation](/images/dc-power-systems.webp)
+![Power monitoring and measurement for PUE calculation](/images/dc-chillers-roof-3.webp)
 
 Lighting, security systems, office areas, and other miscellaneous loads typically account for 3–5% of total facility power. While individually small, these loads contribute to PUE. LED lighting, occupancy sensors, and efficient building management can minimise these loads. Some facilities have reduced lighting loads to negligible levels by using LED fixtures with occupancy sensors and by minimising the lit area (lighting only aisles where personnel are present).
 
@@ -132,7 +132,7 @@ Hot/cold aisle containment is the single most cost-effective PUE improvement for
 
 ### Raise the Temperature
 
-![Challenges in optimising data centre energy efficiency](/images/dc-challenges.png)
+![Challenges in optimising data centre energy efficiency](/images/dc-chillers-roof.webp)
 
 ASHRAE's recommended environmental range for data centres allows inlet temperatures up to 27°C (with appropriate humidity management). Many older facilities operate at 18–20°C, significantly cooler than necessary. Raising the set point by even 2–3 degrees reduces cooling energy consumption by 5–15%. In Nairobi's climate, operating at 24–26°C with appropriate containment allows more hours of free cooling and reduces mechanical cooling requirements.
 

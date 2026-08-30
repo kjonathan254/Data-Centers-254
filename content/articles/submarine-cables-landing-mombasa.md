@@ -15,26 +15,26 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/africa-dc-map.webp"
+og_image: "/images/mombasa-cable-landing-4.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/mombasa-port-wide.webp"
     alt: "East Africa data centre and submarine cable infrastructure map"
     caption: "Mombasa's cable landing stations connect East Africa to the global internet backbone"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/submarine-cable-diagram.webp"
     alt: "Data centre networking equipment and fibre connectivity"
     caption: "Submarine cables terminate at landing stations, then connect via terrestrial fibre to data centres in Nairobi"
     position: "section-break"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/dc-fibre-optics.webp"
     alt: "Nairobi skyline showing digital infrastructure growth"
     caption: "Nairobi's data centres rely on Mombasa's cable landing stations for international connectivity"
     position: "infographic"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-challenges.png"
     alt: "Server racks in a modern data centre"
     caption: "Every international request from Kenya passes through Mombasa's submarine cables before reaching servers here"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/mombasa-cable-landing-2.webp"
     alt: "Data centre security systems"
     caption: "Cable landing stations are protected critical infrastructure with armed security and redundant paths"
     position: "inline"
@@ -68,7 +68,7 @@ Mombasa sits at the eastern edge of Kenya's coastline, and beneath its waters ru
 
 Submarine cables are the physical backbone of the internet. Despite the proliferation of satellite services like Starlink, more than 99% of intercontinental data traffic travels through these undersea fibre lines. For Kenya and its landlocked neighbours — Uganda, Rwanda, Burundi, South Sudan, and eastern DRC — Mombasa is the doorway to the digital world.
 
-![East Africa infrastructure map showing cable routes](/images/africa-dc-map.webp)
+![East Africa infrastructure map showing cable routes](/images/mombasa-port-wide.webp)
 
 ## The Cables That Land in Mombasa
 
@@ -92,7 +92,7 @@ The cables currently landing in Mombasa include:
 
 The cumulative design capacity of these systems exceeds 300 Tbps — an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
 
-![Data centre networking and fibre connectivity](/images/dc-networking.webp)
+![Data centre networking and fibre connectivity](/images/submarine-cable-diagram.webp)
 
 ## From Ocean Floor to Nairobi: How the Connection Works
 
@@ -116,7 +116,7 @@ Mombasa's dominance as a cable landing point is not accidental. Several factors 
 
 **Market size.** Kenya's large and growing economy, combined with its role as a gateway for landlocked neighbours, creates sufficient demand to justify multiple cable landings. No other Kenyan coastal city offers the same combination of market access and infrastructure.
 
-![Nairobi's data centres depend on Mombasa connectivity](/images/nairobi-skyline.webp)
+![Nairobi's data centres depend on Mombasa connectivity](/images/dc-fibre-optics.webp)
 
 ## What Happens When a Cable Is Cut?
 
@@ -128,7 +128,7 @@ The real risk is not a single cable cut but a simultaneous outage affecting mult
 
 Repair times vary. Shallow-water repairs near shore can be completed in days. Deep-water repairs in the open ocean typically take two to six weeks, depending on the availability of repair ships and weather conditions.
 
-![Every international request passes through Mombasa](/images/dc-servers-racks.png)
+![Every international request passes through Mombasa](/images/dc-challenges.png)
 
 ## The Satellite Question: Is Mombasa Still Relevant?
 
@@ -138,7 +138,7 @@ Submarine cables still offer orders of magnitude more bandwidth at lower cost pe
 
 Where satellites excel is in providing connectivity to areas where terrestrial fibre is not available or economically viable. In Kenya, this means remote northern and north-eastern regions, and potentially as backup for critical government services. But the backbone of Kenya's digital economy remains the submarine cables landing in Mombasa.
 
-![Cable landing stations are critical infrastructure](/images/dc-security.webp)
+![Cable landing stations are critical infrastructure](/images/mombasa-cable-landing-2.webp)
 
 ## What This Means for Data Centres
 

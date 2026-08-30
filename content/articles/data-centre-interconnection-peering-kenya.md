@@ -19,20 +19,20 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Infrastructure
 cluster: Infrastructure
-og_image: /images/og-default.png
+og_image: /images/submarine-cable-diagram.webp
 reading_time: "13 min"
 images:
-- src: /images/dc-networking.webp
+- src: /images/mombasa-cable-landing-3.webp
   alt: Network switching equipment inside a Kenyan data centre with fibre patch panels
   caption: Network switching infrastructure enabling interconnection and peering within
     a Kenyan data centre
   position: hero
-- src: /images/og-infrastructure-map.webp
+- src: /images/dc-policy-regulation.png
   alt: Map showing East Africa's digital infrastructure and submarine cable routes
   caption: Kenya's position at the crossroads of multiple submarine cables makes it
     a natural interconnection hub
   position: section-break
-- src: /images/africa-dc-map.webp
+- src: /images/nairobi-sunset-wide.webp
   alt: Map of data centre and IXP locations across Africa
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key
     East African node
@@ -125,7 +125,7 @@ A data centre is only as valuable as the networks it connects. In Kenya, where [
 
 This article explains how data centre interconnection and peering work in Kenya, covering the Kenya Internet Exchange Point (KIXP), cross-connects within facilities, the economics of peering versus transit, and why Kenya is consolidating its position as East Africa's premier interconnection hub.
 
-![Network switching equipment inside a Kenyan data centre with fibre patch panels](/images/dc-networking.webp)
+![Network switching equipment inside a Kenyan data centre with fibre patch panels](/images/mombasa-cable-landing-3.webp)
 *Network switching infrastructure enabling interconnection and peering within a Kenyan data centre*
 
 ## What Is an Internet Exchange Point (IXP)?
@@ -218,7 +218,7 @@ Kenya's position as an interconnection hub is no accident. Several factors conve
 - **Regional connectivity**: Kenya borders Uganda, Tanzania, Ethiopia, and South Sudan. Cross-border fibre links from these countries terminate in Nairobi, making it a natural aggregation point.
 - **Market size and sophistication**: Kenya has East Africa's largest and most developed digital economy, with the highest internet penetration rate in the region.
 
-![Map showing East Africa's digital infrastructure and submarine cable routes](/images/og-infrastructure-map.webp)
+![Map showing East Africa's digital infrastructure and submarine cable routes](/images/dc-policy-regulation.png)
 *Kenya's position at the crossroads of multiple submarine cables makes it a natural interconnection hub*
 
 ### KIXP's Regional Role
@@ -251,7 +251,7 @@ KIXP, while smaller in absolute terms, has grown faster proportionally. The 100G
 
 **IXPN** (Internet Exchange Point of Nigeria) handles approximately 100–120 Gbps peak traffic with 60+ members. Nigeria's larger population gives IXPN potential for massive growth, but infrastructure challenges and a more fragmented telecom market have constrained its development relative to KIXP.
 
-![Map of data centre and IXP locations across Africa](/images/africa-dc-map.webp)
+![Map of data centre and IXP locations across Africa](/images/nairobi-sunset-wide.webp)
 *Africa's growing interconnection ecosystem with KIXP positioned as a key East African node*
 
 ### Kenya's Competitive Positioning

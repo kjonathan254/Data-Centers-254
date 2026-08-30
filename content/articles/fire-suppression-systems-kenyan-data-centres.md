@@ -15,18 +15,18 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Infrastructure"
 cluster: "Infrastructure"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-server-chip-2.webp"
 reading_time: "20 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center-wide.webp"
     alt: "Server racks inside a Kenyan data centre hall equipped with fire suppression infrastructure"
     caption: "Modern Kenyan data centres integrate fire suppression into every zone of the white space"
     position: "hero"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-chillers-roof.webp"
     alt: "Fire suppression gas cylinders and control panels in a data centre mechanical room"
     caption: "Clean agent gas storage cylinders and control panels form the core of a data centre fire suppression system"
     position: "section-break"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access-3.webp"
     alt: "Integrated safety and security monitoring systems in a data centre control room"
     caption: "Fire detection and suppression systems are integrated into centralised building management and security monitoring"
     position: "inline"
@@ -56,7 +56,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/fire-suppression-systems-kenyan-data-centres"
 ---
 
-![Server racks inside a Kenyan data centre hall equipped with fire suppression infrastructure](/images/dc-servers-racks.png)
+![Server racks inside a Kenyan data centre hall equipped with fire suppression infrastructure](/images/whats-inside-ai-data-center-wide.webp)
 
 Fire protection in a data centre is fundamentally different from fire protection in an ordinary commercial building. The very systems designed to suppress fires in offices and warehouses — primarily water-based — can cause more damage than the fire itself when deployed among servers, storage arrays, and network switches. For Kenyan data centre operators, designing and maintaining an appropriate fire suppression system is both a technical imperative and a regulatory and insurance requirement. This guide covers the full spectrum of **fire suppression systems in Kenyan data centres**, from detection technologies to clean agent chemistries and the regulatory landscape.
 
@@ -108,7 +108,7 @@ Africa Data Centres' Nairobi facility and several banking data centres in the ci
 
 Inergen is less commonly deployed in Kenyan data centres due to the high-pressure storage requirements, but it remains an option for facilities that prioritise zero environmental impact above all other considerations.
 
-![Fire suppression gas cylinders and control panels in a data centre mechanical room](/images/dc-power-systems.webp)
+![Fire suppression gas cylinders and control panels in a data centre mechanical room](/images/dc-chillers-roof.webp)
 
 ## Environmental Impact and the Kigali Amendment
 
@@ -218,7 +218,7 @@ Modern Kenyan data centres integrate fire detection and suppression into their *
 - Event logging for compliance auditing and insurance documentation
 - Integration with [data centre security explained](/articles/data-centre-security-explained) systems for coordinated emergency response
 
-![Integrated safety and security monitoring systems in a data centre control room](/images/dc-security.webp)
+![Integrated safety and security monitoring systems in a data centre control room](/images/dc-biometric-access-3.webp)
 
 ## Cost Implications
 

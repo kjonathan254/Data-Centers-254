@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Security"
 cluster: "Beginner"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-biometric-access.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-security.webp"
     alt: "Data centre physical security with biometric access and CCTV"
     caption: "Tier III and IV data centres use multiple layers of physical security including biometric readers, mantraps, 24/7 CCTV monitoring, and on-site security personnel"
     position: "hero"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-gpu-cluster-2-wide.webp"
     alt: "Secured server racks with locking cabinets in a data centre"
     caption: "Colocation racks are individually locked, and access is logged and monitored — customers cannot access each other's equipment"
     position: "section-break"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-security-camera-2.webp"
     alt: "Network security equipment in a data centre"
     caption: "Firewalls, intrusion detection systems, and DDoS mitigation appliances form the network security layer that protects data centre traffic from external threats"
     position: "inline"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cargo-ship.webp"
     alt: "Organised cabling and secure infrastructure"
     caption: "Even cabling infrastructure has security implications — unauthorised physical access to network cables could enable tapping or interception of data"
     position: "inline"
@@ -104,7 +104,7 @@ Distributed Denial of Service (DDoS) attacks — where attackers flood a target 
 
 Data centres mitigate DDoS attacks through a combination of network-level defences (traffic scrubbing, rate limiting, and blackhole routing) and partnerships with DDoS mitigation providers (like Cloudflare, Akamai, or NEUSTAR) that can absorb and filter attack traffic before it reaches the data centre. The largest facilities maintain dedicated DDoS mitigation capacity on-site, while smaller facilities rely on upstream providers or cloud-based mitigation services.
 
-![Network security equipment in a data centre](/images/dc-networking.webp)
+![Network security equipment in a data centre](/images/dc-security-camera-2.webp)
 
 ### Zero Trust Architecture
 
@@ -134,7 +134,7 @@ ISO 27001 is the international standard for information security management syst
 
 In Kenya, the leading data centre operators are either ISO 27001 certified or in the process of obtaining certification. For international customers — banks, cloud providers, multinational corporations — ISO 27001 is often a non-negotiable requirement for choosing a colocation facility. Without it, a data centre is effectively excluded from competing for the most valuable customers.
 
-![Secured server racks with locking cabinets](/images/dc-servers-racks.png)
+![Secured server racks with locking cabinets](/images/dc-gpu-cluster-2-wide.webp)
 
 ### SOC 2 Type II
 
@@ -148,7 +148,7 @@ The Payment Card Industry Data Security Standard (PCI-DSS) applies to any entity
 
 Kenya's leading data centre operators — iXAfrica, Africa Data Centres, and Safaricom — have invested significantly in security infrastructure. iXAfrica's NBOX1 facility, for example, was designed from the ground up with Tier III security requirements, including biometric access, mantraps, 24/7 CCTV surveillance, and on-site security personnel. Africa Data Centres, as part of the pan-African Cassava Technologies group, applies group-wide security standards that align with international best practices.
 
-![Organised cabling and secure infrastructure](/images/racks-cabling.webp)
+![Organised cabling and secure infrastructure](/images/mombasa-cargo-ship.webp)
 
 However, security maturity varies across the Kenyan market. Smaller operator-built facilities and enterprise data centres may not have the same level of investment in security infrastructure, and the skills required to operate and maintain sophisticated security systems — network security engineers, security operations analysts, compliance auditors — are in short supply. As the market matures and customers become more demanding, security differentiation will become an increasingly important competitive factor.
 

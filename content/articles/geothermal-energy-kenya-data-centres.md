@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Renewable Energy"
 cluster: "Energy"
-og_image: "/images/og-default.png"
+og_image: "/images/kenya-geothermal-plant.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-environment-sustainability.png"
+  - src: "/images/kenya-geothermal-plant-4.webp"
     alt: "Renewable energy and sustainability in Kenyan data centres"
     caption: "Kenya's geothermal resources in the Great Rift Valley provide the foundation for some of the greenest data centre power in the world"
     position: "hero"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-chillers-roof-3.webp"
     alt: "Power distribution from geothermal generation to data centres"
     caption: "Geothermal power from the Rift Valley flows through Kenya Power's grid to Nairobi's data centres, providing baseload power that is both cheap and clean"
     position: "section-break"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-chillers-roof-2.webp"
     alt: "Cooling systems powered by geothermal electricity"
     caption: "The entire data centre power chain — IT load, cooling, lighting, and support systems — is powered by Kenya's renewable grid"
     position: "inline"
-  - src: "/images/og-infrastructure-map.webp"
+  - src: "/images/kenya-geothermal-map.webp"
     alt: "Energy infrastructure map showing Rift Valley geothermal to Nairobi"
     caption: "Kenya's geothermal fields in Olkaria, Menengai, and other Rift Valley locations feed power into the national grid that serves data centres in Nairobi"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/geothermal-energy-k
 
 Deep beneath the floor of the Great Rift Valley, water seeping into fractures in the Earth's crust encounters rock heated by magma chambers lying only a few kilometres below the surface. This water becomes superheated — reaching temperatures of 200–350 degrees Celsius — and rises to the surface as steam through geological faults. For millions of years, this process occurred unseen and unutilised. Today, it powers approximately 45% of Kenya's electricity and, through the national grid, powers every data centre in Nairobi.
 
-![Renewable energy and sustainability in Kenyan data centres](/images/dc-environment-sustainability.png)
+![Renewable energy and sustainability in Kenyan data centres](/images/kenya-geothermal-plant-4.webp)
 
 Geothermal energy is Kenya's most important energy asset for data centres, and it is an advantage that no amount of solar panels, wind turbines, or policy incentives can fully replicate in other markets. Understanding how geothermal power works, why it is so well-suited to data centre loads, and what its limitations are, is essential for anyone evaluating Kenya as a data centre location or investment destination.
 
@@ -83,7 +83,7 @@ At the geothermal field, production wells (typically drilled to depths of 1,500�
 
 ### Transmission
 
-![Power distribution from geothermal generation to data centres](/images/dc-power-systems.webp)
+![Power distribution from geothermal generation to data centres](/images/dc-chillers-roof-3.webp)
 
 The electricity generated at Olkaria enters the national grid through high-voltage transmission lines operated by Kenya Electricity Transmission Company (KETRACO). The primary transmission corridor from Olkaria to Nairobi runs through Naivasha, Limuru, and into the city, where it connects to the distribution network operated by Kenya Power. This transmission infrastructure was originally built to serve general national demand, but the growth of data centre loads along Nairobi's Mombasa Road corridor has created concentrated demand nodes that benefit from this geothermal backbone.
 
@@ -100,7 +100,7 @@ This baseload reliability aligns perfectly with data centre loads, which are con
 
 ### Low Carbon Intensity
 
-![Cooling systems powered by geothermal electricity](/images/dc-cooling.webp)
+![Cooling systems powered by geothermal electricity](/images/dc-chillers-roof-2.webp)
 
 Geothermal energy produces approximately 38 grams of CO2 per kilowatt-hour of electricity generated. This is among the lowest carbon intensities of any power source, including other renewables (solar PV produces approximately 40–50 g/kWh over its lifecycle, wind produces 10–15 g/kWh). For comparison, coal-fired power produces 900–1,100 g/kWh, and natural gas produces 400–500 g/kWh.
 
@@ -124,7 +124,7 @@ For certain use cases — particularly AI training clusters that need massive am
 
 ## Geothermal Development Pipeline
 
-![Energy infrastructure map showing Rift Valley geothermal to Nairobi](/images/og-infrastructure-map.webp)
+![Energy infrastructure map showing Rift Valley geothermal to Nairobi](/images/kenya-geothermal-map.webp)
 
 Kenya's geothermal development is ongoing, with several projects that will increase capacity and reinforce the power supply available to data centres.
 

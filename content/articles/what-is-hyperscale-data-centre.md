@@ -17,19 +17,19 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Beginner Guides
 cluster: Beginner
-og_image: /images/og-default.png
+og_image: /images/dc-chillers-roof.webp
 reading_time: "12 min"
 images:
-- src: /images/dc-servers-racks.png
+- src: /images/ai-gpu-servers.png
   alt: Rows of server racks in a large-scale data centre facility
   caption: Hyperscale data centres house tens of thousands of server racks in purpose-built
     halls.
   position: hero
-- src: /images/ai-gpu-servers.png
+- src: /images/whats-inside-ai-data-center-wide.webp
   alt: GPU servers powering cloud and AI workloads at scale
   caption: The explosive growth of AI is driving even larger hyperscale builds worldwide.
   position: section-break
-- src: /images/africa-dc-map.webp
+- src: /images/mombasa-port.webp
   alt: Map showing data centre locations across the African continent
   caption: Africa's hyperscale presence remains concentrated in South Africa, with
     East Africa still waiting.
@@ -92,7 +92,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/what-is-hyperscale-d
 
 If you have ever streamed a Netflix show, searched on Google, or booked an Uber ride, your request was processed inside a **hyperscale data centre** — a gargantuan computing facility so large it can stretch across multiple football pitches and consume enough electricity to power a small Kenyan town. But what exactly makes a data centre "hyperscale," and why does it matter for Kenya's digital future?
 
-![Rows of server racks in a large-scale data centre facility](/images/dc-servers-racks.png)
+![Rows of server racks in a large-scale data centre facility](/images/ai-gpu-servers.png)
 
 In simple terms, a **hyperscale data centre** is a massive facility owned and operated by a single technology company to support its cloud computing, artificial intelligence, and digital services at a global scale. Unlike standard [what is a data centre](/articles/what-is-a-data-centre) facilities that serve multiple tenants, hyperscale data centres are purpose-built for one operator — typically one of the world's largest technology companies.
 
@@ -135,7 +135,7 @@ Africa's hyperscale presence is currently **concentrated entirely in South Afric
 
 **Notice the pattern?** All three hyperscalers chose South Africa — not Kenya, not Nigeria, not Egypt. This is a critical point for understanding the barriers Kenya faces.
 
-![GPU servers powering cloud and AI workloads at scale](/images/ai-gpu-servers.png)
+![GPU servers powering cloud and AI workloads at scale](/images/whats-inside-ai-data-center-wide.webp)
 
 ## Why No Hyperscale Data Centre in Kenya — Yet
 
@@ -219,7 +219,7 @@ For Kenya, this means that attracting a hyperscale investment would likely invol
 
 Africa Data Centres' facilities in Nairobi — including the campus along Mombasa Road — represent the largest data centre investments in East Africa at approximately 10 MW. PAIX operates facilities in both Nairobi and Mombasa at around 5 MW each. Liquid Intelligent Technologies also maintains a significant presence. But even combined, these facilities are a fraction of the scale of a single hyperscale campus.
 
-![Map showing data centre locations across the African continent](/images/africa-dc-map.webp)
+![Map showing data centre locations across the African continent](/images/mombasa-port.webp)
 
 ## The Road Ahead for Kenya
 

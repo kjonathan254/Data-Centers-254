@@ -15,10 +15,10 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Data Centres"
 cluster: "Beginner"
-og_image: "/images/dc-servers-racks.png"
+og_image: "/images/dc-power-systems.webp"
 reading_time: "9 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-gpu-cluster-5.webp"
     alt: "Server racks inside a modern Tier III data centre"
     caption: "Tier III facilities maintain redundant power and cooling, allowing any single component to fail without downtime"
     position: "hero"
@@ -26,15 +26,15 @@ images:
     alt: "Structured cabling connecting server racks"
     caption: "Structured cabling with redundant paths is a hallmark of Tier III and above data centres"
     position: "section-break"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-cooling-crac-2.webp"
     alt: "Data centre power distribution systems"
     caption: "Power redundancy is the primary differentiator between tiers — from no backup to fully fault-tolerant"
     position: "infographic"
-  - src: "/images/dc-cooling.webp"
+  - src: "/images/dc-cooling-crac.webp"
     alt: "Precision cooling systems inside a data centre"
     caption: "Cooling redundancy follows the same tier structure as power: no redundancy (Tier I) to fully redundant (Tier IV)"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access-2.webp"
     alt: "Data centre physical security systems"
     caption: "While not part of the tier rating, security is essential at all tiers for protecting data and infrastructure"
     position: "inline"
@@ -68,7 +68,7 @@ When you hear that a data centre is "Tier III certified," what does that actuall
 
 The tier system answers one fundamental question: **if something breaks, what happens to the servers?** The answer ranges from "everything goes down" at Tier I to "nothing happens" at Tier IV. The difference between these extremes is measured in redundant power supplies, backup cooling systems, and the physical paths that connect them.
 
-![Server racks in a Tier III facility](/images/dc-servers-racks.png)
+![Server racks in a Tier III facility](/images/dc-gpu-cluster-5.webp)
 
 ## The Four Tiers: What They Guarantee
 
@@ -119,7 +119,7 @@ The redundancy notation describes how many backup components a system has:
 
 For power, the redundancy applies to every stage: utility feeds, generators, UPS systems, power distribution units, and the cables connecting them all. For cooling, it applies to chillers, pumps, air handling units, and the piping that carries the coolant.
 
-![Power redundancy differentiates the tiers](/images/dc-power-systems.webp)
+![Power redundancy differentiates the tiers](/images/dc-cooling-crac-2.webp)
 
 ## Beyond the Tier: What the Rating Does Not Cover
 
@@ -135,7 +135,7 @@ The Uptime Institute tier rating is specifically about infrastructure reliabilit
 
 This matters for Kenya because the country's competitive advantage in data centres is not just about reliability — it is about the combination of reliability with renewable, low-cost geothermal energy. A facility that achieves Tier III reliability while maintaining a PUE of 1.3 on geothermal power is more attractive to many customers than a Tier IV facility running on diesel.
 
-![Cooling redundancy mirrors the power tier structure](/images/dc-cooling.webp)
+![Cooling redundancy mirrors the power tier structure](/images/dc-cooling-crac.webp)
 
 ## Certification vs. Design: The Trust Gap
 
@@ -145,7 +145,7 @@ Certification is expensive — typically USD 50,000 to 200,000 depending on the 
 
 For enterprises evaluating data centre providers, the question to ask is not just "what tier are you?" but "are you Uptime Institute certified?" The difference between a claim and a certification is the difference between marketing and engineering.
 
-![Security is essential at all tiers](/images/dc-security.webp)
+![Security is essential at all tiers](/images/dc-biometric-access-2.webp)
 
 ## What This Means for Kenya's Data Centre Industry
 

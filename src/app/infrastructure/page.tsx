@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/dc-networking.webp", width: 1200, height: 675, alt: "Infrastructure — Data Centre 254" }],
+    images: [{ url: "/images/dc-switchgear.webp", width: 1200, height: 675, alt: "Infrastructure — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Infrastructure | Data Centre 254",
     description:
       "Internet and connectivity infrastructure in Kenya — submarine cables, KIXP, terrestrial fibre, and more.",
-    images: ["/images/dc-networking.webp"],
+    images: ["/images/dc-switchgear.webp"],
   },
 };
 

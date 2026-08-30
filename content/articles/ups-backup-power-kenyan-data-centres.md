@@ -17,7 +17,7 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Energy & Power
 cluster: Energy
-og_image: /images/og-default.png
+og_image: /images/dc-power-systems.webp
 reading_time: "14 min"
 images:
 - src: /images/dc-power-systems.webp
@@ -25,12 +25,12 @@ images:
   caption: UPS systems form the critical first line of defence against power interruptions
     in every data centre.
   position: hero
-- src: /images/dc-servers-racks.png
+- src: /images/dc-ups-batteries-wide.webp
   alt: Server racks powered through redundant UPS and generator systems
   caption: Every server rack depends on clean, uninterrupted power delivered through
     UPS systems.
   position: section-break
-- src: /images/dc-environment-sustainability.png
+- src: /images/kenya-transmission-pylons-5.webp
   alt: Sustainable energy and battery storage systems at a modern data centre
   caption: Lithium-ion batteries are rapidly replacing traditional lead-acid in new
     data centre builds across Africa.
@@ -191,7 +191,7 @@ For example, if a data centre has a current IT load of 200 kW, the UPS system mi
 
 ### Redundancy Configurations
 
-![Server racks powered through redundant UPS and generator systems](/images/dc-servers-racks.png)
+![Server racks powered through redundant UPS and generator systems](/images/dc-ups-batteries-wide.webp)
 
 **N+1 Redundancy**: Provides one additional UPS module beyond what is needed. If the facility needs 300 kW, an N+1 system might use four 100 kW modules — three carry the load, one is a hot standby. This is common in **Tier II and Tier III** facilities and provides protection against a single module failure.
 
@@ -292,7 +292,7 @@ Understanding the [data centre PUE (Power Usage Effectiveness)](/articles/data-c
 
 As this simplified model shows, the **lithium-ion system is approximately 14% cheaper over 10 years** despite its higher upfront cost — primarily because it avoids a mid-life battery replacement and requires less cooling.
 
-![Sustainable energy and battery storage systems at a modern data centre](/images/dc-environment-sustainability.png)
+![Sustainable energy and battery storage systems at a modern data centre](/images/kenya-transmission-pylons-5.webp)
 
 ## Real Installations in Kenyan Data Centres
 

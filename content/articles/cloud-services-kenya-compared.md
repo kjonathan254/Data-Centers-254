@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Cloud Computing"
 cluster: "Internet"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-gpu-cluster-2-wide.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/whats-inside-ai-data-center.webp"
     alt: "Cloud computing servers in a data centre"
     caption: "Cloud services ultimately run on physical servers in data centres — understanding where those data centres are and how they connect to Kenya determines cloud performance"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/hero-server-hall.webp"
     alt: "Cloud network connectivity infrastructure"
     caption: "Cloud performance in Kenya depends on network connectivity between users, local data centres, and the cloud provider's nearest region — typically in South Africa or Europe"
     position: "section-break"
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/nairobi-skyline-night-kicc.webp"
     alt: "Africa cloud and data centre infrastructure map"
     caption: "AWS has regions in Cape Town and Bahrain, Azure in Johannesburg and Cape Town, and Google Cloud in Johannesburg — all 100-200ms from Nairobi"
     position: "infographic"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-gpu-cluster-5.webp"
     alt: "Business decision-making for cloud adoption"
     caption: "The decision between global and local cloud providers involves trade-offs between feature richness, latency, data residency, and pricing"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/cloud-services-keny
 
 When a Kenyan bank decides to move its core banking platform to the cloud, when a startup chooses where to host its application, or when a government agency evaluates options for its digital services, the same question arises: which cloud provider is right for us? The answer is rarely straightforward. It depends on latency requirements, data residency regulations, budget constraints, technical requirements, and the organisation's long-term strategy.
 
-![Cloud computing servers in a data centre](/images/dc-servers-racks.png)
+![Cloud computing servers in a data centre](/images/whats-inside-ai-data-center.webp)
 
 Kenya's cloud market in 2025 is served by a mix of global hyperscale providers operating remotely, local telecom operators offering cloud services from Kenyan data centres, and a growing number of managed service providers that help enterprises navigate the complexity. Understanding the landscape — who offers what, where the actual servers are, and what the trade-offs are — is essential for making informed decisions.
 
@@ -84,7 +84,7 @@ AWS's strength is breadth: with over 200 fully featured services spanning comput
 
 Microsoft Azure has been the most aggressive of the three hyperscalers in building a local presence in Kenya — not through a cloud region, but through partnerships and programmes that give it an on-the-ground advantage. Microsoft operates Azure regions in Johannesburg and Cape Town in South Africa, and in Bahrain for the Middle East. Latency from Nairobi to Johannesburg is comparable to AWS Cape Town, at 50–80 milliseconds.
 
-![Cloud network connectivity infrastructure](/images/dc-networking.webp)
+![Cloud network connectivity infrastructure](/images/hero-server-hall.webp)
 
 Azure's unique advantage in Kenya is Microsoft's deep enterprise relationships. Microsoft products — Windows Server, Active Directory, Microsoft 365, SQL Server, Dynamics — are already deeply embedded in Kenyan banks, government agencies, and enterprises. Azure's integration with these existing systems makes it the path of least resistance for organisations that are already in the Microsoft ecosystem. A bank running SQL Server on-premises can migrate to Azure SQL Database with minimal application changes. A government agency using Microsoft 365 can extend its identity management to Azure Active Directory (now Microsoft Entra ID) for cloud workloads.
 
@@ -104,7 +104,7 @@ While the hyperscalers dominate the conversation, local cloud providers play an 
 
 Safaricom, Kenya's largest telecom operator, offers cloud services from its own data centres in Nairobi. Safaricom Cloud provides virtual machines, storage, backup, networking, and some managed services, positioning itself as the local alternative to global providers. Its primary value propositions are data residency (data stays in Kenya, on Kenyan soil), low latency (sub-5ms for Kenyan users), local support in English and Swahili, and the ability to bundle cloud with connectivity (fibre and mobile) in a single contract.
 
-![Africa cloud and data centre infrastructure map](/images/africa-dc-map.webp)
+![Africa cloud and data centre infrastructure map](/images/nairobi-skyline-night-kicc.webp)
 
 Safaricom Cloud's limitations are real. Its service catalogue is much narrower than the hyperscalers — it lacks the breadth of managed services, AI/ML platforms, serverless computing, and advanced analytics that AWS and Azure offer. Its ecosystem of third-party tools and consulting partners is smaller. And its global reach is, by definition, limited to Kenya. For a Kenyan bank that needs to serve customers across East Africa, or a startup that plans to expand to Nigeria, Safaricom Cloud cannot provide the multi-region deployment that hyperscalers offer.
 
@@ -126,7 +126,7 @@ Latency is often the first factor organisations consider, and it is where the ga
 
 ### Data Residency and Sovereignty
 
-![Business decision-making for cloud adoption](/images/dc-business-investment.png)
+![Business decision-making for cloud adoption](/images/dc-gpu-cluster-5.webp)
 
 Kenya's Data Protection Act (2019) places requirements on how personal data is processed and where it can be transferred. While the Act does not absolutely prohibit cross-border data transfer, it requires that transfers be to jurisdictions with adequate data protection standards. For government agencies handling citizen data, for banks regulated by the Central Bank of Kenya, and for healthcare providers handling patient records, the safest approach is to keep data in Kenya. This is a clear advantage for local providers like Safaricom Cloud and for colocation in Kenyan data centres.
 

@@ -15,18 +15,18 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Internet & Connectivity"
 cluster: "Internet"
-og_image: "/images/og-default.png"
+og_image: "/images/nairobi-westlands.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-networking.webp"
+  - src: "/images/mombasa-cable-landing.webp"
     alt: "5G base station connected to edge data centre infrastructure in Kenya"
     caption: "5G base stations require proximity to edge computing nodes for ultra-low latency processing"
     position: "hero"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/mombasa-cable-landing-3.webp"
     alt: "Fibre cabling infrastructure connecting 5G edge nodes to centralised data centres"
     caption: "Fibre backhaul is essential for connecting MEC nodes to core data centre infrastructure"
     position: "section-break"
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/dc-gpu-cluster-2.webp"
     alt: "Edge computing servers processing IoT and AI workloads for 5G applications"
     caption: "Edge nodes handle real-time processing for IoT devices, smart agriculture, and autonomous systems"
     position: "infographic"
@@ -62,7 +62,7 @@ Kenya's telecommunications landscape entered a new era when **Safaricom launched
 
 What many observers outside the infrastructure sector may not realise is that **5G is not just a network upgrade** — it is a fundamental shift in how computing resources are distributed. The ultra-low latency and massive bandwidth that 5G promises cannot be delivered by the network alone. Behind every 5G cell tower, there is an growing need for data processing capacity that sits as close to the end user as physically possible. This is creating a significant and largely unrecognised surge in demand for data centre infrastructure across Kenya.
 
-![5G base station connected to edge data centre infrastructure in Kenya](/images/dc-networking.webp)
+![5G base station connected to edge data centre infrastructure in Kenya](/images/mombasa-cable-landing.webp)
 
 ## The Communications Authority's 5G Spectrum Framework
 
@@ -98,7 +98,7 @@ In Kenya's agricultural sector alone, IoT sensors for soil monitoring, precision
 
 ### Technical Requirements for MEC Nodes
 
-![Fibre cabling infrastructure connecting 5G edge nodes to centralised data centres](/images/racks-cabling.webp)
+![Fibre cabling infrastructure connecting 5G edge nodes to centralised data centres](/images/mombasa-cable-landing-3.webp)
 
 Each MEC node in a 5G network has specific infrastructure requirements that distinguish it from both a traditional data centre and a simple cell tower:
 
@@ -127,7 +127,7 @@ In Kenya, the colocation and neutral host models are likely to gain traction bec
 
 ### Smart Agriculture
 
-![Edge computing servers processing IoT and AI workloads for 5G applications](/images/ai-gpu-servers.png)
+![Edge computing servers processing IoT and AI workloads for 5G applications](/images/dc-gpu-cluster-2.webp)
 
 Agriculture contributes approximately **22% of Kenya's GDP** and employs over 40% of the population. 5G-enabled IoT devices can transform this sector through precision agriculture: soil moisture sensors, drone-based crop monitoring, automated irrigation systems, and livestock health trackers. Each of these applications generates real-time data that requires local processing to deliver actionable insights to farmers.
 

@@ -15,26 +15,26 @@ published_date: "2026-08-27"
 updated_date: "2026-08-27"
 category: "Data Centres"
 cluster: "Kenya"
-og_image: "/images/dc-servers-racks.png"
+og_image: "/images/dc-gpu-cluster.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-servers-racks.png"
     alt: "Server racks in a colocation data centre"
     caption: "In colocation, you own the servers but rent the space, power, cooling, and security"
     position: "hero"
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/dc-gpu-cluster-2.webp"
     alt: "Data centre facility exterior in Nairobi"
     caption: "Nairobi hosts Kenya's primary colocation facilities along the Mombasa Road corridor"
     position: "section-break"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-gpu-cluster.webp"
     alt: "Network infrastructure inside a colocation facility"
     caption: "Colocation providers offer diverse connectivity options from multiple ISPs and submarine cable providers"
     position: "infographic"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/submarine-cable-diagram.webp"
     alt: "Structured cabling in a data centre"
     caption: "Colocation providers handle all cabling, power distribution, and cooling infrastructure"
     position: "inline"
-  - src: "/images/dc-security.webp"
+  - src: "/images/dc-biometric-access-2.webp"
     alt: "Data centre security systems"
     caption: "Physical security including biometric access and 24/7 CCTV is a key benefit of colocation"
     position: "inline"
@@ -114,7 +114,7 @@ Colocation gives you direct access to the [Kenya Internet Exchange Point (KIXP)]
 
 A company building its own facility would need to contract and manage these connections independently, running dedicated fibre from the nearest exchange or cable landing point. In colocation, the cross-connect infrastructure is already in place, and multiple carriers compete for your business within the same building.
 
-![Data centre facility exterior in Nairobi](/images/hero-dc-nairobi.png)
+![Data centre facility exterior in Nairobi](/images/dc-gpu-cluster-2.webp)
 
 ### Data residency and regulatory compliance
 
@@ -180,7 +180,7 @@ Once you select a provider and sign a contract, the onboarding process typically
 
 Reputable providers assign a dedicated account manager or onboarding coordinator who manages this process. If a provider treats onboarding as your problem rather than a shared process, it is a warning sign for how they will handle ongoing support.
 
-![Network infrastructure inside a colocation facility](/images/dc-networking.webp)
+![Network infrastructure inside a colocation facility](/images/dc-gpu-cluster.webp)
 
 ## Colocation vs Cloud vs Build-Your-Own: A Direct Comparison
 
@@ -225,7 +225,7 @@ A carrier-neutral facility is non-negotiable for most enterprises. Verify that y
 
 Confirm the facility's proximity to [submarine cable landing stations](/articles/submarine-cables-landing-mombasa) and the diversity of its fibre entry points. A facility with a single fibre path is vulnerable to a single cut.
 
-![Structured cabling in a data centre](/images/racks-cabling.webp)
+![Structured cabling in a data centre](/images/submarine-cable-diagram.webp)
 
 ### Physical security
 
@@ -258,7 +258,7 @@ Consider how your team will reach the facility. If your engineers need to visit 
 
 For organisations with staff based outside Nairobi, confirm whether the provider offers remote hands services that can handle routine physical tasks without requiring your presence.
 
-![Data centre security systems](/images/dc-security.webp)
+![Data centre security systems](/images/dc-biometric-access-2.webp)
 
 ## Common Mistakes When Choosing Colocation
 

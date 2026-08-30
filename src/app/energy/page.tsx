@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/dc-power-systems.webp", width: 1200, height: 675, alt: "Power & Energy — Data Centre 254" }],
+    images: [{ url: "/images/kenya-geothermal-plant.webp", width: 1200, height: 675, alt: "Power & Energy — Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Energy & Power | Data Centre 254",
     description: "Data centre electricity usage, Kenya's geothermal advantage, and the energy question behind AI infrastructure.",
-    images: ["/images/dc-power-systems.webp"],
+    images: ["/images/kenya-geothermal-plant.webp"],
   },
 };
 

@@ -15,14 +15,14 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-fibre-optics.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-networking.webp"
+  - src: "/images/mombasa-cable-landing-4.webp"
     alt: "Fibre connectivity and data centre networking"
     caption: "Liquid's 100,000+ km fibre network connects Kenya to the rest of Africa and the world"
     position: "hero"
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/mombasa-port.webp"
     alt: "East Africa data centre and connectivity map"
     caption: "Liquid's terrestrial fibre connects Mombasa landing stations to data centres across East Africa"
     position: "section-break"
@@ -46,7 +46,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/liquid-intelligent-technologies-kenya"
 ---
 
-![Fibre connectivity and data centre networking](/images/dc-networking.webp)
+![Fibre connectivity and data centre networking](/images/mombasa-cable-landing-4.webp)
 
 Liquid Intelligent Technologies is not a data centre company. That distinction matters, because understanding who Liquid is and what they do is essential to understanding how data works in Kenya and across East Africa. Liquid is a connectivity company, a fibre infrastructure builder, and an enterprise technology services provider. They happen to sit at the centre of Kenya's data centre ecosystem because every rack, every cloud region, and every submarine cable landing in Mombasa ultimately relies on the kind of terrestrial fibre infrastructure that Liquid has spent two decades building across the continent.
 
@@ -78,7 +78,7 @@ Liquid's Kenyan operations are headquartered in Nairobi and form a critical part
 
 In Nairobi, Liquid maintains a significant enterprise presence, providing dedicated fibre links, MPLS networks, SD-WAN solutions, and internet transit to banks, government agencies, multinational corporations, and technology companies. Many of these customers house their IT infrastructure in Nairobi data centres, creating a natural link between Liquid's connectivity services and the colocation facilities where their servers reside.
 
-![East Africa data centre and connectivity map](/images/africa-dc-map.webp)
+![East Africa data centre and connectivity map](/images/mombasa-port.webp)
 
 Liquid also provides wholesale bandwidth and transit services to other operators, internet service providers, and mobile network operators in Kenya. This wholesale business is less visible to end users but is foundational to how the internet works in the country. Smaller ISPs that cannot justify building their own submarine cable capacity or long-haul fibre rely on purchasing bandwidth from operators like Liquid who have that infrastructure in place.
 

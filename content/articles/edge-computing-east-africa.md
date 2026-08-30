@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Infrastructure"
 cluster: "Infrastructure"
-og_image: "/images/og-default.png"
+og_image: "/images/nairobi-skyline-night.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/africa-dc-map.webp"
+  - src: "/images/nairobi-westlands.webp"
     alt: "Africa data centre and edge computing distribution map"
     caption: "Edge computing extends data processing beyond major cities to secondary towns, border posts, and industrial zones across East Africa"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/nairobi-skyline-night.webp"
     alt: "Edge computing network infrastructure"
     caption: "Edge nodes connect to each other and to central data centres via fibre or microwave links, forming a distributed computing architecture"
     position: "section-break"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/hero-server-hall.webp"
     alt: "Compact edge computing equipment"
     caption: "Edge data centres are much smaller than traditional facilities — a shipping container or a small room can house enough computing for an entire town's needs"
     position: "inline"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/nairobi-expressway-wide.webp"
     alt: "Challenges of edge computing deployment"
     caption: "Power reliability, physical security, and connectivity in remote locations are the primary challenges for edge computing in East Africa"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/edge-computing-east
 
 Every millisecond matters more than it used to. A decade ago, a 200-millisecond delay between a user in Mombasa and a server in Nairobi was acceptable for almost every application. Today, applications like autonomous vehicles, real-time video analytics, augmented reality, remote surgery, and industrial automation require responses in under 10 milliseconds — delays that are physically impossible to achieve over a 500-kilometre round trip to a Nairobi data centre. This is the problem that edge computing solves, and it is a problem that is becoming increasingly relevant in East Africa.
 
-![Africa data centre and edge computing distribution map](/images/africa-dc-map.webp)
+![Africa data centre and edge computing distribution map](/images/nairobi-westlands.webp)
 
 Edge computing is the practice of placing data processing capabilities closer to where data is generated and consumed, rather than routing all data to centralised facilities. The concept is not new — content delivery networks (CDNs) have been doing a form of edge computing for two decades by caching web content in servers distributed around the world. What is new is the range of applications that now require edge capabilities, the sophistication of the computing hardware that can be deployed at the edge, and the economic case for building edge infrastructure in emerging markets like East Africa.
 
@@ -80,7 +80,7 @@ For Safaricom, which is Kenya's largest 5G operator, this creates both an opport
 
 IoT devices — sensors, cameras, industrial controllers, connected vehicles — generate enormous volumes of data that often needs to be processed in real time. A smart traffic management system in Nairobi cannot wait 200 milliseconds for camera footage to travel to a data centre and back before deciding whether to change a traffic light. An industrial automation system at a manufacturing plant in Thika cannot tolerate latency when a safety system needs to trigger an emergency stop.
 
-![Edge computing network infrastructure](/images/dc-networking.webp)
+![Edge computing network infrastructure](/images/nairobi-skyline-night.webp)
 
 IoT drives edge computing because it creates data at the periphery of the network, in locations that may be far from traditional data centres, and it often requires real-time processing of that data. Edge computing places the processing where the data is, reducing latency, reducing bandwidth costs (by processing data locally and only sending summaries or alerts to the central facility), and improving reliability (by continuing to function even if the connection to the central data centre is interrupted).
 
@@ -104,7 +104,7 @@ These CDN nodes are technically edge computing infrastructure — they process a
 
 Safaricom's 5G deployment is driving the second wave of edge computing. 5G base stations in Nairobi, Mombasa, and other major towns are being equipped with computing resources that can handle latency-sensitive applications. These resources are primarily used for Safaricom's own network functions (mobile core processing, video optimization) and for enterprise customers who contract for edge computing services.
 
-![Compact edge computing equipment](/images/dc-servers-racks.png)
+![Compact edge computing equipment](/images/hero-server-hall.webp)
 
 ### Enterprise Edge
 
@@ -134,7 +134,7 @@ Edge computing in East Africa faces challenges that differ from those in mature 
 
 ### Power Reliability
 
-![Challenges of edge computing deployment](/images/dc-challenges.png)
+![Challenges of edge computing deployment](/images/nairobi-expressway-wide.webp)
 
 The most significant challenge is power reliability. Edge sites are often in locations where grid power is less reliable than in Nairobi's industrial zones. A micro data centre at a cell tower in a rural area may depend on a single power source, with battery and generator backup adding cost and complexity. Power reliability is the primary factor that determines whether an edge deployment is practical at a given location.
 

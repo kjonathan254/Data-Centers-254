@@ -15,18 +15,18 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Infrastructure"
 cluster: "Infrastructure"
-og_image: "/images/og-default.png"
+og_image: "/images/racks-cabling.webp"
 reading_time: "18 min"
 images:
   - src: "/images/racks-cabling.webp"
     alt: "High-density server racks with neatly organised cabling in a Kenyan data centre"
     caption: "Proper cable management is critical for airflow and maintenance in high-density Kenyan data centres"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-fibre-optics.webp"
     alt: "Network switches and patch panels in a structured cabling environment"
     caption: "Patch panels and structured cabling hierarchy form the backbone of reliable data centre connectivity"
     position: "section-break"
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/dc-gpu-cluster-2-wide.webp"
     alt: "GPU servers requiring high-speed 400G Ethernet cabling for AI workloads"
     caption: "AI and GPU workloads are driving demand for 400G Ethernet cabling standards in Kenyan facilities"
     position: "infographic"
@@ -99,7 +99,7 @@ Horizontal cabling runs from the HDA patch panels to individual rack positions. 
 
 Proper patch panel density and labelling are non-negotiable. Kenyan colocation providers like [colocation services in Kenya](/articles/colocation-data-centre-kenya) operators use high-density patch panels (48-port in 1U or 96-port in 2U) to maximise rack space. Cable management accessories — including horizontal and vertical cable managers, bend radius guides, and Velcro ties (never cable ties on data cables) — are essential for maintaining airflow pathways and enabling rapid troubleshooting.
 
-![Network switches and patch panels in a structured cabling environment](/images/dc-networking.webp)
+![Network switches and patch panels in a structured cabling environment](/images/dc-fibre-optics.webp)
 
 ## Copper vs Fibre: Practical Considerations for Kenya
 
@@ -159,7 +159,7 @@ Nairobi sits at approximately 1,795 metres above sea level, with an average temp
 
 ## 400G Ethernet and Cabling for AI Workloads
 
-![GPU servers requiring high-speed 400G Ethernet cabling for AI workloads](/images/ai-gpu-servers.png)
+![GPU servers requiring high-speed 400G Ethernet cabling for AI workloads](/images/dc-gpu-cluster-2-wide.webp)
 
 The rapid growth of **GPU computing and AI workloads** in Kenya — driven by financial services, agritech, and government digitisation initiatives — is accelerating the adoption of **400G Ethernet (IEEE 802.3bs)**. This has profound implications for cabling infrastructure:
 

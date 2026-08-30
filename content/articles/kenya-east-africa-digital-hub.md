@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Market Analysis"
 cluster: "Kenya"
-og_image: "/images/og-default.png"
+og_image: "/images/nairobi-skyline-night-kicc.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/nairobi-westlands.webp"
     alt: "Data centre facilities in Nairobi, East Africa's digital capital"
     caption: "Nairobi's concentration of data centre infrastructure, connectivity, and skilled workforce makes it the natural digital hub for the East African region"
     position: "hero"
-  - src: "/images/og-infrastructure-map.webp"
+  - src: "/images/nairobi-expressway-wide.webp"
     alt: "East Africa digital infrastructure connectivity map"
     caption: "Kenya's four submarine cable landing stations in Mombasa and its central position in the East African fibre network create unmatched connectivity advantages"
     position: "section-break"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/kenya-coast-beach.webp"
     alt: "Nairobi's growing skyline reflecting digital growth"
     caption: "Nairobi's emergence as a technology and financial hub has been driven by infrastructure investment that includes data centres, fibre networks, and mobile money systems"
     position: "inline"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/nairobi-sunset-wide.webp"
     alt: "Investment flowing into Kenya's digital infrastructure"
     caption: "International investment in Kenyan data centres is driven by the country's position as the gateway to East Africa's 300 million consumers"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kenya-east-africa-d
 
 The phrase "Silicon Savannah" has been applied to Kenya for over a decade, and while it sometimes feels more aspirational than descriptive, the underlying reality is that Kenya has built a genuine and growing digital infrastructure ecosystem that serves not just its own 55 million people but the broader East African region. Data centres are the physical foundation of this ecosystem — the buildings full of servers that make every digital service possible. Understanding Kenya's position as East Africa's digital hub requires understanding the infrastructure that makes it possible.
 
-![Data centre facilities in Nairobi, East Africa's digital capital](/images/hero-dc-nairobi.png)
+![Data centre facilities in Nairobi, East Africa's digital capital](/images/nairobi-westlands.webp)
 
 Kenya's emergence as a regional digital hub is not the result of a single policy decision or a single infrastructure project. It is the cumulative effect of decades of investment in connectivity, energy, human capital, and regulatory reform — much of it unplanned and driven by private sector initiative rather than government direction. The result is an ecosystem that, while imperfect, offers the most comprehensive digital infrastructure in East Africa.
 
@@ -72,7 +72,7 @@ Kenya's most fundamental advantage is connectivity. The country's geographic pos
 
 No other East African country has four submarine cable landing stations. Tanzania has two (in Dar es Salaam), and landlocked countries like Uganda, Rwanda, Burundi, and South Sudan depend entirely on cross-border fibre connections to reach submarine cables. Kenya's direct cable access means lower latency to international destinations, more routing options, and competitive bandwidth pricing.
 
-![East Africa digital infrastructure connectivity map](/images/og-infrastructure-map.webp)
+![East Africa digital infrastructure connectivity map](/images/nairobi-expressway-wide.webp)
 
 The terrestrial fibre network that distributes this connectivity inland is equally important. Kenya has an estimated 15,000–20,000 kilometres of fibre optic cable, connecting all 47 county headquarters through the National Optic Fibre Backbone Infrastructure (NOFBI) and through operator-owned networks from Liquid Intelligent Technologies, Safaricom, Telkom Kenya, and others. Cross-border fibre links connect Kenya to Uganda, Tanzania, Ethiopia, and South Sudan, making Kenya a transit hub for regional internet traffic.
 
@@ -90,7 +90,7 @@ Kenya's human capital is a critical component of its digital hub positioning. Th
 
 Beyond formal education, Kenya has a vibrant self-taught and community-trained technology culture. Developer communities, coding bootcamps, and technology hubs (like iHub, Nairobi Garage, and Nailab) have produced thousands of software developers, designers, and product managers who work for local companies, international technology firms, and remote-first companies based in the US and Europe.
 
-![Nairobi's growing skyline reflecting digital growth](/images/nairobi-skyline.webp)
+![Nairobi's growing skyline reflecting digital growth](/images/kenya-coast-beach.webp)
 
 Microsoft's Africa Development Centre (ADC) in Nairobi, employing hundreds of engineers working on global products, is both a symbol and a driver of Kenya's talent position. Google, IBM, Intel, and other technology companies have research or development presences in Nairobi, attracted by the talent pool and the opportunity to build products for African markets. The presence of these companies, in turn, attracts more talent and creates a virtuous cycle.
 
@@ -108,7 +108,7 @@ This regional role is self-reinforcing. As more regional organisations use Kenya
 
 ## The Challenges
 
-![Investment flowing into Kenya's digital infrastructure](/images/dc-business-investment.png)
+![Investment flowing into Kenya's digital infrastructure](/images/nairobi-sunset-wide.webp)
 
 Kenya's digital hub position is not unassailable. Rwanda's government has been more aggressive and intentional in its digital transformation policies, offering aggressive tax incentives, fast-track business registration, and regulatory simplicity. Tanzania has been investing in connectivity and has a larger population than Kenya (65 million). Ethiopia, with 120 million people, is opening its telecommunications market and could become a significant digital economy if it manages the transition effectively.
 

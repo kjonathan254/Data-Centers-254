@@ -17,20 +17,20 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Kenya Market
 cluster: Kenya
-og_image: /images/og-default.png
+og_image: /images/mombasa-old-town-wide.webp
 reading_time: "13 min"
 images:
-- src: /images/nairobi-skyline.webp
+- src: /images/nairobi-skyline-night.webp
   alt: Nairobi skyline at dusk symbolising Kenya's digital transformation
   caption: Nairobi's growing skyline reflects Kenya's rapid digital transformation
     and expanding infrastructure needs.
   position: hero
-- src: /images/dc-business-investment.png
+- src: /images/nairobi-expressway-wide.webp
   alt: Business investment in Kenyan data centre infrastructure
   caption: Venture capital and enterprise investment are fuelling data centre expansion
     across Kenya.
   position: section-break
-- src: /images/africa-dc-map.webp
+- src: /images/nairobi-westlands.webp
   alt: Map showing data centre locations across Africa including Kenya
   caption: Kenya is positioning itself as the premier data centre hub in East Africa.
   position: inline
@@ -109,7 +109,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/kenya-digital-econom
 
 Kenya's data centre industry is entering a phase of structural growth driven not by a single sector but by a convergence of macroeconomic forces. From mobile money volumes that rival some European nations to a government digitisation agenda touching every public service, the demand for [colocation and cloud infrastructure](/articles/colocation-data-centre-kenya) in Kenya is compounding year on year. Understanding these demand drivers is essential for investors, operators, and enterprises making infrastructure decisions.
 
-![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline.webp)
+![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline-night.webp)
 
 Kenya's GDP grew at approximately 5.0% in 2024 and is projected to maintain 5-6% growth through 2030, according to the World Bank and IMF. Crucially, the **digital economy's share of GDP** has risen from under 3% a decade ago to an estimated 7.5-8% today. This shift is not abstract — it translates directly into servers, racks, and megawatts of data centre demand.
 
@@ -159,7 +159,7 @@ Each of these companies runs production workloads that require data centre infra
 
 Digital lending platforms — including Tala, Branch, and the bank-affiliated mobile lending services — process millions of loan applications using automated credit scoring models. These require real-time API access to credit reference bureaus, mobile money transaction histories, and other data sources. The infrastructure chain from loan application to disbursement involves multiple systems, all hosted in or connected through Kenyan data centres.
 
-![Business investment in Kenyan data centre infrastructure](/images/dc-business-investment.png)
+![Business investment in Kenyan data centre infrastructure](/images/nairobi-expressway-wide.webp)
 
 ## E-Commerce and Digital Retail
 
@@ -234,7 +234,7 @@ Based on the demand drivers outlined above, Kenya's data centre requirements are
 - **GPU-ready capacity** for AI and machine learning workloads
 - **Edge facilities** for 5G MEC and content delivery
 
-![Map showing data centre locations across Africa including Kenya](/images/africa-dc-map.webp)
+![Map showing data centre locations across Africa including Kenya](/images/nairobi-westlands.webp)
 
 ## Konza Technopolis: The Long-Term Supply Answer
 

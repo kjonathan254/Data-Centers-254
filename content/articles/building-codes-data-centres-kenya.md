@@ -17,20 +17,20 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Policy
 cluster: Policy
-og_image: /images/og-default.png
+og_image: /images/dc-server-chip-2.webp
 reading_time: "14 min"
 images:
-- src: /images/dc-challenges.png
+- src: /images/dc-gpu-cluster.webp
   alt: Construction site challenges and regulatory hurdles for data centre builds
   caption: Navigating Kenya's building code framework is one of the first major challenges
     in any data centre construction project
   position: hero
-- src: /images/dc-power-systems.webp
+- src: /images/dc-switchgear-2.webp
   alt: Electrical power systems installation in a data centre
   caption: Electrical installations in Kenyan data centres must comply with KEBS and
     IEC standards under the supervision of registered engineers
   position: section-break
-- src: /images/hero-dc-nairobi.png
+- src: /images/dc-gpu-cluster-2.webp
   alt: Data centre facility in Nairobi, Kenya
   caption: Nairobi's data centre growth is shaped by a complex web of county, national,
     and international regulatory requirements
@@ -110,7 +110,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/building-codes-data-
 
 ## The Regulatory Landscape for Data Centre Construction in Kenya
 
-![Construction site challenges and regulatory hurdles for data centre builds](/images/dc-challenges.png)
+![Construction site challenges and regulatory hurdles for data centre builds](/images/dc-gpu-cluster.webp)
 
 Building a data centre in Kenya is not simply a construction project — it is a multi-regulatory undertaking that involves **national government agencies, county governments, statutory bodies, and international standards**. Unlike commercial office buildings or residential developments, data centres have unique physical requirements: high power density, specialised cooling systems, raised floors, stringent fire suppression, and reinforced structural loads. Kenya's regulatory framework was not designed with data centres specifically in mind, which means operators must navigate a patchwork of general construction, environmental, electrical, and safety regulations while also meeting international data centre design standards.
 
@@ -158,7 +158,7 @@ The **Kenya Bureau of Standards (KEBS)** develops and enforces national standard
 
 While KEBS does not have a dedicated data centre construction standard, data centre developers typically adopt **international standards** such as **IEC 60364-5-52** (wiring systems for IT equipment), **IEC 61850** (communication networks and systems in substations), and **TIA-942** (the telecommunications infrastructure standard for data centres), and then ensure compliance with the applicable KEBS standards that overlap with those requirements.
 
-![Electrical power systems installation in a data centre](/images/dc-power-systems.webp)
+![Electrical power systems installation in a data centre](/images/dc-switchgear-2.webp)
 
 ## NEMA Environmental Impact Assessment Requirements
 
@@ -329,7 +329,7 @@ As discussed in the fire safety section, **NFPA 75** and **NFPA 76** provide det
 
 The **EU Code of Conduct on Data Centre Energy Efficiency** is a voluntary framework that sets best-practice guidelines for energy-efficient data centre design and operation. While developed for the European market, its principles — including Power Usage Effectiveness (PUE) targets, airflow management, free cooling utilisation, and waste heat recovery — are increasingly relevant to Kenyan data centres. Kenya's building codes do not prescribe specific energy efficiency targets for data centres, but the **Kenya Bureau of Standards (KEBS)** has adopted energy management standards (KS ISO 50001) that data centres can leverage to formalise their energy efficiency programmes.
 
-![Data centre facility in Nairobi, Kenya](/images/hero-dc-nairobi.png)
+![Data centre facility in Nairobi, Kenya](/images/dc-gpu-cluster-2.webp)
 
 ## Practical Recommendations for Data Centre Developers
 

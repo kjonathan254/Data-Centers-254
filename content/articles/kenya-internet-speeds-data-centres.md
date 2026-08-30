@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/og-default.png"
+og_image: "/images/mombasa-cable-landing.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/dc-networking.webp"
+  - src: "/images/submarine-cable-diagram.webp"
     alt: "Network infrastructure enabling Kenya's internet speeds"
     caption: "Kenya's internet speeds are delivered through a combination of submarine cables, terrestrial fibre, mobile networks, and the servers in data centres that host content and applications"
     position: "hero"
-  - src: "/images/og-infrastructure-map.webp"
+  - src: "/images/submarine-cables-map.webp"
     alt: "East Africa connectivity and internet speed map"
     caption: "Internet speed depends on every link in the chain — from the user's device to the cell tower or fibre connection, through backbone networks, to the data centre hosting the content"
     position: "section-break"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/dc-fibre-optics.webp"
     alt: "Fibre optic cabling enabling high-speed internet"
     caption: "Fibre-to-the-home and fibre-to-the-building connections are the primary driver of fixed broadband speed improvements in Kenya"
     position: "inline"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/mombasa-cargo-ship.webp"
     alt: "Challenges in internet speed distribution"
     caption: "The urban-rural digital divide means that Nairobi's internet speeds are world-class while some rural areas still lack reliable connectivity"
     position: "inline"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kenya-internet-spee
 
 When you open a banking app on your phone and your account balance loads instantly, when a YouTube video starts playing within seconds, or when a video call connects in high definition — you are experiencing the result of internet speed. The speed at which data travels between your device, the network, and the data centre where the service is hosted determines the quality of your digital experience. For Kenya's data centre industry, internet speeds are both an enabler and a measure of the country's digital maturity.
 
-![Network infrastructure enabling Kenya's internet speeds](/images/dc-networking.webp)
+![Network infrastructure enabling Kenya's internet speeds](/images/submarine-cable-diagram.webp)
 
 Internet speed in Kenya has improved dramatically over the past decade, driven by submarine cable landings, fibre network expansion, mobile network upgrades, and the growth of local data centre capacity that keeps content and services close to users. But speed is not uniform — it varies by location, by technology, and by time of day. Understanding these variations, and what they mean for data centre demand and strategy, is important for anyone involved in Kenya's digital infrastructure.
 
@@ -78,7 +78,7 @@ Kenya's internet speeds, as measured by platforms like Ookla's Speedtest Global 
 
 **5G**: Safaricom has launched 5G in select areas of Nairobi, Mombasa, Kisumu, and other towns. 5G speeds can reach 200-1000 Mbps in ideal conditions, though coverage is still limited and device adoption is in early stages. 5G's impact on data centre demand will grow as coverage expands.
 
-![East Africa connectivity and internet speed map](/images/og-infrastructure-map.webp)
+![East Africa connectivity and internet speed map](/images/submarine-cables-map.webp)
 
 ### Global and Regional Comparison
 
@@ -102,7 +102,7 @@ This is where data centres make a direct impact on perceived internet speed. Ser
 
 ### The Server (Data Centre Processing)
 
-![Fibre optic cabling enabling high-speed internet](/images/racks-cabling.webp)
+![Fibre optic cabling enabling high-speed internet](/images/dc-fibre-optics.webp)
 
 The server itself contributes to the speed equation. A slow or overloaded server takes longer to respond to requests, regardless of how fast the network is. This is why data centre operators invest in high-performance servers, fast storage (SSDs), and efficient software. A well-provisioned data centre with modern servers can serve responses in milliseconds; an under-provisioned or poorly managed one can add hundreds of milliseconds.
 
@@ -122,7 +122,7 @@ This creates demand for content localisation — placing content servers in Keny
 
 ### Cloud and SaaS Adoption
 
-![Challenges in internet speed distribution](/images/dc-challenges.png)
+![Challenges in internet speed distribution](/images/mombasa-cargo-ship.webp)
 
 Cloud computing and Software-as-a-Service applications require reliable, reasonably fast internet connections. As Kenya's internet speeds have improved, cloud and SaaS adoption has accelerated — more organisations are moving their applications to the cloud, which requires server capacity in data centres (whether local or overseas). The [cloud services comparison guide](/articles/cloud-services-kenya-compared) covers the providers serving Kenya.
 

@@ -18,20 +18,20 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Infrastructure
 cluster: Infrastructure
-og_image: /images/og-default.png
+og_image: /images/dc-gpu-cluster-5.webp
 reading_time: "12 min"
 images:
-- src: /images/dc-servers-racks.png
+- src: /images/whats-inside-ai-data-center-wide.webp
   alt: Server racks inside a modern Kenyan data centre facility
   caption: Modern server rack installation during the fit-out phase of a Kenyan data
     centre build
   position: hero
-- src: /images/dc-power-systems.webp
+- src: /images/dc-switchgear.webp
   alt: Electrical power distribution systems in a data centre
   caption: Power distribution infrastructure is a critical design element in any Kenyan
     data centre build
   position: section-break
-- src: /images/dc-cooling.webp
+- src: /images/dc-chillers-roof-3.webp
   alt: Data centre cooling systems including CRAC units and chilled water piping
   caption: Cooling system installation during the MEP phase of data centre construction
   position: inline
@@ -116,7 +116,7 @@ Kenya's digital economy is expanding at a pace that demands robust, locally-buil
 
 This guide walks through every stage of the data centre design and build process in Kenya, from initial site selection through to commissioning and handover.
 
-![Server racks inside a modern Kenyan data centre facility](/images/dc-servers-racks.png)
+![Server racks inside a modern Kenyan data centre facility](/images/whats-inside-ai-data-center-wide.webp)
 *Modern server rack installation during the fit-out phase of a Kenyan data centre build*
 
 ## Phase 1: Site Selection Criteria in Kenya
@@ -172,7 +172,7 @@ The detailed design phase translates the concept into construction-ready documen
 - **Electrical engineering** designs covering utility feeds, switchgear, UPS systems, power distribution units (PDUs), generator systems, and earthing/grounding
 - **Mechanical engineering** designs for precision cooling, chilled water systems, air handling units, and ductwork
 
-![Electrical power distribution systems in a data centre](/images/dc-power-systems.webp)
+![Electrical power distribution systems in a data centre](/images/dc-switchgear.webp)
 *Power distribution infrastructure is a critical design element in any Kenyan data centre build*
 
 ### MEP Design: The Most Critical Discipline
@@ -217,7 +217,7 @@ The commissioning process culminates in **Integrated Systems Testing (IST)**, wh
 
 Commissioning in Kenya requires coordination with KPLC for utility switch-over testing. KPLC engineers must participate in the synchronisation and load-transfer tests for dual-grid feeds. The **commissioning agent** (typically an independent third party) must verify that all systems meet the design intent, the specified tier requirements, and applicable Kenyan standards.
 
-![Data centre cooling systems including CRAC units and chilled water piping](/images/dc-cooling.webp)
+![Data centre cooling systems including CRAC units and chilled water piping](/images/dc-chillers-roof-3.webp)
 *Cooling system installation during the MEP phase of data centre construction*
 
 ## Phase 6: Handover and Operations Transition

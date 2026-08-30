@@ -15,18 +15,18 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Careers"
 cluster: "Careers"
-og_image: "/images/og-default.png"
+og_image: "/images/dc-careers-tech.png"
 reading_time: "13 min"
 images:
   - src: "/images/dc-careers-tech.png"
     alt: "Diverse technical team working in a Kenyan data centre operations room"
     caption: "Building diverse teams is critical to addressing Kenya's data centre talent shortage"
     position: "hero"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/ai-gpu-servers.png"
     alt: "Server rack infrastructure managed by technical operations teams"
     caption: "Technical operations roles in data centres are increasingly attracting female professionals"
     position: "section-break"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-server-chip.webp"
     alt: "Business investment in data centre workforce development and training programmes"
     caption: "Companies investing in diversity programmes see measurable improvements in team performance"
     position: "infographic"
@@ -124,7 +124,7 @@ Microsoft's **Africa Development Centre** in Nairobi has implemented comprehensi
 
 ## Career Pathways with Growing Female Participation
 
-![Server rack infrastructure managed by technical operations teams](/images/dc-servers-racks.png)
+![Server rack infrastructure managed by technical operations teams](/images/ai-gpu-servers.png)
 
 ### Project Management
 
@@ -158,7 +158,7 @@ Formal mentorship programmes pair experienced professionals with women who are e
 
 ### Flexible Working Arrangements
 
-![Business investment in data centre workforce development and training programmes](/images/dc-business-investment.png)
+![Business investment in data centre workforce development and training programmes](/images/dc-server-chip.webp)
 
 The shift towards cloud-managed infrastructure and remote monitoring tools has made it increasingly possible for data centre professionals to perform many of their duties remotely. Companies that offer **hybrid working models**, flexible hours, and remote management capabilities are finding it easier to attract and retain women in data centre roles.
 

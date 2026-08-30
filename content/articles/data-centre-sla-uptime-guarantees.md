@@ -15,22 +15,22 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: Beginner Guides
 cluster: Beginner
-og_image: "/images/og-default.png"
+og_image: "/images/dc-switchgear-2.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-gpu-cluster-3.webp"
     alt: "Server racks inside a Kenyan data centre with monitoring systems"
     caption: "Data centre SLAs define the contractual obligations for keeping infrastructure like these racks operational."
     position: "hero"
-  - src: "/images/dc-power-systems.webp"
+  - src: "/images/dc-chillers-roof-2.webp"
     alt: "Redundant power systems in a colocation facility"
     caption: "Power redundancy directly impacts the uptime SLA a data centre can realistically guarantee."
     position: "section-break"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/submarine-cable-diagram.webp"
     alt: "Structured cabling and network infrastructure in a data centre"
     caption: "Network availability SLAs depend on the quality of cabling, switching, and upstream carrier diversity."
     position: "inline"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-chillers-roof.webp"
     alt: "Business professionals reviewing data centre contracts"
     caption: "Evaluating an SLA carefully before signing can save your business from costly surprises down the line."
     position: "infographic"
@@ -64,7 +64,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-sla-upt
 
 A **Service Level Agreement (SLA)** is a formal contract between a data centre operator and its customer that defines the minimum standards of service the operator promises to deliver. Think of it as a written guarantee: if the facility fails to keep the lights on, keep your servers cool, or respond when you need help, the SLA spells out exactly what consequences follow.
 
-![Server racks inside a Kenyan data centre with monitoring systems](/images/dc-servers-racks.png)
+![Server racks inside a Kenyan data centre with monitoring systems](/images/dc-gpu-cluster-3.webp)
 
 For any business placing IT equipment in a [colocation facility in Kenya](/articles/what-is-colocation-kenya), the SLA is arguably the single most important document you will sign. It transforms vague marketing promises like "we never go down" into measurable, enforceable commitments. Without a solid SLA, you have no contractual recourse when things go wrong — and in the data centre world, things eventually do.
 
@@ -126,7 +126,7 @@ Beyond initial response, SLAs should define **resolution timeframes** for differ
 
 For [understanding data centre tier ratings](/articles/data-centre-tier-ratings-explained) and their associated network SLAs, the guarantee typically covers carrier diversity, latency to major internet exchange points like the **Kenya Internet Exchange Point (KIXP)**, and bandwidth throughput. Most Kenyan colocation providers guarantee **99.9% to 99.99% network availability**.
 
-![Redundant power systems in a colocation facility](/images/dc-power-systems.webp)
+![Redundant power systems in a colocation facility](/images/dc-chillers-roof-2.webp)
 
 ## How SLAs Relate to Data Centre Tier Ratings
 
@@ -183,7 +183,7 @@ The major Kenyan data centre operators each take a different approach to their p
 
 ### The Power Reliability Challenge
 
-![Structured cabling and network infrastructure in a data centre](/images/racks-cabling.webp)
+![Structured cabling and network infrastructure in a data centre](/images/submarine-cable-diagram.webp)
 
 Kenya's power infrastructure has improved significantly, but [UPS and backup power systems remain critical](/articles/ups-backup-power-kenyan-data-centres) for SLA compliance. Kenya Power's grid reliability in Nairobi has improved with underground cabling projects, but regional variations persist. A data centre in Mombasa may face different grid challenges than one in Nairobi's Industrial Area.
 
@@ -215,7 +215,7 @@ This is not unique to Kenya — it is a global industry practice. However, it is
 - **Look for weasel words.** Phrases like "target," "aim," or "design intent" are not guarantees.
 - **Cross-reference with the ITIL framework.** The [ITIL service management best practices](https://www.axelos.com/certifications/itil-service-management) provide a useful benchmark for evaluating whether an SLA is comprehensive and professionally structured.
 
-![Business professionals reviewing data centre contracts](/images/dc-business-investment.png)
+![Business professionals reviewing data centre contracts](/images/dc-chillers-roof.webp)
 
 ## What to Negotiate in Your SLA
 

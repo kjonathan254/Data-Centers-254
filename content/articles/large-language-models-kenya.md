@@ -15,26 +15,26 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "AI & Machine Learning"
 cluster: "AI"
-og_image: "/images/og-default.png"
+og_image: "/images/whats-inside-ai-data-center-wide.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/dc-gpu-cluster-2.webp"
     alt: "GPU servers powering LLM inference in a Kenyan data centre"
     caption: "LLM inference requires specialised GPU infrastructure that is still scarce in Kenyan data centres"
     position: "hero"
-  - src: "/images/dc-networking.webp"
+  - src: "/images/dc-fibre-optics.webp"
     alt: "High-speed data centre networking for AI workloads"
     caption: "Low-latency networking between GPU nodes is essential for distributed LLM inference"
     position: "section-break"
-  - src: "/images/dc-business-investment.png"
+  - src: "/images/dc-server-chip-wide.webp"
     alt: "Business investment in data centre infrastructure"
     caption: "Kenyan enterprises are increasingly investing in AI-ready infrastructure to support LLM deployment"
     position: "inline"
-  - src: "/images/nairobi-skyline.webp"
+  - src: "/images/dc-server-chip-3.webp"
     alt: "Nairobi skyline representing Kenya's growing AI ecosystem"
     caption: "Nairobi's tech ecosystem is the driving force behind LLM adoption in East Africa"
     position: "infographic"
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/dc-server-chip-2.webp"
     alt: "Data centre facility in Nairobi supporting AI workloads"
     caption: "Colocation facilities in Nairobi are beginning to offer GPU-capable hosting for local LLM inference"
     position: "inline"
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/large-language-models-kenya"
 ---
 
-![GPU servers powering LLM inference in a Kenyan data centre](/images/ai-gpu-servers.png)
+![GPU servers powering LLM inference in a Kenyan data centre](/images/dc-gpu-cluster-2.webp)
 
 ## The LLM Revolution Reaches Kenya
 
@@ -102,7 +102,7 @@ However, government adoption faces additional hurdles beyond infrastructure. **D
 
 Kenya's vibrant media sector has embraced generative AI tools for content drafting, translation between English and Kiswahili, and social media management. Nation Media Group, The Standard Group, and several digital-native publishers have adopted AI-assisted workflows. While this raises important questions about journalistic integrity and attribution, the productivity gains in fast-paced newsrooms are driving rapid adoption.
 
-![High-speed data centre networking for AI workloads](/images/dc-networking.webp)
+![High-speed data centre networking for AI workloads](/images/dc-fibre-optics.webp)
 
 ## The Infrastructure Challenge: Inference vs Training
 
@@ -120,7 +120,7 @@ Inference — using a trained model to generate responses — requires far less 
 
 This is where Kenya's opportunity lies. A single GPU server, collocated in a Nairobi data centre with adequate power and cooling, can serve LLM inference for dozens of enterprise clients. The capital investment is in the range of USD 100,000–300,000 for the GPU hardware, plus ongoing colocation and connectivity costs — well within the budget of Kenya's larger enterprises and technology companies.
 
-![Business investment in data centre infrastructure](/images/dc-business-investment.png)
+![Business investment in data centre infrastructure](/images/dc-server-chip-wide.webp)
 
 ## The Emerging Kenyan AI Ecosystem
 
@@ -157,7 +157,7 @@ The Office of the Data Protection Commissioner (ODPC) has issued guidance indica
 
 For sectors handling particularly sensitive data — banking (regulated by the Central Bank of Kenya), healthcare (regulated by the Ministry of Health), and government services — the case for local inference infrastructure is strongest. These organisations cannot easily justify sending citizen or customer data to foreign APIs, creating a clear market opportunity for GPU-equipped data centre facilities in Nairobi.
 
-![Nairobi skyline representing Kenya's growing AI ecosystem](/images/nairobi-skyline.webp)
+![Nairobi skyline representing Kenya's growing AI ecosystem](/images/dc-server-chip-3.webp)
 
 ## What Infrastructure Would Kenya Need?
 
@@ -192,7 +192,7 @@ Kenya's most significant long-term constraint on LLM adoption is not hardware �
 
 Despite these programmes, demand for AI skills in Kenya far outstrips supply. The Kenya ICT Board estimates that the country needs at least 10,000 additional AI-skilled professionals by 2028 to meet industry demand — a target that will require significant scaling of current training efforts.
 
-![Data centre facility in Nairobi supporting AI workloads](/images/hero-dc-nairobi.png)
+![Data centre facility in Nairobi supporting AI workloads](/images/dc-server-chip-2.webp)
 
 ## The Road Ahead
 
