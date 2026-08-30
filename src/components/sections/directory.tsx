@@ -10,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle,
 } from "@/components/ui/dialog";
@@ -52,6 +53,16 @@ const statusCfg: Record<string, { color: string; bg: string; icon: LucideIcon }>
   Planned: { color: "text-muted-foreground", bg: "bg-accent/50 border-border", icon: Clock },
   Announced: { color: "text-amber-500", bg: "bg-amber-500/10 border-amber-500/25", icon: Megaphone },
 };
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function fmtVerified(v: string | null): string | null {
+  if (!v) return null;
+  const [y, m] = v.split("-");
+  const mi = parseInt(m, 10) - 1;
+  if (!y || isNaN(mi) || !MONTHS[mi]) return v;
+  return `${MONTHS[mi]} ${y}`;
+}
 
 export default function DirectorySection({ initialSearch = "" }: { initialSearch?: string }) {
   const [data, setData] = useState<DirData | null>(null);
@@ -99,6 +110,15 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
             facility verified and sourced — the asset that makes Data Centre
             254 different.
           </p>
+          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+            <span className="flex items-center gap-1.5">
+              <Shield className="size-3.5 text-neon" />
+              Dataset last verified: August 2026
+            </span>
+            <Link href="/methodology" className="text-cyan hover:underline">
+              How we verify →
+            </Link>
+          </div>
         </div>
 
         {/* Stats */}
@@ -179,7 +199,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                   {f.description && <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{f.description}</p>}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/30">
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><MapPin className="size-3" />{f.city}</div>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span>{f.connectivityFacility.length} connections</span>{f.certifications.length > 0 && <span>{f.certifications.length} certs</span>}</div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span>{f.connectivityFacility.length} connections</span>{f.certifications.length > 0 && <span>{f.certifications.length} certs</span>}{f.lastVerified && <span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span>}</div>
                   </div>
                 </button>
               );
@@ -191,7 +211,11 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           <p className="mt-10 text-xs text-muted-foreground/60 max-w-2xl leading-relaxed">
             Data sourced from operator websites, press releases, and publicly
             available information. Every data point follows: Claim, Source,
-            Date Verified, Independent Evidence. Last verified: August 2026.
+            Date Verified, Independent Evidence. Last verified: August 2026.{" "}
+            <Link href="/methodology" className="text-cyan/80 hover:text-cyan hover:underline">
+              Read the full methodology
+            </Link>
+            .
           </p>
         )}
       </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { getClusterImage } from "@/lib/imagery";
 
 const clusterMeta: Record<string, { label: string; entry: string; route: string }> = {
@@ -50,6 +50,7 @@ interface Cluster {
   cluster: string;
   count: number;
   firstArticle?: { title: string; slug: string; reading_time: string };
+  lastUpdated?: string;
 }
 
 /**
@@ -107,6 +108,16 @@ export default function ReadTheLibraryInner({ clusters }: { clusters: Cluster[] 
                     <p className="mt-2.5 text-sm leading-relaxed text-foreground/90">
                       {meta.entry}
                     </p>
+                    {cluster.lastUpdated && (
+                      <p className="mt-3 flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-muted-foreground/70">
+                        <Clock className="size-3" />
+                        Updated{" "}
+                        {new Date(cluster.lastUpdated).toLocaleDateString("en-KE", {
+                          year: "numeric",
+                          month: "short",
+                        })}
+                      </p>
+                    )}
                     <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-all group-hover:gap-2 group-hover:text-cyan">
                       Browse
                       <ArrowRight className="size-3.5" />

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { siteUrl } from "@/lib/site";
@@ -169,6 +170,7 @@ export default function RootLayout({
       >
         <GoogleAnalytics gaId="G-GDS6XW6RS3" />
         {children}
+        <Analytics />
         <Toaster />
       </body>
     </html>

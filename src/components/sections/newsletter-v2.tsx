@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  subscribed: "You're on the list. We'll notify you when DC254 Brief launches.",
+  subscribed: "You're on the list — the next Brief lands Monday morning.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -44,14 +44,31 @@ export default function NewsletterV2() {
     <section className="section-y border-t border-border/40">
       <div className="container-site">
         <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
-          <p className="eyebrow">DC254 Brief</p>
+          <p className="eyebrow">DC254 Brief · Weekly</p>
           <h2 className="h-display-sm mt-3 text-foreground">
-            Know what powers Kenya.
+            Know what changed in Kenya&apos;s data centre industry — every
+            Monday.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            A concise weekly briefing on Kenya&apos;s digital infrastructure —
-            new facilities, cables, policy and jobs.
+            One short email each Monday morning: new facilities verified,
+            licensing and cable updates, policy changes — each with its source
+            and what it means.
           </p>
+
+          <ul className="mx-auto mt-5 max-w-sm space-y-2 text-left text-sm text-foreground/90">
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
+              See new facility verifications before they hit the directory
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
+              Licence, cable and grid changes explained in plain language
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
+              What each change means for jobs, buyers and builders
+            </li>
+          </ul>
 
           {state === "subscribed" || state === "already" ? (
             <p
@@ -81,9 +98,12 @@ export default function NewsletterV2() {
                   disabled={state === "submitting"}
                   className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {state === "submitting" ? "Subscribing…" : "Subscribe"}
+                  {state === "submitting" ? "Subscribing…" : "Get the Brief"}
                 </button>
               </form>
+              <p className="mt-3 text-xs text-muted-foreground/60">
+                Free, no spam, unsubscribe anytime.
+              </p>
               {state === "error" && (
                 <p className="mt-3 text-xs text-destructive" role="alert">
                   {messages.error}

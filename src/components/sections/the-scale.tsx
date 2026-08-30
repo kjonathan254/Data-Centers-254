@@ -8,7 +8,14 @@ import { ArrowRight } from "lucide-react";
  * Server component.
  */
 export default function TheScale() {
-  const metrics = [
+  const metrics: {
+    value: string;
+    label: string;
+    note: string;
+    source: string;
+    href?: string;
+    linkLabel?: string;
+  }[] = [
     {
       value: "6",
       label: "Active submarine cables",
@@ -24,14 +31,16 @@ export default function TheScale() {
     {
       value: "2",
       label: "Nairobi + Mombasa",
-      note: "The two cities where nearly all of Kenya's data centre capacity is physically located.",
+      note: "The two cities where nearly all of Kenya's data centre capacity is physically located. Cables, power and demand explain why.",
       source: "DC254 database",
+      href: "/articles/why-data-centres-cluster-nairobi-mombasa",
+      linkLabel: "Read the investigation",
     },
     {
-      value: "<2s",
-      label: "M-Pesa round trip",
-      note: "Safaricom reports average USSD latency under two seconds — phone to data centre and back.",
-      source: "Estimate",
+      value: "~14 MW",
+      label: "Installed IT capacity",
+      note: "Combined operational IT load across Kenya's tracked facilities — from edge rooms to 4.5 MW hyperscale halls.",
+      source: "DC254 database",
     },
   ];
 
@@ -72,12 +81,29 @@ export default function TheScale() {
               <dd className="stat-value">{m.value}</dd>
               <dt className="mt-2 text-sm font-medium text-foreground">{m.label}</dt>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{m.note}</p>
+              {m.href && (
+                <Link
+                  href={m.href}
+                  className="mt-2.5 inline-flex items-center gap-1 text-xs font-medium text-cyan transition-all hover:gap-2"
+                >
+                  {m.linkLabel}
+                  <ArrowRight className="size-3.5" />
+                </Link>
+              )}
               <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-cyan/50">
                 {m.source}
               </p>
             </div>
           ))}
         </dl>
+
+        <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
+          How these numbers are verified:{" "}
+          <Link href="/methodology" className="text-cyan hover:underline">
+            read the DC254 methodology
+          </Link>
+          . Directory data last verified August 2026.
+        </p>
 
         {/* Global context — where Kenya sits in the world's largest facilities */}
         <div className="mt-16 grid items-center gap-10 lg:grid-cols-[1fr_340px] lg:gap-14">
@@ -117,7 +143,12 @@ export default function TheScale() {
             </div>
             <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">
               The world&apos;s largest data centre campuses, per industry
-              rankings (2026). Figures as reported.
+              rankings (2026). Figures as reported by operators and trade
+              press — see{" "}
+              <Link href="/methodology" className="text-cyan hover:underline">
+                how we handle reported data
+              </Link>
+              .
             </figcaption>
           </figure>
         </div>

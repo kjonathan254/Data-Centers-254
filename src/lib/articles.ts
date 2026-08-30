@@ -197,6 +197,8 @@ export interface ClusterSummary {
     slug: string;
     reading_time: string;
   };
+  /** Most recent article date in this cluster (max of updated/published), ISO string. */
+  lastUpdated?: string;
 }
 
 export function getClusterSummaries(): ClusterSummary[] {
@@ -210,17 +212,25 @@ export function getClusterSummaries(): ClusterSummary[] {
     map.set(c, existing);
   }
 
-  return Array.from(map.entries()).map(([cluster, articles]) => ({
-    cluster,
-    count: articles.length,
-    firstArticle: articles[0]
-      ? {
-          title: articles[0].frontmatter.title,
-          slug: articles[0].frontmatter.slug,
-          reading_time: articles[0].frontmatter.reading_time,
-        }
-      : undefined,
-  }));
+  return Array.from(map.entries()).map(([cluster, articles]) => {
+    const latest = articles.reduce((max, a) => {
+      const fm = a.frontmatter;
+      const d = new Date(fm.updated_date > fm.published_date ? fm.updated_date : fm.published_date);
+      return d > max ? d : max;
+    }, new Date(0));
+    return {
+      cluster,
+      count: articles.length,
+      firstArticle: articles[0]
+        ? {
+            title: articles[0].frontmatter.title,
+            slug: articles[0].frontmatter.slug,
+            reading_time: articles[0].frontmatter.reading_time,
+          }
+        : undefined,
+      lastUpdated: latest.getTime() > 0 ? latest.toISOString() : undefined,
+    };
+  });
 }
 
 // ─── Helpers: slugs for static generation ────────────────────────────────────

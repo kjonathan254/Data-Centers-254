@@ -67,6 +67,13 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
   const config = clusterConfig[cluster] || clusterConfig.Beginner;
   const heroImg = getClusterImage(cluster);
 
+  const lastUpdated = articles.reduce((max, a) => {
+    const fm = a.frontmatter;
+    const d = new Date(fm.updated_date > fm.published_date ? fm.updated_date : fm.published_date);
+    return d > max ? d : max;
+  }, new Date(0));
+  const showUpdated = lastUpdated.getTime() > 0;
+
   return (
     <div>
       {/* Photographic page header */}
@@ -94,6 +101,15 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
           </p>
           <p className="mt-5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
             {articles.length} article{articles.length !== 1 ? "s" : ""}
+            {showUpdated && (
+              <>
+                {" \u00b7 "}Updated{" "}
+                {lastUpdated.toLocaleDateString("en-KE", {
+                  year: "numeric",
+                  month: "short",
+                })}
+              </>
+            )}
           </p>
         </div>
       </header>

@@ -16,6 +16,7 @@ const topicLinks = [
 
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
+  { label: "Methodology", href: "/methodology" },
   { label: "Glossary", href: "/glossary" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },
