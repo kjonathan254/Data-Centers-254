@@ -82,6 +82,21 @@ function NairobiMapInner({ dimmed, onFacility }: {
       <path d={NBO_PROVINCE} fill="oklch(0.78 0.14 195 / 0.07)" stroke={CYAN} strokeWidth={1.8} strokeOpacity={0.85} strokeDasharray="0" />
       <text x={NBO_FRAME.W - 20} y={NBO_FRAME.H - 18} textAnchor="end" fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.35)">boundary: Nairobi province · positions schematic</text>
 
+      {/* district labels */}
+      {([
+        ["WESTLANDS", -1.2675, 36.802],
+        ["CBD", -1.287, 36.829],
+        ["UPPER HILL", -1.3035, 36.81],
+        ["KILIMANI", -1.2925, 36.778],
+        ["INDUSTRIAL AREA", -1.3165, 36.855],
+      ] as [string, number, number][]).map(([name, lat, lng]) => {
+        const { x, y } = nboP(lat, lng);
+        return (
+          <text key={name} x={x} y={y} textAnchor="middle" fontSize={12.5} fontWeight={550}
+            letterSpacing={2.2} fill="oklch(0.78 0.14 195 / 0.4)" className="select-none">{name}</text>
+        );
+      })}
+
       {/* Mombasa Road corridor */}
       <path d={corridor} fill="none" stroke="oklch(0.93 0.01 260 / 0.16)" strokeWidth={10} strokeLinecap="round" />
       <path d={corridor} fill="none" stroke="oklch(0.93 0.01 260 / 0.3)" strokeWidth={1.4} strokeDasharray="6 5" />
@@ -105,7 +120,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
       </g>
 
       {/* markers on top */}
-      {items.map((f) => {
+      {items.map((f, idx) => {
         const { x, y } = nboP(f.lat, f.lng);
         const active = hover === f.id;
         const dim = dimmed.has(f.id);
@@ -114,6 +129,12 @@ function NairobiMapInner({ dimmed, onFacility }: {
             onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)}
             onClick={() => onFacility(f)}>
             {active && <circle cx={x} cy={y} r={13} fill={CYAN} fillOpacity={0.15} />}
+            {f.status === "Operational" && (
+              <circle cx={x} cy={y} r={6.5} fill="none" stroke={STATUS_COLOR[f.status]} strokeWidth={1.2}>
+                <animate attributeName="r" from="7" to="17" dur="2.6s" begin={`${(idx % 6) * 0.42}s`} repeatCount="indefinite" />
+                <animate attributeName="stroke-opacity" from="0.5" to="0" dur="2.6s" begin={`${(idx % 6) * 0.42}s`} repeatCount="indefinite" />
+              </circle>
+            )}
             {f.status === "Announced" ? (
               <>
                 <circle cx={x} cy={y} r={8} fill="oklch(0.2 0.05 250 / 0.9)" stroke={STATUS_COLOR.Announced} strokeWidth={1.8} strokeDasharray="4 3" />
@@ -157,6 +178,14 @@ function MombasaMapInner({ dimmed, onFacility }: {
       role="img"
       aria-label="Map of Mombasa's data centre and submarine cable landing stations"
     >
+      <defs>
+        <linearGradient id="msaOcean" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="oklch(0.35 0.07 235)" stopOpacity="0" />
+          <stop offset="100%" stopColor="oklch(0.35 0.07 235)" stopOpacity="0.4" />
+        </linearGradient>
+      </defs>
+      {/* ocean wash on the seaward side */}
+      <rect x={MSA_FRAME.W * 0.55} y="0" width={MSA_FRAME.W * 0.45} height={MSA_FRAME.H} fill="url(#msaOcean)" />
       <path d={MSA_LAND} fill="oklch(0.78 0.14 195 / 0.08)" stroke={CYAN} strokeWidth={1.8} strokeOpacity={0.8} />
       <text x={MSA_FRAME.W - 20} y={MSA_FRAME.H - 18} textAnchor="end" fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.35)">coastline: Natural Earth · cable routes schematic</text>
       <text x={600} y={470} fontSize={24} fontStyle="italic" fill="oklch(0.78 0.06 230 / 0.5)">Indian Ocean</text>
@@ -174,6 +203,11 @@ function MombasaMapInner({ dimmed, onFacility }: {
             onMouseEnter={() => setHoverCable(c.id)} onMouseLeave={() => setHoverCable(null)}>
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 0.25 : 0.12} strokeWidth={7} strokeLinecap="round" />
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 1 : 0.8} strokeWidth={2.2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
+            {c.live && (
+              <path d={d} fill="none" stroke="oklch(0.95 0.06 195)" strokeOpacity={0.85}
+                strokeWidth={2.8} strokeLinecap="round" pathLength={100}
+                className="dc254-flow" opacity={dim ? 0 : 1} />
+            )}
             <circle cx={end.x} cy={end.y} r={active ? 5 : 3.5} fill={c.live ? CYAN : AMBER} />
             <text x={end.x + 14} y={end.y + 4} fontSize={14.5} fontWeight={550} fill={c.live ? "oklch(0.93 0.01 260 / 0.92)" : AMBER}>{c.label}</text>
             <text x={end.x + 14} y={end.y + 20} fontSize={11.5} fill="oklch(0.93 0.01 260 / 0.45)">{c.year}{c.live ? " · live" : ""}</text>

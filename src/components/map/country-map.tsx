@@ -49,10 +49,37 @@ function CountryMapInner({
           <stop offset="0%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0.16" />
           <stop offset="100%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0" />
         </radialGradient>
+        <filter id="clusterGlow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="7" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <linearGradient id="sweepGrad" gradientUnits="userSpaceOnUse"
+          x1={nbo.x} y1={nbo.y} x2={nbo.x + 64} y2={nbo.y - 14}>
+          <stop offset="0%" stopColor={CYAN} stopOpacity="0.22" />
+          <stop offset="100%" stopColor={CYAN} stopOpacity="0" />
+        </linearGradient>
       </defs>
 
       {/* ambient glow over Kenya */}
       <rect x="0" y="0" width={LW} height={LH} fill="url(#kenyaGlow)" />
+
+      {/* subtle graticule */}
+      <g stroke="oklch(0.78 0.14 195 / 0.06)" strokeWidth={0.8}>
+        {[30, 32, 34, 36, 38, 40, 42, 44].map((lng) => {
+          const x = proj(0, lng).x;
+          return <line key={`gx${lng}`} x1={x} y1={0} x2={x} y2={LH} />;
+        })}
+        {[-6, -4, -2, 0, 2, 4].map((lat) => {
+          const y = proj(lat, 0).y;
+          return <line key={`gy${lat}`} x1={0} y1={y} x2={LW} y2={y} />;
+        })}
+      </g>
+
+      {/* equator label */}
+      <text x={LW - 14} y={proj(0, 0).y - 7} textAnchor="end" fontSize={15} letterSpacing={2.5} fill="oklch(0.78 0.05 230 / 0.4)">EQUATOR</text>
 
       {/* context countries */}
       {COUNTRY_SHAPES.filter((s) => !s.focus).map((s) => (
@@ -113,6 +140,11 @@ function CountryMapInner({
           <g key={c.id} opacity={dim ? 0.18 : 1}>
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={0.14} strokeWidth={6} strokeLinecap="round" />
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={c.live ? 0.85 : 0.7} strokeWidth={2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
+            {c.live && (
+              <path d={d} fill="none" stroke="oklch(0.95 0.06 195)" strokeOpacity={0.9}
+                strokeWidth={2.6} strokeLinecap="round" pathLength={100}
+                className="dc254-flow" opacity={dim ? 0 : 1} />
+            )}
           </g>
         );
       })}
@@ -138,6 +170,19 @@ function CountryMapInner({
         );
       })}
 
+      {/* landing station — Nyali, Mombasa */}
+      {(() => {
+        const ls = proj(-4.04, 39.715);
+        const dim = dimmed.has("datacenter");
+        return (
+          <g opacity={dim ? 0.25 : 1}>
+            <path d={`M${ls.x},${ls.y - 7} L${ls.x + 7},${ls.y} L${ls.x},${ls.y + 7} L${ls.x - 7},${ls.y} Z`}
+              fill={CYAN} fillOpacity={0.9} stroke="oklch(0.1 0.02 250)" strokeWidth={1.1} />
+            <text x={ls.x} y={ls.y + 24} textAnchor="middle" fontSize={15} fill="oklch(0.93 0.01 260 / 0.6)">Nyali landing station</text>
+          </g>
+        );
+      })()}
+
       {/* regional city clusters */}
       {CONTEXT_CITIES.map((city) => {
         const { x, y } = proj(city.lat, city.lng);
@@ -152,9 +197,20 @@ function CountryMapInner({
         );
       })}
 
+      {/* radar sweep behind Nairobi cluster */}
+      <g opacity={dimmed.has("datacenter") ? 0.2 : 0.85}>
+        <path
+          d={`M${nbo.x},${nbo.y} L${nbo.x + 66},${nbo.y} A66,66 0 0 0 ${nbo.x + 46},${nbo.y - 47} Z`}
+          fill="url(#sweepGrad)">
+          <animateTransform attributeName="transform" type="rotate"
+            from={`0 ${nbo.x} ${nbo.y}`} to={`360 ${nbo.x} ${nbo.y}`}
+            dur="11s" repeatCount="indefinite" />
+        </path>
+      </g>
+
       {/* Mombasa cluster — click to zoom */}
-      <g className="cursor-pointer" onClick={onOpenMombasa} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
-        <circle cx={msa.x} cy={msa.y} r={17} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2} />
+      <g className="map-cluster cursor-pointer" onClick={onOpenMombasa} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
+        <circle cx={msa.x} cy={msa.y} r={17} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2} filter="url(#clusterGlow)" />
         <circle cx={msa.x} cy={msa.y} r={17} fill="none" stroke={CYAN} strokeOpacity={0.4} strokeWidth={1}>
           <animate attributeName="r" from="17" to="30" dur="2.2s" repeatCount="indefinite" />
           <animate attributeName="stroke-opacity" from="0.5" to="0" dur="2.2s" repeatCount="indefinite" />
@@ -165,8 +221,8 @@ function CountryMapInner({
       </g>
 
       {/* Nairobi cluster — click to zoom */}
-      <g className="cursor-pointer" onClick={onOpenNairobi} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
-        <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2.4} />
+      <g className="map-cluster cursor-pointer" onClick={onOpenNairobi} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
+        <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2.4} filter="url(#clusterGlow)" />
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="none" stroke={CYAN} strokeOpacity={0.45} strokeWidth={1.2}>
           <animate attributeName="r" from="21" to="38" dur="2s" repeatCount="indefinite" />
           <animate attributeName="stroke-opacity" from="0.55" to="0" dur="2s" repeatCount="indefinite" />
@@ -174,6 +230,13 @@ function CountryMapInner({
         <text x={nbo.x} y={nbo.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={17} fontWeight={700} fill={CYAN}>13</text>
         <text x={nbo.x} y={nbo.y + 46} textAnchor="middle" fontSize={24} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.95)">Nairobi</text>
         <text x={nbo.x} y={nbo.y + 65} textAnchor="middle" fontSize={19} fill="oklch(0.93 0.01 260 / 0.6)">13 data centres</text>
+      </g>
+
+      {/* compass */}
+      <g opacity={0.55} transform={`translate(${LW - 46}, 52)`}>
+        <circle r={17} fill="none" stroke="oklch(0.93 0.01 260 / 0.35)" strokeWidth={1} />
+        <path d="M0,-13 L4.5,4 L0,1.5 L-4.5,4 Z" fill={CYAN} />
+        <text y={-22} textAnchor="middle" fontSize={13} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.7)">N</text>
       </g>
     </svg>
   );

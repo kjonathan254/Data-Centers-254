@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X, Search, List, MapIcon, ArrowRight, Zap, Cable, Network,
-  ChevronRight, Building2, RotateCcw, Globe2,
+  ChevronRight, Building2, RotateCcw,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -341,7 +341,18 @@ export default function EastAfricaInfrastructureMap() {
           <>
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px] items-start">
             <div className="relative">
-              <div className="relative bg-[#070d18] rounded-xl border border-border/30 overflow-hidden h-[480px] sm:h-[600px] md:h-[740px]">
+              <div
+                className="relative rounded-xl border border-border/30 overflow-hidden h-[480px] sm:h-[600px] md:h-[740px]"
+                style={{ background: "radial-gradient(120% 90% at 50% 38%, #0a1526 0%, #070d18 55%, #04080e 100%)" }}
+              >
+              {/* faint tech grid */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundImage: "linear-gradient(oklch(0.78 0.14 195 / 0.045) 1px, transparent 1px), linear-gradient(90deg, oklch(0.78 0.14 195 / 0.045) 1px, transparent 1px)",
+                  backgroundSize: "54px 54px",
+                }}
+              />
               {/* breadcrumb / back */}
               <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5">
                 {mode !== "country" && (
@@ -350,8 +361,11 @@ export default function EastAfricaInfrastructureMap() {
                     <RotateCcw className="w-3 h-3" /> East Africa
                   </button>
                 )}
-                <span className="flex items-center gap-1 text-xs bg-[#0b1424]/85 border border-cyan/20 text-cyan rounded-md px-2.5 py-1.5 backdrop-blur">
-                  <Globe2 className="w-3 h-3" />
+                <span className="flex items-center gap-1.5 text-xs bg-[#0b1424]/85 border border-cyan/20 text-cyan rounded-md px-2.5 py-1.5 backdrop-blur">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full rounded-full opacity-60 animate-ping" style={{ background: NEON }} />
+                    <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: NEON }} />
+                  </span>
                   {mode === "country" ? "East Africa" : mode === "nairobi" ? "Nairobi metro" : "Mombasa metro"}
                   {mode !== "country" && <ChevronRight className="w-3 h-3" />}
                 </span>
@@ -378,6 +392,12 @@ export default function EastAfricaInfrastructureMap() {
                   {mode === "mombasa" && <MombasaMap dimmed={metroDimmed} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
                 </motion.div>
               </AnimatePresence>
+
+              {/* vignette */}
+              <div
+                className="absolute inset-0 pointer-events-none z-[5]"
+                style={{ boxShadow: "inset 0 0 110px 24px rgba(3, 6, 12, 0.72)" }}
+              />
 
               {/* Panels */}
               <AnimatePresence>

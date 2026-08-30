@@ -392,3 +392,31 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ─── DC254 infrastructure map animations ───────────────────────────────── */
+@keyframes dc254-flow {
+  to { stroke-dashoffset: -100; }
+}
+.dc254-flow {
+  stroke-dasharray: 4 96;
+  animation: dc254-flow 4.5s linear infinite;
+}
+.dc254-flow-slow {
+  stroke-dasharray: 2.5 97.5;
+  animation: dc254-flow 9s linear infinite;
+}
+@keyframes dc254-breathe {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.9; }
+}
+.dc254-breathe {
+  animation: dc254-breathe 3.2s ease-in-out infinite;
+}
+.map-cluster {
+  transition: transform 0.25s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.map-cluster:hover {
+  transform: scale(1.12);
+}
