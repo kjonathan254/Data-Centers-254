@@ -34,6 +34,11 @@ images:
     alt: "Challenges in internet speed distribution"
     caption: "The urban-rural digital divide means that Nairobi's internet speeds are world-class while some rural areas still lack reliable connectivity"
     position: "inline"
+  - src: "/images/diagram-satellite-connector-types.webp"
+    alt: "Chart of connector types used in satellite and RF communication links"
+    caption: "Beyond fibre and microwave, satellite links keep remote Kenyan sites online — and every RF chain depends on choosing the right connector at each joint."
+    position: "diagram"
+
 internal_links:
   - text: "fibre optic networks"
     href: "/articles/fibre-optic-networks-kenya-data-centres"
@@ -89,6 +94,8 @@ Within Africa, Kenya typically ranks 3rd-5th for both mobile and fixed speeds. E
 ## The Speed Chain: Why Every Link Matters
 
 Internet speed experienced by the end user is determined by the slowest link in a chain that connects the user's device to the server in a data centre. Understanding this chain is essential for understanding where speed improvements can be made.
+
+![Chart of connector types used in satellite and RF communication links](/images/diagram-satellite-connector-types.webp)
 
 ### The Last Mile (User to Network)
 

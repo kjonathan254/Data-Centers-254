@@ -26,6 +26,11 @@ images:
     alt: "Nairobi skyline"
     caption: "Safaricom's Waiyaki Way facility is a cornerstone of Nairobi's digital infrastructure"
     position: "section-break"
+  - src: "/images/diagram-telecom-mast-anatomy.webp"
+    alt: "Labelled diagram of a telecommunications mast and its receiver equipment"
+    caption: "From panel antennas to GPS timing and feeder cables, every element on a mast exists to keep mobile traffic flowing toward the core — and M-Pesa never sleeps."
+    position: "diagram"
+
 internal_links:
   - text: "data centre directory"
     href: "/directory"
@@ -81,6 +86,8 @@ At 1.5 MW and 120 racks, the Waiyaki Way facility is modest by comparison to the
 ## Workloads: M-Pesa, Mobile Network Core, and Enterprise Cloud
 
 The Waiyaki Way data centre supports three primary workload categories, each of which would justify a dedicated facility on its own.
+
+![Labelled diagram of a telecommunications mast and its receiver equipment](/images/diagram-telecom-mast-anatomy.webp)
 
 ### M-Pesa Transaction Processing
 

@@ -37,6 +37,11 @@ images:
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key
     East African node
   position: inline
+- src: /images/diagram-network-switch-types.webp
+  alt: Diagram comparing the network switch types that move traffic inside a data centre
+  caption: From unmanaged desktop switches to stackable Layer 3 chassis — cross-connect and peering ecosystems like KIXP run on managed Layer 2 and Layer 3 switching.
+  position: diagram
+
 internal_links:
 - text: Fibre Optic Networks Kenya Data Centres
   href: /articles/fibre-optic-networks-kenya-data-centres
@@ -188,6 +193,8 @@ For a mid-sized ISP with 10 Gbps of total traffic, if 7 Gbps can be peered local
 ## Data Centre Cross-Connects: Direct Connections Within Facilities
 
 ### What Is a Cross-Connect?
+
+![Diagram comparing the network switch types that move traffic inside a data centre](/images/diagram-network-switch-types.webp)
 
 A **cross-connect** is a physical cable — typically fibre optic or copper — that directly links one party's equipment to another's within the same data centre. Cross-connects are the fundamental building block of data centre interconnection.
 

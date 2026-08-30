@@ -35,6 +35,11 @@ images:
   caption: Lithium-ion batteries are rapidly replacing traditional lead-acid in new
     data centre builds across Africa.
   position: inline
+- src: /images/diagram-datacenter-rack-labeled.webp
+  alt: Labelled diagram of a data centre rack with patch panel, switch, firewall, servers and UPS
+  caption: In a typical rack layout the UPS and PDU sit low in the stack — the last line of defence between the grid and your workload.
+  position: diagram
+
 internal_links:
 - text: Kenya Power Infrastructure for Data Centres
   href: /articles/kenya-power-infrastructure-data-centres
@@ -297,6 +302,8 @@ As this simplified model shows, the **lithium-ion system is approximately 14% ch
 ## Real Installations in Kenyan Data Centres
 
 **Africa Data Centres (Nairobi)**: Their facilities along Mombasa Road use Schneider Electric Galaxy VX online double-conversion UPS systems in 2N configurations, with both VRLA and increasingly lithium-ion battery options. Their UPS rooms are among the most advanced in East Africa, with real-time monitoring integrated into their building management system.
+
+![Labelled diagram of a data centre rack with patch panel, switch, firewall, servers and UPS](/images/diagram-datacenter-rack-labeled.webp)
 
 **PAIX (Nairobi and Mombasa)**: PAIX facilities use Eaton 9395 UPS systems with N+1 redundancy. Their Mombasa facility, located near the submarine cable landing stations, has particularly robust power systems given its coastal location where power quality can be more variable.
 

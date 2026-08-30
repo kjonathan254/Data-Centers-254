@@ -30,6 +30,11 @@ images:
     alt: "GPU servers requiring high-speed 400G Ethernet cabling for AI workloads"
     caption: "AI and GPU workloads are driving demand for 400G Ethernet cabling standards in Kenyan facilities"
     position: "infographic"
+  - src: "/images/diagram-cable-gauge-breaker-chart.webp"
+    alt: "Chart matching circuit breaker ratings to copper cable cross-sections"
+    caption: "Conductor sizing follows breaker ratings: a 2.5 mm² copper conductor carries a 21 A circuit, while heavy industrial feeders need 16 mm² for 65 A — the same logic governs data centre power cabling."
+    position: "diagram"
+
 internal_links:
   - text: "data centre design and construction"
     href: "/articles/data-centre-design-build-kenya"
@@ -84,6 +89,8 @@ The standard defines generic cabling for customer premises and specifies perform
 ## The Cabling Hierarchy: Backbone, Horizontal, and Patch
 
 ### Backbone Cabling (MDF to IDF)
+
+![Chart matching circuit breaker ratings to copper cable cross-sections](/images/diagram-cable-gauge-breaker-chart.webp)
 
 Backbone cabling connects the Main Distribution Frame to Intermediate Distribution Frames or Horizontal Distribution Areas. In Kenyan data centres, backbone runs predominantly use **fibre optic cable** due to the distances involved and the bandwidth requirements.
 

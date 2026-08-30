@@ -8,7 +8,7 @@ export interface ArticleImage {
   src: string;
   alt: string;
   caption?: string;
-  position: "hero" | "section-break" | "inline" | "infographic" | "comparison";
+  position: "hero" | "section-break" | "inline" | "infographic" | "comparison" | "diagram";
 }
 
 export interface ArticleFaq {

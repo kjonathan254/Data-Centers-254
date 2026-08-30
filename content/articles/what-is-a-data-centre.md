@@ -38,6 +38,11 @@ images:
     alt: "Data centre physical security systems"
     caption: "Tier III and IV facilities use biometric access, 24/7 CCTV, mantraps, and on-site security personnel"
     position: "inline"
+  - src: "/images/diagram-network-rack-components.webp"
+    alt: "Labelled diagram of network rack components from router to PDU"
+    caption: "A standard network rack chains router, firewall, switches, servers, and UPS power backup into one complete signal flow — the building block of every data centre hall."
+    position: "diagram"
+
 internal_links:
   - text: "Kenya's data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"
@@ -71,6 +76,8 @@ Think of a data centre as a factory for data. Instead of assembling physical pro
 ## The Core Components of a Data Centre
 
 A data centre is far more than a room full of computers. It is an integrated system of interconnected infrastructure, each component depending on the others. Remove any one of these systems and the entire facility stops functioning.
+
+![Labelled diagram of network rack components from router to PDU](/images/diagram-network-rack-components.webp)
 
 ### Servers and Storage
 

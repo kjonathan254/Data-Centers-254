@@ -98,6 +98,7 @@ function ArticleImageBlock({ image }: { image: ArticleImage }) {
   const isHero = image.position === "hero";
   const isInfographic = image.position === "infographic";
   const isSectionBreak = image.position === "section-break";
+  const isDiagram = image.position === "diagram";
 
   return (
     <figure
@@ -107,32 +108,45 @@ function ArticleImageBlock({ image }: { image: ArticleImage }) {
           : isSectionBreak || isInfographic
           ? "-mx-4 sm:-mx-6"
           : ""
-      } ${isInfographic ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
+      } ${isInfographic || isDiagram ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
     >
-      <div
-        className={`relative overflow-hidden ${
-          isHero
-            ? "rounded-xl h-48 sm:h-64 lg:h-80"
-            : isSectionBreak
-            ? "rounded-xl h-48 sm:h-56"
-            : isInfographic
-            ? "h-48 sm:h-64"
-            : "rounded-xl h-40 sm:h-48"
-        }`}
-      >
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          className="object-cover"
-          sizes={
+      {isDiagram ? (
+        <div className="bg-surface/60">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={736}
+            height={920}
+            className="w-full h-auto"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+      ) : (
+        <div
+          className={`relative overflow-hidden ${
             isHero
-              ? "(max-width: 1024px) 100vw, 896px"
-              : "(max-width: 768px) 100vw, 768px"
-          }
-          priority={isHero}
-        />
-      </div>
+              ? "rounded-xl h-48 sm:h-64 lg:h-80"
+              : isSectionBreak
+              ? "rounded-xl h-48 sm:h-56"
+              : isInfographic
+              ? "h-48 sm:h-64"
+              : "rounded-xl h-40 sm:h-48"
+          }`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover"
+            sizes={
+              isHero
+                ? "(max-width: 1024px) 100vw, 896px"
+                : "(max-width: 768px) 100vw, 768px"
+            }
+            priority={isHero}
+          />
+        </div>
+      )}
       {image.caption && (
         <figcaption
           className={`text-xs text-muted-foreground mt-2 leading-relaxed ${
@@ -256,7 +270,7 @@ function getMarkdownComponents(images: ArticleImage[]) {
   // Build a map of image src -> caption for rendering inline images from markdown
   const imageMap = new Map<string, ArticleImage>();
   for (const img of images) {
-    if (img.position === "inline" || img.position === "section-break" || img.position === "infographic") {
+    if (img.position === "inline" || img.position === "section-break" || img.position === "infographic" || img.position === "diagram") {
       imageMap.set(img.src, img);
     }
   }

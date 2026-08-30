@@ -30,6 +30,11 @@ images:
     alt: "Edge computing servers processing IoT and AI workloads for 5G applications"
     caption: "Edge nodes handle real-time processing for IoT devices, smart agriculture, and autonomous systems"
     position: "infographic"
+  - src: "/images/diagram-telecom-tower-components.webp"
+    alt: "Labelled diagram of telecom tower components including antennas, RRU and BTS cabinet"
+    caption: "A 5G site concentrates antennas, remote radio units, microwave backhaul, and battery-backed power into one tower — and each dense cluster feeds a nearby edge data centre."
+    position: "diagram"
+
 internal_links:
   - text: "edge computing ecosystem in East Africa"
     href: "/articles/edge-computing-east-africa"
@@ -146,6 +151,8 @@ While fully autonomous vehicles may still be years away in Kenya, the logistics 
 ## Projecting the Scale: How Many Edge Nodes Will Kenya Need?
 
 Estimating the number of MEC nodes required for Kenya's 5G rollout requires benchmarking against more mature markets and adjusting for local conditions:
+
+![Labelled diagram of telecom tower components including antennas, RRU and BTS cabinet](/images/diagram-telecom-tower-components.webp)
 
 **South Korea**, one of the world's most advanced 5G markets with a population of 52 million, has deployed an estimated **1,500-2,000 edge computing nodes** to support its nationwide 5G network. The **United States**, with its vast geography, has seen major operators like Verizon and AT&T deploy edge nodes in over 100 cities, with thousands of nodes planned.
 

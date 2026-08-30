@@ -35,6 +35,11 @@ images:
   alt: Data centre cooling systems including CRAC units and chilled water piping
   caption: Cooling system installation during the MEP phase of data centre construction
   position: inline
+- src: /images/diagram-office-rack-design.webp
+  alt: Diagram of a medium enterprise office rack design with security and switching layers
+  caption: Even an enterprise office rack is designed layer by layer, zone by zone — the same discipline scales up to a Tier III data centre hall.
+  position: diagram
+
 internal_links:
 - text: Data Centre Tier Ratings Explained
   href: /articles/data-centre-tier-ratings-explained
@@ -158,6 +163,8 @@ Developers must evaluate demand for colocation, hyperscale, or hybrid cloud serv
 ## Phase 3: Design Phases
 
 ### Conceptual Design
+
+![Diagram of a medium enterprise office rack design with security and switching layers](/images/diagram-office-rack-design.webp)
 
 The conceptual design phase establishes the facility's overall scope, target tier classification, capacity (in kW or MW), and architectural approach. Key decisions at this stage include whether to build a purpose-built facility or retrofit an existing commercial building — operators like **Africa Data Centres** and **PAIX** (Pan-African Internet Exchange) have taken both approaches in Kenya.
 

@@ -30,6 +30,11 @@ images:
     alt: "Network switches connecting servers"
     caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"
     position: "inline"
+  - src: "/images/diagram-server-rack-42u.webp"
+    alt: "Cutaway diagram of a 42U server rack showing switch, servers, storage and power layout"
+    caption: "A standard 42U rack stacks top-of-rack switching, compute, storage, and dual power feeds into roughly 600 mm of width — multiplied by hundreds, it becomes a data hall."
+    position: "diagram"
+
 internal_links:
   - text: "what a data centre is"
     href: "/articles/what-is-a-data-centre"
@@ -125,5 +130,7 @@ A typical modern rack server for enterprise workloads might have two processors 
 ## Why Servers Live in Data Centres
 
 [As explained in our data centre guide](/articles/what-is-a-data-centre), servers need a specific environment to operate reliably: stable power, precise cooling, physical security, fire protection, and high-speed network connectivity. A server sitting under a desk in an office might work for a small business, but it will not provide the reliability, security, or performance that a data centre environment delivers.
+
+![Cutaway diagram of a 42U server rack showing switch, servers, storage and power layout](/images/diagram-server-rack-42u.webp)
 
 Data centres exist because the collective needs of thousands of servers — for power, cooling, connectivity, and security — are best met by purpose-built facilities with dedicated infrastructure and expert staff. Every server you interact with online lives in a data centre, and understanding what servers are and how they work is the first step to understanding the entire digital infrastructure ecosystem that powers Kenya's economy.

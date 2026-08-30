@@ -38,6 +38,11 @@ images:
     alt: "Data centre facility exterior in Nairobi"
     caption: "Kenya's data centre growth is constrained not by demand but by the available power supply to facilities"
     position: "inline"
+  - src: "/images/diagram-power-chain-grid-to-gpu.webp"
+    alt: "Diagram of data centre electrical infrastructure from the national grid to the GPU rack"
+    caption: "Every AI workload depends on this chain holding together: generation, transmission, the substation, switchgear, UPS conditioning, and finally rack-level PDU distribution."
+    position: "diagram"
+
 internal_links:
   - text: "Kenya data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"
@@ -81,6 +86,8 @@ However, the geothermal resource is geographically fixed in the Rift Valley, app
 ## Understanding Data Centre Power Requirements
 
 Data centres are extraordinary electricity consumers. To understand why power is the binding constraint, it helps to understand the scale of demand:
+
+![Diagram of data centre electrical infrastructure from the national grid to the GPU rack](/images/diagram-power-chain-grid-to-gpu.webp)
 
 - A single server rack typically draws 5-10 kilowatts
 - A small colocation facility with 100 racks needs 0.5-1 megawatt of IT power

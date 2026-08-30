@@ -34,6 +34,11 @@ images:
     alt: "Challenges of edge computing deployment"
     caption: "Power reliability, physical security, and connectivity in remote locations are the primary challenges for edge computing in East Africa"
     position: "inline"
+  - src: "/images/diagram-tower-installation-rru-aau.webp"
+    alt: "Diagram of AAU and RRU equipment mounted on a telecom tower pole"
+    caption: "Modern sites swap bulky RF feeder runs for compact AAU and RRU units mounted at height — edge compute follows the same space-constrained mounting logic."
+    position: "diagram"
+
 internal_links:
   - text: "Nairobi vs Mombasa data centre locations"
     href: "/articles/nairobi-vs-mombasa-data-centre-locations"
@@ -115,6 +120,8 @@ These enterprise edge deployments are typically small — a rack or two of equip
 ## Edge Computing Form Factors
 
 Edge computing facilities come in various form factors, each suited to different deployment scenarios.
+
+![Diagram of AAU and RRU equipment mounted on a telecom tower pole](/images/diagram-tower-installation-rru-aau.webp)
 
 ### Micro Data Centres
 

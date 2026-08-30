@@ -34,6 +34,11 @@ images:
     alt: "Server racks in a connected data centre"
     caption: "Without reliable fibre connectivity, even the most powerful servers are unreachable — connectivity is as important as power and cooling"
     position: "inline"
+  - src: "/images/diagram-microwave-data-link.webp"
+    alt: "Diagram of a long distance microwave data link between two sites 50 kilometres apart"
+    caption: "Where fibre has not yet reached, licensed microwave links moving around 1 Gbps over a 50 km hop remain a practical backhaul bridge."
+    position: "diagram"
+
 internal_links:
   - text: "submarine cables landing in Mombasa"
     href: "/articles/submarine-cables-landing-mombasa"
@@ -151,6 +156,8 @@ Rural and peri-urban areas remain underserved. While NOFBI has connected county 
 ## The Future: 5G Backhaul, Edge, and New Submarine Cables
 
 Looking ahead, several trends will shape Kenya's fibre infrastructure. 5G deployment by Safaricom, Airtel, and others will require massive fibre backhaul — every 5G base station needs a fibre connection, and the density of 5G cells means far more fibre endpoints than 4G required. This will drive further investment in metro fibre networks.
+
+![Diagram of a long distance microwave data link between two sites 50 kilometres apart](/images/diagram-microwave-data-link.webp)
 
 Edge computing, where smaller data processing facilities are placed in towns and neighbourhoods rather than centralised in Nairobi, will require fibre connectivity in new locations. As applications like autonomous vehicles, remote surgery, and real-time AI inference demand lower latency than a 500-kilometre round trip to Nairobi can provide, edge facilities in Mombasa, Kisumu, and other towns will become necessary.
 

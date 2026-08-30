@@ -38,6 +38,11 @@ images:
     alt: "Data centre environmental sustainability"
     caption: "Cooling efficiency directly impacts a data centre's carbon footprint and operating costs"
     position: "inline"
+  - src: "/images/diagram-dc-rack-overview.webp"
+    alt: "Overview diagram of data centre rack layout including CRAC cooling airflow"
+    caption: "Rack layouts are planned around cooling: CRAC units push cold air to the front of every rack while hot exhaust returns to the room for conditioning."
+    position: "diagram"
+
 internal_links:
   - text: "what is a data centre"
     href: "/articles/what-is-a-data-centre"
@@ -107,6 +112,8 @@ Each technology occupies a specific niche based on rack power density, climate, 
 ## CRAC and CRAH Units: The Industry Standard
 
 Computer Room Air Conditioning (CRAC) units and Computer Room Air Handler (CRAH) units are the most widely deployed cooling systems in data centres worldwide, and Kenya is no exception. Both deliver conditioned air to the white space, but they differ in how they produce cold air.
+
+![Overview diagram of data centre rack layout including CRAC cooling airflow](/images/diagram-dc-rack-overview.webp)
 
 A CRAC unit contains its own refrigeration cycle — compressor, condenser, and evaporator — similar to a split-system air conditioner but with far tighter temperature and humidity control. It can operate independently, which makes it straightforward to deploy. However, the onboard compressor makes it less energy-efficient than alternatives that separate the cooling production from the air delivery.
 
