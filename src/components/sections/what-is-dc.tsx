@@ -106,7 +106,7 @@ export default function WhatIsDC() {
             <div className="img-frame mt-10 max-w-sm">
               <div className="relative aspect-[736/1104]">
                 <Image
-                  src="/images/whats-inside-ai-data-center.jpg"
+                  src="/images/whats-inside-ai-data-center.webp"
                   alt="Cutaway diagram of an AI data centre showing GPU servers, cooling, power distribution, UPS, networking, monitoring, security and fire suppression"
                   fill
                   sizes="(max-width: 1024px) 100vw, 384px"

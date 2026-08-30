@@ -107,7 +107,7 @@ export default function TheScale() {
             <div className="img-frame">
               <div className="relative aspect-[725/864]">
                 <Image
-                  src="/images/worlds-largest-data-centers-2026.jpg"
+                  src="/images/worlds-largest-data-centers-2026.webp"
                   alt="Ranked list of the world's largest data centres in 2026, led by China Telecom Inner Mongolia, The Citadel Campus and the Utah Data Center"
                   fill
                   sizes="(max-width: 1024px) 100vw, 340px"
