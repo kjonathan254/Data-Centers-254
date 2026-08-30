@@ -22,7 +22,7 @@ images:
     alt: "Engineer with a laptop working beside data centre server racks"
     caption: "Kenya's data centre industry needs engineers, technicians, and specialists — and the paths in are clearer than most people think."
     position: "hero"
-  - src: "/images/dc-careers-tech.png"
+  - src: "/images/dc-careers-tech.webp"
     alt: "Engineer working at a server rack in a data centre"
     caption: "From facilities technicians to network engineers, every role keeps the racks humming."
     position: "section"
@@ -104,7 +104,7 @@ Good cabling work requires precision, patience, and attention to detail. A singl
 
 **Qualifications**: Diploma in IT, telecommunications, or electrical engineering. Vendor certifications for fibre optic termination (e.g., Corning, CommScope) are valued.
 
-![Engineer working at a server rack in a data centre](/images/dc-careers-tech.png)
+![Engineer working at a server rack in a data centre](/images/dc-careers-tech.webp)
 
 ## Certifications That Matter
 

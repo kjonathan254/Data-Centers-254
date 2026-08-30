@@ -26,7 +26,7 @@ images:
     alt: "East Africa data centre and connectivity map"
     caption: "KIXP makes internet traffic between Kenyan users and Kenyan services stay local rather than routing through Europe"
     position: "section-break"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server racks in a Nairobi data centre"
     caption: "KIXP switching equipment is housed in carrier-neutral data centres alongside member networks' servers"
     position: "inline"
@@ -100,7 +100,7 @@ KIXP's membership has expanded far beyond traditional ISPs. The current member r
 - **Government and education**: The Kenya Education Network (KENET), which connects universities and research institutions across the country, peers at KIXP. Government services hosted by the ICT Authority also exchange traffic locally.
 - **Cloud and hosting providers**: Local and regional cloud providers connect at KIXP so that their customers' workloads communicate efficiently with other Kenyan networks.
 
-![Server racks in a Nairobi data centre](/images/dc-servers-racks.png)
+![Server racks in a Nairobi data centre](/images/dc-servers-racks.webp)
 
 ## Peering vs Transit: What Is the Difference?
 

@@ -27,11 +27,11 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "Geothermal power plant in the Rift Valley — baseload energy behind Kenya's green data centres",
   },
   AI: {
-    src: "/images/ai-gpu-servers.png",
+    src: "/images/ai-gpu-servers.webp",
     alt: "High-density GPU compute racks with green status LEDs",
   },
   Policy: {
-    src: "/images/dc-policy-regulation.png",
+    src: "/images/dc-policy-regulation.webp",
     alt: "Government building at dusk — regulators shape Kenya's digital infrastructure",
   },
   Infrastructure: {
@@ -39,7 +39,7 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "Industrial cooling units and pipework inside a data centre plant room",
   },
   Careers: {
-    src: "/images/dc-careers-tech.png",
+    src: "/images/dc-careers-tech.webp",
     alt: "Data centre technician working at a server rack",
   },
 };

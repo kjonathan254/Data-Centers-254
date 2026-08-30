@@ -18,7 +18,7 @@ cluster: "Beginner"
 og_image: "/images/hero-server-hall.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server racks inside a modern data centre"
     caption: "A single data centre can house thousands of servers in rows of racks, each processing and storing data 24 hours a day"
     position: "hero"
@@ -83,7 +83,7 @@ A data centre is far more than a room full of computers. It is an integrated sys
 
 Servers are the heart of any data centre. A single modern rack (the metal frame that holds the equipment) can contain 40 to 80 servers stacked vertically. Each server is essentially a powerful computer without a screen or keyboard — it exists to process requests and store data. Large facilities contain hundreds of racks, meaning tens of thousands of individual servers. Storage systems, often arrays of hard drives or solid-state drives, hold the actual data — databases, files, images, videos, application code.
 
-![Server racks inside a modern data centre](/images/dc-servers-racks.png)
+![Server racks inside a modern data centre](/images/dc-servers-racks.webp)
 
 ### Power Systems
 

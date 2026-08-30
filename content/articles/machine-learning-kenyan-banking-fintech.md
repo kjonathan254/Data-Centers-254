@@ -15,7 +15,7 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "AI & Finance"
 cluster: "AI"
-og_image: "/images/dc-business-investment.png"
+og_image: "/images/dc-business-investment.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-server-chip-2.webp"

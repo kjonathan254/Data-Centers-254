@@ -18,7 +18,7 @@ cluster: "Kenya"
 og_image: "/images/dc-gpu-cluster.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server racks in a colocation data centre"
     caption: "In colocation, you own the servers but rent the space, power, cooling, and security"
     position: "hero"
@@ -66,7 +66,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/colocation-data-cen
 
 Colocation lets you place your own servers inside a professionally built and managed facility. You bring the hardware; the provider supplies the space, power, cooling, connectivity, and physical security. For companies in Kenya that need control over their infrastructure without the capital outlay of building a data centre, colocation is the standard solution.
 
-![Server racks in a colocation data centre](/images/dc-servers-racks.png)
+![Server racks in a colocation data centre](/images/dc-servers-racks.webp)
 
 Banks, mobile network operators, fintech platforms, and government agencies across Kenya use colocation to house their critical systems. The model has matured significantly in Nairobi over the past decade, with multiple Tier III facilities now offering carrier-neutral space along the Mombasa Road corridor.
 

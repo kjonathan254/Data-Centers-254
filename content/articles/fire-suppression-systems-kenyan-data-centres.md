@@ -26,7 +26,7 @@ images:
     alt: "Fire suppression gas cylinders and control panels in a data centre mechanical room"
     caption: "Clean agent gas storage cylinders and control panels form the core of a data centre fire suppression system"
     position: "section-break"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server hall protected by detection and suppression systems"
     caption: "Suppression design has to respect airflow, cable routes, and access paths."
     position: "inline"
@@ -218,7 +218,7 @@ Modern Kenyan data centres integrate fire detection and suppression into their *
 - Event logging for compliance auditing and insurance documentation
 - Integration with [data centre security explained](/articles/data-centre-security-explained) systems for coordinated emergency response
 
-![Server hall protected by detection and suppression systems](/images/dc-servers-racks.png)
+![Server hall protected by detection and suppression systems](/images/dc-servers-racks.webp)
 
 ## Cost Implications
 

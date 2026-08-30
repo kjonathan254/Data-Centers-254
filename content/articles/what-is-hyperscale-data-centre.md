@@ -20,7 +20,7 @@ cluster: Beginner
 og_image: /images/dc-chillers-roof.webp
 reading_time: "12 min"
 images:
-- src: /images/ai-gpu-servers.png
+- src: /images/ai-gpu-servers.webp
   alt: Rows of server racks in a large-scale data centre facility
   caption: Hyperscale data centres house tens of thousands of server racks in purpose-built
     halls.
@@ -29,7 +29,7 @@ images:
   alt: GPU servers powering cloud and AI workloads at scale
   caption: The explosive growth of AI is driving even larger hyperscale builds worldwide.
   position: section-break
-- src: /images/dc-environment-sustainability.png
+- src: /images/dc-environment-sustainability.webp
   alt: "Aerial of a hyperscale-style campus"
   caption: "Hyperscale campuses dwarf Kenya's largest facilities — for now."
   position: inline
@@ -91,7 +91,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/what-is-hyperscale-d
 
 If you have ever streamed a Netflix show, searched on Google, or booked an Uber ride, your request was processed inside a **hyperscale data centre** — a gargantuan computing facility so large it can stretch across multiple football pitches and consume enough electricity to power a small Kenyan town. But what exactly makes a data centre "hyperscale," and why does it matter for Kenya's digital future?
 
-![Rows of server racks in a large-scale data centre facility](/images/ai-gpu-servers.png)
+![Rows of server racks in a large-scale data centre facility](/images/ai-gpu-servers.webp)
 
 In simple terms, a **hyperscale data centre** is a massive facility owned and operated by a single technology company to support its cloud computing, artificial intelligence, and digital services at a global scale. Unlike standard [what is a data centre](/articles/what-is-a-data-centre) facilities that serve multiple tenants, hyperscale data centres are purpose-built for one operator — typically one of the world's largest technology companies.
 
@@ -218,7 +218,7 @@ For Kenya, this means that attracting a hyperscale investment would likely invol
 
 Africa Data Centres' facilities in Nairobi — including the campus along Mombasa Road — represent the largest data centre investments in East Africa at approximately 10 MW. PAIX operates facilities in both Nairobi and Mombasa at around 5 MW each. Liquid Intelligent Technologies also maintains a significant presence. But even combined, these facilities are a fraction of the scale of a single hyperscale campus.
 
-![Aerial of a hyperscale-style campus](/images/dc-environment-sustainability.png)
+![Aerial of a hyperscale-style campus](/images/dc-environment-sustainability.webp)
 
 ## The Road Ahead for Kenya
 

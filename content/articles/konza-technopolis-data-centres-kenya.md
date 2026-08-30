@@ -18,7 +18,7 @@ cluster: "Kenya"
 og_image: "/images/nairobi-sunset-wide.webp"
 reading_time: "15 min"
 images:
-  - src: "/images/hero-dc-nairobi.png"
+  - src: "/images/hero-dc-nairobi.webp"
     alt: "Aerial view of a modern data centre campus at dusk"
     caption: "Konza Technopolis is Kenya's bet on a purpose-built tech city."
     position: "hero"
@@ -60,7 +60,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/konza-technopolis-d
 
 Sixty kilometres south of Nairobi, on the arid plains of Machakos County, one of Africa's most ambitious smart city projects is taking shape. **Konza Technopolis** — a 5,000-acre development conceived as the cornerstone of Kenya's Vision 2030 strategy — aims to create a world-class technology hub that the government has dubbed **"Silicon Savannah."**
 
-![Aerial view of a modern data centre campus at dusk](/images/hero-dc-nairobi.png)
+![Aerial view of a modern data centre campus at dusk](/images/hero-dc-nairobi.webp)
 
 For Kenya's data centre industry, Konza represents both an enormous opportunity and a complex question. Can a purpose-built smart city, still in its early phases of development, attract the investment and demand needed to become a meaningful data centre location? Or will the established infrastructure and ecosystem of Nairobi continue to dominate?
 

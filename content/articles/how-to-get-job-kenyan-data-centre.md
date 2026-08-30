@@ -15,14 +15,14 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Career Guide"
 cluster: "Careers"
-og_image: "/images/dc-servers-racks.png"
+og_image: "/images/dc-servers-racks.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-women-engineers-corridor.webp"
     alt: "Two engineers walking through a data centre corridor with a laptop"
     caption: "Landing a job in a Kenyan data centre is about certifications, hands-on skills, and knowing where the openings are."
     position: "hero"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Blue-lit server racks in a data hall"
     caption: "The racks are the workplace — every role exists to keep them running."
     position: "section"
@@ -90,7 +90,7 @@ The gold-standard certifications for facility roles come from the Uptime Institu
 
 The NOC is the nerve centre of a data centre. Staffed 24 hours a day, 7 days a week, the NOC team monitors the entire facility — power systems, cooling, network connectivity, security cameras, and environmental sensors — and responds to alarms, outages, and customer requests. NOC operators are often the first point of contact when something goes wrong, and their ability to quickly diagnose and escalate issues directly impacts the facility's uptime record.
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.png)
+![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
 
 NOC roles are excellent entry points into the data centre industry. The technical barrier to entry is lower than for engineering roles — a diploma in IT or telecommunications, plus basic networking knowledge (TCP/IP, DNS, HTTP), can be sufficient for a junior NOC position. The trade-off is that NOC roles involve shift work, including nights and weekends, which not everyone can sustain long-term. However, many senior data centre professionals started their careers in NOC roles and used the experience as a foundation for engineering or management positions.
 

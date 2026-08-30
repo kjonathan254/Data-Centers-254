@@ -18,7 +18,7 @@ cluster: "Beginner"
 og_image: "/images/dc-server-chip-2.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/ai-gpu-servers.webp"
     alt: "Rack-mounted servers in a data centre"
     caption: "Modern servers are designed to be mounted in standard 19-inch racks, with dozens of servers stacked vertically in a single rack to maximise space efficiency"
     position: "hero"
@@ -63,7 +63,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/what-is-a-server"
 
 Every time you open a website, send an email, make a mobile money transfer, or stream a video, a server somewhere is doing the work. Servers are the invisible machines behind every digital service you have ever used. They are the reason Google can find your search results in milliseconds, the reason M-Pesa can process your payment instantly, and the reason Netflix can start playing a movie within seconds of you clicking play. Yet most people who depend on servers every day have never seen one and could not describe what one actually is.
 
-![Rack-mounted servers in a data centre](/images/ai-gpu-servers.png)
+![Rack-mounted servers in a data centre](/images/ai-gpu-servers.webp)
 
 A server is, at its most fundamental level, a computer that provides services to other computers. The word "server" refers not to a specific type of hardware but to a role: a computer that serves. Any computer can be a server if it is running software that provides services to other computers over a network. Your laptop could be a server if you ran web server software on it and other computers connected to it to view web pages. In practice, however, when people say "server" they mean a purpose-built computer designed specifically for the demands of providing services reliably, continuously, and at scale.
 

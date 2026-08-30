@@ -71,7 +71,7 @@ export default function CareersSection() {
             <div className="img-frame">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/dc-careers-tech.png"
+                  src="/images/dc-careers-tech.webp"
                   alt="Data centre technician checking connections at a server rack"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"

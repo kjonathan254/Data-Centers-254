@@ -20,7 +20,7 @@ cluster: AI
 og_image: /images/dc-gpu-cluster-2-wide.webp
 reading_time: "12 min"
 images:
-- src: /images/ai-gpu-servers.png
+- src: /images/ai-gpu-servers.webp
   alt: "GPU server racks in an AI training cluster"
   caption: "Training clusters need dense, well-cooled compute — the kind Kenya's new facilities are being built for."
   position: hero
@@ -97,7 +97,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/ai-model-training-ke
 
 Kenya's digital economy has matured rapidly, and with that maturity comes an inevitable question: can the country support not just AI *inference* but full-scale AI *model training* on its own soil? For years, Kenyan organisations have relied on cloud providers in distant regions to handle computationally intensive workloads. That dynamic is beginning to shift as data sovereignty concerns grow, bandwidth costs remain stubbornly high, and the strategic value of indigenous AI capability becomes clear.
 
-![GPU server racks in an AI training cluster](/images/ai-gpu-servers.png)
+![GPU server racks in an AI training cluster](/images/ai-gpu-servers.webp)
 
 Model training — the process of feeding large datasets through neural networks to adjust weights and produce a useful AI model — is fundamentally different from running inference. It demands orders of magnitude more compute, memory, storage throughput, and networking bandwidth. Understanding what this requires, and where Kenya stands in meeting those requirements, is essential for anyone tracking the [East African data centre market](/articles/ai-data-centres-east-africa).
 

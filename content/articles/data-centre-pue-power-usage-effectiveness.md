@@ -18,7 +18,7 @@ cluster: "Energy"
 og_image: "/images/dc-chillers-roof-2.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/dc-environment-sustainability.png"
+  - src: "/images/dc-environment-sustainability.webp"
     alt: "Data centre energy efficiency and sustainability"
     caption: "PUE is the most widely used metric for measuring how efficiently a data centre uses energy — a lower PUE means less waste and lower operating costs"
     position: "hero"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-pue-pow
 
 If you run a data centre that consumes 1 megawatt of power for your servers but your total electricity bill is for 1.7 megawatts, you are spending 70% more on electricity than your IT equipment actually needs. The extra 0.7 megawatts is going to cooling, lighting, power conversion losses, and other overhead. This ratio — total power divided by IT power — is the Power Usage Effectiveness (PUE), and it is the single most important metric for understanding how efficiently a data centre uses energy.
 
-![Data centre energy efficiency and sustainability](/images/dc-environment-sustainability.png)
+![Data centre energy efficiency and sustainability](/images/dc-environment-sustainability.webp)
 
 PUE was developed by The Green Grid, an industry consortium, in 2007. It has become the universal language of data centre energy efficiency — used by operators to track their performance, by customers to compare facilities, by investors to assess operational quality, and by regulators to evaluate environmental impact. Understanding PUE is essential for anyone involved in data centres in Kenya, where power costs are a significant operating expense and where the renewable grid provides both an opportunity and a responsibility to use energy wisely.
 

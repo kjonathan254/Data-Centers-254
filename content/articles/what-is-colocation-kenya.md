@@ -18,7 +18,7 @@ cluster: "Beginner"
 og_image: "/images/nairobi-skyline-night-kicc.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server racks in a colocation data centre"
     caption: "In a colocation facility, you own the servers and storage — you are renting the physical space, power, cooling, and connectivity that keeps them running"
     position: "hero"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/what-is-colocation-
 
 Imagine you run a growing technology company in Nairobi. You have ten servers humming in a converted storeroom in your office, connected to a single Safaricom fibre line, protected by a consumer-grade UPS that would last maybe 15 minutes during a power cut, and cooled by the building's air conditioning system that was designed for humans, not for machines that generate heat 24 hours a day. Every time there is a power blip, your IT team holds their breath. Every time the building management switches off the AC at night to save power, your server room temperature creeps up. Every time your single internet connection drops, your entire business goes offline.
 
-![Server racks in a colocation data centre](/images/dc-servers-racks.png)
+![Server racks in a colocation data centre](/images/dc-servers-racks.webp)
 
 This is the problem that colocation solves. Instead of housing your servers in an inadequate, improvised space, you rent space in a purpose-built data centre that provides professional-grade power, cooling, connectivity, and security. Your servers sit in a facility designed specifically for them — with redundant power supplies, precision cooling, multiple fibre connections from different providers, biometric access control, 24/7 security cameras, and fire suppression systems. You own the servers and the data on them. You manage the software and applications. But the physical infrastructure — the building, the power, the cooling, the connectivity — is provided by the colocation operator.
 

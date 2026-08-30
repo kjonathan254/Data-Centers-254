@@ -22,7 +22,7 @@ images:
     alt: "Server racks in a modern data centre"
     caption: "Safaricom's data centre infrastructure underpins M-Pesa and Kenya's mobile network"
     position: "hero"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/dc-challenges.webp"
     alt: "Nairobi skyline"
     caption: "Safaricom's Waiyaki Way facility is a cornerstone of Nairobi's digital infrastructure"
     position: "section-break"
@@ -81,7 +81,7 @@ Key specifications of the Waiyaki Way facility include:
 
 At 1.5 MW and 120 racks, the Waiyaki Way facility is modest by comparison to the hyperscale facilities being developed by iXAfrica (targeting 16 MW across its campus) or Africa Data Centres (planning 30 MW at its Mzansi campus). But raw capacity is not the metric that matters here. What matters is the criticality of the workloads running inside those 120 racks.
 
-![Nairobi skyline](/images/dc-challenges.png)
+![Nairobi skyline](/images/dc-challenges.webp)
 
 ## Workloads: M-Pesa, Mobile Network Core, and Enterprise Cloud
 

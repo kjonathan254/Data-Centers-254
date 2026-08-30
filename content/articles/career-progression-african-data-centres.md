@@ -29,7 +29,7 @@ images:
   caption: Cable technicians form the critical entry point into the data centre career
     ladder
   position: section-break
-- src: /images/dc-careers-tech.png
+- src: /images/dc-careers-tech.webp
   alt: "Data centre engineer configuring server rack hardware"
   caption: "Mid-level engineers own the systems: installations, upgrades, and the escalations nobody else can close."
   position: section
@@ -175,7 +175,7 @@ Operations managers oversee the day-to-day running of a data centre facility. Th
 
 **Salary Range (Kenya):** KES 150,000–350,000 per month, depending on facility size and operator.
 
-![Data centre engineer configuring server rack hardware](/images/dc-careers-tech.png)
+![Data centre engineer configuring server rack hardware](/images/dc-careers-tech.webp)
 *Operations managers oversee critical infrastructure across multiple African markets*
 
 ### Compliance and Regulatory Officer

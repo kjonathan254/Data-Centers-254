@@ -18,7 +18,7 @@ cluster: "Policy"
 og_image: "/images/africa-ai-data-hub-mtn.webp"
 reading_time: "18 min"
 images:
-  - src: "/images/dc-policy-regulation.png"
+  - src: "/images/dc-policy-regulation.webp"
     alt: "National government building at dusk"
     caption: "ICT policy sets the rules of the game for every data centre investor."
     position: "hero"
@@ -26,7 +26,7 @@ images:
     alt: "KICC and the Nairobi skyline at night"
     caption: "Cybersecurity strategy and data centre standards now sit at the heart of Kenya's ICT agenda."
     position: "comparison"
-  - src: "/images/dc-challenges.png"
+  - src: "/images/dc-challenges.webp"
     alt: "Transmission towers beside a commercial skyline"
     caption: "Policy spans power, connectivity, and enterprise — the regional comparison covers all three."
     position: "section"
@@ -56,7 +56,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ict-policy-framework-data-centres"
 ---
 
-![National government building at dusk](/images/dc-policy-regulation.png)
+![National government building at dusk](/images/dc-policy-regulation.webp)
 
 Kenya's data centre industry does not operate in a vacuum. Every rack installed, every fibre optic cable landed, and every megawatt of power allocated is shaped by a complex web of policies, statutes, and regulatory directives. For investors, operators, and technology companies evaluating Kenya as a data centre destination, understanding the **ICT policy framework** is not optional — it is the foundation upon which every business case is built.
 
@@ -150,7 +150,7 @@ Both organisations demonstrate that **industry-led policy engagement** is essent
 
 ## Comparative Analysis: Kenya, Rwanda, Nigeria, and South Africa
 
-![Transmission towers beside a commercial skyline](/images/dc-challenges.png)
+![Transmission towers beside a commercial skyline](/images/dc-challenges.webp)
 
 Understanding Kenya's policy position requires examining it alongside comparable African markets. Each country offers distinct advantages and challenges for data centre investors.
 

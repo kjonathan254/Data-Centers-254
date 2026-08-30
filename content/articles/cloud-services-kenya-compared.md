@@ -30,7 +30,7 @@ images:
     alt: "Africa cloud and data centre infrastructure map"
     caption: "AWS has regions in Cape Town and Bahrain, Azure in Johannesburg and Cape Town, and Google Cloud in Johannesburg — all 100-200ms from Nairobi"
     position: "infographic"
-  - src: "/images/dc-environment-sustainability.png"
+  - src: "/images/dc-environment-sustainability.webp"
     alt: "Aerial view of a large data centre campus"
     caption: "Scale, uptime, and compliance separate global hyperscalers from local providers."
     position: "inline"
@@ -126,7 +126,7 @@ Latency is often the first factor organisations consider, and it is where the ga
 
 ### Data Residency and Sovereignty
 
-![Aerial view of a large data centre campus](/images/dc-environment-sustainability.png)
+![Aerial view of a large data centre campus](/images/dc-environment-sustainability.webp)
 
 Kenya's Data Protection Act (2019) places requirements on how personal data is processed and where it can be transferred. While the Act does not absolutely prohibit cross-border data transfer, it requires that transfers be to jurisdictions with adequate data protection standards. For government agencies handling citizen data, for banks regulated by the Central Bank of Kenya, and for healthcare providers handling patient records, the safest approach is to keep data in Kenya. This is a clear advantage for local providers like Safaricom Cloud and for colocation in Kenyan data centres.
 

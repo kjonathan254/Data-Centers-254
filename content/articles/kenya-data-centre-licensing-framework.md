@@ -15,7 +15,7 @@ published_date: "2026-08-21"
 updated_date: "2026-08-27"
 category: "Policy"
 cluster: "Kenya"
-og_image: "/images/dc-policy-regulation.png"
+og_image: "/images/dc-policy-regulation.webp"
 reading_time: "12 min"
 images:
   - src: "/images/nairobi-sunset-wide.webp"

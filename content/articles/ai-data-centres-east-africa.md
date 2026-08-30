@@ -15,10 +15,10 @@ published_date: "2026-08-27"
 updated_date: "2026-08-27"
 category: "AI & Cloud"
 cluster: "AI"
-og_image: "/images/ai-gpu-servers.png"
+og_image: "/images/ai-gpu-servers.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/ai-gpu-servers.png"
+  - src: "/images/ai-gpu-servers.webp"
     alt: "GPU servers for AI training in a data centre"
     caption: "AI training requires dense GPU clusters that consume 5-10x more power than standard servers"
     position: "hero"
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-data-centres-east-africa"
 ---
 
-![GPU servers for AI training in a data centre](/images/ai-gpu-servers.png)
+![GPU servers for AI training in a data centre](/images/ai-gpu-servers.webp)
 
 ## Why AI Needs a New Class of Data Centre in Africa
 

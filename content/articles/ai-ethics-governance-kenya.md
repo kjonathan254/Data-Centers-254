@@ -34,7 +34,7 @@ images:
     alt: "Cutaway infographic of an AI data centre"
     caption: "Operators translate AI ethics into access control, data handling, and audit trails."
     position: "inline"
-  - src: "/images/dc-environment-sustainability.png"
+  - src: "/images/dc-environment-sustainability.webp"
     alt: "Sustainability considerations in AI infrastructure"
     caption: "The environmental impact of AI compute is an emerging ethical concern for Kenyan data centre operators"
     position: "inline"
@@ -247,7 +247,7 @@ An effective AIA for a Kenyan organisation should evaluate:
 - **Accountability**: Is there a clear human accountability chain for the system's outputs?
 - **Kenyan context**: Has the system been validated for the specific cultural, linguistic, and socioeconomic conditions of its intended Kenyan users?
 
-![Sustainability considerations in AI infrastructure](/images/dc-environment-sustainability.png)
+![Sustainability considerations in AI infrastructure](/images/dc-environment-sustainability.webp)
 
 ## The Growing Demand for AI Governance Professionals in Kenya
 

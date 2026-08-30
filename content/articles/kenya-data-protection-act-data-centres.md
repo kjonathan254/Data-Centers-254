@@ -26,7 +26,7 @@ images:
     alt: "Data security and compliance controls"
     caption: "Compliance with the Data Protection Act requires both technical measures (encryption, access controls) and organisational measures (policies, training, breach response plans)"
     position: "section-break"
-  - src: "/images/dc-servers-racks.png"
+  - src: "/images/dc-servers-racks.webp"
     alt: "Server racks in a compliant data centre"
     caption: "Data centre operators must implement measures to prevent unauthorised access to customer data stored on servers within their facilities"
     position: "inline"
@@ -98,7 +98,7 @@ If a data centre engages third parties — security contractors, cleaning staff,
 
 One of the most practically significant aspects of the Data Protection Act for data centre customers is the restriction on cross-border data transfers. Section 48 of the Act provides that personal data shall not be transferred outside Kenya unless the recipient country has been assessed by the ODPC as having an adequate level of data protection, or unless one of several exceptions applies (the data subject has consented, the transfer is necessary for a contract, the transfer is necessary for important reasons of public interest, or the transfer is made through binding corporate rules or approved codes of conduct).
 
-![Server racks in a compliant data centre](/images/dc-servers-racks.png)
+![Server racks in a compliant data centre](/images/dc-servers-racks.webp)
 
 As of 2025, the ODPC has not published a comprehensive list of countries deemed to have adequate data protection. The EU (via GDPR), the United Kingdom (via UK GDPR), and several other jurisdictions would likely qualify, but the absence of a formal adequacy determination creates uncertainty. In practice, many Kenyan organisations interpret this requirement conservatively and choose to keep personal data within Kenya's borders — which drives demand for Kenyan data centre capacity.
 

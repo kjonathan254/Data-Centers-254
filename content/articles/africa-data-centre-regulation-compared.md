@@ -15,7 +15,7 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Policy"
 cluster: "Policy"
-og_image: "/images/dc-policy-regulation.png"
+og_image: "/images/dc-policy-regulation.webp"
 reading_time: "14 min"
 images:
   - src: "/images/nairobi-expressway-wide.webp"
@@ -26,7 +26,7 @@ images:
     alt: "Map of African data centre hubs"
     caption: "South Africa anchors the continent's most mature data centre market."
     position: "section"
-  - src: "/images/dc-policy-regulation.png"
+  - src: "/images/dc-policy-regulation.webp"
     alt: "Government building at dusk"
     caption: "Egypt's government-led, subsidised build-out differs sharply from Kenya's private-led model."
     position: "inline"
@@ -132,7 +132,7 @@ Egypt's Personal Data Protection Law (PDPL), enacted in 2020 and progressively i
 
 ### Energy Subsidies
 
-![Government building at dusk](/images/dc-policy-regulation.png)
+![Government building at dusk](/images/dc-policy-regulation.webp)
 
 Egypt's data centre industry benefits from subsidised natural gas for power generation, which keeps electricity costs among the lowest in Africa at approximately $0.05–0.07 per kWh for industrial consumers. This subsidy is a significant competitive advantage, though it is contingent on government policy that could change. The government has also invested heavily in renewable energy, particularly solar, as part of its energy strategy.
 
