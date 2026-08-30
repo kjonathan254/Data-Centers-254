@@ -93,6 +93,10 @@ This power density has cascading effects on every aspect of data centre design. 
 
 Cooling is where GPU computing creates the most significant engineering challenge. Traditional data centre cooling uses cold air blown from computer room air conditioning (CRAC) units through the raised floor and into the server racks. This air-cooling approach works well at 5–10kW per rack but becomes increasingly inefficient and eventually impractical at higher densities.
 
+
+![Rooftop CRAC cooling units serving a high-density data hall](/images/dc-cooling-crac-2.webp)
+
+
 At 20kW per rack, air cooling requires very high airflow volumes and very cold supply air, which increases energy consumption and reduces cooling efficiency. At 40kW per rack, air cooling is at the practical limit of what is achievable. Beyond 40kW, liquid cooling becomes necessary.
 
 Liquid cooling for GPU data centres takes several forms. Direct-to-chip cooling circulates cold liquid through cold plates mounted directly on the GPU processors, removing heat at the source with much higher efficiency than air. Immersion cooling submerges entire servers in a dielectric fluid that absorbs heat directly from all components. Both approaches can handle 50–100kW per rack and dramatically reduce the overall cooling energy required.

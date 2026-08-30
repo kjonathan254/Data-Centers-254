@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-switchgear-2.webp"
     alt: "Electrical switchgear hall"
     caption: "Racks, cooling, and growth all draw from the same strained grid."
-    position: "section"
+    position: "section-break"
   - src: "/images/kenya-transmission-pylons.webp"
     alt: "High-voltage pylons on the backbone grid"
     caption: "The bottleneck is transmission, not generation."

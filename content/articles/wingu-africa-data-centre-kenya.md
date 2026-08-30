@@ -25,7 +25,7 @@ images:
   - src: "/images/hero-server-hall.webp"
     alt: "Corridor inside a data centre hall"
     caption: "Wingu's edge facilities keep cloud and content close to users."
-    position: "section"
+    position: "section-break"
 internal_links:
   - text: "data centre directory"
     href: "/directory"

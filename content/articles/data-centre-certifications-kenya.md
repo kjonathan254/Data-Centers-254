@@ -219,6 +219,10 @@ The **CCNP Enterprise** is the professional-level Cisco certification, covering 
 
 Power and cooling represent the largest operational cost in any Kenyan data centre. Professionals with specialised certifications in these areas are in high demand and short supply.
 
+
+![Modern electrical switchgear and distribution boards in a data centre power room](/images/dc-switchgear-2.webp)
+
+
 ### Certified Energy Manager (CEM)
 
 The **CEM**, offered by the Association of Energy Engineers (AEE), covers energy management principles including power systems, efficiency optimisation, and renewable energy integration — all critical for data centres in Kenya where energy costs and reliability are major concerns.

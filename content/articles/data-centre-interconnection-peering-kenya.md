@@ -30,7 +30,7 @@ images:
 - src: /images/mombasa-port.webp
   alt: "Port of Mombasa, where submarine cables meet Kenya"
   caption: "Mombasa's landing stations make Kenya the region's interconnection gateway."
-  position: section
+  position: section-break
 - src: /images/nairobi-sunset-wide.webp
   alt: Map of data centre and IXP locations across Africa
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key

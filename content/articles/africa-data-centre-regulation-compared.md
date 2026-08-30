@@ -25,7 +25,7 @@ images:
   - src: "/images/africa-dc-map.webp"
     alt: "Map of African data centre hubs"
     caption: "South Africa anchors the continent's most mature data centre market."
-    position: "section"
+    position: "section-break"
   - src: "/images/dc-policy-regulation.webp"
     alt: "Government building at dusk"
     caption: "Egypt's government-led, subsidised build-out differs sharply from Kenya's private-led model."

@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-servers-racks.webp"
     alt: "Blue-lit server racks in an Africa Data Centres hall"
     caption: "Carrier-neutral halls in Nairobi and Mombasa anchor the operator's footprint."
-    position: "section"
+    position: "section-break"
 internal_links:
   - text: "data centre directory"
     href: "/directory"

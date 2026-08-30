@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-servers-racks.webp"
     alt: "Blue-lit server racks in a data hall"
     caption: "The racks are the workplace — every role exists to keep them running."
-    position: "section"
+    position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
     alt: "Career path comparison infographic for network and cybersecurity roles"
     caption: "Pick your track first — the certification roadmap looks different for each role."

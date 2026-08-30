@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-woman-engineer-laptop.webp"
     alt: "Woman engineer working on a laptop in a server hall"
     caption: "Pathways in: apprenticeships, certifications, and transferable IT skills."
-    position: "section"
+    position: "section-break"
   - src: "/images/dc-woman-engineer-racks.webp"
     alt: "Woman engineer configuring server racks"
     caption: "Operators are rolling out mentorship and inclusive hiring to close the gap."

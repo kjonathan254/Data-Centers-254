@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-gpu-cluster.webp"
     alt: "Consumer graphics cards — familiar hardware that differs from server-class machines"
     caption: "Consumer parts share DNA with server hardware but trade reliability and manageability for price."
-    position: "section"
+    position: "section-break"
   - src: "/images/dc-server-chip-4-wide.webp"
     alt: "Network switches connecting servers"
     caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"

@@ -32,7 +32,7 @@ images:
 - src: /images/dc-careers-tech.webp
   alt: "Data centre engineer configuring server rack hardware"
   caption: "Mid-level engineers own the systems: installations, upgrades, and the escalations nobody else can close."
-  position: section
+  position: section-break
 - src: /images/dc-women-engineers-corridor.webp
   alt: "Two engineers reviewing work on a laptop along a data centre corridor"
   caption: "Senior roles are as much about people and planning as they are about hardware."

@@ -109,14 +109,11 @@ faq:
 canonical_url: https://data-centers-254.vercel.app/articles/kenya-digital-economy-data-centre-demand
 ---
 
-
 ## The Macro Picture: Why Kenya's Data Centre Market Is Accelerating
 
 Kenya's data centre industry is entering a phase of structural growth driven not by a single sector but by a convergence of macroeconomic forces. From mobile money volumes that rival some European nations to a government digitisation agenda touching every public service, the demand for [colocation and cloud infrastructure](/articles/colocation-data-centre-kenya) in Kenya is compounding year on year. Understanding these demand drivers is essential for investors, operators, and enterprises making infrastructure decisions.
 
 ![Wind turbines on grazing land in rural Kenya](/images/kenya-wind-turbines-3.webp)
-
-![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline-night.webp)
 
 Kenya's GDP grew at approximately 5.0% in 2024 and is projected to maintain 5-6% growth through 2030, according to the World Bank and IMF. Crucially, the **digital economy's share of GDP** has risen from under 3% a decade ago to an estimated 7.5-8% today. This shift is not abstract — it translates directly into servers, racks, and megawatts of data centre demand.
 
@@ -125,6 +122,8 @@ Kenya's GDP grew at approximately 5.0% in 2024 and is projected to maintain 5-6%
 ### The Kenya Digital Masterplan 2022-2032
 
 The **Kenya Digital Masterplan 2022-2032**, developed by the Ministry of Information, Communications and the Digital Economy, represents the most comprehensive government technology strategy in East Africa. Its ambitions are substantial: connecting all 47 counties with high-speed broadband, digitising 80% of government services, establishing national data centres, and building a workforce of 1.5 million digitally skilled Kenyans.
+
+![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline-night.webp)
 
 For data centre operators, the masterplan signals sustained public-sector demand. Government systems — including **e-Citizen** (which processed over 20 million service applications in the 2023/2024 financial year), **iTax** (the Kenya Revenue Authority's digital tax platform handling millions of filings), and the **Huduma Namba** digital identity programme — all require local server infrastructure. The [World Bank's Digital Economy Diagnostic for Kenya](https://www.worldbank.org/en/country/kenya/publication/digital-economy-diagnostic-kenya) identified digital government infrastructure as a critical gap that, when filled, will generate significant data centre demand.
 

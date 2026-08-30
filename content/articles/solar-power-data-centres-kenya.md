@@ -25,7 +25,7 @@ images:
   - src: "/images/kenya-solar-farm-4.webp"
     alt: "Rows of solar panels stretching across a Kenyan site"
     caption: "Falling panel costs keep rewriting the solar economics case."
-    position: "section"
+    position: "section-break"
   - src: "/images/kenya-geothermal-plant.webp"
     alt: "Steam rising from a geothermal field in the Rift Valley"
     caption: "Geothermal's baseload still beats solar's daylight hours — for now."

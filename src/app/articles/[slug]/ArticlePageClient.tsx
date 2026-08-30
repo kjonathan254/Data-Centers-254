@@ -266,7 +266,7 @@ function ShareButtons({ title, slug }: { title: string; slug: string }) {
 
 // ─── Markdown Components ──────────────────────────────────────────────────
 
-function getMarkdownComponents(images: ArticleImage[]) {
+function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
   // Build a map of image src -> caption for rendering inline images from markdown
   const imageMap = new Map<string, ArticleImage>();
   for (const img of images) {
@@ -364,6 +364,9 @@ function getMarkdownComponents(images: ArticleImage[]) {
     // Render images from markdown as styled figure blocks
     img: ({ src, alt, ..._rest }: { src?: string; alt?: string; [key: string]: unknown }) => {
       if (!src) return null;
+      // The hero image already renders at the top of the article — skip its
+      // mid-body markdown references to avoid showing the same photo twice.
+      if (heroSrc && src === heroSrc) return null;
       const matched = imageMap.get(src);
       if (matched) {
         return <ArticleImageBlock image={matched} />;
@@ -396,7 +399,7 @@ export default function ArticlePageClient({ article, related }: Props) {
   // ReactMarkdown will render them via the img component
   // The images are rendered by the frontmatter-driven positions
 
-  const mdComponents = getMarkdownComponents(bodyImages);
+  const mdComponents = getMarkdownComponents(bodyImages, heroImage?.src);
 
   return (
     <div className="relative">

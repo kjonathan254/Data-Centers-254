@@ -68,6 +68,10 @@ iXAfrica's first facility, NBOX1, sits on a 4.3-acre campus along Mombasa Road i
 
 NBOX1.1, the first phase now in commercial operation, delivers the following specifications:
 
+
+![Cutaway infographic of an AI-ready data centre showing compute, cooling, power and network layers](/images/whats-inside-ai-data-center.webp)
+
+
 - **IT power capacity:** 4.5 MW
 - **Rack capacity:** 780 racks across three data halls
 - **White space:** 1,653 square metres

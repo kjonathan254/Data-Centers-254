@@ -29,7 +29,7 @@ images:
   - src: "/images/dc-challenges.webp"
     alt: "Transmission towers beside a commercial skyline"
     caption: "Policy spans power, connectivity, and enterprise — the regional comparison covers all three."
-    position: "section"
+    position: "section-break"
 internal_links:
   - text: "Kenya data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"

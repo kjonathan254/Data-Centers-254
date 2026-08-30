@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-careers-tech.webp"
     alt: "Engineer working at a server rack in a data centre"
     caption: "From facilities technicians to network engineers, every role keeps the racks humming."
-    position: "section"
+    position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
     alt: "Infographic comparing network engineer and cybersecurity engineer career paths"
     caption: "Different tracks reward different credentials — networking and security roles rarely swap."

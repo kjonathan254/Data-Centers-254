@@ -25,7 +25,7 @@ images:
   - src: "/images/kenya-transmission-pylons-3.webp"
     alt: "Transmission lines carrying geothermal power toward Nairobi"
     caption: "Olkaria's power reaches data centres over the national transmission grid."
-    position: "section"
+    position: "section-break"
   - src: "/images/kenya-geothermal-plant-5.webp"
     alt: "Steam stacks at a Kenyan geothermal plant"
     caption: "Baseload geothermal pairs perfectly with data centre loads."

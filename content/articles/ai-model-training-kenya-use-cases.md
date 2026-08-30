@@ -27,7 +27,7 @@ images:
 - src: /images/dc-server-chip-wide.webp
   alt: "Close-up of a server processor module"
   caption: "Training demands accelerators, fast interconnects, and storage that can feed them."
-  position: section
+  position: section-break
 - src: /images/dc-switchgear.webp
   alt: Data centre power distribution systems
   caption: AI training clusters demand 5-10 MW of reliable power supply.

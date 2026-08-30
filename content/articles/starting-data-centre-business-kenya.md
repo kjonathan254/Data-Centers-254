@@ -25,7 +25,7 @@ images:
   - src: "/images/dc-environment-sustainability.webp"
     alt: "Aerial of a purpose-built data centre campus"
     caption: "Capital goes into land, power, shells, and the systems inside — in that order."
-    position: "section"
+    position: "section-break"
   - src: "/images/dc-policy-regulation.webp"
     alt: "Government building at dusk"
     caption: "Licensing, data protection, and county codes shape the regulatory path."
