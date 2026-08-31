@@ -17,12 +17,31 @@ export interface Operator {
   websiteUrl: string | null;
 }
 
+/**
+ * Investment-standard supply pipeline staging (mirrors the language used by
+ * global market trackers): built capacity flows from Live through Under
+ * Construction (financed, build underway), Committed (land/funding secured,
+ * pre-build) and Early Stage (announced intent) before it reaches the grid.
+ */
+export type FacilityStatus =
+  | "Operational"
+  | "Under Construction"
+  | "Committed"
+  | "Early Stage";
+
+export const STATUS_ORDER: FacilityStatus[] = [
+  "Operational",
+  "Under Construction",
+  "Committed",
+  "Early Stage",
+];
+
 export interface Facility {
   id: string;
   name: string;
   slug: string;
   description: string | null;
-  status: string;
+  status: FacilityStatus;
   address: string | null;
   city: string;
   region: string;
@@ -41,6 +60,8 @@ export interface Facility {
   lastVerified: string;
   dataSource: string;
   dataConfidence: string;
+  /** Hand-curated links to DC254 coverage of this facility/operator. */
+  articleSlugs?: string[];
   operatorId: string;
   operator: Operator;
   connectivityFacility: { provider: ConnectivityProvider }[];
@@ -88,10 +109,11 @@ const facilities: Facility[] = [
     coolingType: "Precision air + free cooling",
     powerSource: "Kenya Power grid + on-site diesel generators",
     renewableClaim: "Kenya grid is 75%+ renewable (geothermal, hydro, wind)",
-    notable: "East Africa's first hyperscale AI-ready facility. Backed by Actis, a leading emerging markets investor. Campus designed for 16 MW total capacity across multiple phases.",
+    notable: "East Africa's first hyperscale AI-ready facility. Backed by Actis, a leading emerging markets investor. Campus designed for 22.5 MW total capacity across multiple phases.",
     lastVerified: "2026-08",
     dataSource: "iXAfrica website, DataCenterDynamics, press releases",
     dataConfidence: "High",
+    articleSlugs: ["ixafrica-data-centres-kenya"],
     operatorId: "ixafrica",
     operator: operators[0],
     connectivityFacility: [
@@ -105,16 +127,16 @@ const facilities: Facility[] = [
   },
   {
     id: "6",
-    name: "iXAfrica NBOX2",
-    slug: "ixafrica-nbox2",
-    description: "Second iXAfrica facility under development on the same Mombasa Road campus, expanding total capacity to 10+ MW.",
+    name: "iXAfrica NBOX1.2",
+    slug: "ixafrica-nbox1-2",
+    description: "Second phase of iXAfrica's Mombasa Road campus. Financing is secured and construction is underway; on completion the NBOX1 campus will deliver 22.5 MW of IT power — the largest single-site campus in Greater East Africa.",
     status: "Under Construction",
     address: "Mombasa Road, Industrial Area",
     city: "Nairobi",
     region: "Nairobi County",
     itLoadMw: null,
-    totalCapacityMw: 6,
-    rackCount: null,
+    totalCapacityMw: 18,
+    rackCount: 3744,
     tierRating: "III",
     facilityType: "Hyperscale",
     aiReady: true,
@@ -123,10 +145,41 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power",
     renewableClaim: null,
-    notable: "Part of iXAfrica's plan for 16 MW campus. Backed by Actis investment.",
+    notable: "Adds 18 MW of IT load with 3,744 racks on the Mombasa Road campus. Financing secured and construction underway — completing it brings the NBOX1 campus to 22.5 MW total.",
     lastVerified: "2026-08",
-    dataSource: "iXAfrica press releases, DataCenterDynamics",
+    dataSource: "iXAfrica campus announcements, DataCenterDynamics, DC254 editorial",
     dataConfidence: "High",
+    articleSlugs: ["ixafrica-data-centres-kenya"],
+    operatorId: "ixafrica",
+    operator: operators[0],
+    connectivityFacility: [],
+    certifications: [],
+  },
+  {
+    id: "15",
+    name: "iXAfrica NBOX2 (Tilisi)",
+    slug: "ixafrica-tilisi",
+    description: "Planned second iXAfrica campus on 11 acres acquired in the Tilisi master-planned development, roughly 30 km from NBOX1 along the Nairobi–Nakuru highway near Limuru.",
+    status: "Committed",
+    address: "Tilisi development, Limuru",
+    city: "Nairobi",
+    region: "Kiambu County",
+    itLoadMw: null,
+    totalCapacityMw: 53,
+    rackCount: null,
+    tierRating: null,
+    facilityType: "Hyperscale",
+    aiReady: true,
+    openedDate: null,
+    expansionDate: null,
+    coolingType: null,
+    powerSource: "Kenya Power (planned)",
+    renewableClaim: null,
+    notable: "Land acquired in August 2023 (11 acres) in the Tilisi development. Planned for over 53 MW of IT load — iXAfrica's medium-term growth vector after NBOX1.2.",
+    lastVerified: "2026-08",
+    dataSource: "iXAfrica campus announcements, DC254 editorial",
+    dataConfidence: "High",
+    articleSlugs: ["ixafrica-data-centres-kenya"],
     operatorId: "ixafrica",
     operator: operators[0],
     connectivityFacility: [],
@@ -158,6 +211,7 @@ const facilities: Facility[] = [
     lastVerified: "2026-08",
     dataSource: "Africa Data Centres website, ITWeb Africa",
     dataConfidence: "High",
+    articleSlugs: ["africa-data-centres-kenya-operations"],
     operatorId: "africa-dc",
     operator: operators[1],
     connectivityFacility: [
@@ -191,6 +245,7 @@ const facilities: Facility[] = [
     lastVerified: "2026-08",
     dataSource: "Africa Data Centres website",
     dataConfidence: "High",
+    articleSlugs: ["africa-data-centres-kenya-operations"],
     operatorId: "africa-dc",
     operator: operators[1],
     connectivityFacility: [
@@ -222,6 +277,7 @@ const facilities: Facility[] = [
     lastVerified: "2026-08",
     dataSource: "Africa Data Centres website",
     dataConfidence: "Medium",
+    articleSlugs: ["africa-data-centres-kenya-operations"],
     operatorId: "africa-dc",
     operator: operators[1],
     connectivityFacility: [
@@ -257,6 +313,7 @@ const facilities: Facility[] = [
     lastVerified: "2026-08",
     dataSource: "Safaricom Annual Reports, TechCabal",
     dataConfidence: "Medium",
+    articleSlugs: ["safaricom-data-centre-operations-kenya"],
     operatorId: "safaricom",
     operator: operators[2],
     connectivityFacility: [
@@ -270,7 +327,7 @@ const facilities: Facility[] = [
     name: "Microsoft-G42 AI Data Centre",
     slug: "microsoft-g42-ai-dc",
     description: "Planned $1 billion AI data centre joint venture. Would be Kenya's first hyperscale cloud/AI facility from a global tech company.",
-    status: "Announced",
+    status: "Early Stage",
     address: "To be determined (likely Nairobi or Olkaria)",
     city: "Nairobi",
     region: "Nairobi County",
@@ -289,6 +346,7 @@ const facilities: Facility[] = [
     lastVerified: "2026-08",
     dataSource: "Semafor, Tom's Hardware, Business Daily",
     dataConfidence: "High",
+    articleSlugs: ["ai-data-centres-east-africa"],
     operatorId: "safaricom",
     operator: operators[2],
     connectivityFacility: [],
@@ -522,10 +580,74 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
   },
+
+  // ── Kenya Data Centres (ICT Authority) ────────────────────────────────
+  {
+    id: "16",
+    name: "Kenya Data Centres SME Facility",
+    slug: "kenya-data-centres-sme",
+    description: "Announced facility by Kenya Data Centres targeting small and medium enterprise colocation customers.",
+    status: "Early Stage",
+    address: null,
+    city: "Nairobi",
+    region: "Nairobi County",
+    itLoadMw: null,
+    totalCapacityMw: null,
+    rackCount: null,
+    tierRating: null,
+    facilityType: "Colocation",
+    aiReady: false,
+    openedDate: null,
+    expansionDate: null,
+    coolingType: null,
+    powerSource: null,
+    renewableClaim: null,
+    notable: "Announced plans targeting Kenya's SME colocation segment — an underserved tier between enterprise carriers and hyperscale campuses. Capacity and site undisclosed.",
+    lastVerified: "2026-08",
+    dataSource: "DC254 market outlook research",
+    dataConfidence: "Low",
+    articleSlugs: ["kenya-data-centre-market-outlook-2025-2030"],
+    operatorId: "kenya-telcom",
+    operator: operators[8],
+    connectivityFacility: [],
+    certifications: [],
+  },
 ];
 
 export function getFacilities() {
   return facilities;
+}
+
+export function getFacilityBySlug(slug: string) {
+  return facilities.find((f) => f.slug === slug) || null;
+}
+
+/**
+ * Market supply snapshot, staged by pipeline status. Capacity basis:
+ * Operational = built (designed) capacity of live facilities; pipeline
+ * stages = developer-announced capacity. liveItLoadMw is the verified
+ * in-service IT load, tracked separately for honesty about utilisation.
+ */
+export function getMarketSnapshot() {
+  const stages = STATUS_ORDER.map((stage) => {
+    const inStage = facilities.filter((f) => f.status === stage);
+    const mw = inStage.reduce((s, f) => s + (f.totalCapacityMw || 0), 0);
+    return { stage, count: inStage.length, mw };
+  });
+  const totalSupplyMw = stages.reduce((s, x) => s + x.mw, 0);
+  const liveItLoadMw = facilities
+    .filter((f) => f.status === "Operational")
+    .reduce((s, f) => s + (f.itLoadMw || 0), 0);
+  const dates = facilities.map((f) => f.lastVerified).sort();
+  const lastVerified = dates[dates.length - 1] || "";
+  return {
+    stages,
+    totalSupplyMw,
+    liveItLoadMw,
+    facilities: facilities.length,
+    operators: operators.length,
+    lastVerified,
+  };
 }
 
 export function getOperators() {

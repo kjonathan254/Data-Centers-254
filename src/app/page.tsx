@@ -9,6 +9,7 @@ import LatestNewsBanner from "@/components/sections/latest-news-banner";
 import WhatIsDC from "@/components/sections/what-is-dc";
 import TheScale from "@/components/sections/the-scale";
 import ReadTheLibrary from "@/components/sections/read-the-library";
+import WhoWeHelp from "@/components/sections/who-we-help";
 import CareersSection from "@/components/sections/careers-section";
 import NewsletterV2 from "@/components/sections/newsletter-v2";
 
@@ -37,9 +38,11 @@ export default function Home() {
         <TheScale />
         {/* 8 — Every topic as an image-led entry point into 56 explainers */}
         <ReadTheLibrary />
-        {/* 9 — The people inside the buildings */}
+        {/* 9 — Audience entry points: students / journalists / operators / researchers */}
+        <WhoWeHelp />
+        {/* 10 — The people inside the buildings */}
         <CareersSection />
-        {/* 10 — Weekly briefing signup */}
+        {/* 11 — Weekly briefing signup */}
         <NewsletterV2 />
       </main>
       <Footer />

@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import {
   Search, SlidersHorizontal, X, Building2, Zap, Server,
   MapPin, Shield, Globe, ArrowUpDown, Database, Wifi,
-  AlertTriangle, CheckCircle, Clock, HardHat, Megaphone,
+  AlertTriangle, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -12,13 +12,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import {
-  Dialog, DialogContent, DialogHeader, DialogTitle,
-} from "@/components/ui/dialog";
-import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Separator } from "@/components/ui/separator";
 
 interface ConnectivityProvider { name: string; type: string }
 interface Cert { certification: { name: string; type: string } }
@@ -50,8 +46,9 @@ interface DirData { facilities: Facility[]; filters: FilterMeta; stats: DirStats
 const statusCfg: Record<string, { color: string; bg: string; icon: LucideIcon }> = {
   Operational: { color: "text-neon", bg: "bg-neon/10 border-neon/25", icon: CheckCircle },
   "Under Construction": { color: "text-cyan", bg: "bg-cyan/10 border-cyan/25", icon: HardHat },
+  Committed: { color: "text-amber-500", bg: "bg-amber-500/10 border-amber-500/25", icon: ShieldCheck },
+  "Early Stage": { color: "text-muted-foreground", bg: "bg-accent/50 border-border", icon: Megaphone },
   Planned: { color: "text-muted-foreground", bg: "bg-accent/50 border-border", icon: Clock },
-  Announced: { color: "text-amber-500", bg: "bg-amber-500/10 border-amber-500/25", icon: Megaphone },
 };
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -75,7 +72,6 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
   const [sortBy, setSortBy] = useState("itLoadMw");
   const [sortOrder, setSortOrder] = useState("desc");
   const [showFilters, setShowFilters] = useState(false);
-  const [selected, setSelected] = useState<Facility | null>(null);
 
   const fetchDir = useCallback(async () => {
     try {
@@ -185,7 +181,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
             {data.facilities.map((f) => {
               const sc = statusCfg[f.status] || statusCfg.Planned;
               return (
-                <button key={f.id} onClick={() => setSelected(f)} className="w-full text-left card-solid card-solid-hover rounded-xl p-5 sm:p-6 group cursor-pointer">
+                <Link key={f.id} href={`/directory/${f.slug}`} className="w-full text-left card-solid card-solid-hover rounded-xl p-5 sm:p-6 group">
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="min-w-0"><h3 className="text-base font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">{f.name}</h3><p className="text-xs text-muted-foreground mt-0.5">{f.operator.name}</p></div>
                     <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
@@ -199,9 +195,9 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                   {f.description && <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{f.description}</p>}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/30">
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><MapPin className="size-3" />{f.city}</div>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span>{f.connectivityFacility.length} connections</span>{f.certifications.length > 0 && <span>{f.certifications.length} certs</span>}{f.lastVerified && <span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span>}</div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span>Full profile →</span><span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
                   </div>
-                </button>
+                </Link>
               );
             })}
           </div>
@@ -219,55 +215,6 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           </p>
         )}
       </div>
-
-      <Dialog open={!!selected} onOpenChange={(o) => { if (!o) setSelected(null); }}>
-        {selected && <FacilityDetail facility={selected} />}
-      </Dialog>
     </section>
   );
-}
-
-function FacilityDetail({ facility: f }: { facility: Facility }) {
-  const sc = statusCfg[f.status] || statusCfg.Planned;
-  const SIcon = sc.icon;
-  return (
-    <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto bg-background border-border p-0 scrollbar-thin">
-      <DialogHeader className="p-6 pb-0">
-        <div className="flex items-start justify-between gap-3">
-          <div><DialogTitle className="text-xl font-bold text-foreground">{f.name}</DialogTitle><p className="text-sm text-muted-foreground mt-1">{f.operator.name}{f.operator.parentCompany ? ` (${f.operator.parentCompany})` : ""}</p></div>
-          <Badge variant="outline" className={`shrink-0 rounded-full px-3 py-1 text-xs font-medium border ${sc.bg} ${sc.color}`}><SIcon className="size-3 mr-1" />{f.status}</Badge>
-        </div>
-      </DialogHeader>
-      <div className="p-6 space-y-6">
-        {f.description && <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>}
-        {f.notable && <div className="card-solid rounded-lg p-4 border-l-4 border-l-cyan"><p className="text-sm text-foreground leading-relaxed">{f.notable}</p></div>}
-        <Separator className="bg-border/50" />
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {f.itLoadMw && <Spec icon={Zap} label="IT Load" value={`${f.itLoadMw} MW`} />}
-          {f.totalCapacityMw && <Spec icon={Zap} label="Total Capacity" value={`${f.totalCapacityMw} MW`} />}
-          {f.rackCount && <Spec icon={Server} label="Racks" value={f.rackCount.toLocaleString()} />}
-          {f.tierRating && <Spec icon={Shield} label="Tier Rating" value={f.tierRating} />}
-          {f.facilityType && <Spec icon={Building2} label="Type" value={f.facilityType} />}
-          {f.aiReady && <Spec icon={Wifi} label="AI Ready" value="Yes" />}
-          {f.coolingType && <Spec icon={Globe} label="Cooling" value={f.coolingType} />}
-          {f.openedDate && <Spec icon={Clock} label="Opened" value={f.openedDate} />}
-          {f.expansionDate && <Spec icon={Clock} label="Expansion" value={f.expansionDate} />}
-        </div>
-        {(f.address || f.city || f.region) && <div><h4 className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2">Location</h4><p className="text-sm text-foreground">{[f.address, f.city, f.region].filter(Boolean).join(", ")}</p></div>}
-        {f.powerSource && <div><h4 className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2">Power Source</h4><p className="text-sm text-foreground">{f.powerSource}</p>{f.renewableClaim && <p className="text-xs text-muted-foreground mt-1">{f.renewableClaim}</p>}</div>}
-        {f.connectivityFacility.length > 0 && <div><h4 className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2">Connectivity ({f.connectivityFacility.length} providers)</h4><div className="flex flex-wrap gap-2">{f.connectivityFacility.map((cf) => <Badge key={cf.provider.name} variant="outline" className="rounded-full px-2.5 py-0.5 text-xs font-normal border-border text-muted-foreground">{cf.provider.name} <span className="text-[10px] text-cyan/60 ml-1">{cf.provider.type}</span></Badge>)}</div></div>}
-        {f.certifications.length > 0 && <div><h4 className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2">Certifications</h4><div className="flex flex-wrap gap-2">{f.certifications.map((fc) => <Badge key={fc.certification.name} variant="outline" className="rounded-full px-2.5 py-0.5 text-xs font-normal border-cyan/20 text-cyan bg-cyan/5">{fc.certification.name}</Badge>)}</div></div>}
-        <Separator className="bg-border/50" />
-        <div className="flex items-center justify-between text-xs text-muted-foreground/60">
-          <span>Source: {f.dataSource || "Not specified"}</span>
-          <span>Verified: {f.lastVerified || "Unknown"}</span>
-          <Badge variant="outline" className={`rounded-full px-2 py-0 text-[10px] ${f.dataConfidence === "High" ? "border-neon/25 text-neon bg-neon/5" : f.dataConfidence === "Medium" ? "border-cyan/20 text-cyan bg-cyan/5" : "border-border text-muted-foreground"}`}>Confidence: {f.dataConfidence}</Badge>
-        </div>
-      </div>
-    </DialogContent>
-  );
-}
-
-function Spec({ icon: Icon, label, value }: { icon: LucideIcon; label: string; value: string }) {
-  return (<div className="card-solid rounded-lg p-3"><Icon className="size-4 text-cyan mb-1" /><div className="text-sm font-semibold text-foreground">{value}</div><div className="text-[11px] text-muted-foreground">{label}</div></div>);
 }

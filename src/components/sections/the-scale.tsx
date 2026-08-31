@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
 
 /**
  * The scale — "There is no cloud": full-width infrastructure map plus a
  * four-metric sourced row. Absorbs the old standalone "2 seconds" section.
- * Server component.
+ * Server component; counts derive from directory-data.ts so the homepage
+ * never drifts from the directory.
  */
 export default function TheScale() {
+  const snap = getMarketSnapshot();
+  const facilities = getFacilities();
+  const pipelineMw = Math.round(snap.totalSupplyMw - snap.stages[0].mw);
   const metrics: {
     value: string;
     label: string;
@@ -23,9 +28,9 @@ export default function TheScale() {
       source: "Verified",
     },
     {
-      value: "14",
+      value: String(facilities.length),
       label: "Known facilities",
-      note: "The buildings that house the servers, storage and networking behind Kenya's digital economy.",
+      note: "The buildings that house the servers, storage and networking behind Kenya's digital economy — live, under construction, and committed.",
       source: "DC254 database",
     },
     {
@@ -39,8 +44,10 @@ export default function TheScale() {
     {
       value: "~14 MW",
       label: "Installed IT capacity",
-      note: "Combined operational IT load across Kenya's tracked facilities — from edge rooms to 4.5 MW hyperscale halls.",
+      note: `Combined operational IT load across Kenya's tracked facilities — with ${pipelineMw} MW more announced across the build pipeline.`,
       source: "DC254 database",
+      href: "/directory",
+      linkLabel: "View the market snapshot",
     },
   ];
 
@@ -110,7 +117,7 @@ export default function TheScale() {
           <div>
             <p className="eyebrow">Global context</p>
             <h3 className="mt-3 text-xl font-semibold text-foreground sm:text-2xl">
-              Kenya&apos;s 14 facilities sit inside a much bigger machine.
+              Kenya&apos;s {snap.facilities} tracked facilities sit inside a much bigger machine.
             </h3>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               The largest data centre campuses on Earth — led by China

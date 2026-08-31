@@ -63,7 +63,9 @@ function NairobiMapInner({ dimmed, onFacility }: {
         )}
         <text x={side === "r" ? x + 16 : x - 16} y={y - 2} textAnchor={side === "r" ? "start" : "end"} fontSize={15.5} fontWeight={650} fill="oklch(0.93 0.01 260)">{f.shortName}</text>
         <text x={side === "r" ? x + 16 : x - 16} y={y + 14} textAnchor={side === "r" ? "start" : "end"} fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.55)">
-          {f.status === "Announced" ? `${f.totalMW} MW · announced` : `${f.totalMW} MW · ${f.tier}`}
+          {f.status === "Announced"
+            ? (f.totalMW > 0 ? `${f.totalMW} MW · announced` : "Capacity undisclosed · announced")
+            : `${f.totalMW} MW · ${f.tier}`}
         </text>
       </g>
     );
@@ -75,7 +77,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
       className="absolute inset-0 h-full w-full"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Map of the 13 data centres in Nairobi"
+      aria-label={`Map of the ${items.length} data centres in the Nairobi metro area`}
     >
       {/* land + province */}
       <path d={NBO_LAND} fill="oklch(0.78 0.14 195 / 0.05)" stroke="oklch(0.78 0.14 195 / 0.2)" strokeWidth={1.2} />

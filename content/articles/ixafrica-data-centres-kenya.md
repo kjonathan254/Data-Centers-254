@@ -1,7 +1,7 @@
 ---
 title: "iXAfrica Data Centres: Kenya's First Hyperscale AI-Ready Facility"
 slug: "ixafrica-data-centres-kenya"
-meta_description: "iXAfrica operates East Africa's first hyperscale, AI-ready data centre on Mombasa Road, Nairobi. Backed by Actis, the campus targets 16 MW capacity serving regional cloud and AI workloads."
+meta_description: "iXAfrica operates East Africa's first hyperscale, AI-ready data centre on Mombasa Road, Nairobi. Backed by Actis, the NBOX1 campus targets 22.5 MW with a further 53 MW Tilisi campus committed."
 primary_keyword: "iXAfrica data centre"
 secondary_keywords:
   - "iXAfrica Nairobi"
@@ -44,7 +44,7 @@ faq:
   - question: "Where is iXAfrica located?"
     answer: "iXAfrica NBOX1 is located along Mombasa Road in Nairobi's Industrial Area. The campus is positioned near key fibre routes connecting Nairobi to submarine cable landing stations in Mombasa."
   - question: "What is iXAfrica's total capacity?"
-    answer: "The current NBOX1 facility delivers 4.5 MW IT load with 500 racks. The broader campus is planned for 16 MW across multiple phases, with NBOX2 (6 MW) currently under construction."
+    answer: "The current NBOX1 facility delivers 4.5 MW IT load with 500 racks. The NBOX1 campus is planned for 22.5 MW across multiple phases — the 18 MW NBOX1.2 expansion is under construction — and a further 53 MW campus at Tilisi is committed."
 canonical_url: "https://data-centers-254.vercel.app/articles/ixafrica-data-centres-kenya"
 ---
 

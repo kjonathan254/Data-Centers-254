@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Directory from "@/components/sections/directory";
+import MarketSnapshot from "@/components/sections/market-snapshot";
 import { getFacilities } from "@/lib/directory-data";
 
 export const metadata: Metadata = {
-  title: "DC Directory",
+  title: "Kenya Data Centre Directory & Market Snapshot",
   description:
-    "A searchable database of every data centre facility in Kenya. Filter by operator, status, type, and capacity. Every facility verified and sourced.",
+    "Every data centre facility in Kenya, staged by supply pipeline — Live, Under Construction, Committed, Early Stage. Search, filter, and compare. Every facility verified and sourced.",
   alternates: { canonical: "/directory" },
   openGraph: {
-    title: "DC Directory | Data Centre 254",
+    title: "Kenya Data Centre Directory | Data Centre 254",
     description:
-      "Kenya's most comprehensive data centre directory. Search, filter, and compare facilities.",
+      "Kenya's most comprehensive data centre directory with a staged market snapshot. Search, filter, and compare facilities.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DC Directory | Data Centre 254",
+    title: "Kenya Data Centre Directory | Data Centre 254",
     description: "Kenya's most comprehensive data centre directory. Search, filter, and compare facilities.",
     images: ["/images/africa-dc-map.webp"],
   },
@@ -55,6 +56,7 @@ export default async function DirectoryPage({
             ))}
           </ul>
         </div>
+        <MarketSnapshot />
         <Directory initialSearch={search ?? ""} />
       </main>
       <Footer />

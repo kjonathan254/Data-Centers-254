@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
+import { getFacilities } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -42,5 +43,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...articleRoutes];
+  // Per-facility profile pages (SEO landers)
+  const facilityRoutes: MetadataRoute.Sitemap = getFacilities().map((f) => ({
+    url: `${baseUrl}/directory/${f.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...articleRoutes, ...facilityRoutes];
 }

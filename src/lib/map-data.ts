@@ -24,12 +24,14 @@ export interface KenyaFacility {
 }
 
 export const KENYA_FACILITIES: KenyaFacility[] = [
-  // ── Nairobi (13) ──
+  // ── Nairobi (15) ──
   { id: "nbox1", openedYear: 2024, name: "iXAfrica NBOX1", shortName: "iXAfrica NBOX1", operator: "iXAfrica Data Centres", status: "Operational", city: "nairobi", lat: -1.3120, lng: 36.8530, totalMW: 5, tier: "Tier III", racks: 500, aiReady: true, note: "East Africa's first hyperscale, AI-ready facility — Mombasa Road" },
-  { id: "nbox2", openedYear: null, name: "iXAfrica NBOX2", shortName: "iXAfrica NBOX2", operator: "iXAfrica Data Centres", status: "Under Construction", city: "nairobi", lat: -1.3136, lng: 36.8552, totalMW: 6, tier: "Tier III", racks: null, note: "Second building on the iXAfrica campus, opening 2026" },
+  { id: "nbox1-2", openedYear: null, name: "iXAfrica NBOX1.2", shortName: "iXAfrica NBOX1.2", operator: "iXAfrica Data Centres", status: "Under Construction", city: "nairobi", lat: -1.3136, lng: 36.8552, totalMW: 18, tier: "Tier III", racks: 3744, note: "Mombasa Road campus phase 2 — financing secured, build underway; campus total 22.5 MW" },
+  { id: "tilisi", openedYear: null, name: "iXAfrica NBOX2 (Tilisi)", shortName: "iXAfrica Tilisi", operator: "iXAfrica Data Centres", status: "Announced", city: "nairobi", lat: -1.24, lng: 36.745, totalMW: 53, tier: "Hyperscale", racks: null, note: "Second campus at Tilisi (Limuru, 11 acres acquired 2023) — position schematic; planned 53+ MW" },
   { id: "adcn1", openedYear: 2019, name: "Africa Data Centres Nairobi 1", shortName: "ADC Nairobi 1", operator: "Africa Data Centres", status: "Operational", city: "nairobi", lat: -1.3062, lng: 36.8456, totalMW: 3, tier: "Tier III", racks: 200 },
   { id: "adcn2", openedYear: 2022, name: "Africa Data Centres Nairobi 2", shortName: "ADC Nairobi 2", operator: "Africa Data Centres", status: "Operational", city: "nairobi", lat: -1.3048, lng: 36.8472, totalMW: 2.5, tier: "Tier III", racks: 150 },
-  { id: "msft", openedYear: null, name: "Microsoft–G42 AI Data Centre", shortName: "Microsoft–G42", operator: "Safaricom / Microsoft / G42", status: "Announced", city: "nairobi", lat: -1.3005, lng: 36.8700, totalMW: 100, tier: "Hyperscale", racks: null, note: "US$1bn announced — site TBD (Nairobi or Olkaria geothermal)" },
+  { id: "msft", openedYear: null, name: "Microsoft–G42 AI Data Centre", shortName: "Microsoft–G42", operator: "Safaricom / Microsoft / G42", status: "Announced", city: "nairobi", lat: -1.3005, lng: 36.8700, totalMW: 100, tier: "Hyperscale", racks: null, note: "US$1bn — early stage: site TBD, pending grid capacity (100+ MW)" },
+  { id: "kdc", openedYear: null, name: "Kenya Data Centres SME Facility", shortName: "Kenya DC (SME)", operator: "Kenya Data Centres", status: "Announced", city: "nairobi", lat: -1.2865, lng: 36.822, totalMW: 0, tier: "Colocation", racks: null, note: "Announced SME colocation facility — capacity undisclosed; position schematic" },
   { id: "safaricom", openedYear: 2013, name: "Safaricom Data Centre", shortName: "Safaricom", operator: "Safaricom", status: "Operational", city: "nairobi", lat: -1.2632, lng: 36.8038, totalMW: 2, tier: "Tier III", racks: 120 },
   { id: "telkom", openedYear: 2010, name: "Telkom Kenya Data Centre", shortName: "Telkom Kenya", operator: "Telkom Kenya", status: "Operational", city: "nairobi", lat: -1.2988, lng: 36.8105, totalMW: 1.5, tier: "Tier II", racks: 80 },
   { id: "liquid", openedYear: 2018, name: "Liquid Nairobi Data Centre", shortName: "Liquid", operator: "Liquid Intelligent Technologies", status: "Operational", city: "nairobi", lat: -1.2648, lng: 36.8093, totalMW: 1.5, tier: "Tier III", racks: 100 },
@@ -42,8 +44,8 @@ export const KENYA_FACILITIES: KenyaFacility[] = [
   { id: "adcmsa", openedYear: 2021, name: "Africa Data Centres Mombasa", shortName: "ADC Mombasa", operator: "Africa Data Centres", status: "Operational", city: "mombasa", lat: -4.0320, lng: 39.6770, totalMW: 1, tier: "Tier II", racks: 50, note: "Coastal facility near the submarine cable landing stations" },
 ];
 
-export const LIVE_MW = 21.5;
-export const PIPELINE_MW = 127.5;
+export const LIVE_MW = 21.0;    // built (designed) capacity of operational facilities
+export const PIPELINE_MW = 171; // UC (18) + Committed (53) + Early Stage (100) — announced basis
 
 // ── Regional (context) assets ───────────────────────────────────────────────
 

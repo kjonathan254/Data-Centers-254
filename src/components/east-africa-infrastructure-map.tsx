@@ -31,9 +31,11 @@ const CITY_NAMES: Record<string, string> = {
 // ─── STATS ──────────────────────────────────────────────────────────────────
 
 function StatsBand() {
+  const ops = KENYA_FACILITIES.filter((f) => f.status === "Operational").length;
+  const nbo = KENYA_FACILITIES.filter((f) => f.city === "nairobi").length;
   const stats = [
-    { label: "Facilities", value: "14", sub: "12 operational · 13 in Nairobi" },
-    { label: "Live IT power", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW pipeline` },
+    { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
+    { label: "Live capacity", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW announced pipeline` },
     { label: "Subsea cables", value: "6", sub: `≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps · 7th in development` },
     { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ${KIXP.peakGbps} Gbps peak` },
   ];
