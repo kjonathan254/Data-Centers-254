@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
-updated_date: "2026-08-29"
+updated_date: "2026-08-31"
 category: "Market Analysis"
 cluster: "AI"
 og_image: "/images/africa-ai-data-hub-mtn.webp"
@@ -41,13 +41,17 @@ internal_links:
   - text: "data centre directory"
     href: "/directory"
 external_sources:
+  - title: "IT News Africa: MTN Group advances Africa's AI-ready digital infrastructure ecosystem through strategic partnership (31 Aug 2026)"
+    url: "https://www.itnewsafrica.com/2026/08/mtn-group-advances-africas-ai-ready-digital-infrastructure-ecosystem-through-strategic-partnership/"
   - title: "Bloomberg: UAE tycoon Al Ashram, MTN agree to build Africa AI data centres"
     url: "https://www.moneyweb.co.za/news/companies-and-deals/uae-tycoon-al-ashram-mtn-agree-to-build-africa-ai-data-centres/"
   - title: "Business Insider Africa: UAE business giant Al Ashram joins forces with Africa's largest network provider"
     url: "https://africa.businessinsider.com/local/markets/uae-business-giant-al-ashram-joins-forces-with-africas-largest-network-provider-to/ewxb1nb"
 faq:
   - question: "What is Africa Data Hub Holding?"
-    answer: "Africa Data Hub Holding Ltd is a new data centre venture formed through a partnership between MTN Group, Africa's largest mobile network operator, and Dubai-based investor Tarek Al Ashram. The company plans to develop AI-focused data centres across the continent, beginning with 150 megawatts of capacity in Nigeria and South Africa."
+    answer: "Africa Data Hub Holding Limited is a data centre venture formed through a strategic partnership between MTN Digital Infrastructure and a UAE-based data centre investment platform founded by Tarek Al Ashram. Formally confirmed by MTN on 31 August 2026, the company serves as the platform for developing and scaling digital infrastructure across key African markets, with an initial focus on South Africa and Nigeria. Bayobab, MTN's digital connectivity business, is a shareholder in the partnership."
+  - question: "What role does Bayobab play in the MTN data centre partnership?"
+    answer: "Bayobab, MTN Group's digital connectivity business, is a shareholder in Africa Data Hub Holding and provides open-access connectivity and go-to-market support through its pan-African fibre network. That role matters because AI-ready data centres are only as valuable as the fibre that connects them to customers across multiple markets."
   - question: "Who is Tarek Al Ashram?"
     answer: "Tarek Al Ashram is a Dubai-based investor and the co-founder of Gulf Data Hub, a large-scale data centre platform backed by KKR & Co. He is backing the new African venture through his own investment firm, bringing data centre development and operating experience from the UAE market."
   - question: "Where will the first AI data centres be built?"
@@ -57,11 +61,11 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/mtn-africa-data-hub-ai-data-centres"
 ---
 
-Africa's largest mobile network operator is putting serious capital behind the continent's AI infrastructure gap. MTN Group, which operates across 16 African markets, has agreed with Dubai-based investor Tarek Al Ashram to develop AI-focused data centres through a new venture called Africa Data Hub Holding Ltd, according to Bloomberg reporting published on 27 August 2026. The announcement is one of the most significant commitments yet to building AI-ready compute capacity on the continent, and it arrives at a moment when Africa accounts for less than 1% of the world's AI data centre capacity despite having its fastest-growing and youngest population.
+Africa's largest mobile network operator is putting serious capital behind the continent's AI infrastructure gap. MTN Group, which operates across 16 African markets, has agreed with Dubai-based investor Tarek Al Ashram to develop AI-focused data centres through a new venture called Africa Data Hub Holding Ltd, according to Bloomberg reporting published on 27 August 2026 and formally confirmed by MTN in an announcement on 31 August 2026. The announcement is one of the most significant commitments yet to building AI-ready compute capacity on the continent, and it arrives at a moment when Africa accounts for less than 1% of the world's AI data centre capacity despite having its fastest-growing and youngest population.
 
 ![AI data centre hall with GPU racks and blue status lights](/images/africa-ai-data-hub-mtn.webp)
 
-For Kenya's data centre community, the story matters even though the first facilities will not be built here. It signals that pan-African operators and Gulf capital now view AI infrastructure as an investable, revenue-generating asset class on the continent, and it adds competitive pressure to the race that Kenya's own flagship projects, including the planned one-gigawatt Microsoft and G42 facility, have been running.
+For Kenya's data centre community, the story matters even though the first facilities will not be built here. It signals that pan-African operators and Gulf capital now view AI infrastructure as an investable, revenue-generating asset class on the continent, and it adds competitive pressure to the race that Kenya's own flagship projects, including the planned one-gigawatt Microsoft and G42 facility, have been running. This article was first published on 29 August 2026 and updated on 31 August 2026 after MTN formally confirmed the partnership structure.
 
 ## The Venture: Africa Data Hub Holding Ltd
 
@@ -70,6 +74,14 @@ The new company sits at the intersection of two complementary strengths. On one 
 "We see significant potential to bring our experience in developing and operating large-scale data centre platforms to African markets," Al Ashram said in a response to queries, adding that Africa Data Hub will "help shape that growth" of the continent's digital economy. In his framing, Africa now presents a "similarly compelling opportunity, driven by strong underlying demand, rapidly expanding digital economies and an increasing need for resilient and scalable infrastructure" to what the Middle East experienced during its own data centre boom.
 
 That comparison is instructive. The Gulf states transformed themselves from data centre bystanders into a regional hub by pairing sovereign-backed capital with experienced operators and guaranteed anchor tenants. Africa Data Hub is an attempt to replicate that playbook with MTN as the anchor, and with an operator who has already done it once in the UAE leading delivery.
+
+## Confirmed on 31 August: MTN Digital Infrastructure, Bayobab, and the Platform Structure
+
+The formal announcement, published by IT News Africa on 31 August 2026, added useful structural detail to the original reporting. The agreement was signed by MTN Digital Infrastructure, the group subsidiary that houses MTN's towers, fibre, and data centre assets, and the venture will operate through Africa Data Hub Holding Limited as the platform through which future digital infrastructure opportunities are developed and scaled, with an initial focus on South Africa and Nigeria.
+
+Two details stand out for infrastructure watchers. First, Bayobab, MTN's digital connectivity business, is not just a supplier but a shareholder in the partnership, and will provide open-access connectivity and go-to-market support across its pan-African network. Bundling wholesale fibre with data centre capacity into one platform mirrors the integrated land-and-power-and-fibre model that successful data centre platforms use to shorten time-to-revenue. Second, the announcement framed the venture explicitly as part of MTN's Ambition 2030 strategy, with group digital infrastructure CEO Mazen Mroué describing a platform "capable of supporting hyperscalers, cloud providers, enterprises and technology innovators across Africa" — language that positions Africa Data Hub as wholesale infrastructure rather than an MTN-internal cloud play.
+
+Mroué's framing also clarified the demand thesis: "Africa's digital economy is entering a new era, driven by rapid advances in artificial intelligence, cloud adoption and digital innovation. Realising this opportunity requires more than connectivity. It requires the infrastructure platforms that will power the next generation of digital services, businesses and innovation." For Al Ashram, the pitch is experience transfer: having watched data centre platforms accelerate cloud and AI growth in the Middle East, he described Africa as presenting "a similarly compelling opportunity" driven by demand, expanding digital economies, and the need for resilient, scalable infrastructure.
 
 ## Inside the Buildout: 150MW, Nigeria and South Africa First
 

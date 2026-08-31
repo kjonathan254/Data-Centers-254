@@ -23,7 +23,7 @@ export interface BreakingItem {
 export const breakingNews: BreakingItem | null = {
   label: "Breaking",
   title:
-    "MTN and Dubai investor Tarek Al Ashram launch Africa Data Hub — 150 MW of AI data centres planned for Nigeria and South Africa",
+    "MTN formally confirms Africa Data Hub partnership — Bayobab joins as shareholder, platform targets AI-ready capacity across Africa",
   href: "/articles/mtn-africa-data-hub-ai-data-centres",
-  dateText: "27 Aug 2026",
+  dateText: "31 Aug 2026",
 };
