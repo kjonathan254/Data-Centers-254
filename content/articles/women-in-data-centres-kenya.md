@@ -30,6 +30,10 @@ images:
     alt: "Woman engineer configuring server racks"
     caption: "Operators are rolling out mentorship and inclusive hiring to close the gap."
     position: "infographic"
+  - src: "/images/tech-community-event-nairobi.webp"
+    alt: "Tech community meetup in Nairobi with a speaker addressing the audience"
+    caption: "Community events and visible role models are helping more Kenyans see a future in digital infrastructure."
+    position: "section-break"
 internal_links:
   - text: "data centre careers in Kenya"
     href: "/articles/data-centre-careers-kenya"
@@ -89,6 +93,8 @@ Even when women enter the [data centre careers in Kenya](/articles/data-centre-c
 The [career progression in African data centres](/articles/career-progression-african-data-centres) often depends on informal networks and mentorship relationships. In a male-dominated industry, women may have fewer opportunities to build these relationships, limiting their access to career advancement opportunities, project assignments, and industry knowledge.
 
 ## Women Leading Change in Kenya's Tech Infrastructure
+
+![Tech community meetup in Nairobi with a speaker addressing the audience](/images/tech-community-event-nairobi.webp)
 
 Despite the barriers, a growing number of women are making significant contributions to Kenya's data centre and broader tech infrastructure sector. While the industry does not always celebrate these contributions publicly, several women have emerged as leaders and role models:
 

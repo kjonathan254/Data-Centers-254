@@ -39,6 +39,14 @@ images:
     caption: "Where fibre has not yet reached, licensed microwave links moving around 1 Gbps over a 50 km hop remain a practical backhaul bridge."
     position: "diagram"
 
+  - src: "/images/fibre-splicing-termination.webp"
+    alt: "Fibre optic splicing and termination panel with test light visible"
+    caption: "Every route into a data centre ends at termination panels where individual strands are spliced, tested, and patched."
+    position: "section-break"
+  - src: "/images/metro-fibre-civil-works.webp"
+    alt: "Cable drums staged for urban fibre rollout works"
+    caption: "National backbones and metro fibre loops are built the unglamorous way — one trench and one drum at a time."
+    position: "section-break"
 internal_links:
   - text: "submarine cables landing in Mombasa"
     href: "/articles/submarine-cables-landing-mombasa"
@@ -101,6 +109,8 @@ Jamii Telecommunications, part of the Wananchi Group, operates fibre networks pr
 
 ## How Fibre Reaches a Data Centre
 
+![Fibre optic splicing and termination panel with test light visible](/images/fibre-splicing-termination.webp)
+
 The path from a user's phone or laptop to a server inside a data centre involves multiple segments of fibre, each managed by different entities, each with different reliability characteristics and cost structures. Understanding this path is critical for understanding data centre connectivity.
 
 ### Submarine Cables to Landing Stations
@@ -130,6 +140,8 @@ The standard requirement for a carrier-neutral colocation facility is at least t
 Beyond dual entry, larger facilities aim for three or more diverse fibre paths. This provides additional resilience against multiple simultaneous failures and also enables traffic engineering — routing different types of traffic (e.g., latency-sensitive financial transactions vs. bulk data transfers) over different paths based on their characteristics.
 
 ## The National Optic Fibre Backbone Infrastructure (NOFBI)
+
+![Cable drums staged for urban fibre rollout works](/images/metro-fibre-civil-works.webp)
 
 The Kenyan government has invested heavily in fibre through the National Optic Fibre Backbone Infrastructure programme. NOFBI was designed to connect all 47 county headquarters and major government institutions, providing a backbone that government agencies, schools, and hospitals could use for connectivity.
 

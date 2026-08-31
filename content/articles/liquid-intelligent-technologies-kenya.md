@@ -26,6 +26,10 @@ images:
     alt: "East Africa data centre and connectivity map"
     caption: "Liquid's terrestrial fibre connects Mombasa landing stations to data centres across East Africa"
     position: "section-break"
+  - src: "/images/woman-network-engineer-patch-panel.webp"
+    alt: "Network engineer configuring fibre patch panels in a communications room"
+    caption: "Liquid's terrestrial fibre network terminates at patch panels like this before the last jump into a customer's data hall."
+    position: "section-break"
 internal_links:
   - text: "data centre directory"
     href: "/directory"
@@ -63,6 +67,8 @@ The data infrastructure story began to take shape in the early 2000s when Econet
 The rebrand to Liquid Intelligent Technologies in 2021 signalled a further evolution. The company was no longer just a telecoms carrier. It was positioning itself as a full-stack technology company offering cloud computing, cybersecurity, collaboration tools, and managed IT services alongside its core fibre infrastructure. This broader ambition led to the creation of Cassava Technologies as the parent group, with Liquid Intelligent Technologies serving as the connectivity and enterprise services arm alongside sister companies like Africa Data Centres and Liquid Datapoint.
 
 ## The Fibre Network: 100,000 Kilometres Across Africa
+
+![Network engineer configuring fibre patch panels in a communications room](/images/woman-network-engineer-patch-panel.webp)
 
 Liquid's single most important asset is its fibre network. At over 100,000 kilometres, it is the largest independently owned fibre infrastructure on the African continent. The network spans more than 13 countries, including South Africa, Zimbabwe, Zambia, Kenya, Tanzania, Uganda, Rwanda, Burundi, the Democratic Republic of Congo, Mozambique, Lesotho, Botswana, and Nigeria.
 

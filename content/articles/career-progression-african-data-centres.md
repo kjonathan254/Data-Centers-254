@@ -37,6 +37,10 @@ images:
   alt: "Two engineers reviewing work on a laptop along a data centre corridor"
   caption: "Senior roles are as much about people and planning as they are about hardware."
   position: inline
+- src: /images/junior-technician-server-aisle.webp
+  alt: "Junior technician monitoring server racks with a tablet in a data hall"
+  caption: "Entry-level roles put new technicians hands-on with live hardware from day one — rack work is where the ladder starts."
+  position: section-break
 internal_links:
 - text: How To Get Job Kenyan Data Centre
   href: /articles/how-to-get-job-kenyan-data-centre
@@ -117,6 +121,8 @@ The data centre industry in Africa — and Kenya specifically — follows a fair
 According to [Africa Data Centres' market reports](https://www.africadatacentres.com/news/), the continent needs approximately 10,000 additional skilled data centre professionals by 2030 to meet demand. Kenya alone, driven by the [national market outlook through 2030](/articles/kenya-data-centre-market-outlook-2025-2030), is expected to require over 2,000 new roles across technical, operational, and leadership functions.
 
 ## Entry-Level Roles (0–3 Years Experience)
+
+![Junior technician monitoring server racks with a tablet in a data hall](/images/junior-technician-server-aisle.webp)
 
 Entry-level positions form the foundation of any data centre career. These roles are hands-on, requiring physical presence in the facility, and they provide the essential ground-floor understanding of how data centres actually operate.
 

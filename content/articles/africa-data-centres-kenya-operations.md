@@ -26,6 +26,10 @@ images:
     alt: "Blue-lit server racks in an Africa Data Centres hall"
     caption: "Carrier-neutral halls in Nairobi and Mombasa anchor the operator's footprint."
     position: "section-break"
+  - src: "/images/dc-engineer-rack-inspection.webp"
+    alt: "Data centre engineer inspecting server rack cabling with a tablet"
+    caption: "Day-to-day facility operations mean constant monitoring, auditing, and hands-on maintenance across halls."
+    position: "section-break"
 internal_links:
   - text: "data centre directory"
     href: "/directory"
@@ -71,6 +75,8 @@ Africa Data Centres' defining characteristic is scale. The company operates faci
 This pan-African footprint is a significant competitive advantage because it enables multi-country deployments under a single contractual framework, with consistent service level agreements, security standards, and operational procedures. A bank headquartered in Nairobi with operations in Dar es Salaam, Lusaka, and Lagos can collocate across all four markets through one provider. This is a capability that national operators or single-market entrants cannot match.
 
 ## Kenya Operations: Nairobi 1, Nairobi 2, and Mombasa
+
+![Data centre engineer inspecting server rack cabling with a tablet](/images/dc-engineer-rack-inspection.webp)
 
 ADC's Kenyan operations consist of three facilities strategically positioned to serve both the Nairobi enterprise market and the international connectivity hub at the coast.
 

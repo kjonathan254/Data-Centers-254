@@ -48,6 +48,10 @@ images:
     caption: "Wind — led by the Lake Turkana project — adds intermittent capacity to Kenya's renewable-heavy grid."
     position: "inline"
 
+  - src: "/images/grid-technician-pole-work.webp"
+    alt: "Field technician working on overhead power and fibre lines"
+    caption: "Closing Kenya's power gap means physical construction: corridors, distribution upgrades, and the crews that build them."
+    position: "section-break"
 internal_links:
   - text: "Kenya data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"
@@ -144,6 +148,8 @@ The combination of these systems means that a well-designed data centre should n
 ![Server racks need consistent, clean power](/images/dc-switchgear.webp)
 
 ## The Path Forward
+
+![Field technician working on overhead power and fibre lines](/images/grid-technician-pole-work.webp)
 
 Solving Kenya's data centre power constraint requires action on multiple fronts:
 

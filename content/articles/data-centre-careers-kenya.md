@@ -38,6 +38,10 @@ images:
     alt: "Nairobi skyline lit up at night"
     caption: "Demand for skilled data centre staff in Nairobi is growing faster than the talent pipeline."
     position: "inline"
+  - src: "/images/classroom-ict-training-kenya.webp"
+    alt: "Students learning computer skills in a Kenyan classroom"
+    caption: "The talent pipeline starts in ICT classrooms, but industry-ready skills still require specialised training beyond the syllabus."
+    position: "section-break"
 internal_links:
   - text: "what is a data centre"
     href: "/articles/what-is-a-data-centre"
@@ -146,6 +150,8 @@ Data centre salaries in Kenya vary significantly by role, experience, and employ
 These figures are approximate and based on industry reports and job listings. Senior roles at international operators can exceed these ranges, particularly when including benefits like medical insurance, housing allowances, and professional development budgets.
 
 ## How to Enter the Industry
+
+![Students learning computer skills in a Kenyan classroom](/images/classroom-ict-training-kenya.webp)
 
 The most common pathways into Kenya's data centre industry are:
 

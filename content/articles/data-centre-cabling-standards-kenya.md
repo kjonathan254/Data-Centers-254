@@ -35,6 +35,10 @@ images:
     caption: "Conductor sizing follows breaker ratings: a 2.5 mm² copper conductor carries a 21 A circuit, while heavy industrial feeders need 16 mm² for 65 A — the same logic governs data centre power cabling."
     position: "diagram"
 
+  - src: "/images/poor-cable-management-example.webp"
+    alt: "Example of poor cable management around a distribution cabinet"
+    caption: "Without enforced standards, cable management degrades fast — the failure modes disciplined practice is designed to prevent."
+    position: "section-break"
 internal_links:
   - text: "data centre design and construction"
     href: "/articles/data-centre-design-build-kenya"
@@ -141,6 +145,8 @@ In the Kenyan market, key installation partners include:
 Manufacturer-specific certifications from **CommScope (SYSTIMAX)**, **Panduit**, and **Corning** ensure installers follow approved practices for terminating and testing their respective cabling systems. These certifications are particularly important for warranty claims — a 25-year system warranty from CommScope, for example, is only valid if installation is performed by a certified partner.
 
 ## Cable Management in High-Density Environments
+
+![Example of poor cable management around a distribution cabinet](/images/poor-cable-management-example.webp)
 
 Kenyan data centres are increasingly deploying **high-density computing**, with some racks drawing 15–20 kW to support GPU clusters for AI workloads. High-density environments demand meticulous cable management for several reasons:
 
