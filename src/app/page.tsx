@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Hero from "@/components/sections/hero";
 import BreakingNewsBar from "@/components/sections/breaking-news-bar";
 import DirectorySearchBand from "@/components/sections/directory-search-band";
+import FeaturedFacilities from "@/components/sections/featured-facilities";
 import LatestIntelligence from "@/components/sections/latest-intelligence";
 import LatestNewsBanner from "@/components/sections/latest-news-banner";
 import WhatIsDC from "@/components/sections/what-is-dc";
@@ -28,6 +29,8 @@ export default function Home() {
         <BreakingNewsBar />
         {/* 3 — The strongest asset, searchable immediately (zero JS) */}
         <DirectorySearchBand />
+        {/* 3.5 — The product itself: flagship facilities, deep-linked */}
+        <FeaturedFacilities />
         {/* 4 — Freshest reporting, image-led cards */}
         <LatestIntelligence />
         {/* 5 — One deep-dive feature */}
