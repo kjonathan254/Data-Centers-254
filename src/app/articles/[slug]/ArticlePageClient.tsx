@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import ListenBar from "@/components/ListenBar";
 
 import type {
   Article, ArticleFaq, ArticleImage,
@@ -486,8 +487,11 @@ export default function ArticlePageClient({ article, related }: Props) {
           {/* Table of Contents */}
           <TableOfContents headings={headings} />
 
+          {/* Listen (device-side text-to-speech) */}
+          <ListenBar targetId="article-body" slug={frontmatter.slug} />
+
           {/* Article Body */}
-          <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
+          <div id="article-body" className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents as Components}>
               {content}
             </ReactMarkdown>

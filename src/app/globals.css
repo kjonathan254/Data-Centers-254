@@ -420,3 +420,19 @@ html {
 .map-cluster:hover {
   transform: scale(1.12);
 }
+
+/* ─── Listen (TTS) follow-along highlight ─────────────────────────────────── */
+.dc-speaking {
+  background-color: oklch(0.78 0.14 195 / 14%);
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0 0.375rem oklch(0.78 0.14 195 / 14%);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+tr.dc-speaking {
+  box-shadow: none;
+  border-radius: 0;
+}
+li.dc-speaking {
+  margin-inline: -0.5rem;
+  padding-inline: 0.5rem;
+}
