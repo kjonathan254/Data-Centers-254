@@ -4,12 +4,14 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft, ArrowRight, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
   Zap, Server, Shield, Building2, Globe, Wifi, FileText, Database,
+  GitCompareArrows,
 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import {
   getFacilities, getFacilityBySlug,
 } from "@/lib/directory-data";
+import { pickPeers } from "@/lib/compare";
 import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
 
@@ -98,6 +100,7 @@ export default async function FacilityPage({
   const { facility: slug } = await params;
   const f = getFacilityBySlug(slug);
   if (!f) notFound();
+  const peers = pickPeers(f, 2);
 
   const all = [...getFacilities()].sort(
     (a, b) =>
@@ -210,6 +213,30 @@ export default async function FacilityPage({
             </Link>
             .
           </p>
+
+          {/* Compare CTA — deep link preselects this facility plus city peers */}
+          {peers.length > 0 && (
+            <div className="card-solid mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl p-4">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <GitCompareArrows className="size-4 text-cyan" />
+                Compare {f.name} with{" "}
+                {peers.map((p, i) => (
+                  <span key={p.id}>
+                    {i > 0 && " · "}
+                    <Link href={`/directory/${p.slug}`} className="text-cyan underline underline-offset-2 hover:text-foreground">
+                      {p.name}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+              <Link
+                href={`/directory/compare?ids=${encodeURIComponent([f.slug, ...peers.map((p) => p.slug)].join(","))}`}
+                className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-cyan px-3.5 py-1.5 text-xs font-bold text-background transition-opacity hover:opacity-90"
+              >
+                Side by side <ArrowRight className="size-3.5" />
+              </Link>
+            </div>
+          )}
 
           {/* Spec grid */}
           {specs.length > 0 && (

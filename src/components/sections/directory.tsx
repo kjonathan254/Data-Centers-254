@@ -5,8 +5,11 @@ import {
   Search, SlidersHorizontal, X, Building2, Zap, Server,
   MapPin, Shield, Globe, ArrowUpDown, Database, Wifi,
   AlertTriangle, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
+  GitCompareArrows,
   type LucideIcon,
 } from "lucide-react";
+import CompareTray from "@/components/compare/compare-tray";
+import { useCompareSelection } from "@/components/compare/use-compare-selection";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -72,6 +75,8 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
   const [sortBy, setSortBy] = useState("itLoadMw");
   const [sortOrder, setSortOrder] = useState("desc");
   const [showFilters, setShowFilters] = useState(false);
+  const { slugs: compareSlugs, toggle: toggleCompare } = useCompareSelection();
+  const compareSet = new Set(compareSlugs);
 
   const fetchDir = useCallback(async () => {
     try {
@@ -180,8 +185,11 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {data.facilities.map((f) => {
               const sc = statusCfg[f.status] || statusCfg.Planned;
+              const inCompare = compareSet.has(f.slug);
               return (
-                <Link key={f.id} href={`/directory/${f.slug}`} className="w-full text-left card-solid card-solid-hover rounded-xl p-5 sm:p-6 group">
+                <article key={f.id} className="card-solid card-solid-hover relative rounded-xl p-5 sm:p-6 group">
+                  {/* Stretched link — whole card navigates to the profile */}
+                  <Link href={`/directory/${f.slug}`} className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan" aria-label={`${f.name} — full profile`} />
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="min-w-0"><h3 className="text-base font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">{f.name}</h3><p className="text-xs text-muted-foreground mt-0.5">{f.operator.name}</p></div>
                     <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
@@ -194,10 +202,22 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                   </div>
                   {f.description && <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{f.description}</p>}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/30">
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><MapPin className="size-3" />{f.city}</div>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span>Full profile →</span><span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
+                    <button
+                      type="button"
+                      onClick={() => toggleCompare(f.slug)}
+                      aria-pressed={inCompare}
+                      className={`relative z-10 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors ${
+                        inCompare
+                          ? "border-cyan/50 bg-cyan/15 text-cyan"
+                          : "border-border/60 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
+                      }`}
+                    >
+                      <GitCompareArrows className="size-3.5" />
+                      {inCompare ? "Added to compare" : "Compare"}
+                    </button>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}</span><span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
                   </div>
-                </Link>
+                </article>
               );
             })}
           </div>
@@ -215,6 +235,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           </p>
         )}
       </div>
+      <CompareTray />
     </section>
   );
 }
