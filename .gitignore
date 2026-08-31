@@ -39,3 +39,6 @@ Thumbs.db
 # Misc
 coverage/
 .cache/
+
+# PWA service worker (generated per build by scripts/pwa-prebuild.mjs)
+public/sw.js

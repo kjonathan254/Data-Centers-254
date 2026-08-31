@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import PwaRegister from "@/components/PwaRegister";
 import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
@@ -61,6 +62,11 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "DC254",
+    statusBarStyle: "black-translucent",
+  },
   openGraph: {
     title: "Data Centre 254 | Inside Kenya's Digital Infrastructure",
     description:
@@ -171,6 +177,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-GDS6XW6RS3" />
         {children}
         <Analytics />
+        <PwaRegister />
         <Toaster />
       </body>
     </html>

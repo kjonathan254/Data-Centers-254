@@ -1,20 +1,40 @@
 {
   "name": "Data Centre 254",
   "short_name": "DC254",
+  "description": "Kenya's independent platform for data centre, connectivity and power infrastructure intelligence — articles, directories, maps and research that work offline.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1E3C",
+  "theme_color": "#0B1E3C",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "news", "technology"],
   "icons": [
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#0B1E3C",
-  "background_color": "#0B1E3C",
-  "display": "standalone",
-  "start_url": "/"
+  ]
 }
