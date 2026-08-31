@@ -27,11 +27,11 @@ images:
     caption: "Falling panel costs keep rewriting the solar economics case."
     position: "section-break"
   - src: "/images/kenya-geothermal-plant.webp"
-    alt: "Steam rising from a geothermal field in the Rift Valley"
+    alt:  "Steam rising from a Rift Valley geothermal field"
     caption: "Geothermal's baseload still beats solar's daylight hours — for now."
     position: "inline"
   - src: "/images/kenya-solar-farm-5.webp"
-    alt: "Technician installing solar panels in Kenya"
+    alt:  "Technician installing solar panels"
     caption: "Hybrid solar-plus-storage pilots are the near-term path."
     position: "inline"
 internal_links:
@@ -104,7 +104,7 @@ Kenya's unique position in the global renewable energy landscape raises a questi
 
 The answer depends on the data centre operator's goals. From a pure carbon perspective, a Kenyan data centre running on grid power already has an exceptionally low carbon intensity. Kenya Power's generation mix produces approximately 50–100 grams of CO2 per kilowatt-hour, compared to 400–500 g/kWh for the European grid average and 800+ g/kWh for coal-heavy grids in South Africa and India. Adding solar panels on-site might reduce this to 20–50 g/kWh for the portion of consumption offset by solar, which is a meaningful improvement but not a transformative one.
 
-![Steam rising from a geothermal field in the Rift Valley](/images/kenya-geothermal-plant.webp)
+![Steam rising from a Rift Valley geothermal field](/images/kenya-geothermal-plant.webp)
 
 However, the economic argument for solar remains strong regardless of the grid's greenness. Solar is cheaper than grid power in Kenya. Period. Any data centre operator who can install solar at $0.04–$0.06/kWh instead of buying grid power at $0.08–$0.12/kWh is saving money. And for international companies with corporate renewable energy targets — companies that have committed to 100% renewable energy or net-zero carbon — on-site solar provides verifiable, attributable renewable energy that is easier to report and certify than purchased grid renewables.
 
@@ -126,6 +126,6 @@ Solar power for Kenyan data centres is not a question of if, but of when and how
 
 The most likely trajectory is that new data centre projects — those not yet built or in early planning stages — will incorporate solar from the design phase, allocating land and electrical infrastructure for 20–30% solar offset. Existing facilities will add solar incrementally, starting with carport installations (solar panels above parking areas, which require no additional land) and rooftop arrays where structural capacity allows. Within five years, it is reasonable to expect that most new Kenyan data centres will have some form of on-site solar generation, and that solar offset will be a standard feature in colocation marketing materials.
 
-![Technician installing solar panels in Kenya](/images/kenya-solar-farm-5.webp)
+![Technician installing solar panels](/images/kenya-solar-farm-5.webp)
 
 For Kenya, solar-powered data centres represent an opportunity to reinforce its positioning as Africa's greenest digital infrastructure hub. In a world where environmental, social, and governance (ESG) considerations are increasingly influencing investment decisions, the combination of geothermal grid power and on-site solar could make Kenyan data centres some of the most environmentally attractive in the world — a genuine competitive advantage in the global market for digital infrastructure investment.

@@ -19,7 +19,7 @@ og_image: "/images/racks-cabling.webp"
 reading_time: "10 min"
 images:
   - src: "/images/whats-inside-ai-data-center-wide.webp"
-    alt: "Server racks in a modern edge data centre"
+    alt:  "Server racks in a modern data centre hall"
     caption: "Wingu Africa provides carrier-neutral edge infrastructure in Nairobi"
     position: "hero"
   - src: "/images/hero-server-hall.webp"
@@ -27,7 +27,7 @@ images:
     caption: "Wingu's edge facilities keep cloud and content close to users."
     position: "section-break"
   - src: "/images/server-rack-patch-cabling.webp"
-    alt: "Server racks with structured patch cabling inside an edge data centre"
+    alt:  "Server racks with structured patch cabling"
     caption: "Edge facilities pack switching, storage, and interconnection into compact footprints close to users."
     position: "section-break"
 internal_links:
@@ -52,7 +52,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/wingu-africa-data-c
 
 Not every data centre in Kenya needs to be a multi-megawatt hyperscale campus. As the country's digital economy matures, a significant and growing portion of infrastructure demand comes from organisations that need something different: proximity to users, fast access to cloud platforms, flexible deployment terms, and carrier-neutral connectivity without the cost and complexity of a large-scale facility. Wingu Africa was built to serve precisely this segment, positioning itself as Nairobi's dedicated edge data centre for cloud on-ramp, content delivery, and enterprise workloads.
 
-![Server racks in a modern edge data centre](/images/whats-inside-ai-data-center-wide.webp)
+![Server racks in a modern data centre hall](/images/whats-inside-ai-data-center-wide.webp)
 
 This profile examines Wingu Africa's origins as a Kenyan-born company, its edge computing focus, how it differentiates from larger operators in the market, and its role in the broader Kenyan digital ecosystem.
 
@@ -66,7 +66,7 @@ The Wingu Group encompasses several related businesses spanning connectivity, cl
 
 ## The Nairobi Edge Data Centre
 
-![Server racks with structured patch cabling inside an edge data centre](/images/server-rack-patch-cabling.webp)
+![Server racks with structured patch cabling](/images/server-rack-patch-cabling.webp)
 
 Wingu Africa operates a carrier-neutral edge data centre facility located in Nairobi. The facility is designed and positioned as an edge computing node rather than a large-scale campus, meaning it prioritises low-latency access to end users, flexible deployment sizes, and rapid provisioning over the massive power capacity and rack counts that define hyperscale facilities.
 

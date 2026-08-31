@@ -19,19 +19,19 @@ og_image: "/images/dc-chillers-roof-2.webp"
 reading_time: "11 min"
 images:
   - src: "/images/dc-environment-sustainability.webp"
-    alt: "Data centre energy efficiency and sustainability"
+    alt:  "Aerial view of a data centre campus with rooftop solar"
     caption: "PUE is the most widely used metric for measuring how efficiently a data centre uses energy — a lower PUE means less waste and lower operating costs"
     position: "hero"
   - src: "/images/dc-chillers-roof-2.webp"
-    alt: "Cooling systems are the largest source of PUE overhead"
+    alt:  "Rooftop chiller units at a data centre"
     caption: "Cooling accounts for the majority of PUE overhead in most data centres — improving cooling efficiency is the fastest path to a lower PUE"
     position: "section-break"
   - src: "/images/dc-chillers-roof-3.webp"
-    alt: "Power monitoring and measurement for PUE calculation"
+    alt:  "Rooftop exhaust fans and HVAC ducting"
     caption: "Accurate PUE measurement requires power meters at multiple points: the utility entry, the UPS output, and at individual racks or PDUs"
     position: "inline"
   - src: "/images/dc-chillers-roof.webp"
-    alt: "Challenges in optimising data centre energy efficiency"
+    alt:  "Data centre rooftop chillers and generators"
     caption: "Older facilities face structural challenges in improving PUE — retrofitting hot/cold aisle containment or upgrading cooling systems can be expensive and disruptive"
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-pue-pow
 
 If you run a data centre that consumes 1 megawatt of power for your servers but your total electricity bill is for 1.7 megawatts, you are spending 70% more on electricity than your IT equipment actually needs. The extra 0.7 megawatts is going to cooling, lighting, power conversion losses, and other overhead. This ratio — total power divided by IT power — is the Power Usage Effectiveness (PUE), and it is the single most important metric for understanding how efficiently a data centre uses energy.
 
-![Data centre energy efficiency and sustainability](/images/dc-environment-sustainability.webp)
+![Aerial view of a data centre campus with rooftop solar](/images/dc-environment-sustainability.webp)
 
 PUE was developed by The Green Grid, an industry consortium, in 2007. It has become the universal language of data centre energy efficiency — used by operators to track their performance, by customers to compare facilities, by investors to assess operational quality, and by regulators to evaluate environmental impact. Understanding PUE is essential for anyone involved in data centres in Kenya, where power costs are a significant operating expense and where the renewable grid provides both an opportunity and a responsibility to use energy wisely.
 
@@ -84,7 +84,7 @@ Facilities in this range are among the most efficient in the world. They typical
 
 ### PUE 1.2–1.5: Good
 
-![Cooling systems are the largest source of PUE overhead](/images/dc-chillers-roof-2.webp)
+![Rooftop chiller units at a data centre](/images/dc-chillers-roof-2.webp)
 
 This is the range that well-designed and well-operated facilities in temperate climates achieve. In Kenya, newer facilities like iXAfrica's NBOX1 target this range. These facilities use a combination of free cooling and mechanical cooling, have good airflow management (hot/cold aisle containment or chimney cabinets), and use efficient power distribution equipment. Most new colocation facilities being built in Kenya should aim for this range.
 
@@ -112,7 +112,7 @@ The typical power chain efficiency in a Kenyan data centre is approximately 88�
 
 ### Lighting and Other Loads
 
-![Power monitoring and measurement for PUE calculation](/images/dc-chillers-roof-3.webp)
+![Rooftop exhaust fans and HVAC ducting](/images/dc-chillers-roof-3.webp)
 
 Lighting, security systems, office areas, and other miscellaneous loads typically account for 3–5% of total facility power. While individually small, these loads contribute to PUE. LED lighting, occupancy sensors, and efficient building management can minimise these loads. Some facilities have reduced lighting loads to negligible levels by using LED fixtures with occupancy sensors and by minimising the lit area (lighting only aisles where personnel are present).
 
@@ -132,7 +132,7 @@ Hot/cold aisle containment is the single most cost-effective PUE improvement for
 
 ### Raise the Temperature
 
-![Challenges in optimising data centre energy efficiency](/images/dc-chillers-roof.webp)
+![Data centre rooftop chillers and generators](/images/dc-chillers-roof.webp)
 
 ASHRAE's recommended environmental range for data centres allows inlet temperatures up to 27°C (with appropriate humidity management). Many older facilities operate at 18–20°C, significantly cooler than necessary. Raising the set point by even 2–3 degrees reduces cooling energy consumption by 5–15%. In Nairobi's climate, operating at 24–26°C with appropriate containment allows more hours of free cooling and reduces mechanical cooling requirements.
 

@@ -21,7 +21,7 @@ og_image: /images/dc-server-chip-3.webp
 reading_time: "12 min"
 images:
 - src: /images/dc-woman-engineer-laptop.webp
-  alt: "Engineer working on a laptop beside server racks in a data hall"
+  alt:  "Engineer working on a laptop in a server hall"
   caption: "Career progression in African data centres runs from hands-on rack work to facility-wide leadership."
   position: hero
 - src: /images/racks-cabling.webp
@@ -30,11 +30,11 @@ images:
     ladder
   position: section-break
 - src: /images/dc-careers-tech.webp
-  alt: "Data centre engineer configuring server rack hardware"
+  alt:  "Engineer working at a server rack"
   caption: "Mid-level engineers own the systems: installations, upgrades, and the escalations nobody else can close."
   position: section-break
 - src: /images/dc-women-engineers-corridor.webp
-  alt: "Two engineers reviewing work on a laptop along a data centre corridor"
+  alt:  "Two engineers walking through a data centre corridor"
   caption: "Senior roles are as much about people and planning as they are about hardware."
   position: inline
 - src: /images/junior-technician-server-aisle.webp
@@ -111,7 +111,7 @@ Africa's data centre industry is undergoing explosive growth, and Kenya sits at 
 
 This article maps out the complete career progression ladder in the African data centre industry, with specific salary data for the Kenyan market, certification milestones at each level, and practical advice on regional mobility across East Africa and beyond.
 
-![Engineer working on a laptop beside server racks in a data hall](/images/dc-woman-engineer-laptop.webp)
+![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
 *Data centre careers in Kenya span from hands-on technical roles to strategic leadership positions*
 
 ## The African Data Centre Career Ladder Overview
@@ -150,7 +150,7 @@ A broader role than cabling alone, data centre technicians handle server racking
 
 **Salary Range (Kenya):** KES 45,000–70,000 per month.
 
-![Structured cabling and server racks in a Kenyan data centre](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/racks-cabling.webp)
 *Cable technicians form the critical entry point into the data centre career ladder*
 
 ## Mid-Level Roles (3–8 Years Experience)
@@ -181,7 +181,7 @@ Operations managers oversee the day-to-day running of a data centre facility. Th
 
 **Salary Range (Kenya):** KES 150,000–350,000 per month, depending on facility size and operator.
 
-![Data centre engineer configuring server rack hardware](/images/dc-careers-tech.webp)
+![Engineer working at a server rack](/images/dc-careers-tech.webp)
 *Operations managers oversee critical infrastructure across multiple African markets*
 
 ### Compliance and Regulatory Officer
@@ -228,7 +228,7 @@ For those who pivot from pure technology into general management, the MD or Coun
 
 **Salary Range (Kenya):** KES 1,500,000–4,000,000+ per month, with significant performance-linked components.
 
-![Two engineers reviewing work on a laptop along a data centre corridor](/images/dc-women-engineers-corridor.webp)
+![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
 *Senior leadership in African data centres requires both technical depth and business acumen*
 
 ## Career Paths by Employer Type

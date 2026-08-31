@@ -21,7 +21,7 @@ og_image: /images/dc-server-chip-2.webp
 reading_time: "14 min"
 images:
 - src: /images/dc-policy-regulation.webp
-  alt: "Government building at dusk"
+  alt:  "National government building at dusk"
   caption: "Data centre construction in Kenya answers to county codes and national standards."
   position: hero
 - src: /images/dc-switchgear-2.webp
@@ -30,9 +30,17 @@ images:
     IEC standards under the supervision of registered engineers
   position: section-break
 - src: /images/dc-environment-sustainability.webp
-  alt: "Aerial of a standards-compliant data centre campus"
+  alt:  "Aerial view of a data centre campus with rooftop solar"
   caption: "International benchmarks like Tier III and EN 50600 shape how Kenyan facilities are judged."
   position: inline
+- src: /images/highrise-construction-cranes-kenya.webp
+  alt: "Tower cranes over a high-rise construction site"
+  caption: "Every approved project moves on the same critical path: permits, inspections, and a build timeline measured in months."
+  position: section-break
+- src: /images/construction-workers-site-review.webp
+  alt:  "Construction workers in hard hats reviewing a building site"
+  caption: "OSHA obligations start at groundbreak: site safety, worker welfare, and documented inspections are part of the approval chain."
+  position: section-break
 internal_links:
 - text: Kenya Data Centre Licensing Framework
   href: /articles/kenya-data-centre-licensing-framework
@@ -108,7 +116,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/building-codes-data-
 
 ## The Regulatory Landscape for Data Centre Construction in Kenya
 
-![Government building at dusk](/images/dc-policy-regulation.webp)
+![National government building at dusk](/images/dc-policy-regulation.webp)
 
 Building a data centre in Kenya is not simply a construction project — it is a multi-regulatory undertaking that involves **national government agencies, county governments, statutory bodies, and international standards**. Unlike commercial office buildings or residential developments, data centres have unique physical requirements: high power density, specialised cooling systems, raised floors, stringent fire suppression, and reinforced structural loads. Kenya's regulatory framework was not designed with data centres specifically in mind, which means operators must navigate a patchwork of general construction, environmental, electrical, and safety regulations while also meeting international data centre design standards.
 
@@ -156,7 +164,7 @@ The **Kenya Bureau of Standards (KEBS)** develops and enforces national standard
 
 While KEBS does not have a dedicated data centre construction standard, data centre developers typically adopt **international standards** such as **IEC 60364-5-52** (wiring systems for IT equipment), **IEC 61850** (communication networks and systems in substations), and **TIA-942** (the telecommunications infrastructure standard for data centres), and then ensure compliance with the applicable KEBS standards that overlap with those requirements.
 
-![Electrical power systems installation in a data centre](/images/dc-switchgear-2.webp)
+![Electrical switchgear hall](/images/dc-switchgear-2.webp)
 
 ## NEMA Environmental Impact Assessment Requirements
 
@@ -241,6 +249,8 @@ Data centres in Kenya require:
 
 ## Occupational Health and Safety (OSHA, Kenya)
 
+![Construction workers in hard hats reviewing a building site](/images/construction-workers-site-review.webp)
+
 The **Occupational Safety and Health Act, 2007** (OSHA, Kenya) and its accompanying regulations establish requirements for workplace safety during both the construction and operational phases of a data centre.
 
 ### Construction Phase
@@ -288,6 +298,8 @@ Data centres impose **exceptional floor loads** due to the weight of server rack
 
 ## Approval Timeline: What to Expect
 
+![Tower cranes over a high-rise construction site](/images/highrise-construction-cranes-kenya.webp)
+
 The total timeline for obtaining all necessary approvals to build a data centre in Kenya typically ranges from **6 to 18 months**, depending on:
 
 | Approval Stage | Typical Duration | Key Authority |
@@ -327,7 +339,7 @@ As discussed in the fire safety section, **NFPA 75** and **NFPA 76** provide det
 
 The **EU Code of Conduct on Data Centre Energy Efficiency** is a voluntary framework that sets best-practice guidelines for energy-efficient data centre design and operation. While developed for the European market, its principles — including Power Usage Effectiveness (PUE) targets, airflow management, free cooling utilisation, and waste heat recovery — are increasingly relevant to Kenyan data centres. Kenya's building codes do not prescribe specific energy efficiency targets for data centres, but the **Kenya Bureau of Standards (KEBS)** has adopted energy management standards (KS ISO 50001) that data centres can leverage to formalise their energy efficiency programmes.
 
-![Aerial of a standards-compliant data centre campus](/images/dc-environment-sustainability.webp)
+![Aerial view of a data centre campus with rooftop solar](/images/dc-environment-sustainability.webp)
 
 ## Practical Recommendations for Data Centre Developers
 

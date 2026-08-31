@@ -21,7 +21,7 @@ og_image: /images/diagram-network-protocols.webp
 reading_time: "14 min"
 images:
 - src: /images/dc-ups-batteries-wide.webp
-  alt: "Battery-backed power systems in a facility"
+  alt:  "Electrical switchgear and UPS cabinets"
   caption: "Power and cooling credentials prove you can keep the lights on."
   position: hero
 - src: /images/hero-server-hall.webp
@@ -30,7 +30,7 @@ images:
     in Kenyan data centres
   position: section-break
 - src: /images/diagram-network-protocols.webp
-  alt: "Infographic of core network protocols — HTTP, DNS, DHCP, SSH and more"
+  alt:  "Chart of common network protocols including HTTP, DNS, SSH and TCP"
   caption: "Networking certifications test the protocols that move traffic between racks and continents."
   position: diagram
 - src: /images/dc-switchgear-2.webp
@@ -117,7 +117,7 @@ In Kenya's rapidly expanding data centre industry, certifications are more than 
 
 This comprehensive guide covers every data centre-relevant certification available to Kenyan professionals, organised by speciality area. For each certification, you'll find the cost in Kenyan Shillings, where to take training locally, exam requirements, and the real career impact as observed in the Kenyan market.
 
-![Battery-backed power systems in a facility](/images/dc-ups-batteries-wide.webp)
+![Electrical switchgear and UPS cabinets](/images/dc-ups-batteries-wide.webp)
 *Certifications are the fastest way to advance your data centre career in Kenya*
 
 ## Infrastructure Certifications
@@ -169,7 +169,7 @@ The **ATS** focuses on the operational side of Tier Standards — how to maintai
 - **Availability in Kenya:** Similar to ATD — primarily available virtually or in South Africa.
 - **Career Impact:** Strong credential for senior operations roles. The Uptime Institute brand carries significant weight with international colocation operators and hyperscale customers.
 
-![Server infrastructure requiring certified professionals to manage](/images/hero-server-hall.webp)
+![Corridor inside a data centre hall](/images/hero-server-hall.webp)
 *Certified professionals command higher salaries and greater responsibility in Kenyan data centres*
 
 ## Networking Certifications
@@ -212,7 +212,7 @@ The **CCNP Enterprise** is the professional-level Cisco certification, covering 
 - **Availability in Kenya:** Pearson VUE Nairobi, extensive online study resources
 - **Career Impact:** Good entry point for [data centre careers in Kenya](/articles/data-centre-careers-kenya), particularly for those transitioning from general IT or fresh graduates.
 
-![Infographic of core network protocols — HTTP, DNS, DHCP, SSH and more](/images/diagram-network-protocols.webp)
+![Chart of common network protocols including HTTP, DNS, SSH and TCP](/images/diagram-network-protocols.webp)
 *Networking certifications remain the backbone of data centre career advancement*
 
 ## Power and Cooling Certifications
@@ -220,7 +220,7 @@ The **CCNP Enterprise** is the professional-level Cisco certification, covering 
 Power and cooling represent the largest operational cost in any Kenyan data centre. Professionals with specialised certifications in these areas are in high demand and short supply.
 
 
-![Modern electrical switchgear and distribution boards in a data centre power room](/images/dc-switchgear-2.webp)
+![Electrical switchgear hall](/images/dc-switchgear-2.webp)
 
 
 ### Certified Energy Manager (CEM)
@@ -257,7 +257,7 @@ Eaton provides certifications for UPS systems, power distribution units, and ele
 - **Availability:** Online and occasional in-person sessions
 - **Career Impact:** Useful complement to broader certifications for power systems specialists
 
-![Battery-backed power systems in a facility](/images/dc-ups-batteries-wide.webp)
+![Electrical switchgear and UPS cabinets](/images/dc-ups-batteries-wide.webp)
 *Power and cooling certifications are increasingly valuable as data centre densities rise*
 
 ## Security Certifications

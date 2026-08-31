@@ -23,11 +23,11 @@ images:
     caption: "ICT policy sets the rules of the game for every data centre investor."
     position: "hero"
   - src: "/images/nairobi-skyline-night-kicc.webp"
-    alt: "KICC and the Nairobi skyline at night"
+    alt:  "KICC tower and the Nairobi skyline at night"
     caption: "Cybersecurity strategy and data centre standards now sit at the heart of Kenya's ICT agenda."
     position: "comparison"
   - src: "/images/dc-challenges.webp"
-    alt: "Transmission towers beside a commercial skyline"
+    alt:  "Transmission tower beside a commercial high-rise"
     caption: "Policy spans power, connectivity, and enterprise — the regional comparison covers all three."
     position: "section-break"
 internal_links:
@@ -108,7 +108,7 @@ Data centres designated as **Critical Information Infrastructure (CII)** are sub
 
 For operators, this means that **security compliance is not merely a commercial differentiator** but a regulatory requirement. Data centre security investments — including physical security systems, access controls, surveillance, fire suppression, and cybersecurity operations centres — must align with both the National Cybersecurity Strategy and the [Kenya data sovereignty and localisation requirements](/articles/kenya-data-sovereignty-localisation). The cost implications are significant but also create barriers to entry that benefit established, compliant operators.
 
-![KICC and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
+![KICC tower and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
 
 ## Konza Technopolis Development Authority and Its Policy Framework
 
@@ -150,7 +150,7 @@ Both organisations demonstrate that **industry-led policy engagement** is essent
 
 ## Comparative Analysis: Kenya, Rwanda, Nigeria, and South Africa
 
-![Transmission towers beside a commercial skyline](/images/dc-challenges.webp)
+![Transmission tower beside a commercial high-rise](/images/dc-challenges.webp)
 
 Understanding Kenya's policy position requires examining it alongside comparable African markets. Each country offers distinct advantages and challenges for data centre investors.
 

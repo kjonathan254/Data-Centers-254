@@ -19,7 +19,7 @@ og_image: "/images/dc-servers-racks.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-women-engineers-corridor.webp"
-    alt: "Two engineers walking through a data centre corridor with a laptop"
+    alt:  "Two engineers walking through a data centre corridor"
     caption: "Landing a job in a Kenyan data centre is about certifications, hands-on skills, and knowing where the openings are."
     position: "hero"
   - src: "/images/dc-servers-racks.webp"
@@ -27,11 +27,11 @@ images:
     caption: "The racks are the workplace — every role exists to keep them running."
     position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
-    alt: "Career path comparison infographic for network and cybersecurity roles"
+    alt:  "Comparison of network engineer and cybersecurity engineer roles"
     caption: "Pick your track first — the certification roadmap looks different for each role."
     position: "diagram"
   - src: "/images/nairobi-westlands.webp"
-    alt: "Westlands skyline, Nairobi"
+    alt:  "Westlands commercial district in Nairobi"
     caption: "Most Kenyan data centre jobs cluster in Nairobi, with a smaller cohort in Mombasa."
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/how-to-get-job-keny
 
 Kenya's data centre industry is growing fast, and it needs people. Not just any people — it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.
 
-![Two engineers walking through a data centre corridor with a laptop](/images/dc-women-engineers-corridor.webp)
+![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
 
 This guide is for anyone in Kenya who wants to work in a data centre — whether you are a fresh graduate trying to figure out where to start, an IT professional looking to transition from enterprise IT into infrastructure, or an engineer in a related field (power, cooling, telecommunications) who sees the opportunity. We will cover the roles that exist, the certifications employers actually look for, realistic salary expectations, and practical steps to get your foot in the door.
 
@@ -120,7 +120,7 @@ For IT professionals with some experience who want to specialise in data centre 
 
 For professionals targeting senior or specialised roles, the investment is higher but the returns are proportionate. The Uptime Institute ATD or AOS certification (approximately KES 300,000–500,000 including travel to a training centre) is the gold standard for facility engineering roles. The CDCP from EPI (approximately KES 200,000–300,000) is the most widely recognised data centre-specific certification in Africa. CCNP Data Centre (approximately KES 100,000–150,000) is valued for senior networking roles.
 
-![Career path comparison infographic for network and cybersecurity roles](/images/diagram-network-vs-cyber-career.webp)
+![Comparison of network engineer and cybersecurity engineer roles](/images/diagram-network-vs-cyber-career.webp)
 
 ## Salary Ranges in Kenya's Data Centre Industry
 
@@ -145,7 +145,7 @@ Kenya's data centre industry is concentrated in Nairobi, with the majority of fa
 
 To find job openings, monitor these channels: LinkedIn (follow the operators and set job alerts for "data centre", "NOC", "network engineer", "facility manager" in Nairobi), the operators' own careers pages, and Kenyan job boards like BrighterMonday and Fuzu. Industry events organised by TESPOK (Technology Service Providers of Kenya), the Kenya ICT and Innovation Forum, and data centre-specific conferences are also valuable for networking and discovering unadvertised positions.
 
-![Westlands skyline, Nairobi](/images/nairobi-westlands.webp)
+![Westlands commercial district in Nairobi](/images/nairobi-westlands.webp)
 
 ## Practical Steps to Get Started
 

@@ -28,7 +28,7 @@ images:
     a Kenyan data centre
   position: hero
 - src: /images/mombasa-port.webp
-  alt: "Port of Mombasa, where submarine cables meet Kenya"
+  alt:  "Aerial view of the Port of Mombasa"
   caption: "Mombasa's landing stations make Kenya the region's interconnection gateway."
   position: section-break
 - src: /images/nairobi-sunset-wide.webp
@@ -36,10 +36,10 @@ images:
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key
     East African node
   position: inline
-- src: /images/diagram-network-switch-types.webp
-  alt: Diagram comparing the network switch types that move traffic inside a data centre
-  caption: From unmanaged desktop switches to stackable Layer 3 chassis — cross-connect and peering ecosystems like KIXP run on managed Layer 2 and Layer 3 switching.
-  position: diagram
+- src: /images/woman-network-engineer-patch-panel.webp
+  alt: "Network engineer working at fibre patch panels"
+  caption: "Cross-connects live here: patch panels where one network's fibre meets another's inside the facility."
+  position: section-break
 
 internal_links:
 - text: Fibre Optic Networks Kenya Data Centres
@@ -129,7 +129,7 @@ A data centre is only as valuable as the networks it connects. In Kenya, where [
 
 This article explains how data centre interconnection and peering work in Kenya, covering the Kenya Internet Exchange Point (KIXP), cross-connects within facilities, the economics of peering versus transit, and why Kenya is consolidating its position as East Africa's premier interconnection hub.
 
-![Network switching equipment inside a Kenyan data centre with fibre patch panels](/images/mombasa-cable-landing-3.webp)
+![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
 *Network switching infrastructure enabling interconnection and peering within a Kenyan data centre*
 
 ## What Is an Internet Exchange Point (IXP)?
@@ -193,7 +193,7 @@ For a mid-sized ISP with 10 Gbps of total traffic, if 7 Gbps can be peered local
 
 ### What Is a Cross-Connect?
 
-![Diagram comparing the network switch types that move traffic inside a data centre](/images/diagram-network-switch-types.webp)
+![Network engineer working at fibre patch panels](/images/woman-network-engineer-patch-panel.webp)
 
 A **cross-connect** is a physical cable — typically fibre optic or copper — that directly links one party's equipment to another's within the same data centre. Cross-connects are the fundamental building block of data centre interconnection.
 
@@ -224,7 +224,7 @@ Kenya's position as an interconnection hub is no accident. Several factors conve
 - **Regional connectivity**: Kenya borders Uganda, Tanzania, Ethiopia, and South Sudan. Cross-border fibre links from these countries terminate in Nairobi, making it a natural aggregation point.
 - **Market size and sophistication**: Kenya has East Africa's largest and most developed digital economy, with the highest internet penetration rate in the region.
 
-![Port of Mombasa, where submarine cables meet Kenya](/images/mombasa-port.webp)
+![Aerial view of the Port of Mombasa](/images/mombasa-port.webp)
 *Kenya's position at the crossroads of multiple submarine cables makes it a natural interconnection hub*
 
 ### KIXP's Regional Role
@@ -257,7 +257,7 @@ KIXP, while smaller in absolute terms, has grown faster proportionally. The 100G
 
 **IXPN** (Internet Exchange Point of Nigeria) handles approximately 100–120 Gbps peak traffic with 60+ members. Nigeria's larger population gives IXPN potential for massive growth, but infrastructure challenges and a more fragmented telecom market have constrained its development relative to KIXP.
 
-![Map of data centre and IXP locations across Africa](/images/nairobi-sunset-wide.webp)
+![Nairobi skyline at sunset](/images/nairobi-sunset-wide.webp)
 *Africa's growing interconnection ecosystem with KIXP positioned as a key East African node*
 
 ### Kenya's Competitive Positioning

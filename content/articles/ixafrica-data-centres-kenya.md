@@ -19,11 +19,11 @@ og_image: "/images/nairobi-skyline-night-kicc.webp"
 reading_time: "12 min"
 images:
   - src: "/images/hero-server-hall.webp"
-    alt: "Server racks in a modern data centre facility"
+    alt:  "Corridor inside a data centre hall"
     caption: "iXAfrica NBOX1 delivers hyperscale capacity to the East African market"
     position: "hero"
   - src: "/images/whats-inside-ai-data-center.webp"
-    alt: "Nairobi skyline showing digital infrastructure growth"
+    alt:  "Cutaway infographic of an AI data centre's systems"
     caption: "Nairobi's Mombasa Road corridor is becoming Kenya's data centre district"
     position: "section-break"
 internal_links:
@@ -50,7 +50,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/ixafrica-data-centr
 
 When the first phase of iXAfrica's NBOX1 facility went live in early 2025, it marked a turning point for East Africa's digital infrastructure. For the first time, the region had a purpose-built, carrier-neutral, hyperscale data centre engineered to handle the power and cooling demands of modern AI workloads. Backed by Actis, one of the world's most active emerging market investors, iXAfrica has moved quickly from a greenfield startup to the largest operational data centre platform in East and Central Africa, serving everyone from Kenyan banks to global satellite operators.
 
-![Server racks in a modern data centre facility](/images/hero-server-hall.webp)
+![Corridor inside a data centre hall](/images/hero-server-hall.webp)
 
 This profile examines how iXAfrica was built, what its facilities deliver, who leads it, and why its trajectory matters for Kenya's position as a digital hub for a region of over 300 million people.
 
@@ -69,7 +69,7 @@ iXAfrica's first facility, NBOX1, sits on a 4.3-acre campus along Mombasa Road i
 NBOX1.1, the first phase now in commercial operation, delivers the following specifications:
 
 
-![Cutaway infographic of an AI-ready data centre showing compute, cooling, power and network layers](/images/whats-inside-ai-data-center.webp)
+![Cutaway infographic of an AI data centre's systems](/images/whats-inside-ai-data-center.webp)
 
 
 - **IT power capacity:** 4.5 MW

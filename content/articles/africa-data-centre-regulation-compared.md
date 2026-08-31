@@ -19,7 +19,7 @@ og_image: "/images/dc-policy-regulation.webp"
 reading_time: "14 min"
 images:
   - src: "/images/nairobi-expressway-wide.webp"
-    alt: "Data centre locations across the African continent"
+    alt:  "Nairobi Expressway stretching across the city"
     caption: "Africa's data centre market spans over 40 facilities across a dozen countries, each with different regulatory frameworks that affect investment decisions"
     position: "hero"
   - src: "/images/africa-dc-map.webp"
@@ -27,11 +27,11 @@ images:
     caption: "South Africa anchors the continent's most mature data centre market."
     position: "section-break"
   - src: "/images/dc-policy-regulation.webp"
-    alt: "Government building at dusk"
+    alt:  "National government building at dusk"
     caption: "Egypt's government-led, subsidised build-out differs sharply from Kenya's private-led model."
     position: "inline"
   - src: "/images/nairobi-westlands.webp"
-    alt: "Nairobi as a regional regulatory leader"
+    alt:  "Westlands commercial district in Nairobi"
     caption: "Kenya's combination of licensing clarity, data protection legislation, and renewable energy policy positions it well relative to regional competitors"
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/africa-data-centre-
 
 Africa's data centre market is growing faster than any other continent, but it is not growing uniformly. The pace and pattern of investment is shaped by regulatory frameworks that vary enormously from country to country — from South Africa's mature, complex regime to the near-absence of specific regulation in several smaller markets. For investors and operators comparing opportunities across the continent, understanding these regulatory differences is not an academic exercise — it directly affects project costs, timelines, risk profiles, and ultimately the return on investment.
 
-![Data centre locations across the African continent](/images/nairobi-expressway-wide.webp)
+![Nairobi Expressway stretching across the city](/images/nairobi-expressway-wide.webp)
 
 This analysis compares the regulatory environments for data centres in five key African markets: Kenya, South Africa, Nigeria, Egypt, and Rwanda. These five countries represent the most significant data centre markets or the most interesting emerging opportunities, and their regulatory approaches offer lessons for the entire continent.
 
@@ -132,7 +132,7 @@ Egypt's Personal Data Protection Law (PDPL), enacted in 2020 and progressively i
 
 ### Energy Subsidies
 
-![Government building at dusk](/images/dc-policy-regulation.webp)
+![National government building at dusk](/images/dc-policy-regulation.webp)
 
 Egypt's data centre industry benefits from subsidised natural gas for power generation, which keeps electricity costs among the lowest in Africa at approximately $0.05–0.07 per kWh for industrial consumers. This subsidy is a significant competitive advantage, though it is contingent on government policy that could change. The government has also invested heavily in renewable energy, particularly solar, as part of its energy strategy.
 
@@ -166,7 +166,7 @@ Rwanda's challenge is market size. With a population of 14 million and a smaller
 | Market size | Large | Very large | Very large | Large | Small |
 | Data localisation | Restricted transfers | Restricted transfers | Partial requirements | Government data | Discussed, not enacted |
 
-![Nairobi as a regional regulatory leader](/images/nairobi-westlands.webp)
+![Westlands commercial district in Nairobi](/images/nairobi-westlands.webp)
 
 ## What Kenya Can Learn
 

@@ -19,19 +19,19 @@ og_image: "/images/dc-biometric-access-3.webp"
 reading_time: "14 min"
 images:
   - src: "/images/dc-gpu-cluster-2.webp"
-    alt: "Server racks during a data centre site visit"
+    alt:  "Server racks in a Nairobi data centre hall"
     caption: "A site visit should include a thorough inspection of the white space, power rooms, cooling plant, and security systems — not just the lobby and meeting rooms"
     position: "hero"
   - src: "/images/dc-biometric-access-4.webp"
-    alt: "Security systems assessment during due diligence"
+    alt:  "Security systems assessment during a facility audit"
     caption: "Physical security is one of the most visible differentiators between facilities — look for biometric access, mantraps, CCTV coverage, and security staffing levels"
     position: "section-break"
   - src: "/images/dc-switchgear-2.webp"
-    alt: "Power infrastructure inspection"
+    alt:  "Electrical switchgear hall"
     caption: "Ask to see the generator room, UPS systems, and switchgear — the power infrastructure is too important to evaluate only through a sales presentation"
     position: "inline"
   - src: "/images/dc-biometric-access-3.webp"
-    alt: "Network and connectivity evaluation"
+    alt:  "Fingerprint being recorded on an ink pad"
     caption: "Verify which network providers have equipment in the meet-me room and whether diverse fibre entry routes are in place"
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-due-dil
 
 Choosing a data centre is one of the most consequential infrastructure decisions a Kenyan organisation will make. Your servers, your data, and your customers' trust will reside in that facility for years. A bad choice — unreliable power, inadequate security, poor connectivity, or an operator in financial difficulty — can result in outages, data breaches, regulatory penalties, and reputational damage that far exceed the cost of the colocation contract itself. Due diligence is the process that prevents these outcomes.
 
-![Server racks during a data centre site visit](/images/dc-gpu-cluster-2.webp)
+![Server racks in a Nairobi data centre hall](/images/dc-gpu-cluster-2.webp)
 
 This guide provides a practical due diligence framework specifically designed for the Kenyan market. It covers every factor that an enterprise customer — a bank, a telecom company, a government agency, or a large corporate — should evaluate before placing equipment in a Kenyan data centre. While some of these factors are universal, others are specific to Kenya's infrastructure environment, regulatory context, and market dynamics.
 
@@ -96,7 +96,7 @@ Power is the single most important technical factor. Evaluate the following elem
 
 **Generators**: How many diesel generators are installed? What is their total capacity relative to the facility's IT load? The industry standard is N+1 (one spare generator) at minimum. How much fuel is stored on-site, and how long can the generators run at full load? The minimum standard for enterprise use is 24 hours of fuel storage; 48–72 hours is preferred. Are there contracts for emergency fuel delivery?
 
-![Security systems assessment during due diligence](/images/dc-biometric-access-4.webp)
+![Security systems assessment during a facility audit](/images/dc-biometric-access-4.webp)
 
 **UPS systems**: What UPS technology is used (online double-conversion is the standard for enterprise facilities)? What is the battery runtime? The minimum is 10–15 minutes — enough time for generators to start and synchronise. Are the UPS systems redundant (N+1 or 2N)? What is the age and condition of the batteries?
 
@@ -122,7 +122,7 @@ Connectivity evaluation focuses on diversity and redundancy.
 
 **Cross-connect process**: How quickly can cross-connects be provisioned? What are the costs? Are there restrictions on which providers you can connect to?
 
-![Power infrastructure inspection](/images/dc-switchgear-2.webp)
+![Electrical switchgear hall](/images/dc-switchgear-2.webp)
 
 ## Phase 3: Security Evaluation
 
@@ -158,7 +158,7 @@ The SLA is the contractual backbone of the colocation relationship. Evaluate it 
 
 **Exclusions**: What is excluded from the SLA? Scheduled maintenance, force majeure events, and customer-caused outages are commonly excluded. Read the exclusions carefully — some SLAs exclude so much that the guarantee is effectively meaningless.
 
-![Network and connectivity evaluation](/images/dc-biometric-access-3.webp)
+![Fingerprint being recorded on an ink pad](/images/dc-biometric-access-3.webp)
 
 ### Contract Terms
 

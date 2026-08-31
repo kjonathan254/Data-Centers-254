@@ -19,23 +19,23 @@ og_image: "/images/kenya-wind-turbines-wide.webp"
 reading_time: "16 min"
 images:
   - src: "/images/kenya-wind-turbines-4.webp"
-    alt: "Wind turbines on Kenya's green hills"
+    alt:  "Wind turbines on green hills"
     caption: "A renewable-heavy grid shapes what responsible, sustainable AI infrastructure looks like."
     position: "hero"
   - src: "/images/dc-biometric-access.webp"
-    alt: "Data centre security systems for AI workloads"
+    alt:  "Biometric access control at a data centre"
     caption: "AI governance extends to the physical infrastructure that processes sensitive personal data"
     position: "section-break"
   - src: "/images/nairobi-skyline-night.webp"
-    alt: "Data centre map of Africa showing regulatory diversity"
+    alt:  "Nairobi skyline lit up at night"
     caption: "AI governance approaches vary significantly across African nations, creating compliance complexity for regional operators"
     position: "infographic"
   - src: "/images/whats-inside-ai-data-center.webp"
-    alt: "Cutaway infographic of an AI data centre"
+    alt:  "Cutaway infographic of an AI data centre's systems"
     caption: "Operators translate AI ethics into access control, data handling, and audit trails."
     position: "inline"
   - src: "/images/dc-environment-sustainability.webp"
-    alt: "Sustainability considerations in AI infrastructure"
+    alt:  "Aerial view of a data centre campus with rooftop solar"
     caption: "The environmental impact of AI compute is an emerging ethical concern for Kenyan data centre operators"
     position: "inline"
 internal_links:
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
 ---
 
-![Wind turbines on Kenya's green hills](/images/kenya-wind-turbines-4.webp)
+![Wind turbines on green hills](/images/kenya-wind-turbines-4.webp)
 
 ## Why AI Ethics and Governance Matter Now
 
@@ -101,7 +101,7 @@ When an AI system makes a decision that affects a person's life — denying a lo
 
 This is technically challenging. Deep neural networks, the architecture behind most modern AI systems, are inherently opaque. The field of explainable AI (XAI) is developing tools to address this, but Kenya's regulatory framework does not yet specify what level of explainability is required for different types of AI-assisted decisions.
 
-![Data centre security systems for AI workloads](/images/dc-biometric-access.webp)
+![Biometric access control at a data centre](/images/dc-biometric-access.webp)
 
 ## Kenya's Evolving Regulatory Framework
 
@@ -163,7 +163,7 @@ Telecoms operators using AI for network optimisation, customer analytics, and fr
 - **AI-driven pricing and offers**: When AI determines which mobile plans or promotions are offered to specific subscribers, fairness and transparency requirements apply.
 - **Real-time surveillance concerns**: AI-powered network monitoring systems must be designed with safeguards against misuse for surveillance of individuals or communities.
 
-![Data centre map of Africa showing regulatory diversity](/images/nairobi-skyline-night.webp)
+![Nairobi skyline lit up at night](/images/nairobi-skyline-night.webp)
 
 ## International Frameworks Shaping Kenyan AI Governance
 
@@ -221,7 +221,7 @@ As AI regulation tightens, data centre customers will increasingly require their
 
 The environmental impact of AI compute is an emerging governance concern. Training a single large language model can emit as much carbon as five automobiles over their entire lifetimes. For Kenyan data centre operators, this creates both an ethical obligation and a commercial opportunity. Kenya's geothermal energy — which provides over 40% of the country's electricity — offers a genuinely green power source for AI compute. Data centres that can demonstrate low-carbon AI infrastructure will increasingly attract environmentally conscious customers and support their own ESG reporting obligations.
 
-![Cutaway infographic of an AI data centre](/images/whats-inside-ai-data-center.webp)
+![Cutaway infographic of an AI data centre's systems](/images/whats-inside-ai-data-center.webp)
 
 ## AI Ethics Committees and Impact Assessments
 
@@ -247,7 +247,7 @@ An effective AIA for a Kenyan organisation should evaluate:
 - **Accountability**: Is there a clear human accountability chain for the system's outputs?
 - **Kenyan context**: Has the system been validated for the specific cultural, linguistic, and socioeconomic conditions of its intended Kenyan users?
 
-![Sustainability considerations in AI infrastructure](/images/dc-environment-sustainability.webp)
+![Aerial view of a data centre campus with rooftop solar](/images/dc-environment-sustainability.webp)
 
 ## The Growing Demand for AI Governance Professionals in Kenya
 

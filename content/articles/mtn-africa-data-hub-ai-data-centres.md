@@ -20,7 +20,7 @@ og_image: "/images/africa-ai-data-hub-mtn.webp"
 reading_time: "8 min"
 images:
   - src: "/images/africa-ai-data-hub-mtn.webp"
-    alt: "High-density AI data centre server hall with GPU racks and blue status lighting"
+    alt:  "AI data centre hall with GPU racks and blue status lights"
     caption: "Africa Data Hub plans 150MW of AI-ready data centre capacity in its first phase"
     position: "hero"
   - src: "/images/dc-server-chip.webp"
@@ -28,7 +28,7 @@ images:
     caption: "AI workloads demand far higher power density than traditional enterprise colocation"
     position: "section-break"
   - src: "/images/whats-inside-ai-data-center.webp"
-    alt: "Cutaway diagram of an AI data centre showing GPUs, cooling, power, UPS, networking, monitoring, security and fire suppression"
+    alt:  "Cutaway infographic of an AI data centre's systems"
     caption: "What an AI-ready facility contains: compute, cooling, power chains, networking, security and fire suppression"
     position: "infographic"
 internal_links:
@@ -59,7 +59,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/mtn-africa-data-hub
 
 Africa's largest mobile network operator is putting serious capital behind the continent's AI infrastructure gap. MTN Group, which operates across 16 African markets, has agreed with Dubai-based investor Tarek Al Ashram to develop AI-focused data centres through a new venture called Africa Data Hub Holding Ltd, according to Bloomberg reporting published on 27 August 2026. The announcement is one of the most significant commitments yet to building AI-ready compute capacity on the continent, and it arrives at a moment when Africa accounts for less than 1% of the world's AI data centre capacity despite having its fastest-growing and youngest population.
 
-![High-density AI data centre server hall with GPU racks and blue status lighting](/images/africa-ai-data-hub-mtn.webp)
+![AI data centre hall with GPU racks and blue status lights](/images/africa-ai-data-hub-mtn.webp)
 
 For Kenya's data centre community, the story matters even though the first facilities will not be built here. It signals that pan-African operators and Gulf capital now view AI infrastructure as an investable, revenue-generating asset class on the continent, and it adds competitive pressure to the race that Kenya's own flagship projects, including the planned one-gigawatt Microsoft and G42 facility, have been running.
 
@@ -89,7 +89,7 @@ Building also fits MTN's balance sheet strategy. The operator has spent years mo
 
 AI workloads also change the engineering requirements dramatically. Training clusters demand power densities per rack that far exceed traditional enterprise colocation, along with advanced liquid cooling, high-capacity interconnects, and hardened power chains. Operators who can deliver AI-ready halls today are effectively selling scarce capacity into unmet demand, which is precisely the opportunity Africa Data Hub is chasing.
 
-![What's inside an AI data centre: GPUs, cooling systems, power distribution, UPS, networking, monitoring, security and fire suppression](/images/whats-inside-ai-data-center.webp)
+![Cutaway infographic of an AI data centre's systems](/images/whats-inside-ai-data-center.webp)
 
 ## Africa's AI Capacity Problem in Numbers
 

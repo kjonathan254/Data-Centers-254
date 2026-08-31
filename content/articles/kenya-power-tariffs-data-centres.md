@@ -19,21 +19,29 @@ og_image: "/images/kenya-transmission-pylons-3.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-ups-batteries-wide.webp"
-    alt: "Data centre electrical switchgear and power distribution"
+    alt:  "Electrical switchgear and UPS cabinets"
     caption: "Power is the single largest operating cost for a data centre, typically accounting for 30-40% of total opex — understanding and optimising Kenya Power tariffs is a core competency for facility operators"
     position: "hero"
   - src: "/images/kenya-solar-farm-3.webp"
-    alt: "Renewable energy and power sustainability"
+    alt:  "Solar array at a Kenyan power plant"
     caption: "Kenya's grid generates over 90% of electricity from renewable sources, giving data centres a structural cost advantage over facilities in markets dependent on fossil fuel generation"
     position: "section-break"
   - src: "/images/dc-cooling-crac.webp"
-    alt: "Cooling systems powered by data centre electrical infrastructure"
+    alt:  "CRAC cooling units behind server racks"
     caption: "Cooling systems multiply power consumption — a 1MW IT load becomes 1.5-1.8MW of total facility power at a typical PUE of 1.5-1.8, and every additional kilowatt-hour hits the electricity bill"
     position: "inline"
   - src: "/images/kenya-solar-farm-2.webp"
-    alt: "Challenges facing data centre operations"
+    alt:  "Solar panels rows under a clear sky"
     caption: "Power grid reliability remains a concern for data centre operators, requiring on-site generators that add capital and operating costs on top of grid electricity charges"
     position: "inline"
+  - src: "/images/kenya-power-feeder-works.webp"
+    alt: "Kenya Power crews installing power cables along a street trench"
+    caption: "Dedicated feeders have to be built first — Kenya Power crews laying distribution cable in the road reserve."
+    position: "section-break"
+  - src: "/images/rerec-pole-handover-kenya.webp"
+    alt:  "Officials at a REREC electricity pole handover in rural Kenya"
+    caption: "Electrification programmes like this REREC pole handover keep expanding the grid — and the demand that shapes future tariffs."
+    position: "section-break"
 internal_links:
   - text: "Kenya power infrastructure for data centres"
     href: "/articles/kenya-power-infrastructure-data-centres"
@@ -62,7 +70,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kenya-power-tariffs
 
 Electricity is the single largest operating cost for a data centre. In a well-run facility, power accounts for 30–40% of total operating expenditure — more than staff, more than connectivity, more than insurance, maintenance, and property costs combined. For a 2-megawatt data centre running 24 hours a day, the annual electricity bill can exceed KES 250 million ($1.6 million). Understanding how Kenya Power structures its tariffs, what drives costs up or down, and how data centre operators can negotiate and optimise their power costs is therefore not an optional exercise — it is a core business competency.
 
-![Data centre electrical switchgear and power distribution](/images/dc-ups-batteries-wide.webp)
+![Electrical switchgear and UPS cabinets](/images/dc-ups-batteries-wide.webp)
 
 Kenya's power sector is regulated by the Energy and Petroleum Regulatory Authority (EPRA), which approves the tariff structure that Kenya Power applies to different customer categories. Data centres, as large industrial consumers, fall into specific tariff categories that include both energy charges (per kilowatt-hour consumed) and demand charges (per kilovolt-ampere of maximum demand). The interaction between these two charge components, plus various levies and pass-through costs, determines the final bill.
 
@@ -80,7 +88,7 @@ The specific rates vary by tariff category and are adjusted periodically by EPRA
 
 The demand charge is based on the maximum power demand recorded during the billing period, measured in kilovolt-amperes (kVA). This is different from energy charges in a crucial way: the demand charge reflects the peak power draw, not the total energy consumed. A data centre that draws a steady 1,000 kVA all month pays a lower demand charge (per kVA) than one that normally draws 800 kVA but occasionally spikes to 1,500 kVA, even if both consume the same total energy.
 
-![Renewable energy and power sustainability](/images/kenya-solar-farm-3.webp)
+![Solar array at a Kenyan power plant](/images/kenya-solar-farm-3.webp)
 
 Demand charges for large commercial customers typically range from KES 300 to KES 500 per kVA per month. For a data centre with a contracted demand of 2,000 kVA (2 MVA), the monthly demand charge alone is KES 600,000 to KES 1,000,000. For a large facility with 5,000 kVA of contracted demand, the demand charge can exceed KES 2 million per month — a significant cost that must be managed.
 
@@ -94,7 +102,7 @@ Data centres consume power at two levels: the IT load (the power used by servers
 
 Kenyan data centres typically achieve PUE values of 1.4–1.7, depending on the facility's age, cooling technology, and ambient conditions. Nairobi's moderate climate (average temperature 18–25°C, altitude 1,795m) is favourable for cooling, allowing many facilities to use free cooling (outside air) for significant portions of the year, which reduces the energy consumed by mechanical chillers.
 
-![Cooling systems powered by data centre electrical infrastructure](/images/dc-cooling-crac.webp)
+![CRAC cooling units behind server racks](/images/dc-cooling-crac.webp)
 
 The PUE directly affects the electricity bill. A 1MW IT load at a PUE of 1.5 requires 1.5MW of total facility power — meaning 500kW is consumed by cooling and overhead. At a blended rate of KES 15/kWh, the monthly energy cost for the IT load alone is KES 10.8 million, while the cooling and overhead adds KES 5.4 million — a 50% increase. Improving PUE from 1.5 to 1.3 would save KES 2.16 million per month for a 1MW IT load — KES 26 million per year.
 
@@ -112,6 +120,8 @@ Longer contract durations (5, 10, or even 15 years) provide greater value to Ken
 
 ### Dedicated Feeders and Power Quality
 
+![Kenya Power crews installing power cables along a street trench](/images/kenya-power-feeder-works.webp)
+
 Data centres require high-quality power with minimal voltage fluctuations, frequency deviations, or momentary interruptions. Standard Kenya Power distribution feeders serve multiple customers and may experience voltage sags, momentary outages, and frequency variations that are acceptable for residential or commercial customers but problematic for sensitive data centre equipment. As part of a negotiated agreement, a data centre operator can request a dedicated feeder — a power line serving only the data centre — which provides better power quality and isolation from other customers' load patterns.
 
 ### Demand Charge Management
@@ -126,13 +136,15 @@ Nigeria's power costs are the highest among major African markets. Grid power co
 
 South Africa's power costs are broadly similar to Kenya's at KES 15–22 per kWh, but load shedding — scheduled power outages implemented by Eskom to manage supply shortages — adds significant costs in generator fuel, battery wear, and operational complexity. When these additional costs are included, South African data centre power is 20–40% more expensive than the published tariff would suggest.
 
-![Challenges facing data centre operations](/images/kenya-solar-farm-2.webp)
+![Solar panels rows under a clear sky](/images/kenya-solar-farm-2.webp)
 
 Egypt benefits from subsidised natural gas for power generation, resulting in some of the lowest industrial electricity prices in Africa at KES 8–12 per kWh. Ethiopia, with abundant hydroelectric power, offers rates as low as KES 6–10 per kWh, though grid reliability and connectivity limit its appeal for international operators.
 
 Kenya's competitive position is strengthened by its renewable generation mix. With over 90% of grid power coming from geothermal, hydro, wind, and solar, Kenya's electricity is both low-cost and low-carbon. As environmental sustainability becomes a more important factor in data centre site selection, this combination of cost and greenness gives Kenya a genuine competitive advantage.
 
 ## The Path to Lower Costs
+
+![Officials at a REREC electricity pole handover in rural Kenya](/images/rerec-pole-handover-kenya.webp)
 
 For data centre operators in Kenya, the path to lower power costs runs through three channels: negotiation with Kenya Power for better rates and terms, operational efficiency improvements (lower PUE, better demand management), and on-site generation (particularly solar PV as discussed in [our solar power guide](/articles/solar-power-data-centres-kenya)). The operators who combine all three — negotiate well, operate efficiently, and generate their own clean power — will achieve the lowest all-in power costs and the strongest competitive position in Kenya's growing data centre market.
 

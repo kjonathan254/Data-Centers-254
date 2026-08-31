@@ -19,24 +19,24 @@ og_image: "/images/racks-cabling.webp"
 reading_time: "18 min"
 images:
   - src: "/images/racks-cabling.webp"
-    alt: "High-density server racks with neatly organised cabling in a Kenyan data centre"
+    alt:  "Structured cabling connecting server racks"
     caption: "Proper cable management is critical for airflow and maintenance in high-density Kenyan data centres"
     position: "hero"
   - src: "/images/dc-fibre-optics.webp"
-    alt: "Network switches and patch panels in a structured cabling environment"
+    alt:  "Fibre optic termination equipment in a data centre"
     caption: "Patch panels and structured cabling hierarchy form the backbone of reliable data centre connectivity"
     position: "section-break"
   - src: "/images/dc-gpu-cluster-2-wide.webp"
-    alt: "GPU servers requiring high-speed 400G Ethernet cabling for AI workloads"
+    alt:  "Secured server racks with locking cabinets"
     caption: "AI and GPU workloads are driving demand for 400G Ethernet cabling standards in Kenyan facilities"
     position: "infographic"
   - src: "/images/diagram-cable-gauge-breaker-chart.webp"
-    alt: "Chart matching circuit breaker ratings to copper cable cross-sections"
+    alt:  "Chart matching breaker ratings to copper cable sizes"
     caption: "Conductor sizing follows breaker ratings: a 2.5 mm² copper conductor carries a 21 A circuit, while heavy industrial feeders need 16 mm² for 65 A — the same logic governs data centre power cabling."
     position: "diagram"
 
   - src: "/images/poor-cable-management-example.webp"
-    alt: "Example of poor cable management around a distribution cabinet"
+    alt:  "Tangle of unmanaged cables around a distribution cabinet"
     caption: "Without enforced standards, cable management degrades fast — the failure modes disciplined practice is designed to prevent."
     position: "section-break"
 internal_links:
@@ -65,7 +65,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-cabling-standards-kenya"
 ---
 
-![High-density server racks with neatly organised cabling in a Kenyan data centre](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/racks-cabling.webp)
 
 Structured cabling is the nervous system of any data centre — and getting it wrong in Kenya carries significant operational and financial consequences. From the high-density halls of Africa Data Centres in Nairobi to growing colocation facilities in Mombasa, the quality of cabling infrastructure directly determines network reliability, troubleshooting speed, and the ability to attract enterprise tenants. This guide examines the **data centre cabling standards Kenya** operators follow, the practical challenges of implementation, and the emerging requirements driven by AI workloads.
 
@@ -94,7 +94,7 @@ The standard defines generic cabling for customer premises and specifies perform
 
 ### Backbone Cabling (MDF to IDF)
 
-![Chart matching circuit breaker ratings to copper cable cross-sections](/images/diagram-cable-gauge-breaker-chart.webp)
+![Chart matching breaker ratings to copper cable sizes](/images/diagram-cable-gauge-breaker-chart.webp)
 
 Backbone cabling connects the Main Distribution Frame to Intermediate Distribution Frames or Horizontal Distribution Areas. In Kenyan data centres, backbone runs predominantly use **fibre optic cable** due to the distances involved and the bandwidth requirements.
 
@@ -110,7 +110,7 @@ Horizontal cabling runs from the HDA patch panels to individual rack positions. 
 
 Proper patch panel density and labelling are non-negotiable. Kenyan colocation providers like [colocation services in Kenya](/articles/colocation-data-centre-kenya) operators use high-density patch panels (48-port in 1U or 96-port in 2U) to maximise rack space. Cable management accessories — including horizontal and vertical cable managers, bend radius guides, and Velcro ties (never cable ties on data cables) — are essential for maintaining airflow pathways and enabling rapid troubleshooting.
 
-![Network switches and patch panels in a structured cabling environment](/images/dc-fibre-optics.webp)
+![Fibre optic termination equipment in a data centre](/images/dc-fibre-optics.webp)
 
 ## Copper vs Fibre: Practical Considerations for Kenya
 
@@ -146,7 +146,7 @@ Manufacturer-specific certifications from **CommScope (SYSTIMAX)**, **Panduit**,
 
 ## Cable Management in High-Density Environments
 
-![Example of poor cable management around a distribution cabinet](/images/poor-cable-management-example.webp)
+![Tangle of unmanaged cables around a distribution cabinet](/images/poor-cable-management-example.webp)
 
 Kenyan data centres are increasingly deploying **high-density computing**, with some racks drawing 15–20 kW to support GPU clusters for AI workloads. High-density environments demand meticulous cable management for several reasons:
 
@@ -172,7 +172,7 @@ Nairobi sits at approximately 1,795 metres above sea level, with an average temp
 
 ## 400G Ethernet and Cabling for AI Workloads
 
-![GPU servers requiring high-speed 400G Ethernet cabling for AI workloads](/images/dc-gpu-cluster-2-wide.webp)
+![Secured server racks with locking cabinets](/images/dc-gpu-cluster-2-wide.webp)
 
 The rapid growth of **GPU computing and AI workloads** in Kenya — driven by financial services, agritech, and government digitisation initiatives — is accelerating the adoption of **400G Ethernet (IEEE 802.3bs)**. This has profound implications for cabling infrastructure:
 

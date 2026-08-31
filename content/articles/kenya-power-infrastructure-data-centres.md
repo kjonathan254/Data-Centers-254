@@ -35,11 +35,11 @@ images:
     caption: "A single rack can draw 5-10 kilowatts — a 200-rack facility needs 1-2 megawatts just for servers"
     position: "inline"
   - src: "/images/kenya-geothermal-plant-olkaria.webp"
-    alt: "Data centre facility exterior in Nairobi"
+    alt:  "Olkaria geothermal plant with cooling towers and steam"
     caption: "Kenya's data centre growth is constrained not by demand but by the available power supply to facilities"
     position: "inline"
   - src: "/images/diagram-power-chain-grid-to-gpu.webp"
-    alt: "Diagram of data centre electrical infrastructure from the national grid to the GPU rack"
+    alt:  "Diagram of the electrical chain from grid to GPU rack"
     caption: "Every AI workload depends on this chain holding together: generation, transmission, the substation, switchgear, UPS conditioning, and finally rack-level PDU distribution."
     position: "diagram"
 
@@ -49,7 +49,7 @@ images:
     position: "inline"
 
   - src: "/images/grid-technician-pole-work.webp"
-    alt: "Field technician working on overhead power and fibre lines"
+    alt:  "Field technician working on overhead power lines"
     caption: "Closing Kenya's power gap means physical construction: corridors, distribution upgrades, and the crews that build them."
     position: "section-break"
 internal_links:
@@ -98,7 +98,7 @@ However, the geothermal resource is geographically fixed in the Rift Valley, app
 
 Data centres are extraordinary electricity consumers. To understand why power is the binding constraint, it helps to understand the scale of demand:
 
-![Diagram of data centre electrical infrastructure from the national grid to the GPU rack](/images/diagram-power-chain-grid-to-gpu.webp)
+![Diagram of the electrical chain from grid to GPU rack](/images/diagram-power-chain-grid-to-gpu.webp)
 
 - A single server rack typically draws 5-10 kilowatts
 - A small colocation facility with 100 racks needs 0.5-1 megawatt of IT power
@@ -145,11 +145,11 @@ Data centres do not rely solely on the grid. Every serious facility has a layere
 
 The combination of these systems means that a well-designed data centre should never experience downtime due to power issues. The Huduma Centre outage suggests that not all facilities in Kenya meet this standard. For new operators entering the market, backup power is a significant capital cost — diesel generators, UPS systems, and automatic transfer switches can represent 10-15% of total facility cost.
 
-![Server racks need consistent, clean power](/images/dc-switchgear.webp)
+![Server racks inside a modern data centre](/images/dc-switchgear.webp)
 
 ## The Path Forward
 
-![Field technician working on overhead power and fibre lines](/images/grid-technician-pole-work.webp)
+![Field technician working on overhead power lines](/images/grid-technician-pole-work.webp)
 
 Solving Kenya's data centre power constraint requires action on multiple fronts:
 
@@ -163,4 +163,4 @@ Solving Kenya's data centre power constraint requires action on multiple fronts:
 
 The policy environment is supportive. The [data centre licensing framework](/articles/kenya-data-centre-licensing-framework) provides regulatory clarity. The National Digital Superhighway Programme signals government commitment. But until the power constraint is addressed through tangible infrastructure investment, Kenya's data centre ambitions will remain capped by the available watts.
 
-![Kenya's growth is constrained by power supply](/images/kenya-geothermal-plant-olkaria.webp)
+![Olkaria geothermal plant with cooling towers and steam](/images/kenya-geothermal-plant-olkaria.webp)

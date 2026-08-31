@@ -106,7 +106,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/kenya-data-sovereign
 
 ## What Data Sovereignty Means in the Kenyan Context
 
-![Data policy and regulation framework documents on a desk](/images/nairobi-skyline-night-kicc.webp)
+![KICC tower and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
 
 **Data sovereignty** is the foundational principle that data generated within a nation's borders — or data pertaining to its citizens — is subject to that nation's laws and regulatory authority. In Kenya, this concept has gained significant traction since the enactment of the **Data Protection Act, 2019**, which established a comprehensive legal framework for the processing of personal data. Unlike a simple data localisation mandate that dictates physical storage location, data sovereignty encompasses the broader idea that **Kenyan law governs data about Kenyans**, regardless of where that data is processed or stored.
 
@@ -179,7 +179,7 @@ This policy has been a major driver of data centre investment. Government agenci
 
 The **Communications Authority of Kenya (CAK)** regulates telecommunications providers and has imposed conditions on licence holders regarding the handling of subscriber data, call detail records (CDRs), and other communications metadata. While not a strict localisation mandate, CAK's requirements effectively necessitate that this data be processed and stored within accessible Kenyan jurisdiction for law enforcement and national security purposes.
 
-![Server racks in a Kenyan data centre facility](/images/dc-server-chip-2.webp)
+![Server processors on a rack chassis](/images/dc-server-chip-2.webp)
 
 ## Comparative Analysis: How Kenya Stacks Up
 
@@ -221,7 +221,7 @@ The absence of a dedicated cloud region in Kenya creates a practical compliance 
 
 For **CBK-regulated institutions**, the use of these offshore regions is problematic. The CBK's expectation that core financial data remain in-country means that banks cannot simply default to AWS Cape Town or Azure South Africa for core systems. This regulatory friction has created an opening for **local data centre operators** and **local cloud platforms** to serve the financial sector.
 
-![Map showing data centre locations across Africa](/images/nairobi-skyline-night.webp)
+![Nairobi skyline lit up at night](/images/nairobi-skyline-night.webp)
 
 ## Practical Implications for Data Centre Operators
 

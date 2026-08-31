@@ -19,11 +19,11 @@ og_image: "/images/kenya-geothermal-plant.webp"
 reading_time: "12 min"
 images:
   - src: "/images/kenya-geothermal-plant-4.webp"
-    alt: "Renewable energy and sustainability in Kenyan data centres"
+    alt:  "Geothermal pipelines and steam wellheads"
     caption: "Kenya's geothermal resources in the Great Rift Valley provide the foundation for some of the greenest data centre power in the world"
     position: "hero"
   - src: "/images/kenya-transmission-pylons-3.webp"
-    alt: "Transmission lines carrying geothermal power toward Nairobi"
+    alt:  "Transmission lines carrying power toward Nairobi"
     caption: "Olkaria's power reaches data centres over the national transmission grid."
     position: "section-break"
   - src: "/images/kenya-geothermal-plant-5.webp"
@@ -31,7 +31,7 @@ images:
     caption: "Baseload geothermal pairs perfectly with data centre loads."
     position: "inline"
   - src: "/images/kenya-geothermal-map.webp"
-    alt: "Energy infrastructure map showing Rift Valley geothermal to Nairobi"
+    alt:  "Map of Kenya's Rift Valley geothermal sites"
     caption: "Kenya's geothermal fields in Olkaria, Menengai, and other Rift Valley locations feed power into the national grid that serves data centres in Nairobi"
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/geothermal-energy-k
 
 Deep beneath the floor of the Great Rift Valley, water seeping into fractures in the Earth's crust encounters rock heated by magma chambers lying only a few kilometres below the surface. This water becomes superheated — reaching temperatures of 200–350 degrees Celsius — and rises to the surface as steam through geological faults. For millions of years, this process occurred unseen and unutilised. Today, it powers approximately 45% of Kenya's electricity and, through the national grid, powers every data centre in Nairobi.
 
-![Renewable energy and sustainability in Kenyan data centres](/images/kenya-geothermal-plant-4.webp)
+![Geothermal pipelines and steam wellheads](/images/kenya-geothermal-plant-4.webp)
 
 Geothermal energy is Kenya's most important energy asset for data centres, and it is an advantage that no amount of solar panels, wind turbines, or policy incentives can fully replicate in other markets. Understanding how geothermal power works, why it is so well-suited to data centre loads, and what its limitations are, is essential for anyone evaluating Kenya as a data centre location or investment destination.
 
@@ -83,7 +83,7 @@ At the geothermal field, production wells (typically drilled to depths of 1,500�
 
 ### Transmission
 
-![Transmission lines carrying geothermal power toward Nairobi](/images/kenya-transmission-pylons-3.webp)
+![Transmission lines carrying power toward Nairobi](/images/kenya-transmission-pylons-3.webp)
 
 The electricity generated at Olkaria enters the national grid through high-voltage transmission lines operated by Kenya Electricity Transmission Company (KETRACO). The primary transmission corridor from Olkaria to Nairobi runs through Naivasha, Limuru, and into the city, where it connects to the distribution network operated by Kenya Power. This transmission infrastructure was originally built to serve general national demand, but the growth of data centre loads along Nairobi's Mombasa Road corridor has created concentrated demand nodes that benefit from this geothermal backbone.
 
@@ -124,7 +124,7 @@ For certain use cases — particularly AI training clusters that need massive am
 
 ## Geothermal Development Pipeline
 
-![Energy infrastructure map showing Rift Valley geothermal to Nairobi](/images/kenya-geothermal-map.webp)
+![Map of Kenya's Rift Valley geothermal sites](/images/kenya-geothermal-map.webp)
 
 Kenya's geothermal development is ongoing, with several projects that will increase capacity and reinforce the power supply available to data centres.
 

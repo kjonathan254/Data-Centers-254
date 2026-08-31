@@ -19,15 +19,15 @@ og_image: "/images/dc-woman-engineer-racks.webp"
 reading_time: "11 min"
 images:
   - src: "/images/dc-woman-engineer-racks.webp"
-    alt: "Engineer with a laptop working beside data centre server racks"
+    alt:  "Woman engineer configuring server racks"
     caption: "Kenya's data centre industry needs engineers, technicians, and specialists — and the paths in are clearer than most people think."
     position: "hero"
   - src: "/images/dc-careers-tech.webp"
-    alt: "Engineer working at a server rack in a data centre"
+    alt:  "Engineer working at a server rack"
     caption: "From facilities technicians to network engineers, every role keeps the racks humming."
     position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
-    alt: "Infographic comparing network engineer and cybersecurity engineer career paths"
+    alt:  "Comparison of network engineer and cybersecurity engineer roles"
     caption: "Different tracks reward different credentials — networking and security roles rarely swap."
     position: "diagram"
   - src: "/images/dc-woman-engineer-laptop.webp"
@@ -72,7 +72,7 @@ Kenya's data centre industry is creating jobs that most Kenyans do not know exis
 
 The data centre industry in Kenya employs hundreds of people across a range of specialisations, from entry-level technicians to senior facility managers with decades of experience. As the industry grows — driven by increasing digitalisation, cloud adoption, and the potential for AI infrastructure investment — the demand for skilled professionals will only increase. For anyone considering a career in this space, understanding the roles, the required qualifications, and the pathways to entry is essential.
 
-![Engineer with a laptop working beside data centre server racks](/images/dc-woman-engineer-racks.webp)
+![Woman engineer configuring server racks](/images/dc-woman-engineer-racks.webp)
 
 ## The Core Roles: What People Actually Do
 
@@ -108,7 +108,7 @@ Good cabling work requires precision, patience, and attention to detail. A singl
 
 **Qualifications**: Diploma in IT, telecommunications, or electrical engineering. Vendor certifications for fibre optic termination (e.g., Corning, CommScope) are valued.
 
-![Engineer working at a server rack in a data centre](/images/dc-careers-tech.webp)
+![Engineer working at a server rack](/images/dc-careers-tech.webp)
 
 ## Certifications That Matter
 
@@ -132,7 +132,7 @@ Cisco's CCNA and CCNP remain the gold standard for network engineers globally, i
 
 Working in data centres involves high-voltage electrical systems, confined spaces, and heavy equipment. Safety certifications, including occupational health and safety training, are mandatory for most roles and are often a legal requirement.
 
-![Infographic comparing network engineer and cybersecurity engineer career paths](/images/diagram-network-vs-cyber-career.webp)
+![Comparison of network engineer and cybersecurity engineer roles](/images/diagram-network-vs-cyber-career.webp)
 
 ## The Salary Landscape
 

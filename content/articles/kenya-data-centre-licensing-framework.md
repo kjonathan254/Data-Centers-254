@@ -19,23 +19,23 @@ og_image: "/images/dc-policy-regulation.webp"
 reading_time: "12 min"
 images:
   - src: "/images/nairobi-sunset-wide.webp"
-    alt: "Kenya data centre policy and regulatory framework document"
+    alt:  "Nairobi skyline at sunset"
     caption: "The CA's Revised Telecommunications Market Structure brought data centres under formal licensing for the first time"
     position: "hero"
   - src: "/images/nairobi-westlands.webp"
-    alt: "Nairobi skyline showing growing digital infrastructure"
+    alt:  "Westlands commercial district in Nairobi"
     caption: "Nairobi hosts 15 of Kenya's 19 operational data centres along corridors like Mombasa Road"
     position: "section-break"
   - src: "/images/nairobi-skyline-night.webp"
-    alt: "East Africa data centre and submarine cable infrastructure map"
+    alt:  "Nairobi skyline lit up at night"
     caption: "Kenya's submarine cable landing stations in Mombasa give it a connectivity advantage over landlocked neighbours"
     position: "infographic"
   - src: "/images/dc-chillers-roof.webp"
-    alt: "Data centre power distribution and backup systems"
+    alt:  "Data centre rooftop chillers and generators"
     caption: "Power supply remains the single largest constraint on data centre growth in Kenya"
     position: "inline"
   - src: "/images/kenya-transmission-pylons.webp"
-    alt: "Transmission pylons carrying power across Kenya"
+    alt:  "High-voltage pylons on the backbone grid"
     caption: "Licensing aside, power supply remains the binding constraint."
     position: "inline"
 internal_links:
@@ -74,7 +74,7 @@ The Authority wrote that "given that the facility owner in the second type of da
 
 The urgency was demonstrated in June 2026 when a power outage at the Huduma Kenya data centre in Nakuru brought government services offline across all forty-seven counties simultaneously. Millions of citizens were unable to access identity documents, business registrations, and essential services. The incident proved that data centre failures are no longer theoretical risks — they are events with immediate, nationwide consequences.
 
-![Kenya's policy and regulatory framework for data centres](/images/nairobi-sunset-wide.webp)
+![Nairobi skyline at sunset](/images/nairobi-sunset-wide.webp)
 
 ## How Does NFP-T1 Differ from NFP-T2?
 
@@ -96,7 +96,7 @@ The CA did not create a standalone "data centre licence." Instead, it placed dat
 
 During the consultation process, the CA had initially proposed placing data centres under NFP-T3, which covers limited geographic areas. Industry stakeholders pushed back, arguing that data centres inherently serve a national or regional function. The Authority accepted this reasoning, and the final framework places data centres under the two highest infrastructure tiers.
 
-![Nairobi hosts 15 of Kenya's 19 operational data centres](/images/nairobi-westlands.webp)
+![Westlands commercial district in Nairobi](/images/nairobi-westlands.webp)
 
 ## Kenya's Data Centre Market: The Numbers
 
@@ -106,19 +106,19 @@ The market's total IT power capacity stood at approximately **15 megawatts in 20
 
 Key operators include **Africa Data Centres** (Liquid Intelligent Technologies), which operates multiple facilities including a significant presence along Mombasa Road; **iXAfrica Data Centres**, developer of East Africa's first hyper-scale, AI-ready facility at NBOX1.1 with a 4.5 megawatt IT load; and various government-owned facilities supporting public sector digital services. Safaricom and Telkom Kenya also operate data centre infrastructure for their telecommunications and enterprise services.
 
-![East Africa infrastructure map showing data centres and cable routes](/images/nairobi-skyline-night.webp)
+![Nairobi skyline lit up at night](/images/nairobi-skyline-night.webp)
 
 ## Is Power Supply a Bigger Problem Than Licensing?
 
 While the regulatory framework has taken a significant step forward, the single largest obstacle to data centre growth in Kenya remains the power supply. In May 2026, Microsoft and G42's planned one-billion-dollar AI data centre project — potentially the largest single foreign direct investment in Kenya's digital infrastructure — stalled after it became clear that the national grid could not reliably deliver the required power capacity. Government officials indicated that meeting the project's energy demands would require rationing power to other consumers.
 
-![Data centre power distribution and backup systems](/images/dc-chillers-roof.webp)
+![Data centre rooftop chillers and generators](/images/dc-chillers-roof.webp)
 
 Kenya's total installed generation capacity stands at approximately 3,500 megawatts, predominantly from geothermal and hydroelectric sources. But the Microsoft project alone was reported to require several hundred megawatts — a demand that would represent a significant share of the national grid's firm capacity. For more detail on this constraint, see our analysis of [data centre power and energy challenges](/energy).
 
 The Huduma Kenya outage in June 2026 further illustrated the power reliability challenge: a single power supply failure at one data centre in Nakuru disrupted government services nationwide. This is not a resilience problem that licensing alone can solve — it requires investment in backup power systems, redundant feeds, and the expansion of Kenya's electricity generation and distribution infrastructure.
 
-![Transmission pylons carrying power across Kenya](/images/kenya-transmission-pylons.webp)
+![High-voltage pylons on the backbone grid](/images/kenya-transmission-pylons.webp)
 
 ## What Other Changes Did the CA Introduce?
 

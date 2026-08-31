@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ReactMarkdown, { type Components } from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   ArrowLeft, Clock, Calendar, ChevronRight, BookOpen,
   Share2, LinkIcon, CheckCircle2, ChevronUp,
@@ -348,18 +349,21 @@ function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
       );
     },
     table: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <div className="my-6 overflow-x-auto rounded-lg border border-border/50">
-        <table className="w-full text-sm">{children}</table>
+      <div className="my-8 overflow-x-auto rounded-xl border border-border/50 bg-card/30" role="region" aria-label="Data table" tabIndex={0}>
+        <table className="w-full min-w-[560px] border-collapse text-sm">{children}</table>
       </div>
     ),
     thead: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
       <thead className="bg-surface">{children}</thead>
     ),
+    tr: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
+      <tr className="odd:bg-surface/40 transition-colors hover:bg-surface/70">{children}</tr>
+    ),
     th: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <th className="px-4 py-3 text-left font-semibold text-foreground text-xs uppercase tracking-wider">{children}</th>
+      <th className="whitespace-nowrap px-4 py-3 text-left font-semibold text-foreground text-xs uppercase tracking-wider">{children}</th>
     ),
     td: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <td className="px-4 py-3 text-muted-foreground border-t border-border/30">{children}</td>
+      <td className="px-4 py-3 align-top text-muted-foreground border-t border-border/30">{children}</td>
     ),
     // Render images from markdown as styled figure blocks
     img: ({ src, alt, ..._rest }: { src?: string; alt?: string; [key: string]: unknown }) => {
@@ -484,7 +488,7 @@ export default function ArticlePageClient({ article, related }: Props) {
 
           {/* Article Body */}
           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
-            <ReactMarkdown components={mdComponents as Components}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents as Components}>
               {content}
             </ReactMarkdown>
           </div>

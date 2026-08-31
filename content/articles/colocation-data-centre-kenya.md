@@ -19,19 +19,19 @@ og_image: "/images/dc-gpu-cluster.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-servers-racks.webp"
-    alt: "Server racks in a colocation data centre"
+    alt:  "Blue-lit server racks in a data hall"
     caption: "In colocation, you own the servers but rent the space, power, cooling, and security"
     position: "hero"
   - src: "/images/dc-gpu-cluster-2.webp"
-    alt: "Data centre facility exterior in Nairobi"
+    alt:  "Server racks in a Nairobi data centre hall"
     caption: "Nairobi hosts Kenya's primary colocation facilities along the Mombasa Road corridor"
     position: "section-break"
   - src: "/images/dc-gpu-cluster.webp"
-    alt: "Network infrastructure inside a colocation facility"
+    alt:  "GPU cluster racks in a colocation facility"
     caption: "Colocation providers offer diverse connectivity options from multiple ISPs and submarine cable providers"
     position: "infographic"
   - src: "/images/dc-security-camera.webp"
-    alt: "Security camera covering a data centre floor"
+    alt:  "Security cameras monitoring a colocation facility"
     caption: "Site visits should test security, power history, and support — not just price."
     position: "inline"
   - src: "/images/dc-biometric-access-2.webp"
@@ -66,7 +66,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/colocation-data-cen
 
 Colocation lets you place your own servers inside a professionally built and managed facility. You bring the hardware; the provider supplies the space, power, cooling, connectivity, and physical security. For companies in Kenya that need control over their infrastructure without the capital outlay of building a data centre, colocation is the standard solution.
 
-![Server racks in a colocation data centre](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
 
 Banks, mobile network operators, fintech platforms, and government agencies across Kenya use colocation to house their critical systems. The model has matured significantly in Nairobi over the past decade, with multiple Tier III facilities now offering carrier-neutral space along the Mombasa Road corridor.
 
@@ -114,7 +114,7 @@ Colocation gives you direct access to the [Kenya Internet Exchange Point (KIXP)]
 
 A company building its own facility would need to contract and manage these connections independently, running dedicated fibre from the nearest exchange or cable landing point. In colocation, the cross-connect infrastructure is already in place, and multiple carriers compete for your business within the same building.
 
-![Data centre facility exterior in Nairobi](/images/dc-gpu-cluster-2.webp)
+![Server racks in a Nairobi data centre hall](/images/dc-gpu-cluster-2.webp)
 
 ### Data residency and regulatory compliance
 
@@ -180,7 +180,7 @@ Once you select a provider and sign a contract, the onboarding process typically
 
 Reputable providers assign a dedicated account manager or onboarding coordinator who manages this process. If a provider treats onboarding as your problem rather than a shared process, it is a warning sign for how they will handle ongoing support.
 
-![Network infrastructure inside a colocation facility](/images/dc-gpu-cluster.webp)
+![GPU cluster racks in a colocation facility](/images/dc-gpu-cluster.webp)
 
 ## Colocation vs Cloud vs Build-Your-Own: A Direct Comparison
 
@@ -225,7 +225,7 @@ A carrier-neutral facility is non-negotiable for most enterprises. Verify that y
 
 Confirm the facility's proximity to [submarine cable landing stations](/articles/submarine-cables-landing-mombasa) and the diversity of its fibre entry points. A facility with a single fibre path is vulnerable to a single cut.
 
-![Security camera covering a data centre floor](/images/dc-security-camera.webp)
+![Security cameras monitoring a colocation facility](/images/dc-security-camera.webp)
 
 ### Physical security
 

@@ -19,23 +19,23 @@ og_image: "/images/dc-biometric-access.webp"
 reading_time: "12 min"
 images:
   - src: "/images/dc-security.webp"
-    alt: "Data centre physical security with biometric access and CCTV"
+    alt:  "Biometric access control and CCTV at a data centre"
     caption: "Tier III and IV data centres use multiple layers of physical security including biometric readers, mantraps, 24/7 CCTV monitoring, and on-site security personnel"
     position: "hero"
   - src: "/images/dc-gpu-cluster-2-wide.webp"
-    alt: "Secured server racks with locking cabinets in a data centre"
+    alt:  "Secured server racks with locking cabinets"
     caption: "Colocation racks are individually locked, and access is logged and monitored — customers cannot access each other's equipment"
     position: "section-break"
   - src: "/images/dc-security-camera-2.webp"
-    alt: "Network security equipment in a data centre"
+    alt:  "Surveillance camera overlooking a server hall"
     caption: "Firewalls, intrusion detection systems, and DDoS mitigation appliances form the network security layer that protects data centre traffic from external threats"
     position: "inline"
   - src: "/images/dc-security-camera.webp"
-    alt: "Dome security camera mounted in a data centre ceiling"
+    alt:  "Security cameras monitoring a colocation facility"
     caption: "Kenyan facilities layer cameras, mantraps, and biometrics — the reality is stricter than the brochure."
     position: "inline"
   - src: "/images/diagram-ssh-tcp-vpn.webp"
-    alt: "Infographic explaining SSH, TCP, and VPN fundamentals"
+    alt:  "Comparison of SSH, TCP and VPN roles"
     caption: "Encrypted transport — SSH, TLS, VPNs — is the second wall after the mantrap."
     position: "diagram"
 
@@ -67,7 +67,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-securit
 
 When a bank chooses to house its core banking servers in a data centre, it is trusting that facility with the digital equivalent of its vault. When a government agency places citizen data — tax records, health information, biometric data — on servers in a colocation facility, it is trusting that the data will not be accessed, modified, or stolen by anyone who should not have access. This trust is not given freely. It is earned through security systems, policies, and certifications that operate on multiple layers simultaneously.
 
-![Data centre physical security with biometric access and CCTV](/images/dc-security.webp)
+![Biometric access control and CCTV at a data centre](/images/dc-security.webp)
 
 Data centre security is not a single thing you can point to and say "there, that is security." It is a system of systems — physical barriers, electronic access controls, network defences, encryption protocols, compliance frameworks, and human procedures — all designed to work together so that a failure in any one layer does not compromise the whole. Understanding these layers is essential for anyone evaluating a data centre, whether as a potential customer, an employee, or an investor.
 
@@ -97,7 +97,7 @@ Every access event — every door opened, every badge scanned, every biometric a
 
 While physical security protects the hardware, network security protects the data flowing through it. A data centre without network security is like a bank vault with the door left open — the servers may be physically secure, but the data they process and store is accessible to anyone who can reach them over the network.
 
-![Infographic explaining SSH, TCP, and VPN fundamentals](/images/diagram-ssh-tcp-vpn.webp)
+![Comparison of SSH, TCP and VPN roles](/images/diagram-ssh-tcp-vpn.webp)
 
 ### Perimeter Network Defence
 
@@ -111,7 +111,7 @@ Distributed Denial of Service (DDoS) attacks — where attackers flood a target 
 
 Data centres mitigate DDoS attacks through a combination of network-level defences (traffic scrubbing, rate limiting, and blackhole routing) and partnerships with DDoS mitigation providers (like Cloudflare, Akamai, or NEUSTAR) that can absorb and filter attack traffic before it reaches the data centre. The largest facilities maintain dedicated DDoS mitigation capacity on-site, while smaller facilities rely on upstream providers or cloud-based mitigation services.
 
-![Network security equipment in a data centre](/images/dc-security-camera-2.webp)
+![Surveillance camera overlooking a server hall](/images/dc-security-camera-2.webp)
 
 ### Zero Trust Architecture
 
@@ -155,7 +155,7 @@ The Payment Card Industry Data Security Standard (PCI-DSS) applies to any entity
 
 Kenya's leading data centre operators — iXAfrica, Africa Data Centres, and Safaricom — have invested significantly in security infrastructure. iXAfrica's NBOX1 facility, for example, was designed from the ground up with Tier III security requirements, including biometric access, mantraps, 24/7 CCTV surveillance, and on-site security personnel. Africa Data Centres, as part of the pan-African Cassava Technologies group, applies group-wide security standards that align with international best practices.
 
-![Dome security camera mounted in a data centre ceiling](/images/dc-security-camera.webp)
+![Security cameras monitoring a colocation facility](/images/dc-security-camera.webp)
 
 However, security maturity varies across the Kenyan market. Smaller operator-built facilities and enterprise data centres may not have the same level of investment in security infrastructure, and the skills required to operate and maintain sophisticated security systems — network security engineers, security operations analysts, compliance auditors — are in short supply. As the market matures and customers become more demanding, security differentiation will become an increasingly important competitive factor.
 

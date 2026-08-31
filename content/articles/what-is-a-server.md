@@ -19,11 +19,11 @@ og_image: "/images/dc-server-chip-2.webp"
 reading_time: "10 min"
 images:
   - src: "/images/ai-gpu-servers.webp"
-    alt: "Rack-mounted servers in a data centre"
+    alt:  "GPU servers racked in a data centre"
     caption: "Modern servers are designed to be mounted in standard 19-inch racks, with dozens of servers stacked vertically in a single rack to maximise space efficiency"
     position: "hero"
   - src: "/images/dc-gpu-cluster.webp"
-    alt: "Consumer graphics cards — familiar hardware that differs from server-class machines"
+    alt:  "GPU cluster racks in a colocation facility"
     caption: "Consumer parts share DNA with server hardware but trade reliability and manageability for price."
     position: "section-break"
   - src: "/images/dc-server-chip-4-wide.webp"
@@ -31,7 +31,7 @@ images:
     caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"
     position: "inline"
   - src: "/images/diagram-server-rack-42u.webp"
-    alt: "Cutaway diagram of a 42U server rack showing switch, servers, storage and power layout"
+    alt:  "Labelled diagram of a 42U server rack"
     caption: "A standard 42U rack stacks top-of-rack switching, compute, storage, and dual power feeds into roughly 600 mm of width — multiplied by hundreds, it becomes a data hall."
     position: "diagram"
 
@@ -63,7 +63,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/what-is-a-server"
 
 Every time you open a website, send an email, make a mobile money transfer, or stream a video, a server somewhere is doing the work. Servers are the invisible machines behind every digital service you have ever used. They are the reason Google can find your search results in milliseconds, the reason M-Pesa can process your payment instantly, and the reason Netflix can start playing a movie within seconds of you clicking play. Yet most people who depend on servers every day have never seen one and could not describe what one actually is.
 
-![Rack-mounted servers in a data centre](/images/ai-gpu-servers.webp)
+![GPU servers racked in a data centre](/images/ai-gpu-servers.webp)
 
 A server is, at its most fundamental level, a computer that provides services to other computers. The word "server" refers not to a specific type of hardware but to a role: a computer that serves. Any computer can be a server if it is running software that provides services to other computers over a network. Your laptop could be a server if you ran web server software on it and other computers connected to it to view web pages. In practice, however, when people say "server" they mean a purpose-built computer designed specifically for the demands of providing services reliably, continuously, and at scale.
 
@@ -79,7 +79,7 @@ Servers use **ECC memory** (Error-Correcting Code RAM), which can detect and cor
 
 Servers have **redundant power supplies** — two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime — there are multiple layers of redundancy between the grid and the processor.
 
-![Consumer graphics cards — familiar hardware that differs from server-class machines](/images/dc-gpu-cluster.webp)
+![GPU cluster racks in a colocation facility](/images/dc-gpu-cluster.webp)
 
 Servers use **hot-swappable components** — drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
 
@@ -131,6 +131,6 @@ A typical modern rack server for enterprise workloads might have two processors 
 
 [As explained in our data centre guide](/articles/what-is-a-data-centre), servers need a specific environment to operate reliably: stable power, precise cooling, physical security, fire protection, and high-speed network connectivity. A server sitting under a desk in an office might work for a small business, but it will not provide the reliability, security, or performance that a data centre environment delivers.
 
-![Cutaway diagram of a 42U server rack showing switch, servers, storage and power layout](/images/diagram-server-rack-42u.webp)
+![Labelled diagram of a 42U server rack](/images/diagram-server-rack-42u.webp)
 
 Data centres exist because the collective needs of thousands of servers — for power, cooling, connectivity, and security — are best met by purpose-built facilities with dedicated infrastructure and expert staff. Every server you interact with online lives in a data centre, and understanding what servers are and how they work is the first step to understanding the entire digital infrastructure ecosystem that powers Kenya's economy.

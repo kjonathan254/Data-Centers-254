@@ -19,23 +19,23 @@ og_image: "/images/hero-server-hall.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-servers-racks.webp"
-    alt: "Server racks inside a modern data centre"
+    alt:  "Blue-lit server racks in a data hall"
     caption: "A single data centre can house thousands of servers in rows of racks, each processing and storing data 24 hours a day"
     position: "hero"
   - src: "/images/dc-power-systems.webp"
-    alt: "Data centre power distribution systems"
+    alt:  "Data centre power distribution and backup systems"
     caption: "Power is the backbone of any data centre — UPS systems, generators, and PDUs ensure uninterrupted electricity supply"
     position: "section-break"
   - src: "/images/dc-cooling-crac-2.webp"
-    alt: "Precision cooling systems inside a data centre"
+    alt:  "Data centre cooling and power distribution equipment"
     caption: "Cooling accounts for up to 40% of a data centre's total energy consumption"
     position: "inline"
   - src: "/images/mombasa-cable-landing.webp"
-    alt: "Network cabling connecting server racks"
+    alt:  "Submarine cable coming ashore at a Kenyan beach landing"
     caption: "Structured cabling connects thousands of servers to each other and to the outside internet via fibre optic links"
     position: "inline"
   - src: "/images/dc-biometric-access-4.webp"
-    alt: "Data centre physical security systems"
+    alt:  "Security systems assessment during a facility audit"
     caption: "Tier III and IV facilities use biometric access, 24/7 CCTV, mantraps, and on-site security personnel"
     position: "inline"
   - src: "/images/diagram-network-rack-components.webp"
@@ -83,7 +83,7 @@ A data centre is far more than a room full of computers. It is an integrated sys
 
 Servers are the heart of any data centre. A single modern rack (the metal frame that holds the equipment) can contain 40 to 80 servers stacked vertically. Each server is essentially a powerful computer without a screen or keyboard — it exists to process requests and store data. Large facilities contain hundreds of racks, meaning tens of thousands of individual servers. Storage systems, often arrays of hard drives or solid-state drives, hold the actual data — databases, files, images, videos, application code.
 
-![Server racks inside a modern data centre](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
 
 ### Power Systems
 
@@ -95,19 +95,19 @@ Data centres consume enormous amounts of electricity. A single rack might draw 5
 
 Servers generate heat — lots of it. A rack drawing 10 kilowatts produces as much heat as ten space heaters running continuously. If the temperature inside a server room rises above about 27 degrees Celsius, servers will throttle their performance or shut down entirely to prevent damage. Cooling systems, which can account for up to 40% of a facility's total energy consumption, use precision air conditioning (CRAC units), hot and cold aisle containment, and increasingly, liquid cooling to remove heat from the server environment.
 
-![Precision cooling systems maintain optimal server temperatures](/images/dc-cooling-crac-2.webp)
+![Data centre cooling and power distribution equipment](/images/dc-cooling-crac-2.webp)
 
 ### Networking
 
 Data centres need to connect to the outside world. This happens through fibre optic cables — typically multiple redundant links from different providers — that connect to [internet exchange points](/infrastructure) like KIXP in Nairobi, and through submarine cables that link Kenya to the rest of the world. Inside the facility, structured cabling connects every server and storage system to switches and routers that direct traffic between them and to the outside internet.
 
-![Network cabling connects thousands of servers to each other](/images/mombasa-cable-landing.webp)
+![Submarine cable coming ashore at a Kenyan beach landing](/images/mombasa-cable-landing.webp)
 
 ### Security
 
 Physical security is a critical differentiator. Enterprise data centres use multiple layers: perimeter fencing, 24/7 CCTV surveillance, biometric access control (fingerprint, iris, or facial recognition), mantraps (single-person entry portals), and on-site security personnel. The goal is to ensure that only authorised personnel can physically access the servers. This matters because the data stored inside — financial records, personal information, government databases — is valuable and sensitive.
 
-![Data centre security includes biometrics, CCTV, and mantraps](/images/dc-biometric-access-4.webp)
+![Security systems assessment during a facility audit](/images/dc-biometric-access-4.webp)
 
 ## Types of Data Centres
 

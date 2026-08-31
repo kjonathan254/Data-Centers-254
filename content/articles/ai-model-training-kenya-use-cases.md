@@ -21,11 +21,11 @@ og_image: /images/dc-gpu-cluster-2-wide.webp
 reading_time: "12 min"
 images:
 - src: /images/ai-gpu-servers.webp
-  alt: "GPU server racks in an AI training cluster"
+  alt:  "GPU servers racked in a data centre"
   caption: "Training clusters need dense, well-cooled compute — the kind Kenya's new facilities are being built for."
   position: hero
 - src: /images/dc-server-chip-wide.webp
-  alt: "Close-up of a server processor module"
+  alt:  "Server hardware close-up in a data centre"
   caption: "Training demands accelerators, fast interconnects, and storage that can feed them."
   position: section-break
 - src: /images/dc-switchgear.webp
@@ -97,7 +97,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/ai-model-training-ke
 
 Kenya's digital economy has matured rapidly, and with that maturity comes an inevitable question: can the country support not just AI *inference* but full-scale AI *model training* on its own soil? For years, Kenyan organisations have relied on cloud providers in distant regions to handle computationally intensive workloads. That dynamic is beginning to shift as data sovereignty concerns grow, bandwidth costs remain stubbornly high, and the strategic value of indigenous AI capability becomes clear.
 
-![GPU server racks in an AI training cluster](/images/ai-gpu-servers.webp)
+![GPU servers racked in a data centre](/images/ai-gpu-servers.webp)
 
 Model training — the process of feeding large datasets through neural networks to adjust weights and produce a useful AI model — is fundamentally different from running inference. It demands orders of magnitude more compute, memory, storage throughput, and networking bandwidth. Understanding what this requires, and where Kenya stands in meeting those requirements, is essential for anyone tracking the [East African data centre market](/articles/ai-data-centres-east-africa).
 
@@ -121,7 +121,7 @@ Training a large language model might require ingesting terabytes of text data p
 
 At H100 density levels, traditional air cooling becomes impractical. **Liquid cooling** — either direct-to-chip or immersion cooling — is essential to manage the 40-50 kW per rack thermal output that GPU training clusters generate. Kenya's relatively mild climate in Nairobi (average temperatures of 18-25°C) offers some advantage for free cooling, but liquid systems remain necessary for GPU-dense deployments.
 
-![Close-up of a server processor module](/images/dc-server-chip-wide.webp)
+![Server hardware close-up in a data centre](/images/dc-server-chip-wide.webp)
 
 ## Current AI Use Cases Driving Demand in Kenya
 
@@ -195,7 +195,7 @@ Building a facility capable of supporting serious AI model training in Kenya wou
 
 **Connectivity:** Multiple diverse fibre paths, direct peering at KIXP, and ideally submarine cable diversity through both the EASSy and SEACOM systems landing in Mombasa.
 
-![Data centre power distribution systems](/images/dc-switchgear.webp)
+![Server racks inside a modern data centre](/images/dc-switchgear.webp)
 
 ## Projecting Future Demand
 

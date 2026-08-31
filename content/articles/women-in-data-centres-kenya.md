@@ -19,11 +19,11 @@ og_image: "/images/dc-women-engineers-corridor.webp"
 reading_time: "13 min"
 images:
   - src: "/images/dc-women-engineers-corridor.webp"
-    alt: "Two women engineers walking through a data centre with laptops"
+    alt:  "Two engineers walking through a data centre corridor"
     caption: "Women remain under-represented in African data halls — visibility of the ones already there matters."
     position: "hero"
   - src: "/images/dc-woman-engineer-laptop.webp"
-    alt: "Woman engineer working on a laptop in a server hall"
+    alt:  "Engineer working on a laptop in a server hall"
     caption: "Pathways in: apprenticeships, certifications, and transferable IT skills."
     position: "section-break"
   - src: "/images/dc-woman-engineer-racks.webp"
@@ -31,7 +31,7 @@ images:
     caption: "Operators are rolling out mentorship and inclusive hiring to close the gap."
     position: "infographic"
   - src: "/images/tech-community-event-nairobi.webp"
-    alt: "Tech community meetup in Nairobi with a speaker addressing the audience"
+    alt:  "Speaker addressing a tech community meetup in Nairobi"
     caption: "Community events and visible role models are helping more Kenyans see a future in digital infrastructure."
     position: "section-break"
 internal_links:
@@ -64,7 +64,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/women-in-data-centr
 
 Kenya's data centre industry is growing rapidly, driven by the country's position as East Africa's digital hub and the increasing demand for cloud services, colocation, and digital infrastructure. Yet behind the gleaming server racks and sophisticated cooling systems lies a persistent challenge: **the significant underrepresentation of women in technical data centre roles**.
 
-![Two women engineers walking through a data centre with laptops](/images/dc-women-engineers-corridor.webp)
+![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
 
 While comprehensive data centre-specific workforce statistics are not publicly available in Kenya, broader Kenyan tech sector data provides a reliable indicator. According to multiple industry surveys, **women make up approximately 20-30% of Kenya's technology workforce**. Within data centres specifically — where roles span electrical engineering, mechanical systems, networking, and facilities management — the representation is estimated at the lower end of this range, around **20-25%**.
 
@@ -94,7 +94,7 @@ The [career progression in African data centres](/articles/career-progression-af
 
 ## Women Leading Change in Kenya's Tech Infrastructure
 
-![Tech community meetup in Nairobi with a speaker addressing the audience](/images/tech-community-event-nairobi.webp)
+![Speaker addressing a tech community meetup in Nairobi](/images/tech-community-event-nairobi.webp)
 
 Despite the barriers, a growing number of women are making significant contributions to Kenya's data centre and broader tech infrastructure sector. While the industry does not always celebrate these contributions publicly, several women have emerged as leaders and role models:
 
@@ -130,7 +130,7 @@ Microsoft's **Africa Development Centre** in Nairobi has implemented comprehensi
 
 ## Career Pathways with Growing Female Participation
 
-![Woman engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
+![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
 
 ### Project Management
 

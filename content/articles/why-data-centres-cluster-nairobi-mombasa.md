@@ -20,23 +20,23 @@ og_image: "/images/mombasa-cable-landing-2.webp"
 reading_time: "9 min"
 images:
   - src: "/images/mombasa-cable-landing.webp"
-    alt: "Submarine cable landing infrastructure on the Kenyan coast at Mombasa"
+    alt:  "Submarine cable coming ashore at a Kenyan beach landing"
     caption: "Every international byte entering or leaving Kenya passes through a handful of landing stations on this coastline"
     position: "hero"
   - src: "/images/submarine-cables-map.webp"
-    alt: "Map of submarine cables making landfall on the East African coast at Mombasa"
+    alt:  "Map of submarine cables landing on the East African coast"
     caption: "SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE all converge on Mombasa — the chokepoint of Kenya's internet"
     position: "infographic"
   - src: "/images/kenya-transmission-pylons.webp"
-    alt: "High-voltage transmission pylons crossing Kenyan countryside toward Nairobi"
+    alt:  "High-voltage pylons on the backbone grid"
     caption: "High-voltage transmission lines move geothermal power from the Rift Valley toward the Nairobi load centre"
     position: "section-break"
   - src: "/images/nairobi-westlands.webp"
-    alt: "Westlands commercial district in Nairobi, where much of Kenya's enterprise demand is concentrated"
+    alt:  "Westlands commercial district in Nairobi"
     caption: "Banks, telcos, and cloud customers cluster within a few kilometres of each other in Nairobi"
     position: "section-break"
   - src: "/images/kenya-geothermal-map.webp"
-    alt: "Map of Kenya's geothermal power sites in the Rift Valley, including Olkaria"
+    alt:  "Map of Kenya's Rift Valley geothermal sites"
     caption: "Kenya's geothermal belt sits in the Rift Valley, roughly 100 km from Nairobi — close enough to power a data centre industry, too far to power one anywhere else"
     position: "infographic"
 internal_links:
@@ -87,7 +87,7 @@ Two clarifications matter before going further. First, "two cities" is slightly 
 
 Kenya's connection to the global internet is physical, and it arrives on the ocean floor. Six active submarine cable systems — SEACOM, TEAMS, EASSy, LION2, DARE1, and PEACE — make landfall on or near the Mombasa coast, with a seventh, Meta's Daraja, in development (Verified). Every international phone call, every Netflix stream cached locally, every cloud query routed to a European or American region travels through one of a handful of landing stations on that coastline. The economics follow the infrastructure: bandwidth is cheapest and most dependable within reach of the landing stations, because backhauling traffic hundreds of kilometres inland before it reaches the world adds cost, complexity, and a failure point.
 
-![Map of submarine cables making landfall on the East African coast at Mombasa](/images/submarine-cables-map.webp)
+![Map of submarine cables landing on the East African coast](/images/submarine-cables-map.webp)
 
 This explains why Mombasa matters at all in the data centre story. Africa Data Centres' coastal facility exists primarily because of its location — a disaster-recovery and low-latency transit site near the landing stations, letting operators and carriers peer directly with the cables without depending on the corridor to Nairobi. It is a facility whose value comes from geography rather than scale. The same logic explains why the landing stations themselves, which are technically small data facilities, cluster along a few kilometres of coast: the cables come ashore at specific beaches determined by the seabed route, and the buildings must follow.
 
@@ -97,21 +97,21 @@ But cable access alone does not make a data centre market. If it did, Mombasa wo
 
 The second force is electricity, and here Kenya's geography produces an unusual advantage with a narrow focus. The country's electricity mix is one of the greenest on Earth — geothermal, hydro, and wind supply the large majority of generation — but the single most important source for data centres is geothermal, and nearly all of it comes from one place: the Rift Valley belt that runs through Olkaria, Naivasha, and adjacent fields. Kenya's geothermal capacity is concentrated within roughly 100 kilometres of Nairobi, and the transmission corridors that move that power feed, above all, the Nairobi metropolitan load centre.
 
-![High-voltage transmission pylons crossing Kenyan countryside toward Nairobi](/images/kenya-transmission-pylons.webp)
+![High-voltage pylons on the backbone grid](/images/kenya-transmission-pylons.webp)
 
 For a data centre operator, this matters because compute facilities are essentially power-conversion machines: they take grid electricity and turn it into heat and computation, continuously, at a scale measured in megawatts. Kenya's roughly 14 MW of installed data centre IT load sounds small, but the next wave is not — the Microsoft–G42 project alone has been discussed at a scale of 100 megawatts, and its reported stalling illustrates the point precisely: Kenya Power cannot currently deliver that magnitude of power at a single site within the existing grid's comfortable limits. Large data centres go where large, dependable power can be contracted, and in Kenya that means sites with good transmission access — overwhelmingly the corridor between the geothermal fields and Nairobi.
 
 The consequence is subtle but important: Kenya's green power advantage is real, and it is a genuine marketing asset for attracting AI and cloud investment. But because that power is generated in the Rift Valley and consumed in Nairobi, the advantage accrues to a specific corridor rather than to the whole country. A town without a strong transmission connection to the grid sits far from the advantage no matter how green the national statistics are.
 
 
-![Map of Kenya's geothermal power sites in the Rift Valley, including Olkaria](/images/kenya-geothermal-map.webp)
+![Map of Kenya's Rift Valley geothermal sites](/images/kenya-geothermal-map.webp)
 
 
 ## Force 3: The demand lives in Nairobi
 
 The third force is the least technical and the most decisive: the customers are in Nairobi. Kenya's banking sector, its fintech and mobile money platforms, its largest telco, its government systems, its insurance and retail groups, and the growing community of cloud-consuming enterprises are all headquartered within a few square kilometres of each other. Nairobi is also where the Kenya Internet Exchange Point (KIXP) sits, allowing local networks to swap traffic directly instead of paying to haul it to Europe and back. Data centres are real estate for computing, and like all real estate they command a premium where their tenants cluster.
 
-![Westlands commercial district in Nairobi, where much of Kenya's enterprise demand is concentrated](/images/nairobi-westlands.webp)
+![Westlands commercial district in Nairobi](/images/nairobi-westlands.webp)
 
 The demand concentration is self-reinforcing. Banks put their systems in Nairobi facilities because latency to their branches and customers is low and their operations teams are nearby. Cloud and content platforms deploy caches and regions in Nairobi because that is where the users are. Startups build on local cloud because their enterprise customers are there. Each decision deepens the pool of interconnection, skills, and spare capacity in the capital, which in turn makes the next facility more likely to be built there. Mombasa's port economy and coastal businesses generate real IT demand, but not enough of the right kind — dense, always-on, compliance-driven workloads — to anchor a facility ecosystem on the same scale.
 

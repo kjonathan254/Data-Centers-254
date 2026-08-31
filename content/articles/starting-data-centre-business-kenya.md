@@ -19,19 +19,19 @@ og_image: "/images/dc-business-investment.webp"
 reading_time: "14 min"
 images:
   - src: "/images/dc-business-investment.webp"
-    alt: "Data centre business investment and planning"
+    alt:  "Business meeting over data centre investment plans"
     caption: "Building a data centre in Kenya is a significant infrastructure investment — understanding the capital requirements, regulatory steps, and market dynamics is essential before committing funds"
     position: "hero"
   - src: "/images/dc-environment-sustainability.webp"
-    alt: "Aerial of a purpose-built data centre campus"
+    alt:  "Aerial view of a data centre campus with rooftop solar"
     caption: "Capital goes into land, power, shells, and the systems inside — in that order."
     position: "section-break"
   - src: "/images/dc-policy-regulation.webp"
-    alt: "Government building at dusk"
+    alt:  "National government building at dusk"
     caption: "Licensing, data protection, and county codes shape the regulatory path."
     position: "inline"
   - src: "/images/nairobi-expressway-wide.webp"
-    alt: "Nairobi Expressway and skyline"
+    alt:  "Nairobi Expressway stretching across the city"
     caption: "Market entry usually starts where demand is densest: Nairobi."
     position: "inline"
 internal_links:
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/starting-data-centr
 
 Building a data centre is one of the most capital-intensive infrastructure investments possible in Kenya's technology sector. A small colocation facility requires hundreds of millions of shillings in upfront capital, takes 18-36 months from concept to operational, and generates returns over a 15-25 year asset life. It is not a startup in the traditional sense — it is an infrastructure play that requires patience, deep pockets, and a clear understanding of the market.
 
-![Data centre business investment and planning](/images/dc-business-investment.webp)
+![Business meeting over data centre investment plans](/images/dc-business-investment.webp)
 
 This guide is for investors, entrepreneurs, and organisations considering entering the Kenyan data centre market. It covers the investment requirements, the regulatory steps, the market dynamics, and the strategic decisions that determine whether a new data centre succeeds or fails.
 
@@ -82,7 +82,7 @@ For a typical small colocation facility of 500-800 square metres of white space 
 
 ### Power Infrastructure
 
-![Aerial of a purpose-built data centre campus](/images/dc-environment-sustainability.webp)
+![Aerial view of a data centre campus with rooftop solar](/images/dc-environment-sustainability.webp)
 
 Power infrastructure typically accounts for 30-40% of total construction costs. This includes the high-voltage connection from Kenya Power (which the operator must pay for), transformers, UPS systems, diesel generators, fuel storage tanks, and the power distribution system (switchgear, PDUs, and cabling). A 2MW facility with N+1 generator redundancy might spend KES 150-300 million on power infrastructure alone.
 
@@ -116,7 +116,7 @@ The [NFP-T2 licence](/articles/kenya-data-centre-licensing-framework) from the C
 
 Building a data centre requires standard construction approvals from the relevant county government (Nairobi City County for facilities in Nairobi), including building plans approval, environmental impact assessment (EIA) from the National Environment Management Authority (NEMA), and fire safety certification from the Kenya Fire Service.
 
-![Government building at dusk](/images/dc-policy-regulation.webp)
+![National government building at dusk](/images/dc-policy-regulation.webp)
 
 ### Kenya Power Connection
 
@@ -140,7 +140,7 @@ Build a facility designed specifically as a hub for hybrid cloud deployments —
 
 ### Strategy 3: Edge and Regional
 
-![Nairobi Expressway and skyline](/images/nairobi-expressway-wide.webp)
+![Nairobi Expressway stretching across the city](/images/nairobi-expressway-wide.webp)
 
 Build smaller facilities (100-500kW) in locations outside Nairobi — Mombasa, Kisumu, Nakuru, or Konza Technopolis — serving regional demand and edge computing use cases. This strategy avoids direct competition with the Nairobi incumbents and serves a market that is currently underserved. The challenge is that demand in secondary cities is smaller and less proven.
 

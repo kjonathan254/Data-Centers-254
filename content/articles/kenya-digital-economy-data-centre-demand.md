@@ -35,7 +35,7 @@ images:
   caption: Kenya is positioning itself as the premier data centre hub in East Africa.
   position: inline
 - src: /images/kenya-wind-turbines-3.webp
-  alt: "Wind turbines on grazing land in rural Kenya"
+  alt:  "Wind turbines on a Kenyan hillside"
   caption: "Digital growth leans on one of the world's greenest grids — a genuine selling point for investors."
   position: inline
 
@@ -113,7 +113,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/kenya-digital-econom
 
 Kenya's data centre industry is entering a phase of structural growth driven not by a single sector but by a convergence of macroeconomic forces. From mobile money volumes that rival some European nations to a government digitisation agenda touching every public service, the demand for [colocation and cloud infrastructure](/articles/colocation-data-centre-kenya) in Kenya is compounding year on year. Understanding these demand drivers is essential for investors, operators, and enterprises making infrastructure decisions.
 
-![Wind turbines on grazing land in rural Kenya](/images/kenya-wind-turbines-3.webp)
+![Wind turbines on a Kenyan hillside](/images/kenya-wind-turbines-3.webp)
 
 Kenya's GDP grew at approximately 5.0% in 2024 and is projected to maintain 5-6% growth through 2030, according to the World Bank and IMF. Crucially, the **digital economy's share of GDP** has risen from under 3% a decade ago to an estimated 7.5-8% today. This shift is not abstract — it translates directly into servers, racks, and megawatts of data centre demand.
 
@@ -123,7 +123,7 @@ Kenya's GDP grew at approximately 5.0% in 2024 and is projected to maintain 5-6%
 
 The **Kenya Digital Masterplan 2022-2032**, developed by the Ministry of Information, Communications and the Digital Economy, represents the most comprehensive government technology strategy in East Africa. Its ambitions are substantial: connecting all 47 counties with high-speed broadband, digitising 80% of government services, establishing national data centres, and building a workforce of 1.5 million digitally skilled Kenyans.
 
-![Nairobi skyline at dusk symbolising Kenya's digital transformation](/images/nairobi-skyline-night.webp)
+![Nairobi skyline lit up at night](/images/nairobi-skyline-night.webp)
 
 For data centre operators, the masterplan signals sustained public-sector demand. Government systems — including **e-Citizen** (which processed over 20 million service applications in the 2023/2024 financial year), **iTax** (the Kenya Revenue Authority's digital tax platform handling millions of filings), and the **Huduma Namba** digital identity programme — all require local server infrastructure. The [World Bank's Digital Economy Diagnostic for Kenya](https://www.worldbank.org/en/country/kenya/publication/digital-economy-diagnostic-kenya) identified digital government infrastructure as a critical gap that, when filled, will generate significant data centre demand.
 
@@ -165,7 +165,7 @@ Each of these companies runs production workloads that require data centre infra
 
 Digital lending platforms — including Tala, Branch, and the bank-affiliated mobile lending services — process millions of loan applications using automated credit scoring models. These require real-time API access to credit reference bureaus, mobile money transaction histories, and other data sources. The infrastructure chain from loan application to disbursement involves multiple systems, all hosted in or connected through Kenyan data centres.
 
-![Business investment in Kenyan data centre infrastructure](/images/nairobi-expressway-wide.webp)
+![Nairobi Expressway stretching across the city](/images/nairobi-expressway-wide.webp)
 
 ## E-Commerce and Digital Retail
 
@@ -240,7 +240,7 @@ Based on the demand drivers outlined above, Kenya's data centre requirements are
 - **GPU-ready capacity** for AI and machine learning workloads
 - **Edge facilities** for 5G MEC and content delivery
 
-![Map showing data centre locations across Africa including Kenya](/images/nairobi-westlands.webp)
+![Westlands commercial district in Nairobi](/images/nairobi-westlands.webp)
 
 ## Konza Technopolis: The Long-Term Supply Answer
 

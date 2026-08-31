@@ -19,15 +19,15 @@ og_image: "/images/nairobi-westlands.webp"
 reading_time: "13 min"
 images:
   - src: "/images/dc-server-chip-3.webp"
-    alt: "Server racks in a modern data centre"
+    alt:  "CPU seated in a motherboard socket"
     caption: "Safaricom's data centre infrastructure underpins M-Pesa and Kenya's mobile network"
     position: "hero"
   - src: "/images/dc-challenges.webp"
-    alt: "Nairobi skyline"
+    alt:  "Transmission tower beside a commercial high-rise"
     caption: "Safaricom's Waiyaki Way facility is a cornerstone of Nairobi's digital infrastructure"
     position: "section-break"
   - src: "/images/diagram-telecom-mast-anatomy.webp"
-    alt: "Labelled diagram of a telecommunications mast and its receiver equipment"
+    alt:  "Labelled anatomy of a telecommunications mast"
     caption: "From panel antennas to GPS timing and feeder cables, every element on a mast exists to keep mobile traffic flowing toward the core — and M-Pesa never sleeps."
     position: "diagram"
 
@@ -53,7 +53,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/safaricom-data-cent
 
 Safaricom is not a data centre company. It is Kenya's largest telecommunications operator, serving over 30 million mobile subscribers and generating revenue exceeding KES 300 billion annually. Yet within its portfolio sits what is arguably the single most critical data centre in East Africa: a Tier III facility on Waiyaki Way in Nairobi that processes over KES 20 trillion in M-Pesa transactions each year, hosts the core of Kenya's 4G and 5G mobile networks, and underpins an expanding portfolio of enterprise cloud services. No other data centre in the region carries this level of systemic importance to a national economy.
 
-![Server racks in a modern data centre](/images/dc-server-chip-3.webp)
+![CPU seated in a motherboard socket](/images/dc-server-chip-3.webp)
 
 This profile examines Safaricom's data centre operations, the workloads they support, the company's role in Kenya's emerging AI infrastructure ecosystem, and how its facility strategy differs fundamentally from the carrier-neutral operators entering the Kenyan market.
 
@@ -81,13 +81,13 @@ Key specifications of the Waiyaki Way facility include:
 
 At 1.5 MW and 120 racks, the Waiyaki Way facility is modest by comparison to the hyperscale facilities being developed by iXAfrica (targeting 16 MW across its campus) or Africa Data Centres (planning 30 MW at its Mzansi campus). But raw capacity is not the metric that matters here. What matters is the criticality of the workloads running inside those 120 racks.
 
-![Nairobi skyline](/images/dc-challenges.webp)
+![Transmission tower beside a commercial high-rise](/images/dc-challenges.webp)
 
 ## Workloads: M-Pesa, Mobile Network Core, and Enterprise Cloud
 
 The Waiyaki Way data centre supports three primary workload categories, each of which would justify a dedicated facility on its own.
 
-![Labelled diagram of a telecommunications mast and its receiver equipment](/images/diagram-telecom-mast-anatomy.webp)
+![Labelled anatomy of a telecommunications mast](/images/diagram-telecom-mast-anatomy.webp)
 
 ### M-Pesa Transaction Processing
 

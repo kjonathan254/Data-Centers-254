@@ -19,19 +19,19 @@ og_image: "/images/nairobi-westlands.webp"
 reading_time: "14 min"
 images:
   - src: "/images/mombasa-cable-landing.webp"
-    alt: "5G base station connected to edge data centre infrastructure in Kenya"
+    alt:  "Submarine cable coming ashore at a Kenyan beach landing"
     caption: "5G base stations require proximity to edge computing nodes for ultra-low latency processing"
     position: "hero"
   - src: "/images/mombasa-cable-landing-3.webp"
-    alt: "Fibre cabling infrastructure connecting 5G edge nodes to centralised data centres"
+    alt:  "Submarine cable landing supported by orange buoys in the surf"
     caption: "Fibre backhaul is essential for connecting MEC nodes to core data centre infrastructure"
     position: "section-break"
   - src: "/images/dc-gpu-cluster-2.webp"
-    alt: "Edge computing servers processing IoT and AI workloads for 5G applications"
+    alt:  "Server racks in a Nairobi data centre hall"
     caption: "Edge nodes handle real-time processing for IoT devices, smart agriculture, and autonomous systems"
     position: "infographic"
   - src: "/images/diagram-telecom-tower-components.webp"
-    alt: "Labelled diagram of telecom tower components including antennas, RRU and BTS cabinet"
+    alt:  "Labelled telecom tower components from antennas to BTS cabinet"
     caption: "A 5G site concentrates antennas, remote radio units, microwave backhaul, and battery-backed power into one tower — and each dense cluster feeds a nearby edge data centre."
     position: "diagram"
 
@@ -67,7 +67,7 @@ Kenya's telecommunications landscape entered a new era when **Safaricom launched
 
 What many observers outside the infrastructure sector may not realise is that **5G is not just a network upgrade** — it is a fundamental shift in how computing resources are distributed. The ultra-low latency and massive bandwidth that 5G promises cannot be delivered by the network alone. Behind every 5G cell tower, there is an growing need for data processing capacity that sits as close to the end user as physically possible. This is creating a significant and largely unrecognised surge in demand for data centre infrastructure across Kenya.
 
-![5G base station connected to edge data centre infrastructure in Kenya](/images/mombasa-cable-landing.webp)
+![Submarine cable coming ashore at a Kenyan beach landing](/images/mombasa-cable-landing.webp)
 
 ## The Communications Authority's 5G Spectrum Framework
 
@@ -103,7 +103,7 @@ In Kenya's agricultural sector alone, IoT sensors for soil monitoring, precision
 
 ### Technical Requirements for MEC Nodes
 
-![Fibre cabling infrastructure connecting 5G edge nodes to centralised data centres](/images/mombasa-cable-landing-3.webp)
+![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
 
 Each MEC node in a 5G network has specific infrastructure requirements that distinguish it from both a traditional data centre and a simple cell tower:
 
@@ -132,7 +132,7 @@ In Kenya, the colocation and neutral host models are likely to gain traction bec
 
 ### Smart Agriculture
 
-![Edge computing servers processing IoT and AI workloads for 5G applications](/images/dc-gpu-cluster-2.webp)
+![Server racks in a Nairobi data centre hall](/images/dc-gpu-cluster-2.webp)
 
 Agriculture contributes approximately **22% of Kenya's GDP** and employs over 40% of the population. 5G-enabled IoT devices can transform this sector through precision agriculture: soil moisture sensors, drone-based crop monitoring, automated irrigation systems, and livestock health trackers. Each of these applications generates real-time data that requires local processing to deliver actionable insights to farmers.
 
@@ -152,7 +152,7 @@ While fully autonomous vehicles may still be years away in Kenya, the logistics 
 
 Estimating the number of MEC nodes required for Kenya's 5G rollout requires benchmarking against more mature markets and adjusting for local conditions:
 
-![Labelled diagram of telecom tower components including antennas, RRU and BTS cabinet](/images/diagram-telecom-tower-components.webp)
+![Labelled telecom tower components from antennas to BTS cabinet](/images/diagram-telecom-tower-components.webp)
 
 **South Korea**, one of the world's most advanced 5G markets with a population of 52 million, has deployed an estimated **1,500-2,000 edge computing nodes** to support its nationwide 5G network. The **United States**, with its vast geography, has seen major operators like Verizon and AT&T deploy edge nodes in over 100 cities, with thousands of nodes planned.
 

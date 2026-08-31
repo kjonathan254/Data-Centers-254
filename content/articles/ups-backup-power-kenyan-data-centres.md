@@ -35,10 +35,10 @@ images:
   caption: Lithium-ion batteries are rapidly replacing traditional lead-acid in new
     data centre builds across Africa.
   position: inline
-- src: /images/diagram-datacenter-rack-labeled.webp
-  alt: Labelled diagram of a data centre rack with patch panel, switch, firewall, servers and UPS
-  caption: In a typical rack layout the UPS and PDU sit low in the stack — the last line of defence between the grid and your workload.
-  position: diagram
+- src: /images/diagram-server-rack-42u.webp
+  alt:  "Labelled diagram of a 42U server rack"
+  caption: "Inside a 42U rack: top-of-rack switch, cable management, PDUs, UPS battery modules, and blanking panels for airflow."
+  position: section-break
 
 internal_links:
 - text: Kenya Power Infrastructure for Data Centres
@@ -109,7 +109,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/ups-backup-power-ken
 
 In a data centre, even a **millisecond** of power interruption can crash servers, corrupt databases, and disrupt services for thousands of users. This is why an Uninterruptible Power Supply (UPS) system is the most critical piece of electrical infrastructure in any facility — and in Kenya, where [Kenya Power infrastructure](/articles/kenya-power-infrastructure-data-centres) presents unique challenges, the UPS is not a luxury but an absolute necessity.
 
-![UPS systems and power distribution equipment in a data centre electrical room](/images/dc-power-systems.webp)
+![Data centre power distribution and backup systems](/images/dc-power-systems.webp)
 
 A UPS system performs three essential functions. First, it **conditions the power** — smoothing out voltage fluctuations, filtering harmonics, and ensuring servers receive clean, stable electricity regardless of what comes from the grid. Second, it **bridges power gaps** — instantly supplying battery power during outages until backup generators start. Third, it **protects equipment** — shielding sensitive IT hardware from surges, spikes, and electrical noise that could cause premature failure.
 
@@ -196,7 +196,7 @@ For example, if a data centre has a current IT load of 200 kW, the UPS system mi
 
 ### Redundancy Configurations
 
-![Server racks powered through redundant UPS and generator systems](/images/dc-ups-batteries-wide.webp)
+![Electrical switchgear and UPS cabinets](/images/dc-ups-batteries-wide.webp)
 
 **N+1 Redundancy**: Provides one additional UPS module beyond what is needed. If the facility needs 300 kW, an N+1 system might use four 100 kW modules — three carry the load, one is a hot standby. This is common in **Tier II and Tier III** facilities and provides protection against a single module failure.
 
@@ -303,7 +303,7 @@ As this simplified model shows, the **lithium-ion system is approximately 14% ch
 
 **Africa Data Centres (Nairobi)**: Their facilities along Mombasa Road use Schneider Electric Galaxy VX online double-conversion UPS systems in 2N configurations, with both VRLA and increasingly lithium-ion battery options. Their UPS rooms are among the most advanced in East Africa, with real-time monitoring integrated into their building management system.
 
-![Labelled diagram of a data centre rack with patch panel, switch, firewall, servers and UPS](/images/diagram-datacenter-rack-labeled.webp)
+![Labelled diagram of a 42U server rack](/images/diagram-server-rack-42u.webp)
 
 **PAIX (Nairobi and Mombasa)**: PAIX facilities use Eaton 9395 UPS systems with N+1 redundancy. Their Mombasa facility, located near the submarine cable landing stations, has particularly robust power systems given its coastal location where power quality can be more variable.
 

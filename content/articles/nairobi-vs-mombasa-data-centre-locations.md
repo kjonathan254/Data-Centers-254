@@ -19,7 +19,7 @@ og_image: "/images/mombasa-port-wide.webp"
 reading_time: "13 min"
 images:
   - src: "/images/mombasa-port-wide.webp"
-    alt: "Nairobi skyline showing commercial and technology district"
+    alt:  "Wide aerial view of the Port of Mombasa"
     caption: "Nairobi's Mombasa Road corridor has emerged as the primary data centre cluster in East Africa, hosting iXAfrica, Africa Data Centres, and Safaricom facilities within a 10-kilometre stretch"
     position: "hero"
   - src: "/images/nairobi-skyline.webp"
@@ -27,11 +27,11 @@ images:
     caption: "Nairobi: the established hub with the deepest fibre, power, and talent pool."
     position: "section-break"
   - src: "/images/mombasa-port-industrial.webp"
-    alt: "Africa data centre distribution map"
+    alt:  "Industrial port infrastructure at Mombasa"
     caption: "Data centre development in Africa is concentrated in a few cities — Nairobi is already established and the question is whether secondary cities can attract investment"
     position: "infographic"
   - src: "/images/dc-chillers-roof.webp"
-    alt: "Data centre power infrastructure and generators"
+    alt:  "Data centre rooftop chillers and generators"
     caption: "Power availability and reliability vary significantly between Kenyan cities, making it a critical factor in site selection"
     position: "inline"
 internal_links:
@@ -64,7 +64,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/nairobi-vs-mombasa-
 
 Kenya's data centre industry is geographically concentrated to an extraordinary degree. Approximately 80% of the country's total IT power capacity is located within a 15-kilometre radius in Nairobi, primarily along the Mombasa Road corridor. This concentration is not accidental — it reflects the economics of connectivity, demand, and infrastructure that make Nairobi the natural location for data-intensive facilities. But as the industry grows and new use cases emerge, the question of where the next data centre should be built is becoming increasingly relevant.
 
-![Nairobi skyline showing commercial and technology district](/images/mombasa-port-wide.webp)
+![Wide aerial view of the Port of Mombasa](/images/mombasa-port-wide.webp)
 
 Site selection for a data centre is a multi-million-dollar decision that cannot be easily reversed. Once a facility is built, its location is fixed for 15–25 years. The building, the power connections, the fibre routes, the cooling systems — all of it is purpose-built and immovable. Getting the location wrong means either accepting suboptimal performance and higher costs for the facility's entire life, or writing off the investment and building elsewhere. This is why site selection is arguably the most important decision in the data centre development process, and why it deserves rigorous analysis.
 
@@ -102,7 +102,7 @@ Within Nairobi, the Mombasa Road corridor — specifically the area around Enter
 
 Mombasa's data centre potential rests on a single, powerful advantage: it is where the submarine cables land. SEACOM, TEAMS, EASSy, and DARE1 all have their Kenyan landing stations in or near Mombasa. A data centre in Mombasa could connect directly to these cable systems, achieving the lowest possible latency to international traffic — a genuine and measurable advantage for content delivery, financial trading, and any application where every millisecond of latency matters.
 
-![Industrial port infrastructure in Mombasa, gateway for cable landing infrastructure](/images/mombasa-port-industrial.webp)
+![Industrial port infrastructure at Mombasa](/images/mombasa-port-industrial.webp)
 
 However, Mombasa faces significant challenges as a general-purpose data centre location. The demand side is the most fundamental problem: Mombasa's economy is dominated by tourism, port logistics, and manufacturing — industries that generate less data centre demand than the financial services, technology, and government sectors concentrated in Nairobi. There are simply fewer potential customers in Mombasa who need colocation services.
 
@@ -120,7 +120,7 @@ Konza Technopolis, located approximately 60 kilometres south of Nairobi in Macha
 
 Konza offers several theoretical advantages for data centre development. Land is available and relatively inexpensive compared to Nairobi's congested industrial areas. The city is planned with dedicated power infrastructure, including potentially direct connections to the geothermal generation plants in the Rift Valley. It sits on the Nairobi-Mombasa fibre corridor, ensuring connectivity. And if the city develops as planned, it would generate its own demand from technology companies, research institutions, and government digital services.
 
-![Data centre power infrastructure and generators](/images/dc-chillers-roof.webp)
+![Data centre rooftop chillers and generators](/images/dc-chillers-roof.webp)
 
 The challenge with Konza is timing. Data centres need customers, connectivity, and a skilled workforce from day one — not at some point in the future. As of 2025, Konza's development is well behind the original schedule. While some basic infrastructure (roads, water, power) is in place, the critical mass of technology companies, research institutions, and skilled workers that would justify a data centre investment does not yet exist. Konza may become a viable data centre location in the 2030s, but for current investment decisions, it is a long-term option rather than a practical choice.
 

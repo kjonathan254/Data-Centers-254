@@ -19,32 +19,32 @@ og_image: "/images/dc-fibre-optics.webp"
 reading_time: "13 min"
 images:
   - src: "/images/dc-fibre-optics.webp"
-    alt: "Network switching and fibre optic termination equipment inside a data centre"
+    alt:  "Fibre optic termination equipment in a data centre"
     caption: "Every data centre depends on multiple fibre connections from different providers to ensure redundancy — a single fibre cut should never take a facility offline"
     position: "hero"
   - src: "/images/mombasa-cable-landing-3.webp"
-    alt: "Structured fibre optic cabling in a data centre"
+    alt:  "Submarine cable landing supported by orange buoys in the surf"
     caption: "Structured cabling within a data centre connects every rack to network aggregation points, which then connect to external fibre providers via diverse routes"
     position: "section-break"
   - src: "/images/mombasa-cable-landing-2.webp"
-    alt: "East Africa fibre and submarine cable infrastructure map"
+    alt:  "Crews hauling a submarine cable ashore at Mombasa"
     caption: "Kenya's fibre network connects to four submarine cable systems landing in Mombasa, providing redundancy and multiple routing options to Europe, Asia, and the Middle East"
     position: "infographic"
   - src: "/images/dc-networking.webp"
-    alt: "Labelled fibre patch panel diagram with SC and FC connectors"
+    alt:  "Labelled diagram of a fibre patch panel with SC and FC connectors"
     caption: "Patch panels, splice discipline, and labelling make or break a fibre plant."
     position: "diagram"
   - src: "/images/diagram-microwave-data-link.webp"
-    alt: "Diagram of a long distance microwave data link between two sites 50 kilometres apart"
+    alt:  "Diagram of a long-distance microwave link between two sites"
     caption: "Where fibre has not yet reached, licensed microwave links moving around 1 Gbps over a 50 km hop remain a practical backhaul bridge."
     position: "diagram"
 
   - src: "/images/fibre-splicing-termination.webp"
-    alt: "Fibre optic splicing and termination panel with test light visible"
+    alt:  "Fibre splicing and termination panel with test light"
     caption: "Every route into a data centre ends at termination panels where individual strands are spliced, tested, and patched."
     position: "section-break"
   - src: "/images/metro-fibre-civil-works.webp"
-    alt: "Cable drums staged for urban fibre rollout works"
+    alt:  "Cable drums staged for urban fibre works"
     caption: "National backbones and metro fibre loops are built the unglamorous way — one trench and one drum at a time."
     position: "section-break"
 internal_links:
@@ -75,7 +75,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/fibre-optic-network
 
 A data centre without fibre connectivity is a warehouse full of expensive computers that nobody can reach. Every transaction on M-Pesa, every query to a bank's application, every page load on a Kenyan government website — all of it travels over fibre optic cables that connect data centres to users, to each other, and to the global internet. Kenya's fibre optic network is the circulatory system of its digital economy, and understanding how it works, who operates it, and where the weaknesses are, is essential for anyone investing in or depending on digital infrastructure.
 
-![Network switching and fibre optic termination equipment inside a data centre](/images/dc-fibre-optics.webp)
+![Fibre optic termination equipment in a data centre](/images/dc-fibre-optics.webp)
 
 Kenya has built one of the most extensive fibre networks in sub-Saharan Africa over the past two decades. The combination of submarine cable landing stations in Mombasa, a competitive operator landscape, and government investment through the National Optic Fibre Backbone Infrastructure has created a network that reaches all 47 counties and connects to the global internet through multiple redundant paths. But coverage is uneven, pricing is opaque, and the "last mile" — the final connection from the fibre backbone to the actual data centre or office building — remains the most expensive and problematic part of the chain.
 
@@ -95,7 +95,7 @@ Safaricom is Kenya's largest telecom operator by revenue and subscriber base, an
 
 Safaricom's unique advantage is its mobile network. The company operates the largest 4G and 5G network in Kenya, and many data centre customers want connectivity that spans both fixed fibre and mobile networks. Safaricom can offer integrated solutions that include dedicated fibre links, mobile backhaul, and even direct interconnection with the M-Pesa platform — a compelling proposition for financial services companies.
 
-![Structured fibre optic cabling in a data centre](/images/mombasa-cable-landing-3.webp)
+![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
 
 ### Telkom Kenya
 
@@ -109,7 +109,7 @@ Jamii Telecommunications, part of the Wananchi Group, operates fibre networks pr
 
 ## How Fibre Reaches a Data Centre
 
-![Fibre optic splicing and termination panel with test light visible](/images/fibre-splicing-termination.webp)
+![Fibre splicing and termination panel with test light](/images/fibre-splicing-termination.webp)
 
 The path from a user's phone or laptop to a server inside a data centre involves multiple segments of fibre, each managed by different entities, each with different reliability characteristics and cost structures. Understanding this path is critical for understanding data centre connectivity.
 
@@ -129,7 +129,7 @@ Once traffic reaches Nairobi, it is distributed over metropolitan fibre networks
 
 The final segment is inside the data centre itself. Fibre from external providers terminates in a meet-me room (MMR) or carrier room, where patch panels allow connections to be made between providers and customers. A "cross-connect" is a physical cable (often a short fibre patch cord) that connects a customer's rack or cage to a specific provider's network. Cross-connects are how customers choose which networks they connect to, and they are typically provisioned within 24–48 hours in a well-managed facility.
 
-![East Africa fibre and submarine cable infrastructure map](/images/mombasa-cable-landing-2.webp)
+![Crews hauling a submarine cable ashore at Mombasa](/images/mombasa-cable-landing-2.webp)
 
 ## Redundancy: The Most Critical Requirement
 
@@ -141,7 +141,7 @@ Beyond dual entry, larger facilities aim for three or more diverse fibre paths. 
 
 ## The National Optic Fibre Backbone Infrastructure (NOFBI)
 
-![Cable drums staged for urban fibre rollout works](/images/metro-fibre-civil-works.webp)
+![Cable drums staged for urban fibre works](/images/metro-fibre-civil-works.webp)
 
 The Kenyan government has invested heavily in fibre through the National Optic Fibre Backbone Infrastructure programme. NOFBI was designed to connect all 47 county headquarters and major government institutions, providing a backbone that government agencies, schools, and hospitals could use for connectivity.
 
@@ -161,7 +161,7 @@ Despite the progress, Kenya's fibre infrastructure faces significant challenges.
 
 Right-of-way challenges persist. Despite regulations requiring utility companies to coordinate and share duct space, fibre deployments are frequently delayed by county government permits, road construction, and disputes with other utility operators. These delays increase costs and slow the expansion of connectivity to new areas.
 
-![Labelled fibre patch panel diagram with SC and FC connectors](/images/dc-networking.webp)
+![Labelled diagram of a fibre patch panel with SC and FC connectors](/images/dc-networking.webp)
 
 Rural and peri-urban areas remain underserved. While NOFBI has connected county headquarters, the last-mile from county towns to individual facilities, schools, and businesses is often still missing. This matters for data centres because edge computing — placing smaller data processing facilities closer to end users — requires fibre connectivity in locations that currently lack it.
 
@@ -169,7 +169,7 @@ Rural and peri-urban areas remain underserved. While NOFBI has connected county 
 
 Looking ahead, several trends will shape Kenya's fibre infrastructure. 5G deployment by Safaricom, Airtel, and others will require massive fibre backhaul — every 5G base station needs a fibre connection, and the density of 5G cells means far more fibre endpoints than 4G required. This will drive further investment in metro fibre networks.
 
-![Diagram of a long distance microwave data link between two sites 50 kilometres apart](/images/diagram-microwave-data-link.webp)
+![Diagram of a long-distance microwave link between two sites](/images/diagram-microwave-data-link.webp)
 
 Edge computing, where smaller data processing facilities are placed in towns and neighbourhoods rather than centralised in Nairobi, will require fibre connectivity in new locations. As applications like autonomous vehicles, remote surgery, and real-time AI inference demand lower latency than a 500-kilometre round trip to Nairobi can provide, edge facilities in Mombasa, Kisumu, and other towns will become necessary.
 

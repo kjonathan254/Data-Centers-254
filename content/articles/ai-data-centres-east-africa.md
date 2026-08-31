@@ -19,23 +19,23 @@ og_image: "/images/ai-gpu-servers.webp"
 reading_time: "11 min"
 images:
   - src: "/images/ai-gpu-servers.webp"
-    alt: "GPU servers for AI training in a data centre"
+    alt:  "GPU servers racked in a data centre"
     caption: "AI training requires dense GPU clusters that consume 5-10x more power than standard servers"
     position: "hero"
   - src: "/images/dc-switchgear-2.webp"
-    alt: "Data centre power systems"
+    alt:  "Electrical switchgear hall"
     caption: "AI data centres need significantly more power than traditional facilities, making Kenya's geothermal advantage critical"
     position: "section-break"
   - src: "/images/dc-gpu-cluster-2.webp"
-    alt: "Data centre facility in Nairobi"
+    alt:  "Server racks in a Nairobi data centre hall"
     caption: "Nairobi is emerging as East Africa's AI infrastructure hub, attracting investment from global tech companies"
     position: "infographic"
   - src: "/images/kenya-geothermal-plant-3.webp"
-    alt: "Geothermal steam plant in Kenya's Rift Valley"
+    alt:  "Geothermal steam plant in the Rift Valley"
     caption: "Cheap baseload geothermal is East Africa's unfair advantage in the AI race."
     position: "inline"
   - src: "/images/kenya-geothermal-plant-2.webp"
-    alt: "Steam rising over a Rift Valley geothermal field"
+    alt:  "Steam plumes over a geothermal field"
     caption: "Kenya's green baseload undercuts rival markets on power cost and carbon."
     position: "inline"
 internal_links:
@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-data-centres-east-africa"
 ---
 
-![GPU servers for AI training in a data centre](/images/ai-gpu-servers.webp)
+![GPU servers racked in a data centre](/images/ai-gpu-servers.webp)
 
 ## Why AI Needs a New Class of Data Centre in Africa
 
@@ -88,7 +88,7 @@ Before assessing East Africa's readiness, it is important to understand the spec
 
 **Resilience.** AI training jobs can run for weeks or months. An interruption mid-training wastes millions of dollars in compute time. AI data centres require N+1 or 2N redundancy on power and cooling, with robust on-site generation and energy storage.
 
-![Data centre power systems](/images/dc-switchgear-2.webp)
+![Electrical switchgear hall](/images/dc-switchgear-2.webp)
 
 ## The Scale of AI Compute Demand in Africa
 
@@ -106,7 +106,7 @@ East Africa has a combination of structural advantages that no other region on t
 
 **Geothermal energy.** Kenya sits on the East African Rift, one of the world's most geothermally active zones. The Olkaria geothermal complex alone generates over 800 MW, and Kenya's total installed geothermal capacity exceeds 1,000 MW, the largest in Africa and among the top 10 globally. Geothermal power is baseload, meaning it runs 24 hours a day regardless of weather, unlike solar or wind. It is also among the cheapest sources of electricity in Africa, with generation costs of USD 0.07-0.09 per kWh.
 
-![Geothermal steam plant in Kenya's Rift Valley](/images/kenya-geothermal-plant-3.webp)
+![Geothermal steam plant in the Rift Valley](/images/kenya-geothermal-plant-3.webp)
 
 For AI data centres, which consume power continuously and care deeply about cost predictability, geothermal is the ideal energy source. A GPU cluster running a three-month training job needs guaranteed, affordable power around the clock. Geothermal provides exactly that.
 
@@ -116,7 +116,7 @@ For AI data centres, this connectivity serves two purposes. It provides low-late
 
 **Market position.** Kenya's tech ecosystem, often called "Silicon Savannah," is the most mature in East Africa. Nairobi hosts the African headquarters of Google, Microsoft, Amazon Web Services, and numerous global tech companies. The country has over 600 tech startups, a robust mobile money ecosystem, and a growing AI research community at institutions like the University of Nairobi, Strathmore University, and the Kenya School of Government.
 
-![Data centre facility in Nairobi](/images/dc-gpu-cluster-2.webp)
+![Server racks in a Nairobi data centre hall](/images/dc-gpu-cluster-2.webp)
 
 ## Kenya vs. Other African Markets for AI Infrastructure
 
@@ -138,7 +138,7 @@ South Africa has the most developed data centre market in Africa, with establish
 
 Kenya occupies a middle ground that is increasingly favourable for AI-specific infrastructure. It has less existing data centre capacity than South Africa, which means less legacy infrastructure to work around. Its geothermal resource is genuinely world-class and directly aligned with the 24/7 high-power demands of AI compute.
 
-![Steam rising over a Rift Valley geothermal field](/images/kenya-geothermal-plant-2.webp)
+![Steam plumes over a geothermal field](/images/kenya-geothermal-plant-2.webp)
 
 ## The Microsoft-G42 Lesson: Power Is the Constraint
 

@@ -40,6 +40,10 @@ images:
   caption: Even an enterprise office rack is designed layer by layer, zone by zone — the same discipline scales up to a Tier III data centre hall.
   position: diagram
 
+- src: /images/construction-crane-scaffolding.webp
+  alt:  "Tower crane and scaffolding on a construction site"
+  caption: "Phase 4 is where Kenyan realities bite: local materials, contractor capacity, and county inspections shape the build."
+  position: section-break
 internal_links:
 - text: Data Centre Tier Ratings Explained
   href: /articles/data-centre-tier-ratings-explained
@@ -121,7 +125,7 @@ Kenya's digital economy is expanding at a pace that demands robust, locally-buil
 
 This guide walks through every stage of the data centre design and build process in Kenya, from initial site selection through to commissioning and handover.
 
-![Server racks inside a modern Kenyan data centre facility](/images/whats-inside-ai-data-center-wide.webp)
+![Server racks in a modern data centre hall](/images/whats-inside-ai-data-center-wide.webp)
 *Modern server rack installation during the fit-out phase of a Kenyan data centre build*
 
 ## Phase 1: Site Selection Criteria in Kenya
@@ -179,7 +183,7 @@ The detailed design phase translates the concept into construction-ready documen
 - **Electrical engineering** designs covering utility feeds, switchgear, UPS systems, power distribution units (PDUs), generator systems, and earthing/grounding
 - **Mechanical engineering** designs for precision cooling, chilled water systems, air handling units, and ductwork
 
-![Electrical power distribution systems in a data centre](/images/dc-switchgear.webp)
+![Server racks inside a modern data centre](/images/dc-switchgear.webp)
 *Power distribution infrastructure is a critical design element in any Kenyan data centre build*
 
 ### MEP Design: The Most Critical Discipline
@@ -191,6 +195,8 @@ The detailed design phase translates the concept into construction-ready documen
 - **Fire suppression**: Kenya's fire safety regulations, enforced through the Kenya Fire Brigade Act and Nairobi County by-laws, typically require gas-based fire suppression (Novec 1230 or FM-200) in the white space, complemented by wet sprinkler systems in non-critical areas.
 
 ## Phase 4: Construction Considerations Specific to Kenya
+
+![Tower crane and scaffolding on a construction site](/images/construction-crane-scaffolding.webp)
 
 ### Materials Availability and Import Logistics
 
@@ -224,7 +230,7 @@ The commissioning process culminates in **Integrated Systems Testing (IST)**, wh
 
 Commissioning in Kenya requires coordination with KPLC for utility switch-over testing. KPLC engineers must participate in the synchronisation and load-transfer tests for dual-grid feeds. The **commissioning agent** (typically an independent third party) must verify that all systems meet the design intent, the specified tier requirements, and applicable Kenyan standards.
 
-![Data centre cooling systems including CRAC units and chilled water piping](/images/dc-chillers-roof-3.webp)
+![Rooftop exhaust fans and HVAC ducting](/images/dc-chillers-roof-3.webp)
 *Cooling system installation during the MEP phase of data centre construction*
 
 ## Phase 6: Handover and Operations Transition
