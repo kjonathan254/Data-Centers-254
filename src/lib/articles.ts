@@ -123,6 +123,38 @@ function extractHeadings(markdown: string) {
   return headings;
 }
 
+// ─── Freshness ─────────────────────────────────────────────────────────────
+
+/** A story's freshness date: updated_date when it is later, else published. */
+function freshnessDate(a: Article): Date {
+  const p = new Date(a.frontmatter.published_date);
+  const u = new Date(a.frontmatter.updated_date);
+  return u > p ? u : p;
+}
+
+/** Newest first by freshness date, breaking ties on published date. */
+function byFreshness(a: Article, b: Article): number {
+  const diff = freshnessDate(b).getTime() - freshnessDate(a).getTime();
+  if (diff !== 0) return diff;
+  return (
+    new Date(b.frontmatter.published_date).getTime() -
+    new Date(a.frontmatter.published_date).getTime()
+  );
+}
+
+/**
+ * "New" badge window in hours. A story shows the green NEW badge in
+ * listings while its freshness date (updated or published, whichever is
+ * later) is within this window. Evaluated at build time — redeploy to
+ * refresh. Bump here if the editorial rule changes.
+ */
+export const FRESH_WINDOW_HOURS = 48;
+
+export function isArticleFresh(a: Article, now: Date = new Date()): boolean {
+  const ageHours = (now.getTime() - freshnessDate(a).getTime()) / 3_600_000;
+  return ageHours <= FRESH_WINDOW_HOURS;
+}
+
 // ─── Core: read a single article ─────────────────────────────────────────────
 
 export function getArticleBySlug(slug: string): Article | null {
@@ -154,11 +186,7 @@ export function getAllArticles(): Article[] {
       return getArticleBySlug(slug);
     })
     .filter((a): a is Article => a !== null)
-    .sort(
-      (a, b) =>
-        new Date(b.frontmatter.published_date).getTime() -
-        new Date(a.frontmatter.published_date).getTime()
-    );
+    .sort(byFreshness);
 }
 
 // ─── Helpers: filtered views ─────────────────────────────────────────────────

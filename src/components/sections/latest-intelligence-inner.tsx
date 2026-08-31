@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Clock } from "lucide-react";
 import { getClusterImage } from "@/lib/imagery";
+import NewBadge from "@/components/new-badge";
 
 interface Article {
   id: string;
@@ -10,6 +11,7 @@ interface Article {
   tlDr: string;
   cluster: string;
   readingTimeMin: number | null;
+  fresh?: boolean;
 }
 
 /**
@@ -51,6 +53,7 @@ export default function LatestIntelligenceInner({ articles }: { articles: Articl
               >
                 <article className="card-solid card-solid-hover h-full overflow-hidden">
                   <div className="relative aspect-[16/9]">
+                    {article.fresh && <NewBadge className="absolute left-3 top-3 z-10" />}
                     <Image
                       src={img.src}
                       alt={img.alt}

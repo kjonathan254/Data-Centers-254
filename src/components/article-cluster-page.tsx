@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, ArrowRight } from "lucide-react";
-import { getArticlesByCluster } from "@/lib/articles";
+import { getArticlesByCluster, isArticleFresh } from "@/lib/articles";
 import { getClusterImage } from "@/lib/imagery";
+import NewBadge from "@/components/new-badge";
 
 const clusterConfig: Record<
   string,
@@ -154,6 +155,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
                           month: "short",
                         })}
                       </span>
+                      {isArticleFresh(a) && <NewBadge />}
                     </div>
                   </div>
                 </article>
