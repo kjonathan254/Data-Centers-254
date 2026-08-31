@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -174,7 +174,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <GoogleAnalytics gaId="G-GDS6XW6RS3" />
+        {/* GA4: inline init queues events immediately; the 170KB gtag.js fetch is
+            deferred to window load (lazyOnload) so it never blocks the main thread. */}
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-GDS6XW6RS3');",
+          }}
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GDS6XW6RS3"
+          strategy="lazyOnload"
+        />
         {children}
         <Analytics />
         <PwaRegister />

@@ -101,7 +101,7 @@ export default function NewsletterV2() {
                   {state === "submitting" ? "Subscribing…" : "Get the Brief"}
                 </button>
               </form>
-              <p className="mt-3 text-xs text-muted-foreground/60">
+              <p className="mt-3 text-xs text-muted-foreground">
                 Free, no spam, unsubscribe anytime.
               </p>
               {state === "error" && (

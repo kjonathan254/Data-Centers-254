@@ -506,7 +506,7 @@ export default function ListenBar({ targetId, slug }: Props) {
           </div>
         )}
 
-        <p className="mt-3 text-xs text-muted-foreground/70">
+        <p className="mt-3 text-xs text-muted-foreground">
           Read aloud with your device&apos;s built-in voice — no audio files,
           minimal data use. Pick a different narrator or speed above.
         </p>

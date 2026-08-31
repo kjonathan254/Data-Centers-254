@@ -39,7 +39,7 @@ export default function DirectorySearchBand() {
           </div>
           <button
             type="submit"
-            className="h-11 rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90"
+            className="h-11 min-h-11 shrink-0 rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90"
           >
             Search
           </button>

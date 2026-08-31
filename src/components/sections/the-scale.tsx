@@ -82,11 +82,11 @@ export default function TheScale() {
         </p>
 
         {/* Sourced metric row */}
-        <dl className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((m) => (
             <div key={m.label} className="border-t border-border/60 pt-5">
-              <dd className="stat-value">{m.value}</dd>
-              <dt className="mt-2 text-sm font-medium text-foreground">{m.label}</dt>
+              <p className="stat-value">{m.value}</p>
+              <p className="mt-2 text-sm font-medium text-foreground">{m.label}</p>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{m.note}</p>
               {m.href && (
                 <Link
@@ -97,16 +97,16 @@ export default function TheScale() {
                   <ArrowRight className="size-3.5" />
                 </Link>
               )}
-              <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-cyan/50">
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-cyan/70">
                 {m.source}
               </p>
             </div>
           ))}
-        </dl>
+        </div>
 
         <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
           How these numbers are verified:{" "}
-          <Link href="/methodology" className="text-cyan hover:underline">
+          <Link href="/methodology" className="text-cyan underline hover:underline">
             read the DC254 methodology
           </Link>
           . Directory data last verified August 2026.
@@ -152,7 +152,7 @@ export default function TheScale() {
               The world&apos;s largest data centre campuses, per industry
               rankings (2026). Figures as reported by operators and trade
               press — see{" "}
-              <Link href="/methodology" className="text-cyan hover:underline">
+              <Link href="/methodology" className="text-cyan underline hover:underline">
                 how we handle reported data
               </Link>
               .

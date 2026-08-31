@@ -111,7 +111,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
               <Shield className="size-3.5 text-neon" />
               Dataset last verified: August 2026
             </span>
-            <Link href="/methodology" className="text-cyan hover:underline">
+            <Link href="/methodology" className="text-cyan underline hover:underline">
               How we verify →
             </Link>
           </div>
@@ -119,7 +119,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
 
         {/* Stats */}
         {data && !loading && (
-          <dl className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
             {[
               { label: "Facilities", value: String(data.stats.totalFacilities), icon: Database },
               { label: "Operational", value: String(data.stats.operationalCount), icon: CheckCircle },
@@ -129,10 +129,10 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
             ].map((s) => { const Icon = s.icon; return (
               <div key={s.label} className="card-solid rounded-xl p-4">
                 <Icon className="size-4 text-cyan mb-2" />
-                <dd className="text-lg sm:text-xl font-semibold text-foreground tabular-nums">{s.value}</dd>
-                <dt className="text-[11px] text-muted-foreground mt-0.5">{s.label}</dt>
+                <p className="text-lg sm:text-xl font-semibold text-foreground tabular-nums">{s.value}</p>
+                <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
               </div>); })}
-          </dl>
+          </div>
         )}
 
         {/* Search + filters */}
@@ -142,7 +142,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
               <Input placeholder="Search facilities, operators, locations..." value={search} onChange={(e) => setSearch(e.target.value)}
                 className="h-11 pl-10 bg-background border-border/50 text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:ring-cyan/20 rounded-lg text-sm" />
-              {search && <button onClick={() => setSearch("")} className="absolute right-3 top-1/2 -translate-y-1/2"><X className="size-4 text-muted-foreground hover:text-foreground" /></button>}
+              {search && <button onClick={() => setSearch("")} aria-label="Clear search" className="absolute right-3 top-1/2 -translate-y-1/2"><X className="size-4 text-muted-foreground hover:text-foreground" /></button>}
             </div>
             <Button variant="outline" onClick={() => setShowFilters(!showFilters)} className="h-11 px-4 border-border/50 gap-2 relative">
               <SlidersHorizontal className="size-4" />Filters
@@ -152,7 +152,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
               <SelectTrigger className="h-11 w-full sm:w-[160px] border-border/50 bg-background text-sm"><SelectValue placeholder="Sort by" /></SelectTrigger>
               <SelectContent><SelectItem value="itLoadMw">IT Load (MW)</SelectItem><SelectItem value="rackCount">Rack Count</SelectItem><SelectItem value="name">Name (A-Z)</SelectItem></SelectContent>
             </Select>
-            <Button variant="outline" onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")} className="h-11 px-3 border-border/50"><ArrowUpDown className="size-4" /></Button>
+            <Button variant="outline" onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")} aria-label="Toggle sort order" className="h-11 px-3 border-border/50"><ArrowUpDown className="size-4" /></Button>
           </div>
 
           {showFilters && data && (
@@ -166,7 +166,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
               <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Type</label>
                 <Select value={facilityType} onValueChange={setFacilityType}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent><SelectItem value="all">All Types</SelectItem>{data.filters.types.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}</SelectContent></Select></div>
-              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setFacilityType("all"); }} className="text-xs text-cyan hover:underline sm:col-span-3 text-left">Clear all filters</button>}
+              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setFacilityType("all"); }} className="text-xs text-cyan underline hover:underline sm:col-span-3 text-left">Clear all filters</button>}
             </div>
           )}
         </div>
@@ -204,11 +204,11 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
         )}
 
         {!loading && data && (
-          <p className="mt-10 text-xs text-muted-foreground/60 max-w-2xl leading-relaxed">
+          <p className="mt-10 text-xs text-muted-foreground max-w-2xl leading-relaxed">
             Data sourced from operator websites, press releases, and publicly
             available information. Every data point follows: Claim, Source,
             Date Verified, Independent Evidence. Last verified: August 2026.{" "}
-            <Link href="/methodology" className="text-cyan/80 hover:text-cyan hover:underline">
+            <Link href="/methodology" className="text-cyan/80 hover:text-cyan underline hover:underline">
               Read the full methodology
             </Link>
             .

@@ -101,7 +101,7 @@ export default function ReadTheLibraryInner({ clusters }: { clusters: Cluster[] 
                       <span className="font-mono text-xs uppercase tracking-wider text-cyan/80">
                         {meta.label}
                       </span>
-                      <span className="font-mono text-xs text-muted-foreground/60">
+                      <span className="font-mono text-xs text-muted-foreground">
                         {cluster.count} {cluster.count === 1 ? "article" : "articles"}
                       </span>
                     </div>
@@ -109,7 +109,7 @@ export default function ReadTheLibraryInner({ clusters }: { clusters: Cluster[] 
                       {meta.entry}
                     </p>
                     {cluster.lastUpdated && (
-                      <p className="mt-3 flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-muted-foreground/70">
+                      <p className="mt-3 flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-muted-foreground">
                         <Clock className="size-3" />
                         Updated{" "}
                         {new Date(cluster.lastUpdated).toLocaleDateString("en-KE", {

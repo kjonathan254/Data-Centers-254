@@ -254,7 +254,7 @@ export default function AboutPage() {
                     information, contact us at{" "}
                     <a
                       href="mailto:elmaccommunicationslimited@gmail.com"
-                      className="text-cyan hover:underline"
+                      className="text-cyan underline hover:underline"
                     >
                       elmaccommunicationslimited@gmail.com
                     </a>{" "}
@@ -295,7 +295,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   For corrections, tips, feedback, or collaboration inquiries, use our{" "}
-                  <a href="/contact" className="text-cyan hover:underline">contact page</a>{" "}
+                  <a href="/contact" className="text-cyan underline hover:underline">contact page</a>{" "}
                   or email directly:
                 </p>
                 <div className="glass-card rounded-xl p-5 border border-border/50 inline-flex items-center gap-3">

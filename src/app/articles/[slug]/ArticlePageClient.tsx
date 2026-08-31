@@ -323,13 +323,13 @@ function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
     a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => {
       if (href && href.startsWith("/")) {
         return (
-          <Link href={href} className="text-cyan hover:underline underline-offset-4">
+          <Link href={href} className="text-cyan underline hover:underline underline-offset-4">
             {children}
           </Link>
         );
       }
       return (
-        <a href={href} className="text-cyan hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
+        <a href={href} className="text-cyan underline hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
           {children}
         </a>
       );
@@ -507,7 +507,7 @@ export default function ArticlePageClient({ article, related }: Props) {
                   <Link
                     key={i}
                     href={link.href}
-                    className="inline-flex items-center gap-1.5 text-sm text-cyan hover:underline underline-offset-4"
+                    className="inline-flex items-center gap-1.5 text-sm text-cyan underline hover:underline underline-offset-4"
                   >
                     <ChevronRight className="size-3" />
                     {link.text}

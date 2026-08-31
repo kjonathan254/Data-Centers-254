@@ -93,7 +93,7 @@ export default function MethodologyPage() {
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-6">
             DC254&apos;s entire value is that you can trust the numbers. This
             page explains exactly how the data behind the{" "}
-            <Link href="/directory" className="text-cyan hover:underline">
+            <Link href="/directory" className="text-cyan underline hover:underline">
               DC Directory
             </Link>{" "}
             and our statistics is sourced, verified, dated, and corrected — and
@@ -102,7 +102,7 @@ export default function MethodologyPage() {
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground max-w-2xl mb-12">
             For how articles are written, labelled, and kept editorially
             independent, see the{" "}
-            <Link href="/editorial-policy" className="text-cyan hover:underline">
+            <Link href="/editorial-policy" className="text-cyan underline hover:underline">
               Editorial Policy
             </Link>
             . This page is about the data.
@@ -180,7 +180,7 @@ export default function MethodologyPage() {
               . Estimated figures live inside article bodies where there is
               room to explain the calculation, and they carry the ESTIMATE
               label described in the{" "}
-              <Link href="/editorial-policy" className="text-cyan hover:underline">
+              <Link href="/editorial-policy" className="text-cyan underline hover:underline">
                 Editorial Policy
               </Link>
               . Headline statistics on the homepage and in the directory are
@@ -200,7 +200,7 @@ export default function MethodologyPage() {
               If a figure is wrong, we want it fixed fast. Email{" "}
               <a
                 href="mailto:elmaccommunicationslimited@gmail.com"
-                className="text-cyan hover:underline"
+                className="text-cyan underline hover:underline"
               >
                 elmaccommunicationslimited@gmail.com
               </a>{" "}
@@ -222,7 +222,7 @@ export default function MethodologyPage() {
             relevant page, and include the verification date shown on the entry
             (for example: &ldquo;DC254 Directory, verified August 2026&rdquo;).
             For bulk data, interviews, or briefing requests,{" "}
-            <Link href="/contact" className="text-cyan hover:underline">
+            <Link href="/contact" className="text-cyan underline hover:underline">
               contact us
             </Link>
             .

@@ -80,7 +80,7 @@ export default function WhatIsDC() {
                   <span
                     className={[
                       "font-mono text-sm",
-                      step.highlight ? "text-cyan" : "text-muted-foreground/60",
+                      step.highlight ? "text-cyan" : "text-muted-foreground",
                     ].join(" ")}
                   >
                     {String(i + 1).padStart(2, "0")}

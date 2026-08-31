@@ -103,7 +103,7 @@ export default function ContactClient() {
             </p>
             <button
               onClick={() => setStatus("idle")}
-              className="mt-4 text-sm text-cyan hover:underline"
+              className="mt-4 text-sm text-cyan underline hover:underline"
             >
               Send another message
             </button>

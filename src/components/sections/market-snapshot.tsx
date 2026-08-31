@@ -80,20 +80,20 @@ export default function MarketSnapshot() {
         </div>
 
         {/* Stage tiles */}
-        <dl className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
           {snap.stages.map((s) => {
             const meta = STAGE_META[s.stage];
             const Icon = meta.icon;
             return (
               <div key={s.stage} className="card-solid relative overflow-hidden rounded-xl p-4 sm:p-5">
                 <div className={`absolute inset-x-0 top-0 h-0.5 ${meta.bar}`} aria-hidden="true" />
-                <dt className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                <p className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
                   <Icon className={`size-3.5 ${meta.color}`} />
                   {s.stage === "Operational" ? "Live" : s.stage}
-                </dt>
-                <dd className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
                   {s.mw.toFixed(1)} <span className="text-sm font-normal text-muted-foreground">MW</span>
-                </dd>
+                </p>
                 <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
                   {s.count} facilit{s.count === 1 ? "y" : "ies"} · {meta.hint}
                 </p>
@@ -102,18 +102,18 @@ export default function MarketSnapshot() {
           })}
           <div className="card-solid relative overflow-hidden rounded-xl border-cyan/30 p-4 sm:p-5">
             <div className="absolute inset-x-0 top-0 h-0.5 bg-cyan" aria-hidden="true" />
-            <dt className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-cyan">
+            <p className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-cyan">
               <Zap className="size-3.5" />
               Total supply
-            </dt>
-            <dd className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
+            </p>
+            <p className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
               {snap.totalSupplyMw.toFixed(1)} <span className="text-sm font-normal text-muted-foreground">MW</span>
-            </dd>
+            </p>
             <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
               {snap.facilities} facilities · {snap.operators} operators
             </p>
           </div>
-        </dl>
+        </div>
 
         {/* Printed definition — the trust layer that paid trackers bolt behind signup */}
         <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
@@ -126,13 +126,13 @@ export default function MarketSnapshot() {
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <Link href="/directory" className="inline-flex items-center gap-1.5 text-cyan hover:underline">
+          <Link href="/directory" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
             Browse every facility <ArrowRight className="size-3.5" />
           </Link>
-          <a href="/reports/dc254-kenya-data-centre-index-2026.pdf" className="inline-flex items-center gap-1.5 text-cyan hover:underline">
+          <a href="/reports/dc254-kenya-data-centre-index-2026.pdf" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
             <Download className="size-3.5" /> Kenya Data Centre Index 2026 (free PDF)
           </a>
-          <Link href="/methodology" className="text-muted-foreground hover:text-cyan hover:underline">
+          <Link href="/methodology" className="text-muted-foreground hover:text-cyan underline hover:underline">
             Verification methodology
           </Link>
         </div>

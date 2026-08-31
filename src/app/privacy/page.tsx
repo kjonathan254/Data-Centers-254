@@ -94,7 +94,7 @@ export default function PrivacyPage() {
               <h2 className="text-base font-semibold text-foreground mb-2">9. Contact</h2>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Questions about this policy or your data? Contact Kevin Jonathan Otieno at{" "}
-                <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan hover:underline">
+                <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan underline hover:underline">
                   elmaccommunicationslimited@gmail.com
                 </a>{" "}
                 — Nairobi, Kenya.

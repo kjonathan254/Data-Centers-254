@@ -205,7 +205,7 @@ export default async function FacilityPage({
               : "Its total capacity has not been publicly disclosed."}{" "}
             {f.tierRating ? `The facility carries a Tier ${f.tierRating} rating. ` : ""}
             It sits inside DC254&apos;s four-stage supply pipeline —{" "}
-            <Link href="/directory" className="text-cyan hover:underline">
+            <Link href="/directory" className="text-cyan underline hover:underline">
               see how Kenya&apos;s market stages up
             </Link>
             .
@@ -213,18 +213,18 @@ export default async function FacilityPage({
 
           {/* Spec grid */}
           {specs.length > 0 && (
-            <dl className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4">
               {specs.map((s) => {
                 const Icon = s.icon;
                 return (
                   <div key={s.label} className="card-solid rounded-xl p-4">
                     <Icon className="size-4 text-cyan mb-2" />
-                    <dd className="text-base font-semibold text-foreground">{s.value}</dd>
-                    <dt className="text-[11px] text-muted-foreground mt-0.5">{s.label}</dt>
+                    <p className="text-base font-semibold text-foreground">{s.value}</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
                   </div>
                 );
               })}
-            </dl>
+            </div>
           )}
 
           {/* Narrative */}
@@ -297,15 +297,15 @@ export default async function FacilityPage({
                 </h2>
                 <dl className="mt-4 space-y-3 text-sm">
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Source</dt>
+                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Source</dt>
                     <dd className="mt-0.5 text-foreground/90">{f.dataSource}</dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Last verified</dt>
+                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Last verified</dt>
                     <dd className="mt-0.5 text-foreground/90">{fmtVerified(f.lastVerified)}</dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground/70">Confidence</dt>
+                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Confidence</dt>
                     <dd className="mt-0.5">
                       <span className={`inline-flex rounded-full border px-2.5 py-0.5 text-xs ${
                         f.dataConfidence === "High"
@@ -319,11 +319,11 @@ export default async function FacilityPage({
                     </dd>
                   </div>
                 </dl>
-                <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground/70">
+                <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
                   Every DC254 data point follows the same discipline: claim,
                   source, date verified, independent evidence.
                 </p>
-                <Link href="/methodology" className="mt-2 inline-block text-xs text-cyan hover:underline">
+                <Link href="/methodology" className="mt-2 inline-block text-xs text-cyan underline hover:underline">
                   How we verify →
                 </Link>
               </div>

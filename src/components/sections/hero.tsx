@@ -85,7 +85,7 @@ export default function Hero() {
         </dl>
         <p className="mt-4 text-[11px] text-muted-foreground/80">
           Directory data last verified August 2026 ·{" "}
-          <Link href="/methodology" className="text-cyan/80 hover:text-cyan">
+          <Link href="/methodology" className="text-cyan/80 underline underline-offset-2 hover:text-cyan">
             How we verify
           </Link>
         </p>

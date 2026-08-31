@@ -90,7 +90,7 @@ export default function AdvertisePage() {
               Tell us who you are and what you&apos;d like to do — we&apos;ll share formats,
               current audience numbers, and pricing. Every partnership is disclosed to
               readers, in line with our{" "}
-              <a href="/editorial-policy" className="text-cyan hover:underline">editorial policy</a>.
+              <a href="/editorial-policy" className="text-cyan underline hover:underline">editorial policy</a>.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
               <a

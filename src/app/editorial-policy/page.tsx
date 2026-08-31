@@ -112,11 +112,11 @@ export default function EditorialPolicyPage() {
             </div>
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
               Spotted an error or a figure that needs updating? Email{" "}
-              <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan hover:underline">
+              <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan underline hover:underline">
                 elmaccommunicationslimited@gmail.com
               </a>{" "}
               or call{" "}
-              <a href="tel:+254711707229" className="text-cyan hover:underline">
+              <a href="tel:+254711707229" className="text-cyan underline hover:underline">
                 0711 707 229
               </a>
               . Verified corrections are applied promptly — accuracy beats ego.

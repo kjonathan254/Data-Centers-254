@@ -36,7 +36,7 @@ export default function MobileNavSheet({ open, onOpenChange }: MobileNavSheetPro
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden h-8 w-8">
+        <Button variant="ghost" size="icon" className="lg:hidden h-8 w-8" aria-label="Open menu">
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>

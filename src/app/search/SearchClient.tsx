@@ -162,7 +162,7 @@ export default function SearchClient() {
             </p>
             <p className="text-sm text-muted-foreground">
               Try different keywords, or browse our{" "}
-              <Link href="/beginners" className="text-cyan hover:underline">beginner guides</Link>.
+              <Link href="/beginners" className="text-cyan underline hover:underline">beginner guides</Link>.
             </p>
           </div>
         )}
@@ -219,7 +219,7 @@ export default function SearchClient() {
                               )}
                             </div>
                             {f.connectivityProviders.length > 0 && (
-                              <p className="text-xs text-muted-foreground/60 mt-1.5">
+                              <p className="text-xs text-muted-foreground mt-1.5">
                                 {f.connectivityProviders.map((cp) => cp.provider.name).join(", ")}
                               </p>
                             )}

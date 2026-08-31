@@ -62,7 +62,7 @@ export default function FoundationsClient({
 
         {/* Header */}
         <motion.div {...fadeUp} className="mt-10">
-          <p className="text-[11px] font-mono uppercase tracking-widest text-cyan/50">
+          <p className="text-[11px] font-mono uppercase tracking-widest text-cyan/70">
             Editorial Pipeline
           </p>
           <h1 className="mt-4 text-display-sm text-foreground">
@@ -114,7 +114,7 @@ export default function FoundationsClient({
               <motion.div key={phase.name} {...fadeUp}>
                 {/* Phase header */}
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-cyan/50">
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-cyan/70">
                     Phase {phase.range[0]}–{phase.range[1]}
                   </span>
                   <span className="text-xs text-muted-foreground">
@@ -176,7 +176,7 @@ export default function FoundationsClient({
                                 </span>
                               </div>
 
-                              <div className="flex items-center gap-4 mt-1.5 text-[11px] text-muted-foreground/60 font-mono">
+                              <div className="flex items-center gap-4 mt-1.5 text-[11px] text-muted-foreground font-mono">
                                 <span className="flex items-center gap-1">
                                   <FileText className="size-3" />
                                   {article.cluster}
