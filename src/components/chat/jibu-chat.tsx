@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { track } from "@vercel/analytics";
 import { Bot, Send, Volume2, VolumeX, Square, ExternalLink, AlertTriangle } from "lucide-react";
 import { BOT_IDENTITY, STARTER_QUESTIONS } from "@/lib/chatbot/identity";
-import { speak, stopSpeaking, speechSupported } from "@/components/chat/speak";
+import { speakAnswer, stopSpeaking, speechSupported } from "@/components/chat/speak";
 
 /**
  * The shared chat experience — used by both the floating widget (panel) and
@@ -83,7 +83,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
     const full = last.text;
     if (reduced) {
       setMessages((m) => m.map((x, i) => (i === m.length - 1 ? { ...x, shown: full } : x)));
-      if (voiceOn) speak(full);
+      if (voiceOn) void speakAnswer(full);
       return;
     }
     let i = 0;
@@ -94,7 +94,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
       setMessages((m) => m.map((x, idx) => (idx === m.length - 1 ? { ...x, shown } : x)));
       if (i >= full.length) {
         window.clearInterval(timer);
-        if (voiceOn) speak(full);
+        if (voiceOn) void speakAnswer(full);
       }
     }, 14);
     timersRef.current.push(timer);

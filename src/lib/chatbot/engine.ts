@@ -24,6 +24,13 @@ export interface ChatTurn {
 export interface EngineResult extends BotReply {
   /** Context handed to the optional LLM polish step. */
   contextChunks: { title: string; href: string; text: string }[];
+  /**
+   * True when the deterministic reply came from the below-threshold
+   * "reformulate" tier. The LLM step may then attempt a grounded rescue from
+   * contextChunks — under a strict answer-or-NOT_IN_NOTES contract — and the
+   * reply is upgraded to a real answer only if it takes.
+   */
+  weak?: boolean;
 }
 
 const OFF_TOPIC_SIGNALS =
@@ -184,7 +191,12 @@ export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): Engi
       intent: "fallback:reformulate",
       answered: false,
       fallback: "reformulate",
-      contextChunks: [],
+      contextChunks: nearest.map((n) => ({
+        title: n.title,
+        href: n.href,
+        text: trimToSentences(n.text, 4),
+      })),
+      weak: true,
     };
   }
 

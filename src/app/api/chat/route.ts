@@ -2,19 +2,34 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
+import {
+  resolveGroqKey,
+  llmModel,
+  LLM_BASE_URL,
+  llmTemporarilyDown,
+  noteLlmFailure,
+  noteLlmSuccess,
+} from "@/lib/chatbot/llm";
 
 /**
  * POST /api/chat — the answer engine endpoint.
  *
- * Deterministic by default (zero cost, zero keys, corpus-grounded). If an
- * OpenAI-compatible LLM is configured via env vars, retrieved facts are
- * handed to it to polish phrasing — grounded strictly in those facts, with a
- * hard timeout and a graceful fall back to the deterministic reply.
+ * Deterministic by default (zero cost, zero keys, corpus-grounded). When a
+ * Groq key is configured, two LLM steps run on top — both grounded strictly
+ * in retrieved facts, both time-boxed, both degrading silently:
  *
- * Optional env (e.g. Groq's free tier):
- *   CHAT_LLM_API_KEY  — API key
- *   CHAT_LLM_BASE_URL — default https://api.groq.com/openai/v1
- *   CHAT_LLM_MODEL    — default llama-3.3-70b-versatile
+ *   1. Confident path  — the deterministic draft is handed to the LLM to
+ *      polish phrasing. A numeric guardrail rejects any output containing a
+ *      figure that doesn't appear in the draft or the facts.
+ *   2. Weak-match path — questions that scored below the retrieval threshold
+ *      get a second chance: the nearest chunks are offered under an
+ *      answer-or-NOT_IN_NOTES contract. If the model doesn't vouch for the
+ *      answer, the honest deterministic reply stands.
+ *
+ * Env (all optional; see src/lib/chatbot/llm.ts for resolution order):
+ *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN /
+ *   DATACENTRE254_JIBU, or any groq-or-jibu-named var holding a gsk_… key)
+ *   GROQ_MODEL / CHAT_LLM_MODEL — default llama-3.3-70b-versatile
  */
 
 export const runtime = "nodejs";
@@ -43,35 +58,60 @@ function rateLimited(ip: string): boolean {
   return entry.count > RATE_LIMIT;
 }
 
-// ─── Optional LLM polish (grounded, time-boxed) ──────────────────────────────
+// ─── Optional LLM step (grounded, time-boxed, self-limiting) ────────────────
 
-async function llmPolish(
+/** Every figure appearing in a string, comma-normalised ("90,000" → "90000"). */
+function numbersIn(s: string): Set<string> {
+  return new Set((s.match(/\d+(?:[.,]\d+)*/g) ?? []).map((n) => n.replace(/,/g, "")));
+}
+
+/** The polished reply may never introduce a figure absent from draft or facts. */
+function numbersConsistent(polished: string, allowed: string): boolean {
+  const allowedSet = numbersIn(allowed);
+  for (const n of numbersIn(polished)) if (!allowedSet.has(n)) return false;
+  return true;
+}
+
+async function llmAnswer(
   message: string,
   history: ChatTurn[],
   facts: { title: string; href: string; text: string }[],
   deterministic: string,
+  weak: boolean,
 ): Promise<string | null> {
-  const apiKey = process.env.CHAT_LLM_API_KEY;
-  if (!apiKey) return null;
-  const baseUrl = process.env.CHAT_LLM_BASE_URL || "https://api.groq.com/openai/v1";
-  const model = process.env.CHAT_LLM_MODEL || "llama-3.3-70b-versatile";
+  const apiKey = resolveGroqKey();
+  if (!apiKey || llmTemporarilyDown()) return null;
+  const model = llmModel();
 
   const factBlock = facts.length
     ? facts.map((f, i) => `[${i + 1}] ${f.title}: ${f.text}`).join("\n")
-    : "(no retrieved passages — rely only on the deterministic answer below)";
+    : "(none)";
 
   const system = [
     `You are ${BOT_IDENTITY.name}, ${BOT_IDENTITY.role} for Data Centre 254 (DC254) — a Kenyan publication tracking data centre infrastructure. ${BOT_IDENTITY.tagline}`,
-    `Voice: warm, sharp, concise. Kenyan English. Never use emoji. Never use markdown bold or headings — plain sentences only.`,
-    `HARD RULES: Use ONLY the verified facts provided below and the deterministic draft. Never invent numbers, names, dates or capacities. If the facts don't cover the question, say honestly that you don't track it and suggest the DC254 team. Keep the reply under 100 words.`,
-    `VERIFIED FACTS:\n${factBlock}`,
-    `DETERMINISTIC DRAFT (already correct — improve flow, do not change figures): ${deterministic}`,
-  ].join("\n\n");
+    `Voice: warm, sharp, concise. Kenyan English. Never use emoji, markdown, bold or headings — plain flowing sentences only.`,
+    `HARD RULES: Ground every claim in the material provided. Never invent numbers, names, dates, capacities or statuses. Keep every figure exactly as given. Keep the reply under 90 words.`,
+  ].join("\n");
+
+  const task = weak
+    ? [
+        `QUESTION: ${message}`,
+        `SEARCH RESULT SNIPPETS (weak matches — may or may not be relevant):`,
+        factBlock,
+        `If — and only if — these snippets genuinely cover the question, write a direct, grounded answer citing what you used (e.g. "per DC254's verified records …").`,
+        `If they do not cover it, reply with exactly this token and nothing else: NOT_IN_NOTES`,
+      ].join("\n")
+    : [
+        `QUESTION: ${message}`,
+        `VERIFIED FACTS:`,
+        factBlock,
+        `DRAFT ANSWER (already verified — improve its flow and warmth, do not change any figure): ${deterministic}`,
+      ].join("\n");
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8_000);
   try {
-    const res = await fetch(`${baseUrl}/chat/completions`, {
+    const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,27 +120,41 @@ async function llmPolish(
       body: JSON.stringify({
         model,
         temperature: 0.3,
-        max_tokens: 260,
+        max_tokens: 300,
         messages: [
           { role: "system", content: system },
           ...history.slice(-4).map((t) => ({
             role: t.role === "bot" ? ("assistant" as const) : ("user" as const),
             content: t.content,
           })),
-          { role: "user", content: message },
+          { role: "user", content: task },
         ],
       }),
       signal: controller.signal,
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      noteLlmFailure();
+      return null;
+    }
     const data = (await res.json()) as {
       choices?: { message?: { content?: string } }[];
     };
-    const text = data.choices?.[0]?.message?.content?.trim();
-    if (!text || text.length < 8 || text.length > 1200) return null;
+    let text = data.choices?.[0]?.message?.content?.trim() ?? "";
+    if (!text || text.length < 8 || text.length > 1200) {
+      noteLlmFailure();
+      return null;
+    }
+    if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
     // Strip markdown emphasis — the UI renders plain text + citation chips.
-    return text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "");
+    text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
+    if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
+      noteLlmFailure();
+      return null;
+    }
+    noteLlmSuccess();
+    return text;
   } catch {
+    noteLlmFailure();
     return null;
   } finally {
     clearTimeout(timer);
@@ -133,10 +187,16 @@ export async function POST(request: NextRequest) {
 
   let reply = result.reply;
   let mode: "deterministic" | "llm" = "deterministic";
-  const polished = await llmPolish(body.message, history, result.contextChunks, result.reply);
+  const polished = await llmAnswer(body.message, history, result.contextChunks, result.reply, result.weak ?? false);
   if (polished) {
     reply = polished;
     mode = "llm";
+    if (result.weak) {
+      // The rescue took: upgrade the reply to a real, vouched answer.
+      result.citations = result.contextChunks.map((c) => ({ label: c.title, href: c.href }));
+      result.answered = true;
+      result.fallback = undefined;
+    }
   }
 
   return NextResponse.json({
