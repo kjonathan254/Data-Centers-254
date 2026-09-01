@@ -2,6 +2,7 @@ import {
   getFacilities, getMarketSnapshot, STATUS_ORDER, type Facility,
 } from "@/lib/directory-data";
 import { SUBSEA_CABLES } from "@/lib/map-data";
+import { glossaryTerms } from "@/lib/glossary-data";
 import { BOT_IDENTITY, STARTER_QUESTIONS, RESCUE_SUGGESTIONS } from "@/lib/chatbot/identity";
 
 /**
@@ -166,6 +167,71 @@ function profileCard(f: Facility): string {
   return `${bits} — ${caps.join(", ") || "with capacity details not yet disclosed"}. You'll find it in ${where}. Figures verified ${lastVerified}.`;
 }
 
+// ─── Definitions (glossary-grounded) ─────────────────────────────────────────
+// "What is a data centre?", "define colocation", "what does PUE mean" —
+// definitional phrasing routes to the editorial glossary instead of BM25,
+// where generic tokens like "data centre" would match half the corpus.
+
+const DEFINITION_LEAD_RE =
+  /^\s*(?:what(?:'|’|`)?s|what\s+is|what\s+are|what\s+does|define|definition\s+of|meaning\s+of|explain)\s+(?:(?:a|an|the)\s+)?(.+?)\s*(?:\s+mean)?\s*[?.!]*\s*$/i;
+
+function singularWord(w: string): string {
+  return w.endsWith("ies") && w.length > 4 ? `${w.slice(0, -3)}y`
+    : w.endsWith("es") && w.length > 3 ? w.slice(0, -2)
+    : w.endsWith("s") && !w.endsWith("ss") && w.length > 3 ? w.slice(0, -1)
+    : w;
+}
+
+/** Lowercase, strip punctuation, singularise, unify centre/center spelling. */
+function normTerm(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(singularWord)
+    .join(" ")
+    .replace(/\bcenter\b/g, "centre");
+}
+
+function glossaryAliases(term: string): string[] {
+  const aliases = new Set<string>([normTerm(term)]);
+  const paren = term.match(/\(([^)]+)\)/);
+  if (paren) {
+    aliases.add(normTerm(term.replace(/\([^)]*\)/g, " ")));
+    aliases.add(normTerm(paren[1]));
+  }
+  aliases.delete("");
+  return [...aliases];
+}
+
+const GLOSSARY_LOOKUPS = glossaryTerms
+  .flatMap((entry) => glossaryAliases(entry.term).map((alias) => ({ entry, alias })))
+  .sort((a, b) => b.alias.length - a.alias.length);
+
+function glossaryHref(term: string): string {
+  return `/glossary#${term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
+function lookupDefinition(question: string) {
+  const lead = question.match(DEFINITION_LEAD_RE);
+  if (!lead) return null;
+  const capture = normTerm(lead[1]);
+  if (!capture || capture.length > 80) return null;
+  for (const { entry, alias } of GLOSSARY_LOOKUPS) {
+    // The capture must START with the glossary term (or be a shorthand for
+    // it) — so "largest data centre" can never be read as a definition.
+    if (
+      capture === alias ||
+      capture.startsWith(`${alias} `) ||
+      (capture.length >= 6 && alias.startsWith(`${capture} `))
+    ) {
+      return entry;
+    }
+  }
+  return null;
+}
+
 const INTENTS: Intent[] = [
   // ── Social ────────────────────────────────────────────────────────────────
   {
@@ -210,6 +276,26 @@ const INTENTS: Intent[] = [
       suggestions: ["What's under construction right now?", "Which data centres are AI-ready?"],
       intent: "thanks",
     }),
+  },
+
+  // ── Definitions (glossary) ──────────────────────────────────────────────
+  {
+    name: "definition",
+    test: (q) => DEFINITION_LEAD_RE.test(q),
+    run: (q) => {
+      const entry = lookupDefinition(q);
+      if (!entry) return null;
+      const related = (entry.relatedTerms ?? []).slice(0, 3).map((t) => `What is ${t}?`);
+      return ok({
+        reply: entry.definition,
+        citations: [
+          { label: `${entry.term} — the DC254 glossary`, href: glossaryHref(entry.term) },
+          ...(entry.relatedArticles ?? []).slice(0, 1).map((a) => ({ label: a.text, href: a.href })),
+        ],
+        suggestions: related.length ? related : ["How many data centres does Kenya have?"],
+        intent: "definition",
+      });
+    },
   },
 
   // ── Data & tooling ───────────────────────────────────────────────────────

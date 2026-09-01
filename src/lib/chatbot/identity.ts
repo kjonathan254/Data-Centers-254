@@ -36,6 +36,7 @@ export const BOT_IDENTITY = {
 
 /** Starter questions surfaced as chips under the greeting. */
 export const STARTER_QUESTIONS = [
+  "What is a data centre?",
   "How many data centres does Kenya have?",
   "Which is the largest data centre?",
   "What's under construction right now?",
