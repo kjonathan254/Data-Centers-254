@@ -12,11 +12,16 @@
  *   5. Any env var whose NAME mentions "groq" or "jibu" and whose VALUE looks
  *      like a Groq key (gsk_…) — tolerates custom names in the Vercel panel.
  *
- * Free-tier models (as configured by default):
- *   - Chat: llama-3.3-70b-versatile  (grounded synthesis for Jibu's answers)
- *   - Voice: playai-tts              (HD voice; requires accepting the model
- *     terms once at console.groq.com → PlayAI — until then the client silently
- *     uses the device Web Speech voice.)
+ * Models — a self-healing candidate chain:
+ *   GROQ_MODEL / CHAT_LLM_MODEL win if set; otherwise the chain below is
+ *   walked in order. Groq retires model ids over time (llama-3.3-70b-versatile
+ *   was withdrawn from newer accounts in 2026); when the API answers with a
+ *   model-level error, the id is remembered as rejected for this instance and
+ *   the next candidate takes over — no redeploy, no manual env changes.
+ *   /api/chat/health reports which ids the account actually offers.
+ *   - Voice: playai-tts (HD voice; requires accepting the model terms once at
+ *     console.groq.com → PlayAI — until then the client silently uses the
+ *     device Web Speech voice.)
  */
 
 const KEY_SHAPE = /^gsk_[A-Za-z0-9]{20,}$/;
@@ -41,8 +46,40 @@ export function resolveGroqKey(): string | null {
 export const LLM_BASE_URL =
   process.env.CHAT_LLM_BASE_URL || "https://api.groq.com/openai/v1";
 
+// Ordered candidate chain. The first entry is the quality target; later
+// entries are proven capable fallbacks. Groq's /models endpoint is the source
+// of truth — /api/chat/health reports what the account actually offers.
+const DEFAULT_MODEL_CHAIN = [
+  "llama-3.3-70b-versatile",
+  "llama-3.1-8b-instant",
+  "openai/gpt-oss-120b",
+  "moonshotai/kimi-k2-instruct",
+  "gemma2-9b-it",
+];
+
+const rejectedModels = new Set<string>();
+
+export function modelCandidates(): string[] {
+  const configured = (process.env.GROQ_MODEL || process.env.CHAT_LLM_MODEL || "").trim();
+  if (configured) return [configured, ...DEFAULT_MODEL_CHAIN.filter((m) => m !== configured)];
+  return [...DEFAULT_MODEL_CHAIN];
+}
+
+/** Candidates not (yet) refused by Groq on this instance; top fallback if all refused. */
+export function liveModelCandidates(): string[] {
+  const all = modelCandidates();
+  const usable = all.filter((m) => !rejectedModels.has(m));
+  return usable.length ? usable.slice(0, 3) : all.slice(0, 1);
+}
+
+/** The model to try first on the next request. */
 export function llmModel(): string {
-  return process.env.GROQ_MODEL || process.env.CHAT_LLM_MODEL || "llama-3.3-70b-versatile";
+  return liveModelCandidates()[0];
+}
+
+/** Remember an id Groq refused, so the next request starts further down the chain. */
+export function noteModelRejected(model: string): void {
+  rejectedModels.add(model);
 }
 
 export function llmTtsVoice(): string {

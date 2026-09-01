@@ -4,11 +4,12 @@ import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
   resolveGroqKey,
-  llmModel,
+  liveModelCandidates,
   LLM_BASE_URL,
   llmTemporarilyDown,
   noteLlmFailure,
   noteLlmSuccess,
+  noteModelRejected,
 } from "@/lib/chatbot/llm";
 
 /**
@@ -29,7 +30,8 @@ import {
  * Env (all optional; see src/lib/chatbot/llm.ts for resolution order):
  *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN /
  *   DATACENTRE254_JIBU, or any groq-or-jibu-named var holding a gsk_… key)
- *   GROQ_MODEL / CHAT_LLM_MODEL — default llama-3.3-70b-versatile
+ *   GROQ_MODEL / CHAT_LLM_MODEL — pins the model; otherwise a self-healing
+ *   candidate chain advances whenever Groq retires an id.
  */
 
 export const runtime = "nodejs";
@@ -81,7 +83,6 @@ async function llmAnswer(
 ): Promise<string | null> {
   const apiKey = resolveGroqKey();
   if (!apiKey || llmTemporarilyDown()) return null;
-  const model = llmModel();
 
   const factBlock = facts.length
     ? facts.map((f, i) => `[${i + 1}] ${f.title}: ${f.text}`).join("\n")
@@ -110,50 +111,78 @@ async function llmAnswer(
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8_000);
+  const messages = [
+    { role: "system", content: system },
+    ...history.slice(-4).map((t) => ({
+      role: t.role === "bot" ? ("assistant" as const) : ("user" as const),
+      content: t.content,
+    })),
+    { role: "user", content: task },
+  ];
+
+  // Walk the model chain: when Groq has retired an id, it answers with a
+  // model-level error in ~150ms — remember the rejection and try the next
+  // candidate within the same request. Any other failure (auth, quota,
+  // network) ends the walk immediately. The 8s timer bounds the whole walk
+  // and is always released in the finally.
   try {
-    const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model,
-        temperature: 0.3,
-        max_tokens: 300,
-        messages: [
-          { role: "system", content: system },
-          ...history.slice(-4).map((t) => ({
-            role: t.role === "bot" ? ("assistant" as const) : ("user" as const),
-            content: t.content,
-          })),
-          { role: "user", content: task },
-        ],
-      }),
-      signal: controller.signal,
-    });
-    if (!res.ok) {
-      noteLlmFailure();
-      return null;
+    for (const model of liveModelCandidates()) {
+      try {
+        const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model,
+            temperature: 0.3,
+            max_tokens: 300,
+            messages,
+          }),
+          signal: controller.signal,
+        });
+        if (!res.ok) {
+          const errBody = await res.text().catch(() => "");
+          let errCode = "";
+          try {
+            errCode = String((JSON.parse(errBody) as { error?: { code?: string } })?.error?.code ?? "");
+          } catch {
+            // non-JSON error body — fall through to status heuristics
+          }
+          const modelError =
+            /model/i.test(errCode) ||
+            (res.status === 404 && /model/i.test(errBody));
+          if (modelError) {
+            noteModelRejected(model);
+            continue;
+          }
+          noteLlmFailure();
+          return null;
+        }
+        const data = (await res.json()) as {
+          choices?: { message?: { content?: string } }[];
+        };
+        let text = data.choices?.[0]?.message?.content?.trim() ?? "";
+        if (!text || text.length < 8 || text.length > 1200) {
+          noteLlmFailure();
+          return null;
+        }
+        if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
+        // Strip markdown emphasis — the UI renders plain text + citation chips.
+        text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
+        if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
+          noteLlmFailure();
+          return null;
+        }
+        noteLlmSuccess();
+        return text;
+      } catch {
+        noteLlmFailure();
+        return null;
+      }
     }
-    const data = (await res.json()) as {
-      choices?: { message?: { content?: string } }[];
-    };
-    let text = data.choices?.[0]?.message?.content?.trim() ?? "";
-    if (!text || text.length < 8 || text.length > 1200) {
-      noteLlmFailure();
-      return null;
-    }
-    if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
-    // Strip markdown emphasis — the UI renders plain text + citation chips.
-    text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
-    if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
-      noteLlmFailure();
-      return null;
-    }
-    noteLlmSuccess();
-    return text;
-  } catch {
+    // Every remaining candidate id was refused as a model error this request.
     noteLlmFailure();
     return null;
   } finally {
