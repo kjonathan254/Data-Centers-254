@@ -26,6 +26,7 @@ const platformLinks = [
   { label: "DC Directory", href: "/directory" },
   { label: "Tracker", href: "/tracker" },
   { label: "Compare", href: "/directory/compare" },
+  { label: "Ask Jibu", href: "/chat" },
   { label: "Glossary", href: "/glossary" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },

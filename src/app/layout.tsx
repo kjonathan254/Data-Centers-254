@@ -4,6 +4,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import ChatWidget from "@/components/chat/chat-widget";
 import PwaRegister from "@/components/PwaRegister";
 import { siteUrl } from "@/lib/site";
 
@@ -189,6 +190,7 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
         {children}
+        <ChatWidget />
         <Analytics />
         <PwaRegister />
         <Toaster />

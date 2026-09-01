@@ -18,6 +18,7 @@ const topicLinks = [
 
 const platformLinks = [
   { label: "DC Directory", href: "/directory" },
+  { label: "Ask Jibu", href: "/chat" },
   { label: "Glossary", href: "/glossary" },
   { label: "FAQ", href: "/faq" },
   { label: "Foundations", href: "/foundations" },
