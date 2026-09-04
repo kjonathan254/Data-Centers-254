@@ -46,15 +46,19 @@ export function resolveGroqKey(): string | null {
 export const LLM_BASE_URL =
   process.env.CHAT_LLM_BASE_URL || "https://api.groq.com/openai/v1";
 
-// Ordered candidate chain. The first entry is the quality target; later
-// entries are proven capable fallbacks. Groq's /models endpoint is the source
-// of truth — /api/chat/health reports what the account actually offers.
+// Ordered candidate chain. Groq's /models endpoint is the source of truth —
+// /api/chat/health reports what the account actually offers. Order reflects
+// the 2026 Groq line-up for current accounts: the gpt-oss models are the
+// flagship text models still served (120b quality, 20b speed), qwen is the
+// wide-availability fallback, and the llama ids remain for older accounts
+// that still have them. Reasoning-model quirks (empty content when
+// max_tokens is tight) are handled in llmAnswer().
 const DEFAULT_MODEL_CHAIN = [
+  "openai/gpt-oss-120b",
+  "openai/gpt-oss-20b",
+  "qwen/qwen3.8-27b",
   "llama-3.3-70b-versatile",
   "llama-3.1-8b-instant",
-  "openai/gpt-oss-120b",
-  "moonshotai/kimi-k2-instruct",
-  "gemma2-9b-it",
 ];
 
 const rejectedModels = new Set<string>();
@@ -65,11 +69,17 @@ export function modelCandidates(): string[] {
   return [...DEFAULT_MODEL_CHAIN];
 }
 
-/** Candidates not (yet) refused by Groq on this instance; top fallback if all refused. */
+/** Candidates not (yet) refused by Groq on this instance; re-probe when exhausted. */
 export function liveModelCandidates(): string[] {
-  const all = modelCandidates();
-  const usable = all.filter((m) => !rejectedModels.has(m));
-  return usable.length ? usable.slice(0, 3) : all.slice(0, 1);
+  const usable = modelCandidates().filter((m) => !rejectedModels.has(m));
+  if (usable.length) return usable.slice(0, 3);
+  // Every known id has been refused at some point. Clear the memory and
+  // re-probe from the top: a model-level refusal costs ~150ms, and a retired
+  // id is far cheaper to re-ask than locking the instance out of its only
+  // live model (which all.slice(0,1) used to do — it kept retrying the first,
+  // already-dead entry forever).
+  rejectedModels.clear();
+  return modelCandidates().slice(0, 3);
 }
 
 /** The model to try first on the next request. */

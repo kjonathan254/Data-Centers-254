@@ -110,7 +110,7 @@ async function llmAnswer(
       ].join("\n");
 
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 8_000);
+  const timer = setTimeout(() => controller.abort(), 10_000);
   const messages = [
     { role: "system", content: system },
     ...history.slice(-4).map((t) => ({
@@ -123,11 +123,16 @@ async function llmAnswer(
   // Walk the model chain: when Groq has retired an id, it answers with a
   // model-level error in ~150ms — remember the rejection and try the next
   // candidate within the same request. Any other failure (auth, quota,
-  // network) ends the walk immediately. The 8s timer bounds the whole walk
+  // network) ends the walk immediately. The 10s timer bounds the whole walk
   // and is always released in the finally.
   try {
     for (const model of liveModelCandidates()) {
       try {
+        // gpt-oss models are reasoners: with a tight max_tokens their chain
+        // of thought eats the budget and content comes back empty. Give them
+        // a generous token ceiling and ask for low reasoning effort — the
+        // polish task never needs deep deliberation.
+        const isReasoner = /gpt-oss/i.test(model);
         const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
           method: "POST",
           headers: {
@@ -137,7 +142,8 @@ async function llmAnswer(
           body: JSON.stringify({
             model,
             temperature: 0.3,
-            max_tokens: 300,
+            max_tokens: 1000,
+            ...(isReasoner ? { reasoning_effort: "low" } : {}),
             messages,
           }),
           signal: controller.signal,
