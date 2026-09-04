@@ -436,3 +436,35 @@ li.dc-speaking {
   margin-inline: -0.5rem;
   padding-inline: 0.5rem;
 }
+
+/* ─── Jibu welcome card entrance ──────────────────────────────────────────── */
+@keyframes jibu-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes jibu-drawer-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animate-jibu-card {
+  animation: jibu-card-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-jibu-drawer {
+  animation: jibu-drawer-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-jibu-card,
+  .animate-jibu-drawer {
+    animation: none;
+  }
+}

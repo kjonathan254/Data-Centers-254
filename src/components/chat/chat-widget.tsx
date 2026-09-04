@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MessageCircle, X } from "lucide-react";
 import JibuChat from "@/components/chat/jibu-chat";
+import JibuWelcome from "@/components/chat/jibu-welcome";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
+import { JIBU_OPENED_KEY as PULSE_KEY } from "@/components/chat/jibu-storage-keys";
 
 /**
  * Site-wide floating chat: a quiet cyan button, bottom-right, that opens the
@@ -12,9 +14,9 @@ import { BOT_IDENTITY } from "@/lib/chatbot/identity";
  *  - hidden on /chat (the page IS the chat)
  *  - slides up when the directory's compare tray is open (they share the bottom edge)
  *  - unvisited pulse dot until first open (sessionStorage)
+ *  - one-time welcome card ~5s after landing (mobile: bottom drawer,
+ *    desktop: card above the button) — see jibu-welcome.tsx
  */
-
-const PULSE_KEY = "dc254:jibu-opened";
 
 export default function ChatWidget() {
   const pathname = usePathname();
@@ -62,7 +64,10 @@ export default function ChatWidget() {
   const bottomOffset = trayVisible ? "bottom-24 sm:bottom-20" : "bottom-4 sm:bottom-6";
 
   return (
-    <div className={`fixed right-4 z-[55] sm:right-6 ${bottomOffset}`}>
+    <>
+      {!open && <JibuWelcome trayVisible={trayVisible} onAsk={() => toggle()} />}
+
+      <div className={`fixed right-4 z-[55] sm:right-6 ${bottomOffset}`}>
       {open && (
         <div
           role="dialog"
@@ -107,6 +112,7 @@ export default function ChatWidget() {
           )}
         </button>
       )}
-    </div>
+      </div>
+    </>
   );
 }

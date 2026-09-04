@@ -39,7 +39,7 @@ interface ApiReply {
 
 let messageId = 0;
 
-function JibuAvatar({ className = "size-8" }: { className?: string }) {
+export function JibuAvatar({ className = "size-8" }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
