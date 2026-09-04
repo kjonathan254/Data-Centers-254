@@ -4,13 +4,15 @@ import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
-  resolveGroqKey,
-  liveModelCandidates,
-  LLM_BASE_URL,
+  activeProviders,
+  reasonerEffort,
+  tokenCeiling,
+  stripThinking,
   llmTemporarilyDown,
   noteLlmFailure,
   noteLlmSuccess,
   noteModelRejected,
+  noteProviderAuthDead,
 } from "@/lib/chatbot/llm";
 
 /**
@@ -31,8 +33,11 @@ import {
  * Env (all optional; see src/lib/chatbot/llm.ts for resolution order):
  *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN /
  *   DATACENTRE254_JIBU, or any groq-or-jibu-named var holding a gsk_… key)
- *   GROQ_MODEL / CHAT_LLM_MODEL — pins the model; otherwise a self-healing
- *   candidate chain advances whenever Groq retires an id.
+ *   NVIDIA_API_KEY — free nvapi-… key from build.nvidia.com; dormant fail-over
+ *   HF_TOKEN — HuggingFace Inference Providers token; dormant third slot
+ *   GROQ_MODEL / NVIDIA_MODEL / HF_MODEL — pin a provider's first candidate;
+ *   otherwise each provider walks a self-healing candidate chain that advances
+ *   whenever an id is retired, and a dead key hands over to the next provider.
  */
 
 export const runtime = "nodejs";
@@ -69,8 +74,8 @@ async function llmAnswer(
   deterministic: string,
   weak: boolean,
 ): Promise<string | null> {
-  const apiKey = resolveGroqKey();
-  if (!apiKey || llmTemporarilyDown()) return null;
+  const providers = activeProviders();
+  if (!providers.length || llmTemporarilyDown()) return null;
 
   const factBlock = facts.length
     ? facts.map((f, i) => `[${i + 1}] ${f.title}: ${f.text}`).join("\n")
@@ -108,75 +113,86 @@ async function llmAnswer(
     { role: "user", content: task },
   ];
 
-  // Walk the model chain: when Groq has retired an id, it answers with a
-  // model-level error in ~150ms — remember the rejection and try the next
-  // candidate within the same request. Any other failure (auth, quota,
-  // network) ends the walk immediately. The 10s timer bounds the whole walk
-  // and is always released in the finally.
+  // Walk the providers, then each provider's model chain: when a provider has
+  // retired an id, it answers with a model-level error in ~150ms — remember
+  // the rejection and try the next candidate within the same request. A
+  // 401/403 benches the whole provider (dead key) and hands over to the next
+  // one. Any other failure (quota, network) ends the walk immediately. The
+  // 10s timer bounds the whole walk and is always released in the finally.
   try {
-    for (const model of liveModelCandidates()) {
-      try {
-        // gpt-oss models are reasoners: with a tight max_tokens their chain
-        // of thought eats the budget and content comes back empty. Give them
-        // a generous token ceiling and ask for low reasoning effort — the
-        // polish task never needs deep deliberation.
-        const isReasoner = /gpt-oss/i.test(model);
-        const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify({
-            model,
-            temperature: 0.3,
-            max_tokens: 1000,
-            ...(isReasoner ? { reasoning_effort: "low" } : {}),
-            messages,
-          }),
-          signal: controller.signal,
-        });
-        if (!res.ok) {
-          const errBody = await res.text().catch(() => "");
-          let errCode = "";
-          try {
-            errCode = String((JSON.parse(errBody) as { error?: { code?: string } })?.error?.code ?? "");
-          } catch {
-            // non-JSON error body — fall through to status heuristics
+    for (const provider of providers) {
+      let providerDead = false;
+      for (const model of provider.models) {
+        try {
+          // gpt-oss models are reasoners: with a tight max_tokens their chain
+          // of thought eats the budget and content comes back empty. Give
+          // reasoners a generous ceiling and ask gpt-oss for low reasoning
+          // effort — the polish task never needs deep deliberation.
+          const res = await fetch(`${provider.baseUrl}/chat/completions`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${provider.key}`,
+            },
+            body: JSON.stringify({
+              model,
+              temperature: 0.3,
+              max_tokens: tokenCeiling(model),
+              ...(reasonerEffort(model) ? { reasoning_effort: reasonerEffort(model) } : {}),
+              messages,
+            }),
+            signal: controller.signal,
+          });
+          if (!res.ok) {
+            const errBody = await res.text().catch(() => "");
+            let errCode = "";
+            try {
+              errCode = String((JSON.parse(errBody) as { error?: { code?: string } })?.error?.code ?? "");
+            } catch {
+              // non-JSON error body — fall through to status heuristics
+            }
+            if (res.status === 401 || res.status === 403) {
+              // Key revoked or mistyped — bench this provider, try the next.
+              noteProviderAuthDead(provider.id);
+              providerDead = true;
+              break;
+            }
+            const modelError =
+              /model/i.test(errCode) ||
+              (res.status === 404 && /model/i.test(errBody));
+            if (modelError) {
+              noteModelRejected(provider.id, model);
+              continue;
+            }
+            noteLlmFailure();
+            return null;
           }
-          const modelError =
-            /model/i.test(errCode) ||
-            (res.status === 404 && /model/i.test(errBody));
-          if (modelError) {
-            noteModelRejected(model);
-            continue;
+          const data = (await res.json()) as {
+            choices?: { message?: { content?: string } }[];
+          };
+          let text = stripThinking(data.choices?.[0]?.message?.content?.trim() ?? "");
+          if (!text || text.length < 8 || text.length > 1200) {
+            noteLlmFailure();
+            return null;
           }
+          if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
+          // Strip markdown emphasis — the UI renders plain text + citation chips.
+          text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
+          if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
+            noteLlmFailure();
+            return null;
+          }
+          noteLlmSuccess();
+          return text;
+        } catch {
           noteLlmFailure();
           return null;
         }
-        const data = (await res.json()) as {
-          choices?: { message?: { content?: string } }[];
-        };
-        let text = data.choices?.[0]?.message?.content?.trim() ?? "";
-        if (!text || text.length < 8 || text.length > 1200) {
-          noteLlmFailure();
-          return null;
-        }
-        if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
-        // Strip markdown emphasis — the UI renders plain text + citation chips.
-        text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
-        if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
-          noteLlmFailure();
-          return null;
-        }
-        noteLlmSuccess();
-        return text;
-      } catch {
-        noteLlmFailure();
-        return null;
       }
+      if (providerDead) continue; // benched — next provider answers
+      // Every remaining candidate id of this provider was refused as a model
+      // error this request; fall through to the next provider.
     }
-    // Every remaining candidate id was refused as a model error this request.
     noteLlmFailure();
     return null;
   } finally {
