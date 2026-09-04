@@ -5,6 +5,7 @@ import {
   modelCandidates,
   LLM_BASE_URL,
 } from "@/lib/chatbot/llm";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 /**
  * GET /api/chat/health — LLM wiring diagnostic for Jibu.
@@ -28,19 +29,7 @@ export const runtime = "nodejs";
 
 const RATE_LIMIT = 10;
 const WINDOW_MS = 60_000;
-const hits = new Map<string, { count: number; reset: number }>();
 const MAX_LISTED_MODELS = 60;
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(ip);
-  if (!entry || now > entry.reset) {
-    hits.set(ip, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > RATE_LIMIT;
-}
 
 type GroqProbe = {
   reachable: boolean | null;
@@ -104,11 +93,8 @@ function buildHint(groq: GroqProbe): string | null {
 }
 
 export async function GET(request: NextRequest) {
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    request.headers.get("x-real-ip") ||
-    "unknown";
-  if (rateLimited(ip)) {
+  const ip = clientIp(request);
+  if ((await rateLimit("health", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json({ error: "Slow down a little." }, { status: 429 });
   }
 

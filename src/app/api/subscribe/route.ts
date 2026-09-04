@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { rateLimit, clientIp } from '@/lib/rate-limit';
 
 /**
  * Newsletter subscription endpoint.
@@ -21,21 +22,10 @@ const MAX_EMAIL_LENGTH = 254;
 const MAX_SOURCE_LENGTH = 60;
 
 // Anti-bombing: 10 signups per minute per IP (on top of the global proxy.ts
-// limiter) so third-party addresses can't be mass-subscribed.
+// limiter) so third-party addresses can't be mass-subscribed. Persistent
+// (Upstash) when configured — see src/lib/rate-limit.ts.
 const RATE_LIMIT = 10;
 const WINDOW_MS = 60_000;
-const hits = new Map<string, { count: number; reset: number }>();
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(ip);
-  if (!entry || now > entry.reset) {
-    hits.set(ip, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > RATE_LIMIT;
-}
 
 /** Never log a full subscriber address — PII belongs out of logs. */
 function maskEmail(email: string): string {
@@ -56,11 +46,8 @@ function sanitizeSource(raw: unknown): string {
 }
 
 export async function POST(req: NextRequest) {
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.headers.get("x-real-ip") ||
-    "unknown";
-  if (rateLimited(ip)) {
+  const ip = clientIp(req);
+  if ((await rateLimit('subscribe', ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
       { error: "Too many attempts. Please wait a minute." },
       { status: 429 }

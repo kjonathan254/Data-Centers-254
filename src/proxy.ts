@@ -1,53 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimit, clientIp } from '@/lib/rate-limit';
 
-// Simple in-memory rate limiter (resets per deployment on Vercel serverless)
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-
+// Global per-IP limiter for every /api route. Was per-instance in-memory only;
+// since audit remediation #9 it upgrades to persistent/global automatically
+// when Upstash Redis env vars are configured (see src/lib/rate-limit.ts).
 const RATE_LIMIT = 60; // requests per window
 const WINDOW_MS = 60_000; // 1 minute window
 
-function getRateLimitKey(req: NextRequest): string {
-  // Use CF-Connecting-IP (Cloudflare/Vercel) or fallback to X-Forwarded-For
-  const ip =
-    req.headers.get('cf-connecting-ip') ||
-    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    'unknown';
-  return ip;
-}
-
-export function proxy(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   // Only rate-limit API routes (except the root /api health check)
   const { pathname } = req.nextUrl;
   if (!pathname.startsWith('/api/') || pathname === '/api') {
     return NextResponse.next();
   }
 
-  const key = getRateLimitKey(req);
+  const key = clientIp(req);
+  const verdict = await rateLimit('api', key, RATE_LIMIT, WINDOW_MS);
   const now = Date.now();
 
-  let entry = rateLimitMap.get(key);
-  if (!entry || now > entry.resetAt) {
-    entry = { count: 0, resetAt: now + WINDOW_MS };
-    rateLimitMap.set(key, entry);
-  }
-
-  entry.count++;
-
-  const remaining = Math.max(0, RATE_LIMIT - entry.count);
-  const resetAt = Math.ceil(entry.resetAt / 1000);
+  const resetAt = Math.ceil(verdict.resetAt / 1000);
 
   const res = NextResponse.next();
   res.headers.set('X-RateLimit-Limit', String(RATE_LIMIT));
-  res.headers.set('X-RateLimit-Remaining', String(remaining));
+  res.headers.set('X-RateLimit-Remaining', String(verdict.remaining));
   res.headers.set('X-RateLimit-Reset', String(resetAt));
 
-  if (entry.count > RATE_LIMIT) {
+  if (verdict.limited) {
     return NextResponse.json(
       { error: 'Too many requests. Please wait a moment.' },
       {
         status: 429,
         headers: {
-          'Retry-After': String(Math.ceil((entry.resetAt - now) / 1000)),
+          'Retry-After': String(Math.max(1, Math.ceil((verdict.resetAt - now) / 1000))),
           'X-RateLimit-Limit': String(RATE_LIMIT),
           'X-RateLimit-Remaining': '0',
           'X-RateLimit-Reset': String(resetAt),

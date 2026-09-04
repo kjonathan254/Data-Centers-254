@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
@@ -44,21 +45,8 @@ const BodySchema = z.object({
     .optional(),
 });
 
-// ─── Best-effort rate limiting (per serverless instance) ─────────────────────
 const RATE_LIMIT = 20;
 const WINDOW_MS = 60_000;
-const hits = new Map<string, { count: number; reset: number }>();
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(ip);
-  if (!entry || now > entry.reset) {
-    hits.set(ip, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > RATE_LIMIT;
-}
 
 // ─── Optional LLM step (grounded, time-boxed, self-limiting) ────────────────
 
@@ -199,11 +187,8 @@ async function llmAnswer(
 // ─── Handler ─────────────────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    request.headers.get("x-real-ip") ||
-    "unknown";
-  if (rateLimited(ip)) {
+  const ip = clientIp(request);
+  if ((await rateLimit("chat", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
       { error: "Too many questions, too fast. Give me a moment." },
       { status: 429 },

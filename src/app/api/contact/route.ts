@@ -1,25 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 const CONTACT_EMAIL = "elmaccommunicationslimited@gmail.com";
 const FROM_NAME = "Data Centre 254";
 
 // Contact form is an abuse magnet (mail-bombing to the inbox + Resend quota
 // burn): 5 sends per minute per IP, on top of the global proxy.ts limiter.
+// Persistent (Upstash) when configured — see src/lib/rate-limit.ts.
 const RATE_LIMIT = 5;
 const WINDOW_MS = 60_000;
-const hits = new Map<string, { count: number; reset: number }>();
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(ip);
-  if (!entry || now > entry.reset) {
-    hits.set(ip, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > RATE_LIMIT;
-}
 
 /** Escape a value for safe interpolation into the HTML email body. */
 function escapeHtml(s: string): string {
@@ -47,11 +37,8 @@ function sanitize(str: string, maxLen: number): string {
 }
 
 export async function POST(req: NextRequest) {
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.headers.get("x-real-ip") ||
-    "unknown";
-  if (rateLimited(ip)) {
+  const ip = clientIp(req);
+  if ((await rateLimit("contact", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
       { error: "Too many messages. Please wait a minute." },
       { status: 429 }

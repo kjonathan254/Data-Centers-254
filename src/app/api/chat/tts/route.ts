@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { resolveGroqKey, LLM_BASE_URL, llmTtsVoice } from "@/lib/chatbot/llm";
 
 /**
@@ -20,27 +21,12 @@ const BodySchema = z.object({ text: z.string().trim().min(2).max(600) });
 
 const RATE_LIMIT = 10;
 const WINDOW_MS = 60_000;
-const hits = new Map<string, { count: number; reset: number }>();
-
-function rateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = hits.get(ip);
-  if (!entry || now > entry.reset) {
-    hits.set(ip, { count: 1, reset: now + WINDOW_MS });
-    return false;
-  }
-  entry.count += 1;
-  return entry.count > RATE_LIMIT;
-}
 
 let downUntil = 0;
 
 export async function POST(request: NextRequest) {
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    request.headers.get("x-real-ip") ||
-    "unknown";
-  if (rateLimited(ip)) {
+  const ip = clientIp(request);
+  if ((await rateLimit("tts", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json({ error: "Too fast — one moment." }, { status: 429 });
   }
 
