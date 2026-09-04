@@ -9,23 +9,23 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
   },
-  // Audit remediation #8 — CSP rollout stage 1 (report-only).
+  // Audit remediation #8 — CSP stage 2: ENFORCED (flipped from report-only
+  // after codebase-wide verification: no iframes, no external scripts/fonts/
+  // CDNs, no client-side external fetches, no eval/importScripts; GA4 is the
+  // only third party and is fully covered below).
   //
-  // Violations are POSTed to /api/csp-report (rate-limited, path-only logs)
-  // and NOTHING is blocked yet, so this cannot break GA, the chat stack or
-  // the PWA. Policy notes:
-  //   script-src  — 'unsafe-inline' covers Next's hydration bootstrap + inline
-  //                 JSON-LD + the inline GA4 init; googletagmanager serves
-  //                 gtag.js. Vercel Analytics + the service worker are
-  //                 same-origin.
-  //   connect-src — GA4 beacons go to google-analytics.com /
-  //                 analytics.google.com; everything else is same-origin API.
-  //   img/media   — all imagery is local (data: covers Next blur placeholders).
+  // What this policy does for the site: even if an article, dependency or
+  // comment ever tried to inject malicious content, the browser refuses to
+  // load scripts from anywhere but this site + Google's tag manager, blocks
+  // Flash/Java-style plugin objects, stops the page being framed by other
+  // sites, and stops forms silently submitting visitor data elsewhere.
   //
-  // Stage 2 (after ~1 week of clean reports): rename the key to
-  // "Content-Security-Policy" to enforce.
+  // Violations (i.e. anything blocked) are still POSTed to /api/csp-report
+  // as a permanent regression tripwire. If a future feature needs a new
+  // origin (video embeds, CDN fonts...), add it to the matching directive
+  // here — the tripwire report will name the exact directive.
   {
-    key: "Content-Security-Policy-Report-Only",
+    key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
       "base-uri 'self'",

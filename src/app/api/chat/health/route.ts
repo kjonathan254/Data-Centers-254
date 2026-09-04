@@ -5,7 +5,7 @@ import {
   modelCandidates,
   LLM_BASE_URL,
 } from "@/lib/chatbot/llm";
-import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { rateLimit, clientIp, persistentLimitingActive } from "@/lib/rate-limit";
 
 /**
  * GET /api/chat/health — LLM wiring diagnostic for Jibu.
@@ -94,7 +94,8 @@ function buildHint(groq: GroqProbe): string | null {
 
 export async function GET(request: NextRequest) {
   const ip = clientIp(request);
-  if ((await rateLimit("health", ip, RATE_LIMIT, WINDOW_MS)).limited) {
+  const rlVerdict = await rateLimit("health", ip, RATE_LIMIT, WINDOW_MS);
+  if (rlVerdict.limited) {
     return NextResponse.json({ error: "Slow down a little." }, { status: 429 });
   }
 
@@ -108,6 +109,12 @@ export async function GET(request: NextRequest) {
         keyResolved: false,
         groq: { reachable: null, authOk: null, modelAvailable: null, availableModels: null },
         model,
+        // Limiter diagnostics (audit #9): which backend the shared rate
+        // limiter is using in this deployment. Non-sensitive by design.
+        rateLimit: {
+          configured: persistentLimitingActive(),
+          backend: rlVerdict.backend,
+        },
         hint: "No Groq key is visible to this deployment. Add GROQ_API_KEY (Project Settings → Environment Variables) in the Vercel project that serves this domain, then redeploy — env vars only apply to deployments created after they are saved.",
       },
       { headers: { "Cache-Control": "no-store" } },
@@ -118,7 +125,17 @@ export async function GET(request: NextRequest) {
   const hint = buildHint(groq);
 
   return NextResponse.json(
-    { ok: true, keyResolved: true, groq, model, hint },
+    {
+      ok: true,
+      keyResolved: true,
+      groq,
+      model,
+      rateLimit: {
+        configured: persistentLimitingActive(),
+        backend: rlVerdict.backend,
+      },
+      hint,
+    },
     { headers: { "Cache-Control": "no-store" } },
   );
 }
