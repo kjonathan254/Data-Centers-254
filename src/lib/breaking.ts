@@ -38,12 +38,13 @@ export interface BreakingItem {
 const BREAKING_TTL_HOURS = 72;
 
 export const breakingNews: BreakingItem | null = {
-  label: "Breaking",
+  label: "New analysis",
   title:
-    "MTN formally confirms Africa Data Hub partnership — Bayobab joins as shareholder, platform targets AI-ready capacity across Africa",
-  href: "/articles/mtn-africa-data-hub-ai-data-centres",
-  dateText: "31 Aug 2026",
-  publishedAt: "2026-08-31",
+    "PwC's $31.6 trillion data centre capex forecast puts Africa's $255bn share among the map's winners",
+  href: "/articles/pwc-global-data-centre-capex-2050",
+  dateText: "4 Sep 2026",
+  publishedAt: "2026-09-04",
+  serious: true,
 };
 
 /**
