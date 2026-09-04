@@ -3,10 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
-# Environment
-.env
-.env.local
-.env.*.local
+# Environment (block every .env variant; the sanitized template stays tracked)
+.env*
+!.env.example
 
 # Build artifacts
 .next/

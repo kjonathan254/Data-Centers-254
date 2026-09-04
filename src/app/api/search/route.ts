@@ -3,7 +3,10 @@ import { getAllArticles } from "@/lib/articles";
 import { getFacilities } from "@/lib/directory-data";
 
 export async function GET(req: NextRequest) {
-  const q = req.nextUrl.searchParams.get("q")?.trim()?.toLowerCase();
+  // Cap the query: search scans every article's full text in memory, so an
+  // unbounded needle turns a cheap GET into a CPU amplifier.
+  const raw = req.nextUrl.searchParams.get("q")?.trim()?.toLowerCase() ?? "";
+  const q = raw.slice(0, 100);
   if (!q || q.length < 2) {
     return NextResponse.json({ articles: [], facilities: [] });
   }

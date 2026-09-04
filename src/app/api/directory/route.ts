@@ -3,7 +3,7 @@ import { getFacilities, getFilterMeta, getDirectoryStats } from '@/lib/directory
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const search = searchParams.get('search') || '';
+  const search = (searchParams.get('search') || '').slice(0, 100);
   const status = searchParams.get('status') || '';
   const city = searchParams.get('city') || '';
   const operator = searchParams.get('operator') || '';
