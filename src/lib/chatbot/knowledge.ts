@@ -109,6 +109,16 @@ function buildRawChunks(): RawChunk[] {
     text: `KIXP, the Kenya Internet Exchange Point in Nairobi, keeps local traffic local: ${KIXP.members} member networks, peak traffic around ${KIXP.peakGbps} Gbps, running since ${KIXP.year}.`,
     boost: 1.3,
   });
+  // Kenya fixed broadband — headline numbers (CA sector statistics, June 2025;
+  // FTTH subset per Point Topic via TelcoTitans). Common question, focused chunk.
+  chunks.push({
+    id: "fact:kenya-fixed-broadband",
+    kind: "fact",
+    title: "Kenya fixed broadband subscriptions",
+    href: "/articles/africa-fibre-commercial-operating-model",
+    text: `Kenya counted about 2.14 million fixed-internet subscriptions by June 2025 per the Communications Authority, led by Safaricom with roughly 678,000 lines (about 36.5 percent share), followed by Jamii Telecommunications and Wananchi Group's Zuku. The fibre-to-the-home subset is around 1.2 million lines; the rest rides on fixed-wireless access. Penetration remains low relative to population, making Kenya one of Africa's fastest-scaling fixed-broadband markets.`,
+    boost: 1.35,
+  });
   for (const item of REGION_ITEMS) {
     if (item.type !== "datacenter") continue;
     chunks.push({
