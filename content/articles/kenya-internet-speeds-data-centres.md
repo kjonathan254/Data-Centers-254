@@ -145,7 +145,7 @@ Cloud computing and Software-as-a-Service applications require reliable, reasona
 
 ## The Urban-Rural Speed Divide
 
-![Crews erecting a distribution pole in Makueni county](/images/last-mile-pole-erection-makueni.webp)
+![Technician joining aerial cables on a utility pole from a bucket truck](/images/aerial-fibre-technician-utility-pole.webp)
 
 One of Kenya's most significant digital infrastructure challenges is the gap between internet speeds in urban and rural areas. In Nairobi's wealthy neighbourhoods, fibre connections deliver 100-500 Mbps. In rural areas of North Eastern or parts of the Rift Valley, mobile connectivity may be limited to 3G with speeds of 2-5 Mbps, or may be unavailable entirely.
 

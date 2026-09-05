@@ -125,7 +125,7 @@ Most [data centre tier ratings](/articles/data-centre-tier-ratings-explained) at
 
 Regardless of whether a facility uses CRAC or CRAH units, the arrangement of airflow within the white space has an enormous impact on cooling effectiveness. Without containment, the cold air supplied to servers mixes with the hot exhaust air before it reaches the intakes. This mixing forces cooling systems to work harder and supply more air than would otherwise be necessary.
 
-![Structured cabling connecting server racks](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/server-rack-patch-cabling.webp)
 *Hot aisle and cold aisle containment improves cooling efficiency by preventing hot and cold air from mixing*
 
 Hot aisle/cold aisle containment solves this problem by physically separating the two air streams. Server racks are arranged in alternating rows. Cold air is delivered to the front of the racks (the cold aisle), and hot exhaust air is collected from the rear (the hot aisle). Doors, plastic curtains, or rigid enclosures seal the aisles to prevent recirculation.

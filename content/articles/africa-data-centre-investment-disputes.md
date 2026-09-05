@@ -23,8 +23,8 @@ images:
     alt: "Legal and regulatory documents beside data centre infrastructure"
     caption: "Every megawatt of new African capacity carries a web of contracts — and every contract is a dispute waiting to be managed or mishandled"
     position: "hero"
-  - src: "/images/construction-crane-scaffolding.webp"
-    alt: "Cranes and scaffolding at a construction site"
+  - src: "/images/nairobi-expressway-wide.webp"
+    alt: "High-rise towers rising over the Nairobi skyline"
     caption: "Construction phase is where optimism meets delay: equipment lead times, ground conditions, and change orders breed most claims"
     position: "section-break"
   - src: "/images/dc-business-investment.webp"
@@ -83,7 +83,7 @@ Power constraints lead the list, and for good reason: grid connection delays and
 
 Land rights come next, and they arrive in several disguises: contested title, overlapping customary or community interests, wayleave disputes for fibre and power routes, and change-of-use approvals that stall at county level. Supply chain pressures — long-lead transformers, switchgear, generators, and cooling equipment with multi-year manufacturing queues — create shared-risk exposures that contracts drafted in abundant-equipment eras never anticipated. Water access is emerging as its own flashpoint as cooling-hungry facilities meet municipal supply constraints and community expectations, a tension our [cooling systems explainer](/articles/data-centre-cooling-systems-explained) touches from the engineering side. Regulatory scrutiny adds the public-law dimension: licensing conditions, environmental approvals, and data protection compliance can each change the economics of an operating facility, and each generates its own category of dispute when expectations diverge.
 
-![Cranes and scaffolding at a construction site](/images/construction-crane-scaffolding.webp)
+![High-rise towers rising over the Nairobi skyline](/images/nairobi-expressway-wide.webp)
 
 ## Managing the Risk Before It Becomes a Dispute
 

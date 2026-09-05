@@ -150,7 +150,7 @@ A broader role than cabling alone, data centre technicians handle server racking
 
 **Salary Range (Kenya):** KES 45,000–70,000 per month.
 
-![Structured cabling connecting server racks](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/server-rack-patch-cabling.webp)
 *Cable technicians form the critical entry point into the data centre career ladder*
 
 ## Mid-Level Roles (3–8 Years Experience)

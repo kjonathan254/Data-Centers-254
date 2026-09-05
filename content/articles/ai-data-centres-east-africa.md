@@ -138,7 +138,7 @@ South Africa has the most developed data centre market in Africa, with establish
 
 Kenya occupies a middle ground that is increasingly favourable for AI-specific infrastructure. It has less existing data centre capacity than South Africa, which means less legacy infrastructure to work around. Its geothermal resource is genuinely world-class and directly aligned with the 24/7 high-power demands of AI compute.
 
-![Steam plumes over a geothermal field](/images/kenya-geothermal-plant-2.webp)
+![Steam plumes over a geothermal field](/images/kenya-geothermal-plant-olkaria.webp)
 
 ## The Microsoft-G42 Lesson: Power Is the Constraint
 

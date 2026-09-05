@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/what-is-colocation-
 
 Imagine you run a growing technology company in Nairobi. You have ten servers humming in a converted storeroom in your office, connected to a single Safaricom fibre line, protected by a consumer-grade UPS that would last maybe 15 minutes during a power cut, and cooled by the building's air conditioning system that was designed for humans, not for machines that generate heat 24 hours a day. Every time there is a power blip, your IT team holds their breath. Every time the building management switches off the AC at night to save power, your server room temperature creeps up. Every time your single internet connection drops, your entire business goes offline.
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
 This is the problem that colocation solves. Instead of housing your servers in an inadequate, improvised space, you rent space in a purpose-built data centre that provides professional-grade power, cooling, connectivity, and security. Your servers sit in a facility designed specifically for them — with redundant power supplies, precision cooling, multiple fibre connections from different providers, biometric access control, 24/7 security cameras, and fire suppression systems. You own the servers and the data on them. You manage the software and applications. But the physical infrastructure — the building, the power, the cooling, the connectivity — is provided by the colocation operator.
 
@@ -82,7 +82,7 @@ For larger deployments, customers can rent a **cage** — a wire mesh enclosure 
 
 Colocation pricing is closely tied to power allocation. Each rack comes with a specific power allocation, typically measured in kilowatts (kW). A standard rack allocation in Kenya is 4–6kW, which is sufficient for 10–20 modern servers. High-density racks, needed for GPU servers or dense compute platforms, may require 10–20kW per rack, which costs more because of the additional cooling and power distribution infrastructure required.
 
-![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
+![Shore-based cable works on the Kenyan coast with a vessel offshore](/images/mombasa-cable-landing.webp)
 
 Power is delivered to the rack through power distribution units (PDUs) that are part of the facility's infrastructure. Most colocation racks are equipped with dual PDUs, each connected to a separate power path (A and B feeds), so that a failure in one power path does not affect the other. Servers with dual power supplies can connect to both PDUs, providing power redundancy at the server level.
 

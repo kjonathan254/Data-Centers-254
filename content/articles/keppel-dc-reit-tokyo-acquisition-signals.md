@@ -27,12 +27,12 @@ images:
     alt: "Exterior view of a large-scale data centre campus"
     caption: "Tokyo Data Centre 4 and 5 are freehold, hyperscale and fully fitted — the asset class global capital pays premiums for"
     position: "section-break"
-  - src: "/images/dc-servers-racks.webp"
+  - src: "/images/hero-server-hall.webp"
     alt: "Fully fitted server racks in an operational data hall"
     caption: "Fully-fitted, fully-leased facilities with investment-grade tenants are what REIT-scale capital can actually underwrite"
     position: "inline"
-  - src: "/images/hero-dc-nairobi.webp"
-    alt: "Data centre facility in Nairobi"
+  - src: "/images/nairobi-skyline.webp"
+    alt: "Nairobi's skyline at dusk"
     caption: "Kenya's facilities are earlier-stage than Tokyo's institutional-grade stock — the metrics gap is the capital gap"
     position: "inline"
 internal_links:
@@ -85,7 +85,7 @@ The reason the acquisition is distributable-income accretive rather than dilutiv
 
 Pro forma, had the deal closed on 1 January 2025, full-year distribution per unit for FY2025 would have risen 2.6 percent, from S$0.10381 to S$0.10649. Underneath that: contracted average annual rent escalation of about 2.8 percent; in-place rents estimated to be at least 30 percent below prevailing market rates, embedding reversion upside at renewal; weighted average lease expiry of 4.5 years for Tokyo Data Centre 4 and 10.6 years for Tokyo Data Centre 5; and both facilities fully occupied by four investment-grade internet enterprise and IT services clients, three of them new to the portfolio. The manager also highlighted portfolio effects — top-client concentration falling from 43.5 percent to about 38.2 percent of rental income, and contracted power capacity edging up from 95 to 96 percent.
 
-![Fully fitted server racks in an operational data hall](/images/dc-servers-racks.webp)
+![Fully fitted server racks in an operational data hall](/images/hero-server-hall.webp)
 
 Each line item answers a specific investor fear. Escalators answer inflation. Below-market in-place rents answer valuation risk — you are not buying the top of the market. Long WALE answers vacancy risk. Investment-grade covenants answer counterparty risk. And contracted power capacity answers the question that has become the industry's universal constraint: does the asset control the electrons its revenue depends on? Kenya's operators will recognise the last one immediately, because grid access is precisely where [Kenya's power infrastructure](/articles/kenya-power-infrastructure-data-centres) shapes local deal terms.
 
@@ -97,7 +97,7 @@ The connection to Kenya is not rhetorical. Global capital is finite, fungible, a
 
 The answer, of course, is growth — African data centre demand is compounding faster than Tokyo's, and our [Kenya market outlook](/articles/kenya-data-centre-market-outlook-2025-2030) makes that case in detail. But growth only converts into capital when it arrives wrapped in the contractual features this deal displays. That is the practical translation for Kenyan founders and facility owners: the valuation conversation is won in the lease, not in the pitch deck. Lease length, tenant covenant quality, escalators, power contracts, and concentration limits are the difference between pricing an asset as infrastructure and pricing it as a bet.
 
-![Data centre facility in Nairobi](/images/hero-dc-nairobi.webp)
+![Nairobi's skyline at dusk](/images/nairobi-skyline.webp)
 
 There is a local-capital angle too. Kenya has no listed data centre REIT, and Kenya's capital markets have yet to see a securitised digital infrastructure vehicle of the kind Singapore, Japan, and increasingly Europe take for granted. The [tax incentives](/articles/tax-incentives-data-centre-investment-kenya) available to Kenyan data centre investors address the build phase; a REIT framework would address the exit phase, giving today's private backers a route to recycle capital into the next facility. Until that market deepens, the Keppels of the world will keep finding African exposure through private development capital rather than portfolio acquisitions — because there is not yet an institutional-grade portfolio to buy.
 

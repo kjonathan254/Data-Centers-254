@@ -23,7 +23,7 @@ images:
     alt: "Map of Africa showing the distribution of major data centre markets"
     caption: "The Middle East & Africa colocation market is set to nearly quadruple by 2031 — but the growth is anything but evenly spread"
     position: "hero"
-  - src: "/images/dc-servers-racks.webp"
+  - src: "/images/hero-server-hall.webp"
     alt: "Rows of server racks inside a colocation data hall"
     caption: "Colocation remains the on-ramp for enterprises that need capacity without the balance sheet of a private build"
     position: "section-break"
@@ -77,7 +77,7 @@ Arizton's central finding is that colocation in MEA is growing because it solves
 
 The growth is underpinned by policy as much as by demand. Economic diversification strategies — Saudi Arabia's Vision 2030 being the loudest, but similar playbooks across the Gulf and in African capitals — treat data centre capacity as a sovereign capability. Rising internet traffic, expanding smart city projects, and favourable regulatory frameworks do the rest. The report also flags the counterweight honestly: geopolitical conflict and regional instability can delay projects through supply chain disruption, material shortages, and labour constraints. Paradoxically, the same instability pushes investment toward the region's more stable markets, which is precisely the bracket Kenya markets itself in.
 
-![Rows of server racks inside a colocation data hall](/images/dc-servers-racks.webp)
+![Rows of server racks inside a colocation data hall](/images/hero-server-hall.webp)
 
 One segment detail deserves attention from buyers. Despite the sustainability conversation, diesel generators remain the backbone of resilience across the region — Africa Data Centres' Lagos facility, for example, maintains 48 hours of diesel backup at full load. The report notes newer UPS chemistries such as Nickel-Zinc and Sodium-Ion batteries gaining traction on power density and safety, and confirms that the 42U rack remains the workhorse while 45U–48U cabinets appear in large environments. For anyone procuring colocation in Nairobi, those are the rack-level realities behind the brochure.
 

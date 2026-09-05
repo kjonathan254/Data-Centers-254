@@ -218,7 +218,7 @@ Modern Kenyan data centres integrate fire detection and suppression into their *
 - Event logging for compliance auditing and insurance documentation
 - Integration with [data centre security explained](/articles/data-centre-security-explained) systems for coordinated emergency response
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
 ## Cost Implications
 

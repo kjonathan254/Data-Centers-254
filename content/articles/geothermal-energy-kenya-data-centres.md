@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/geothermal-energy-k
 
 Deep beneath the floor of the Great Rift Valley, water seeping into fractures in the Earth's crust encounters rock heated by magma chambers lying only a few kilometres below the surface. This water becomes superheated — reaching temperatures of 200–350 degrees Celsius — and rises to the surface as steam through geological faults. For millions of years, this process occurred unseen and unutilised. Today, it powers approximately 45% of Kenya's electricity and, through the national grid, powers every data centre in Nairobi.
 
-![Geothermal pipelines and steam wellheads](/images/kenya-geothermal-plant-4.webp)
+![Geothermal pipelines and steam wellheads](/images/kenya-geothermal-plant-3.webp)
 
 Geothermal energy is Kenya's most important energy asset for data centres, and it is an advantage that no amount of solar panels, wind turbines, or policy incentives can fully replicate in other markets. Understanding how geothermal power works, why it is so well-suited to data centre loads, and what its limitations are, is essential for anyone evaluating Kenya as a data centre location or investment destination.
 

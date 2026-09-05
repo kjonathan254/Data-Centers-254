@@ -196,7 +196,7 @@ The detailed design phase translates the concept into construction-ready documen
 
 ## Phase 4: Construction Considerations Specific to Kenya
 
-![Tower crane and scaffolding on a construction site](/images/construction-crane-scaffolding.webp)
+![Construction cranes rising over the Nairobi skyline](/images/dc-business-investment.webp)
 
 ### Materials Availability and Import Logistics
 

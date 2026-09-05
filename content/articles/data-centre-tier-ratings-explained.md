@@ -22,7 +22,7 @@ images:
     alt:  "Data centre power distribution and backup systems"
     caption: "Tier ratings grade the redundancy of power and cooling paths — the systems that keep sites alive."
     position: "hero"
-  - src: "/images/racks-cabling.webp"
+  - src: "/images/server-rack-patch-cabling.webp"
     alt: "Structured cabling connecting server racks"
     caption: "Structured cabling with redundant paths is a hallmark of Tier III and above data centres"
     position: "section-break"
@@ -96,7 +96,7 @@ In a Tier III facility, you can replace a UPS unit, swap out a cooling module, o
 
 Tier III guarantees 99.982% availability — no more than 1.6 hours of downtime per year. This is the minimum requirement for most enterprise contracts, banking regulations, and cloud service level agreements. In Kenya, iXAfrica NBOX1.1, Africa Data Centres' Nairobi facilities, and several other commercial operators design to this standard.
 
-![Structured cabling connecting server racks](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/server-rack-patch-cabling.webp)
 
 ### Tier IV — Fault Tolerant (99.995% uptime)
 

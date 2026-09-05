@@ -129,7 +129,7 @@ A data centre is only as valuable as the networks it connects. In Kenya, where [
 
 This article explains how data centre interconnection and peering work in Kenya, covering the Kenya Internet Exchange Point (KIXP), cross-connects within facilities, the economics of peering versus transit, and why Kenya is consolidating its position as East Africa's premier interconnection hub.
 
-![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
+![Shore-based cable works on the Kenyan coast with a vessel offshore](/images/mombasa-cable-landing.webp)
 *Network switching infrastructure enabling interconnection and peering within a Kenyan data centre*
 
 ## What Is an Internet Exchange Point (IXP)?

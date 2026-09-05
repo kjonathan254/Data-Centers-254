@@ -15,7 +15,7 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/dc-servers-racks.webp"
+og_image: "/images/hero-server-hall.webp"
 reading_time: "11 min"
 images:
   - src: "/images/whats-inside-ai-data-center-wide.webp"
@@ -92,7 +92,7 @@ Nairobi 2 represents a more modern addition to the company's Kenyan portfolio, a
 
 The Mombasa Road location for both Nairobi facilities is strategically significant. It is the primary fibre corridor connecting Nairobi to the coastal submarine cable landing stations. All four major subsea cables serving Kenya, EASSy, SEACOM, TEAMS, and DARE1, land in Mombasa and their terrestrial extensions pass through this corridor. Facilities on Mombasa Road benefit from direct access to diverse fibre routes, low-latency connectivity to international gateways, and proximity to networks serving landlocked East African markets.
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
 ### Mombasa Facility
 

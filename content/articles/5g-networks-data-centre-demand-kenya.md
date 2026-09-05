@@ -103,7 +103,7 @@ In Kenya's agricultural sector alone, IoT sensors for soil monitoring, precision
 
 ### Technical Requirements for MEC Nodes
 
-![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
+![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-4.webp)
 
 Each MEC node in a 5G network has specific infrastructure requirements that distinguish it from both a traditional data centre and a simple cell tower:
 

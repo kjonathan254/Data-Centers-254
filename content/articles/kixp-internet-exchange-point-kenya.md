@@ -15,7 +15,7 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/submarine-cables-map.webp"
+og_image: "/images/africa-dc-map.webp"
 reading_time: "10 min"
 images:
   - src: "/images/mombasa-cable-landing.webp"
@@ -100,7 +100,7 @@ KIXP's membership has expanded far beyond traditional ISPs. The current member r
 - **Government and education**: The Kenya Education Network (KENET), which connects universities and research institutions across the country, peers at KIXP. Government services hosted by the ICT Authority also exchange traffic locally.
 - **Cloud and hosting providers**: Local and regional cloud providers connect at KIXP so that their customers' workloads communicate efficiently with other Kenyan networks.
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
 ## Peering vs Transit: What Is the Difference?
 
@@ -125,7 +125,7 @@ Consider the arithmetic. If Safaricom handles 500 Gbps of total traffic during p
 
 KIXP also reduces the load on Kenya's international links. This is important for national resilience. The [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa) have finite capacity. During cable cuts — which happen several times a year — KIXP-local traffic is completely unaffected. Kenyans can still access local banking, government services, and locally cached content even when the country's connection to the global internet is degraded.
 
-![Crews hauling a submarine cable ashore at Mombasa](/images/mombasa-cable-landing-2.webp)
+![Aerial view of the Port of Mombasa and its container terminal](/images/mombasa-port-wide.webp)
 
 ## KIXP's Technical Infrastructure
 

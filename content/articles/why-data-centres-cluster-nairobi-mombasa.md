@@ -16,7 +16,7 @@ published_date: "2026-08-30"
 updated_date: "2026-08-30"
 category: "Market Analysis"
 cluster: "Kenya"
-og_image: "/images/mombasa-cable-landing-2.webp"
+og_image: "/images/mombasa-port-wide.webp"
 reading_time: "9 min"
 images:
   - src: "/images/mombasa-cable-landing.webp"

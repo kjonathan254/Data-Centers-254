@@ -88,7 +88,7 @@ The specific rates vary by tariff category and are adjusted periodically by EPRA
 
 The demand charge is based on the maximum power demand recorded during the billing period, measured in kilovolt-amperes (kVA). This is different from energy charges in a crucial way: the demand charge reflects the peak power draw, not the total energy consumed. A data centre that draws a steady 1,000 kVA all month pays a lower demand charge (per kVA) than one that normally draws 800 kVA but occasionally spikes to 1,500 kVA, even if both consume the same total energy.
 
-![Solar array at a Kenyan power plant](/images/kenya-solar-farm-3.webp)
+![Engineers inspect a solar installation in Kenya](/images/kenya-solar-farm.webp)
 
 Demand charges for large commercial customers typically range from KES 300 to KES 500 per kVA per month. For a data centre with a contracted demand of 2,000 kVA (2 MVA), the monthly demand charge alone is KES 600,000 to KES 1,000,000. For a large facility with 5,000 kVA of contracted demand, the demand charge can exceed KES 2 million per month — a significant cost that must be managed.
 

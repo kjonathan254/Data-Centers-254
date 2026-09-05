@@ -95,7 +95,7 @@ Safaricom is Kenya's largest telecom operator by revenue and subscriber base, an
 
 Safaricom's unique advantage is its mobile network. The company operates the largest 4G and 5G network in Kenya, and many data centre customers want connectivity that spans both fixed fibre and mobile networks. Safaricom can offer integrated solutions that include dedicated fibre links, mobile backhaul, and even direct interconnection with the M-Pesa platform — a compelling proposition for financial services companies.
 
-![Submarine cable landing supported by orange buoys in the surf](/images/mombasa-cable-landing-3.webp)
+![Shore-based cable works on the Kenyan coast with a vessel offshore](/images/mombasa-cable-landing.webp)
 
 ### Telkom Kenya
 
@@ -129,7 +129,7 @@ Once traffic reaches Nairobi, it is distributed over metropolitan fibre networks
 
 The final segment is inside the data centre itself. Fibre from external providers terminates in a meet-me room (MMR) or carrier room, where patch panels allow connections to be made between providers and customers. A "cross-connect" is a physical cable (often a short fibre patch cord) that connects a customer's rack or cage to a specific provider's network. Cross-connects are how customers choose which networks they connect to, and they are typically provisioned within 24–48 hours in a well-managed facility.
 
-![Crews hauling a submarine cable ashore at Mombasa](/images/mombasa-cable-landing-2.webp)
+![Aerial view of the Port of Mombasa and its container terminal](/images/mombasa-port-wide.webp)
 
 ## Redundancy: The Most Critical Requirement
 

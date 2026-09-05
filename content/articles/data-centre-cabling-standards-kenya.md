@@ -15,7 +15,7 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Infrastructure"
 cluster: "Infrastructure"
-og_image: "/images/racks-cabling.webp"
+og_image: "/images/hero-server-hall.webp"
 reading_time: "18 min"
 images:
   - src: "/images/racks-cabling.webp"
@@ -65,7 +65,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-cabling-standards-kenya"
 ---
 
-![Structured cabling connecting server racks](/images/racks-cabling.webp)
+![Structured cabling connecting server racks](/images/server-rack-patch-cabling.webp)
 
 Structured cabling is the nervous system of any data centre — and getting it wrong in Kenya carries significant operational and financial consequences. From the high-density halls of Africa Data Centres in Nairobi to growing colocation facilities in Mombasa, the quality of cabling infrastructure directly determines network reliability, troubleshooting speed, and the ability to attract enterprise tenants. This guide examines the **data centre cabling standards Kenya** operators follow, the practical challenges of implementation, and the emerging requirements driven by AI workloads.
 

@@ -15,7 +15,7 @@ published_date: "2026-08-29"
 updated_date: "2026-08-29"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/racks-cabling.webp"
+og_image: "/images/dc-server-chip-wide.webp"
 reading_time: "10 min"
 images:
   - src: "/images/whats-inside-ai-data-center-wide.webp"

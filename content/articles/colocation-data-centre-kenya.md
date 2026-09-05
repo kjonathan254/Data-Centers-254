@@ -66,7 +66,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/colocation-data-cen
 
 Colocation lets you place your own servers inside a professionally built and managed facility. You bring the hardware; the provider supplies the space, power, cooling, connectivity, and physical security. For companies in Kenya that need control over their infrastructure without the capital outlay of building a data centre, colocation is the standard solution.
 
-![Blue-lit server racks in a data hall](/images/dc-servers-racks.webp)
+![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
 Banks, mobile network operators, fintech platforms, and government agencies across Kenya use colocation to house their critical systems. The model has matured significantly in Nairobi over the past decade, with multiple Tier III facilities now offering carrier-neutral space along the Mombasa Road corridor.
 

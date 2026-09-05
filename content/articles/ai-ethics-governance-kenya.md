@@ -64,7 +64,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
 ---
 
-![Wind turbines on green hills](/images/kenya-wind-turbines-4.webp)
+![Wind turbines on a green Kenyan hill](/images/kenya-wind-turbines.webp)
 
 ## Why AI Ethics and Governance Matter Now
 
