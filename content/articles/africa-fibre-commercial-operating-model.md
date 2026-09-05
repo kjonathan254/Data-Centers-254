@@ -23,17 +23,25 @@ images:
     alt: "Fibre trench being laid along a Nairobi street"
     caption: "Laying fibre in Nairobi's streets is the easy half — turning that capacity into services households can discover, afford and order is where returns are now decided"
     position: "hero"
-  - src: "/images/metro-fibre-civil-works.webp"
-    alt: "Civil works for metro fibre deployment"
-    caption: "Metro fibre builds across African cities are compounding fast — but coverage alone no longer differentiates an operator"
+  - src: "/images/aerial-fibre-technician-utility-pole.webp"
+    alt: "Technician joining aerial fibre cables on a utility pole from a bucket truck"
+    caption: "Connection crews like this one turn passed fibre into paying subscribers — the commercial layer is where the new capital now has to work"
     position: "section-break"
   - src: "/images/submarine-cables-map.webp"
     alt: "Map of submarine cables serving Africa"
     caption: "New subsea systems like 2Africa keep raising capacity at the coast; the commercial task is carrying it inland as affordable services"
     position: "inline"
-  - src: "/images/woman-network-engineer-patch-panel.webp"
-    alt: "Network engineer working at a fibre patch panel"
-    caption: "Open-access wholesale lives or dies in the operational layer — coverage data, ordering, fulfilment and settlement that partners can rely on"
+  - src: "/images/fibre-billboard-nairobi-street.webp"
+    alt: "AccessKenya Fibre advertising billboard on a Nairobi street"
+    caption: "Fibre is now sold on Nairobi's streets much the way airtime is — the product and payment layer, not the network layer, is where competition happens"
+    position: "inline"
+  - src: "/images/fibre-handhole-duct-cables.webp"
+    alt: "Blue fibre optic cables coiled inside an underground handhole"
+    caption: "Open access starts underground: one duct, many sellers — the shared physical layer that wholesale fibre models monetise"
+    position: "section-break"
+  - src: "/images/fibre-patch-panel-sc-connectors.webp"
+    alt: "SC connectors and yellow patch cords on a fibre patch panel"
+    caption: "Every fibre subscription ends in ports like these — traffic that must be exchanged, peered and computed in data centres"
     position: "inline"
 internal_links:
   - text: "how fibre optic networks feed Kenya's data centres"
@@ -75,7 +83,11 @@ The thesis lands at a peculiar moment: the capital is arriving faster than the o
 
 The deal flow tells the story on its own. On 1 September, WIOCC Group confirmed a $300 million facility from Africa Finance Corporation and Vision Invest earmarked for exactly the kind of system-level build this publication tracks: carrier-neutral data centres, open-access terrestrial fibre and subsea infrastructure. The investment is explicitly about accelerating data centre deployment and consolidation alongside fibre expansion — evidence that the continent's smartest wholesalers no longer see fibre, towers and data centres as separate businesses but as one connected digital system. As our coverage of [the submarine cables landing at Mombasa](/articles/submarine-cables-landing-mombasa) shows, capacity at the coast only matters when inland infrastructure can absorb it.
 
+![Technician joining aerial fibre cables on a utility pole from a bucket truck](/images/aerial-fibre-technician-utility-pole.webp)
+
 WIOCC is not alone in thinking in systems. MTN has spent recent years extending its portfolio across fibre, towers, backbone, data centres, cloud and fintech, while new subsea systems — 2Africa most prominent among them — keep raising international capacity at the landing points. The Broadband Commission and ITU's State of Broadband in Africa 2025 projects that operators across sub-Saharan Africa will invest some $62 billion in connectivity infrastructure between 2023 and 2030, and current disclosures from Airtel Africa, MTN, Orange and Vodacom imply a combined annual capex run-rate of roughly $6 billion from the continent's largest groups.
+
+![Map of submarine cables serving Africa](/images/submarine-cables-map.webp)
 
 The macro prize is real. GSMA's Mobile Economy Africa 2026 report — published in June 2026 — calculates that mobile technologies and services contributed $240 billion to Africa's economy in 2025, about 7.8 percent of regional GDP, on a forecast path to $290 billion by 2030. But the same report identifies usage, rather than coverage, as the binding constraint in many countries. The Africa Finance Corporation makes a complementary argument: physical infrastructure needs complementary cloud capability, digital platforms and enterprise services if access is to generate real economic activity — pointing to Ghana, where it estimates digitally delivered-services exports already account for 6.3 percent of GDP, broadly comparable with India and the Philippines. Translation: pipes alone do not produce returns. Services running over pipes do.
 
@@ -99,11 +111,15 @@ Kenya, this publication's home market, offers the East African counterpoint — 
 
 Three Kenyan realities make the commercial-layer argument concrete. First, M-Pesa: digital payments are so embedded that fibre billing has never had the cash-collection friction seen elsewhere on the continent — but the flip side is that customers expect the same instant, self-service, top-up-as-needed flexibility they get from mobile money bundles. Second, fixed-wireless and [5G networks are themselves lifting data centre demand in Kenya](/articles/5g-networks-data-centre-demand-kenya), blurring the line between fixed and mobile products and forcing operators to design across both. Third, the market's growth engine is experience, not coverage: in Nairobi's fibre-rich neighbourhoods a household chooses between Safaricom, Faiba, Zuku and others on price, reliability and support — which is precisely the multi-ISP dynamic South Africa's wholesale market formalises.
 
+![AccessKenya Fibre advertising billboard on a Nairobi street](/images/fibre-billboard-nairobi-street.webp)
+
 The timing of the TelcoTitans piece is not accidental either. ZIRA Group will be outlining its modular commercialisation platform at ITW Africa in Nairobi on 7–10 September — a signal that European BSS vendors now see East Africa's fibre operators as a priority market, and that the commercial-systems conversation has arrived in Kenya. Local operators arguably got here first: Kenya's ISPs have been improvising flexible commercial models since the M-Pesa era began. What the analysis adds is the warning that improvisation stops scaling — at 120 ISP partners or 2 million subscribers, spreadsheets and manual onboarding become the bottleneck.
 
 ## The Wholesale Turn: Open Access as a Systems Problem
 
 Underneath both markets sits the same structural shift: the separation of network builders from retail sellers. Wholesale and open-access models improve capital efficiency, reduce duplicate trenches, and widen consumer choice — the fibreco builds and operates, ISPs and enterprise providers distribute and serve. [How fibre optic networks feed Kenya's data centres](/articles/fibre-optic-networks-kenya-data-centres) is part of the same logic: infrastructure layered on infrastructure, each layer selling access to the next.
+
+![Blue fibre optic cables coiled inside an underground handhole](/images/fibre-handhole-duct-cables.webp)
 
 But this division of labour changes what operators need from their systems. A retail provider serves one customer base; an open-access fibreco must serve dozens of partners simultaneously, each expecting reliable coverage and price data, fast ordering and fulfilment workflows, service assurance, and accurate billing and settlement. ZIRA Group's framework — set out in its paper The Fiber Revolution: Beyond Infrastructure — names four requirements: end-to-end fibre processes, wholesale-partner capability, open integration, and commercial scalability. Amir Turalić, the company's Chief Product Officer, puts the cultural point bluntly: "A fibre network is not automatically a wholesale business. The commercial foundations have to be built to support growth."
 
@@ -112,6 +128,8 @@ The transferable proof comes from an unexpected market. When Liberty Global's Vi
 ## Why This Matters for Data Centres
 
 Readers of this publication should care about fibre business models for a direct reason: fibre take-up is a leading indicator of data centre demand. Every household that buys fibre, every ISP that plugs into an open-access network, every business that moves its workloads from mobile hotspot to fixed broadband is adding traffic that must be exchanged, peered, cached, stored and computed somewhere. Kenya's exchange point story — [why KIXP matters](/articles/kixp-internet-exchange-point-kenya) — and the growth of [data centre interconnection and peering in Kenya](/articles/data-centre-interconnection-peering-kenya) are downstream of exactly the fixed-broadband expansion this analysis describes.
+
+![SC connectors and yellow patch cords on a fibre patch panel](/images/fibre-patch-panel-sc-connectors.webp)
 
 The WIOCC deal makes the connection explicit: the same $300 million funding data centre deployment and terrestrial open-access fibre. Carrier-neutral facilities and open-access networks share one commercial philosophy — build once, serve many partners — and they rise or fall on the same operational capability: coverage and capacity data partners can trust, ordering that does not require weeks of email, and settlement that does not require an audit to reconcile. Operators and investors evaluating Africa's digital infrastructure should therefore score fibre providers and data centre operators on the same axis: not just how much network they have built, but how efficiently they can turn that network into partner-ready products.
 
