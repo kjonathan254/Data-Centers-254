@@ -3,6 +3,7 @@ import {
   allProviderConfigs,
   activeProviders,
   reasonerEffort,
+  chatTemplateKwargs,
   tokenCeiling,
 } from "@/lib/chatbot/llm";
 import { rateLimit, clientIp, persistentLimitingActive } from "@/lib/rate-limit";
@@ -77,6 +78,7 @@ async function probeProvider(
         model,
         max_tokens: tokenCeiling(model),
         ...(reasonerEffort(model) ? { reasoning_effort: reasonerEffort(model) } : {}),
+        ...(chatTemplateKwargs(model) ? { chat_template_kwargs: chatTemplateKwargs(model) } : {}),
         messages: [{ role: "user", content: "Reply with the single word: ready" }],
       }),
       signal: controller.signal,
@@ -88,12 +90,11 @@ async function probeProvider(
     }
     if (!res.ok) {
       // Reachable, key accepted unless proven otherwise, but this model id
-      // was refused — the chain self-heals on real traffic.
+      // was refused — the chain self-heals on real traffic. A 404 on a valid
+      // chat route is model-level (NIM: "Function … Not found for account").
       probe.reachable = true;
       probe.authOk = res.status !== 402; // 402 = out of credit
-      probe.modelAvailable = /model/i.test((await res.text().catch(() => "")).slice(0, 400))
-        ? false
-        : null;
+      probe.modelAvailable = res.status === 404 ? false : null;
       return probe;
     }
     probe.reachable = true;

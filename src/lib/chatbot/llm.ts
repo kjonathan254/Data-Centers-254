@@ -31,7 +31,10 @@
  *
  * Model ids were verified against the live catalogs on 2026-09-04:
  *   integrate.api.nvidia.com/v1/models and router.huggingface.co/v1/models.
- * Chains self-heal regardless: a refused id is remembered and skipped.
+ * The NVIDIA chain was then re-verified with a real account key on
+ * 2026-09-05 — a catalog listing is no guarantee a model answers for your
+ * account (see the NVIDIA_CHAIN note below). Chains self-heal regardless:
+ * a refused id is remembered and skipped.
  */
 
 export type ProviderId = "groq" | "nvidia" | "huggingface";
@@ -129,12 +132,28 @@ const GROQ_CHAIN = [
   "llama-3.1-8b-instant",
 ];
 
+/**
+ * NVIDIA chain re-verified 2026-09-05 with a real account key (1-token live
+ * calls): only a subset of the /models catalog is actually deployed for a
+ * given account — llama3-chatqa, gemma-3-12b and mistral-7b return 404
+ * ("Function … Not found for account"), the deepseek deployments hang
+ * indefinitely, and mistral-nemotron was flaky (500). What survived, ordered
+ * by quality then speed:
+ *   gpt-oss-20b  1.3s  reasoning_effort=low, clean content
+ *   minimax-m3   0.6s  no reasoning, keeps figures verbatim
+ *   nemotron-3-super-120b  1.2s with chat_template_kwargs thinking:false
+ *   nemotron-3.5-lightning  1.4s with thinking:false (3427 chars of reasoning
+ *                           and 15s without the toggle)
+ *   deepseek-v4-pro-0813  user-requested; currently unreachable via the API
+ *                         (kept last — the self-healing chain skips it for
+ *                         free until NVIDIA fixes the deployment)
+ */
 const NVIDIA_CHAIN = [
   "openai/gpt-oss-20b",
-  "nvidia/llama3-chatqa-1.5-70b",
-  "deepseek-ai/deepseek-v4-flash-0731",
-  "google/gemma-3-12b-it",
-  "mistralai/mistral-7b-instruct-v0.3",
+  "minimaxai/minimax-m3",
+  "nvidia/nemotron-3-super-120b-a12b",
+  "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "deepseek-ai/deepseek-v4-pro-0813",
 ];
 
 const HF_CHAIN = [
@@ -234,6 +253,20 @@ export function reasonerEffort(model: string): "low" | null {
   return /gpt-oss/i.test(model) ? "low" : null;
 }
 
+/**
+ * NVIDIA chat-template switches: newer nemotron and deepseek deployments
+ * accept a thinking toggle. Verified on nemotron-3-super / -3.5-lightning:
+ * thinking off cut a 3.4k-char deliberation to zero and 15.5s → 1.4s. The
+ * polish task never needs deep deliberation, so the toggle is always sent
+ * when the model supports it.
+ */
+export function chatTemplateKwargs(model: string): Record<string, boolean> | null {
+  if (/deepseek-ai\/|nemotron-3(\.5)?-(super|lightning|nano)/i.test(model)) {
+    return { thinking: false };
+  }
+  return null;
+}
+
 /** True when the model may emit <think>…</think> blocks (DeepSeek, Qwen thinking…). */
 export function mayEmitThinking(model: string): boolean {
   return /deepseek|qwq|thinking|kimi/i.test(model);
@@ -246,7 +279,7 @@ export function stripThinking(text: string): string {
 
 /** Generous token ceiling for reasoners whose deliberation eats the budget. */
 export function tokenCeiling(model: string): number {
-  return mayEmitThinking(model) || /gpt-oss/i.test(model) ? 2000 : 1000;
+  return mayEmitThinking(model) || /gpt-oss|nemotron|minimax/i.test(model) ? 2000 : 1000;
 }
 
 // ─── Voice (Groq-only) ────────────────────────────────────────────────────────

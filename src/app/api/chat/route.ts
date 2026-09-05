@@ -6,6 +6,7 @@ import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
   activeProviders,
   reasonerEffort,
+  chatTemplateKwargs,
   tokenCeiling,
   stripThinking,
   llmTemporarilyDown,
@@ -139,6 +140,7 @@ async function llmAnswer(
               temperature: 0.3,
               max_tokens: tokenCeiling(model),
               ...(reasonerEffort(model) ? { reasoning_effort: reasonerEffort(model) } : {}),
+              ...(chatTemplateKwargs(model) ? { chat_template_kwargs: chatTemplateKwargs(model) } : {}),
               messages,
             }),
             signal: controller.signal,
@@ -159,7 +161,10 @@ async function llmAnswer(
             }
             const modelError =
               /model/i.test(errCode) ||
-              (res.status === 404 && /model/i.test(errBody));
+              // OpenAI dialect: an unknown model on a valid route is always a
+              // 404 ("model_not_found" on Groq/HF; NIM words it as "Function
+              // '…': Not found for account" without the word "model").
+              res.status === 404;
             if (modelError) {
               noteModelRejected(provider.id, model);
               continue;
