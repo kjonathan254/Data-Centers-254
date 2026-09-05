@@ -192,7 +192,7 @@ export function getFaqPairs(): FaqPair[] {
       ],
       links: [
         {
-          label: "Beyond the Build: Africa's fibre commercial test",
+          label: "Africa's Fibre Is Built — Now Comes the Hard Part",
           href: "/articles/africa-fibre-commercial-operating-model",
         },
       ],
