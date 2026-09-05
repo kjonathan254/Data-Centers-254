@@ -18,14 +18,16 @@ import {
  *  - pops ~5s after landing; hard cap of once per browser session
  *  - skipped entirely if the visitor has already opened the chat this session
  *  - "Ask Jibu" opens the chat; either button (or Esc, or the X) starts a
- *    7-day quiet period (localStorage)
+ *    48-hour quiet period (localStorage)
+ *  - ?meet-jibu=1 on any URL overrides the quiet period and session cap —
+ *    the reliable way to see/demo the intro (quiet logic still applies after)
  *  - mobile: bottom drawer · desktop: card above the floating button
  *  - fixed positioning only — zero layout shift; entrance animations are
  *    disabled under prefers-reduced-motion
  */
 
 const DELAY_MS = 5_000;
-const QUIET_MS = 7 * 24 * 60 * 60 * 1000;
+const QUIET_MS = 48 * 60 * 60 * 1000;
 
 type WelcomeAction = "shown" | "ask" | "dismiss";
 
@@ -41,11 +43,17 @@ export default function JibuWelcome({
   useEffect(() => {
     const timer = window.setTimeout(() => {
       let mayShow = true;
+      const forceShow = new URLSearchParams(window.location.search).has("meet-jibu");
       try {
-        if (sessionStorage.getItem(JIBU_WELCOME_SESSION_KEY) === "1") mayShow = false;
-        if (sessionStorage.getItem(JIBU_OPENED_KEY) === "1") mayShow = false;
-        const last = Number(localStorage.getItem(JIBU_WELCOME_KEY));
-        if (Number.isFinite(last) && last > 0 && Date.now() - last < QUIET_MS) mayShow = false;
+        if (forceShow) {
+          // Demo/verification escape hatch — beats quiet period and session cap,
+          // but still records the session flag so refresh returns to normal.
+        } else {
+          if (sessionStorage.getItem(JIBU_WELCOME_SESSION_KEY) === "1") mayShow = false;
+          if (sessionStorage.getItem(JIBU_OPENED_KEY) === "1") mayShow = false;
+          const last = Number(localStorage.getItem(JIBU_WELCOME_KEY));
+          if (Number.isFinite(last) && last > 0 && Date.now() - last < QUIET_MS) mayShow = false;
+        }
         if (mayShow) sessionStorage.setItem(JIBU_WELCOME_SESSION_KEY, "1");
       } catch {
         // Storage unavailable (private mode) — still greet, once per page load.
