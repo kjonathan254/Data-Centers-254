@@ -116,8 +116,8 @@ function buildRawChunks(): RawChunk[] {
     kind: "fact",
     title: "Kenya fixed broadband subscriptions",
     href: "/articles/africa-fibre-commercial-operating-model",
-    text: `Kenya counted about 2.14 million fixed-internet subscriptions by June 2025 per the Communications Authority, led by Safaricom with roughly 678,000 lines (about 36.5 percent share), followed by Jamii Telecommunications and Wananchi Group's Zuku. The fibre-to-the-home subset is around 1.2 million lines; the rest rides on fixed-wireless access. Penetration remains low relative to population, making Kenya one of Africa's fastest-scaling fixed-broadband markets.`,
-    boost: 1.35,
+    text: `Kenya's fixed internet subscriptions (fixed broadband) stood at about 2.14 million by June 2025 per the Communications Authority, led by Safaricom with roughly 678,000 lines (about 36.5 percent share), followed by Jamii Telecommunications and Wananchi Group's Zuku. The fibre-to-the-home subset is around 1.2 million lines; the rest rides on fixed wireless access. Penetration remains low relative to population, making Kenya one of Africa's fastest-scaling fixed broadband markets.`,
+    boost: 1.5,
   });
   for (const item of REGION_ITEMS) {
     if (item.type !== "datacenter") continue;
@@ -178,6 +178,24 @@ export function getFaqPairs(): FaqPair[] {
       a: "Six international submarine cable systems are live in Kenya — SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE — all landing on the coast at Mombasa. A seventh, Meta's Daraja, is in development. This concentration is both Kenya's strength and its single point of failure.",
       keywords: ["submarine cables", "undersea cables", "internet cables", "cables connect"],
       links: [{ label: "The infrastructure map", href: "/infrastructure/map" }],
+    },
+    {
+      q: "How many fixed internet subscriptions does Kenya have?",
+      a: "About 2.14 million fixed internet subscriptions by June 2025, per the Communications Authority — Safaricom leads with roughly 678,000 lines (about 36.5 percent share), ahead of Jamii Telecommunications and Wananchi Group's Zuku. The fibre-to-the-home subset is around 1.2 million lines; the rest rides on fixed wireless. Penetration is still low relative to population, which is what makes Kenya one of Africa's fastest-growing fixed broadband markets.",
+      keywords: [
+        "fixed internet subscriptions",
+        "internet subscriptions",
+        "broadband subscriptions",
+        "fibre subscriptions",
+        "fiber subscriptions",
+        "fixed broadband lines",
+      ],
+      links: [
+        {
+          label: "Beyond the Build: Africa's fibre commercial test",
+          href: "/articles/africa-fibre-commercial-operating-model",
+        },
+      ],
     },
     {
       q: "What powers Kenya's data centres — and are they green?",

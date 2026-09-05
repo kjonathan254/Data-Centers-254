@@ -45,8 +45,19 @@ function normScoreThreshold(query: string): number {
 }
 
 function trimToSentences(text: string, maxSentences: number): string {
-  const parts = text.match(/[^.!?]+[.!?]+/g) ?? [text];
-  return parts.slice(0, maxSentences).join(" ").trim();
+  // Mask decimal points first — "2.14" or "8.4 Tbps" must never read as a
+  // sentence end (the old split turned "2.14 million" into "2. 14 million"
+  // when the parts were re-joined). Restore after joining; extractive
+  // composition has to stay lossless.
+  const mask = "\u0000";
+  const masked = text.replace(/(\d)\.(\d)/g, `$1${mask}$2`);
+  const parts = masked.match(/[^.!?]+[.!?]+/g) ?? [masked];
+  return parts
+    .slice(0, maxSentences)
+    .join(" ")
+    .split(mask)
+    .join(".")
+    .trim();
 }
 
 function exactFaqMatch(query: string): BotReply | null {
