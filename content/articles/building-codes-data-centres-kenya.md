@@ -17,12 +17,12 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Policy
 cluster: Policy
-og_image: /images/dc-server-chip-2.webp
+og_image: "/images/construction-crane-scaffolding.webp"
 reading_time: "14 min"
 images:
-- src: /images/dc-policy-regulation.webp
-  alt:  "National government building at dusk"
-  caption: "Data centre construction in Kenya answers to county codes and national standards."
+- src: "/images/construction-crane-scaffolding.webp"
+  alt: "Construction cranes and scaffolding on a build site"
+  caption: "Before a rack is installed, a building code decides where it is allowed to stand"
   position: hero
 - src: /images/dc-switchgear-2.webp
   alt: Electrical power systems installation in a data centre

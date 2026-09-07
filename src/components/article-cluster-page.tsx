@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, ArrowRight } from "lucide-react";
-import { getArticlesByCluster, isArticleFresh } from "@/lib/articles";
+import { getArticlesByCluster, isArticleFresh, getArticleHeroImage } from "@/lib/articles";
 import { getClusterImage } from "@/lib/imagery";
 import NewBadge from "@/components/new-badge";
 
@@ -121,7 +121,9 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
           <p className="text-muted-foreground">Articles coming soon.</p>
         ) : (
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            {articles.map((a) => (
+            {articles.map((a) => {
+              const img = getArticleHeroImage(a);
+              return (
               <Link
                 key={a.frontmatter.slug}
                 href={`/articles/${a.frontmatter.slug}`}
@@ -130,8 +132,8 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
                 <article className="card-solid card-solid-hover flex h-full overflow-hidden">
                   <div className="relative hidden w-36 shrink-0 sm:block">
                     <Image
-                      src={heroImg.src}
-                      alt={heroImg.alt}
+                      src={img.src}
+                      alt={img.alt}
                       fill
                       sizes="144px"
                       className="object-cover"
@@ -160,7 +162,8 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
                   </div>
                 </article>
               </Link>
-            ))}
+              );
+            })}
           </div>
         )}
 

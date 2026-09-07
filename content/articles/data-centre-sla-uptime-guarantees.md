@@ -15,13 +15,13 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: Beginner Guides
 cluster: Beginner
-og_image: "/images/dc-switchgear-2.webp"
+og_image: "/images/dc-ups-batteries.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-power-systems.webp"
-    alt:  "Data centre power distribution and backup systems"
-    caption: "An SLA is a promise about power, cooling, and uptime — measured, not marketed."
-    position: "hero"
+  - src: "/images/dc-ups-batteries.webp"
+    alt: "UPS battery strings backing a data centre power chain"
+    caption: "Every minute of promised uptime is underwritten by batteries like these"
+    position: hero
   - src: "/images/dc-chillers-roof-2.webp"
     alt:  "Rooftop chiller units at a data centre"
     caption: "Power redundancy directly impacts the uptime SLA a data centre can realistically guarantee."

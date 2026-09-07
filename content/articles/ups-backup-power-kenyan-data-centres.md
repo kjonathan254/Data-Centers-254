@@ -17,13 +17,12 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Energy & Power
 cluster: Energy
-og_image: /images/dc-power-systems.webp
+og_image: "/images/dc-ups-batteries.webp"
 reading_time: "14 min"
 images:
-- src: /images/dc-power-systems.webp
-  alt: UPS systems and power distribution equipment in a data centre electrical room
-  caption: UPS systems form the critical first line of defence against power interruptions
-    in every data centre.
+- src: "/images/dc-ups-batteries.webp"
+  alt: "UPS battery strings in a data centre electrical room"
+  caption: "When KPLC blinks, these batteries bridge the gap to the generators"
   position: hero
 - src: /images/dc-ups-batteries-wide.webp
   alt: Server racks powered through redundant UPS and generator systems

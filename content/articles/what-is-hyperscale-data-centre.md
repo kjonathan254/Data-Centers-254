@@ -17,13 +17,12 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Beginner Guides
 cluster: Beginner
-og_image: /images/dc-chillers-roof.webp
+og_image: "/images/worlds-largest-data-centers-2026.webp"
 reading_time: "12 min"
 images:
-- src: /images/ai-gpu-servers.webp
-  alt: Rows of server racks in a large-scale data centre facility
-  caption: Hyperscale data centres house tens of thousands of server racks in purpose-built
-    halls.
+- src: "/images/worlds-largest-data-centers-2026.webp"
+  alt: "A hyperscale data centre campus at scale"
+  caption: "Hyperscale means campuses measured in football pitches and power measured in hundreds of megawatts"
   position: hero
 - src: /images/whats-inside-ai-data-center-wide.webp
   alt: GPU servers powering cloud and AI workloads at scale

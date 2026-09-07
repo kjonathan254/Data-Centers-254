@@ -12,6 +12,7 @@ interface Article {
   cluster: string;
   readingTimeMin: number | null;
   fresh?: boolean;
+  image?: { src: string; alt: string };
 }
 
 /**
@@ -44,7 +45,7 @@ export default function LatestIntelligenceInner({ articles }: { articles: Articl
         {/* Image-led article cards */}
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {articles.map((article) => {
-            const img = getClusterImage(article.cluster);
+            const img = article.image ?? getClusterImage(article.cluster);
             return (
               <Link
                 key={article.id}

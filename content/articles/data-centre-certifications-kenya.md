@@ -17,12 +17,12 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Careers
 cluster: Careers
-og_image: /images/diagram-network-protocols.webp
+og_image: "/images/classroom-ict-training-kenya.webp"
 reading_time: "14 min"
 images:
-- src: /images/dc-ups-batteries-wide.webp
-  alt:  "Electrical switchgear and UPS cabinets"
-  caption: "Power and cooling credentials prove you can keep the lights on."
+- src: "/images/classroom-ict-training-kenya.webp"
+  alt: "ICT training classroom in Kenya — where certification journeys start"
+  caption: "Most data centre careers in Kenya start in rooms like this: textbooks, labs, and a certification checklist"
   position: hero
 - src: /images/hero-server-hall.webp
   alt: Server infrastructure requiring certified professionals to manage

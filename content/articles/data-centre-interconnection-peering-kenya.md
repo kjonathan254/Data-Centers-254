@@ -19,13 +19,12 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Infrastructure
 cluster: Infrastructure
-og_image: /images/submarine-cable-diagram.webp
+og_image: "/images/fibre-patch-panel-sc-connectors.webp"
 reading_time: "13 min"
 images:
-- src: /images/mombasa-cable-landing-3.webp
-  alt: Network switching equipment inside a Kenyan data centre with fibre patch panels
-  caption: Network switching infrastructure enabling interconnection and peering within
-    a Kenyan data centre
+- src: "/images/fibre-patch-panel-sc-connectors.webp"
+  alt: "Fibre patch panel with SC connectors — cross-connects in practice"
+  caption: "Peering is physical: a patch cable between two cages inside the same room"
   position: hero
 - src: /images/mombasa-port.webp
   alt:  "Aerial view of the Port of Mombasa"

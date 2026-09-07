@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { getClusterImage } from "@/lib/imagery";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -153,6 +154,23 @@ export const FRESH_WINDOW_HOURS = 48;
 export function isArticleFresh(a: Article, now: Date = new Date()): boolean {
   const ageHours = (now.getTime() - freshnessDate(a).getTime()) / 3_600_000;
   return ageHours <= FRESH_WINDOW_HOURS;
+}
+
+/**
+ * The photograph that represents this article in cards and grids:
+ * its own hero image when the frontmatter defines one, else its first
+ * body image, else the cluster photograph as a last resort. Using the
+ * article's own hero keeps listing pages visually distinct — every
+ * card shows the story it links to, not the topic banner.
+ */
+export function getArticleHeroImage(
+  a: Article
+): { src: string; alt: string } {
+  const hero =
+    a.frontmatter.images.find((i) => i.position === "hero") ??
+    a.frontmatter.images[0];
+  if (hero) return { src: hero.src, alt: hero.alt };
+  return getClusterImage(a.frontmatter.cluster);
 }
 
 // ─── Core: read a single article ─────────────────────────────────────────────

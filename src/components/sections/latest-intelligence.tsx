@@ -1,4 +1,4 @@
-import { getLatestArticles, isArticleFresh } from "@/lib/articles";
+import { getLatestArticles, isArticleFresh, getArticleHeroImage } from "@/lib/articles";
 import LatestIntelligenceInner from "./latest-intelligence-inner";
 
 /**
@@ -34,6 +34,7 @@ export default function LatestIntelligence() {
     cluster: a.frontmatter.cluster,
     readingTimeMin: parseInt(a.frontmatter.reading_time) || null,
     fresh: isArticleFresh(a),
+    image: getArticleHeroImage(a),
   }));
 
   return <LatestIntelligenceInner articles={articles} />;
