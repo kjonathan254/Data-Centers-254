@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Mail, Phone, Megaphone, Newspaper, MailOpen, MapPin, Building2, PenLine, TrendingUp } from "lucide-react";
+import { Mail, Phone, Megaphone, MailOpen, MapPin, Building2, PenLine, TrendingUp, BarChart3 } from "lucide-react";
 import { getStats, SUBSCRIBER_ROLES } from "@/lib/newsletter-store";
 
 export const metadata: Metadata = {
   title: "Advertise & Partner",
   description:
-    "Reach Kenya's data centre and digital infrastructure audience. Sponsor The Rack Report, publish a researched feature, or be listed in the DC Directory.",
+    "Reach a specialist audience across Kenya's rapidly developing digital infrastructure ecosystem. Sponsor The Rack Report, commission sponsored intelligence, or license market data.",
   alternates: { canonical: "/advertise" },
 };
 
@@ -17,24 +17,28 @@ export const revalidate = 300;
 
 const opportunities = [
   {
-    icon: Newspaper,
-    title: "Sponsored Features",
-    body: "A researched, fact-checked article on a topic your brand cares about — clearly labelled as sponsored, written to the same editorial standard as the rest of the library.",
-  },
-  {
     icon: MailOpen,
-    title: "Briefing Sponsorship",
-    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. Your brand, clearly labelled, in front of operators, investors and journalists — with a click report every month.",
-  },
-  {
-    icon: Building2,
-    title: "Directory Placement",
-    body: "Operators and service providers can enrich or expand their DC Directory profiles — certifications, capacity, connectivity, and expansions, verified and sourced.",
+    num: "01",
+    title: "Briefing sponsorship",
+    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. A 75–100 word sponsored message with your logo and link, clearly labelled — plus a tracked click report every month.",
   },
   {
     icon: PenLine,
-    title: "Research & Explainers",
-    body: "Commission independent explainers and market notes on Kenya's data centre, energy, and connectivity landscape for your own channels.",
+    num: "02",
+    title: "Sponsored intelligence",
+    body: "A researched editorial piece presented by your brand — for example “Kenya's Data Centre Power Challenge, presented by [Company]”. You attach to the reporting; the conclusions stay fully independent. That independence is exactly what makes the attachment worth paying for.",
+  },
+  {
+    icon: BarChart3,
+    num: "03",
+    title: "Market reports",
+    body: "“Kenya Data Centre Market” — operators, capacity, locations, power, connectivity and investment in one report. License it for your team, or sponsor its production and put your brand on the definitive market document.",
+  },
+  {
+    icon: Building2,
+    num: "04",
+    title: "Annual industry partnership",
+    body: "The full bundle for companies building long-term position in this market: briefing sponsorship, directory presence, commissioned research, events, interviews, reports and thought leadership. This is where the real B2B relationship lands.",
   },
 ];
 
@@ -70,11 +74,11 @@ export default async function AdvertisePage() {
             Reach the people building Kenya&apos;s digital infrastructure
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-12">
-            Data Centre 254 is an independent publication explaining data centres,
-            connectivity, power, and AI infrastructure to a Kenyan and East African
-            audience — engineers, operators, investors, students, and policymakers.
-            Sponsorship on DC254 means your brand is associated with research and
-            clarity, clearly labelled and never at the cost of editorial trust.
+            DataCentre254 is a specialist media channel focused exclusively on
+            Kenya&apos;s data-centre and digital-infrastructure ecosystem — not a
+            general tech site. Sponsorship here means your brand is associated
+            with research and clarity, clearly labelled and never at the cost
+            of editorial trust.
           </p>
 
           {/* Facts */}
@@ -88,12 +92,16 @@ export default async function AdvertisePage() {
             ))}
           </div>
 
-          {/* Opportunities */}
-          <h2 className="text-xl font-semibold text-foreground mb-6">Ways to partner</h2>
+          {/* Commercial ladder */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">The commercial ladder</h2>
+          <p className="text-sm text-muted-foreground mb-6">Start where the fit is right — each rung deepens the relationship.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
             {opportunities.map((o) => (
-              <div key={o.title} className="rounded-xl border border-border/50 p-6 hover:border-cyan/30 transition-colors">
-                <o.icon className="size-5 text-cyan mb-4" />
+              <div key={o.num} className="rounded-xl border border-border/50 p-6 hover:border-cyan/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-mono text-cyan">{o.num}</span>
+                  <o.icon className="size-5 text-cyan" />
+                </div>
                 <h3 className="text-base font-semibold text-foreground mb-2">{o.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{o.body}</p>
               </div>
@@ -119,9 +127,11 @@ export default async function AdvertisePage() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground mb-4">
-              Founding rate: the first two sponsors ever pay <strong className="text-foreground">$75 per slot</strong> for
+              <strong className="text-foreground">Founding industry partners:</strong> the first two partners ever pay{" "}
+              <strong className="text-foreground">$75 per slot</strong> for
               their first two issues — after that, pricing follows the audience numbers below. Sponsors are vendors who
-              sell to this market: cooling, power, connectivity, construction, consulting.
+              sell to this market: cooling, power, connectivity, construction, consulting. New to the briefing?{" "}
+              <a href="/rack-report" className="text-cyan hover:underline">See what lands in every issue</a>.
             </p>
             {/* Live audience composition */}
             {hasAudience && stats ? (
@@ -141,7 +151,7 @@ export default async function AdvertisePage() {
             ) : (
               <div className="rounded-lg border border-cyan/25 bg-cyan/5 p-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Founding sponsor window is open.</strong> The list is young —
+                  <strong className="text-foreground">Founding partner window is open.</strong> The list is young —
                   which is exactly why the founding rate exists. Lock a slot before the numbers move the price.
                 </p>
               </div>

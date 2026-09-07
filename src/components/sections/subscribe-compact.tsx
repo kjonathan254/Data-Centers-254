@@ -62,9 +62,11 @@ export default function SubscribeCompact({
         This was one article. The weekly briefing is the whole build-out.
       </p>
       <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-        Kenya&apos;s data-centre industry, delivered to your inbox — facilities,
-        submarine cables, power tariffs, policy and deals. One briefing a
-        week, read by operators, investors and journalists.
+        The weekly briefing on Kenya&apos;s data-centre industry, read by
+        operators, investors and journalists.
+      </p>
+      <p className="mt-2 text-sm font-medium text-foreground/90">
+        Data centres. Power. Cloud. Connectivity. Investment. Policy.
       </p>
 
       {state === "subscribed" || state === "already" ? (
@@ -126,6 +128,9 @@ export default function SubscribeCompact({
               {messages.error}
             </p>
           )}
+          <p className="mt-3 text-xs text-muted-foreground">
+            Free. Weekly. No industry noise.
+          </p>
         </>
       )}
     </aside>

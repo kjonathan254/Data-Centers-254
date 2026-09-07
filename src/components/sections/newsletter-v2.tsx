@@ -63,17 +63,15 @@ export default function NewsletterV2() {
     <section className="section-y border-t border-border/40">
       <div className="container-site">
         <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
-          <p className="eyebrow">The weekly intelligence briefing from DataCentre254</p>
+          <p className="eyebrow">From DataCentre254</p>
           <h2 className="h-display-sm mt-3 text-foreground">
-            Kenya&apos;s data-centre industry, delivered to your inbox.
+            Get The Rack Report
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            The week&apos;s most important developments in data centres, cloud,
-            connectivity, energy, investment and digital infrastructure.
+            The weekly briefing on Kenya&apos;s data-centre industry.
           </p>
-          <p className="mt-4 text-xs leading-relaxed text-muted-foreground/80">
-            Every issue: The Headline · By the Numbers · Infrastructure ·
-            Power ⚡ · Connectivity · Money · Policy · What We&apos;re Watching
+          <p className="mt-3 text-sm font-medium text-foreground/90">
+            Data centres. Power. Cloud. Connectivity. Investment. Policy.
           </p>
 
           {state === "subscribed" || state === "already" ? (
@@ -148,8 +146,14 @@ export default function NewsletterV2() {
                 </p>
               )}
               <p className="mt-4 text-xs text-muted-foreground">
-                One briefing a week. No spam, unsubscribe anytime.
+                Free. Weekly. No industry noise.
               </p>
+              <a
+                href="/rack-report"
+                className="mt-2 inline-block text-xs text-cyan hover:underline"
+              >
+                See what lands in every briefing →
+              </a>
             </>
           )}
         </div>
