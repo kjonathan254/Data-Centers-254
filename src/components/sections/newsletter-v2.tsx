@@ -1,23 +1,36 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  subscribed: "You're on the list — the next Brief lands Monday morning.",
+  subscribed: "You're on the list — the next Rack Report lands Monday morning.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
 
+const ROLES = [
+  { value: "operator", label: "I work in a data centre" },
+  { value: "leadership", label: "CTO / IT leadership" },
+  { value: "investor", label: "Investor / analyst" },
+  { value: "journalist", label: "Journalist / media" },
+  { value: "vendor", label: "Vendor / supplier" },
+  { value: "student", label: "Student / learning" },
+  { value: "other", label: "Just interested" },
+];
+
 export default function NewsletterV2() {
   const [state, setState] = useState<FormState>("idle");
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [role, setRole] = useState("other");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
+    const company = (form.elements.namedItem("companyType") as HTMLInputElement)?.value;
+    // honeypot — real users never see or fill this
+    const honeypot = (form.elements.namedItem("website") as HTMLInputElement)?.value;
     if (!email) return;
 
     setState("submitting");
@@ -26,7 +39,13 @@ export default function NewsletterV2() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: "homepage" }),
+        body: JSON.stringify({
+          email,
+          role,
+          companyType: company || "",
+          source: "homepage",
+          website: honeypot || "",
+        }),
       });
       const data = await res.json();
 
@@ -44,31 +63,15 @@ export default function NewsletterV2() {
     <section className="section-y border-t border-border/40">
       <div className="container-site">
         <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
-          <p className="eyebrow">DC254 Brief · Weekly</p>
+          <p className="eyebrow">The Rack Report · Weekly</p>
           <h2 className="h-display-sm mt-3 text-foreground">
-            Know what changed in Kenya&apos;s data centre industry — every
-            Monday.
+            Know what powers Kenya.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            One short email each Monday morning: new facilities verified,
-            licensing and cable updates, policy changes — each with its source
-            and what it means.
+            A weekly briefing on East Africa&apos;s data centre build-out —
+            new facilities, cables, power, policy and deals. Read by
+            operators, investors and journalists.
           </p>
-
-          <ul className="mx-auto mt-5 max-w-sm space-y-2 text-left text-sm text-foreground/90">
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
-              See new facility verifications before they hit the directory
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
-              Licence, cable and grid changes explained in plain language
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
-              What each change means for jobs, buyers and builders
-            </li>
-          </ul>
 
           {state === "subscribed" || state === "already" ? (
             <p
@@ -81,34 +84,69 @@ export default function NewsletterV2() {
             <>
               <form
                 onSubmit={handleSubmit}
-                className="mt-6 flex flex-col items-stretch gap-2 sm:flex-row"
+                className="mt-6 flex flex-col items-stretch gap-2 text-left"
               >
+                {/* honeypot — visually hidden, ignored by humans */}
                 <input
-                  ref={inputRef}
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Email address"
-                  disabled={state === "submitting"}
-                  aria-label="Email address"
-                  className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
                 />
-                <button
-                  type="submit"
-                  disabled={state === "submitting"}
-                  className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {state === "submitting" ? "Subscribing…" : "Get the Brief"}
-                </button>
+                <div className="flex flex-col items-stretch gap-2 sm:flex-row">
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="Email address"
+                    disabled={state === "submitting"}
+                    aria-label="Email address"
+                    className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
+                  />
+                  <button
+                    type="submit"
+                    disabled={state === "submitting"}
+                    className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {state === "submitting" ? "Subscribing…" : "Subscribe"}
+                  </button>
+                </div>
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <select
+                    name="role"
+                    value={role}
+                    onChange={(e) => setRole(e.target.value)}
+                    disabled={state === "submitting"}
+                    aria-label="Which describes you"
+                    className="h-11 flex-1 rounded-lg border border-border bg-background px-3 text-sm text-foreground transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
+                  >
+                    {ROLES.map((r) => (
+                      <option key={r.value} value={r.value}>
+                        {r.label}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    name="companyType"
+                    type="text"
+                    placeholder="Company (optional)"
+                    disabled={state === "submitting"}
+                    aria-label="Company or organisation, optional"
+                    maxLength={80}
+                    className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
+                  />
+                </div>
               </form>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Free, no spam, unsubscribe anytime.
-              </p>
               {state === "error" && (
                 <p className="mt-3 text-xs text-destructive" role="alert">
                   {messages.error}
                 </p>
               )}
+              <p className="mt-4 text-xs text-muted-foreground">
+                One email a week. No spam, unsubscribe anytime.
+              </p>
             </>
           )}
         </div>

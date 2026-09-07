@@ -5,12 +5,12 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Foundations — DC254",
   description:
-    "The 12 foundational articles that will launch DC254 Brief — Kenya's digital infrastructure explained.",
+    "The 12 foundational articles that will launch The Rack Report — Kenya's digital infrastructure explained.",
   alternates: { canonical: "/foundations" },
   openGraph: {
     title: "Foundations | Data Centre 254",
     description:
-      "The 12 foundational articles that will launch DC254 Brief — Kenya's digital infrastructure explained.",
+      "The 12 foundational articles that will launch The Rack Report — Kenya's digital infrastructure explained.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Foundations | Data Centre 254",
-    description: "The 12 foundational articles that will launch DC254 Brief.",
+    description: "The 12 foundational articles that will launch The Rack Report.",
     images: ["/images/og-default.png"],
   },
 };

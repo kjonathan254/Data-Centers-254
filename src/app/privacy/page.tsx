@@ -20,7 +20,7 @@ const sections = [
   {
     title: "2. What We Collect",
     body: [
-      "Newsletter subscriptions. When you subscribe to DC254 Brief, we collect your email address and the page or campaign you subscribed from. Subscribers are stored as contacts in Resend, our email service provider. We do not store subscriber data on this website's servers.",
+      "Newsletter subscriptions. When you subscribe to The Rack Report, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. Subscriber records are stored on this website's infrastructure and, where our email service is configured, also as contacts in Resend, our email service provider. You can unsubscribe at any time using the link in every email, which erases your subscription record.",
       "Contact form messages. When you contact us through the contact form, we receive your name, email address, subject, and message. This is delivered to our email inbox through Resend and is used solely to respond to you.",
       "Analytics. We use Google Analytics 4 to understand how the site is used — pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties.",
     ],

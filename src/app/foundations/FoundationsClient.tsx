@@ -70,7 +70,7 @@ export default function FoundationsClient({
           </h1>
           <p className="mt-2 text-subtitle">
             The articles that establish DC254&apos;s editorial foundation. Once
-            these are published with verified sources, DC254 Brief launches.
+            these are published with verified sources, The Rack Report launches.
           </p>
         </motion.div>
 

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import SubscribeCompact from "@/components/sections/subscribe-compact";
 import ListenBar from "@/components/ListenBar";
 
 import type {
@@ -496,6 +497,9 @@ export default function ArticlePageClient({ article, related }: Props) {
               {content}
             </ReactMarkdown>
           </div>
+
+          {/* Newsletter CTA — highest-intent moment: reader just finished */}
+          <SubscribeCompact source={`article:${frontmatter.slug}`} />
 
           {/* Internal links section */}
           {frontmatter.internal_links && frontmatter.internal_links.length > 0 && (
