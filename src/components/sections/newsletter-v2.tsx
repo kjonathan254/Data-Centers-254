@@ -5,7 +5,7 @@ import { useState } from "react";
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  subscribed: "You're on the list — the next Rack Report lands Monday morning.",
+  subscribed: "You're on the list — the next issue of The Rack Report lands Monday morning.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -63,14 +63,17 @@ export default function NewsletterV2() {
     <section className="section-y border-t border-border/40">
       <div className="container-site">
         <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
-          <p className="eyebrow">The Rack Report · Weekly</p>
+          <p className="eyebrow">The weekly intelligence briefing from DataCentre254</p>
           <h2 className="h-display-sm mt-3 text-foreground">
-            Know what powers Kenya.
+            Kenya&apos;s data-centre industry, delivered to your inbox.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            A weekly briefing on East Africa&apos;s data centre build-out —
-            new facilities, cables, power, policy and deals. Read by
-            operators, investors and journalists.
+            The week&apos;s most important developments in data centres, cloud,
+            connectivity, energy, investment and digital infrastructure.
+          </p>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground/80">
+            Every issue: The Headline · By the Numbers · Infrastructure ·
+            Power ⚡ · Connectivity · Money · Policy · What We&apos;re Watching
           </p>
 
           {state === "subscribed" || state === "already" ? (
@@ -110,7 +113,7 @@ export default function NewsletterV2() {
                     disabled={state === "submitting"}
                     className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-6 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    {state === "submitting" ? "Subscribing…" : "Subscribe"}
+                    {state === "submitting" ? "One moment…" : "Get The Rack Report"}
                   </button>
                 </div>
                 <div className="flex flex-col gap-2 sm:flex-row">
@@ -145,7 +148,7 @@ export default function NewsletterV2() {
                 </p>
               )}
               <p className="mt-4 text-xs text-muted-foreground">
-                One email a week. No spam, unsubscribe anytime.
+                One briefing a week. No spam, unsubscribe anytime.
               </p>
             </>
           )}

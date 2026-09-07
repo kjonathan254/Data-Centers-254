@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Data Centre 254 collects, uses, and protects your data — newsletter subscriptions, contact messages, and analytics. Compliant with the Kenya Data Protection Act, 2019.",
+    "How Data Centre 254 collects, uses, and protects your data — briefing subscriptions, contact messages, and analytics. Compliant with the Kenya Data Protection Act, 2019.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -14,13 +14,13 @@ const sections = [
     title: "1. Who We Are",
     body: [
       "Data Centre 254 (\"DC254\", \"we\", \"us\") is an independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy. It is founded and published by Kevin Jonathan Otieno from Nairobi, Kenya.",
-      "This policy explains what personal data we collect when you visit data-centers-254.vercel.app, subscribe to our newsletter, or contact us — and the rights you have over that data under the Kenya Data Protection Act, 2019.",
+      "This policy explains what personal data we collect when you visit data-centers-254.vercel.app, subscribe to our briefing, or contact us — and the rights you have over that data under the Kenya Data Protection Act, 2019.",
     ],
   },
   {
     title: "2. What We Collect",
     body: [
-      "Newsletter subscriptions. When you subscribe to The Rack Report, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. Subscriber records are stored on this website's infrastructure and, where our email service is configured, also as contacts in Resend, our email service provider. You can unsubscribe at any time using the link in every email, which erases your subscription record.",
+      "Briefing subscriptions. When you subscribe to The Rack Report, our weekly intelligence briefing, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. Subscriber records are stored on this website's infrastructure and, where our email service is configured, also as contacts in Resend, our email service provider. You can unsubscribe at any time using the link in every email, which erases your subscription record.",
       "Contact form messages. When you contact us through the contact form, we receive your name, email address, subject, and message. This is delivered to our email inbox through Resend and is used solely to respond to you.",
       "Analytics. We use Google Analytics 4 to understand how the site is used — pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties.",
     ],
@@ -34,7 +34,7 @@ const sections = [
   {
     title: "4. Third-Party Services",
     body: [
-      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Resend (newsletter contact storage and email delivery), and Google Analytics 4 (aggregate audience analytics). Each processes data on our instructions under its own privacy terms.",
+      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Resend (briefing contact storage and email delivery), and Google Analytics 4 (aggregate audience analytics). Each processes data on our instructions under its own privacy terms.",
     ],
   },
   {
@@ -46,14 +46,14 @@ const sections = [
   {
     title: "6. How Long We Keep Data",
     body: [
-      "Newsletter contacts are kept until you unsubscribe or ask us to delete them. Contact form correspondence is kept for as long as needed to handle your enquiry and for our records. Analytics data is retained by Google according to its standard retention settings.",
+      "Briefing contacts are kept until you unsubscribe or ask us to delete them. Contact form correspondence is kept for as long as needed to handle your enquiry and for our records. Analytics data is retained by Google according to its standard retention settings.",
     ],
   },
   {
     title: "7. Your Rights",
     body: [
       "Under the Kenya Data Protection Act, 2019, you have the right to access the personal data we hold about you, to correct inaccurate data, to erasure, to withdraw consent, and to lodge a complaint with the Office of the Data Protection Commissioner (ODPC), Kenya.",
-      "To unsubscribe from the newsletter, use the unsubscribe link in any email or contact us directly. For any data request, email elmaccommunicationslimited@gmail.com and we will respond within a reasonable timeframe.",
+      "To unsubscribe from the briefing, use the unsubscribe link in any email or contact us directly. For any data request, email elmaccommunicationslimited@gmail.com and we will respond within a reasonable timeframe.",
     ],
   },
   {

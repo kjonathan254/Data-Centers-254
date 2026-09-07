@@ -23,8 +23,8 @@ const opportunities = [
   },
   {
     icon: MailOpen,
-    title: "Newsletter Sponsorship",
-    body: "One sponsor per issue of The Rack Report, the weekly on East Africa's data centre build-out. Your brand, clearly labelled, in front of operators, investors and journalists — with a click report every month.",
+    title: "Briefing Sponsorship",
+    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. Your brand, clearly labelled, in front of operators, investors and journalists — with a click report every month.",
   },
   {
     icon: Building2,
@@ -100,8 +100,9 @@ export default async function AdvertisePage() {
             ))}
           </div>
 
-          {/* Newsletter sponsorship — slot pricing */}
-          <h2 className="text-xl font-semibold text-foreground mb-6">The Rack Report — sponsorship slots</h2>
+          {/* Briefing sponsorship — slot pricing */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">Sponsor The Rack Report</h2>
+          <p className="text-sm text-muted-foreground mb-6">The weekly intelligence briefing from DataCentre254 — infrastructure, power, connectivity, money and policy, every Monday.</p>
           <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-14">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>
@@ -110,7 +111,7 @@ export default async function AdvertisePage() {
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">1 / issue</p>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, four issues a month — never an ad block</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, four briefings a month — never an ad block</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">Monthly report</p>

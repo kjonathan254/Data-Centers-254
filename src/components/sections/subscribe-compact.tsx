@@ -57,14 +57,14 @@ export default function SubscribeCompact({
 
   return (
     <aside className="mt-14 rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8">
-      <p className="eyebrow">The Rack Report</p>
+      <p className="eyebrow">The Rack Report · Weekly intelligence briefing</p>
       <p className="mt-2 text-base font-semibold text-foreground sm:text-lg">
-        This was one article. The weekly brief is the whole build-out.
+        This was one article. The weekly briefing is the whole build-out.
       </p>
       <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-        New facilities, submarine cables, power tariffs, policy and deals
-        across East Africa — one email a week, read by operators, investors
-        and journalists.
+        Kenya&apos;s data-centre industry, delivered to your inbox — facilities,
+        submarine cables, power tariffs, policy and deals. One briefing a
+        week, read by operators, investors and journalists.
       </p>
 
       {state === "subscribed" || state === "already" ? (
@@ -118,7 +118,7 @@ export default function SubscribeCompact({
               disabled={state === "submitting"}
               className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-5 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {state === "submitting" ? "Subscribing…" : "Get the brief"}
+              {state === "submitting" ? "One moment…" : "Get The Rack Report"}
             </button>
           </form>
           {state === "error" && (
