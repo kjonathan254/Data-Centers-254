@@ -82,6 +82,10 @@ export interface Facility {
   certNote?: string | null;
   /** Where marketing claims and available evidence part ways — said plainly. */
   divergenceNote?: string | null;
+  /** Publisher-supplied, identity-confirmed photo of the facility — rendered as the page hero. */
+  heroImage?: string;
+  /** Credit line shown under the hero image. */
+  heroImageCredit?: string;
   operatorId: string;
   operator: Operator;
   connectivityFacility: { provider: ConnectivityProvider }[];
@@ -409,6 +413,8 @@ const facilities: Facility[] = [
     id: "17",
     name: "Safaricom Red Hill (Limuru) Campus",
     slug: "safaricom-red-hill",
+    heroImage: "/images/limuru-campus-aerial-solar.webp",
+    heroImageCredit: "Aerial view: DC254, September 2026 — identity confirmed by the publisher",
     description: "Safaricom's newer three-building campus at Red Hill, Limuru — the strongest certification position in Kenya, with phase one completed March 2025.",
     status: "Operational",
     address: "Red Hill, Limuru Road, Kiambu County",

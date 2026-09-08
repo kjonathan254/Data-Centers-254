@@ -73,7 +73,7 @@ export default function StateOfKenyanDataCentres2026() {
             <div className="img-frame relative aspect-[16/9]">
               <Image
                 src="/images/limuru-campus-aerial-solar.webp"
-                alt="Aerial view of a Limuru data centre campus with rooftop solar"
+                alt="Aerial view of the Safaricom Red Hill data centre campus at Limuru, with rooftop solar"
                 fill
                 sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-cover"
@@ -81,9 +81,9 @@ export default function StateOfKenyanDataCentres2026() {
               />
             </div>
             <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              Kenya&apos;s new generation of campuses: rooftop solar on a completed
-              Limuru data centre building, with the next phase under
-              construction alongside. Aerial view, September 2026.
+              Safaricom&apos;s Red Hill campus at Limuru, Kiambu County:
+              rooftop solar on the completed phase-one building, phase-two
+              works under construction alongside. Aerial view, September 2026.
             </figcaption>
           </figure>
 

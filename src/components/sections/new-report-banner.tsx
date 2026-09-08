@@ -33,7 +33,7 @@ export default function NewReportBanner() {
           >
             <Image
               src="/images/limuru-campus-aerial-solar.webp"
-              alt="Aerial view of a Kenyan data centre campus with rooftop solar, Limuru"
+              alt="Aerial view of the Safaricom Red Hill data centre campus at Limuru, with rooftop solar"
               fill
               sizes="(max-width: 1024px) 100vw, 480px"
               className="object-cover"

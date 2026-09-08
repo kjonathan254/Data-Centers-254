@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -86,9 +87,9 @@ export async function generateMetadata({
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${f.name} — Data Centre 254` }],
+      images: [{ url: f.heroImage || "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${f.name} — Data Centre 254` }],
     },
-    twitter: { card: "summary_large_image", title, description, images: ["/images/africa-dc-map.webp"] },
+    twitter: { card: "summary_large_image", title, description, images: [f.heroImage || "/images/africa-dc-map.webp"] },
   };
 }
 
@@ -198,6 +199,26 @@ export default async function FacilityPage({
               {[f.address, f.city, f.region].filter(Boolean).join(", ")}
             </p>
           </header>
+
+          {/* Verified facility photo — shown only where identity is publisher-confirmed */}
+          {f.heroImage && (
+            <figure className="mt-8 max-w-3xl">
+              <div className="img-frame relative aspect-[16/9]">
+                <Image
+                  src={f.heroImage}
+                  alt={`Aerial view of ${f.name}, ${f.city}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {f.name} from the air — rooftop solar on the completed phase,
+                the next phase under construction alongside. {f.heroImageCredit}
+              </figcaption>
+            </figure>
+          )}
 
           {/* Lead paragraph — synthesised from verified fields */}
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
