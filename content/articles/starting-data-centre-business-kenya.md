@@ -15,12 +15,12 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Business Guide"
 cluster: "Careers"
-og_image: "/images/dc-business-investment.webp"
+og_image: "/images/nairobi-city-hall-county.webp"
 reading_time: "14 min"
 images:
-  - src: "/images/dc-business-investment.webp"
-    alt:  "Business meeting over data centre investment plans"
-    caption: "Building a data centre in Kenya is a significant infrastructure investment — understanding the capital requirements, regulatory steps, and market dynamics is essential before committing funds"
+  - src: "/images/nairobi-city-hall-county.webp"
+    alt: "Nairobi City Hall, seat of the Nairobi City County government"
+    caption: "Approvals start at City Hall: county building permits, NEMA impact assessment and fire certification before a single rack arrives"
     position: "hero"
   - src: "/images/dc-environment-sustainability.webp"
     alt:  "Aerial view of a data centre campus with rooftop solar"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/starting-data-centr
 
 Building a data centre is one of the most capital-intensive infrastructure investments possible in Kenya's technology sector. A small colocation facility requires hundreds of millions of shillings in upfront capital, takes 18-36 months from concept to operational, and generates returns over a 15-25 year asset life. It is not a startup in the traditional sense — it is an infrastructure play that requires patience, deep pockets, and a clear understanding of the market.
 
-![Business meeting over data centre investment plans](/images/dc-business-investment.webp)
+![Nairobi City Hall, seat of the Nairobi City County government](/images/nairobi-city-hall-county.webp)
 
 This guide is for investors, entrepreneurs, and organisations considering entering the Kenyan data centre market. It covers the investment requirements, the regulatory steps, the market dynamics, and the strategic decisions that determine whether a new data centre succeeds or fails.
 

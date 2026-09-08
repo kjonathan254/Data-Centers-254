@@ -15,12 +15,12 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Policy"
 cluster: "Policy"
-og_image: "/images/dc-security-camera.webp"
+og_image: "/images/constitution-of-kenya-2010.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-security-camera-2.webp"
-    alt:  "Surveillance camera overlooking a server hall"
-    caption: "The Data Protection Act 2019 established Kenya's framework for protecting personal data, with significant implications for data centre operators and their customers"
+  - src: "/images/constitution-of-kenya-2010.webp"
+    alt: "The Constitution of Kenya 2010, whose Article 31 privacy guarantee underpins the Data Protection Act"
+    caption: "The root of it all: Article 31's privacy guarantee in the Constitution of Kenya 2010 is what the Data Protection Act 2019 puts into statutory force"
     position: "hero"
   - src: "/images/dc-biometric-access.webp"
     alt:  "Biometric access control at a data centre"
@@ -62,7 +62,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-protecti
 
 When Kenya's Data Protection Act came into effect in November 2019, it fundamentally changed the legal landscape for any organisation that handles personal data — and that includes every data centre operator and every customer who places servers in a Kenyan facility. The Act, modelled closely on the European Union's General Data Protection Regulation (GDPR), established rights for individuals, obligations for organisations, and enforcement powers for the Office of the Data Protection Commissioner (ODPC) that, in principle, match the standards set by the world's most comprehensive data protection laws.
 
-![Surveillance camera overlooking a server hall](/images/dc-security-camera-2.webp)
+![The Constitution of Kenya 2010, whose Article 31 privacy guarantee underpins the Data Protection Act](/images/constitution-of-kenya-2010.webp)
 
 In practice, Kenya's data protection regime is still maturing. The ODPC, established in 2020, has been building its institutional capacity gradually. Enforcement actions have been limited, guidance documents are still being developed, and many organisations remain unclear on exactly what compliance requires. But the law is the law, and for data centre operators and their customers, understanding the Data Protection Act is not optional — it is a legal obligation with financial penalties for non-compliance of up to KES 5 million or 1% of annual turnover, whichever is higher.
 

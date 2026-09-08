@@ -15,12 +15,12 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Policy & Regulation"
 cluster: "Policy"
-og_image: "/images/africa-ai-data-hub-mtn.webp"
+og_image: "/images/constitution-kenya-pocket-hand.webp"
 reading_time: "18 min"
 images:
-  - src: "/images/dc-policy-regulation.webp"
-    alt: "National government building at dusk"
-    caption: "ICT policy sets the rules of the game for every data centre investor."
+  - src: "/images/constitution-kenya-pocket-hand.webp"
+    alt: "A hand holds up the pocket edition of the Constitution of Kenya"
+    caption: "Every ICT licence, standard and strategy traces back to one document: the Constitution of Kenya 2010"
     position: "hero"
   - src: "/images/nairobi-skyline-night-kicc.webp"
     alt:  "KICC tower and the Nairobi skyline at night"
@@ -56,7 +56,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ict-policy-framework-data-centres"
 ---
 
-![National government building at dusk](/images/dc-policy-regulation.webp)
+![A hand holds up the pocket edition of the Constitution of Kenya](/images/constitution-kenya-pocket-hand.webp)
 
 Kenya's data centre industry does not operate in a vacuum. Every rack installed, every fibre optic cable landed, and every megawatt of power allocated is shaped by a complex web of policies, statutes, and regulatory directives. For investors, operators, and technology companies evaluating Kenya as a data centre destination, understanding the **ICT policy framework** is not optional — it is the foundation upon which every business case is built.
 

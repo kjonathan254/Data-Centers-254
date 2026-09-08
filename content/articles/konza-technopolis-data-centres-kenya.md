@@ -22,6 +22,10 @@ images:
     alt:  "Aerial view of a data centre campus at dusk"
     caption: "Konza Technopolis is Kenya's bet on a purpose-built tech city."
     position: "hero"
+  - src: "/images/kenyan-parliament-buildings.webp"
+    alt: "Aerial view of the Parliament Buildings of Kenya, Nairobi"
+    caption: "Konza exists by statute: KoTDA was established by an Act of Parliament in 2012, making the state the project's anchor"
+    position: "section-break"
   - src: "/images/dc-cooling-crac-2.webp"
     alt:  "Data centre cooling and power distribution equipment"
     caption: "Konza's planned dedicated substation and dual-feed power infrastructure addresses a critical data centre requirement"
@@ -71,6 +75,8 @@ The answer will have significant implications for [Kenya's position as East Afri
 Konza Technopolis was conceived as part of **Kenya Vision 2030**, the country's long-term development blueprint launched in 2008. The vision identified information and communications technology (ICT) as a key pillar of economic transformation, and Konza was designed as the physical manifestation of this ambition — a dedicated city where technology companies, research institutions, and government agencies would co-locate to create an innovation ecosystem.
 
 The [Konza Technopolis Development Authority (KoTDA)](https://konza.go.ke) was established by an Act of Parliament in 2012 to oversee the planning, development, and management of the project. The **World Bank has provided project appraisal support and financing**, recognizing Konza's potential to catalyze Kenya's knowledge economy.
+
+![Aerial view of the Parliament Buildings of Kenya, Nairobi](/images/kenyan-parliament-buildings.webp)
 
 The master plan for Konza is comprehensive: a city designed for approximately 200,000 residents and 100,000 jobs, with dedicated zones for business process outsourcing, life sciences, education, and — critically for the data centre industry — **technology infrastructure including data centres**.
 
