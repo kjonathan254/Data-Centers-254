@@ -5,6 +5,7 @@ import Hero from "@/components/sections/hero";
 import BreakingNewsBar from "@/components/sections/breaking-news-bar";
 import DirectorySearchBand from "@/components/sections/directory-search-band";
 import FeaturedFacilities from "@/components/sections/featured-facilities";
+import NewReportBanner from "@/components/sections/new-report-banner";
 import LatestIntelligence from "@/components/sections/latest-intelligence";
 import LatestNewsBanner from "@/components/sections/latest-news-banner";
 import WhatIsDC from "@/components/sections/what-is-dc";
@@ -31,6 +32,8 @@ export default function Home() {
         <DirectorySearchBand />
         {/* 3.5 — The product itself: flagship facilities, deep-linked */}
         <FeaturedFacilities />
+        {/* 3.75 — The flagship report: free summary + downloadable PDF */}
+        <NewReportBanner />
         {/* 4 — Freshest reporting, image-led cards */}
         <LatestIntelligence />
         {/* 5 — One deep-dive feature */}

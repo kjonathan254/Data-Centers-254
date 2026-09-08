@@ -21,6 +21,7 @@ const platformLinks = [
   { label: "Ask Jibu", href: "/chat" },
   { label: "Methodology", href: "/methodology" },
   { label: "Glossary", href: "/glossary" },
+  { label: "Kiswahili Glossary", href: "/glossary/kiswahili" },
   { label: "FAQ", href: "/faq" },
   { label: "Foundations", href: "/foundations" },
   { label: "Search", href: "/search" },

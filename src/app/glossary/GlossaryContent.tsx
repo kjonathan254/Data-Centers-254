@@ -63,6 +63,26 @@ export default function GlossaryContent({
           </p>
         </div>
 
+        {/* Kiswahili glossary callout */}
+        <Link
+          href="/glossary/kiswahili"
+          className="group mb-10 flex items-center gap-4 rounded-xl border border-cyan/25 bg-cyan/5 p-4 sm:p-5 transition-colors hover:border-cyan/40 hover:bg-cyan/10"
+        >
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-cyan/10 font-mono text-xs font-bold text-cyan">
+            SW
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors sm:text-base">
+              Kamusi ya Kiswahili — the glossary in Swahili
+            </p>
+            <p className="text-xs text-muted-foreground mt-0.5 sm:text-sm">
+              22 core data centre terms explained in plain Kiswahili, plus an
+              interactive vocabulary quiz.
+            </p>
+          </div>
+          <ChevronRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-cyan" />
+        </Link>
+
         {/* Search + Category Filters */}
         <div className="mb-10 space-y-4">
           {/* Search */}
