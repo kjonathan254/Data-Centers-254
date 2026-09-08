@@ -6,12 +6,12 @@ import ResearchContent from "@/components/research-content";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Independent research and analysis on Kenya's digital infrastructure — data centre markets, AI infrastructure, energy, and cloud computing.",
+    "DC254 reports and briefs on Kenya's digital infrastructure — every report ships as a free web summary plus a downloadable deep-dive PDF. Open data, no signup wall.",
   alternates: { canonical: "/research" },
   openGraph: {
-    title: "Research | Data Centre 254",
+    title: "Reports & Briefs | Data Centre 254",
     description:
-      "Independent research and analysis on Kenya's digital infrastructure — data centre markets, AI infrastructure, energy, and cloud computing.",
+      "Free summaries plus downloadable deep-dive PDFs on Kenya's data centre market.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Research | Data Centre 254",
+    title: "Reports & Briefs | Data Centre 254",
     description:
-      "Independent research and analysis on Kenya's digital infrastructure.",
+      "Free summaries plus downloadable deep-dive PDFs on Kenya's data centre market.",
     images: ["/images/og-default.png"],
   },
 };

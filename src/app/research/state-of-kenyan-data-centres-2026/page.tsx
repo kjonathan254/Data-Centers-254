@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import {
   ArrowRight, CheckCircle2, HardHat, ShieldCheck, Megaphone, Zap,
-  GitCompareArrows, Database, Shield, FileText, RefreshCw, Landmark,
+  GitCompareArrows, Database, Shield, FileText, RefreshCw, Landmark, Download,
 } from "lucide-react";
 import {
   getFacilities, getMarketSnapshot, STATUS_ORDER,
@@ -63,9 +63,27 @@ export default function StateOfKenyanDataCentres2026() {
             goes stale. Scope, sources and confidence tiers are documented in our{" "}
             <Link href="/methodology" className="text-cyan underline hover:underline">data methodology</Link>.
           </p>
-          <p className="text-xs text-muted-foreground mb-12">
+          <p className="text-xs text-muted-foreground mb-6">
             Dataset last verified: {snapshot.lastVerified} · Cross-checked against the PeeringDB Kenya register (fetched 8 Sep 2026)
           </p>
+
+          {/* PDF edition CTA */}
+          <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-cyan/25 bg-cyan/5 p-5 mb-12">
+            <div>
+              <p className="text-sm font-semibold text-foreground">Prefer the brief? Download the PDF edition</p>
+              <p className="text-xs text-muted-foreground mt-1">
+                Brief / 01 — 4 pages, a cover, two infographics, dated sources. Free, no signup wall.
+              </p>
+            </div>
+            <a
+              href="/reports/dc254-state-of-kenyan-data-centres-2026.pdf"
+              download
+              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-cyan px-4 py-2.5 text-sm font-medium text-cyan-foreground hover:bg-cyan/90 transition-colors"
+            >
+              <Download className="size-4" /> Download PDF
+              <span className="text-[10px] opacity-70 font-normal">4 pages · 2.7 MB</span>
+            </a>
+          </div>
 
           {/* Headline stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-14">
@@ -244,9 +262,14 @@ export default function StateOfKenyanDataCentres2026() {
               2019–2030 (July 2026). This page re-computes from the live
               dataset on every visit — if a number moves, so does the review.
             </p>
-            <Link href="/articles/kenya-data-centre-market-numbers" className="inline-flex items-center gap-2 text-sm font-medium text-cyan hover:gap-2.5 transition-all">
-              Deep-dive: Kenya&apos;s market in numbers <ArrowRight className="size-4" />
-            </Link>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <Link href="/articles/kenya-data-centre-market-numbers" className="inline-flex items-center gap-2 text-sm font-medium text-cyan hover:gap-2.5 transition-all">
+                Deep-dive: Kenya&apos;s market in numbers <ArrowRight className="size-4" />
+              </Link>
+              <a href="/reports/dc254-state-of-kenyan-data-centres-2026.pdf" download className="inline-flex items-center gap-2 text-sm font-medium text-cyan hover:gap-2.5 transition-all">
+                PDF edition: Brief / 01 <Download className="size-4" />
+              </a>
+            </div>
           </div>
         </div>
       </main>
