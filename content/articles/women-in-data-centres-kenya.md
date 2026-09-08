@@ -15,24 +15,20 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Careers"
 cluster: "Careers"
-og_image: "/images/dc-women-engineers-corridor.webp"
+og_image: "/images/tech-community-event-nairobi.webp"
 reading_time: "13 min"
 images:
-  - src: "/images/dc-women-engineers-corridor.webp"
-    alt:  "Two engineers walking through a data centre corridor"
+  - src: "/images/tech-community-event-nairobi.webp"
+    alt:  "A packed tech community session in Nairobi — women building careers in Kenya's digital economy"
     caption: "Women remain under-represented in African data halls — visibility of the ones already there matters."
     position: "hero"
-  - src: "/images/dc-woman-engineer-laptop.webp"
-    alt:  "Engineer working on a laptop in a server hall"
+  - src: "/images/classroom-ict-training-kenya.webp"
+    alt:  "Instructor leading an ICT training class in Kenya"
     caption: "Pathways in: apprenticeships, certifications, and transferable IT skills."
     position: "section-break"
-  - src: "/images/dc-woman-engineer-racks.webp"
-    alt: "Woman engineer configuring server racks"
-    caption: "Operators are rolling out mentorship and inclusive hiring to close the gap."
-    position: "infographic"
-  - src: "/images/tech-community-event-nairobi.webp"
-    alt:  "Speaker addressing a tech community meetup in Nairobi"
-    caption: "Community events and visible role models are helping more Kenyans see a future in digital infrastructure."
+  - src: "/images/nbo2-launch-ribbon-cutting.webp"
+    alt: "Executives cutting the ribbon at the NBO2 data centre launch in Nairobi"
+    caption: "Women hold visible roles across the sector — the launch group at Digital Realty's NBO2 in Nairobi, September 2026. Photo: Digital Realty."
     position: "section-break"
 internal_links:
   - text: "data centre careers in Kenya"
@@ -64,7 +60,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/women-in-data-centr
 
 Kenya's data centre industry is growing rapidly, driven by the country's position as East Africa's digital hub and the increasing demand for cloud services, colocation, and digital infrastructure. Yet behind the gleaming server racks and sophisticated cooling systems lies a persistent challenge: **the significant underrepresentation of women in technical data centre roles**.
 
-![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
+![A packed tech community session in Nairobi — women building careers in Kenya's digital economy](/images/tech-community-event-nairobi.webp)
 
 While comprehensive data centre-specific workforce statistics are not publicly available in Kenya, broader Kenyan tech sector data provides a reliable indicator. According to multiple industry surveys, **women make up approximately 20-30% of Kenya's technology workforce**. Within data centres specifically — where roles span electrical engineering, mechanical systems, networking, and facilities management — the representation is estimated at the lower end of this range, around **20-25%**.
 
@@ -94,7 +90,7 @@ The [career progression in African data centres](/articles/career-progression-af
 
 ## Women Leading Change in Kenya's Tech Infrastructure
 
-![Speaker addressing a tech community meetup in Nairobi](/images/tech-community-event-nairobi.webp)
+![Instructor leading an ICT training class in Kenya](/images/classroom-ict-training-kenya.webp)
 
 Despite the barriers, a growing number of women are making significant contributions to Kenya's data centre and broader tech infrastructure sector. While the industry does not always celebrate these contributions publicly, several women have emerged as leaders and role models:
 
@@ -130,7 +126,7 @@ Microsoft's **Africa Development Centre** in Nairobi has implemented comprehensi
 
 ## Career Pathways with Growing Female Participation
 
-![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
+![Executives cutting the ribbon at the NBO2 data centre launch in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
 
 ### Project Management
 
@@ -163,8 +159,6 @@ Several of Kenya's major data centre operators and technology companies have est
 Formal mentorship programmes pair experienced professionals with women who are earlier in their careers. These programmes provide guidance on technical skills development, career planning, and navigating workplace challenges. Companies like **Safaricom**, **Microsoft ADC**, and **Amazon Web Services** (which has a presence in Kenya) run structured mentorship programmes that include data centre and infrastructure professionals.
 
 ### Flexible Working Arrangements
-
-![Woman engineer configuring server racks](/images/dc-woman-engineer-racks.webp)
 
 The shift towards cloud-managed infrastructure and remote monitoring tools has made it increasingly possible for data centre professionals to perform many of their duties remotely. Companies that offer **hybrid working models**, flexible hours, and remote management capabilities are finding it easier to attract and retain women in data centre roles.
 

@@ -39,8 +39,8 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "Industrial cooling units and pipework inside a data centre plant room",
   },
   Careers: {
-    src: "/images/dc-careers-tech.webp",
-    alt: "Data centre technician working at a server rack",
+    src: "/images/nbo2-launch-ribbon-cutting.webp",
+    alt: "Industry professionals cutting the ribbon at the NBO2 data centre launch in Nairobi — the people behind Kenya's digital infrastructure",
   },
 };
 

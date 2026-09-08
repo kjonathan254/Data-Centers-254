@@ -17,11 +17,11 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: Careers
 cluster: Careers
-og_image: /images/dc-server-chip-3.webp
+og_image: /images/aerial-fibre-technician-utility-pole.webp
 reading_time: "12 min"
 images:
-- src: /images/dc-woman-engineer-laptop.webp
-  alt:  "Engineer working on a laptop in a server hall"
+- src: /images/aerial-fibre-technician-utility-pole.webp
+  alt:  "Field technician working on aerial fibre connections on a utility pole"
   caption: "Career progression in African data centres runs from hands-on rack work to facility-wide leadership."
   position: hero
 - src: /images/racks-cabling.webp
@@ -29,18 +29,14 @@ images:
   caption: Cable technicians form the critical entry point into the data centre career
     ladder
   position: section-break
-- src: /images/dc-careers-tech.webp
-  alt:  "Engineer working at a server rack"
-  caption: "Mid-level engineers own the systems: installations, upgrades, and the escalations nobody else can close."
+- src: /images/construction-workers-site-review.webp
+  alt:  "Site crew in protective gear reviewing an active build site"
+  caption: "Mid-level engineers own delivery: installations, upgrades, and site coordination."
   position: section-break
-- src: /images/dc-women-engineers-corridor.webp
-  alt:  "Two engineers walking through a data centre corridor"
-  caption: "Senior roles are as much about people and planning as they are about hardware."
+- src: /images/rerec-pole-handover-kenya.webp
+  alt:  "Officials and crew at a REREC pole handover event in Kenya"
+  caption: "Senior infrastructure careers are people work — coordination, handovers, and community relations."
   position: inline
-- src: /images/junior-technician-server-aisle.webp
-  alt: "Junior technician monitoring server racks with a tablet in a data hall"
-  caption: "Entry-level roles put new technicians hands-on with live hardware from day one — rack work is where the ladder starts."
-  position: section-break
 internal_links:
 - text: How To Get Job Kenyan Data Centre
   href: /articles/how-to-get-job-kenyan-data-centre
@@ -111,7 +107,7 @@ Africa's data centre industry is undergoing explosive growth, and Kenya sits at 
 
 This article maps out the complete career progression ladder in the African data centre industry, with specific salary data for the Kenyan market, certification milestones at each level, and practical advice on regional mobility across East Africa and beyond.
 
-![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
+![Field technician working on aerial fibre connections on a utility pole](/images/aerial-fibre-technician-utility-pole.webp)
 *Data centre careers in Kenya span from hands-on technical roles to strategic leadership positions*
 
 ## The African Data Centre Career Ladder Overview
@@ -121,8 +117,6 @@ The data centre industry in Africa — and Kenya specifically — follows a fair
 According to [Africa Data Centres' market reports](https://www.africadatacentres.com/news/), the continent needs approximately 10,000 additional skilled data centre professionals by 2030 to meet demand. Kenya alone, driven by the [national market outlook through 2030](/articles/kenya-data-centre-market-outlook-2025-2030), is expected to require over 2,000 new roles across technical, operational, and leadership functions.
 
 ## Entry-Level Roles (0–3 Years Experience)
-
-![Junior technician monitoring server racks with a tablet in a data hall](/images/junior-technician-server-aisle.webp)
 
 Entry-level positions form the foundation of any data centre career. These roles are hands-on, requiring physical presence in the facility, and they provide the essential ground-floor understanding of how data centres actually operate.
 
@@ -181,7 +175,7 @@ Operations managers oversee the day-to-day running of a data centre facility. Th
 
 **Salary Range (Kenya):** KES 150,000–350,000 per month, depending on facility size and operator.
 
-![Engineer working at a server rack](/images/dc-careers-tech.webp)
+![Site crew in protective gear reviewing an active build site](/images/construction-workers-site-review.webp)
 *Operations managers oversee critical infrastructure across multiple African markets*
 
 ### Compliance and Regulatory Officer
@@ -228,7 +222,7 @@ For those who pivot from pure technology into general management, the MD or Coun
 
 **Salary Range (Kenya):** KES 1,500,000–4,000,000+ per month, with significant performance-linked components.
 
-![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
+![Officials and crew at a REREC pole handover event in Kenya](/images/rerec-pole-handover-kenya.webp)
 *Senior leadership in African data centres requires both technical depth and business acumen*
 
 ## Career Paths by Employer Type

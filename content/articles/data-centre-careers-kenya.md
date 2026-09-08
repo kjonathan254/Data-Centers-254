@@ -15,23 +15,19 @@ published_date: "2026-08-26"
 updated_date: "2026-08-27"
 category: "Careers"
 cluster: "Careers"
-og_image: "/images/dc-woman-engineer-racks.webp"
+og_image: "/images/construction-workers-site-review.webp"
 reading_time: "11 min"
 images:
-  - src: "/images/dc-woman-engineer-racks.webp"
-    alt:  "Woman engineer configuring server racks"
+  - src: "/images/construction-workers-site-review.webp"
+    alt:  "Construction crew in protective gear reviewing a build site — the industry Kenya's data centre careers are built on"
     caption: "Kenya's data centre industry needs engineers, technicians, and specialists — and the paths in are clearer than most people think."
     position: "hero"
-  - src: "/images/dc-careers-tech.webp"
-    alt:  "Engineer working at a server rack"
-    caption: "From facilities technicians to network engineers, every role keeps the racks humming."
-    position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
     alt:  "Comparison of network engineer and cybersecurity engineer roles"
     caption: "Different tracks reward different credentials — networking and security roles rarely swap."
     position: "diagram"
-  - src: "/images/dc-woman-engineer-laptop.webp"
-    alt: "Engineer working on a laptop in a server hall"
+  - src: "/images/aerial-fibre-technician-utility-pole.webp"
+    alt: "Field technician working on aerial fibre connections on a utility pole"
     caption: "Most people enter through facilities, networking, or support roles before specialising."
     position: "inline"
   - src: "/images/nairobi-skyline-night.webp"
@@ -72,7 +68,7 @@ Kenya's data centre industry is creating jobs that most Kenyans do not know exis
 
 The data centre industry in Kenya employs hundreds of people across a range of specialisations, from entry-level technicians to senior facility managers with decades of experience. As the industry grows — driven by increasing digitalisation, cloud adoption, and the potential for AI infrastructure investment — the demand for skilled professionals will only increase. For anyone considering a career in this space, understanding the roles, the required qualifications, and the pathways to entry is essential.
 
-![Woman engineer configuring server racks](/images/dc-woman-engineer-racks.webp)
+![Construction crew in protective gear reviewing a build site — the industry Kenya's data centre careers are built on](/images/construction-workers-site-review.webp)
 
 ## The Core Roles: What People Actually Do
 
@@ -107,8 +103,6 @@ Cabling technicians install, maintain, and troubleshoot the structured cabling t
 Good cabling work requires precision, patience, and attention to detail. A single poorly terminated fibre connector can cause signal loss that degrades performance for an entire rack of servers.
 
 **Qualifications**: Diploma in IT, telecommunications, or electrical engineering. Vendor certifications for fibre optic termination (e.g., Corning, CommScope) are valued.
-
-![Engineer working at a server rack](/images/dc-careers-tech.webp)
 
 ## Certifications That Matter
 
@@ -165,7 +159,7 @@ The most common pathways into Kenya's data centre industry are:
 
 The [data centre tier ratings](/articles/data-centre-tier-ratings-explained) framework is important knowledge for anyone entering the field — understanding the reliability standards that facilities are built to will help you understand why things are designed the way they are.
 
-![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
+![Field technician working on aerial fibre connections on a utility pole](/images/aerial-fibre-technician-utility-pole.webp)
 
 ## The Outlook
 

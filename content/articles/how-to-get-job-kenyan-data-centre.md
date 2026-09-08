@@ -15,12 +15,12 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Career Guide"
 cluster: "Careers"
-og_image: "/images/woman-network-engineer-patch-panel.webp"
+og_image: "/images/classroom-ict-training-kenya.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/woman-network-engineer-patch-panel.webp"
-    alt: "Network engineer terminating cables at a patch panel"
-    caption: "Hands on a patch panel beats keywords on a CV — how to actually get hired"
+  - src: "/images/classroom-ict-training-kenya.webp"
+    alt: "Instructor leading an ICT training class in Kenya"
+    caption: "The pipeline starts in training classrooms and certification labs — hands-on skill is what gets you hired."
     position: hero
   - src: "/images/hero-server-hall.webp"
     alt: "Blue-lit server racks in a data hall"
@@ -61,8 +61,6 @@ canonical_url: "https://data-centers-254.vercel.app/articles/how-to-get-job-keny
 ---
 
 Kenya's data centre industry is growing fast, and it needs people. Not just any people — it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.
-
-![Two engineers walking through a data centre corridor](/images/dc-women-engineers-corridor.webp)
 
 This guide is for anyone in Kenya who wants to work in a data centre — whether you are a fresh graduate trying to figure out where to start, an IT professional looking to transition from enterprise IT into infrastructure, or an engineer in a related field (power, cooling, telecommunications) who sees the opportunity. We will cover the roles that exist, the certifications employers actually look for, realistic salary expectations, and practical steps to get your foot in the door.
 

@@ -71,8 +71,8 @@ export default function CareersSection() {
             <div className="img-frame">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/dc-careers-tech.webp"
-                  alt="Data centre technician checking connections at a server rack"
+                  src="/images/tech-community-event-nairobi.webp"
+                  alt="A tech community session in Nairobi — real people building careers in Kenya's digital economy"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"
                   className="object-cover"
@@ -80,8 +80,9 @@ export default function CareersSection() {
               </div>
             </div>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-              Inside the white space: precision, discipline and shift work —
-              the human layer of Kenya&apos;s digital economy.
+              A tech community session in Nairobi — real people, real mentors,
+              real hiring conversations: the human layer of Kenya&apos;s digital
+              economy.
             </p>
           </div>
         </div>
