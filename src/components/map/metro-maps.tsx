@@ -5,7 +5,7 @@ import {
   NBO_FRAME, MSA_FRAME, metroProj, NBO_LAND, NBO_PROVINCE, MSA_LAND,
 } from "@/lib/map-geo";
 import { KENYA_FACILITIES, SUBSEA_CABLES, LANDING_STATION, type KenyaFacility } from "@/lib/map-data";
-import { CYAN, NEON, AMBER, STATUS_COLOR, smoothPath } from "./shared";
+import { CYAN, AMBER, STATUS_COLOR, smoothPath } from "./shared";
 
 // ─── NAIROBI METRO ──────────────────────────────────────────────────────────
 
@@ -17,7 +17,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
 }) {
   const [hover, setHover] = useState<string | null>(null);
 
-  const items = KENYA_FACILITIES.filter((f) => f.city === "nairobi");
+  const items = KENYA_FACILITIES.filter((f) => f.metro === "nairobi");
   const right = items.filter((f) => f.lng >= 36.83).sort((a, b) => b.lat - a.lat);
   const left = items.filter((f) => f.lng < 36.83).sort((a, b) => b.lat - a.lat);
 
@@ -36,6 +36,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
     const dim = dimmed.has(f.id);
     const color = STATUS_COLOR[f.status];
     const rectX = side === "r" ? x - 6 : x - 240;
+    const dashed = f.status !== "Operational";
     return (
       <g
         className="cursor-pointer"
@@ -56,16 +57,14 @@ function NairobiMapInner({ dimmed, onFacility }: {
           strokeWidth={active ? 1.6 : 1}
         />
         {/* status dot */}
-        {f.status === "Announced" ? (
+        {dashed ? (
           <circle cx={side === "r" ? x + 2 : x - 2} cy={y} r={5} fill="none" stroke={color} strokeWidth={1.6} strokeDasharray="3 2.4" />
         ) : (
           <circle cx={side === "r" ? x + 2 : x - 2} cy={y} r={5} fill={color} />
         )}
-        <text x={side === "r" ? x + 16 : x - 16} y={y - 2} textAnchor={side === "r" ? "start" : "end"} fontSize={15.5} fontWeight={650} fill="oklch(0.93 0.01 260)">{f.shortName}</text>
-        <text x={side === "r" ? x + 16 : x - 16} y={y + 14} textAnchor={side === "r" ? "start" : "end"} fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.55)">
-          {f.status === "Announced"
-            ? (f.totalMW > 0 ? `${f.totalMW} MW · announced` : "Capacity undisclosed · announced")
-            : `${f.totalMW} MW · ${f.tier}`}
+        <text x={side === "r" ? x + 16 : x - 16} y={y - 2} textAnchor={side === "r" ? "start" : "end"} fontSize={14.5} fontWeight={650} fill="oklch(0.93 0.01 260)">{f.shortName}</text>
+        <text x={side === "r" ? x + 16 : x - 16} y={y + 14} textAnchor={side === "r" ? "start" : "end"} fontSize={11.5} fill="oklch(0.93 0.01 260 / 0.55)">
+          {dashed ? `${f.status.toLowerCase()}${f.totalMW > 0 ? ` · ${f.totalMW} MW` : ""}` : `${f.totalMW > 0 ? `${f.totalMW} MW` : "MW n/p"} · ${f.tier}`}
         </text>
       </g>
     );
@@ -84,29 +83,14 @@ function NairobiMapInner({ dimmed, onFacility }: {
       <path d={NBO_PROVINCE} fill="oklch(0.78 0.14 195 / 0.07)" stroke={CYAN} strokeWidth={1.8} strokeOpacity={0.85} strokeDasharray="0" />
       <text x={NBO_FRAME.W - 20} y={NBO_FRAME.H - 18} textAnchor="end" fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.35)">boundary: Nairobi province · positions schematic</text>
 
-      {/* district labels */}
-      {([
-        ["WESTLANDS", -1.2675, 36.802],
-        ["CBD", -1.287, 36.829],
-        ["UPPER HILL", -1.3035, 36.81],
-        ["KILIMANI", -1.2925, 36.778],
-        ["INDUSTRIAL AREA", -1.3165, 36.855],
-      ] as [string, number, number][]).map(([name, lat, lng]) => {
-        const { x, y } = nboP(lat, lng);
-        return (
-          <text key={name} x={x} y={y} textAnchor="middle" fontSize={12.5} fontWeight={550}
-            letterSpacing={2.2} fill="oklch(0.78 0.14 195 / 0.4)" className="select-none">{name}</text>
-        );
-      })}
-
       {/* Mombasa Road corridor */}
       <path d={corridor} fill="none" stroke="oklch(0.93 0.01 260 / 0.16)" strokeWidth={10} strokeLinecap="round" />
       <path d={corridor} fill="none" stroke="oklch(0.93 0.01 260 / 0.3)" strokeWidth={1.4} strokeDasharray="6 5" />
       <text x={nboP(-1.34, 36.868).x + 10} y={nboP(-1.34, 36.868).y + 4} fontSize={13} fontStyle="italic" fill="oklch(0.93 0.01 260 / 0.45)">Mombasa Rd (A8)</text>
 
-      {/* callout rows */}
-      {left.map((f, i) => <Row key={f.id} f={f} x={LEFT_X} y={rowY(i, 128)} side="l" />)}
-      {right.map((f, i) => <Row key={f.id} f={f} x={RIGHT_X} y={rowY(i, 148)} side="r" />)}
+      {/* callout rows — tighten spacing to fit the full list */}
+      {left.map((f, i) => <Row key={f.id} f={f} x={LEFT_X} y={rowY(i, 96)} side="l" />)}
+      {right.map((f, i) => <Row key={f.id} f={f} x={RIGHT_X} y={rowY(i, 108)} side="r" />)}
 
       {/* KIXP — Nairobi IXP */}
       <g>
@@ -122,7 +106,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
       </g>
 
       {/* markers on top */}
-      {items.map((f, idx) => {
+      {items.map((f) => {
         const { x, y } = nboP(f.lat, f.lng);
         const active = hover === f.id;
         const dim = dimmed.has(f.id);
@@ -131,16 +115,10 @@ function NairobiMapInner({ dimmed, onFacility }: {
             onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)}
             onClick={() => onFacility(f)}>
             {active && <circle cx={x} cy={y} r={13} fill={CYAN} fillOpacity={0.15} />}
-            {f.status === "Operational" && (
-              <circle cx={x} cy={y} r={6.5} fill="none" stroke={STATUS_COLOR[f.status]} strokeWidth={1.2}>
-                <animate attributeName="r" from="7" to="17" dur="2.6s" begin={`${(idx % 6) * 0.42}s`} repeatCount="indefinite" />
-                <animate attributeName="stroke-opacity" from="0.5" to="0" dur="2.6s" begin={`${(idx % 6) * 0.42}s`} repeatCount="indefinite" />
-              </circle>
-            )}
-            {f.status === "Announced" ? (
+            {f.status !== "Operational" ? (
               <>
-                <circle cx={x} cy={y} r={8} fill="oklch(0.2 0.05 250 / 0.9)" stroke={STATUS_COLOR.Announced} strokeWidth={1.8} strokeDasharray="4 3" />
-                <circle cx={x} cy={y} r={2.6} fill={STATUS_COLOR.Announced} />
+                <circle cx={x} cy={y} r={8} fill="oklch(0.2 0.05 250 / 0.9)" stroke={STATUS_COLOR[f.status]} strokeWidth={1.8} strokeDasharray="4 3" />
+                <circle cx={x} cy={y} r={2.6} fill={STATUS_COLOR[f.status]} />
               </>
             ) : (
               <>
@@ -164,13 +142,15 @@ function MombasaMapInner({ dimmed, onFacility }: {
   dimmed: Set<string>;
   onFacility: (f: KenyaFacility) => void;
 }) {
+  const [hover, setHover] = useState<string | null>(null);
   const [hoverCable, setHoverCable] = useState<string | null>(null);
-  const adc = KENYA_FACILITIES.find((f) => f.city === "mombasa")!;
-  const adcP = msaP(adc.lat, adc.lng);
+  const facilities = KENYA_FACILITIES.filter((f) => f.metro === "mombasa");
   const ls = msaP(LANDING_STATION.lat, LANDING_STATION.lng);
 
   // fan endpoints in frame space
   const fanEnds = [58, 105, 152, 199, 246, 293, 340];
+  const ROW_X = 250;
+  const rowY = (i: number) => 118 + i * 52;
 
   return (
     <svg
@@ -178,20 +158,12 @@ function MombasaMapInner({ dimmed, onFacility }: {
       className="absolute inset-0 h-full w-full"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Map of Mombasa's data centre and submarine cable landing stations"
+      aria-label={`Map of Mombasa's ${facilities.length} data centres and submarine cable landing stations`}
     >
-      <defs>
-        <linearGradient id="msaOcean" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="oklch(0.35 0.07 235)" stopOpacity="0" />
-          <stop offset="100%" stopColor="oklch(0.35 0.07 235)" stopOpacity="0.4" />
-        </linearGradient>
-      </defs>
-      {/* ocean wash on the seaward side */}
-      <rect x={MSA_FRAME.W * 0.55} y="0" width={MSA_FRAME.W * 0.45} height={MSA_FRAME.H} fill="url(#msaOcean)" />
       <path d={MSA_LAND} fill="oklch(0.78 0.14 195 / 0.08)" stroke={CYAN} strokeWidth={1.8} strokeOpacity={0.8} />
       <text x={MSA_FRAME.W - 20} y={MSA_FRAME.H - 18} textAnchor="end" fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.35)">coastline: Natural Earth · cable routes schematic</text>
       <text x={600} y={470} fontSize={24} fontStyle="italic" fill="oklch(0.78 0.06 230 / 0.5)">Indian Ocean</text>
-      <text x={300} y={330} textAnchor="middle" fontSize={13.5} fontStyle="italic" fill="oklch(0.93 0.01 260 / 0.45)">Mombasa Island</text>
+      <text x={380} y={330} textAnchor="middle" fontSize={13.5} fontStyle="italic" fill="oklch(0.93 0.01 260 / 0.45)">Mombasa Island</text>
 
       {/* cable fan */}
       {SUBSEA_CABLES.map((c, i) => {
@@ -205,11 +177,6 @@ function MombasaMapInner({ dimmed, onFacility }: {
             onMouseEnter={() => setHoverCable(c.id)} onMouseLeave={() => setHoverCable(null)}>
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 0.25 : 0.12} strokeWidth={7} strokeLinecap="round" />
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 1 : 0.8} strokeWidth={2.2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
-            {c.live && (
-              <path d={d} fill="none" stroke="oklch(0.95 0.06 195)" strokeOpacity={0.85}
-                strokeWidth={2.8} strokeLinecap="round" pathLength={100}
-                className="dc254-flow" opacity={dim ? 0 : 1} />
-            )}
             <circle cx={end.x} cy={end.y} r={active ? 5 : 3.5} fill={c.live ? CYAN : AMBER} />
             <text x={end.x + 14} y={end.y + 4} fontSize={14.5} fontWeight={550} fill={c.live ? "oklch(0.93 0.01 260 / 0.92)" : AMBER}>{c.label}</text>
             <text x={end.x + 14} y={end.y + 20} fontSize={11.5} fill="oklch(0.93 0.01 260 / 0.45)">{c.year}{c.live ? " · live" : ""}</text>
@@ -228,17 +195,32 @@ function MombasaMapInner({ dimmed, onFacility }: {
         <text x={ls.x - 16} y={ls.y + 3} textAnchor="end" fontSize={12} fill="oklch(0.93 0.01 260 / 0.55)">Nyali · Mombasa</text>
       </g>
 
-      {/* ADC Mombasa facility */}
-      <g className="cursor-pointer" onClick={() => onFacility(adc)}
-        onMouseEnter={() => setHoverCable("adc")} onMouseLeave={() => setHoverCable(null)}>
-        <circle cx={adcP.x} cy={adcP.y} r={13} fill={NEON} fillOpacity={hoverCable === "adc" ? 0.22 : 0} />
-        <circle cx={adcP.x} cy={adcP.y} r={7} fill={NEON} stroke="oklch(0.1 0.02 250)" strokeWidth={1.6} />
-        <polyline points={`${adcP.x - 10},${adcP.y} ${adcP.x - 58},${adcP.y - 44} 168,${adcP.y - 44}`}
-          fill="none" stroke="oklch(0.93 0.01 260 / 0.25)" strokeWidth={1} />
-        <circle cx={160} cy={adcP.y - 44} r={5} fill={NEON} />
-        <text x={148} y={adcP.y - 46} textAnchor="end" fontSize={15.5} fontWeight={650} fill="oklch(0.93 0.01 260)">ADC Mombasa</text>
-        <text x={148} y={adcP.y - 30} textAnchor="end" fontSize={12.5} fill="oklch(0.93 0.01 260 / 0.55)">1 MW · Tier II</text>
-      </g>
+      {/* facility rows — every Mombasa facility on the register */}
+      {facilities.map((f, i) => {
+        const { x: mx, y: my } = msaP(f.lat, f.lng);
+        const active = hover === f.id;
+        const dim = dimmed.has(f.id);
+        const color = STATUS_COLOR[f.status];
+        const y = rowY(i);
+        return (
+          <g key={f.id} className="cursor-pointer" opacity={dim ? 0.18 : 1}
+            onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)}
+            onClick={() => onFacility(f)}>
+            <rect x={10} y={y - 20} width={252} height={42} rx={8} fill={active ? "oklch(0.93 0.01 260 / 0.07)" : "transparent"} />
+            <polyline
+              points={`${mx - 11},${my} ${mx - 48},${y} ${ROW_X + 10},${y}`}
+              fill="none"
+              stroke={active ? CYAN : "oklch(0.93 0.01 260 / 0.22)"}
+              strokeWidth={active ? 1.6 : 1}
+            />
+            <circle cx={ROW_X - 2} cy={y} r={5} fill={color} />
+            <text x={ROW_X - 16} y={y - 2} textAnchor="end" fontSize={14.5} fontWeight={650} fill="oklch(0.93 0.01 260)">{f.shortName}</text>
+            <text x={ROW_X - 16} y={y + 14} textAnchor="end" fontSize={11.5} fill="oklch(0.93 0.01 260 / 0.55)">
+              {f.totalMW > 0 ? `${f.totalMW} MW` : "MW n/p"} · {f.tier}
+            </text>
+          </g>
+        );
+      })}
     </svg>
   );
 }

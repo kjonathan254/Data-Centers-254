@@ -68,7 +68,7 @@ const cadence = [
   {
     icon: Database,
     title: "DC Directory — monthly sweep, quarterly re-verification",
-    body: "The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in August 2026.",
+    body: "The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in September 2026.",
   },
   {
     icon: Newspaper,
@@ -79,6 +79,41 @@ const cadence = [
     icon: Scale,
     title: "Explainers & reference articles — reviewed on change",
     body: "Evergreen explainers are reviewed when the underlying facts change — a new licence framework, a new cable landing — and the updated date at the top of each article reflects the last material review.",
+  },
+];
+
+const countRules = [
+  {
+    title: "What we count as a facility",
+    body: "A physical building in Kenya where IT equipment can be housed under a service agreement — carrier-neutral colocation, operator-owned sites that sell colocation, government facilities that accept outside workloads, and cable landing stations (labelled as such).",
+  },
+  {
+    title: "What we exclude",
+    body: "Pure enterprise server rooms with no outside colocation offer, and duplicate register entries. Example: the PeeringDB register carries an entry simply named \"Icolo\" registered by a third party at LRC Road — we treat it as a duplicate registration, not a distinct facility, and do not count it.",
+  },
+  {
+    title: "One building, one entry",
+    body: "Where a facility has been rebranded we keep one entry and say so. Example: \"East Africa Data Centre\" and \"Africa Data Centres Nairobi\" are the same Sameer Business Park building — it opened as EADC and was rebranded when Liquid Telecom consolidated its data centre arm under Cassava Technologies.",
+  },
+  {
+    title: "Announced is not operating",
+    body: "Committed, early-stage and under-construction projects are labelled as such and never counted as operating capacity. Where a press-release figure (e.g. a groundbreaking MW target) is shown, the entry states plainly that it is a plan, not an as-built figure.",
+  },
+];
+
+const updateLog = [
+  {
+    date: "8 September 2026",
+    changes: [
+      "Added the four iColo (Digital Realty) facilities — NBO1, NBO2, MBA1, MBA2 — previously missing despite MBA1 being the most interconnected building on the Kenyan coast (94 networks on PeeringDB).",
+      "Added PAIX Nairobi (Britam Tower), Safaricom Thika, Safaricom Red Hill (Limuru), Telkom Milimani, Telkom Telephone House (Nairobi and Mombasa), Konza National Data Centre, SEACOM Mombasa cable landing station, and SimbaNET Nairobi.",
+      "Removed Wingu Nairobi after checking the operator's own website, which names only Djibouti, Ethiopia and Tanzania — Wingu does not operate in Kenya, despite appearing in many round-ups (including ours previously).",
+      "Removed Africa Data Centres Mombasa: no operator page, no register entry, and no independent evidence supports it.",
+      "Reclassified ADC Nairobi 2 as under construction — ADC's own site lists only NBO1 in Nairobi, and no source confirms the January 2023 expansion completed.",
+      "Withdrew the capacity figures previously shown for Raxio Nairobi and reclassified it as early stage — the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site.",
+      "Updated iColo NBO2 for its formal launch on 7 September 2026 (Capital FM / Digital Realty) — still ramping on interconnection.",
+      "Cross-checked every PeeringDB-registered Kenyan facility (14 records fetched 8 Sep 2026) and added per-entry network and exchange counts.",
+    ],
   },
 ];
 
@@ -145,6 +180,23 @@ export default function MethodologyPage() {
             ))}
           </div>
 
+          {/* Counting rules */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Counting rules
+          </h2>
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-6">
+            Before any source is checked, the question has to be sharp. These
+            are the rules that decide what appears in the directory:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14">
+            {countRules.map((r) => (
+              <div key={r.title} className="rounded-xl border border-border/50 bg-accent/30 p-5">
+                <h3 className="text-base font-semibold text-foreground mb-2">{r.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{r.body}</p>
+              </div>
+            ))}
+          </div>
+
           {/* Update cadence */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Update cadence
@@ -162,6 +214,55 @@ export default function MethodologyPage() {
                 <p className="text-sm leading-relaxed text-muted-foreground">{c.body}</p>
               </div>
             ))}
+          </div>
+
+          {/* PeeringDB cross-check */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            The PeeringDB cross-check
+          </h2>
+          <div className="rounded-xl border border-border/50 bg-accent/30 p-6 mb-6">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+              Every facility entry that exists on the{" "}
+              <a href="https://www.peeringdb.com/api/fac?country=KE" target="_blank" rel="noopener noreferrer" className="text-cyan hover:underline">PeeringDB facility register for Kenya</a>{" "}
+              carries a cross-reference with the number of networks and internet
+              exchanges registered at that building, plus the date we fetched it.
+              The network count is the single best public proxy for how
+              well-connected a building actually is — marketing pages rarely say.
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Two caveats we state openly. First, PeeringDB coverage is evidence
+              of interconnection, not of existence: genuinely operator-owned
+              facilities (Safaricom Waiyaki Way, for example) may be absent from
+              the register while being entirely real. Second, the register is
+              community-maintained — a sparse record (iColo NBO2&apos;s two networks
+              against a 6.5 MW design load) is a signal that a building is
+              ramping, not proof that it does not exist. We treat the register
+              as a cross-check, never as ground truth.
+            </p>
+          </div>
+
+          {/* Certification language */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Certification, read precisely
+          </h2>
+          <div className="rounded-xl border border-border/50 bg-accent/30 p-6 mb-14">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+              Most Kenyan data centre marketing uses &ldquo;Tier III&rdquo; loosely. Uptime
+              Institute issues three distinct things, and the difference is money:
+            </p>
+            <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+              <li><span className="font-medium text-foreground">Tier Certification of Design Documents (TCDD)</span> — Uptime reviewed the drawings. Nothing has been inspected. These certificates carry expiry dates.</li>
+              <li><span className="font-medium text-foreground">Tier Certification of Constructed Facility (TCCF)</span> — Uptime inspected and demonstration-tested the finished building. Substantially stronger.</li>
+              <li><span className="font-medium text-foreground">Tier Certification of Operational Sustainability (TCOS)</span> — Uptime assessed how the facility is actually run.</li>
+            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              &ldquo;Built to Tier III standards&rdquo; is a design statement by the operator,
+              not a third-party certification — and directory entries say which is
+              which. Where a facility carries no Uptime certification at all, the
+              entry says that too, without treating it as a fault: plenty of
+              excellent facilities are uncertified, but they should be priced
+              differently.
+            </p>
           </div>
 
           {/* Estimates policy */}
@@ -186,6 +287,31 @@ export default function MethodologyPage() {
               . Headline statistics on the homepage and in the directory are
               always drawn from the verified dataset.
             </p>
+          </div>
+
+          {/* Update log */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Update log
+          </h2>
+          <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Every correction and reclassification is logged here, dated, including
+            our own errors — because a directory that never admits mistakes is
+            telling you it never checks.
+          </p>
+          <div className="mb-14 space-y-4">
+            {updateLog.map((u) => (
+              <div key={u.date} className="rounded-xl border border-border/50 bg-accent/30 p-6">
+                <p className="mb-3 text-sm font-semibold text-cyan">{u.date}</p>
+                <ul className="space-y-2.5">
+                  {u.changes.map((c, i) => (
+                    <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground">
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-cyan/40" />
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
           {/* Corrections */}

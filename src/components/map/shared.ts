@@ -10,7 +10,8 @@ import type { DcStatus } from "@/lib/map-data";
 export const STATUS_COLOR: Record<DcStatus, string> = {
   Operational: NEON,
   "Under Construction": AMBER,
-  Announced: CYAN,
+  Committed: "oklch(0.8 0.14 60)",
+  "Early Stage": "oklch(0.93 0.01 260 / 0.55)",
 };
 
 /** Catmull-Rom → cubic bezier smoothing for cable / fibre paths. */

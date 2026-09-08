@@ -5,7 +5,7 @@ import {
   Search, SlidersHorizontal, X, Building2, Zap, Server,
   MapPin, Shield, Globe, ArrowUpDown, Database, Wifi,
   AlertTriangle, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
-  GitCompareArrows,
+  GitCompareArrows, ExternalLink, Landmark,
   type LucideIcon,
 } from "lucide-react";
 import CompareTray from "@/components/compare/compare-tray";
@@ -32,6 +32,11 @@ interface Facility {
   coolingType: string | null; powerSource: string | null;
   renewableClaim: string | null; notable: string | null;
   lastVerified: string | null; dataSource: string | null; dataConfidence: string;
+  articleSlugs?: string[];
+  sources?: { label: string; url: string; kind: "operator" | "registry" | "press" | "gov" }[];
+  peeringdbFacId?: number; peeringdbNetworks?: number; peeringdbIxs?: number;
+  carrierNeutral?: boolean;
+  certNote?: string | null; divergenceNote?: string | null;
   operator: Op;
   connectivityFacility: { provider: ConnectivityProvider }[];
   certifications: Cert[];
@@ -43,7 +48,7 @@ interface FilterMeta {
   cities: string[]; types: string[];
 }
 
-interface DirStats { totalFacilities: number; operationalCount: number; totalMw: number; totalRacks: number; aiReadyCount: number; }
+interface DirStats { totalFacilities: number; operationalCount: number; totalMw: number; totalRacks: number; aiReadyCount: number; carrierNeutralCount: number; }
 interface DirData { facilities: Facility[]; filters: FilterMeta; stats: DirStats; }
 
 const statusCfg: Record<string, { color: string; bg: string; icon: LucideIcon }> = {
@@ -114,7 +119,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <Shield className="size-3.5 text-neon" />
-              Dataset last verified: August 2026
+              Dataset last verified: September 2026
             </span>
             <Link href="/methodology" className="text-cyan underline hover:underline">
               How we verify →
@@ -124,11 +129,12 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
 
         {/* Stats */}
         {data && !loading && (
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
             {[
               { label: "Facilities", value: String(data.stats.totalFacilities), icon: Database },
               { label: "Operational", value: String(data.stats.operationalCount), icon: CheckCircle },
-              { label: "Total IT Load", value: `${data.stats.totalMw.toFixed(1)} MW`, icon: Zap },
+              { label: "Carrier-Neutral", value: String(data.stats.carrierNeutralCount), icon: GitCompareArrows },
+              { label: "Published IT Load", value: `${data.stats.totalMw.toFixed(1)} MW`, icon: Zap },
               { label: "Total Racks", value: data.stats.totalRacks > 0 ? `${data.stats.totalRacks.toLocaleString()}` : "--", icon: Server },
               { label: "AI-Ready", value: String(data.stats.aiReadyCount), icon: Wifi },
             ].map((s) => { const Icon = s.icon; return (
@@ -197,6 +203,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                   <div className="flex flex-wrap gap-3 mb-3">
                     {f.itLoadMw && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Zap className="size-3.5 text-cyan" /><span>{f.itLoadMw} MW</span></div>}
                     {f.rackCount && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Server className="size-3.5 text-cyan" /><span>{f.rackCount.toLocaleString()} racks</span></div>}
+                    {f.carrierNeutral === true && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">CARRIER-NEUTRAL</Badge>}
                     {f.aiReady && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
                     {f.tierRating && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-border text-muted-foreground">{f.tierRating}</Badge>}
                   </div>
@@ -215,7 +222,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                       <GitCompareArrows className="size-3.5" />
                       {inCompare ? "Added to compare" : "Compare"}
                     </button>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}</span><span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}</span>{f.peeringdbNetworks !== undefined && <span title="Networks registered on PeeringDB">{f.peeringdbNetworks} networks</span>}{f.sources && f.sources.length > 0 && <span className="inline-flex items-center gap-1 text-cyan/80" title="Named sources on the profile"><ExternalLink className="size-3" />{f.sources.length}</span>}<span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
                   </div>
                 </article>
               );
@@ -225,9 +232,11 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
 
         {!loading && data && (
           <p className="mt-10 text-xs text-muted-foreground max-w-2xl leading-relaxed">
-            Data sourced from operator websites, press releases, and publicly
-            available information. Every data point follows: Claim, Source,
-            Date Verified, Independent Evidence. Last verified: August 2026.{" "}
+            Data sourced from operator websites, independent registers, and
+            credible press — every entry carries named sources, a last-verified
+            date, a PeeringDB cross-reference where one exists, and an explicit
+            note wherever marketing claims and evidence part ways. Last
+            verified: September 2026.{" "}
             <Link href="/methodology" className="text-cyan/80 hover:text-cyan underline hover:underline">
               Read the full methodology
             </Link>

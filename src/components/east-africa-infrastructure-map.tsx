@@ -17,6 +17,9 @@ import { CYAN, NEON, AMBER, STATUS_COLOR } from "./map/shared";
 import { CountryMap } from "./map/country-map";
 import { NairobiMap, MombasaMap } from "./map/metro-maps";
 
+type DcCity = KenyaFacility["city"];
+const CITY_LABEL: Record<DcCity, string> = { nairobi: "Nairobi", mombasa: "Mombasa", thika: "Thika", limuru: "Limuru", konza: "Konza" };
+
 type Mode = "country" | "nairobi" | "mombasa";
 type ViewMode = "map" | "list";
 type TypeFilter = "all" | "datacenter" | "cable" | "ixp";
@@ -32,7 +35,7 @@ const CITY_NAMES: Record<string, string> = {
 
 function StatsBand() {
   const ops = KENYA_FACILITIES.filter((f) => f.status === "Operational").length;
-  const nbo = KENYA_FACILITIES.filter((f) => f.city === "nairobi").length;
+  const nbo = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
   const stats = [
     { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
     { label: "Live capacity", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW announced pipeline` },
@@ -101,7 +104,7 @@ function FacilityCard({ f }: { f: KenyaFacility }) {
         {f.note && <p className="text-muted-foreground text-xs mb-2.5 leading-relaxed">{f.note}</p>}
         <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <Badge variant="outline" className="text-[10px] px-1.5 py-0">{f.tier}</Badge>
-          <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{f.totalMW} MW</span>
+          <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{f.totalMW > 0 ? `${f.totalMW} MW` : "MW n/p"}</span>
           {f.racks != null && <span className="flex items-center gap-1"><Building2 className="w-3 h-3" />{f.racks} racks</span>}
           {f.aiReady && <Badge variant="outline" className="text-[10px] px-1.5 py-0 border-cyan/30 text-cyan">AI-ready</Badge>}
         </div>
@@ -199,9 +202,9 @@ export default function EastAfricaInfrastructureMap() {
     const rows: { id: string; name: string; loc: string; type: string; status: string | null; statusColor: string | null; specs: string; year: number | null }[] = [];
     for (const f of KENYA_FACILITIES) {
       rows.push({
-        id: f.id, name: f.name, loc: f.city === "nairobi" ? "Nairobi" : "Mombasa", type: "datacenter",
+        id: f.id, name: f.name, loc: CITY_LABEL[f.city], type: "datacenter",
         status: f.status, statusColor: STATUS_COLOR[f.status],
-        specs: `${f.tier} · ${f.totalMW} MW${f.racks ? ` · ${f.racks} racks` : ""}`, year: f.openedYear,
+        specs: `${f.tier} · ${f.totalMW > 0 ? `${f.totalMW} MW` : "MW n/p"}${f.racks ? ` · ${f.racks} racks` : ""}`, year: f.openedYear,
       });
     }
     for (const c of SUBSEA_CABLES) {
@@ -236,7 +239,8 @@ export default function EastAfricaInfrastructureMap() {
     { key: "all", label: "Any status" },
     { key: "Operational", label: "Operational" },
     { key: "Under Construction", label: "In construction" },
-    { key: "Announced", label: "Announced" },
+    { key: "Committed", label: "Committed" },
+    { key: "Early Stage", label: "Early stage" },
   ];
 
   return (
@@ -404,11 +408,11 @@ export default function EastAfricaInfrastructureMap() {
               {/* Panels */}
               <AnimatePresence>
                 {mode === "nairobi" && facilityPanel && (
-                  <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · ${facilityPanel.city === "nairobi" ? "Nairobi" : "Mombasa"}`} onClose={() => setFacilityPanel(null)}>
+                  <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · ${CITY_LABEL[facilityPanel.city]}`} onClose={() => setFacilityPanel(null)}>
                     <FacilityCard f={facilityPanel} />
                     <a href="/directory">
                       <Button variant="outline" size="sm" className="w-full mt-2 border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan">
-                        Browse all 14 in the directory <ArrowRight className="w-4 h-4 ml-1" />
+                        Browse all 26 in the directory <ArrowRight className="w-4 h-4 ml-1" />
                       </Button>
                     </a>
                   </PanelShell>

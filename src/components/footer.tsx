@@ -132,6 +132,7 @@ export default function Footer() {
           <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Use</Link>
           <Link href="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>
+          <Link href="/methodology" className="hover:text-foreground transition-colors">Data Methodology</Link>
           <Link href="/advertise" className="hover:text-foreground transition-colors">Advertise</Link>
         </div>
       </div>

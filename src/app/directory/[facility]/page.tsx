@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft, ArrowRight, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
   Zap, Server, Shield, Building2, Globe, Wifi, FileText, Database,
-  GitCompareArrows,
+  GitCompareArrows, ExternalLink, Landmark,
 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -270,6 +270,23 @@ export default async function FacilityPage({
                 </div>
               )}
 
+              {f.divergenceNote && (
+                <div className="rounded-lg border border-amber-500/25 bg-amber-500/5 p-4">
+                  <h2 className="text-xs font-mono uppercase tracking-widest text-amber-500">Where marketing and evidence diverge</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/90">{f.divergenceNote}</p>
+                </div>
+              )}
+
+              {f.certNote && (
+                <div className="flex items-start gap-2.5">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0 text-cyan" />
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">Certification position: </span>
+                    {f.certNote}
+                  </p>
+                </div>
+              )}
+
               {/* Power */}
               {f.powerSource && (
                 <div>
@@ -345,6 +362,45 @@ export default async function FacilityPage({
                       </span>
                     </dd>
                   </div>
+                  {f.peeringdbFacId !== undefined && (
+                    <div>
+                      <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Independent cross-check</dt>
+                      <dd className="mt-0.5">
+                        <a
+                          href={`https://www.peeringdb.com/fac/${f.peeringdbFacId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-cyan hover:underline"
+                        >
+                          <Landmark className="size-3.5" />
+                          PeeringDB: {f.peeringdbNetworks} networks · {f.peeringdbIxs} exchanges
+                          <ExternalLink className="size-3 opacity-60" />
+                        </a>
+                      </dd>
+                    </div>
+                  )}
+                  {f.sources && f.sources.length > 0 && (
+                    <div>
+                      <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Sources</dt>
+                      <dd className="mt-1 space-y-1.5">
+                        {f.sources.map((s) => (
+                          <a
+                            key={s.url}
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start gap-1.5 text-xs text-muted-foreground hover:text-cyan"
+                          >
+                            <ExternalLink className="mt-0.5 size-3 shrink-0 opacity-60" />
+                            <span>
+                              {s.label}
+                              <span className="ml-1 text-[10px] uppercase tracking-wider text-cyan/60">{s.kind}</span>
+                            </span>
+                          </a>
+                        ))}
+                      </dd>
+                    </div>
+                  )}
                 </dl>
                 <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
                   Every DC254 data point follows the same discipline: claim,

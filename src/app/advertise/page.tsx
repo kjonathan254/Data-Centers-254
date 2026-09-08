@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Mail, Phone, Megaphone, MailOpen, MapPin, Building2, PenLine, TrendingUp, BarChart3 } from "lucide-react";
+import { Mail, Phone, Megaphone, MailOpen, MapPin, Building2, PenLine, TrendingUp, BarChart3, MapPinned } from "lucide-react";
 import { getStats, SUBSCRIBER_ROLES } from "@/lib/newsletter-store";
 
 export const metadata: Metadata = {
@@ -37,14 +37,26 @@ const opportunities = [
   {
     icon: Building2,
     num: "04",
+    title: "Directory placement & featured listing",
+    body: "Operators and service providers can enrich their DC Directory profiles — certifications, capacity, connectivity, expansions, verified and sourced like every entry. Featured listings add priority placement in relevant searches. Paid placement changes prominence, never the data — verification stays mandatory in every tier.",
+  },
+  {
+    icon: MapPinned,
+    num: "05",
+    title: "Market sponsorship",
+    body: "Name sponsorship of the Kenya DC Directory or the Infrastructure Map — the two reference assets this market cites. One sponsor per section, clearly disclosed, in the tradition of the sponsored industry maps everybody already cites.",
+  },
+  {
+    icon: Building2,
+    num: "06",
     title: "Annual industry partnership",
     body: "The full bundle for companies building long-term position in this market: briefing sponsorship, directory presence, commissioned research, events, interviews, reports and thought leadership. This is where the real B2B relationship lands.",
   },
 ];
 
 const facts = [
-  { icon: Building2, value: "14+", label: "Verified facilities in the DC Directory" },
-  { icon: PenLine, value: "50+", label: "Researched explainers across 7 clusters" },
+  { icon: Building2, value: "26", label: "Verified facilities in the DC Directory" },
+  { icon: PenLine, value: "60+", label: "Researched explainers across 7 clusters" },
   { icon: MapPin, value: "Kenya-first", label: "Audience of builders, operators & students" },
 ];
 
