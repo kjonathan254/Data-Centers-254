@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "article",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 630, alt: "State of Kenyan Data Centres 2026 — Data Centre 254" }],
+    images: [{ url: "/images/limuru-campus-aerial-solar.webp", width: 1200, height: 630, alt: "State of Kenyan Data Centres 2026 — Data Centre 254" }],
   },
 };
 
@@ -66,6 +67,25 @@ export default function StateOfKenyanDataCentres2026() {
           <p className="text-xs text-muted-foreground mb-6">
             Dataset last verified: {snapshot.lastVerified} · Cross-checked against the PeeringDB Kenya register (fetched 8 Sep 2026)
           </p>
+
+          {/* Cover image — real Kenyan facility */}
+          <figure className="mb-12">
+            <div className="img-frame relative aspect-[16/9]">
+              <Image
+                src="/images/limuru-campus-aerial-solar.webp"
+                alt="Aerial view of a Limuru data centre campus with rooftop solar"
+                fill
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
+              Kenya&apos;s new generation of campuses: rooftop solar on a completed
+              Limuru data centre building, with the next phase under
+              construction alongside. Aerial view, September 2026.
+            </figcaption>
+          </figure>
 
           {/* PDF edition CTA */}
           <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-cyan/25 bg-cyan/5 p-5 mb-12">

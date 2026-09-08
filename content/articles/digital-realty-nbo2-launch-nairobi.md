@@ -15,17 +15,21 @@ published_date: "2026-09-08"
 updated_date: "2026-09-08"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/dc-engineer-rack-inspection.webp"
+og_image: "/images/nbo2-launch-ribbon-cutting.webp"
 reading_time: "8 min"
 images:
-  - src: "/images/dc-engineer-rack-inspection.webp"
-    alt: "Engineer inspecting racks at a newly launched data centre"
-    caption: "A launch event is a ribbon; a data centre is a ramp — interconnection and commissioned capacity build slowly"
+  - src: "/images/nbo2-launch-ribbon-cutting.webp"
+    alt: "Officials mark the formal launch of NBO2 under the Digital Realty arch in Nairobi"
+    caption: "The moment itself: dignitaries mark NBO2's formal launch under the Digital Realty arch — Karen campus, September 2026 (photo: Digital Realty)"
     position: "hero"
+  - src: "/images/digital-realty-logo.webp"
+    alt: "Digital Realty company logo"
+    caption: "NBO2 now carries the Digital Realty brand, following the acquisition of founder operator iColo"
+    position: "diagram"
   - src: "/images/dc-servers-racks.webp"
     alt: "Server racks inside the new NBO2 facility"
     caption: "NBO2 carries a 6.5 MW design IT load within a three-building Karen master plan"
-    position: "section-break"
+    position: "inline"
   - src: "/images/dc-networking.webp"
     alt: "Interconnection infrastructure in Nairobi"
     caption: "The gateway claim will be won or lost on networks present, not press releases"
@@ -63,11 +67,13 @@ On 7 September 2026, Digital Realty formally launched NBO2 — the second facili
 
 The launch matters. Our directory has carried NBO2 since our September re-verification, and it fills a genuine gap: Kenya's carrier-neutral capacity has been concentrated in a handful of buildings, and a second large neutral site in Karen adds real supply to a market growing at roughly 30% a year. But a launch press release is a starting point for verification, not the end of it — so here is what the evidence supports today, and what the "gateway" language still has to earn.
 
-![Engineer inspecting racks at a newly launched data centre](/images/dc-engineer-rack-inspection.webp)
+![Officials mark the formal launch of NBO2 under the Digital Realty arch in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
 
 ## What actually launched
 
 The physical facts first. NBO2 sits on Bogani East Road in Karen, near its sibling NBO1 — the facility iColo launched in September 2019 as "the first truly carrier-neutral data centre in Nairobi". The building is specified at 3,600 m² with 2N power, N+2 cooling, ISO 27001 and PCI-DSS claims per the Digital Realty listing. Developing Telecoms reported in August 2024 that NBO2 carries a **6.5 MW design IT load**, expected online in Q3 2025, within a master plan of three data centres plus a captive substation consuming over 20 MW at full build. That master plan — three buildings, 18,000 m² on the Karen side, 13 MW and 1,800 racks at the Mombasa campus — is the strategic story Digital Realty is buying into: iColo already runs the largest facility count in Kenya, with four buildings across Nairobi and Mombasa.
+
+![Digital Realty company logo](/images/digital-realty-logo.webp)
 
 What was *not* published at launch, and what we flagged on [NBO2's directory entry](/directory/icolo-nbo2): the commissioned (as opposed to design) IT load, the number of halls fitted out, and the commercial live date for general colocation. None of this is criticism — it is the standard gap between a ribbon-cutting and a ramp. The discipline is to price the facility on what is commissioned, not on the master plan.
 

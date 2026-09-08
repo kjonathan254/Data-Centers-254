@@ -32,8 +32,8 @@ export default function NewReportBanner() {
             className="relative block aspect-[16/9] lg:aspect-auto lg:min-h-[300px] lg:col-span-2"
           >
             <Image
-              src="/images/dc-engineer-rack-inspection.webp"
-              alt="Engineer inspecting a server rack row during a facility audit"
+              src="/images/limuru-campus-aerial-solar.webp"
+              alt="Aerial view of a Kenyan data centre campus with rooftop solar, Limuru"
               fill
               sizes="(max-width: 1024px) 100vw, 480px"
               className="object-cover"
