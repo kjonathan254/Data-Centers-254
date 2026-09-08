@@ -124,6 +124,8 @@ export const SUBSEA_CABLES: SubseaCable[] = [
   { id: "seacom", name: "SEACOM", year: 2009, live: true, designTbps: 1.28, note: "First private submarine cable in East Africa", waypoints: [[-3.982, 39.723], [-1.91, 41.89], [0.16, 42.35]], label: "SEACOM · 1.3 Tbps" },
   { id: "peace", name: "PEACE", year: 2022, live: true, designTbps: 16, note: "High-capacity eastbound route", waypoints: [[-3.982, 39.73], [-2.30, 41.51], [-0.62, 42.35]], label: "PEACE · 16 Tbps" },
   { id: "teams", name: "TEAMS", year: 2009, live: true, designTbps: 1.28, note: "Kenya's first government-backed cable", waypoints: [[-3.982, 39.72], [-2.69, 41.13], [-1.40, 42.35]], label: "TEAMS · 1.3 Tbps" },
+  { id: "eig", name: "EIG", year: 2011, live: true, designTbps: null, note: "Europe–India Gateway; Kenya share undisclosed", waypoints: [[-3.982, 39.728], [-1.20, 41.70], [0.60, 42.35]], label: "EIG · landed Mombasa" },
+  { id: "2africa", name: "2Africa", year: 2024, live: true, designTbps: null, note: "Largest submarine cable system ever built (180 Tbps system design); Kenya share undisclosed", waypoints: [[-3.982, 39.705], [-4.80, 40.10], [-6.20, 41.50]], label: "2Africa · 180 Tbps system" },
   { id: "daraja", name: "Daraja", year: 2026, live: false, designTbps: null, note: "Meta-backed cable, in development — Salalah to Mombasa, hosted by Safaricom (announced Oct 2025, 24 fibre pairs)", waypoints: [[-3.982, 39.715], [-3.08, 40.75], [-2.17, 42.35]], label: "Daraja · in development" },
   { id: "eassy", name: "EASSy", year: 2010, live: true, designTbps: 4.72, note: "7,000 km along the east coast", waypoints: [[-3.982, 39.71], [-5.2, 39.85], [-6.84, 40.4]], label: "EASSy · 4.7 Tbps" },
   { id: "lion2", name: "LION2", year: 2012, live: true, designTbps: 1.5, note: "Link to Madagascar & Réunion", waypoints: [[-3.982, 39.7], [-5.6, 40.6], [-7.62, 41.9]], label: "LION2 · 1.5 Tbps" },
@@ -140,6 +142,6 @@ export const FIBRE_ROUTES: { id: string; waypoints: [number, number][]; note?: s
   { id: "g2m", waypoints: [[-4.04, 39.66], [-2.1, 37.5], [-1.28, 36.82], [-0.4, 31.7], [-1.05, 30.9], [-1.68, 29.23]], note: "Paratus Goma–Mombasa (G2M) route, live 2026 — Goma via Kigali, Kampala and Nairobi to the Mombasa cable landing" },
 ];
 
-export const KIXP = { name: "KIXP", members: 85, peakGbps: 25, year: 2000, city: "nairobi" as const };
+export const KIXP = { name: "KIXP", members: 140, peakGbps: 2900, year: 2000, city: "nairobi" as const };
 
 export const CABLE_TOTAL_TBPS = SUBSEA_CABLES.reduce((s, c) => s + (c.designTbps ?? 0), 0); // 25.74

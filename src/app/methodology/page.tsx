@@ -241,6 +241,27 @@ export default function MethodologyPage() {
             </p>
           </div>
 
+          {/* PIDA / continental registry layer */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            The PIDA layer — registry, not facilities
+          </h2>
+          <div className="rounded-xl border border-border/50 bg-accent/30 p-6 mb-6">
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Separately from the facility directory, our map carries a layer drawn
+              from the{" "}
+              <a href="https://aid.nepad.org/" target="_blank" rel="noopener noreferrer" className="text-cyan hover:underline">African Infrastructure Database</a>{" "}
+              (AUDA-NEPAD&apos;s continental registry behind PIDA), fetched from its
+              public API with dated requests. Registry entries are project
+              preparations — sometimes at feasibility or structuring stage — and
+              their figures are the registrant&apos;s own. They are shown as a
+              distinct layer (violet diamonds) with their own table, and they are
+              never counted in facility totals, capacity sums, or pipeline
+              megawatts. Where a registry claim conflicts with an independent
+              source (as the DARE1 capacity figures do), we publish both with the
+              divergence noted.
+            </p>
+          </div>
+
           {/* Certification language */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Certification, read precisely

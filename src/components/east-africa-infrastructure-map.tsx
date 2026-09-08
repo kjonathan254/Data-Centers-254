@@ -39,8 +39,8 @@ function StatsBand() {
   const stats = [
     { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
     { label: "Live capacity", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW announced pipeline` },
-    { label: "Subsea cables", value: "6", sub: `≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps · 7th in development` },
-    { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ${KIXP.peakGbps} Gbps peak` },
+    { label: "Subsea cables", value: "8", sub: `≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps named · Daraja in development` },
+    { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -141,6 +141,7 @@ function Legend() {
       <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: AMBER }} />Under construction</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rounded-full border border-dashed" style={{ borderColor: CYAN }} />Announced</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-5 h-0.5 rounded-full" style={{ background: CYAN }} />Subsea cable</span>
+      <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rotate-45" style={{ background: "oklch(0.72 0.15 305)" }} />PIDA project (continental registry)</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-5 border-t border-dashed border-foreground/40" />Terrestrial fibre</span>
     </div>
   );
@@ -251,7 +252,7 @@ export default function EastAfricaInfrastructureMap() {
           <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
-            Fourteen facilities, six submarine cables, and the fibre backbone that connects them —
+            Twenty-six facilities, eight submarine cables, and the fibre backbone that connects them —
             with the wider East African region for context.
           </p>
         </div>

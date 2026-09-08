@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Mail, Languages, BookOpen } from "lucide-react";
 import { kiswahiliTerms } from "@/lib/glossary-kiswahili";
+import KiswahiliQuiz from "./KiswahiliQuiz";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -86,6 +87,9 @@ export default function KiswahiliGlossaryPage() {
               Tuandikie maoni yako
             </a>
           </div>
+
+          {/* Jaribio — interactive vocabulary quiz */}
+          <KiswahiliQuiz terms={kiswahiliTerms} />
 
           {/* Cross-links */}
           <div className="rounded-xl border border-border/50 p-6">

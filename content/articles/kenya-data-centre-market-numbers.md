@@ -1,7 +1,7 @@
 ---
 title: "Kenya's Data Centre Market in Numbers (2026)"
 slug: "kenya-data-centre-market-numbers"
-meta_description: "The verified numbers behind Kenya's data centre market: 24 tracked facilities, published IT load, the EU-commissioned market briefing's growth projections, and what each figure actually measures."
+meta_description: "The verified numbers behind Kenya's data centre market: 26 tracked facilities, published IT load, six independent market estimates compared, and what each figure actually measures."
 primary_keyword: "Kenya data centre market"
 secondary_keywords:
   - "Kenya data centre market size"
@@ -52,11 +52,13 @@ external_sources:
     url: "https://www.africadatacentres.com/"
 faq:
   - question: "How big is Kenya's data centre market?"
-    answer: "It depends entirely on what you count. Commercial colocation revenue was estimated at roughly US$30 million a year by Xalam Analytics, while broader market-size estimates that include enterprise facilities, construction and services run from US$266 million (Ken Research, 2025) to over US$600 million (Mordor Intelligence, 2025). Our article on why these estimates disagree explains the scope differences."
+    answer: "It depends entirely on what you count. Commercial colocation revenue was estimated at roughly US$25–30 million a year by Xalam Analytics, while broader market-size estimates that include enterprise facilities, construction and services run from US$266 million (Arizton 2025, reproduced verbatim by Ken Research) through US$369 million (6Wresearch) and US$509 million (Credence) to US$606 million (DCMarketInsights). Our article on why these estimates disagree explains the scope differences and the citation chain."
   - question: "How many data centres does Kenya have?"
-    answer: "The PeeringDB facility register lists 14 Kenya records (fetched 8 September 2026), including duplicate registrations and cable landing stations. Data Centre 254 tracks 24 verified entries — 14 that match the register plus operator-owned, government and satellite facilities the register does not capture. Round-ups claiming higher numbers typically include facilities that fail verification."
+    answer: "The PeeringDB facility register lists 14 Kenya records (fetched 8 September 2026), including duplicate registrations and cable landing stations. Data Centre 254 tracks 26 verified entries — the register's genuine facilities plus operator-owned, government and pipeline projects the register does not capture. Round-ups claiming higher numbers typically include facilities that fail verification."
   - question: "What is Kenya's total data centre capacity?"
     answer: "Published, verifiable operating capacity in Kenya is roughly 28 MW of total facility capacity, with about 13 MW of live IT load reported by the EU-commissioned Kenya market briefing and around 30 MW under construction as of its 2025 edition. Kenya's operating capacity is small by global standards but growing at a projected ~30% CAGR."
+  - question: "How many submarine cables land in Kenya?"
+    answer: "Eight live cable systems land at Mombasa — SEACOM and TEAMS (2009), EASSy (2010), EIG (2011), LION2 (2012), DARE1 (2015), PEACE (2022) and 2Africa (2024, the largest cable system ever built) — with the Meta-backed Daraja cable in development."
   - question: "Is Kenya's data centre capacity really powered by renewables?"
     answer: "Largely, yes. About 93% of Kenya's electricity generation in 2024 came from renewables — geothermal, hydro and wind — so workloads hosted in Nairobi are among the greenest on the continent by grid mix. The constraint is not cleanliness but deliverable capacity at single-site scale, which has stalled the largest announced projects."
 ---
@@ -65,9 +67,9 @@ Kenya's data centre market generates more confident numbers per shilling of reve
 
 ![Investment analysis of Kenya's data centre market](/images/dc-business-investment.webp)
 
-## The facility count: 24 verified entries
+## The facility count: 26 verified entries
 
-Start with the number everyone argues about. The PeeringDB facility register — the industry's community-maintained, cross-operator database — lists 14 facility records for Kenya as of 8 September 2026, including cable landing stations and one apparent duplicate registration. Our [DC Directory](/directory) tracks 24 verified entries: the register's 13 genuine facilities, plus operator-owned sites (Safaricom Waiyaki Way, Safaricom Red Hill), government facilities (Konza National Data Centre) and announced projects, each labelled by status so operating capacity is never conflated with pipeline.
+Start with the number everyone argues about. The PeeringDB facility register — the industry's community-maintained, cross-operator database — lists 14 facility records for Kenya as of 8 September 2026, including cable landing stations and one apparent duplicate registration. Our [DC Directory](/directory) tracks 26 verified entries: the register's genuine facilities, plus operator-owned sites (Safaricom Waiyaki Way, Safaricom Red Hill), government facilities (Konza National Data Centre) and announced projects, each labelled by status so operating capacity is never conflated with pipeline.
 
 Three facilities dominate the carrier-neutral layer. iColo (a Digital Realty company) runs the largest footprint with four facilities — two in Karen, Nairobi, and two in Mombasa. Africa Data Centres' NBO1 at Sameer Business Park is the most interconnected building in the country, with 122 networks and four internet exchanges registered on-site. iXAfrica's NBOX1 on Mombasa Road is the newest large entrant and the only facility describing itself as hyperscale and AI-ready. PAIX, inside Britam Tower in Upper Hill, rounds out the carrier-neutral four — the smallest by interconnection but the most central.
 
@@ -81,13 +83,17 @@ The pipeline is where the numbers get noisy. iXAfrica has announced an 18 MW sec
 
 ## The money: market size, honestly scoped
 
-The most-cited market size figures for Kenya currently are:
+The most-cited market size figures for Kenya — every one fetched and dated on 8 September 2026 — are:
 
-- **~US$30 million** — Xalam Analytics' estimate of annual *commercial colocation revenue* (the money operators actually earn from selling space and power), cited in the EU DIF Kenya briefing.
-- **US$266 million (2025) → US$805 million (2031)** — Ken Research's July 2026 syndicated report, a *total market* estimate covering the value chain well beyond colocation.
-- **~US$606 million (2025)** — Mordor Intelligence's total-market figure, using a still different scope.
+- **~US$25–30 million a year** — Xalam Analytics' estimate of annual *commercial colocation revenue* (the money operators actually earn from selling space and power), published openly in the EU DIF Kenya briefing. This is the only methodology-visible public figure, and it reconciles with verified megawatts at regional pricing.
+- **US$266 million (2025) → US$805 million (2031)** — Arizton's syndicated estimate, a *total market* scope covering the value chain well beyond colocation.
+- **US$266.0 million (2025) → US$805.0 million (2031)** — Ken Research's July 2026 report. Compare the decimals: identical to Arizton, to the point, at the same CAGR. Whether by licence, shared upstream data, or circular citation, that is **one data point wearing two logos**, not independent confirmation.
+- **US$369 million (2025)** — 6Wresearch (July 2026), total-market scope, 11.3% CAGR.
+- **US$509 million (2024)** — Credence Research, undated on its public page.
+- **US$606 million (2025) → US$1,240 million (2035)** — DCMarketInsights, undated.
+- **15 MW → 25 MW (capacity, not dollars)** — Mordor Intelligence (Dec 2025), honest about measuring capacity.
 
-A 20x spread is not a rounding disagreement — it is a scope disagreement, and [we explain the mechanics](/articles/why-kenya-data-centre-market-estimates-disagree) in detail. The practical takeaway: if someone quotes you a Kenya market size, the first question is whether it measures operator revenue or the whole construction-plus-services value chain.
+A 20x spread is not a rounding disagreement — it is a scope disagreement plus a citation chain, and [we explain the mechanics](/articles/why-kenya-data-centre-market-estimates-disagree) in detail. The practical takeaway: if someone quotes you a Kenya market size, the first question is whether it measures operator revenue or the whole construction-plus-services value chain — and the second is whether the source shows its method.
 
 What the reputable sources do agree on is direction. Xalam projects roughly 30% compound annual growth for Kenyan colocation through 2030. Ken Research's July 2026 report projects the total market more than tripling between 2025 and 2031, with commissioned IT load growing from 20 MW (2025) to a projected 90 MW (2031). Occupancy across operating facilities runs at around 60% — healthy, with room to absorb new supply.
 
@@ -95,7 +101,7 @@ What the reputable sources do agree on is direction. Xalam projects roughly 30% 
 
 In a market where most facilities claim "Tier III" without third-party certification, interconnection is the honest differentiator. The PeeringDB register shows a steep hierarchy: ADC Nairobi 1 leads with 122 networks and four exchanges (KIXP Nairobi, LINX Nairobi, BGP.Exchange and PLUGINS IX all on site); iColo Mombasa One is the densest building on the coast with 94 networks, a function of its proximity to the submarine cable landing stations; iColo Nairobi One carries 62 networks and four exchanges; iXAfrica NBOX1 has 44; PAIX has 37. At the other end, several registered facilities carry fewer than five networks — real buildings, but not yet interconnection destinations.
 
-Kenya's submarine position underwrites all of it: six live cable systems land at Mombasa (SEACOM, TEAMS, EASSy, PEACE, DARE1 and LION2) with a seventh — the Meta-backed Daraja cable, hosted by Safaricom — in development. On [our infrastructure map](/infrastructure/map) you can see each facility, its registered networks and the cable routes together.
+Kenya's submarine position underwrites all of it: eight live cable systems land at Mombasa (SEACOM and TEAMS from 2009, EASSy, EIG, LION2, DARE1, PEACE and 2Africa — the largest cable system ever built), with the Meta-backed Daraja cable, hosted by Safaricom, in development. On [our infrastructure map](/infrastructure/map) you can see each facility, its registered networks and the cable routes together.
 
 ## Power: Kenya's unfair advantage and its hard ceiling
 
@@ -105,4 +111,4 @@ PUE (power usage effectiveness) is improving as new stock comes online: Ken Rese
 
 ## How to use these numbers
 
-Three rules. First, match the metric to the question: operator revenue for commercial attractiveness, IT load for capacity planning, network counts for interconnection decisions. Second, check the date — figures older than a year in a market growing 30% annually are decoration. Third, check the label: "announced", "under construction" and "operational" are different universes, and any source that blurs them is inflating something. Every figure on this page carries its source and verification date; the [directory](/directory) applies the same discipline to all 24 entries, and we correct in the open when the market moves.
+Three rules. First, match the metric to the question: operator revenue for commercial attractiveness, IT load for capacity planning, network counts for interconnection decisions. Second, check the date — figures older than a year in a market growing 30% annually are decoration. Third, check the label: "announced", "under construction" and "operational" are different universes, and any source that blurs them is inflating something. Every figure on this page carries its source and verification date; the [directory](/directory) applies the same discipline to all 26 entries, and we correct in the open when the market moves.

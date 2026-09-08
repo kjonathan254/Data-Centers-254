@@ -99,7 +99,7 @@ function NairobiMapInner({ dimmed, onFacility }: {
           return (
             <>
               <path d={`M${k.x},${k.y - 7} L${k.x + 7},${k.y} L${k.x},${k.y + 7} L${k.x - 7},${k.y} Z`} fill="oklch(0.93 0.01 260 / 0.85)" stroke="oklch(0.1 0.02 250)" strokeWidth={1.2} />
-              <text x={k.x + 13} y={k.y + 4} fontSize={13} fontWeight={600} fill="oklch(0.93 0.01 260 / 0.7)">KIXP · 85 members</text>
+              <text x={k.x + 13} y={k.y + 4} fontSize={13} fontWeight={600} fill="oklch(0.93 0.01 260 / 0.7)">KIXP · 140 members · ~2.9 Tbps</text>
             </>
           );
         })()}

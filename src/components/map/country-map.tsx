@@ -8,7 +8,10 @@ import {
   SUBSEA_CABLES, FIBRE_ROUTES, CONTEXT_CITIES, REGION_ITEMS,
   KENYA_FACILITIES,
 } from "@/lib/map-data";
+import { PIDA_PROJECTS } from "@/lib/pida-data";
 import { CYAN, AMBER, smoothPath, toPts } from "./shared";
+
+const PIDA_VIOLET = "oklch(0.72 0.15 305)";
 
 const LW = 1000;
 const LH = FRAME.H;
@@ -35,6 +38,10 @@ function CountryMapInner({
 }) {
   const nbo = proj(-1.29, 36.828);
   const msa = proj(-4.0435, 39.6682);
+  const nboCount = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
+  const msaCount = KENYA_FACILITIES.filter((f) => f.metro === "mombasa").length;
+  const liveCables = SUBSEA_CABLES.filter((c) => c.live).length;
+  const pidaMapped = PIDA_PROJECTS.filter((p) => p.lat !== null && p.lng !== null);
 
   return (
     <svg
@@ -183,6 +190,30 @@ function CountryMapInner({
         );
       })()}
 
+      {/* PIDA / African Infrastructure Database layer — violet diamonds.
+          Continental project-registry entries (pipeline, not built facilities). */}
+      {pidaMapped.map((p) => {
+        const { x, y } = proj(p.lat as number, p.lng as number);
+        const isHub = p.sector === "ICT";
+        return (
+          <g key={`pida-${p.id}`} opacity={dimmed.has("datacenter") ? 0.2 : 0.95}>
+            <title>{`${p.name} — PIDA ${p.pidaCode ?? "(un-coded)"} · ${p.status}${p.capexM ? ` · US$${p.capexM}m` : ""}`}</title>
+            <path
+              d={`M${x},${y - (isHub ? 8 : 5.5)} L${x + (isHub ? 8 : 5.5)},${y} L${x},${y + (isHub ? 8 : 5.5)} L${x - (isHub ? 8 : 5.5)},${y} Z`}
+              fill={PIDA_VIOLET}
+              fillOpacity={isHub ? 0.9 : 0.55}
+              stroke="oklch(0.1 0.02 250)"
+              strokeWidth={1}
+            />
+            {isHub && (
+              <text x={x} y={y + 24} textAnchor="middle" fontSize={14} fontWeight={600} fill="oklch(0.93 0.01 260 / 0.65)">
+                PIDA hub · $395m
+              </text>
+            )}
+          </g>
+        );
+      })}
+
       {/* regional city clusters */}
       {CONTEXT_CITIES.map((city) => {
         const { x, y } = proj(city.lat, city.lng);
@@ -215,9 +246,9 @@ function CountryMapInner({
           <animate attributeName="r" from="17" to="30" dur="2.2s" repeatCount="indefinite" />
           <animate attributeName="stroke-opacity" from="0.5" to="0" dur="2.2s" repeatCount="indefinite" />
         </circle>
-        <text x={msa.x} y={msa.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={14} fontWeight={700} fill={CYAN}>6</text>
+        <text x={msa.x} y={msa.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={14} fontWeight={700} fill={CYAN}>{msaCount}</text>
         <text x={msa.x + 26} y={msa.y - 4} fontSize={22} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.9)">Mombasa</text>
-        <text x={msa.x + 26} y={msa.y + 18} fontSize={18} fill="oklch(0.93 0.01 260 / 0.55)">1 DC · 6 cables</text>
+        <text x={msa.x + 26} y={msa.y + 18} fontSize={18} fill="oklch(0.93 0.01 260 / 0.55)">{msaCount} DC · {liveCables} cables</text>
       </g>
 
       {/* Nairobi cluster — click to zoom */}
@@ -227,9 +258,9 @@ function CountryMapInner({
           <animate attributeName="r" from="21" to="38" dur="2s" repeatCount="indefinite" />
           <animate attributeName="stroke-opacity" from="0.55" to="0" dur="2s" repeatCount="indefinite" />
         </circle>
-        <text x={nbo.x} y={nbo.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={17} fontWeight={700} fill={CYAN}>13</text>
+        <text x={nbo.x} y={nbo.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={17} fontWeight={700} fill={CYAN}>{nboCount}</text>
         <text x={nbo.x} y={nbo.y + 46} textAnchor="middle" fontSize={24} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.95)">Nairobi</text>
-        <text x={nbo.x} y={nbo.y + 65} textAnchor="middle" fontSize={19} fill="oklch(0.93 0.01 260 / 0.6)">13 data centres</text>
+        <text x={nbo.x} y={nbo.y + 65} textAnchor="middle" fontSize={19} fill="oklch(0.93 0.01 260 / 0.6)">{nboCount} data centres</text>
       </g>
 
       {/* compass */}
