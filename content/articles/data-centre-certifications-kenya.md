@@ -33,10 +33,10 @@ images:
   alt:  "Chart of common network protocols including HTTP, DNS, SSH and TCP"
   caption: "Networking certifications test the protocols that move traffic between racks and continents."
   position: diagram
-- src: /images/dc-switchgear-2.webp
-  alt: Power systems and cooling infrastructure in a Kenyan data centre
+- src: /images/ups-switchgear-power-room.webp
+  alt: UPS and switchgear line-up in a data centre power room
   caption: Power and cooling certifications are increasingly valuable as data centre
-    densities rise
+    densities rise — UPS and switchgear lines like these are where that work happens
   position: inline
 internal_links:
 - text: Career Progression African Data Centres
@@ -220,7 +220,7 @@ The **CCNP Enterprise** is the professional-level Cisco certification, covering 
 Power and cooling represent the largest operational cost in any Kenyan data centre. Professionals with specialised certifications in these areas are in high demand and short supply.
 
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
+![UPS and switchgear line-up in a data centre power room](/images/ups-switchgear-power-room.webp)
 
 
 ### Certified Energy Manager (CEM)

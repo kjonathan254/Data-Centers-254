@@ -26,9 +26,9 @@ images:
     alt:  "Aerial view of the Port of Mombasa"
     caption: "Liquid's terrestrial fibre connects Mombasa landing stations to data centres across East Africa"
     position: "section-break"
-  - src: "/images/woman-network-engineer-patch-panel.webp"
-    alt:  "Network engineer working at fibre patch panels"
-    caption: "Liquid's terrestrial fibre network terminates at patch panels like this before the last jump into a customer's data hall."
+  - src: "/images/technician-rack-cabling-kenya.webp"
+    alt:  "Technician terminating fibre cabling at network racks"
+    caption: "The last metres of a 100,000 km network are hands-on: engineers terminate and test fibre at racks like these before the final jump into a customer's data hall."
     position: "section-break"
 internal_links:
   - text: "data centre directory"
@@ -68,7 +68,7 @@ The rebrand to Liquid Intelligent Technologies in 2021 signalled a further evolu
 
 ## The Fibre Network: 100,000 Kilometres Across Africa
 
-![Network engineer working at fibre patch panels](/images/woman-network-engineer-patch-panel.webp)
+![Technician terminating fibre cabling at network racks](/images/technician-rack-cabling-kenya.webp)
 
 Liquid's single most important asset is its fibre network. At over 100,000 kilometres, it is the largest independently owned fibre infrastructure on the African continent. The network spans more than 13 countries, including South Africa, Zimbabwe, Zambia, Kenya, Tanzania, Uganda, Rwanda, Burundi, the Democratic Republic of Congo, Mozambique, Lesotho, Botswana, and Nigeria.
 

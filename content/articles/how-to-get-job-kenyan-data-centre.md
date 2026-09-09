@@ -34,6 +34,10 @@ images:
     alt:  "Westlands commercial district in Nairobi"
     caption: "Most Kenyan data centre jobs cluster in Nairobi, with a smaller cohort in Mombasa."
     position: "inline"
+  - src: "/images/moringa-ixafrica-training-signing.webp"
+    alt:  "iXAfrica and Moringa School representatives signing a partnership"
+    caption: "Signing day: iXAfrica and Moringa School formalise a partnership — the operator-to-training-institution links more Kenyan data centre careers now start through. Photo: iXAfrica Data Centre."
+    position: "inline"
 internal_links:
   - text: "data centre careers overview"
     href: "/careers"
@@ -140,6 +144,8 @@ Several factors influence where an individual falls within these ranges. Interna
 ## Where the Jobs Are
 
 Kenya's data centre industry is concentrated in Nairobi, with the majority of facilities located along three corridors: Mombasa Road (Enterprise Road and surrounding industrial areas), Westlands, and the Sameer Business Park area. The largest employers in the sector are iXAfrica, Africa Data Centres, and Safaricom, which together account for the majority of data centre jobs in the country.
+
+![iXAfrica and Moringa School representatives signing a partnership](/images/moringa-ixafrica-training-signing.webp)
 
 To find job openings, monitor these channels: LinkedIn (follow the operators and set job alerts for "data centre", "NOC", "network engineer", "facility manager" in Nairobi), the operators' own careers pages, and Kenyan job boards like BrighterMonday and Fuzu. Industry events organised by TESPOK (Technology Service Providers of Kenya), the Kenya ICT and Innovation Forum, and data centre-specific conferences are also valuable for networking and discovering unadvertised positions.
 

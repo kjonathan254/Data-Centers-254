@@ -35,9 +35,9 @@ images:
   caption: Africa's growing interconnection ecosystem with KIXP positioned as a key
     East African node
   position: inline
-- src: /images/woman-network-engineer-patch-panel.webp
-  alt: "Network engineer working at fibre patch panels"
-  caption: "Cross-connects live here: patch panels where one network's fibre meets another's inside the facility."
+- src: /images/fibre-splicing-technician-data-hall.webp
+  alt: "Technician splicing fibre at a patch panel on a data centre floor"
+  caption: "Cross-connects live here: fibres hand-spliced and terminated at panels where one network's path meets another's inside the facility."
   position: section-break
 
 internal_links:
@@ -192,7 +192,7 @@ For a mid-sized ISP with 10 Gbps of total traffic, if 7 Gbps can be peered local
 
 ### What Is a Cross-Connect?
 
-![Network engineer working at fibre patch panels](/images/woman-network-engineer-patch-panel.webp)
+![Technician splicing fibre at a patch panel on a data centre floor](/images/fibre-splicing-technician-data-hall.webp)
 
 A **cross-connect** is a physical cable — typically fibre optic or copper — that directly links one party's equipment to another's within the same data centre. Cross-connects are the fundamental building block of data centre interconnection.
 

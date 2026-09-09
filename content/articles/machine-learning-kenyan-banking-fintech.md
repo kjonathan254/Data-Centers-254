@@ -30,9 +30,9 @@ images:
     alt:  "GPU servers in an AI computing facility"
     caption: "Real-time ML applications like fraud detection require low-latency connectivity between banking systems and the data centre infrastructure running the models"
     position: "inline"
-  - src: "/images/dc-woman-engineer-laptop.webp"
-    alt:  "Engineer working on a laptop in a server hall"
-    caption: "The talent gap is real — banks compete with telcos and startups for the same ML engineers."
+  - src: "/images/oracle-ixafrica-partnership.webp"
+    alt:  "Partnership signing in front of Oracle and iXAfrica DataCentre banners"
+    caption: "The infrastructure side is moving fast: iXAfrica announced in January 2026 that its Nairobi campus will host an Oracle Cloud Infrastructure region — AI-grade capacity arriving as banks scale up ML. Photo: iXAfrica Data Centre."
     position: "inline"
 internal_links:
   - text: "GPU computing in Kenya"
@@ -122,7 +122,7 @@ Data infrastructure for ML includes data lakes (large-scale storage for raw data
 
 ## The ML Talent Challenge
 
-![Engineer working on a laptop in a server hall](/images/dc-woman-engineer-laptop.webp)
+![Partnership signing in front of Oracle and iXAfrica DataCentre banners](/images/oracle-ixafrica-partnership.webp)
 
 Kenya produces many software developers, but the specific skills required for ML engineering — statistical modelling, feature engineering, model optimisation, MLOps (the practice of deploying and managing ML models in production) — are in short supply. The Microsoft Africa Development Centre in Nairobi employs ML engineers working on global products, and some of these skills are transferring to the local ecosystem. Strathmore University, the University of Nairobi, and other institutions have introduced data science and ML programmes, but the pipeline is still thin relative to demand.
 
