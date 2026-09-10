@@ -52,7 +52,7 @@ external_sources:
     url: "https://www.gsma.com/r/spectrum/mobile-connectivity-index/"
 faq:
   - question: "Does a colocation data centre need a licence in Kenya?"
-    answer: "Yes. Any facility hosting third-party servers requires at minimum an NFP-T2 Network Facilities Provider licence from the Communications Authority. This became explicit under the Revised Telecommunications Market Structure published in March 2026."
+    answer: "Yes. Any facility hosting third-party servers requires at minimum an NFP-T2 Network Facilities Provider licence from the Communications Authority. This became explicit under the Revised Telecommunications Market Structure published in March 2026 — and on 8 September 2026 the CA opened a consultation on a proposed standalone Data Centre licence that would replace NFP-T2 for colocation facilities, targeted for implementation in FY2027/28. Until that regime takes effect, NFP-T2 remains the licence of record."
   - question: "What is the penalty for operating a data centre without a licence?"
     answer: "The CA can issue fines up to KES 300,000 or direct you to cease operations. Under the Kenya Information and Communications Act, operating without a required licence is a regulatory violation that carries both financial penalties and potential enforcement action."
   - question: "What is the difference between NFP-T1 and NFP-T2 for data centres?"
@@ -78,7 +78,9 @@ The urgency was demonstrated in June 2026 when a power outage at the Huduma Keny
 
 ## How Does NFP-T1 Differ from NFP-T2?
 
-The CA did not create a standalone "data centre licence." Instead, it placed data centres within the existing Network Facilities Provider framework. **NFP-T2** is the primary route for pure-play data centre operators, while **NFP-T1** is available for large integrated operators who also require nationwide spectrum rights.
+The CA did not create a standalone "data centre licence" in the March 2026 framework. Instead, it placed data centres within the existing Network Facilities Provider framework. **NFP-T2** is the primary route for pure-play data centre operators, while **NFP-T1** is available for large integrated operators who also require nationwide spectrum rights.
+
+> **Update (8 September 2026):** The CA has opened a 30-day public consultation on a proposed standalone **Data Centre licence** that would remove colocation facilities from NFP-T2 entirely — with fees of KES 5,000/100,000 at application and issue, annual operating fees of KES 80,000 or 0.4% of turnover, 15-year validity, and implementation targeted across FY2026/27–FY2027/28. Full analysis: [Kenya's CA opens consultation on a standalone data centre licence](/articles/kenya-ca-standalone-data-centre-licence). Until that regime is finalised and implemented, the NFP-T2 route described below remains the licence of record.
 
 ### NFP-T1 vs NFP-T2 for Data Centre Operators
 

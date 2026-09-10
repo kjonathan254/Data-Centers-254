@@ -41,6 +41,8 @@ images:
 internal_links:
   - text: "data centre licensing framework"
     href: "/articles/kenya-data-centre-licensing-framework"
+  - text: "LuLu coastal cable system"
+    href: "/articles/kenya-lulu-coastal-cable-system"
   - text: "what is a data centre"
     href: "/articles/what-is-a-data-centre"
   - text: "Kenya data centre directory"
@@ -91,6 +93,8 @@ The cables currently landing in Mombasa include:
 - **PEACE** (2022) — Pakistan and East Africa Connecting Europe, with a branch to Mombasa. Provides a new route to Europe via Pakistan and the Middle East.
 
 The cumulative design capacity of these systems exceeds 300 Tbps — an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
+
+One development changes the geography without changing that count. At ITW Africa 2026 (September 2026), a consortium led by INDOI Ltd. (IOX) and Blue Trade Investments announced **LuLu**, a planned ~500km coastal cable system running from Mombasa to Lamu with landing points at Vipingo Special Economic Zone, Kilifi and Malindi in between. LuLu is not a tenth international system — it is Kenya's first dedicated coastal diversity route, pairing a subsea span (144 fibre pairs, up to 60 Tbps per pair) with a protected terrestrial path along the whole corridor. Its readiness-for-service target is Q2 2028, subject to contract execution; as of the announcement, no supplier was named and construction had not started. Full status check: [the LuLu coastal cable system](/articles/kenya-lulu-coastal-cable-system).
 
 ![Diagram of subsea cable architecture from landing station to POP](/images/submarine-cable-diagram.webp)
 

@@ -38,12 +38,12 @@ export interface BreakingItem {
 const BREAKING_TTL_HOURS = 72;
 
 export const breakingNews: BreakingItem | null = {
-  label: "New analysis",
+  label: "Policy",
   title:
-    "PwC's $31.6 trillion data centre capex forecast puts Africa's $255bn share among the map's winners",
-  href: "/articles/pwc-global-data-centre-capex-2050",
-  dateText: "4 Sep 2026",
-  publishedAt: "2026-09-04",
+    "CA opens 30-day consultation on a standalone data centre licence — the NFP-T2 era may be ending",
+  href: "/articles/kenya-ca-standalone-data-centre-licence",
+  dateText: "8 Sep 2026",
+  publishedAt: "2026-09-08",
   serious: true,
 };
 

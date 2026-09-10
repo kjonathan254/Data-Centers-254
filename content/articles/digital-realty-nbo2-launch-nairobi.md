@@ -46,12 +46,14 @@ internal_links:
 external_sources:
   - title: "Capital FM (via allAfrica) — New NBO2 Data Centre Strengthens Kenya's Bid to Become East Africa's Digital Hub (7 Sep 2026)"
     url: "https://allafrica.com/stories/202609080028.html"
+  - title: "ET Datacenters — Digital Realty Opens 6.4MW Nairobi Two Data Centre (10 Sep 2026, commissioned-capacity confirmation)"
+    url: "http://datacenters.economictimes.indiatimes.com/news/cloud-colocation-connectivity/digital-realty-opens-6-4mw-nairobi-two-data-centre/133994519"
+  - title: "Developing Telecoms — Digital Realty opens Nairobi Two Data Centre (7 Sep 2026)"
+    url: "https://developingtelecoms.com/telecom-technology/data-centres-networks/"
   - title: "Digital Realty — Strengthens Nairobi as East Africa Digital Gateway with New Data Center (press release)"
     url: "https://www.barchart.com/press-releases/4472655/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center"
   - title: "PeeringDB — iColo NBO2 facility record (fetched 8 Sep 2026)"
     url: "https://www.peeringdb.com/fac/14166"
-  - title: "Developing Telecoms — iColo NBO2 6.5 MW report (Aug 2024)"
-    url: "https://developingtelecoms.com/"
 faq:
   - question: "What launched in Nairobi on 7 September 2026?"
     answer: "NBO2 — iColo's second Nairobi facility, now operated under parent company Digital Realty. The launch was covered by Capital FM and announced by Digital Realty as strengthening Nairobi's position as East Africa's digital gateway, with ICT Principal Secretary John Tanui attending."

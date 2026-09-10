@@ -111,6 +111,7 @@ const operators: Operator[] = [
   { id: "seacom", name: "SEACOM", slug: "seacom", type: "Carrier", parentCompany: null, hqCountry: "South Africa", websiteUrl: "https://www.seacom.mu" },
   { id: "simbanet", name: "SimbaNET Kenya", slug: "simbanet", type: "Telecom", parentCompany: null, hqCountry: "Kenya", websiteUrl: "https://www.simbanet.co.ke" },
   { id: "kenya-data-centres", name: "Kenya Data Centres (ICT Authority)", slug: "kenya-data-centres", type: "Government", parentCompany: "Kenya ICT Authority", hqCountry: "Kenya", websiteUrl: null },
+  { id: "nxtra", name: "Nxtra by Airtel", slug: "nxtra", type: "Commercial", parentCompany: "Bharti Airtel (Airtel Africa)", hqCountry: "India", websiteUrl: "https://www.nxtra.in" },
 ];
 
 // ─── Facilities ────────────────────────────────────────────────────────────
@@ -1194,6 +1195,44 @@ const facilities: Facility[] = [
     carrierNeutral: undefined,
     certNote: null,
     divergenceNote: "Announced intent only — no site, capacity or timeline disclosed. Included because it targets the SME tier our readers ask about most; treat as a signal, not a pipeline.",
+  },
+
+  // ── Nxtra by Airtel Tatu City (under construction) ──────────────────────
+  {
+    id: "30",
+    name: "Nxtra by Airtel Tatu City",
+    slug: "nxtra-tatu-city",
+    description: "Airtel Africa's $150 million hyperscale campus at Tatu City, Ruiru — 44 MW of IT capacity across two 22 MW phases with high-density GPU-ready racks. Slated to be East Africa's largest single data centre facility when complete.",
+    status: "Under Construction",
+    address: "Tatu City, Eastern Bypass, Ruiru",
+    city: "Ruiru",
+    region: "Kiambu County",
+    itLoadMw: null,
+    totalCapacityMw: 44,
+    rackCount: null,
+    tierRating: null,
+    facilityType: "Hyperscale",
+    aiReady: true,
+    openedDate: null,
+    expansionDate: "2027",
+    coolingType: null,
+    powerSource: "Grid supply with on-site backup; phases designed for high-density GPU racks (99.999% uptime target per Airtel announcements)",
+    renewableClaim: null,
+    notable: "Groundwork reported from September 2025 (Airtel/Nxtra groundbreaking coverage). Original commissioning target was Q1 2027, which would have made it East Africa's largest facility; August 2026 reporting (EdgeX Exchange) indicates launch has slipped to July 2027. Kenya News Agency coverage (September 2026, during a government visit) reiterated the facility's scale and East Africa-largest framing. Total investment reported at $150 million, delivered in two 22 MW phases.",
+    lastVerified: "2026-09",
+    dataSource: "Airtel Africa announcements; Data Centre Magazine (Sep 2025); EdgeX Exchange (Aug 2026); Kenya News Agency (Sep 2026)",
+    dataConfidence: "Medium",
+    articleSlugs: [],
+    operatorId: "nxtra",
+    operator: operators[16],
+    connectivityFacility: [],
+    certifications: [],
+    sources: [
+      { label: "Airtel Africa — Tatu City data centre announcements", url: "https://www.airtel.africa/", kind: "operator" },
+    ],
+    carrierNeutral: undefined,
+    certNote: null,
+    divergenceNote: "Opening date divergence: original Q1 2027 commissioning target vs August 2026 report of a July 2027 launch. Treat the opening date as unconfirmed until the operator restates it; capacity (44 MW, 2×22 MW phases) is consistent across sources.",
   },
 ];
 
