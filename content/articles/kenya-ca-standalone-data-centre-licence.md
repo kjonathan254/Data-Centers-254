@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
-updated_date: "2026-09-10"
+updated_date: "2026-09-12"
 category: "Policy"
 cluster: "Kenya"
 og_image: "/images/national-assembly-chamber-session.webp"
@@ -48,13 +48,15 @@ external_sources:
     url: "https://techafricanews.com/2026/09/08/kenya-proposes-standalone-licence-framework-data-centres"
   - title: "The Star — CA plans standalone licence for data centres in Kenya (8 Sep 2026)"
     url: "https://www.the-star.co.ke/sasa/technology/2026-09-08-ca-plans-standalone-licence-for-data-centres-in-kenya"
+  - title: "w.media — Kenya's standalone data center license aims to lure investment (September 2026; NFP-T2 fee comparison and Universal Service Fund detail)"
+    url: "https://w.media/kenyas-standalone-data-center-license-aims-to-lure-investment/"
 faq:
   - question: "Does Kenya now have a standalone data centre licence?"
     answer: "Not yet. As of September 2026 the Communications Authority has opened a public consultation on a proposed standalone Data Centre licence. Data centres are still licensed under the Network Facilities Provider framework introduced by the Revised Telecommunications Market Structure of March 2026, and the new regime is scheduled for finalisation in FY2026/27 with implementation in FY2027/28."
   - question: "How long is the CA consultation open?"
     answer: "Stakeholders have 30 days from 8 September 2026 to review and comment on the proposed framework, putting the comment deadline around 8 October 2026. Submissions go through the Communications Authority's open consultations portal at ca.go.ke."
   - question: "What will the standalone data centre licence cost?"
-    answer: "Under the proposal, the application fee would be KES 5,000 with an initial licence fee of KES 100,000. Annual operating fees would be KES 80,000 or 0.4% of annual gross turnover, whichever is higher. Licences would be valid for 15 years. Entities already holding NFP or Application Service Provider (ASP) licences could establish and operate data centres without obtaining the separate licence."
+    answer: "Under the proposal, the application fee would be KES 5,000 with an initial licence fee of KES 100,000. Annual operating fees would be KES 80,000 or 0.4% of annual gross turnover, whichever is higher. Licences would be valid for 15 years. That is a substantial cut on the current NFP-T2 route, whose 15-year licence fee runs to KES 15 million (or 0.4% of gross annual turnover, whichever is higher) — though the Universal Service Fund levy, presently 0.5% of annual gross revenue, still applies on top. Entities already holding NFP or Application Service Provider (ASP) licences could establish and operate data centres without obtaining the separate licence."
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ca-standalone-data-centre-licence"
 ---
 
@@ -72,11 +74,13 @@ The CA's own stated reasoning is worth reading carefully. The Authority said the
 
 A network facilities provider builds towers, runs transmission backbone, and sells connectivity. A colocation data centre provides a building: secure floor space, redundant power, precision cooling, and cross-connects to the networks that customers bring with them. The facility itself does not deliver telecom services to end users — its tenants do. Under the proposed framework, the CA explicitly recognises this, describing the licence as reflecting the role data centres play in providing "colocation, power, cooling, storage and computing infrastructure rather than telecommunications services directly to end users."
 
-The distinction is not academic. Licence obligations designed for network operators — things like coverage rollouts, quality-of-service metrics for voice and data services, or universal service contributions tied to network revenue — translate awkwardly onto a facility whose revenue is rack space and power. The CA said a standalone licence would provide regulatory oversight of facilities hosting systems critical to Kenya's digital economy "while avoiding the application of requirements designed for telecoms network operators." That phrasing suggests the Authority has been listening to the operators it regulates, several of whom have spent 2026 building out GPU-ready capacity for AI workloads under rules written for Telecoms Act compliance.
+The distinction is not academic. Licence obligations designed for network operators — things like coverage rollouts, quality-of-service metrics for voice and data services, or universal service contributions tied to network revenue — translate awkwardly onto a facility whose revenue is rack space and power. The CA's fuller statement is worth quoting: "The proposed approach is intended to provide regulatory clarity, enhance visibility over data centre operations, support investment in digital infrastructure, and align Kenya's framework with proportionate approaches adopted in comparable jurisdictions." The Authority also scoped the licence to cover "entities that provide colocation data centre services, including the attendant supporting services" — language that pulls the power, cooling and physical-security envelope into the licence's core definition rather than treating it as incidental. The "proportionate approaches" phrase is the tell: the Authority has benchmarked how comparable regulators treat data centres, and concluded the telecom regime over-applies here. That phrasing also suggests the Authority has been listening to the operators it regulates, several of whom have spent 2026 building out GPU-ready capacity for AI workloads under rules written for Telecoms Act compliance.
 
 ## The Numbers: Fees, Validity, and Who Is Exempt
 
 The proposed fee structure is modest by licensing standards, and that is a deliberate signal. The application fee would be KES 5,000, with an initial licence fee of KES 100,000. Annual operating fees would be KES 80,000 or 0.4% of annual gross turnover, whichever is higher — meaning the flat fee covers smaller facilities, while the turnover-based tier scales for large commercial operations. Licences would be valid for 15 years, giving operators a long runway for the kind of capital investment data centre campuses require.
+
+The contrast with the current NFP-T2 regime is stark, and it is the strongest evidence yet that the consultation is an investment-climate document as much as a regulatory one. Under NFP-T2 as it stands, an operator pays the same KES 5,000 application fee but then a 15-year licence fee of KES 15 million — or 0.4% of gross annual turnover, whichever is higher. The proposed standalone licence cuts that upfront commitment to KES 100,000: a reduction of more than 99% for a pure-play operator, while keeping the same 0.4% turnover test at the annual tier. One cost line belongs in every operator's model, though: the Universal Service Fund levy still applies on top of licence fees — presently 0.5% of annual gross revenue — and the consultation leaves room for that figure to change before the framework is finalised.
 
 Two carve-outs matter for the broader market. Entities already holding NFP licences would be permitted to establish and operate data centres without obtaining the separate Data Centre licence — so large integrated players keep their existing path. The same exemption extends to Application Service Provider (ASP) licence holders. In practice, the standalone licence targets pure-play colocation operators: the companies whose entire business is hosting other people's servers. That is the segment that grew from a handful of facilities to the nineteen-plus operational sites the industry counts today, and the segment most exposed to a licence category that was never designed for it.
 
@@ -96,4 +100,4 @@ The risks in the transition are real but manageable. Facilities licensed under N
 
 The consultation is open through the CA's consultations portal at ca.go.ke, with comments due within 30 days of 8 September 2026. Operators, industry bodies, tenants, and investors with Kenyan data centre exposure all have standing to comment. For context on the framework being revised, see our full explainer on [Kenya's data centre licensing framework](/articles/kenya-data-centre-licensing-framework), and for the facilities this licence will cover, browse the [Kenya data centre directory](/directory).
 
-Sources: Communications Authority of Kenya open consultations; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026). Facts verified against multiple independent outlets on 10 September 2026.
+Sources: Communications Authority of Kenya open consultations; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026); w.media (September 2026). Facts verified against multiple independent outlets on 10 September 2026; fee comparison and Universal Service Fund detail verified against w.media on 12 September 2026.

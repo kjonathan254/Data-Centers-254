@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-08"
+updated_date: "2026-09-12"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/nbo2-launch-ribbon-cutting.webp"
@@ -54,6 +54,8 @@ external_sources:
     url: "https://www.barchart.com/press-releases/4472655/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center"
   - title: "PeeringDB — iColo NBO2 facility record (fetched 8 Sep 2026)"
     url: "https://www.peeringdb.com/fac/14166"
+  - title: "Powers of Africa — Data Centers: Kenya Poised to Become East Africa's Digital Hub (11 Sep 2026; Tanui 20 MW expansion encouragement, campus connectivity and continuity detail)"
+    url: "https://powersofafrica.com/article/4172/data-centers-kenya-poised-to-become-east-africas-digital-hub"
 faq:
   - question: "What launched in Nairobi on 7 September 2026?"
     answer: "NBO2 — iColo's second Nairobi facility, now operated under parent company Digital Realty. The launch was covered by Capital FM and announced by Digital Realty as strengthening Nairobi's position as East Africa's digital gateway, with ICT Principal Secretary John Tanui attending."
@@ -78,6 +80,8 @@ The physical facts first. NBO2 sits on Bogani East Road in Karen, near its sibli
 ![Digital Realty company logo](/images/digital-realty-logo.webp)
 
 What was *not* published at launch, and what we flagged on [NBO2's directory entry](/directory/icolo-nbo2): the commissioned (as opposed to design) IT load, the number of halls fitted out, and the commercial live date for general colocation. None of this is criticism — it is the standard gap between a ribbon-cutting and a ramp. The discipline is to price the facility on what is commissioned, not on the master plan.
+
+Days after the ribbon-cutting, follow-on coverage filled in the government's side of the ledger. Powers of Africa reports that Principal Secretary Tanui used the inauguration to encourage Digital Realty to keep expanding toward a **20 MW** campus — a target that lines up with the master plan's captive substation, already sized for more than 20 MW at full build — and pledged that "work will continue on the policy front to position Kenya as an attractive investment destination." The launch coverage also spells out the campus-level pitch: access to more than 100 networks, two internet exchange points and a satellite teleport, with customers able to distribute workloads between NBO1 and NBO2 as a built-in business-continuity pair. Read that framing carefully, though — those connectivity figures describe what the wider campus and its ecosystem offer, not NBO2's own building-level register, which is the number that has to climb for the gateway claim to cash out.
 
 ## The gateway claim, and the one number that decides it
 
