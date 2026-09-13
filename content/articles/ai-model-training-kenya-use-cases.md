@@ -24,13 +24,13 @@ images:
   alt:  "GPU servers racked in a data centre"
   caption: "Training clusters need dense, well-cooled compute — the kind Kenya's new facilities are being built for."
   position: hero
-- src: /images/dc-server-chip-wide.webp
-  alt:  "Server hardware close-up in a data centre"
-  caption: "Training demands accelerators, fast interconnects, and storage that can feed them."
+- src: /images/fibre-splicing-termination.webp
+  alt:  "Technician terminating fibre optic cable"
+  caption: "Training demands accelerators, fast interconnects, and storage that can feed them — interconnects that begin with fibre work like this."
   position: section-break
-- src: /images/dc-switchgear.webp
-  alt: Data centre power distribution systems
-  caption: AI training clusters demand 5-10 MW of reliable power supply.
+- src: /images/ups-switchgear-power-room.webp
+  alt: UPS and switchgear line-up in a data centre power room
+  caption: AI training clusters demand 5-10 MW of reliable power supply — conditioned and backed up in rooms like this.
   position: inline
 internal_links:
 - text: Gpu Computing Kenya Ai Needs Data Centres
@@ -121,7 +121,7 @@ Training a large language model might require ingesting terabytes of text data p
 
 At H100 density levels, traditional air cooling becomes impractical. **Liquid cooling** — either direct-to-chip or immersion cooling — is essential to manage the 40-50 kW per rack thermal output that GPU training clusters generate. Kenya's relatively mild climate in Nairobi (average temperatures of 18-25°C) offers some advantage for free cooling, but liquid systems remain necessary for GPU-dense deployments.
 
-![Server hardware close-up in a data centre](/images/dc-server-chip-wide.webp)
+![Technician terminating fibre optic cable](/images/fibre-splicing-termination.webp)
 
 ## Current AI Use Cases Driving Demand in Kenya
 
@@ -195,7 +195,7 @@ Building a facility capable of supporting serious AI model training in Kenya wou
 
 **Connectivity:** Multiple diverse fibre paths, direct peering at KIXP, and ideally submarine cable diversity through both the EASSy and SEACOM systems landing in Mombasa.
 
-![Server racks inside a modern data centre](/images/dc-switchgear.webp)
+![UPS and switchgear line-up in a data centre power room](/images/ups-switchgear-power-room.webp)
 
 ## Projecting Future Demand
 

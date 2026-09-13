@@ -24,9 +24,9 @@ images:
   alt: "Construction cranes and scaffolding on a build site"
   caption: "Before a rack is installed, a building code decides where it is allowed to stand"
   position: hero
-- src: /images/dc-switchgear-2.webp
-  alt: Electrical power systems installation in a data centre
-  caption: Electrical installations in Kenyan data centres must comply with KEBS and
+- src: /images/aerial-fibre-technician-utility-pole.webp
+  alt: Technician working on aerial utility infrastructure
+  caption: Electrical compliance begins at the grid connection — installations in Kenyan data centres must comply with KEBS and
     IEC standards under the supervision of registered engineers
   position: section-break
 - src: /images/dc-environment-sustainability.webp
@@ -164,7 +164,7 @@ The **Kenya Bureau of Standards (KEBS)** develops and enforces national standard
 
 While KEBS does not have a dedicated data centre construction standard, data centre developers typically adopt **international standards** such as **IEC 60364-5-52** (wiring systems for IT equipment), **IEC 61850** (communication networks and systems in substations), and **TIA-942** (the telecommunications infrastructure standard for data centres), and then ensure compliance with the applicable KEBS standards that overlap with those requirements.
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
+![Technician working on aerial utility infrastructure](/images/aerial-fibre-technician-utility-pole.webp)
 
 ## NEMA Environmental Impact Assessment Requirements
 

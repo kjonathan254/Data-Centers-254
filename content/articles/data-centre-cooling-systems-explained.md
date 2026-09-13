@@ -22,9 +22,9 @@ images:
     alt: "Data centre cooling systems"
     caption: "Precision air conditioning and cooling systems are the second-largest energy consumer in any data centre"
     position: "hero"
-  - src: "/images/dc-switchgear-2.webp"
-    alt:  "Electrical switchgear hall"
-    caption: "Power and cooling are the two largest energy consumers — together they determine a facility's PUE"
+  - src: "/images/technician-ups-battery-room.webp"
+    alt:  "UPS battery strings and switchgear in a data centre power room"
+    caption: "Power and cooling are the two largest energy consumers — together they determine a facility's PUE, and the power half is won in rooms like this"
     position: "section-break"
   - src: "/images/racks-cabling.webp"
     alt:  "Structured cabling connecting server racks"
@@ -82,8 +82,8 @@ In a typical data centre, IT equipment accounts for roughly 50–60% of total el
 
 The relationship between cooling and overall efficiency is measured through PUE. A facility with a PUE of 2.0 spends exactly as much on cooling and other overhead as it does on actual computing. A facility with a PUE of 1.2 directs only 20% of its total power to non-IT loads — and the majority of that 20% is cooling. Every 0.1 improvement in PUE translates to meaningful cost savings at scale.
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
-*Power and cooling are the two largest energy consumers — together they determine a facility's PUE*
+![UPS battery strings and switchgear in a data centre power room](/images/technician-ups-battery-room.webp)
+*Power and cooling are the two largest energy consumers — together they determine a facility's PUE, and the power half is won in rooms like this*
 
 Understanding the [Kenya power and data centres](/articles/kenya-power-infrastructure-data-centres) landscape is critical here. Kenya's electricity tariffs are among the highest in East Africa, so cooling inefficiency directly erodes the commercial viability of any colocation or hyperscale facility operating in Nairobi, Mombasa, or elsewhere in the country.
 

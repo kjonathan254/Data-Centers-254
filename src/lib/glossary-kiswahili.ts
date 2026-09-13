@@ -115,4 +115,9 @@ export const kiswahiliTerms: KiswahiliTerm[] = [
     en: "Geothermal Power",
     def: "Umeme wa mvuke wa ardhi wa Bonde la Ufa — Kenya ni miongoni mwa nchi bora duniani. Takriban 93% ya umeme wa Kenya (2024) unatoka nishati njiani, hivyo vituo vya data hapa ni 'kijani' kwa asili.",
   },
+  {
+    sw: "Mtandao wa Kizazi cha Tano (5G)",
+    en: "5G (Fifth-Generation Network)",
+    def: "Kizazi cha tano cha teknolojia ya mitandao ya simu — kasi kubwa (hadi Gbps), ucheleweshaji mdogo (milisekenti chache), na uwezo wa kuunganisha vifaa vingi mno sehemu moja. Safaricom ilizindua 5G kwa biashara nchini Oktoba 2022, ikifuatwa na Airtel Julai 2023. 5G huongeza mahitaji ya vituo vya data vya ukingo (edge) karibu na watumiaji.",
+  },
 ];

@@ -22,9 +22,9 @@ images:
     alt: "GPU compute clusters in an AI-ready data centre hall"
     caption: "AI-ready capacity across East Africa starts with dense GPU compute floors like this one"
     position: hero
-  - src: "/images/dc-switchgear-2.webp"
-    alt:  "Electrical switchgear hall"
-    caption: "AI data centres need significantly more power than traditional facilities, making Kenya's geothermal advantage critical"
+  - src: "/images/grid-technician-pole-work.webp"
+    alt:  "Grid technician working on overhead power distribution lines"
+    caption: "AI data centres need significantly more power than traditional facilities, making Kenya's geothermal advantage critical — and every megawatt starts at the grid"
     position: "section-break"
   - src: "/images/dc-gpu-cluster-2.webp"
     alt:  "Server racks in a Nairobi data centre hall"
@@ -88,7 +88,7 @@ Before assessing East Africa's readiness, it is important to understand the spec
 
 **Resilience.** AI training jobs can run for weeks or months. An interruption mid-training wastes millions of dollars in compute time. AI data centres require N+1 or 2N redundancy on power and cooling, with robust on-site generation and energy storage.
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
+![Grid technician working on overhead power distribution lines](/images/grid-technician-pole-work.webp)
 
 ## The Scale of AI Compute Demand in Africa
 
