@@ -15,20 +15,20 @@ published_date: "2026-08-28"
 updated_date: "2026-08-28"
 category: "Beginner Guide"
 cluster: "Beginner"
-og_image: "/images/dc-server-chip.webp"
+og_image: "/images/technician-ups-battery-room.webp"
 reading_time: "10 min"
 images:
-  - src: "/images/dc-server-chip.webp"
-    alt: "A server processor on a rack blade, up close"
-    caption: "A server is a computer whose job never ends — this is the silicon doing the work"
+  - src: "/images/technician-ups-battery-room.webp"
+    alt: "Power and battery infrastructure supporting server racks in a data centre"
+    caption: "A server is a computer whose job never ends — and it takes this kind of power and cooling infrastructure behind the racks to keep it that way"
     position: hero
   - src: "/images/dc-gpu-cluster.webp"
     alt:  "GPU cluster racks in a colocation facility"
     caption: "Consumer parts share DNA with server hardware but trade reliability and manageability for price."
     position: "section-break"
-  - src: "/images/dc-server-chip-4-wide.webp"
-    alt: "Network switches connecting servers"
-    caption: "Network switches connect servers to each other and to the outside world, routing data to its destination at speeds measured in billions of bits per second"
+  - src: "/images/fibre-splicing-technician-data-hall.webp"
+    alt: "Technician working with network cabling in a data hall"
+    caption: "Servers are only half the story — the networks this technician is working on connect them to each other and to the outside world, routing data at speeds measured in billions of bits per second"
     position: "inline"
   - src: "/images/diagram-server-rack-42u.webp"
     alt:  "Labelled diagram of a 42U server rack"
@@ -105,7 +105,7 @@ A web server receives HTTP requests from browsers (like the one you are using no
 
 ### Database Servers
 
-![Network switches connecting servers](/images/dc-server-chip-4-wide.webp)
+![Technician working with network cabling in a data hall](/images/fibre-splicing-technician-data-hall.webp)
 
 Database servers store, organise, and retrieve structured data. Every time you check your bank balance, search for a product on Jumia, or look up a contact on your phone, a database server is querying a database to find and return the relevant information. Database servers are typically the most resource-hungry type, requiring fast processors, large amounts of memory (to cache frequently accessed data), and fast storage (to read and write data quickly). Major database software includes PostgreSQL, MySQL, Microsoft SQL Server, and Oracle Database.
 

@@ -18,17 +18,13 @@ cluster: "AI"
 og_image: "/images/dc-business-investment.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/dc-server-chip-2.webp"
-    alt:  "Server processors on a rack chassis"
-    caption: "Every M-Pesa transaction, every loan application, and every card payment potentially passes through machine learning models running on servers in data centres"
+  - src: "/images/technician-ups-battery-room.webp"
+    alt:  "Server room power and battery infrastructure in a Kenyan data centre"
+    caption: "Every M-Pesa transaction, every loan application, and every card payment potentially passes through machine learning models running on servers in data centres — servers, power, and cooling under one roof"
     position: "hero"
-  - src: "/images/dc-server-chip-2.webp"
-    alt:  "Server processors on a rack chassis"
-    caption: "Kenyan banks are investing heavily in AI and machine learning capabilities, creating demand for data centre infrastructure to train and deploy models"
-    position: "section-break"
-  - src: "/images/dc-server-chip.webp"
-    alt:  "GPU servers in an AI computing facility"
-    caption: "Real-time ML applications like fraud detection require low-latency connectivity between banking systems and the data centre infrastructure running the models"
+  - src: "/images/technician-rack-cabling-kenya.webp"
+    alt: "Engineer working at server racks in a Kenyan facility"
+    caption: "Training even a modest fraud-detection model means racks of hardware — capacity most Kenyan banks will rent from colocation operators, not own"
     position: "inline"
   - src: "/images/oracle-ixafrica-partnership.webp"
     alt:  "Partnership signing in front of Oracle and iXAfrica DataCentre banners"
@@ -62,7 +58,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/machine-learning-ke
 
 When a customer sends KES 50,000 via M-Pesa at 2 AM from a location they have never used before, and the transaction is completed in under two seconds, there is a good chance that a machine learning model has already analysed the transaction in real time — checking the amount against the customer's typical patterns, the location against their known locations, the recipient against their transaction history — and decided that the transaction is legitimate. This analysis happens in milliseconds, on servers in a data centre, before the customer even sees the confirmation message.
 
-![Server processors on a rack chassis](/images/dc-server-chip-2.webp)
+![Server room power and battery infrastructure in a Kenyan data centre](/images/technician-ups-battery-room.webp)
 
 Machine learning (ML) is transforming Kenya's banking and financial technology sector from the inside. It is not a customer-facing feature that users see or interact with directly. Instead, it operates behind the scenes — in fraud detection systems, credit scoring engines, customer analytics platforms, and operational automation tools — making decisions that affect millions of transactions every day. And every one of these ML systems runs on servers in data centres, creating a growing and often overlooked demand for data centre infrastructure.
 
@@ -80,8 +76,6 @@ Real-time fraud detection requires ML models to score every transaction in milli
 
 ### Credit Scoring and Lending
 
-![Server processors on a rack chassis](/images/dc-server-chip-2.webp)
-
 Credit scoring is the ML application with the most transformative potential for Kenya's financial inclusion. Traditional credit scoring relies on formal financial records — bank statements, loan repayment history, employment verification — that exclude millions of Kenyans who are unbanked or underbanked.
 
 ML-based credit scoring uses alternative data sources to assess creditworthiness. M-Pesa transaction history (frequency of transactions, amounts, consistency of income flows), airtime purchase patterns, utility payment records, social media activity (with consent), and device data can all be used to build credit models that serve people who have no formal credit history.
@@ -98,7 +92,7 @@ These models typically run in batch mode (processing data overnight or periodica
 
 ### Training Infrastructure
 
-![GPU servers in an AI computing facility](/images/dc-server-chip.webp)
+![Engineer working at server racks in a Kenyan facility](/images/technician-rack-cabling-kenya.webp)
 
 Training an ML model is the most computationally intensive phase. It involves processing large datasets — often terabytes of transaction history — through multiple iterations of the model to optimise its parameters. For simple models (like logistic regression for credit scoring), training can be done on standard CPU servers in hours. For complex models (like deep neural networks for fraud detection), training may require GPU servers and take days or weeks.
 

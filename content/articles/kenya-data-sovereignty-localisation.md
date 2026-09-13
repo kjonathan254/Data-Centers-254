@@ -25,10 +25,10 @@ images:
   caption: Kenya's data protection and sovereignty framework continues to evolve,
     creating new compliance obligations for data centre operators
   position: hero
-- src: /images/dc-server-chip-2.webp
-  alt: Server racks in a Kenyan data centre facility
+- src: /images/site-visit-power-hall-kenya.webp
+  alt: Power hall inside a Kenyan data centre during a working site visit
   caption: Data localisation requirements are driving increased demand for on-shore
-    colocation and hyperscale facilities in Kenya
+    colocation and hyperscale facilities in Kenya — infrastructure on Kenyan soil, in rooms like this
   position: section-break
 - src: /images/nairobi-skyline-night.webp
   alt: Map showing data centre locations across Africa
@@ -179,7 +179,7 @@ This policy has been a major driver of data centre investment. Government agenci
 
 The **Communications Authority of Kenya (CAK)** regulates telecommunications providers and has imposed conditions on licence holders regarding the handling of subscriber data, call detail records (CDRs), and other communications metadata. While not a strict localisation mandate, CAK's requirements effectively necessitate that this data be processed and stored within accessible Kenyan jurisdiction for law enforcement and national security purposes.
 
-![Server processors on a rack chassis](/images/dc-server-chip-2.webp)
+![Power hall inside a Kenyan data centre during a working site visit](/images/site-visit-power-hall-kenya.webp)
 
 ## Comparative Analysis: How Kenya Stacks Up
 

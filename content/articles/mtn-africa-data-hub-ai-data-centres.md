@@ -23,9 +23,9 @@ images:
     alt:  "AI data centre hall with GPU racks and blue status lights"
     caption: "Africa Data Hub plans 150MW of AI-ready data centre capacity in its first phase"
     position: "hero"
-  - src: "/images/dc-server-chip.webp"
-    alt: "GPU servers in an AI computing facility"
-    caption: "AI workloads demand far higher power density than traditional enterprise colocation"
+  - src: "/images/grid-technician-pole-work.webp"
+    alt: "Grid technician working on overhead power distribution lines"
+    caption: "AI workloads demand far higher power density than traditional enterprise colocation — and every one of those megawatts starts at the grid"
     position: "section-break"
   - src: "/images/whats-inside-ai-data-center.webp"
     alt:  "Cutaway infographic of an AI data centre's systems"
@@ -97,7 +97,7 @@ MTN's motivation is straightforward: telcos globally are watching AI shift value
 
 Building also fits MTN's balance sheet strategy. The operator has spent years monetising non-core assets and repositioning around infrastructure, and data centres complement its fibre, towers, and mobile network assets. Partnering with an experienced external developer rather than building alone, as Mupita explained ("the entity that we are partnering with has built data centres in the UAE"), reduces execution risk and brings in capital and operational know-how that African telecom groups have often lacked in-house.
 
-![GPU servers in an AI computing facility](/images/dc-server-chip.webp)
+![Grid technician working on overhead power distribution lines](/images/grid-technician-pole-work.webp)
 
 AI workloads also change the engineering requirements dramatically. Training clusters demand power densities per rack that far exceed traditional enterprise colocation, along with advanced liquid cooling, high-capacity interconnects, and hardened power chains. Operators who can deliver AI-ready halls today are effectively selling scarce capacity into unmet demand, which is precisely the opportunity Africa Data Hub is chasing.
 

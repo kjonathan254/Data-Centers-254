@@ -26,17 +26,17 @@ images:
     alt:  "Fibre optic termination equipment in a data centre"
     caption: "Low-latency networking between GPU nodes is essential for distributed LLM inference"
     position: "section-break"
-  - src: "/images/dc-server-chip-wide.webp"
-    alt:  "Server hardware close-up in a data centre"
-    caption: "Kenyan enterprises are increasingly investing in AI-ready infrastructure to support LLM deployment"
+  - src: "/images/fibre-splicing-technician-data-hall.webp"
+    alt:  "Technician working with fibre in a data hall"
+    caption: "Kenyan enterprises are increasingly investing in AI-ready infrastructure to support LLM deployment — and in the connectivity that feeds it"
     position: "inline"
-  - src: "/images/dc-server-chip-3.webp"
-    alt:  "CPU seated in a motherboard socket"
-    caption: "Nairobi's tech ecosystem is the driving force behind LLM adoption in East Africa"
+  - src: "/images/fibre-splicing-termination.webp"
+    alt:  "Technician terminating fibre optic cable"
+    caption: "Behind Nairobi's LLM ecosystem sits physical infrastructure — fibre, racks, and power — being built out right now"
     position: "infographic"
-  - src: "/images/dc-server-chip-2.webp"
-    alt:  "Server processors on a rack chassis"
-    caption: "Colocation facilities in Nairobi are beginning to offer GPU-capable hosting for local LLM inference"
+  - src: "/images/site-visit-power-hall-kenya.webp"
+    alt:  "Power hall inside a Kenyan data centre during a working site visit"
+    caption: "Colocation facilities in Nairobi are beginning to offer GPU-capable hosting for local LLM inference — capacity that lives in powered, cooled halls like this one"
     position: "inline"
 internal_links:
   - text: "GPU computing needs in Kenya's data centres"
@@ -120,7 +120,7 @@ Inference — using a trained model to generate responses — requires far less 
 
 This is where Kenya's opportunity lies. A single GPU server, collocated in a Nairobi data centre with adequate power and cooling, can serve LLM inference for dozens of enterprise clients. The capital investment is in the range of USD 100,000–300,000 for the GPU hardware, plus ongoing colocation and connectivity costs — well within the budget of Kenya's larger enterprises and technology companies.
 
-![Server hardware close-up in a data centre](/images/dc-server-chip-wide.webp)
+![Technician working with fibre in a data hall](/images/fibre-splicing-technician-data-hall.webp)
 
 ## The Emerging Kenyan AI Ecosystem
 
@@ -157,7 +157,7 @@ The Office of the Data Protection Commissioner (ODPC) has issued guidance indica
 
 For sectors handling particularly sensitive data — banking (regulated by the Central Bank of Kenya), healthcare (regulated by the Ministry of Health), and government services — the case for local inference infrastructure is strongest. These organisations cannot easily justify sending citizen or customer data to foreign APIs, creating a clear market opportunity for GPU-equipped data centre facilities in Nairobi.
 
-![CPU seated in a motherboard socket](/images/dc-server-chip-3.webp)
+![Technician terminating fibre optic cable](/images/fibre-splicing-termination.webp)
 
 ## What Infrastructure Would Kenya Need?
 
@@ -192,7 +192,7 @@ Kenya's most significant long-term constraint on LLM adoption is not hardware �
 
 Despite these programmes, demand for AI skills in Kenya far outstrips supply. The Kenya ICT Board estimates that the country needs at least 10,000 additional AI-skilled professionals by 2028 to meet industry demand — a target that will require significant scaling of current training efforts.
 
-![Server processors on a rack chassis](/images/dc-server-chip-2.webp)
+![Power hall inside a Kenyan data centre during a working site visit](/images/site-visit-power-hall-kenya.webp)
 
 ## The Road Ahead
 

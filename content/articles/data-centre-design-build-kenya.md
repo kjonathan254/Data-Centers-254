@@ -26,10 +26,10 @@ images:
   caption: Modern server rack installation during the fit-out phase of a Kenyan data
     centre build
   position: hero
-- src: /images/dc-switchgear.webp
-  alt: Electrical power distribution systems in a data centre
+- src: /images/nbo2-launch-ribbon-cutting.webp
+  alt: Officials marking the launch of the NBO2 data centre in Nairobi
   caption: Power distribution infrastructure is a critical design element in any Kenyan
-    data centre build
+    data centre build — NBO2's September 2026 launch showed the end result of that design work
   position: section-break
 - src: /images/dc-chillers-roof-3.webp
   alt: Data centre cooling systems including CRAC units and chilled water piping
@@ -183,8 +183,8 @@ The detailed design phase translates the concept into construction-ready documen
 - **Electrical engineering** designs covering utility feeds, switchgear, UPS systems, power distribution units (PDUs), generator systems, and earthing/grounding
 - **Mechanical engineering** designs for precision cooling, chilled water systems, air handling units, and ductwork
 
-![Server racks inside a modern data centre](/images/dc-switchgear.webp)
-*Power distribution infrastructure is a critical design element in any Kenyan data centre build*
+![Officials marking the launch of the NBO2 data centre in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
+*Power distribution infrastructure is a critical design element in any Kenyan data centre build — NBO2's September 2026 launch showed the end result of that design work*
 
 ### MEP Design: The Most Critical Discipline
 

@@ -22,17 +22,17 @@ images:
     alt: "High-voltage transmission pylons crossing Kenyan terrain"
     caption: "Every data centre is only as strong as the pylons feeding it"
     position: hero
-  - src: "/images/dc-switchgear-2.webp"
-    alt: "Electrical switchgear hall"
-    caption: "Racks, cooling, and growth all draw from the same strained grid."
+  - src: "/images/site-visit-power-hall-kenya.webp"
+    alt: "Power hall inside a Kenyan data centre during a working site visit"
+    caption: "Racks, cooling, and growth all draw from the same strained grid — the power hall is where that strain lands first."
     position: "section-break"
   - src: "/images/kenya-transmission-pylons.webp"
     alt: "High-voltage pylons on the backbone grid"
     caption: "The bottleneck is transmission, not generation."
     position: "infographic"
-  - src: "/images/dc-switchgear.webp"
-    alt: "Server racks inside a modern data centre"
-    caption: "A single rack can draw 5-10 kilowatts — a 200-rack facility needs 1-2 megawatts just for servers"
+  - src: "/images/ups-switchgear-power-room.webp"
+    alt: "UPS and switchgear line-up in a data centre power room"
+    caption: "A single rack can draw 5-10 kilowatts — a 200-rack facility needs 1-2 megawatts just for servers, and rooms like this make those numbers survivable"
     position: "inline"
   - src: "/images/kenya-geothermal-plant-olkaria.webp"
     alt:  "Olkaria geothermal plant with cooling towers and steam"
@@ -109,7 +109,7 @@ Data centres are extraordinary electricity consumers. To understand why power is
 
 But IT load is only part of the story. Data centres need additional power for cooling (removing the heat servers generate), lighting, security systems, and office space. The total facility power is measured by **PUE (Power Usage Effectiveness)**, defined as the ratio of total facility power to IT power. A PUE of 1.5 means for every 1 watt consumed by servers, 0.5 watts go to everything else. So a 5-megawatt IT load with a PUE of 1.5 requires 7.5 megawatts from the grid.
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
+![Power hall inside a Kenyan data centre during a working site visit](/images/site-visit-power-hall-kenya.webp)
 
 ## The Transmission Bottleneck
 
@@ -145,7 +145,7 @@ Data centres do not rely solely on the grid. Every serious facility has a layere
 
 The combination of these systems means that a well-designed data centre should never experience downtime due to power issues. The Huduma Centre outage suggests that not all facilities in Kenya meet this standard. For new operators entering the market, backup power is a significant capital cost — diesel generators, UPS systems, and automatic transfer switches can represent 10-15% of total facility cost.
 
-![Server racks inside a modern data centre](/images/dc-switchgear.webp)
+![UPS and switchgear line-up in a data centre power room](/images/ups-switchgear-power-room.webp)
 
 ## The Path Forward
 

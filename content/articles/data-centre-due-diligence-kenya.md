@@ -26,8 +26,8 @@ images:
     alt:  "Security systems assessment during a facility audit"
     caption: "Physical security is one of the most visible differentiators between facilities — look for biometric access, mantraps, CCTV coverage, and security staffing levels"
     position: "section-break"
-  - src: "/images/dc-switchgear-2.webp"
-    alt:  "Electrical switchgear hall"
+  - src: "/images/ups-switchgear-power-room.webp"
+    alt:  "UPS and switchgear line-up in a data centre power room"
     caption: "Ask to see the generator room, UPS systems, and switchgear — the power infrastructure is too important to evaluate only through a sales presentation"
     position: "inline"
   - src: "/images/dc-biometric-access-3.webp"
@@ -122,7 +122,7 @@ Connectivity evaluation focuses on diversity and redundancy.
 
 **Cross-connect process**: How quickly can cross-connects be provisioned? What are the costs? Are there restrictions on which providers you can connect to?
 
-![Electrical switchgear hall](/images/dc-switchgear-2.webp)
+![UPS and switchgear line-up in a data centre power room](/images/ups-switchgear-power-room.webp)
 
 ## Phase 3: Security Evaluation
 

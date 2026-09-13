@@ -53,7 +53,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/safaricom-data-cent
 
 Safaricom is not a data centre company. It is Kenya's largest telecommunications operator, serving over 30 million mobile subscribers and generating revenue exceeding KES 300 billion annually. Yet within its portfolio sits what is arguably the single most critical data centre in East Africa: a Tier III facility on Waiyaki Way in Nairobi that processes over KES 20 trillion in M-Pesa transactions each year, hosts the core of Kenya's 4G and 5G mobile networks, and underpins an expanding portfolio of enterprise cloud services. No other data centre in the region carries this level of systemic importance to a national economy.
 
-![CPU seated in a motherboard socket](/images/dc-server-chip-3.webp)
+![Engineer working at server racks in a Kenyan facility](/images/technician-rack-cabling-kenya.webp)
 
 This profile examines Safaricom's data centre operations, the workloads they support, the company's role in Kenya's emerging AI infrastructure ecosystem, and how its facility strategy differs fundamentally from the carrier-neutral operators entering the Kenyan market.
 
