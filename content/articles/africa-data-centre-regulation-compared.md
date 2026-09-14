@@ -1,5 +1,5 @@
 ---
-title: "Data Centre Regulation Across Africa: Kenya, South Africa, Nigeria, Egypt, and Rwanda Compared"
+title: "Data Centre Regulation in Africa: 5 Countries Compared"
 slug: "africa-data-centre-regulation-compared"
 meta_description: "How do African countries regulate data centres? Compare licensing, data protection, tax incentives, and regulatory frameworks across Kenya, South Africa, Nigeria, Egypt, and Rwanda — and what Kenya can learn."
 primary_keyword: "data centre regulation Africa"

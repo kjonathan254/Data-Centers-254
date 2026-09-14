@@ -1,5 +1,5 @@
 ---
-title: "Wingu Africa: Kenya's Edge Data Centre for Cloud and Content Delivery"
+title: "Wingu Africa: Kenya's Edge Data Centre for Cloud"
 slug: "wingu-africa-data-centre-kenya"
 meta_description: "Wingu Africa operates a carrier-neutral edge data centre in Nairobi designed for cloud-on-ramp, CDN, and enterprise workloads. A Kenyan-born company serving the growing demand for local infrastructure."
 primary_keyword: "Wingu Africa data centre"

@@ -7,27 +7,33 @@ import MarketSnapshot from "@/components/sections/market-snapshot";
 import { getFacilities } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Kenya Data Centre Directory & Market Snapshot",
-  description:
-    "Every data centre facility in Kenya, staged by supply pipeline — Live, Under Construction, Committed, Early Stage. Search, filter, and compare. Every facility verified and sourced.",
-  alternates: { canonical: "/directory" },
-  openGraph: {
-    title: "Kenya Data Centre Directory | Data Centre 254",
-    description:
-      "Kenya's most comprehensive data centre directory with a staged market snapshot. Search, filter, and compare facilities.",
-    siteName: "Data Centre 254",
-    type: "website",
-    locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory — Data Centre 254" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kenya Data Centre Directory | Data Centre 254",
-    description: "Kenya's most comprehensive data centre directory. Search, filter, and compare facilities.",
-    images: ["/images/africa-dc-map.webp"],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const facilities = getFacilities();
+  const operational = facilities.filter((f) => f.status === "Operational").length;
+  const nairobi = facilities.filter((f) => f.city === "Nairobi").length;
+  const mombasa = facilities.filter((f) => f.city === "Mombasa").length;
+  const title = `Kenya Data Centre Directory: ${facilities.length} Facilities`;
+  const description = `How many data centres are in Kenya? ${facilities.length} facilities tracked and verified, ${operational} of them operational (${nairobi} in Nairobi, ${mombasa} in Mombasa). Staged pipeline, search, filter, and compare. Every facility verified and sourced.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: "/directory" },
+    openGraph: {
+      title,
+      description: `${facilities.length} Kenya data centre facilities tracked and verified, ${operational} operational. Search, filter, and compare with a staged market snapshot.`,
+      siteName: "Data Centre 254",
+      type: "website",
+      locale: "en_KE",
+      images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory — Data Centre 254" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: `${facilities.length} Kenya data centres tracked and verified, ${operational} operational. Search, filter, and compare.`,
+      images: ["/images/africa-dc-map.webp"],
+    },
+  };
+}
 
 export default async function DirectoryPage({
   searchParams,
@@ -37,6 +43,9 @@ export default async function DirectoryPage({
   const { search } = await searchParams;
   const facilities = getFacilities();
   const opNames = [...new Set(facilities.map((f) => f.operator.name))];
+  const operationalCount = facilities.filter((f) => f.status === "Operational").length;
+  const nairobiCount = facilities.filter((f) => f.city === "Nairobi").length;
+  const mombasaCount = facilities.filter((f) => f.city === "Mombasa").length;
 
   const datasetJsonLd = {
     "@context": "https://schema.org",
@@ -108,6 +117,17 @@ export default async function DirectoryPage({
               </li>
             ))}
           </ul>
+        </div>
+        <div className="container-site mt-6">
+          <h2 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h2>
+          <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mb-2">
+            DC254 currently tracks <strong className="text-foreground">{facilities.length} data centre facilities</strong> in Kenya,
+            of which <strong className="text-foreground">{operationalCount} are operational</strong> ({nairobiCount} in
+            Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza). The
+            remaining {facilities.length - operationalCount} sites are under construction, committed, or at an early
+            stage. Every row is verified against a published source and dated, and the
+            full dataset is free to download below.
+          </p>
         </div>
         {/* Data export — the "free, no signup wall" promise, made real. Server-rendered: works with JS disabled. */}
         <div className="container-site mt-6">

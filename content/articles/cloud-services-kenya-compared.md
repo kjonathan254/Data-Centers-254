@@ -1,5 +1,5 @@
 ---
-title: "Cloud Services in Kenya: AWS, Azure, Google Cloud, and Local Providers Compared"
+title: "Cloud Services in Kenya: AWS, Azure, Google Compared"
 slug: "cloud-services-kenya-compared"
 meta_description: "AWS, Microsoft Azure, Google Cloud, and local providers all compete for Kenyan enterprise workloads. Compare pricing, latency, data residency, and the best fit for different use cases in Kenya's cloud market."
 primary_keyword: "cloud services Kenya"

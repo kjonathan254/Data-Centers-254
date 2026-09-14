@@ -1,5 +1,5 @@
 ---
-title: "AI Data Centres in East Africa: Why Kenya Is Positioned to Lead"
+title: "AI Data Centres in East Africa: Kenya's Position"
 slug: "ai-data-centres-east-africa"
 meta_description: "AI requires massive compute infrastructure close to users. East Africa's submarine cables, geothermal energy, and growing digital economy make Kenya the natural hub for AI data centres on the continent."
 primary_keyword: "AI data centres East Africa"

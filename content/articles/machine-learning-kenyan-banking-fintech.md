@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning in Kenyan Banking and FinTech: Why It Needs Data Centres"
+title: "Machine Learning in Kenyan Banking: The Data Centre Link"
 slug: "machine-learning-kenyan-banking-fintech"
 meta_description: "Kenyan banks and fintechs are deploying machine learning for fraud detection, credit scoring, and customer analytics. These AI workloads require significant data centre infrastructure — here is how ML is transforming Kenya's financial sector."
 primary_keyword: "machine learning Kenya banking"

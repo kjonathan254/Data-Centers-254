@@ -1,5 +1,5 @@
 ---
-title: "Fibre Optic Networks Powering Kenya's Data Centres: Liquid Telecom, Safaricom, and the Last Mile"
+title: "Fibre Networks Powering Kenya's Data Centres: The Last Mile"
 slug: "fibre-optic-networks-kenya-data-centres"
 meta_description: "Kenya's 15,000+ km of fibre optic cable connects data centres to the world. Explore the operators, pricing, redundancy strategies, and last-mile challenges that determine how fast and reliable your data centre connectivity really is."
 primary_keyword: "fibre optic networks Kenya"

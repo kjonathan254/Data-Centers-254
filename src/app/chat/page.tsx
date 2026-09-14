@@ -15,7 +15,7 @@ import { BOT_IDENTITY } from "@/lib/chatbot/identity";
  */
 
 export const metadata: Metadata = {
-  title: `Ask ${BOT_IDENTITY.name} — Kenya's Data Centre Answer Engine | Data Centre 254`,
+  title: `Ask ${BOT_IDENTITY.name}: Kenya's Data Centre Answer Engine`,
   description: `${BOT_IDENTITY.name} answers questions about Kenya's data centre market from DC254's verified dataset — capacity, operators, comparisons, submarine cables, AI readiness and green power. Every figure sourced and dated.`,
   alternates: { canonical: "/chat" },
   openGraph: {

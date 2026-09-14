@@ -1,5 +1,5 @@
 ---
-title: "Liquid Intelligent Technologies: The Connectivity Backbone Behind Kenya's Data Centres"
+title: "Liquid Intelligent: The Backbone of Kenya's Data Centres"
 slug: "liquid-intelligent-technologies-kenya"
 meta_description: "Liquid Intelligent Technologies operates Africa's largest fibre network and data centre facilities in Nairobi. Part of Cassava Technologies, they connect Kenya's data centres to 13+ countries and multiple submarine cables."
 primary_keyword: "Liquid Intelligent Technologies Kenya"

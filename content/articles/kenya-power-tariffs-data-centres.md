@@ -1,5 +1,5 @@
 ---
-title: "Kenya Power Tariffs for Data Centres: Industrial Rates, Negotiation, and Cost Benchmarks"
+title: "Kenya Power Tariffs for Data Centres: Rates & Benchmarks"
 slug: "kenya-power-tariffs-data-centres"
 meta_description: "Kenya Power's industrial tariffs determine a significant portion of data centre operating costs. Understand the tariff structure, demand charges, negotiation strategies, and how Kenyan rates compare regionally."
 primary_keyword: "Kenya Power tariffs data centres"

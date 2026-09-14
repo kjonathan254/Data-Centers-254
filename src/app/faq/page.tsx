@@ -90,7 +90,7 @@ export default function FaqPage() {
     {
       q: "Do you need a licence to run a data centre in Kenya?",
       a: "Kenya's data centre market is liberalised, and the regulatory picture has been moving quickly — from licensing frameworks under the Communications Authority to county-level approvals and the national digital economy agenda. DC254 maintains a dedicated explainer on the licensing and regulatory framework as it stands, and tracks material changes as they happen.",
-      links: [{ label: "the licensing framework explainer", href: "/news/kenya-data-centre-licensing-framework" }],
+      links: [{ label: "the licensing framework explainer", href: "/articles/kenya-data-centre-licensing-framework" }],
     },
     {
       q: "How does DC254 verify its numbers?",

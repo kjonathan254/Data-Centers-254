@@ -1,5 +1,5 @@
 ---
-title: "The G2M Fibre Route Is Live: An East–West Artery for East African Data"
+title: "G2M Fibre Route Is Live: An East-West Data Artery"
 slug: "paratus-g2m-fibre-route-live"
 meta_description: "Paratus Group's 2,000 km Goma-to-Mombasa fibre route is live, linking DRC, Rwanda, Uganda and Kenya to subsea cable capacity. Why an east-west artery matters for Mombasa's cable-landing risk."
 primary_keyword: "G2M fibre route"
@@ -83,4 +83,4 @@ For buyers of connectivity in Kenya, the practical advice is unchanged but easie
 
 ## What to watch
 
-Three signals will tell us whether the G2M becomes a load-bearing artery or another lit route on a map. First, whether Paratus lands wholesale and enterprise capacity deals along the corridor — the ITWeb report says the route is carrying traffic, but carrying *whose* traffic and at what volumes is the real test. Second, whether the region's internet exchanges (KIXP, RINEX, and Uganda's UIXP) see membership growth from DRC-facing networks, which would show the route being used for peering rather than pure transit. Third, whether it pressures the market toward more east-west builds — the region's next frontier is redundancy *between* corridors, not just along them. [Our map](/infrastructure/map) now carries the G2M alongside the terrestrial backbone, and we will keep the [connectivity explainers](/articles/submarine-cables-kenya-explained) updated as the traffic story develops.
+Three signals will tell us whether the G2M becomes a load-bearing artery or another lit route on a map. First, whether Paratus lands wholesale and enterprise capacity deals along the corridor — the ITWeb report says the route is carrying traffic, but carrying *whose* traffic and at what volumes is the real test. Second, whether the region's internet exchanges (KIXP, RINEX, and Uganda's UIXP) see membership growth from DRC-facing networks, which would show the route being used for peering rather than pure transit. Third, whether it pressures the market toward more east-west builds — the region's next frontier is redundancy *between* corridors, not just along them. [Our map](/infrastructure/map) now carries the G2M alongside the terrestrial backbone, and we will keep the [connectivity explainers](/articles/submarine-cables-landing-mombasa) updated as the traffic story develops.

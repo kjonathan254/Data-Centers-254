@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
     default: "Data Centre 254 | Inside Kenya's Digital Infrastructure",
-    template: "%s | Data Centre 254",
+    template: "%s | DC254",
   },
   description:
     "An independent Kenyan educational and research platform explaining the infrastructure behind Kenya's digital economy. Data centres, connectivity, power, AI, and the systems that make the digital world work.",

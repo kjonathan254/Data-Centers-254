@@ -1,5 +1,5 @@
 ---
-title: Building Codes and Physical Regulations for Data Centres in Kenya
+title: "Building Codes for Data Centres in Kenya"
 slug: building-codes-data-centres-kenya
 meta_description: A comprehensive guide to the building codes, physical regulations,
   and approval processes governing data centre construction in Kenya — from county

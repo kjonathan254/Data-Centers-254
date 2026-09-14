@@ -1,5 +1,5 @@
 ---
-title: "Data Centre Tier Ratings Explained: What Tier I to IV Actually Means"
+title: "Data Centre Tier Ratings: Tier I to IV Explained"
 slug: "data-centre-tier-ratings-explained"
 meta_description: "Tier I, II, III, and IV data centre ratings define reliability levels from basic to fault-tolerant. Most Kenyan facilities target Tier III. Here is what each tier means in practice."
 primary_keyword: "data centre tier ratings"

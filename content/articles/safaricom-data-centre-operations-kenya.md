@@ -1,5 +1,5 @@
 ---
-title: "Safaricom Data Centres: Powering M-Pesa, 5G, and Kenya's Digital Economy"
+title: "Safaricom Data Centres: M-Pesa, 5G and the Digital Economy"
 slug: "safaricom-data-centre-operations-kenya"
 meta_description: "Safaricom operates Kenya's most critical data centre, supporting M-Pesa, mobile network infrastructure, and enterprise cloud services. Now partnering with Microsoft and G42 on a planned $1 billion AI facility."
 primary_keyword: "Safaricom data centre"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
-updated_date: "2026-08-29"
+updated_date: "2026-09-14"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/dc-networking.webp"
@@ -48,6 +48,8 @@ faq:
     answer: "Safaricom's data centre is primarily for internal use, supporting M-Pesa, mobile network core, and Safaricom Cloud services. It is not carrier-neutral and does not actively market third-party colocation, unlike iXAfrica or Africa Data Centres."
   - question: "What is the Microsoft-G42 partnership with Safaricom?"
     answer: "In 2024, Microsoft and UAE-based G42 announced a $1 billion AI data centre project in Kenya, with Safaricom named as the local partner. The facility would be the largest single foreign direct investment in Kenya's digital infrastructure. However, the project is currently stalled due to grid power capacity constraints, as Kenya Power cannot deliver the required 100+ MW at a single site."
+  - question: "How much power does the Safaricom Limuru (Red Hill) data centre have?"
+    answer: "Safaricom has not published facility-level power or MW capacity figures for the Red Hill campus in Limuru, so no verified MW number exists in public sources. DC254's directory records the three-building campus as operational, with phase one completed in March 2025 and capacity listed as undisclosed. Safaricom's core network and M-Pesa infrastructure remain anchored at its Waiyaki Way facility in Nairobi; treat any specific MW figure circulating online as unverified."
 canonical_url: "https://data-centers-254.vercel.app/articles/safaricom-data-centre-operations-kenya"
 ---
 

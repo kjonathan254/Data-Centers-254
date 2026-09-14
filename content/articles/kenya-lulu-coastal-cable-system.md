@@ -1,7 +1,7 @@
 ---
-title: "LuLu: Kenya's Planned 500km Coastal Cable That Diversifies Beyond Mombasa"
+title: "LuLu Cable: Kenya's 500km Coastal Route Beyond Mombasa"
 slug: "kenya-lulu-coastal-cable-system"
-meta_description: "A new coastal submarine cable system called LuLu was announced at ITW Africa 2026 — 500km from Mombasa to Lamu with five landing points, 144 fibre pairs and dual subsea-terrestrial paths. What is confirmed, what is not, and why coastal diversity matters."
+meta_description: "The LuLu sea cable: a 500km coastal submarine route from Mombasa to Lamu announced at ITW Africa 2026, with five landing points, 144 fibre pairs and dual subsea-terrestrial paths. What is confirmed, what is not, and why coastal diversity matters."
 primary_keyword: "LuLu cable Kenya"
 secondary_keywords:
   - "LuLu submarine cable system"

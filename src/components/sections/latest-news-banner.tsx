@@ -12,7 +12,7 @@ export default function LatestNewsBanner() {
       <div className="container-site">
         <p className="eyebrow">Featured analysis</p>
 
-        <Link href="/news/kenya-data-centre-licensing-framework" className="group mt-6 block">
+        <Link href="/articles/kenya-data-centre-licensing-framework" className="group mt-6 block">
           <article className="card-solid card-solid-hover grid overflow-hidden lg:grid-cols-5">
             {/* Photograph */}
             <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[320px] lg:col-span-2">

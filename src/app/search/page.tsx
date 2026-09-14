@@ -16,6 +16,7 @@ export default function SearchPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
+        <h1 className="sr-only">Search DC254</h1>
         <Suspense>
           <SearchClient />
         </Suspense>

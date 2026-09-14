@@ -1,5 +1,5 @@
 ---
-title: "Colocation Data Centres in Kenya: Why Companies Rent Instead of Build"
+title: "Colocation in Kenya: Why Companies Rent, Not Build"
 slug: "colocation-data-centre-kenya"
 meta_description: "Colocation lets companies house their servers in a professional facility without building their own. Kenya has multiple providers including iXAfrica and Africa Data Centres. Here is how to choose."
 primary_keyword: "colocation data centre Kenya"

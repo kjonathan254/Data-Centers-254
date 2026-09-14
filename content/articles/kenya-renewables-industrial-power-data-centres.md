@@ -1,5 +1,5 @@
 ---
-title: "Kenya's Renewable Energy Advantage Meets the Data Centre Demand Wave"
+title: "Kenya's Renewable Energy Meets Data Centre Demand"
 slug: "kenya-renewables-industrial-power-data-centres"
 meta_description: "Renewables overtake coal globally in 2026 as data centres drive demand. Kenya enters that moment with a 90%-renewable grid — a green data centre edge."
 primary_keyword: "Kenya renewable energy data centres"

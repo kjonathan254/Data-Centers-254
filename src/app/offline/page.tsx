@@ -40,7 +40,7 @@ export default function OfflinePage() {
             Back to Home
           </Link>
           <Link
-            href="/articles"
+            href="/beginners"
             className="inline-flex items-center gap-2 rounded-lg border border-border/50 px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-cyan/30 hover:text-cyan"
           >
             <BookOpen className="size-4" aria-hidden />

@@ -1,5 +1,5 @@
 ---
-title: "Why Kenya's Data Centre Market Estimates Disagree: $266M vs $606M vs $25M"
+title: "Why Kenya's Data Centre Market Estimates Disagree"
 slug: "why-kenya-data-centre-market-estimates-disagree"
 meta_description: "Six research firms value Kenya's data centre market at $266M, $369M, $509M or $606M — against Xalam's $25M-a-year colocation figure. We fetched every report page on 8 September 2026 and explain exactly why the numbers diverge, and how to read them."
 primary_keyword: "Kenya data centre market size"

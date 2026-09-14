@@ -75,7 +75,8 @@ export async function generateMetadata({
   const mw = f.totalCapacityMw
     ? `${f.totalCapacityMw} MW`
     : "capacity undisclosed";
-  const title = `${f.name}, ${f.city} — ${f.operator.name} | DC254`;
+  const fullTitle = `${f.name}, ${f.city}`;
+  const title = fullTitle.length + 8 <= 60 ? fullTitle : f.name;
   const description = `${f.name} is a ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name} (${mw}). Specs, connectivity, power and sourcing — verified ${fmtVerified(f.lastVerified)}.`;
   return {
     title,

@@ -1,5 +1,5 @@
 ---
-title: "iXAfrica Data Centres: Kenya's First Hyperscale AI-Ready Facility"
+title: "iXAfrica: Kenya's First Hyperscale AI-Ready Facility"
 slug: "ixafrica-data-centres-kenya"
 meta_description: "iXAfrica operates East Africa's first hyperscale, AI-ready data centre on Mombasa Road, Nairobi. Backed by Actis, the NBOX1 campus targets 22.5 MW with a further 53 MW Tilisi campus committed."
 primary_keyword: "iXAfrica data centre"

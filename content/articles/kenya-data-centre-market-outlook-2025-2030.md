@@ -1,5 +1,5 @@
 ---
-title: "Kenya Data Centre Market Size, Growth and Investment Outlook 2025–2030"
+title: "Kenya Data Centre Market Outlook 2025-2030"
 slug: "kenya-data-centre-market-outlook-2025-2030"
 meta_description: "Kenya's data centre market is projected to grow from $180M to $450M by 2030. Explore the investment drivers, capacity expansions, and strategic opportunities shaping East Africa's most dynamic digital infrastructure market."
 primary_keyword: "Kenya data centre market"

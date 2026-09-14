@@ -1,5 +1,5 @@
 ---
-title: "KIXP: How the Kenya Internet Exchange Point Keeps Traffic Local"
+title: "KIXP: How Kenya's Internet Exchange Keeps Traffic Local"
 slug: "kixp-internet-exchange-point-kenya"
 meta_description: "KIXP is the Kenya Internet Exchange Point. It keeps local internet traffic inside Kenya, reducing latency and costs. Here is how it works and why it matters."
 primary_keyword: "KIXP Kenya"

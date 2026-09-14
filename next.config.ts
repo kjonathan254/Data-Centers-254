@@ -49,6 +49,13 @@ const nextConfig: NextConfig = {
     return [
       // /index was a duplicate of /directory — permanently redirect legacy links
       { source: "/index", destination: "/directory", permanent: true },
+      // /news surfaces never existed as pages — send crawled links to real homes
+      { source: "/news", destination: "/tracker", permanent: true },
+      {
+        source: "/news/kenya-data-centre-licensing-framework",
+        destination: "/articles/kenya-data-centre-licensing-framework",
+        permanent: true,
+      },
     ];
   },
   async headers() {

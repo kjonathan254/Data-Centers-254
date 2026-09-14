@@ -1,5 +1,5 @@
 ---
-title: 'AI Model Training in Kenya: Use Cases and Infrastructure Needs'
+title: "AI Model Training in Kenya: Use Cases, Infrastructure"
 slug: ai-model-training-kenya-use-cases
 meta_description: Discover how Kenyan organisations are pursuing AI model training
   locally, the infrastructure gaps they face, and what it will take to build GPU-ready

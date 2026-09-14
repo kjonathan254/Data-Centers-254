@@ -1,5 +1,5 @@
 ---
-title: "Edge Computing in East Africa: Bringing Data Centres Closer to Users"
+title: "Edge Computing in East Africa: Bringing Compute Closer"
 slug: "edge-computing-east-africa"
 meta_description: "Edge computing places smaller data processing facilities closer to end users, reducing latency for real-time applications. Explore how edge computing is emerging in East Africa and what it means for Kenya's digital infrastructure."
 primary_keyword: "edge computing East Africa"

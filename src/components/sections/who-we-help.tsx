@@ -27,8 +27,8 @@ const AUDIENCES: {
     icon: Newspaper,
     title: "Journalists & writers",
     body: "Sourced numbers you can cite: every figure carries its claim, source, date verified and independent evidence.",
-    cta: "See the newsroom",
-    href: "/news",
+    cta: "Open the tracker",
+    href: "/tracker",
   },
   {
     icon: TrendingUp,

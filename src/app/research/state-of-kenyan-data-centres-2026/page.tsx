@@ -13,7 +13,7 @@ import {
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "State of Kenyan Data Centres 2026 — The Annual Review | Data Centre 254",
+  title: "State of Kenyan Data Centres 2026: Annual Review",
   description:
     "The verified annual review of Kenya's data centre market: 26 tracked facilities, the live supply pipeline, interconnection league table, certification leaders, the power constraint, and what 2027 will decide.",
   alternates: { canonical: "/research/state-of-kenyan-data-centres-2026" },

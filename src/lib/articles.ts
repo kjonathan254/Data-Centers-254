@@ -211,7 +211,7 @@ export function getAllArticles(): Article[] {
 
 export function getArticlesByCluster(cluster: string): Article[] {
   return getAllArticles().filter(
-    (a) => a.frontmatter.cluster.toLowerCase() === cluster.toLowerCase()
+    (a) => (a.frontmatter.cluster ?? "").toLowerCase() === cluster.toLowerCase()
   );
 }
 

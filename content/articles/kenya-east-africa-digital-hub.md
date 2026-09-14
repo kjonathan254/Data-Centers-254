@@ -1,5 +1,5 @@
 ---
-title: "Kenya as East Africa's Digital Hub: How Data Centres Make It Possible"
+title: "How Data Centres Make Kenya East Africa's Digital Hub"
 slug: "kenya-east-africa-digital-hub"
 meta_description: "Kenya's submarine cables, renewable energy, skilled workforce, and growing data centre capacity make it the natural digital hub for East Africa's 300 million people. Explore the factors behind this positioning and the infrastructure that enables it."
 primary_keyword: "Kenya East Africa digital hub"

@@ -1,5 +1,5 @@
 ---
-title: "Kenya Data Protection Act and Data Centres: What Operators and Customers Must Know"
+title: "Kenya Data Protection Act: What Data Centres Must Know"
 slug: "kenya-data-protection-act-data-centres"
 meta_description: "Kenya's Data Protection Act 2019 imposes specific obligations on data centres handling personal data. Understand consent, data localisation, breach notification, and what the law means for colocation customers and operators."
 primary_keyword: "Kenya Data Protection Act data centres"

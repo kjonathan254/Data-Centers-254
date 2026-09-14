@@ -1,5 +1,5 @@
 ---
-title: "Kenya on the Continental Pipeline: What the African Infrastructure Database Says About the Country's Next Decade"
+title: "Kenya on the Continental Pipeline: The Next Decade"
 slug: "kenya-pida-infrastructure-pipeline"
 meta_description: "We queried AUDA-NEPAD's African Infrastructure Database API: Kenya has 186 registered projects worth ~$172bn across transport, energy, water and ICT — including a $395m Mombasa data centre hub. Here is what the registry reveals, and its limits."
 primary_keyword: "PIDA projects Kenya"

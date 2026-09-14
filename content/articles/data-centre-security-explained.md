@@ -1,5 +1,5 @@
 ---
-title: "Data Centre Security Explained: Physical, Network, and Compliance Layers"
+title: "Data Centre Security: Physical, Network, Compliance"
 slug: "data-centre-security-explained"
 meta_description: "Data centre security operates on three layers: physical access control, network defences, and compliance frameworks like ISO 27001. Understand how Kenyan facilities protect infrastructure, data, and customer trust."
 primary_keyword: "data centre security"

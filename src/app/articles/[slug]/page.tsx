@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = fm.canonical_url || url;
 
   return {
-    title: fm.title,
+    title: { absolute: fm.title },
     description: fm.meta_description,
     keywords: [fm.primary_keyword, ...fm.secondary_keywords],
     authors: [{ name: fm.author, url: siteUrl(fm.author_bio_link) }],

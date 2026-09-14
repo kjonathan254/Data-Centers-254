@@ -1,5 +1,5 @@
 ---
-title: "Digital Realty Launches NBO2: Nairobi's 'Digital Gateway' Claim, Tested"
+title: "Digital Realty Launches NBO2: The 'Gateway' Claim, Tested"
 slug: "digital-realty-nbo2-launch-nairobi"
 meta_description: "Digital Realty formally launched NBO2 in Nairobi on 7 September 2026. We separate what the launch actually delivers — verified capacity, real interconnection, ramping reality — from the gateway rhetoric."
 primary_keyword: "Digital Realty NBO2"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-12"
+updated_date: "2026-09-14"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/nbo2-launch-ribbon-cutting.webp"
@@ -65,6 +65,8 @@ faq:
     answer: "Yes — the whole iColo campus is carrier-neutral, which is the family's core proposition since its 2019 launch of NBO1 as the first carrier-neutral facility in Nairobi. But interconnection at NBO2 is still ramping: PeeringDB showed only 2 networks and 1 exchange registered as of the September 2025 record update."
   - question: "What did Digital Realty launch?"
     answer: "NBO2, the second iColo facility in Karen, Nairobi — formally launched 7 September 2026, operated under Digital Realty following its acquisition of iColo."
+  - question: "What has NBO2 cost to build?"
+    answer: "No building-level capex figure for NBO2 has been published. The closest public marker came at the AmCham 2026 Business Summit, where iColo (now Digital Realty) was reported announcing an $80 million data centre project in Nairobi (The Star, 14 September 2026). Treat that as a project-level pledge, not a verified NBO2 construction cost: DC254 could not tie the figure to a specific building, and the number has not appeared in Digital Realty's own disclosures."
 ---
 
 On 7 September 2026, Digital Realty formally launched NBO2 — the second facility of the iColo campus it inherited when it acquired the Kenyan carrier-neutral operator. The event drew the state's digital establishment: ICT and Digital Economy Principal Secretary John Tanui framed the launch as part of the government's push to make Kenya the region's digital hub, and Digital Realty's own announcement carried the year's most borrowed phrase — Nairobi as East Africa's "digital gateway".

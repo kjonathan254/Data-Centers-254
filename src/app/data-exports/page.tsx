@@ -8,7 +8,7 @@ import {
 import ExportInterestForm from "./ExportInterestClient";
 
 export const metadata: Metadata = {
-  title: "Kenya Data Centre Market Snapshot — Premium Data Export",
+  title: "Kenya Data Centre Market Snapshot: Data Exports",
   description:
     "A quarterly PDF snapshot of Kenya's data centre market: tracked facilities, capacity, power tariffs, connectivity and deal flow. $50, updated every quarter.",
   alternates: { canonical: "/data-exports" },

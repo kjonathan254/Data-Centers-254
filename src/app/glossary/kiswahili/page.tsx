@@ -8,9 +8,9 @@ import KiswahiliQuiz from "./KiswahiliQuiz";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Kamusi ya Kituo cha Data — Misamiato 22 kwa Kiswahili | Data Centre 254",
+  title: "Data Centre in Swahili: Kamusi ya Misamiati 24",
   description:
-    "Pilot ya Kiswahili: misamiato 22 muhimu ya vituo vya data kwa lugha rahisi ya Kiswahili — kutoka kolokesheni na Peering hadi kebo za chini ya bahari na PUE.",
+    "Pilot ya Kiswahili: misamiati 24 muhimu ya vituo vya data kwa lugha rahisi ya Kiswahili, kutoka kolokesheni na peering hadi kebo za chini ya bahari na PUE. \"Data centre\" kwa Kiswahili ni \"Kituo cha Data\".",
   alternates: { canonical: "/glossary/kiswahili" },
 };
 
@@ -43,8 +43,14 @@ export default function KiswahiliGlossaryPage() {
             Miundombinu ya kidijitali ya Kenya inajengwa na Watanzania wa Kenya —
             lakini karibu yote ya vifaa vya kujifunza kuhusu vituo vya data viko
             kwa Kiingereza pekee. Hii ni <strong className="text-foreground">pilot</strong>:
-            misamiato {kiswahiliTerms.length} muhimu, kila moja imeelezwa kwa
+            misamiati {kiswahiliTerms.length} muhimu, kila moja imeelezwa kwa
             Kiswahili rahisi na muktadha wa Kenya.
+          </p>
+          <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
+            Looking for the English phrase? "Data centre" in Swahili is{' '}
+            <strong className="text-foreground">Kituo cha Data</strong> (plural:{' '}
+            <em>vituo vya data</em>). Kamusi iliyo hapa chini inaeleza kila neno
+            la vituo vya data kwa Kiswahili.
           </p>
           <p className="text-sm leading-relaxed text-muted-foreground max-w-2xl mb-10">
             Tunapima kama kuna mahitaji ya maudhui ya Kiswahili kwenye tovuti
@@ -97,7 +103,7 @@ export default function KiswahiliGlossaryPage() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/glossary" className="text-cyan hover:underline">
-                  Kamusi kamili ya Kiingereza — misamiato 18 na muktadha wa Kenya →
+                  Kamusi kamili ya Kiingereza, misamiati 19 na muktadha wa Kenya →
                 </Link>
               </li>
               <li>

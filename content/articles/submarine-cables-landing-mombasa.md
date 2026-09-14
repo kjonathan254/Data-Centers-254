@@ -1,5 +1,5 @@
 ---
-title: "Submarine Cables Landing in Mombasa: East Africa's Internet Gateway"
+title: "Submarine Cables in Mombasa: East Africa's Gateway"
 slug: "submarine-cables-landing-mombasa"
 meta_description: "Mombasa is East Africa's submarine cable hub. At least 8 major undersea cables land here, giving Kenya direct connectivity to Europe, Asia, and the rest of Africa."
 primary_keyword: "submarine cables Mombasa"

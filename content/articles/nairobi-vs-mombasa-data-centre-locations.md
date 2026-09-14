@@ -1,5 +1,5 @@
 ---
-title: "Nairobi vs Mombasa vs Other Towns: Where Should Kenya's Next Data Centre Be Built?"
+title: "Where Should Kenya's Next Data Centre Be Built?"
 slug: "nairobi-vs-mombasa-data-centre-locations"
 meta_description: "Nairobi hosts 80% of Kenya's data centre capacity, but Mombasa, Kisumu, and Konza each offer unique advantages. Analyse the connectivity, power, land, and demand factors shaping data centre site selection in Kenya."
 primary_keyword: "data centre location Kenya"

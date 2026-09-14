@@ -1,6 +1,5 @@
 ---
-title: 'Data Centre Interconnection and Peering in Kenya: KIXP, Cross-Connects and
-  the East African Hub'
+title: "Data Centre Interconnection and Peering in Kenya: KIXP"
 slug: data-centre-interconnection-peering-kenya
 meta_description: Understand data centre interconnection and peering in Kenya — how
   KIXP works, peering vs transit economics, cross-connects within facilities, and

@@ -18,12 +18,12 @@ import RackReportSignup from "@/components/sections/rack-report-signup";
 import { getLatestArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "The Rack Report — Kenya's data-centre industry, in one weekly briefing",
+  title: "The Rack Report: Kenya's Data Centre Weekly",
   description:
     "The Rack Report is the weekly intelligence briefing from DataCentre254: data centres, power, cloud, connectivity, investment and policy in Kenya and East Africa. Free, every Monday.",
   alternates: { canonical: "/rack-report" },
   openGraph: {
-    title: "The Rack Report — Kenya's data-centre industry, in one weekly briefing",
+    title: "The Rack Report: Kenya's Data Centre Weekly",
     description:
       "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
     type: "website",

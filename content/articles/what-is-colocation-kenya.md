@@ -1,5 +1,5 @@
 ---
-title: "What Is Colocation? How to Rent Space in a Kenyan Data Centre"
+title: "What Is Colocation? Renting in a Kenyan Data Centre"
 slug: "what-is-colocation-kenya"
 meta_description: "Colocation lets you rent space, power, cooling, and connectivity in a professional data centre instead of building your own. Learn how colocation works in Kenya, what it costs, and how to choose the right provider."
 primary_keyword: "colocation Kenya"

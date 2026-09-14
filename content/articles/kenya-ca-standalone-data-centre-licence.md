@@ -1,5 +1,5 @@
 ---
-title: "Kenya's CA Opens Consultation on a Standalone Data Centre Licence"
+title: "CA Opens Consultation on a Standalone Data Centre Licence"
 slug: "kenya-ca-standalone-data-centre-licence"
 meta_description: "The Communications Authority of Kenya has opened a 30-day consultation on a standalone Data Centre licence that would move colocation facilities out of the NFP-T2 telecom regime. Fees, timeline, and what it means for operators."
 primary_keyword: "Kenya standalone data centre licence"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
-updated_date: "2026-09-12"
+updated_date: "2026-09-14"
 category: "Policy"
 cluster: "Kenya"
 og_image: "/images/national-assembly-chamber-session.webp"
@@ -57,6 +57,8 @@ faq:
     answer: "Stakeholders have 30 days from 8 September 2026 to review and comment on the proposed framework, putting the comment deadline around 8 October 2026. Submissions go through the Communications Authority's open consultations portal at ca.go.ke."
   - question: "What will the standalone data centre licence cost?"
     answer: "Under the proposal, the application fee would be KES 5,000 with an initial licence fee of KES 100,000. Annual operating fees would be KES 80,000 or 0.4% of annual gross turnover, whichever is higher. Licences would be valid for 15 years. That is a substantial cut on the current NFP-T2 route, whose 15-year licence fee runs to KES 15 million (or 0.4% of gross annual turnover, whichever is higher) — though the Universal Service Fund levy, presently 0.5% of annual gross revenue, still applies on top. Entities already holding NFP or Application Service Provider (ASP) licences could establish and operate data centres without obtaining the separate licence."
+  - question: "Do CBK or SASRA regulations apply when setting up a data centre?"
+    answer: "Not to the facility itself. The Communications Authority is the regulator that licenses the data centre operator, and the draft standalone licence framework sits entirely in that regime. The Central Bank of Kenya (CBK) and the SACCO Societies Regulatory Authority (SASRA) license banks and SACCOs respectively, and their outsourcing and ICT guidelines then reach the data centre indirectly: a regulated institution using your facility must satisfy its supervisor on where data sits, audit access, business continuity and exit rights. The practical effect is contractual rather than licensing: expect CBK- and SASRA-regulated customers to demand audit rights, in-country data location, and stronger SLA commitments than unregulated customers."
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ca-standalone-data-centre-licence"
 ---
 

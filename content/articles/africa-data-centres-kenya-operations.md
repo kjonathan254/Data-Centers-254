@@ -1,5 +1,5 @@
 ---
-title: "Africa Data Centres: Operations in Kenya and Across the Continent"
+title: "Africa Data Centres: Operations in Kenya and Beyond"
 slug: "africa-data-centres-kenya-operations"
 meta_description: "Africa Data Centres, a Cassava Technologies company, operates multiple colocation facilities in Nairobi and Mombasa. Part of a 40+ facility Pan-African network serving enterprise and cloud customers."
 primary_keyword: "Africa Data Centres Kenya"
