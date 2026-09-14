@@ -10,11 +10,11 @@ import Footer from "@/components/footer";
 import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-data";
 
 /**
- * Kenya Data Centre Tracker — the working view of the supply pipeline.
+ * Kenya Data Centre Tracker, the working view of the supply pipeline.
  * Where the directory answers "what exists", the tracker answers "what is
  * moving": staged pipeline board, verified live-load league, dated
  * deliveries, operator scoreboard and a data-confidence watchlist. Fully
- * server-rendered from directory-data.ts — every figure traceable.
+ * server-rendered from directory-data.ts, every figure traceable.
  */
 
 export const metadata: Metadata = {
@@ -25,16 +25,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kenya Data Centre Tracker | Data Centre 254",
     description:
-      "Live capacity, pipeline board, dated deliveries and operator scoreboard — every figure sourced and dated.",
+      "Live capacity, pipeline board, dated deliveries and operator scoreboard, every figure sourced and dated.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "Kenya data centre tracker — Data Centre 254" }],
+    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "Kenya data centre tracker, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kenya Data Centre Tracker",
-    description: "Live capacity, pipeline board, dated deliveries and operator scoreboard — sourced and dated.",
+    description: "Live capacity, pipeline board, dated deliveries and operator scoreboard, sourced and dated.",
     images: ["/images/africa-dc-map.webp"],
   },
 };
@@ -158,7 +158,7 @@ export default function TrackerPage() {
               </h1>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 The directory tells you what exists. This page tells you what is
-                moving — live capacity, the staged pipeline, dated deliveries and
+                moving, live capacity, the staged pipeline, dated deliveries and
                 which operator holds which megawatts. Updated as claims are
                 verified, never as they are issued.
               </p>
@@ -208,8 +208,8 @@ export default function TrackerPage() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Capacity only counts once it serves a server. We stage every
-                facility the way investors read supply — live, building,
-                committed, announced — so working infrastructure and press
+                facility the way investors read supply, live, building,
+                committed, announced, so working infrastructure and press
                 releases never share a column.
               </p>
             </div>
@@ -229,7 +229,7 @@ export default function TrackerPage() {
                         {stage === "Operational" ? "Live" : stage}
                       </p>
                       <p className="mt-2 text-xl font-semibold tabular-nums text-foreground">
-                        {stageMw > 0 ? `${stageMw.toFixed(1)} MW` : "—"}
+                        {stageMw > 0 ? `${stageMw.toFixed(1)} MW` : "-"}
                         <span className="ml-2 text-xs font-normal text-muted-foreground">
                           {inStage.length} facilit{inStage.length === 1 ? "y" : "ies"}
                         </span>
@@ -280,7 +280,7 @@ export default function TrackerPage() {
                 Where the megawatts actually run
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Verified in-service IT load per live facility — designed
+                Verified in-service IT load per live facility, designed
                 capacity is deliberately not counted here, because announced
                 numbers are not electrons.
               </p>
@@ -313,7 +313,7 @@ export default function TrackerPage() {
               </ul>
               <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground/70">
                 Facilities without a published live IT load are shown at zero
-                length, not excluded — the gap is the story.
+                length, not excluded, the gap is the story.
               </p>
             </div>
 
@@ -321,7 +321,7 @@ export default function TrackerPage() {
               <h2 className="h-display-sm text-foreground">Coming online</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Pipeline facilities with an announced target date come first.
-                Where no date has been published, we say so — we do not guess
+                Where no date has been published, we say so, we do not guess
                 delivery windows on a developer&apos;s behalf.
               </p>
 
@@ -384,7 +384,7 @@ export default function TrackerPage() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Designed capacity across all four stages, per operator. Pipeline
-                megawatts are developer-announced and marked as such — sort
+                megawatts are developer-announced and marked as such, sort
                 accordingly.
               </p>
             </div>
@@ -423,7 +423,7 @@ export default function TrackerPage() {
                         </span>
                       </td>
                       <td className="px-4 py-3 text-right font-semibold tabular-nums text-foreground">
-                        {o.mw > 0 ? o.mw.toFixed(1) : "—"}
+                        {o.mw > 0 ? o.mw.toFixed(1) : "-"}
                       </td>
                     </tr>
                   ))}
@@ -440,7 +440,7 @@ export default function TrackerPage() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 The rows we are least sure about, printed in public. Confidence
-                is graded per facility — High means operator-confirmed, Medium
+                is graded per facility, High means operator-confirmed, Medium
                 means single-source, Low means fragmentary. Gaps listed are the
                 fields we are actively chasing.
               </p>
@@ -458,7 +458,7 @@ export default function TrackerPage() {
                     </span>
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    {gaps.length ? `Unverified: ${gaps.join(", ")}.` : "Confidence limited to a single source — corroborating evidence welcome."}
+                    {gaps.length ? `Unverified: ${gaps.join(", ")}.` : "Confidence limited to a single source, corroborating evidence welcome."}
                   </p>
                 </li>
               ))}

@@ -6,7 +6,7 @@ import { CheckCircle2, FileQuestion, Database, Scale, Mail } from "lucide-react"
 export const metadata: Metadata = {
   title: "Editorial Policy",
   description:
-    "How Data Centre 254 researches, labels, and verifies its content — fact labels, sourcing standards, corrections, and editorial independence.",
+    "How Data Centre 254 researches, labels, and verifies its content, fact labels, sourcing standards, corrections, and editorial independence.",
   alternates: { canonical: "/editorial-policy" },
 };
 
@@ -38,7 +38,7 @@ const principles = [
   {
     icon: Database,
     title: "Verification with dates",
-    body: "Directory entries and statistics carry a last-verified date. Kenya's infrastructure changes fast — capacity expands, licences get issued, cables land — so currency is part of accuracy.",
+    body: "Directory entries and statistics carry a last-verified date. Kenya's infrastructure changes fast (capacity expands, licences get issued, cables land) so currency is part of accuracy.",
   },
   {
     icon: FileQuestion,
@@ -62,7 +62,7 @@ export default function EditorialPolicyPage() {
           <h1 className="text-display-sm text-foreground mb-5">Editorial Policy</h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-12">
             Data Centre 254 exists to make Kenya&apos;s digital infrastructure legible.
-            Trust is the product — so here is exactly how our content is researched,
+            Trust is the product, so here is exactly how our content is researched,
             labelled, and corrected.
           </p>
 
@@ -119,7 +119,7 @@ export default function EditorialPolicyPage() {
               <a href="tel:+254711707229" className="text-cyan underline hover:underline">
                 0711 707 229
               </a>
-              . Verified corrections are applied promptly — accuracy beats ego.
+              . Verified corrections are applied promptly, accuracy beats ego.
             </p>
           </div>
         </div>

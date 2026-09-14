@@ -15,7 +15,7 @@ import {
  *   1. ALWAYS persisted via @/lib/newsletter-store (Upstash Redis when
  *      UPSTASH_REDIS_REST_URL/TOKEN are set; in-memory fallback otherwise).
  *      This store keeps the role segmentation the /advertise media kit
- *      reports on — previously a missing RESEND_API_KEY meant the signup
+ *      reports on, previously a missing RESEND_API_KEY meant the signup
  *      was lost entirely (hard 503).
  *   2. When RESEND_API_KEY is configured, the contact is also pushed to the
  *      Resend audience (idempotent on duplicates).
@@ -46,7 +46,7 @@ const VALID_ROLES = new Set([
   'other',
 ]);
 
-/** Never log a full subscriber address — PII belongs out of logs. */
+/** Never log a full subscriber address, PII belongs out of logs. */
 function maskEmail(email: string): string {
   const [local, domain] = email.split("@");
   if (!domain) return "<redacted>";
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
     }
 
-    // Honeypot — bots fill every field. Pretend success, record nothing.
+    // Honeypot, bots fill every field. Pretend success, record nothing.
     if (typeof body.website === 'string' && body.website.trim() !== '') {
       return NextResponse.json({ message: 'Subscribed' }, { status: 201 });
     }
@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Enter a valid email address' }, { status: 400 });
     }
 
-    // 1. Our store of record — role segmentation + persistence.
+    // 1. Our store of record, role segmentation + persistence.
     let created = false;
     try {
       const result = await upsertSubscriber({
@@ -122,7 +122,7 @@ export async function POST(req: NextRequest) {
       created = result.created;
     } catch (storeErr) {
       console.error('[subscribe] store failed:', storeErr);
-      // A store outage is not the visitor's problem — still try Resend.
+      // A store outage is not the visitor's problem, still try Resend.
     }
 
     // 2. Resend audience sync (optional).

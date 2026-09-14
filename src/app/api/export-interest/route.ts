@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Honeypot — pretend success, record nothing.
+    // Honeypot, pretend success, record nothing.
     if (typeof body?.website === 'string' && body.website.trim() !== '') {
       return NextResponse.json({ message: 'Noted' }, { status: 201 });
     }

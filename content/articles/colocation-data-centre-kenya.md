@@ -20,7 +20,7 @@ reading_time: "10 min"
 images:
   - src: "/images/server-rack-patch-cabling.webp"
     alt: "Rack with structured patch cabling in a colocation suite"
-    caption: "Renting racks, not building rooms — how colocation works in Kenya"
+    caption: "Renting racks, not building rooms, how colocation works in Kenya"
     position: hero
   - src: "/images/dc-gpu-cluster-2.webp"
     alt:  "Server racks in a Nairobi data centre hall"
@@ -32,7 +32,7 @@ images:
     position: "infographic"
   - src: "/images/dc-security-camera.webp"
     alt:  "Security cameras monitoring a colocation facility"
-    caption: "Site visits should test security, power history, and support — not just price."
+    caption: "Site visits should test security, power history, and support, not just price."
     position: "inline"
   - src: "/images/dc-biometric-access-2.webp"
     alt: "Data centre security systems"
@@ -76,33 +76,33 @@ Colocation (sometimes shortened to "colo") is an arrangement where a company ren
 
 Understanding [what a data centre is](/articles/what-is-a-data-centre) is the first step to understanding colocation. A data centre is a purpose-built facility designed to house IT equipment with reliable power, cooling, and security. Colocation is one of several ways to use that facility.
 
-This model is distinct from both cloud computing and building your own data centre. In cloud computing (IaaS), you rent virtualised compute resources from providers like AWS, Azure, or local providers. You do not see or touch the physical hardware. In a self-built facility, you own and operate everything — the building, the power systems, the cooling, the security. Colocation sits between these two extremes: you own the gear, someone else runs the building.
+This model is distinct from both cloud computing and building your own data centre. In cloud computing (IaaS), you rent virtualised compute resources from providers like AWS, Azure, or local providers. You do not see or touch the physical hardware. In a self-built facility, you own and operate everything, the building, the power systems, the cooling, the security. Colocation sits between these two extremes: you own the gear, someone else runs the building.
 
 The term "carrier-neutral" comes up frequently in colocation discussions. A carrier-neutral facility allows you to connect to any internet service provider, cloud platform, or network carrier you choose. You are not locked into the operator's preferred connectivity. This is a critical distinction in the Kenyan market, where connectivity choice directly affects performance and cost.
 
 ### How Colocation Works in Practice
 
-The basic unit of colocation is the rack — a standard 42U steel enclosure that houses your servers, switches, and storage devices. Providers typically offer space in fractions: a quarter-rack (approximately 10U of space), a half-rack (approximately 20U), or a full rack. Larger deployments may take entire caged areas or private suites within the facility.
+The basic unit of colocation is the rack, a standard 42U steel enclosure that houses your servers, switches, and storage devices. Providers typically offer space in fractions: a quarter-rack (approximately 10U of space), a half-rack (approximately 20U), or a full rack. Larger deployments may take entire caged areas or private suites within the facility.
 
 When you sign a colocation agreement, you ship your servers to the facility or have your team install them. The provider racks the equipment, connects power cables to their distribution units, and runs network cables from your equipment to a meet-me room where your chosen ISP or carrier terminates their circuits. From that point, your systems are live in a professional facility with redundant power, cooling, and physical security.
 
-You retain full access to your equipment. Most facilities allow 24/7 physical access with appropriate authorisation. For tasks that do not require your presence — cable swaps, hard drive replacements, server reboots — the provider's remote hands team acts on your instructions.
+You retain full access to your equipment. Most facilities allow 24/7 physical access with appropriate authorisation. For tasks that do not require your presence (cable swaps, hard drive replacements, server reboots) the provider's remote hands team acts on your instructions.
 
 ## Why Companies Choose Colocation Over Building Their Own
 
-Building a data centre in Nairobi is a capital-intensive undertaking that few organisations can justify. A modest Tier III facility with 1 MW of IT load capacity costs upwards of USD 15–20 million to construct, before factoring in land acquisition in Nairobi's industrial zones. Add ongoing operational costs — dedicated facilities staff, power utility contracts, generator fuel, insurance, compliance — and the total cost of ownership becomes prohibitive for all but the largest enterprises.
+Building a data centre in Nairobi is a capital-intensive undertaking that few organisations can justify. A modest Tier III facility with 1 MW of IT load capacity costs upwards of USD 15–20 million to construct, before factoring in land acquisition in Nairobi's industrial zones. Add ongoing operational costs (dedicated facilities staff, power utility contracts, generator fuel, insurance, compliance) and the total cost of ownership becomes prohibitive for all but the largest enterprises.
 
 Colocation eliminates most of this. The provider has already absorbed the construction and operational capital. You pay a monthly or annual fee for the space and resources you actually use.
 
 ### Capital expenditure versus operational expenditure
 
-This is the primary financial driver. Building your own facility requires significant upfront capital expenditure (CapEx): land, construction, electrical infrastructure, cooling systems, fire suppression, security systems, and compliance certifications. Colocation converts this to operational expenditure (OpEx) — a predictable monthly cost that scales with your needs.
+This is the primary financial driver. Building your own facility requires significant upfront capital expenditure (CapEx): land, construction, electrical infrastructure, cooling systems, fire suppression, security systems, and compliance certifications. Colocation converts this to operational expenditure (OpEx), a predictable monthly cost that scales with your needs.
 
 For a Kenyan bank needing to house 50 servers, the choice between spending KES 500 million on a private facility or KES 5–10 million per year on colocation space is straightforward. The bank's capital is better deployed in its core business.
 
 ### Reliability and redundancy
 
-A properly built colocation facility provides redundancy that is expensive to replicate in-house. Tier III facilities, which represent the standard for Kenyan colocation, offer N+1 redundancy on power and cooling — meaning any single component can fail without affecting operations. This includes dual utility power feeds, diesel generators with automatic transfer switches, UPS systems, and precision air conditioning units.
+A properly built colocation facility provides redundancy that is expensive to replicate in-house. Tier III facilities, which represent the standard for Kenyan colocation, offer N+1 redundancy on power and cooling, meaning any single component can fail without affecting operations. This includes dual utility power feeds, diesel generators with automatic transfer switches, UPS systems, and precision air conditioning units.
 
 Building this level of redundancy into a private facility requires specialised engineering and ongoing maintenance that most organisations lack the expertise to manage.
 
@@ -120,7 +120,7 @@ A company building its own facility would need to contract and manage these conn
 
 The Central Bank of Kenya (CBK) requires financial institutions to maintain data within the country. The National Treasury has issued similar guidance for government data. Colocation provides a straightforward mechanism for compliance: your servers are physically in Kenya, in a known facility, under your control.
 
-This is a significant advantage over public cloud, where data residency depends on the provider's infrastructure decisions. With colocation, there is no ambiguity — your hardware is in your rack, in your chosen facility.
+This is a significant advantage over public cloud, where data residency depends on the provider's infrastructure decisions. With colocation, there is no ambiguity, your hardware is in your rack, in your chosen facility.
 
 ### Scalability
 
@@ -128,7 +128,7 @@ Colocation scales with your needs. Start with a quarter-rack. Expand to a half-r
 
 ### Speed to deployment
 
-Building a data centre from scratch takes 18–36 months in Kenya, factoring in land acquisition, regulatory approvals, construction, and commissioning. Provisioning colocation space takes days to weeks, depending on the provider's current availability. For organisations that need to deploy infrastructure quickly — whether responding to a new regulation, launching a service, or recovering from a facility failure — this time difference is decisive.
+Building a data centre from scratch takes 18–36 months in Kenya, factoring in land acquisition, regulatory approvals, construction, and commissioning. Provisioning colocation space takes days to weeks, depending on the provider's current availability. For organisations that need to deploy infrastructure quickly (whether responding to a new regulation, launching a service, or recovering from a facility failure) this time difference is decisive.
 
 ### Access to specialised expertise
 
@@ -142,7 +142,7 @@ Kenya's colocation market is served by several providers, each with different st
 
 iXAfrica operates NBOX1.1, a purpose-built Tier III data centre located off Mombasa Road in Nairobi. The facility offers carrier-neutral colocation with connectivity to multiple submarine cable systems, ISPs, and the KIXP. NBOX1.1 is the first facility in East Africa to achieve the Uptime Institute Tier III Design certification, giving it a credibility advantage in enterprise procurement processes where independent verification matters.
 
-The facility has capacity for significant expansion, with plans for additional data halls. This is relevant for organisations evaluating long-term scalability — a provider with expansion plans is more likely to accommodate your growth than one operating at or near capacity.
+The facility has capacity for significant expansion, with plans for additional data halls. This is relevant for organisations evaluating long-term scalability, a provider with expansion plans is more likely to accommodate your growth than one operating at or near capacity.
 
 iXAfrica's colocation offering includes full and half rack options, with power allocations ranging from 2 kW to 10 kW per rack. The facility provides 24/7 remote hands support, biometric access control, and a Network Operations Centre (NOC). Their pricing is competitive for enterprise customers, and their carrier-neutral approach makes them a popular choice for organisations that need connectivity flexibility.
 
@@ -158,7 +158,7 @@ They also operate a facility in Mombasa, positioned near the submarine cable lan
 
 ### Telecom Operator Facilities
 
-Safaricom, Airtel, and the now-merged Telkom Kenya have historically operated their own data centre facilities. While primarily built for internal use, some of these operators offer limited colocation or hosting services to enterprise customers. These arrangements tend to be less carrier-neutral — connectivity is typically skewed toward the operator's own network.
+Safaricom, Airtel, and the now-merged Telkom Kenya have historically operated their own data centre facilities. While primarily built for internal use, some of these operators offer limited colocation or hosting services to enterprise customers. These arrangements tend to be less carrier-neutral, connectivity is typically skewed toward the operator's own network.
 
 ### Smaller and Emerging Providers
 
@@ -199,7 +199,7 @@ The table below compares the three primary approaches to hosting IT infrastructu
 | **Staff requirements** | Remote hands available | Minimal | Dedicated facilities team |
 | **Best suited for** | Regulated enterprises, banks, telcos | Startups, variable workloads | Very large enterprises, government |
 
-Cloud computing offers unmatched convenience and elasticity, making it ideal for startups and organisations with variable workloads. But at sustained scale — hundreds of servers running 24/7 — colocation is almost always more cost-effective than cloud. Banks, mobile operators, and large enterprises with predictable, always-on workloads typically find colocation delivers better performance per shilling spent.
+Cloud computing offers unmatched convenience and elasticity, making it ideal for startups and organisations with variable workloads. But at sustained scale (hundreds of servers running 24/7) colocation is almost always more cost-effective than cloud. Banks, mobile operators, and large enterprises with predictable, always-on workloads typically find colocation delivers better performance per shilling spent.
 
 The hybrid model is increasingly common in Kenya. An enterprise might run its core banking platform on owned servers in colocation (for control, compliance, and cost efficiency) while using AWS or Azure for development environments, disaster recovery, and seasonal capacity spikes. This approach gets the benefits of both models without the drawbacks of either alone.
 
@@ -209,11 +209,11 @@ Choosing a colocation provider is a long-term commitment. Relocating servers bet
 
 ### Facility tier and certification
 
-Insist on a minimum of Tier III design, preferably with Uptime Institute certification. This guarantees N+1 redundancy on power and cooling, and concurrent maintainability — meaning the provider can perform maintenance on any single component without shutting down your servers. Ask to see the certification documentation. Several Kenyan facilities claim to be "Tier III" without independent verification.
+Insist on a minimum of Tier III design, preferably with Uptime Institute certification. This guarantees N+1 redundancy on power and cooling, and concurrent maintainability, meaning the provider can perform maintenance on any single component without shutting down your servers. Ask to see the certification documentation. Several Kenyan facilities claim to be "Tier III" without independent verification.
 
 ### Power capacity and pricing
 
-Understand exactly how power is billed. Some providers include a fixed power allocation per rack (e.g., 4 kW per rack) in the monthly fee, with additional charges for overage. Others bill power separately based on metered consumption. Clarify whether the quoted price includes utility power, generator backup, and UPS — and what happens during extended outages (how much generator fuel is stored on-site and how long it can sustain full load).
+Understand exactly how power is billed. Some providers include a fixed power allocation per rack (e.g., 4 kW per rack) in the monthly fee, with additional charges for overage. Others bill power separately based on metered consumption. Clarify whether the quoted price includes utility power, generator backup, and UPS, and what happens during extended outages (how much generator fuel is stored on-site and how long it can sustain full load).
 
 Kenya's [power infrastructure](/articles/kenya-power-infrastructure-data-centres) affects colocation operations directly. Kenya Power (KPLC) provides utility power, but outages remain common enough that generator runtime matters. Ask providers about their diesel storage capacity and fuel supply agreements. A facility that can run on generators for 48 hours without resupply is significantly more resilient than one designed for 12 hours.
 
@@ -221,7 +221,7 @@ For high-density deployments (AI workloads, GPU clusters), confirm the facility 
 
 ### Connectivity and carrier neutrality
 
-A carrier-neutral facility is non-negotiable for most enterprises. Verify that you can connect to your preferred ISPs, cloud providers, and the KIXP without restrictions. Ask about cross-connect fees — some providers charge significant one-time or monthly fees for each connection, which can add up quickly if you need connections to multiple providers.
+A carrier-neutral facility is non-negotiable for most enterprises. Verify that you can connect to your preferred ISPs, cloud providers, and the KIXP without restrictions. Ask about cross-connect fees, some providers charge significant one-time or monthly fees for each connection, which can add up quickly if you need connections to multiple providers.
 
 Confirm the facility's proximity to [submarine cable landing stations](/articles/submarine-cables-landing-mombasa) and the diversity of its fibre entry points. A facility with a single fibre path is vulnerable to a single cut.
 
@@ -240,7 +240,7 @@ For financial institutions and government agencies, physical security is a forma
 
 ### Support and remote hands
 
-Remote hands service — the provider's on-site staff performing physical tasks on your equipment at your direction — is essential for organisations that do not maintain permanent staff at the facility. Clarify the scope of remote hands (is it included in the base price or billed hourly?), response times, and the technical competency of the on-site team. Tasks like server reboots, cable management, and hardware replacement should be routine for the provider's staff.
+Remote hands service (the provider's on-site staff performing physical tasks on your equipment at your direction) is essential for organisations that do not maintain permanent staff at the facility. Clarify the scope of remote hands (is it included in the base price or billed hourly?), response times, and the technical competency of the on-site team. Tasks like server reboots, cable management, and hardware replacement should be routine for the provider's staff.
 
 ### Scalability and contract flexibility
 
@@ -252,7 +252,7 @@ If your organisation is subject to regulatory requirements (PCI-DSS for payment 
 
 ### Location and accessibility
 
-Most Kenyan colocation facilities are concentrated along Mombasa Road in Nairobi's Industrial Area and surrounding zones. This location is not accidental — it sits on the primary fibre route from Mombasa and offers proximity to other technology infrastructure. However, the Mombasa Road corridor is also prone to traffic congestion and, in some sections, flooding during heavy rains.
+Most Kenyan colocation facilities are concentrated along Mombasa Road in Nairobi's Industrial Area and surrounding zones. This location is not accidental, it sits on the primary fibre route from Mombasa and offers proximity to other technology infrastructure. However, the Mombasa Road corridor is also prone to traffic congestion and, in some sections, flooding during heavy rains.
 
 Consider how your team will reach the facility. If your engineers need to visit regularly for hardware installation or maintenance, a facility 45 minutes from your office versus 15 minutes has real operational implications. Evaluate road access during peak hours and in adverse weather. Some facilities offer shuttle services or are located in business parks with better access infrastructure.
 
@@ -282,7 +282,7 @@ Kenya's position as a regional technology hub depends on reliable digital infras
 
 The [licensing framework for data centres in Kenya](/articles/kenya-data-centre-licensing-framework) is evolving to address the growing importance of these facilities. Organisations selecting a colocation provider should verify that the operator holds all required licences from the Communications Authority of Kenya and relevant county government approvals.
 
-The growing demand for colocation reflects broader trends. Kenya's fintech sector continues to expand, with mobile lending platforms, payment gateways, and digital banking services all requiring local server infrastructure. The government's push for digital services creates demand for secure, compliant hosting environments. Kenya's power infrastructure, while improving, still makes self-generation and backup power a necessity — colocation providers absorb this complexity and cost.
+The growing demand for colocation reflects broader trends. Kenya's fintech sector continues to expand, with mobile lending platforms, payment gateways, and digital banking services all requiring local server infrastructure. The government's push for digital services creates demand for secure, compliant hosting environments. Kenya's power infrastructure, while improving, still makes self-generation and backup power a necessity, colocation providers absorb this complexity and cost.
 
 The arrival of hyperscale cloud providers in Nairobi (through on-ramps at colocation facilities) creates new hybrid deployment models where organisations use colocation for core systems and cloud for burst capacity. This hybrid approach is becoming the default architecture for mid-to-large enterprises in Kenya: keep regulated and high-performance workloads on owned hardware in colocation, and use cloud for development, testing, and variable workloads.
 

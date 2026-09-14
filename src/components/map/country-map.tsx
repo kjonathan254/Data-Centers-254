@@ -93,7 +93,7 @@ function CountryMapInner({
         <path key={s.id} d={s.d} fill="oklch(0.78 0.14 195 / 0.035)" stroke="oklch(0.78 0.14 195 / 0.16)" strokeWidth={1} />
       ))}
 
-      {/* Kenya — hero */}
+      {/* Kenya, hero */}
       {COUNTRY_SHAPES.filter((s) => s.focus).map((s) => (
         <path key={s.id} d={s.d} fill="oklch(0.78 0.14 195 / 0.10)" stroke={CYAN} strokeWidth={2.2} strokeLinejoin="round" />
       ))}
@@ -156,7 +156,7 @@ function CountryMapInner({
         );
       })}
 
-      {/* cable labels at offshore ends — rows pre-spaced to avoid collisions */}
+      {/* cable labels at offshore ends, rows pre-spaced to avoid collisions */}
       {SUBSEA_CABLES.map((c) => {
         const [lat, lng] = c.waypoints[c.waypoints.length - 1];
         const p = proj(lat, lng);
@@ -177,7 +177,7 @@ function CountryMapInner({
         );
       })}
 
-      {/* landing station — Nyali, Mombasa */}
+      {/* landing station, Nyali, Mombasa */}
       {(() => {
         const ls = proj(-4.04, 39.715);
         const dim = dimmed.has("datacenter");
@@ -190,14 +190,14 @@ function CountryMapInner({
         );
       })()}
 
-      {/* PIDA / African Infrastructure Database layer — violet diamonds.
+      {/* PIDA / African Infrastructure Database layer, violet diamonds.
           Continental project-registry entries (pipeline, not built facilities). */}
       {pidaMapped.map((p) => {
         const { x, y } = proj(p.lat as number, p.lng as number);
         const isHub = p.sector === "ICT";
         return (
           <g key={`pida-${p.id}`} opacity={dimmed.has("datacenter") ? 0.2 : 0.95}>
-            <title>{`${p.name} — PIDA ${p.pidaCode ?? "(un-coded)"} · ${p.status}${p.capexM ? ` · US$${p.capexM}m` : ""}`}</title>
+            <title>{`${p.name}, PIDA ${p.pidaCode ?? "(un-coded)"} · ${p.status}${p.capexM ? ` · US$${p.capexM}m` : ""}`}</title>
             <path
               d={`M${x},${y - (isHub ? 8 : 5.5)} L${x + (isHub ? 8 : 5.5)},${y} L${x},${y + (isHub ? 8 : 5.5)} L${x - (isHub ? 8 : 5.5)},${y} Z`}
               fill={PIDA_VIOLET}
@@ -239,7 +239,7 @@ function CountryMapInner({
         </path>
       </g>
 
-      {/* Mombasa cluster — click to zoom */}
+      {/* Mombasa cluster, click to zoom */}
       <g className="map-cluster cursor-pointer" onClick={onOpenMombasa} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
         <circle cx={msa.x} cy={msa.y} r={17} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2} filter="url(#clusterGlow)" />
         <circle cx={msa.x} cy={msa.y} r={17} fill="none" stroke={CYAN} strokeOpacity={0.4} strokeWidth={1}>
@@ -251,7 +251,7 @@ function CountryMapInner({
         <text x={msa.x + 26} y={msa.y + 18} fontSize={18} fill="oklch(0.93 0.01 260 / 0.55)">{msaCount} DC · {liveCables} cables</text>
       </g>
 
-      {/* Nairobi cluster — click to zoom */}
+      {/* Nairobi cluster, click to zoom */}
       <g className="map-cluster cursor-pointer" onClick={onOpenNairobi} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2.4} filter="url(#clusterGlow)" />
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="none" stroke={CYAN} strokeOpacity={0.45} strokeWidth={1.2}>

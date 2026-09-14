@@ -79,7 +79,7 @@ export const metadata: Metadata = {
       url: "/images/og-default.png",
       width: 1152,
       height: 864,
-      alt: "Data Centre 254 — Understanding Kenya's Digital Infrastructure",
+      alt: "Data Centre 254, Understanding Kenya's Digital Infrastructure",
     }],
   },
   twitter: {

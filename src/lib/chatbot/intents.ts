@@ -6,7 +6,7 @@ import { glossaryTerms } from "@/lib/glossary-data";
 import { BOT_IDENTITY, STARTER_QUESTIONS, RESCUE_SUGGESTIONS } from "@/lib/chatbot/identity";
 
 /**
- * Intent layer — turns a question into an answer drawn from the same
+ * Intent layer, turns a question into an answer drawn from the same
  * directory-data.ts the site renders. Nothing is invented: if a figure is
  * not in the dataset, the reply says so. Intents run in order; first match wins.
  */
@@ -164,11 +164,11 @@ function profileCard(f: Facility): string {
     f.aiReady ? "AI-ready" : null,
   ].filter(Boolean);
   const where = [f.address, f.city].filter(Boolean).join(", ");
-  return `${bits} — ${caps.join(", ") || "with capacity details not yet disclosed"}. You'll find it in ${where}. Figures verified ${lastVerified}.`;
+  return `${bits}, ${caps.join(", ") || "with capacity details not yet disclosed"}. You'll find it in ${where}. Figures verified ${lastVerified}.`;
 }
 
 // ─── Definitions (glossary-grounded) ─────────────────────────────────────────
-// "What is a data centre?", "define colocation", "what does PUE mean" —
+// "What is a data centre?", "define colocation", "what does PUE mean",
 // definitional phrasing routes to the editorial glossary instead of BM25,
 // where generic tokens like "data centre" would match half the corpus.
 
@@ -220,7 +220,7 @@ function lookupDefinition(question: string) {
   if (!capture || capture.length > 80) return null;
   for (const { entry, alias } of GLOSSARY_LOOKUPS) {
     // The capture must START with the glossary term (or be a shorthand for
-    // it) — so "largest data centre" can never be read as a definition.
+    // it), so "largest data centre" can never be read as a definition.
     if (
       capture === alias ||
       capture.startsWith(`${alias} `) ||
@@ -258,7 +258,7 @@ const INTENTS: Intent[] = [
     name: "capability",
     test: (q) => /(what can you (do|tell|answer)|how can you help|what do you know|how do you work|capabilities|what topics)/.test(q),
     run: () => ok({
-      reply: "I answer from DC254's verified dataset and editorial library: live capacity and the supply pipeline, every tracked facility and operator, comparisons, submarine cables, AI readiness, green power, and definitions of the jargon. For deep analysis I'll point you to the right article — I don't guess numbers I can't verify.",
+      reply: "I answer from DC254's verified dataset and editorial library: live capacity and the supply pipeline, every tracked facility and operator, comparisons, submarine cables, AI readiness, green power, and definitions of the jargon. For deep analysis I'll point you to the right article, I don't guess numbers I can't verify.",
       citations: [
         { label: "The directory", href: "/directory" },
         { label: "How we verify", href: "/methodology" },
@@ -271,7 +271,7 @@ const INTENTS: Intent[] = [
     name: "thanks",
     test: (q) => /(thank|asante|shukran|appreciate|great job|nice work|good bot)/.test(q),
     run: () => ok({
-      reply: "Karibu! That's what I'm here for — ask me anything else about Kenya's digital infrastructure.",
+      reply: "Karibu! That's what I'm here for, ask me anything else about Kenya's digital infrastructure.",
       citations: [],
       suggestions: ["What's under construction right now?", "Which data centres are AI-ready?"],
       intent: "thanks",
@@ -289,7 +289,7 @@ const INTENTS: Intent[] = [
       return ok({
         reply: entry.definition,
         citations: [
-          { label: `${entry.term} — the DC254 glossary`, href: glossaryHref(entry.term) },
+          { label: `${entry.term}, the DC254 glossary`, href: glossaryHref(entry.term) },
           ...(entry.relatedArticles ?? []).slice(0, 1).map((a) => ({ label: a.text, href: a.href })),
         ],
         suggestions: related.length ? related : ["How many data centres does Kenya have?"],
@@ -303,7 +303,7 @@ const INTENTS: Intent[] = [
     name: "dataset",
     test: (q) => /(download|csv|json|\bapi\b|export|spreadsheet|excel|dataset)/.test(q),
     run: () => ok({
-      reply: "The whole directory is free to download and cite — no signup wall. Grab the CSV for spreadsheets, or query the JSON API directly; both carry the source and verification fields. Attribution to DC254 keeps the project going.",
+      reply: "The whole directory is free to download and cite, no signup wall. Grab the CSV for spreadsheets, or query the JSON API directly; both carry the source and verification fields. Attribution to DC254 keeps the project going.",
       citations: [
         { label: "CSV dataset", href: "/api/directory/csv" },
         { label: "JSON API", href: "/api/directory" },
@@ -343,7 +343,7 @@ const INTENTS: Intent[] = [
           .sort((x, y) => (y.totalCapacityMw ?? 0) - (x.totalCapacityMw ?? 0))[0];
         if (peers) {
           return ok({
-            reply: `Give me a second facility to compare with ${f.name} — or jump straight into the side-by-side view with ${peers.name}, its closest peer in ${f.city}.`,
+            reply: `Give me a second facility to compare with ${f.name}, or jump straight into the side-by-side view with ${peers.name}, its closest peer in ${f.city}.`,
             citations: [
               { label: `Compare ${f.name} vs ${peers.name}`, href: `/directory/compare?ids=${encodeURIComponent(`${f.slug},${peers.slug}`)}` },
             ],
@@ -353,7 +353,7 @@ const INTENTS: Intent[] = [
         }
       }
       return ok({
-        reply: "I can set any of the tracked facilities side by side — up to four at a time, spec by spec. Name two (for example, iXAfrica NBOX1 and Africa Data Centres Nairobi 1), or open the comparison tool and pick from the searchable list.",
+        reply: "I can set any of the tracked facilities side by side, up to four at a time, spec by spec. Name two (for example, iXAfrica NBOX1 and Africa Data Centres Nairobi 1), or open the comparison tool and pick from the searchable list.",
         citations: [{ label: "Open the comparison tool", href: "/directory/compare" }],
         suggestions: ["Compare iXAfrica NBOX1 and ADC Nairobi 1", "Which is the largest data centre?"],
         intent: "compare",
@@ -372,7 +372,7 @@ const INTENTS: Intent[] = [
       if (!top.length) return null;
       const pipelineBiggest = [...pipeline].sort((a, b) => (b.totalCapacityMw ?? 0) - (a.totalCapacityMw ?? 0))[0];
       return ok({
-        reply: `By live IT load, ${top[0].name} leads${e.city ? ` in ${e.city}` : " the market"} at ${top[0].itLoadMw} MW — followed by ${top[1] ? `${top[1].name} (${top[1].itLoadMw ?? "n/a"} MW)` : ""}${top[2] ? ` and ${top[2].name} (${top[2].itLoadMw ?? "n/a"} MW)` : ""}. On the horizon, ${pipelineBiggest?.name ?? "the Microsoft–G42 project"} dwarfs everything built so far at ${mw(pipelineBiggest?.totalCapacityMw ?? null)} announced — but announced is not built.`,
+        reply: `By live IT load, ${top[0].name} leads${e.city ? ` in ${e.city}` : " the market"} at ${top[0].itLoadMw} MW, followed by ${top[1] ? `${top[1].name} (${top[1].itLoadMw ?? "n/a"} MW)` : ""}${top[2] ? ` and ${top[2].name} (${top[2].itLoadMw ?? "n/a"} MW)` : ""}. On the horizon, ${pipelineBiggest?.name ?? "the Microsoft–G42 project"} dwarfs everything built so far at ${mw(pipelineBiggest?.totalCapacityMw ?? null)} announced, but announced is not built.`,
         citations: [
           { label: top[0].name, href: `/directory/${top[0].slug}` },
           { label: "See the pipeline", href: "/tracker" },
@@ -390,7 +390,7 @@ const INTENTS: Intent[] = [
       const wantsCapacity = /(mw|capacity|power|megawatt)/.test(q);
       if (wantsCapacity) return null; // let the capacity intent take it
       return {
-        reply: "That's the one thing I won't fake: colocation pricing isn't part of the verified dataset yet — operators quote it privately per deal, and published rack rates are rarely comparable. What I can tell you is where the supply is and how it's staged. For commercial quotes, the operators themselves are the source — or write to the DC254 team and they'll point you right.",
+        reply: "That's the one thing I won't fake: colocation pricing isn't part of the verified dataset yet, operators quote it privately per deal, and published rack rates are rarely comparable. What I can tell you is where the supply is and how it's staged. For commercial quotes, the operators themselves are the source, or write to the DC254 team and they'll point you right.",
         citations: [
           { label: "Browse operators", href: "/directory" },
           { label: "Contact DC254", href: "/contact" },
@@ -410,7 +410,7 @@ const INTENTS: Intent[] = [
         const inCity = facilities.filter((f) => f.city === e.city);
         const live = inCity.filter((f) => f.status === "Operational").length;
         return ok({
-          reply: `${e.city} accounts for ${inCity.length} of the ${facilities.length} tracked facilities — ${live} of them operational. Nairobi is decisively the hub: its grid, fibre density and submarine-cable via-Mombasa connectivity concentrate demand there, while Mombasa's facility sits next to the cable landing stations.`,
+          reply: `${e.city} accounts for ${inCity.length} of the ${facilities.length} tracked facilities, ${live} of them operational. Nairobi is decisively the hub: its grid, fibre density and submarine-cable via-Mombasa connectivity concentrate demand there, while Mombasa's facility sits next to the cable landing stations.`,
           citations: [{ label: "See them on the map", href: "/infrastructure/map" }],
           suggestions: ["Which is the largest data centre?", "What's under construction right now?"],
           intent: "count",
@@ -418,7 +418,7 @@ const INTENTS: Intent[] = [
         });
       }
       return ok({
-        reply: `DC254 tracks ${facilities.length} data centre facilities across Kenya — ${snap.stages[0].count} operational, and the rest moving through the pipeline: ${pipeline.map((f) => f.status.toLowerCase()).join(", ") === "under construction, committed, early stage" ? "under construction, committed and early-stage projects" : pipeline.map((f) => f.name).join(", ")}. The count spans commercial colocation, telecom-owned and government installations.`,
+        reply: `DC254 tracks ${facilities.length} data centre facilities across Kenya, ${snap.stages[0].count} operational, and the rest moving through the pipeline: ${pipeline.map((f) => f.status.toLowerCase()).join(", ") === "under construction, committed, early stage" ? "under construction, committed and early-stage projects" : pipeline.map((f) => f.name).join(", ")}. The count spans commercial colocation, telecom-owned and government installations.`,
         citations: [
           { label: "Browse the directory", href: "/directory" },
           { label: "Track the pipeline", href: "/tracker" },
@@ -437,7 +437,7 @@ const INTENTS: Intent[] = [
       const liveIt = snap.liveItLoadMw;
       const pipelineMw = pipeline.reduce((s, f) => s + (f.totalCapacityMw ?? 0), 0);
       return ok({
-        reply: `Kenya's operational fleet represents about ${liveDesigned.toFixed(1)} MW of built, designed capacity — of which ${liveIt.toFixed(1)} MW is verified in-service IT load. The pipeline adds roughly ${pipelineMw.toFixed(0)} MW announced across under-construction, committed and early-stage projects. That distinction matters: announced figures are developer claims, and we don't let them masquerade as electrons.`,
+        reply: `Kenya's operational fleet represents about ${liveDesigned.toFixed(1)} MW of built, designed capacity, of which ${liveIt.toFixed(1)} MW is verified in-service IT load. The pipeline adds roughly ${pipelineMw.toFixed(0)} MW announced across under-construction, committed and early-stage projects. That distinction matters: announced figures are developer claims, and we don't let them masquerade as electrons.`,
         citations: [
           { label: "The market snapshot", href: "/directory" },
           { label: "How we count", href: "/methodology" },
@@ -454,7 +454,7 @@ const INTENTS: Intent[] = [
     run: () => {
       const lines = pipeline.map((f) => `${f.name} (${f.operator.name}, ${mw(f.totalCapacityMw ?? f.itLoadMw)}, ${f.status.toLowerCase()})`);
       return ok({
-        reply: `The pipeline is where the market's growth lives: ${lines.join("; ")}. All up, roughly ${pipeline.reduce((s, f) => s + (f.totalCapacityMw ?? 0), 0).toFixed(0)} MW of announced capacity — the Microsoft–G42 campus alone would more than double Kenya's built base. Remember the staged reality: announced → committed → under construction → live. Only the last one serves a server.`,
+        reply: `The pipeline is where the market's growth lives: ${lines.join("; ")}. All up, roughly ${pipeline.reduce((s, f) => s + (f.totalCapacityMw ?? 0), 0).toFixed(0)} MW of announced capacity, the Microsoft–G42 campus alone would more than double Kenya's built base. Remember the staged reality: announced → committed → under construction → live. Only the last one serves a server.`,
         citations: [
           { label: "Track the pipeline", href: "/tracker" },
           ...(pipeline[0] ? [{ label: pipeline[0].name, href: `/directory/${pipeline[0].slug}` }] : []),
@@ -474,7 +474,7 @@ const INTENTS: Intent[] = [
         .sort((a, b) => Number(b.openedDate) - Number(a.openedDate));
       const top = dated.slice(0, 3).map((f) => `${f.name} (${f.openedDate})`);
       return ok({
-        reply: `The newest verified openings: ${top.join(", ")}. iXAfrica NBOX1 — opened 2024 — is the flagship of that wave and East Africa's first hyperscale, AI-ready facility. Opened years across the fleet run from 2010 (Telkom Kenya) to 2024, which tells you how young this market is.`,
+        reply: `The newest verified openings: ${top.join(", ")}. iXAfrica NBOX1 (opened 2024) is the flagship of that wave and East Africa's first hyperscale, AI-ready facility. Opened years across the fleet run from 2010 (Telkom Kenya) to 2024, which tells you how young this market is.`,
         citations: [{ label: "Browse the directory", href: "/directory" }],
         suggestions: ["What's under construction right now?", "Which is the largest data centre?"],
         intent: "newest",
@@ -489,7 +489,7 @@ const INTENTS: Intent[] = [
       const list = facilities.filter((f) => f.aiReady);
       const named = list.filter((f) => f.status === "Operational").slice(0, 4).map((f) => f.name);
       return ok({
-        reply: `${list.length} of the ${facilities.length} tracked facilities are flagged AI-ready — high-density racks, liquid-cooling readiness or GPU-capable power envelopes. The operational AI-ready set includes ${named.join(", ")}, with the NBOX1.2 build and the Microsoft–G42 campus designed explicitly for AI-scale density. AI workloads pull far more power per rack than classic cloud hosting, which is exactly why Kenya's renewable-heavy grid keeps coming up in the pitch.`,
+        reply: `${list.length} of the ${facilities.length} tracked facilities are flagged AI-ready, high-density racks, liquid-cooling readiness or GPU-capable power envelopes. The operational AI-ready set includes ${named.join(", ")}, with the NBOX1.2 build and the Microsoft–G42 campus designed explicitly for AI-scale density. AI workloads pull far more power per rack than classic cloud hosting, which is exactly why Kenya's renewable-heavy grid keeps coming up in the pitch.`,
         citations: [
           { label: "Filter AI-ready facilities", href: "/directory" },
           { label: "The AI cluster", href: "/ai" },
@@ -507,7 +507,7 @@ const INTENTS: Intent[] = [
       const live = SUBSEA_CABLES.filter((c) => c.live);
       const totalTbps = live.reduce((s, c) => s + (c.designTbps ?? 0), 0);
       return ok({
-        reply: `Six submarine cable systems are live at the Mombasa landing station — ${live.map((c) => `${c.name} (${c.designTbps ?? "?"} Tbps)`).join(", ")} — roughly ${totalTbps.toFixed(1)} Tbps of designed capacity. Meta's Daraja is in development. Every one of them lands at the same shoreline, which is Kenya's strength and its single point of failure in one sentence.`,
+        reply: `Six submarine cable systems are live at the Mombasa landing station, ${live.map((c) => `${c.name} (${c.designTbps ?? "?"} Tbps)`).join(", ")}, roughly ${totalTbps.toFixed(1)} Tbps of designed capacity. Meta's Daraja is in development. Every one of them lands at the same shoreline, which is Kenya's strength and its single point of failure in one sentence.`,
         citations: [
           { label: "See the cable map", href: "/infrastructure/map" },
           { label: "Fibre & connectivity articles", href: "/internet" },
@@ -523,7 +523,7 @@ const INTENTS: Intent[] = [
     run: () => {
       const withClaims = operational.filter((f) => f.renewableClaim).slice(0, 3);
       return ok({
-        reply: `Kenya's grid is one of the greenest on Earth — roughly 90% renewable, anchored by Rift Valley geothermal with hydro and wind behind it. That means data centres here run genuinely low-carbon power without certificate accounting. ${withClaims.length ? `Operators lean into it: ${withClaims.map((f) => f.name).join(", ")} all cite the renewable grid on record.` : ""} It's quietly Kenya's strongest pitch for AI and cloud investment.`,
+        reply: `Kenya's grid is one of the greenest on Earth, roughly 90% renewable, anchored by Rift Valley geothermal with hydro and wind behind it. That means data centres here run genuinely low-carbon power without certificate accounting. ${withClaims.length ? `Operators lean into it: ${withClaims.map((f) => f.name).join(", ")} all cite the renewable grid on record.` : ""} It's quietly Kenya's strongest pitch for AI and cloud investment.`,
         citations: [
           { label: "The energy cluster", href: "/energy" },
           { label: "Kenya's green data centre edge", href: "/articles/kenya-renewables-industrial-power-data-centres" },
@@ -540,7 +540,7 @@ const INTENTS: Intent[] = [
       const t3 = operational.filter((f) => f.tierRating === "III").length;
       const t2 = operational.filter((f) => f.tierRating === "II").length;
       return ok({
-        reply: `Across the operational fleet, ${t3} facilities carry Tier III ratings (concurrent maintainability) and ${t2} sit at Tier II. Tier III is the market standard for enterprise colocation here — it lets any component be maintained without taking the floor down. The directory lists the rating on every facility page where it's been published.`,
+        reply: `Across the operational fleet, ${t3} facilities carry Tier III ratings (concurrent maintainability) and ${t2} sit at Tier II. Tier III is the market standard for enterprise colocation here, it lets any component be maintained without taking the floor down. The directory lists the rating on every facility page where it's been published.`,
         citations: [{ label: "Browse the directory", href: "/directory" }],
         suggestions: ["Which is the largest data centre?", "What does Tier III mean?"],
         intent: "tier",
@@ -615,7 +615,7 @@ const INTENTS: Intent[] = [
         });
       }
       return ok({
-        reply: `The market concentrates hard: most of the ${facilities.length} tracked facilities are in Nairobi — drawn by grid capacity, fibre density and enterprise demand — with Mombasa hosting the coastal facility next to the submarine-cable landing stations. One planned campus (iXAfrica NBOX2 at Tilisi) sits on the Nairobi–Nakuru highway corridor, following the power and the growing edge demand westwards.`,
+        reply: `The market concentrates hard: most of the ${facilities.length} tracked facilities are in Nairobi (drawn by grid capacity, fibre density and enterprise demand) with Mombasa hosting the coastal facility next to the submarine-cable landing stations. One planned campus (iXAfrica NBOX2 at Tilisi) sits on the Nairobi–Nakuru highway corridor, following the power and the growing edge demand westwards.`,
         citations: [
           { label: "The infrastructure map", href: "/infrastructure/map" },
           { label: "Browse the directory", href: "/directory" },
@@ -633,7 +633,7 @@ const INTENTS: Intent[] = [
       return ok({
         reply: profileCard(f),
         citations: [
-          { label: `${f.name} — full profile`, href: `/directory/${f.slug}` },
+          { label: `${f.name}, full profile`, href: `/directory/${f.slug}` },
           { label: "Compare side by side", href: `/directory/compare?ids=${encodeURIComponent(f.slug)}` },
         ],
         suggestions: [`Compare ${f.name} with others`, "What's under construction right now?"],
@@ -652,7 +652,7 @@ export function runIntents(query: string, entities: Entities, history: string[])
         if (result) return result;
       }
     } catch {
-      // An intent failure must never crash the chat — fall through to retrieval.
+      // An intent failure must never crash the chat, fall through to retrieval.
     }
   }
   return null;

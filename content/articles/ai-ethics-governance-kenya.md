@@ -19,7 +19,7 @@ og_image: "/images/dc-biometric-access-4.webp"
 reading_time: "16 min"
 images:
   - src: "/images/dc-biometric-access-4.webp"
-    alt: "Biometric access control at a data centre door — governance and consent in practice"
+    alt: "Biometric access control at a data centre door, governance and consent in practice"
     caption: "AI governance starts with the systems that decide who gets in, and on what terms"
     position: hero
   - src: "/images/dc-biometric-access.webp"
@@ -52,13 +52,13 @@ external_sources:
     url: "https://au.int/en/documents/20250212/continental-artificial-intelligence-strategy-africa"
 faq:
   - question: "Does Kenya have a specific AI law or regulation?"
-    answer: "Kenya does not yet have a dedicated AI Act. AI governance currently operates through existing legislation — primarily the Kenya Data Protection Act 2019, which governs how AI systems process personal data. The government has been developing a national AI strategy, and the ICT Authority is expected to play a central role in coordinating AI governance. The Communications Authority of Kenya also has jurisdiction over AI-enabled telecommunications services."
+    answer: "Kenya does not yet have a dedicated AI Act. AI governance currently operates through existing legislation, primarily the Kenya Data Protection Act 2019, which governs how AI systems process personal data. The government has been developing a national AI strategy, and the ICT Authority is expected to play a central role in coordinating AI governance. The Communications Authority of Kenya also has jurisdiction over AI-enabled telecommunications services."
   - question: "How does the EU AI Act affect Kenyan companies?"
-    answer: "The EU AI Act has extraterritorial reach — it applies to any organisation whose AI systems are placed on the EU market or whose outputs are used within the EU. Kenyan BPO companies, fintech firms serving European clients, and data centre operators hosting AI systems for EU customers may all fall within its scope. This means Kenyan tech companies need to understand EU AI risk classifications even without domestic AI legislation."
+    answer: "The EU AI Act has extraterritorial reach, it applies to any organisation whose AI systems are placed on the EU market or whose outputs are used within the EU. Kenyan BPO companies, fintech firms serving European clients, and data centre operators hosting AI systems for EU customers may all fall within its scope. This means Kenyan tech companies need to understand EU AI risk classifications even without domestic AI legislation."
   - question: "What is an AI ethics committee, and do Kenyan organisations need one?"
     answer: "An AI ethics committee is a governance body that reviews AI systems for ethical risks before and during deployment. While not yet legally mandated in Kenya, leading organisations including Safaricom, commercial banks, and the Microsoft ADC have established internal AI review processes. The proposed national AI strategy is expected to recommend AI ethics oversight for high-risk sectors like banking and healthcare."
   - question: "Why is AI bias a particular concern in Kenya?"
-    answer: "Most large AI models are trained predominantly on data from North America and Europe. When these models are applied to Kenyan users, they can produce biased outcomes — misidentifying African faces, misunderstanding Kenyan English or Kiswahili, or making incorrect financial risk assessments based on patterns that do not apply to the local context. This bias can lead to discriminatory lending decisions, inaccurate medical diagnoses, and exclusionary service delivery."
+    answer: "Most large AI models are trained predominantly on data from North America and Europe. When these models are applied to Kenyan users, they can produce biased outcomes, misidentifying African faces, misunderstanding Kenyan English or Kiswahili, or making incorrect financial risk assessments based on patterns that do not apply to the local context. This bias can lead to discriminatory lending decisions, inaccurate medical diagnoses, and exclusionary service delivery."
   - question: "What role do data centres play in AI governance?"
     answer: "Data centres provide the infrastructure on which AI systems run, which comes with governance responsibilities. Data centre operators hosting AI workloads must ensure appropriate security controls, data residency compliance, audit logging capabilities, and the ability to support data deletion requests. As AI regulation tightens globally, data centre customers will increasingly require contractual guarantees that their infrastructure provider supports their AI governance obligations."
 canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governance-kenya"
@@ -68,9 +68,9 @@ canonical_url: "https://data-centers-254.vercel.app/articles/ai-ethics-governanc
 
 ## Why AI Ethics and Governance Matter Now
 
-Artificial intelligence is no longer a future technology in Kenya — it is an operational reality. Banks are using AI for credit scoring, hospitals are deploying AI-assisted diagnostics, telecoms operators are optimising networks with machine learning, and government agencies are exploring AI for citizen service delivery. With this rapid deployment comes a corresponding need for **ethical governance frameworks** that ensure AI systems are fair, transparent, accountable, and aligned with Kenyan values and legal requirements.
+Artificial intelligence is no longer a future technology in Kenya, it is an operational reality. Banks are using AI for credit scoring, hospitals are deploying AI-assisted diagnostics, telecoms operators are optimising networks with machine learning, and government agencies are exploring AI for citizen service delivery. With this rapid deployment comes a corresponding need for **ethical governance frameworks** that ensure AI systems are fair, transparent, accountable, and aligned with Kenyan values and legal requirements.
 
-The urgency is not abstract. In 2024 and 2025, several high-profile AI governance failures made global headlines — biased lending algorithms, AI-generated misinformation, and privacy breaches through AI systems processing personal data without adequate safeguards. Kenya is not immune to these risks. In fact, the application of AI systems trained on non-African data to Kenyan populations introduces unique bias risks that require locally informed governance approaches.
+The urgency is not abstract. In 2024 and 2025, several high-profile AI governance failures made global headlines, biased lending algorithms, AI-generated misinformation, and privacy breaches through AI systems processing personal data without adequate safeguards. Kenya is not immune to these risks. In fact, the application of AI systems trained on non-African data to Kenyan populations introduces unique bias risks that require locally informed governance approaches.
 
 This article examines the global AI ethics landscape as it applies to Kenya, the country's evolving regulatory framework, sector-specific concerns, international standards being adopted locally, and what all of this means for data centre operators and technology companies.
 
@@ -82,9 +82,9 @@ The most fundamental ethical challenge for AI in Kenya is **data representation*
 
 This gap has concrete, harmful consequences:
 
-- **Facial recognition systems** trained primarily on lighter-skinned faces show significantly higher error rates for darker-skinned individuals — a well-documented problem that directly affects Kenyans.
+- **Facial recognition systems** trained primarily on lighter-skinned faces show significantly higher error rates for darker-skinned individuals, a well-documented problem that directly affects Kenyans.
 - **Natural language processing models** perform poorly on Kiswahili, Sheng, and Kenya's many vernacular languages, leading to misinterpretation of user intent.
-- **Credit scoring algorithms** trained on Western financial behaviour patterns may penalise Kenyans for perfectly normal local financial practices — such as relying on mobile money, informal savings groups (chamas), or seasonal income.
+- **Credit scoring algorithms** trained on Western financial behaviour patterns may penalise Kenyans for perfectly normal local financial practices, such as relying on mobile money, informal savings groups (chamas), or seasonal income.
 - **Healthcare AI** trained on European or American patient populations may produce inaccurate risk assessments for Kenyan patients with different genetic profiles, disease prevalence, and healthcare access patterns.
 
 Addressing these biases requires not just technical solutions (better training data, model fine-tuning) but **governance structures** that identify, assess, and mitigate bias before AI systems reach production.
@@ -97,7 +97,7 @@ The tension between AI's appetite for data and data protection principles is one
 
 ### Transparency and Explainability
 
-When an AI system makes a decision that affects a person's life — denying a loan, flagging a transaction as fraudulent, or recommending a medical treatment — that person has a legitimate interest in understanding *why*. The principle of **algorithmic transparency** requires that AI systems be explainable in terms that affected individuals and oversight bodies can understand.
+When an AI system makes a decision that affects a person's life (denying a loan, flagging a transaction as fraudulent, or recommending a medical treatment) that person has a legitimate interest in understanding *why*. The principle of **algorithmic transparency** requires that AI systems be explainable in terms that affected individuals and oversight bodies can understand.
 
 This is technically challenging. Deep neural networks, the architecture behind most modern AI systems, are inherently opaque. The field of explainable AI (XAI) is developing tools to address this, but Kenya's regulatory framework does not yet specify what level of explainability is required for different types of AI-assisted decisions.
 
@@ -113,7 +113,7 @@ The DPA remains Kenya's most significant piece of legislation relevant to AI gov
 
 - **Section 48 (Cross-Border Data Transfers)**: Sending data to foreign AI APIs triggers cross-border transfer requirements, including adequacy assessments and appropriate safeguards. The Office of the Data Protection Commissioner (ODPC) has been increasingly active in enforcing these provisions.
 
-- **Data Protection Impact Assessments (DPIAs)**: The ODPC requires DPIAs for high-risk processing activities. AI systems processing personal data at scale — particularly in sensitive sectors — will typically trigger DPIA requirements.
+- **Data Protection Impact Assessments (DPIAs)**: The ODPC requires DPIAs for high-risk processing activities. AI systems processing personal data at scale (particularly in sensitive sectors) will typically trigger DPIA requirements.
 
 ### The Proposed National AI Strategy
 
@@ -149,7 +149,7 @@ The Central Bank's approach is informed by international standards from the Base
 
 ### Healthcare
 
-AI in Kenyan healthcare — from diagnostic imaging AI to clinical decision support systems — raises particularly acute ethical concerns because the stakes involve human health and life. Key governance issues include:
+AI in Kenyan healthcare (from diagnostic imaging AI to clinical decision support systems) raises particularly acute ethical concerns because the stakes involve human health and life. Key governance issues include:
 
 - **Clinical validation**: AI diagnostic tools must be validated on Kenyan patient populations before deployment. A model trained on European radiology data may not perform accurately on Kenyan patients.
 - **Patient data protection**: Medical records are classified as sensitive personal data under the DPA, requiring the highest level of protection. AI systems processing this data must implement strict access controls, encryption, and audit logging.
@@ -197,7 +197,7 @@ The CBK has also signalled awareness of the EU AI Act, noting that Kenyan banks 
 
 ## What Data Centre Operators Need to Know
 
-AI governance is not only a concern for the organisations building and deploying AI models. **Data centre operators providing infrastructure for AI workloads have governance responsibilities too** — both legal and commercial.
+AI governance is not only a concern for the organisations building and deploying AI models. **Data centre operators providing infrastructure for AI workloads have governance responsibilities too**, both legal and commercial.
 
 ### Infrastructure Responsibility
 
@@ -219,7 +219,7 @@ As AI regulation tightens, data centre customers will increasingly require their
 
 ### The Environmental Dimension
 
-The environmental impact of AI compute is an emerging governance concern. Training a single large language model can emit as much carbon as five automobiles over their entire lifetimes. For Kenyan data centre operators, this creates both an ethical obligation and a commercial opportunity. Kenya's geothermal energy — which provides over 40% of the country's electricity — offers a genuinely green power source for AI compute. Data centres that can demonstrate low-carbon AI infrastructure will increasingly attract environmentally conscious customers and support their own ESG reporting obligations.
+The environmental impact of AI compute is an emerging governance concern. Training a single large language model can emit as much carbon as five automobiles over their entire lifetimes. For Kenyan data centre operators, this creates both an ethical obligation and a commercial opportunity. Kenya's geothermal energy (which provides over 40% of the country's electricity) offers a genuinely green power source for AI compute. Data centres that can demonstrate low-carbon AI infrastructure will increasingly attract environmentally conscious customers and support their own ESG reporting obligations.
 
 ![Cutaway infographic of an AI data centre's systems](/images/whats-inside-ai-data-center.webp)
 
@@ -265,7 +265,7 @@ Kenyan universities and professional bodies are beginning to develop programmes 
 
 ## Conclusion: Governance as Competitive Advantage
 
-AI ethics and governance in Kenya are not obstacles to innovation — they are **enablers of sustainable, trustworthy AI adoption**. Organisations that invest in robust AI governance today will be better positioned to deploy AI systems that Kenyan citizens trust, that regulators approve, and that deliver genuine value rather than harm.
+AI ethics and governance in Kenya are not obstacles to innovation, they are **enablers of sustainable, trustworthy AI adoption**. Organisations that invest in robust AI governance today will be better positioned to deploy AI systems that Kenyan citizens trust, that regulators approve, and that deliver genuine value rather than harm.
 
 For data centre operators, the message is clear: providing infrastructure for AI workloads comes with responsibility. The facilities that can demonstrate security, compliance, data sovereignty, and support for their customers' AI governance obligations will win in a market where trust is the ultimate currency.
 
@@ -275,11 +275,11 @@ As Kenya's national AI strategy takes shape and international frameworks like th
 
 **Does Kenya have a specific AI law or regulation?**
 
-Kenya does not yet have a dedicated AI Act. AI governance currently operates through existing legislation — primarily the Kenya Data Protection Act 2019, which governs how AI systems process personal data. The government has been developing a national AI strategy, and the ICT Authority is expected to play a central role in coordinating AI governance. The Communications Authority of Kenya also has jurisdiction over AI-enabled telecommunications services.
+Kenya does not yet have a dedicated AI Act. AI governance currently operates through existing legislation, primarily the Kenya Data Protection Act 2019, which governs how AI systems process personal data. The government has been developing a national AI strategy, and the ICT Authority is expected to play a central role in coordinating AI governance. The Communications Authority of Kenya also has jurisdiction over AI-enabled telecommunications services.
 
 **How does the EU AI Act affect Kenyan companies?**
 
-The EU AI Act has extraterritorial reach — it applies to any organisation whose AI systems are placed on the EU market or whose outputs are used within the EU. Kenyan BPO companies, fintech firms serving European clients, and data centre operators hosting AI systems for EU customers may all fall within its scope. This means Kenyan tech companies need to understand EU AI risk classifications even without domestic AI legislation.
+The EU AI Act has extraterritorial reach, it applies to any organisation whose AI systems are placed on the EU market or whose outputs are used within the EU. Kenyan BPO companies, fintech firms serving European clients, and data centre operators hosting AI systems for EU customers may all fall within its scope. This means Kenyan tech companies need to understand EU AI risk classifications even without domestic AI legislation.
 
 **What is an AI ethics committee, and do Kenyan organisations need one?**
 
@@ -287,7 +287,7 @@ An AI ethics committee is a governance body that reviews AI systems for ethical 
 
 **Why is AI bias a particular concern in Kenya?**
 
-Most large AI models are trained predominantly on data from North America and Europe. When these models are applied to Kenyan users, they can produce biased outcomes — misidentifying African faces, misunderstanding Kenyan English or Kiswahili, or making incorrect financial risk assessments based on patterns that do not apply to the local context. This bias can lead to discriminatory lending decisions, inaccurate medical diagnoses, and exclusionary service delivery.
+Most large AI models are trained predominantly on data from North America and Europe. When these models are applied to Kenyan users, they can produce biased outcomes, misidentifying African faces, misunderstanding Kenyan English or Kiswahili, or making incorrect financial risk assessments based on patterns that do not apply to the local context. This bias can lead to discriminatory lending decisions, inaccurate medical diagnoses, and exclusionary service delivery.
 
 **What role do data centres play in AI governance?**
 

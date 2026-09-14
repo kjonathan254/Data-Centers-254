@@ -107,13 +107,13 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
     <section id="directory" className="py-14 lg:py-20">
       <div className="container-site">
 
-        {/* Header — left-aligned, editorial */}
+        {/* Header, left-aligned, editorial */}
         <div className="max-w-2xl">
           <span className="eyebrow">Kenya DC Directory</span>
           <h1 className="h-display mt-3 text-foreground">Every data centre in one place.</h1>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
             A searchable database of data centre facilities in Kenya. Every
-            facility verified and sourced — the asset that makes Data Centre
+            facility verified and sourced, the asset that makes Data Centre
             254 different.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
@@ -194,8 +194,8 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
               const inCompare = compareSet.has(f.slug);
               return (
                 <article key={f.id} className="card-solid card-solid-hover relative rounded-xl p-5 sm:p-6 group">
-                  {/* Stretched link — whole card navigates to the profile */}
-                  <Link href={`/directory/${f.slug}`} className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan" aria-label={`${f.name} — full profile`} />
+                  {/* Stretched link, whole card navigates to the profile */}
+                  <Link href={`/directory/${f.slug}`} className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan" aria-label={`${f.name}, full profile`} />
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="min-w-0"><h3 className="text-base font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">{f.name}</h3><p className="text-xs text-muted-foreground mt-0.5">{f.operator.name}</p></div>
                     <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
@@ -233,7 +233,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
         {!loading && data && (
           <p className="mt-10 text-xs text-muted-foreground max-w-2xl leading-relaxed">
             Data sourced from operator websites, independent registers, and
-            credible press — every entry carries named sources, a last-verified
+            credible press, every entry carries named sources, a last-verified
             date, a PeeringDB cross-reference where one exists, and an explicit
             note wherever marketing claims and evidence part ways. Last
             verified: September 2026.{" "}

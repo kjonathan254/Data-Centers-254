@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Terms governing the use of Data Centre 254 — content ownership, permitted use, accuracy disclaimers, and liability. Governed by the laws of Kenya.",
+    "Terms governing the use of Data Centre 254, content ownership, permitted use, accuracy disclaimers, and liability. Governed by the laws of Kenya.",
   alternates: { canonical: "/terms" },
 };
 
@@ -32,7 +32,7 @@ const sections = [
   {
     title: "4. Permitted Use",
     body: [
-      "You may browse, read, print, and share links to the Site for personal, educational, and professional reference. Commercial reuse, systematic scraping, bulk downloading of the directory or article library, or any use that competes with the Site requires a licence — contact us.",
+      "You may browse, read, print, and share links to the Site for personal, educational, and professional reference. Commercial reuse, systematic scraping, bulk downloading of the directory or article library, or any use that competes with the Site requires a licence, contact us.",
     ],
   },
   {

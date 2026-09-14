@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/founder-photo.webp", width: 800, height: 800, alt: "Kevin Jonathan Otieno — Founder of Data Centre 254" }],
+    images: [{ url: "/images/founder-photo.webp", width: 800, height: 800, alt: "Kevin Jonathan Otieno, Founder of Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-cyan/20 shrink-0">
                   <Image
                     src="/images/founder-photo.webp"
-                    alt="Kevin Jonathan Otieno — Founder of Data Centre 254"
+                    alt="Kevin Jonathan Otieno, Founder of Data Centre 254"
                     fill
                     className="object-cover"
                     sizes="144px"
@@ -186,7 +186,7 @@ export default function AboutPage() {
               </div>
             </section>
 
-            {/* Methodology — THE KEY E-E-A-T SECTION */}
+            {/* Methodology, THE KEY E-E-A-T SECTION */}
             <section className="mb-16">
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4">
                 Our Methodology

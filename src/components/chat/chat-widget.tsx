@@ -15,7 +15,7 @@ import { JIBU_OPENED_KEY as PULSE_KEY } from "@/components/chat/jibu-storage-key
  *  - slides up when the directory's compare tray is open (they share the bottom edge)
  *  - unvisited pulse dot until first open (sessionStorage)
  *  - one-time welcome card ~5s after landing (mobile: bottom drawer,
- *    desktop: card above the button) — see jibu-welcome.tsx
+ *    desktop: card above the button), see jibu-welcome.tsx
  */
 
 export default function ChatWidget() {
@@ -56,7 +56,7 @@ export default function ChatWidget() {
       try {
         sessionStorage.setItem(PULSE_KEY, "1");
       } catch {
-        // Private mode — pulse may reappear; harmless.
+        // Private mode, pulse may reappear; harmless.
       }
     }
   }
@@ -71,7 +71,7 @@ export default function ChatWidget() {
       {open && (
         <div
           role="dialog"
-          aria-label={`${BOT_IDENTITY.name} — chat with the DC254 answer engine`}
+          aria-label={`${BOT_IDENTITY.name}, chat with the DC254 answer engine`}
           className="card-solid mb-3 flex h-[min(620px,72dvh)] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border/70 shadow-2xl shadow-black/40"
         >
           <div className="flex items-center justify-between border-b border-border/50 bg-accent/30 pr-2">

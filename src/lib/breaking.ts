@@ -1,5 +1,5 @@
 /**
- * ─── BREAKING NEWS BANNER — ROTATE HERE ─────────────────────────────────
+ * ─── BREAKING NEWS BANNER, ROTATE HERE ─────────────────────────────────
  *
  * When a Google Alert surfaces a relevant data centre story, update this
  * ONE item. It feeds the slim strip under the homepage hero.
@@ -9,7 +9,7 @@
  *   title       ONE line summarising the story (keep under ~110 chars)
  *   href        path to the DC254 article covering the story
  *   dateText    short display date (e.g. "31 Aug 2026")
- *   publishedAt ISO date the story broke — drives the 72-hour expiry
+ *   publishedAt ISO date the story broke, drives the 72-hour expiry
  *   serious     set true ONLY for market-defining stories (licensing
  *               changes, a major facility energising) that may stay up
  *               past the 72-hour window
@@ -17,7 +17,7 @@
  * EDITORIAL RULE: breaking news decays. A story leaves the bar
  * automatically 72 hours after publishedAt unless serious is true.
  * After that, the story keeps visibility through the green "New" badge
- * and freshness sorting in listings instead — rotate in the next alert.
+ * and freshness sorting in listings instead, rotate in the next alert.
  *
  * To take the strip down (no current story), set breakingNews to null:
  *   export const breakingNews: BreakingItem | null = null;
@@ -40,7 +40,7 @@ const BREAKING_TTL_HOURS = 72;
 export const breakingNews: BreakingItem | null = {
   label: "Policy",
   title:
-    "CA opens 30-day consultation on a standalone data centre licence — the NFP-T2 era may be ending",
+    "CA opens 30-day consultation on a standalone data centre licence, the NFP-T2 era may be ending",
   href: "/articles/kenya-ca-standalone-data-centre-licence",
   dateText: "8 Sep 2026",
   publishedAt: "2026-09-08",

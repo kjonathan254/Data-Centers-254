@@ -6,7 +6,7 @@ import ResearchContent from "@/components/research-content";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "DC254 reports and briefs on Kenya's digital infrastructure — every report ships as a free web summary plus a downloadable deep-dive PDF. Open data, no signup wall.",
+    "DC254 reports and briefs on Kenya's digital infrastructure, every report ships as a free web summary plus a downloadable deep-dive PDF. Open data, no signup wall.",
   alternates: { canonical: "/research" },
   openGraph: {
     title: "Reports & Briefs | Data Centre 254",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Research — Data Centre 254" }],
+    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Research, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -23,7 +23,7 @@ export default function OfflinePage() {
 
         <p className="text-muted-foreground leading-relaxed mb-3">
           No connection right now. Any page you&apos;ve already visited on
-          DC254 stays readable from your device&apos;s cache — articles,
+          DC254 stays readable from your device&apos;s cache, articles,
           directory entries and maps you&apos;ve loaded before are still
           there.
         </p>

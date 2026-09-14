@@ -24,11 +24,11 @@ images:
     position: hero
   - src: "/images/dc-biometric-access-4.webp"
     alt:  "Security systems assessment during a facility audit"
-    caption: "Physical security is one of the most visible differentiators between facilities — look for biometric access, mantraps, CCTV coverage, and security staffing levels"
+    caption: "Physical security is one of the most visible differentiators between facilities, look for biometric access, mantraps, CCTV coverage, and security staffing levels"
     position: "section-break"
   - src: "/images/ups-switchgear-power-room.webp"
     alt:  "UPS and switchgear line-up in a data centre power room"
-    caption: "Ask to see the generator room, UPS systems, and switchgear — the power infrastructure is too important to evaluate only through a sales presentation"
+    caption: "Ask to see the generator room, UPS systems, and switchgear, the power infrastructure is too important to evaluate only through a sales presentation"
     position: "inline"
   - src: "/images/dc-biometric-access-3.webp"
     alt:  "Fingerprint being recorded on an ink pad"
@@ -48,7 +48,7 @@ external_sources:
     url: "https://www.iso.org/isoiec-27001-information-security.html"
 faq:
   - question: "What is data centre due diligence?"
-    answer: "Data centre due diligence is the systematic evaluation of a facility before committing to place your equipment and data there. It covers physical infrastructure (power, cooling, building), connectivity, security, compliance, financial stability, and contractual terms. For enterprise customers in Kenya — banks, telcos, government agencies — due diligence is often required by regulators, auditors, or board governance policies."
+    answer: "Data centre due diligence is the systematic evaluation of a facility before committing to place your equipment and data there. It covers physical infrastructure (power, cooling, building), connectivity, security, compliance, financial stability, and contractual terms. For enterprise customers in Kenya (banks, telcos, government agencies) due diligence is often required by regulators, auditors, or board governance policies."
   - question: "How long does a proper due diligence process take?"
     answer: "A thorough due diligence process typically takes 4-8 weeks for a standard colocation deployment. This includes issuing a detailed questionnaire (RFP/RFI), reviewing the responses, conducting one or more site visits, reviewing contracts and SLAs, obtaining legal and technical reviews, and negotiating final terms. For large deployments (100+ racks or dedicated suites), the process can take 3-6 months."
   - question: "Should I hire a consultant for data centre due diligence?"
@@ -60,11 +60,11 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-due-diligence-kenya"
 ---
 
-Choosing a data centre is one of the most consequential infrastructure decisions a Kenyan organisation will make. Your servers, your data, and your customers' trust will reside in that facility for years. A bad choice — unreliable power, inadequate security, poor connectivity, or an operator in financial difficulty — can result in outages, data breaches, regulatory penalties, and reputational damage that far exceed the cost of the colocation contract itself. Due diligence is the process that prevents these outcomes.
+Choosing a data centre is one of the most consequential infrastructure decisions a Kenyan organisation will make. Your servers, your data, and your customers' trust will reside in that facility for years. A bad choice (unreliable power, inadequate security, poor connectivity, or an operator in financial difficulty) can result in outages, data breaches, regulatory penalties, and reputational damage that far exceed the cost of the colocation contract itself. Due diligence is the process that prevents these outcomes.
 
 ![Server racks in a Nairobi data centre hall](/images/dc-gpu-cluster-2.webp)
 
-This guide provides a practical due diligence framework specifically designed for the Kenyan market. It covers every factor that an enterprise customer — a bank, a telecom company, a government agency, or a large corporate — should evaluate before placing equipment in a Kenyan data centre. While some of these factors are universal, others are specific to Kenya's infrastructure environment, regulatory context, and market dynamics.
+This guide provides a practical due diligence framework specifically designed for the Kenyan market. It covers every factor that an enterprise customer (a bank, a telecom company, a government agency, or a large corporate) should evaluate before placing equipment in a Kenyan data centre. While some of these factors are universal, others are specific to Kenya's infrastructure environment, regulatory context, and market dynamics.
 
 ## Phase 1: Pre-qualification
 
@@ -98,7 +98,7 @@ Power is the single most important technical factor. Evaluate the following elem
 
 ![Security systems assessment during a facility audit](/images/dc-biometric-access-4.webp)
 
-**UPS systems**: What UPS technology is used (online double-conversion is the standard for enterprise facilities)? What is the battery runtime? The minimum is 10–15 minutes — enough time for generators to start and synchronise. Are the UPS systems redundant (N+1 or 2N)? What is the age and condition of the batteries?
+**UPS systems**: What UPS technology is used (online double-conversion is the standard for enterprise facilities)? What is the battery runtime? The minimum is 10–15 minutes, enough time for generators to start and synchronise. Are the UPS systems redundant (N+1 or 2N)? What is the age and condition of the batteries?
 
 **Power distribution**: How is power distributed from the utility entry point to the racks? Look for redundant power paths (A and B feeds) to each rack. Ask about the power distribution unit (PDU) topology and whether each rack has dual PDUs on separate power paths.
 
@@ -116,7 +116,7 @@ Cooling is the second most critical technical factor.
 
 Connectivity evaluation focuses on diversity and redundancy.
 
-**Fibre entry diversity**: How many independent fibre routes enter the building? A single route creates a single point of failure — a road construction project could sever the only fibre connection and isolate the facility. Look for at least two physically diverse entry routes.
+**Fibre entry diversity**: How many independent fibre routes enter the building? A single route creates a single point of failure, a road construction project could sever the only fibre connection and isolate the facility. Look for at least two physically diverse entry routes.
 
 **Meet-me room**: Visit the meet-me room. Which network providers have equipment present? Is the room well-organised, with proper cable management and labelling? Is there space for additional providers?
 
@@ -146,7 +146,7 @@ The business evaluation assesses the operator's financial stability, the contrac
 
 ### Financial Stability
 
-A data centre operator in financial difficulty may cut corners on maintenance, staffing, or investment — all of which affect the reliability of your service. Request financial information or, for privately held companies, assess indicators of financial health: customer base (diverse or dependent on one or two large customers), investment in facility maintenance and upgrades, staff retention, and payment history with suppliers (if you can assess this indirectly).
+A data centre operator in financial difficulty may cut corners on maintenance, staffing, or investment, all of which affect the reliability of your service. Request financial information or, for privately held companies, assess indicators of financial health: customer base (diverse or dependent on one or two large customers), investment in facility maintenance and upgrades, staff retention, and payment history with suppliers (if you can assess this indirectly).
 
 ### Service Level Agreement
 
@@ -156,7 +156,7 @@ The SLA is the contractual backbone of the colocation relationship. Evaluate it 
 
 **Service credits**: What financial compensation is provided if the SLA is not met? Are service credits applied automatically or only upon customer request? Are there caps on total service credits that limit your effective compensation?
 
-**Exclusions**: What is excluded from the SLA? Scheduled maintenance, force majeure events, and customer-caused outages are commonly excluded. Read the exclusions carefully — some SLAs exclude so much that the guarantee is effectively meaningless.
+**Exclusions**: What is excluded from the SLA? Scheduled maintenance, force majeure events, and customer-caused outages are commonly excluded. Read the exclusions carefully, some SLAs exclude so much that the guarantee is effectively meaningless.
 
 ![Fingerprint being recorded on an ink pad](/images/dc-biometric-access-3.webp)
 
@@ -172,4 +172,4 @@ During the visit, observe the condition of the infrastructure. Are cable trays o
 
 Talk to the operations staff, not just the sales team. The operations team's knowledge and professionalism are better indicators of day-to-day facility quality than any sales presentation. Ask them about recent incidents, how they handle maintenance, and what their biggest operational challenges are.
 
-Due diligence is not a formality — it is the process that separates a good data centre decision from a costly mistake. In Kenya's growing but still developing market, the variation between facilities is significant, and the effort invested in thorough due diligence will pay for itself many times over the life of the contract.
+Due diligence is not a formality, it is the process that separates a good data centre decision from a costly mistake. In Kenya's growing but still developing market, the variation between facilities is significant, and the effort invested in thorough due diligence will pay for itself many times over the life of the contract.

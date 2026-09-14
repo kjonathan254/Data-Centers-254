@@ -12,17 +12,17 @@ import {
 } from "@/components/chat/jibu-storage-keys";
 
 /**
- * Jibu's one-time welcome — an introduction, not an interruption.
+ * Jibu's one-time welcome, an introduction, not an interruption.
  *
  * Behaviour:
  *  - pops ~5s after landing; hard cap of once per browser session
  *  - skipped entirely if the visitor has already opened the chat this session
  *  - "Ask Jibu" opens the chat; either button (or Esc, or the X) starts a
  *    48-hour quiet period (localStorage)
- *  - ?meet-jibu=1 on any URL overrides the quiet period and session cap —
+ *  - ?meet-jibu=1 on any URL overrides the quiet period and session cap:
  *    the reliable way to see/demo the intro (quiet logic still applies after)
  *  - mobile: bottom drawer · desktop: card above the floating button
- *  - fixed positioning only — zero layout shift; entrance animations are
+ *  - fixed positioning only, zero layout shift; entrance animations are
  *    disabled under prefers-reduced-motion
  */
 
@@ -46,7 +46,7 @@ export default function JibuWelcome({
       const forceShow = new URLSearchParams(window.location.search).has("meet-jibu");
       try {
         if (forceShow) {
-          // Demo/verification escape hatch — beats quiet period and session cap,
+          // Demo/verification escape hatch, beats quiet period and session cap,
           // but still records the session flag so refresh returns to normal.
         } else {
           if (sessionStorage.getItem(JIBU_WELCOME_SESSION_KEY) === "1") mayShow = false;
@@ -56,7 +56,7 @@ export default function JibuWelcome({
         }
         if (mayShow) sessionStorage.setItem(JIBU_WELCOME_SESSION_KEY, "1");
       } catch {
-        // Storage unavailable (private mode) — still greet, once per page load.
+        // Storage unavailable (private mode), still greet, once per page load.
       }
       if (mayShow) {
         setVisible(true);
@@ -90,7 +90,7 @@ export default function JibuWelcome({
     try {
       localStorage.setItem(JIBU_WELCOME_KEY, String(Date.now()));
     } catch {
-      // Private mode — the session guard still limits repeats.
+      // Private mode, the session guard still limits repeats.
     }
   }
 
@@ -155,7 +155,7 @@ export default function JibuWelcome({
 
   return (
     <>
-      {/* Mobile — bottom drawer */}
+      {/* Mobile, bottom drawer */}
       <div className="fixed inset-x-0 bottom-0 z-[56] sm:hidden">
         <div
           role="dialog"
@@ -166,7 +166,7 @@ export default function JibuWelcome({
         </div>
       </div>
 
-      {/* Desktop — card above the floating button */}
+      {/* Desktop, card above the floating button */}
       <div
         className={`fixed right-4 z-[56] hidden sm:right-6 sm:block ${
           trayVisible ? "sm:bottom-36" : "sm:bottom-24"

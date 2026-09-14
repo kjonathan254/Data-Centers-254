@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 
 /**
- * "Who we help" — audience entry points, packaged the way institutional
+ * "Who we help", audience entry points, packaged the way institutional
  * trackers do it but for an open platform. Server component.
  */
 
@@ -19,7 +19,7 @@ const AUDIENCES: {
   {
     icon: GraduationCap,
     title: "New to data centres",
-    body: "Start from zero with plain-English explainers — what a data centre actually is, why Kenya, and where the cloud physically lives.",
+    body: "Start from zero with plain-English explainers, what a data centre actually is, why Kenya, and where the cloud physically lives.",
     cta: "Start learning",
     href: "/beginners",
   },
@@ -33,7 +33,7 @@ const AUDIENCES: {
   {
     icon: TrendingUp,
     title: "Operators & investors",
-    body: "The full facility dataset, staged supply pipeline and market snapshot — free, with no signup wall.",
+    body: "The full facility dataset, staged supply pipeline and market snapshot, free, with no signup wall.",
     cta: "Open the directory",
     href: "/directory",
   },
@@ -56,7 +56,7 @@ export default function WhoWeHelp() {
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Whether you&apos;re writing a story, sizing a market, drafting
-          policy or just curious what the cloud is made of — start where you
+          policy or just curious what the cloud is made of, start where you
           stand.
         </p>
 

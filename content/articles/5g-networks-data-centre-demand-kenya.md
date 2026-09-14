@@ -20,7 +20,7 @@ reading_time: "14 min"
 images:
   - src: "/images/dc-networking.webp"
     alt: "Networking equipment carrying 5G backhaul traffic"
-    caption: "5G does not replace the data centre — it multiplies how many small sites need one nearby"
+    caption: "5G does not replace the data centre, it multiplies how many small sites need one nearby"
     position: hero
   - src: "/images/mombasa-cable-landing-3.webp"
     alt:  "Submarine cable landing supported by orange buoys in the surf"
@@ -32,7 +32,7 @@ images:
     position: "infographic"
   - src: "/images/diagram-telecom-tower-components.webp"
     alt:  "Labelled telecom tower components from antennas to BTS cabinet"
-    caption: "A 5G site concentrates antennas, remote radio units, microwave backhaul, and battery-backed power into one tower — and each dense cluster feeds a nearby edge data centre."
+    caption: "A 5G site concentrates antennas, remote radio units, microwave backhaul, and battery-backed power into one tower, and each dense cluster feeds a nearby edge data centre."
     position: "diagram"
 
 internal_links:
@@ -65,7 +65,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/5g-networks-data-ce
 
 Kenya's telecommunications landscape entered a new era when **Safaricom launched commercial 5G services** in October 2022, making the country one of the first in Sub-Saharan Africa to roll out the next-generation wireless technology. The initial deployment covered strategic locations in **Nairobi, Mombasa, and Kisumu**, with the telco investing heavily in new base station infrastructure to support the technology. Airtel Kenya has also signalled ambitious 5G plans, positioning itself as a competitor in the race to connect Kenya's growing digital economy.
 
-What many observers outside the infrastructure sector may not realise is that **5G is not just a network upgrade** — it is a fundamental shift in how computing resources are distributed. The ultra-low latency and massive bandwidth that 5G promises cannot be delivered by the network alone. Behind every 5G cell tower, there is an growing need for data processing capacity that sits as close to the end user as physically possible. This is creating a significant and largely unrecognised surge in demand for data centre infrastructure across Kenya. (New to 5G itself? Start with our plain-language guide: [what is 5G — from 1G to 6G, and why it matters in Kenya](/articles/what-is-5g-1g-to-6g-history).)
+What many observers outside the infrastructure sector may not realise is that **5G is not just a network upgrade**, it is a fundamental shift in how computing resources are distributed. The ultra-low latency and massive bandwidth that 5G promises cannot be delivered by the network alone. Behind every 5G cell tower, there is an growing need for data processing capacity that sits as close to the end user as physically possible. This is creating a significant and largely unrecognised surge in demand for data centre infrastructure across Kenya. (New to 5G itself? Start with our plain-language guide: [what is 5G, from 1G to 6G, and why it matters in Kenya](/articles/what-is-5g-1g-to-6g-history).)
 
 ![Submarine cable coming ashore at a Kenyan beach landing](/images/mombasa-cable-landing.webp)
 
@@ -75,15 +75,15 @@ The **Communications Authority of Kenya (CA)** has been developing a spectrum al
 
 According to the [Communications Authority of Kenya](https://www.ca.go.ke/5g-spectrum-allocation), the regulatory body is working to balance the interests of existing 4G operators with new market entrants, while ensuring that spectrum pricing does not become a barrier to deployment in underserved areas. The CA's approach has been compared favourably to other African regulators, with a phased allocation model that ties spectrum licences to specific rollout obligations.
 
-This regulatory clarity is crucial for the data centre industry because **spectrum allocation directly determines where 5G infrastructure will be built**, and consequently where edge computing capacity will be needed. Operators receiving spectrum in specific frequency bands will have technical requirements that dictate the density and placement of their base stations — and by extension, their MEC nodes.
+This regulatory clarity is crucial for the data centre industry because **spectrum allocation directly determines where 5G infrastructure will be built**, and consequently where edge computing capacity will be needed. Operators receiving spectrum in specific frequency bands will have technical requirements that dictate the density and placement of their base stations, and by extension, their MEC nodes.
 
 ## Why 5G Drives Data Centre Demand
 
 ### Multi-Access Edge Computing: The Core Driver
 
-The single biggest factor linking 5G to data centre demand is **Multi-Access Edge Computing (MEC)**. To understand why, consider the physics of 5G: the technology promises end-to-end latency as low as **1 millisecond**. However, light travels through fibre at approximately 200 kilometres per millisecond. If a user in Nairobi has to round-trip data to a centralised data centre 50 kilometres away, the network alone consumes 0.5ms — and that is before any processing time, protocol overhead, or queuing delays are factored in.
+The single biggest factor linking 5G to data centre demand is **Multi-Access Edge Computing (MEC)**. To understand why, consider the physics of 5G: the technology promises end-to-end latency as low as **1 millisecond**. However, light travels through fibre at approximately 200 kilometres per millisecond. If a user in Nairobi has to round-trip data to a centralised data centre 50 kilometres away, the network alone consumes 0.5ms, and that is before any processing time, protocol overhead, or queuing delays are factored in.
 
-**MEC solves this problem by placing compute resources within 10-20 km of users.** Each MEC node is functionally a small data centre, typically housing anywhere from **10 to 100 kW** of IT load. For a nationwide 5G deployment, this translates into hundreds of new facilities that need power, cooling, security, and connectivity — the core requirements of any data centre.
+**MEC solves this problem by placing compute resources within 10-20 km of users.** Each MEC node is functionally a small data centre, typically housing anywhere from **10 to 100 kW** of IT load. For a nationwide 5G deployment, this translates into hundreds of new facilities that need power, cooling, security, and connectivity, the core requirements of any data centre.
 
 This represents a paradigm shift for the [edge computing ecosystem in East Africa](/articles/edge-computing-east-africa). Traditionally, Kenya's data centre market has been concentrated in Nairobi and, to a lesser extent, Mombasa. 5G demands a distributed model where compute capacity follows population density and economic activity.
 
@@ -95,7 +95,7 @@ All of these services ultimately depend on backend infrastructure housed in data
 
 ### IoT Backend Processing
 
-Kenya's Internet of Things (IoT) ecosystem is expanding rapidly, driven by applications in agriculture, logistics, manufacturing, and utilities. 5G is designed to support **up to one million connected devices per square kilometre**, a massive increase over 4G's capabilities. Each of these devices generates data that needs to be collected, processed, stored, and analysed — all functions performed in data centres.
+Kenya's Internet of Things (IoT) ecosystem is expanding rapidly, driven by applications in agriculture, logistics, manufacturing, and utilities. 5G is designed to support **up to one million connected devices per square kilometre**, a massive increase over 4G's capabilities. Each of these devices generates data that needs to be collected, processed, stored, and analysed, all functions performed in data centres.
 
 In Kenya's agricultural sector alone, IoT sensors for soil monitoring, precision irrigation, and livestock tracking could generate terabytes of data daily at scale. This data needs local processing to be actionable in real time, further reinforcing the need for edge data centre infrastructure.
 
@@ -114,7 +114,7 @@ Each MEC node in a 5G network has specific infrastructure requirements that dist
 - **Proximity**: Located within 10-20 km of the users they serve to maintain sub-5ms latency
 - **Security**: Physical security systems including access control, CCTV, and environmental monitoring
 
-These requirements mean that **every MEC node is, by definition, a data centre** — albeit a small one. The capital expenditure for building a single 50 kW edge node in Kenya is estimated at KES 50-150 million, depending on location, existing infrastructure, and the level of redundancy required.
+These requirements mean that **every MEC node is, by definition, a data centre**, albeit a small one. The capital expenditure for building a single 50 kW edge node in Kenya is estimated at KES 50-150 million, depending on location, existing infrastructure, and the level of redundancy required.
 
 ### The Economic Model: Who Builds Edge Nodes?
 
@@ -122,7 +122,7 @@ The question of who finances and operates 5G edge data centres is one of the mos
 
 **Telco-owned MEC**: Safaricom and Airtel Kenya can build and operate their own edge computing infrastructure at cell tower sites. This gives them full control over performance and service quality but requires massive capital investment and operational expertise in data centre management.
 
-**Colocation at the edge**: Established colocation providers like **Africa Data Centres**, **PAIX (Pan-African Internet Exchange)**, and local operators can extend their footprint to edge locations, offering shared infrastructure that multiple tenants — including telcos, cloud providers, and enterprises — can use. This model offers better economics through multi-tenancy.
+**Colocation at the edge**: Established colocation providers like **Africa Data Centres**, **PAIX (Pan-African Internet Exchange)**, and local operators can extend their footprint to edge locations, offering shared infrastructure that multiple tenants (including telcos, cloud providers, and enterprises) can use. This model offers better economics through multi-tenancy.
 
 **Neutral host infrastructure**: Third-party companies build edge data centre facilities and lease capacity to multiple operators. This model, already common in mature 5G markets like the United States and South Korea, maximises infrastructure sharing and reduces redundant investment.
 
@@ -146,7 +146,7 @@ Kenya's healthcare system serves a population of over 50 million people, many in
 
 ### Autonomous Vehicles and Logistics
 
-While fully autonomous vehicles may still be years away in Kenya, the logistics sector is already adopting semi-autonomous systems including connected fleet management, automated warehouse operations, and drone delivery — particularly in areas with challenging road infrastructure. These systems depend on ultra-reliable, low-latency communication (URLLC), which is a core 5G capability that requires edge computing support.
+While fully autonomous vehicles may still be years away in Kenya, the logistics sector is already adopting semi-autonomous systems including connected fleet management, automated warehouse operations, and drone delivery, particularly in areas with challenging road infrastructure. These systems depend on ultra-reliable, low-latency communication (URLLC), which is a core 5G capability that requires edge computing support.
 
 ## Projecting the Scale: How Many Edge Nodes Will Kenya Need?
 
@@ -166,7 +166,7 @@ Based on these factors, Kenya will likely need **between 500 and 2,000 MEC edge 
 
 ## The Interplay Between 5G Edge and Centralised Data Centres
 
-It is important to understand that **edge data centres do not replace centralised facilities** — they complement them. The architecture that 5G demands is hierarchical:
+It is important to understand that **edge data centres do not replace centralised facilities**, they complement them. The architecture that 5G demands is hierarchical:
 
 1. **MEC edge nodes** (10-100 kW): Handle real-time, latency-sensitive processing within 10-20 km of users
 2. **Regional data centres** (1-10 MW): Aggregate and process data from multiple edge nodes, host larger applications and databases
@@ -187,9 +187,9 @@ For existing data centre operators in Nairobi, the 5G opportunity represents bot
 
 ## Conclusion
 
-Kenya's 5G rollout is not merely a telecommunications upgrade — it is a catalyst for a fundamental transformation of the country's data centre landscape. The demands of Multi-Access Edge Computing, driven by ultra-low latency requirements, will necessitate the construction of hundreds of new edge data centre facilities across the country. Combined with increased bandwidth consumption and the explosion of IoT devices, 5G is poised to make Kenya one of Africa's most dynamic data centre markets.
+Kenya's 5G rollout is not merely a telecommunications upgrade, it is a catalyst for a fundamental transformation of the country's data centre landscape. The demands of Multi-Access Edge Computing, driven by ultra-low latency requirements, will necessitate the construction of hundreds of new edge data centre facilities across the country. Combined with increased bandwidth consumption and the explosion of IoT devices, 5G is poised to make Kenya one of Africa's most dynamic data centre markets.
 
-For infrastructure investors, colocation operators, and technology companies, the message is clear: **the 5G edge opportunity in Kenya is real, quantifiable, and approaching fast.** Those who position themselves now — whether through strategic partnerships, infrastructure investment, or regulatory engagement — will be best placed to capture the value that 5G and edge computing will create.
+For infrastructure investors, colocation operators, and technology companies, the message is clear: **the 5G edge opportunity in Kenya is real, quantifiable, and approaching fast.** Those who position themselves now (whether through strategic partnerships, infrastructure investment, or regulatory engagement) will be best placed to capture the value that 5G and edge computing will create.
 
 ## Frequently Asked Questions
 

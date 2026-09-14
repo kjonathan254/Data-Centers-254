@@ -1,5 +1,5 @@
 /**
- * Central imagery registry — maps every content cluster to a real,
+ * Central imagery registry, maps every content cluster to a real,
  * consistent photograph. Used by the homepage, cluster hub pages,
  * article fallbacks and library cards so imagery stays coherent sitewide.
  */
@@ -16,15 +16,15 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
   },
   Kenya: {
     src: "/images/nairobi-skyline.webp",
-    alt: "Nairobi city skyline at dusk — Kenya's digital capital",
+    alt: "Nairobi city skyline at dusk, Kenya's digital capital",
   },
   Internet: {
     src: "/images/dc-fibre-optics.webp",
-    alt: "Fibre optic strands carrying light — the physical path of Kenya's connectivity",
+    alt: "Fibre optic strands carrying light, the physical path of Kenya's connectivity",
   },
   Energy: {
     src: "/images/kenya-geothermal-plant.webp",
-    alt: "Geothermal power plant in the Rift Valley — baseload energy behind Kenya's green data centres",
+    alt: "Geothermal power plant in the Rift Valley, baseload energy behind Kenya's green data centres",
   },
   AI: {
     src: "/images/ai-gpu-servers.webp",
@@ -32,7 +32,7 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
   },
   Policy: {
     src: "/images/dc-policy-regulation.webp",
-    alt: "Government building at dusk — regulators shape Kenya's digital infrastructure",
+    alt: "Government building at dusk, regulators shape Kenya's digital infrastructure",
   },
   Infrastructure: {
     src: "/images/dc-cooling-crac.webp",
@@ -40,7 +40,7 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
   },
   Careers: {
     src: "/images/nbo2-launch-ribbon-cutting.webp",
-    alt: "Industry professionals cutting the ribbon at the NBO2 data centre launch in Nairobi — the people behind Kenya's digital infrastructure",
+    alt: "Industry professionals cutting the ribbon at the NBO2 data centre launch in Nairobi, the people behind Kenya's digital infrastructure",
   },
 };
 

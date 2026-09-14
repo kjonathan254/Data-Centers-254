@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Industry professionals at the NBO2 data centre launch in Nairobi — Careers — Data Centre 254" }],
+    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Industry professionals at the NBO2 data centre launch in Nairobi (Careers) Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

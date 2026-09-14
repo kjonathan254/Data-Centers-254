@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/mombasa-cargo-ship.webp", width: 1200, height: 675, alt: "Internet Infrastructure — Data Centre 254" }],
+    images: [{ url: "/images/mombasa-cargo-ship.webp", width: 1200, height: 675, alt: "Internet Infrastructure, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

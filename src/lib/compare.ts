@@ -1,7 +1,7 @@
 import { getFacilities, type Facility } from "@/lib/directory-data";
 
 /**
- * Comparison tool helpers — /directory/compare?ids=slug-a,slug-b
+ * Comparison tool helpers, /directory/compare?ids=slug-a,slug-b
  *
  * The compare page is a server component driven entirely by the URL, so any
  * comparison is a shareable, crawlable link (canonical always points at the

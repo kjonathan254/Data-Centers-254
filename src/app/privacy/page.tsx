@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Data Centre 254 collects, uses, and protects your data — briefing subscriptions, contact messages, and analytics. Compliant with the Kenya Data Protection Act, 2019.",
+    "How Data Centre 254 collects, uses, and protects your data, briefing subscriptions, contact messages, and analytics. Compliant with the Kenya Data Protection Act, 2019.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -14,7 +14,7 @@ const sections = [
     title: "1. Who We Are",
     body: [
       "Data Centre 254 (\"DC254\", \"we\", \"us\") is an independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy. It is founded and published by Kevin Jonathan Otieno from Nairobi, Kenya.",
-      "This policy explains what personal data we collect when you visit data-centers-254.vercel.app, subscribe to our briefing, or contact us — and the rights you have over that data under the Kenya Data Protection Act, 2019.",
+      "This policy explains what personal data we collect when you visit data-centers-254.vercel.app, subscribe to our briefing, or contact us, and the rights you have over that data under the Kenya Data Protection Act, 2019.",
     ],
   },
   {
@@ -22,13 +22,13 @@ const sections = [
     body: [
       "Briefing subscriptions. When you subscribe to The Rack Report, our weekly intelligence briefing, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. Subscriber records are stored on this website's infrastructure and, where our email service is configured, also as contacts in Resend, our email service provider. You can unsubscribe at any time using the link in every email, which erases your subscription record.",
       "Contact form messages. When you contact us through the contact form, we receive your name, email address, subject, and message. This is delivered to our email inbox through Resend and is used solely to respond to you.",
-      "Analytics. We use Google Analytics 4 to understand how the site is used — pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties.",
+      "Analytics. We use Google Analytics 4 to understand how the site is used, pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties.",
     ],
   },
   {
     title: "3. What We Do NOT Collect",
     body: [
-      "We do not require accounts or logins — DC254 is a read-only publication. We do not collect names, phone numbers, or payment details through this website. We do not sell, rent, or trade your personal data to anyone, and we do not use your data for automated decision-making or profiling.",
+      "We do not require accounts or logins, DC254 is a read-only publication. We do not collect names, phone numbers, or payment details through this website. We do not sell, rent, or trade your personal data to anyone, and we do not use your data for automated decision-making or profiling.",
     ],
   },
   {
@@ -96,8 +96,8 @@ export default function PrivacyPage() {
                 Questions about this policy or your data? Contact Kevin Jonathan Otieno at{" "}
                 <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan underline hover:underline">
                   elmaccommunicationslimited@gmail.com
-                </a>{" "}
-                — Nairobi, Kenya.
+                </a>{", "}
+                Nairobi, Kenya.
               </p>
             </section>
           </div>

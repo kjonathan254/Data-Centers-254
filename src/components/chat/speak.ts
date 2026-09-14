@@ -3,7 +3,7 @@
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 
 /**
- * Device-side text-to-speech via the Web Speech API — free forever, zero
+ * Device-side text-to-speech via the Web Speech API, free forever, zero
  * keys, zero latency, works offline on every modern browser. Matches the
  * site's device-side voice philosophy: no cloud dependency for audio.
  */
@@ -28,7 +28,7 @@ function pickVoice(): SpeechSynthesisVoice | null {
   return (cachedVoice = voices[0]);
 }
 
-// Voice list loads async on some browsers — prime the cache early.
+// Voice list loads async on some browsers, prime the cache early.
 if (typeof window !== "undefined" && "speechSynthesis" in window) {
   window.speechSynthesis.onvoiceschanged = () => {
     cachedVoice = null;
@@ -63,7 +63,7 @@ export function stopSpeaking(): void {
 }
 
 /**
- * Jibu's reply voice. Tries the HD cloud voice first (Groq PlayAI TTS — free
+ * Jibu's reply voice. Tries the HD cloud voice first (Groq PlayAI TTS, free
  * tier, same key as the brain), and falls back silently to the device-side
  * Web Speech voice on any failure (no key, terms not accepted, offline,
  * autoplay blocked). Both paths are free; neither ever surfaces an error.
@@ -90,7 +90,7 @@ export async function speakAnswer(text: string): Promise<void> {
       return;
     }
   } catch {
-    // offline, 503, autoplay policy — fall through to the device voice
+    // offline, 503, autoplay policy, fall through to the device voice
   }
   speak(clean);
 }

@@ -4,7 +4,7 @@ import { ArrowRight, Map } from "lucide-react";
 import { getFacilities } from "@/lib/directory-data";
 
 /**
- * Fullscreen photographic hero — real server-hall image, text overlay,
+ * Fullscreen photographic hero, real server-hall image, text overlay,
  * verified-platform stat strip anchored to the bottom edge.
  * Server component: zero client JS, zero scroll effects, zero pinning.
  */
@@ -52,7 +52,7 @@ export default function Hero() {
         <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Every M-Pesa transaction, every stream, every AI query runs through
           buildings most people will never enter. DC254 maps, explains and
-          tracks them — in plain language, with verified data.
+          tracks them, in plain language, with verified data.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -72,7 +72,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Stat strip — the platform's verified numbers as the hero's base */}
+        {/* Stat strip, the platform's verified numbers as the hero's base */}
         <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border/60 pt-6 sm:grid-cols-4 sm:gap-8">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col">

@@ -27,7 +27,7 @@ function write(slugs: string[]) {
   try {
     window.sessionStorage.setItem(KEY, JSON.stringify(slugs));
   } catch {
-    // Storage unavailable (private mode quota) — selection just won't persist.
+    // Storage unavailable (private mode quota), selection just won't persist.
   }
   window.dispatchEvent(new Event(EVENT));
 }

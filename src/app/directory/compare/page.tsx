@@ -19,21 +19,21 @@ import {
 export const metadata: Metadata = {
   title: "Compare Kenya Data Centres Side by Side",
   description:
-    "Put any Kenyan data centres head to head — IT load, designed capacity, racks, tier rating, AI readiness, connectivity, cooling and power, with every figure sourced and dated. Free from Data Centre 254.",
+    "Put any Kenyan data centres head to head, IT load, designed capacity, racks, tier rating, AI readiness, connectivity, cooling and power, with every figure sourced and dated. Free from Data Centre 254.",
   alternates: { canonical: "/directory/compare" },
   openGraph: {
     title: "Compare Kenya Data Centres Side by Side | Data Centre 254",
     description:
-      "Any facilities, head to head: capacity, racks, tier, AI readiness, connectivity and power — sourced and dated.",
+      "Any facilities, head to head: capacity, racks, tier, AI readiness, connectivity and power, sourced and dated.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "Data centre comparison — Data Centre 254" }],
+    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "Data centre comparison, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Compare Kenya Data Centres Side by Side",
-    description: "Any facilities, head to head — sourced and dated. Free from Data Centre 254.",
+    description: "Any facilities, head to head, sourced and dated. Free from Data Centre 254.",
     images: ["/images/africa-dc-map.webp"],
   },
 };
@@ -62,7 +62,7 @@ export default async function ComparePage({
               Put Kenya&apos;s data centres head to head.
             </h1>
             <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Choose up to four facilities and read them side by side — capacity,
+              Choose up to four facilities and read them side by side, capacity,
               racks, tier, AI readiness, connectivity and power. Every figure is
               sourced and dated; nothing here is behind a signup wall.
             </p>
@@ -90,7 +90,7 @@ export default async function ComparePage({
           <div className="mt-8">
             {usedDefaults && (
               <p className="mb-4 text-sm text-muted-foreground">
-                Showing a default trio to start from — add and remove facilities
+                Showing a default trio to start from, add and remove facilities
                 above to build your own comparison.
               </p>
             )}

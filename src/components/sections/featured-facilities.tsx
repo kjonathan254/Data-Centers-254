@@ -3,7 +3,7 @@ import { ArrowRight, Cpu, CheckCircle, HardHat, Megaphone } from "lucide-react";
 import { getFacilities, type Facility } from "@/lib/directory-data";
 
 /**
- * Featured facilities — the product, on the front page.
+ * Featured facilities, the product, on the front page.
  * Four editorially-chosen flagship landers (hyperscale, pipeline, incumbent, coast)
  * deep-linked from the highest-authority page on the site. Server component: zero JS.
  */
@@ -28,7 +28,7 @@ function fmtVerified(iso: string): string {
 function capacityLabel(f: Facility): { value: string; label: string } {
   if (f.itLoadMw) return { value: `${f.itLoadMw}`, label: "MW live IT load" };
   if (f.totalCapacityMw) return { value: `${f.totalCapacityMw}`, label: "MW planned capacity" };
-  return { value: "—", label: "capacity undisclosed" };
+  return { value: "-", label: "capacity undisclosed" };
 }
 
 export default function FeaturedFacilities() {
@@ -49,7 +49,7 @@ export default function FeaturedFacilities() {
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
               Every facility carries an operator, a capacity figure and a named
-              source — no press-release numbers. Four of the buildings running
+              source, no press-release numbers. Four of the buildings running
               the country&apos;s internet, below.
             </p>
           </div>

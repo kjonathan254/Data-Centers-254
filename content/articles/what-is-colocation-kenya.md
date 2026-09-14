@@ -32,7 +32,7 @@ images:
     position: "inline"
   - src: "/images/dc-security-camera.webp"
     alt:  "Security cameras monitoring a colocation facility"
-    caption: "Professional security including biometric access, CCTV, and 24/7 monitoring is included in colocation pricing — something that would be prohibitively expensive to replicate in-house"
+    caption: "Professional security including biometric access, CCTV, and 24/7 monitoring is included in colocation pricing, something that would be prohibitively expensive to replicate in-house"
     position: "inline"
 internal_links:
   - text: "what a data centre is"
@@ -48,7 +48,7 @@ external_sources:
     url: "https://www.africadatacentres.com/"
 faq:
   - question: "What is the difference between colocation and cloud?"
-    answer: "In colocation, you own and manage the physical servers — you are renting the space, power, cooling, and connectivity to house them. In cloud computing (AWS, Azure, Google Cloud), you rent virtual resources and do not own any physical hardware. Colocation gives you full control over your hardware and data, while cloud gives you flexibility and no hardware management. Many organisations use both."
+    answer: "In colocation, you own and manage the physical servers, you are renting the space, power, cooling, and connectivity to house them. In cloud computing (AWS, Azure, Google Cloud), you rent virtual resources and do not own any physical hardware. Colocation gives you full control over your hardware and data, while cloud gives you flexibility and no hardware management. Many organisations use both."
   - question: "How much does a rack cost in a Kenyan data centre?"
     answer: "A full rack (42U) in a Tier III Kenyan data centre typically costs KES 60,000 to KES 120,000 per month, depending on power allocation (typically 5-10kW per rack), the provider, and contract length. Half-racks and quarter-racks are available for smaller deployments at proportionally lower costs but higher per-unit rates."
   - question: "Can I visit my servers in a colocation facility?"
@@ -64,7 +64,7 @@ Imagine you run a growing technology company in Nairobi. You have ten servers hu
 
 ![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
-This is the problem that colocation solves. Instead of housing your servers in an inadequate, improvised space, you rent space in a purpose-built data centre that provides professional-grade power, cooling, connectivity, and security. Your servers sit in a facility designed specifically for them — with redundant power supplies, precision cooling, multiple fibre connections from different providers, biometric access control, 24/7 security cameras, and fire suppression systems. You own the servers and the data on them. You manage the software and applications. But the physical infrastructure — the building, the power, the cooling, the connectivity — is provided by the colocation operator.
+This is the problem that colocation solves. Instead of housing your servers in an inadequate, improvised space, you rent space in a purpose-built data centre that provides professional-grade power, cooling, connectivity, and security. Your servers sit in a facility designed specifically for them, with redundant power supplies, precision cooling, multiple fibre connections from different providers, biometric access control, 24/7 security cameras, and fire suppression systems. You own the servers and the data on them. You manage the software and applications. But the physical infrastructure (the building, the power, the cooling, the connectivity) is provided by the colocation operator.
 
 Colocation is one of the oldest and most fundamental services in the data centre industry. It is the service that launched companies like Equinix, Digital Realty, and Teraco into multi-billion-dollar global businesses. And it is a service that is growing rapidly in Kenya as more organisations recognise the limitations of running their own server rooms.
 
@@ -74,9 +74,9 @@ Colocation is, at its core, a real estate and infrastructure service. The coloca
 
 ### Space Units
 
-Colocation space is typically sold in three units. A **rack** (also called a cabinet) is the standard unit — a metal frame approximately 600mm wide, 1,070mm deep, and 2 metres tall, with 42 vertical slots (called "U" for rack units) for mounting equipment. A standard 1U server is about 44mm tall, so a full rack can hold 42 1U servers (in practice, fewer because servers need airflow space). A **half-rack** provides 21U of space, and a **quarter-rack** provides approximately 10U.
+Colocation space is typically sold in three units. A **rack** (also called a cabinet) is the standard unit, a metal frame approximately 600mm wide, 1,070mm deep, and 2 metres tall, with 42 vertical slots (called "U" for rack units) for mounting equipment. A standard 1U server is about 44mm tall, so a full rack can hold 42 1U servers (in practice, fewer because servers need airflow space). A **half-rack** provides 21U of space, and a **quarter-rack** provides approximately 10U.
 
-For larger deployments, customers can rent a **cage** — a wire mesh enclosure within the data centre that provides additional physical security and privacy. Cages are typically used by customers who need 10 or more racks. For the largest customers, some facilities offer **private suites** — essentially a room within the data centre that only that customer can access.
+For larger deployments, customers can rent a **cage**, a wire mesh enclosure within the data centre that provides additional physical security and privacy. Cages are typically used by customers who need 10 or more racks. For the largest customers, some facilities offer **private suites**, essentially a room within the data centre that only that customer can access.
 
 ### Power
 
@@ -88,11 +88,11 @@ Power is delivered to the rack through power distribution units (PDUs) that are 
 
 ### Cooling
 
-Colocation facilities maintain strict environmental conditions: temperature typically between 18–27°C and humidity between 20–80% relative humidity, in accordance with ASHRAE guidelines. Precision air conditioning systems — computer room air conditioning (CRAC) units or computer room air handling (CRAH) units — maintain these conditions continuously. In Nairobi's moderate climate, some facilities use free cooling (drawing in outside air when conditions permit) to reduce energy consumption, as explained in [our cooling systems guide](/articles/data-centre-cooling-systems-explained).
+Colocation facilities maintain strict environmental conditions: temperature typically between 18–27°C and humidity between 20–80% relative humidity, in accordance with ASHRAE guidelines. Precision air conditioning systems, computer room air conditioning (CRAC) units or computer room air handling (CRAH) units, maintain these conditions continuously. In Nairobi's moderate climate, some facilities use free cooling (drawing in outside air when conditions permit) to reduce energy consumption, as explained in [our cooling systems guide](/articles/data-centre-cooling-systems-explained).
 
 ### Connectivity
 
-One of the most important features of a carrier-neutral colocation facility is connectivity choice. In a carrier-neutral facility, multiple network providers — Safaricom, Liquid Intelligent Technologies, Telkom Kenya, Jamii Telecommunications, and others — have equipment in the facility's meet-me room. Customers can connect to any or all of these providers, choosing based on price, performance, redundancy, or specific service requirements. This is fundamentally different from a non-neutral facility (like a telecom-owned data centre) where you can only connect to that operator's network.
+One of the most important features of a carrier-neutral colocation facility is connectivity choice. In a carrier-neutral facility, multiple network providers (Safaricom, Liquid Intelligent Technologies, Telkom Kenya, Jamii Telecommunications, and others) have equipment in the facility's meet-me room. Customers can connect to any or all of these providers, choosing based on price, performance, redundancy, or specific service requirements. This is fundamentally different from a non-neutral facility (like a telecom-owned data centre) where you can only connect to that operator's network.
 
 ## Colocation in Kenya: The Market
 
@@ -110,7 +110,7 @@ Africa Data Centres, part of the Cassava Technologies group, operates multiple f
 
 ### Safaricom
 
-Safaricom's data centres primarily serve the company's own needs — mobile network infrastructure, M-Pesa processing, and enterprise cloud services. However, Safaricom also offers colocation to enterprise customers, particularly those who want an integrated solution combining colocation with connectivity (Safaricom fibre and mobile) and cloud services. Safaricom's facilities are not carrier-neutral — customers primarily connect to Safaricom's network — which is a limitation for customers who want multi-provider connectivity.
+Safaricom's data centres primarily serve the company's own needs, mobile network infrastructure, M-Pesa processing, and enterprise cloud services. However, Safaricom also offers colocation to enterprise customers, particularly those who want an integrated solution combining colocation with connectivity (Safaricom fibre and mobile) and cloud services. Safaricom's facilities are not carrier-neutral (customers primarily connect to Safaricom's network) which is a limitation for customers who want multi-provider connectivity.
 
 ## Pricing in the Kenyan Market
 
@@ -130,16 +130,16 @@ These prices are competitive by African standards, roughly 20–30% lower than e
 
 ## Choosing a Provider: What to Look For
 
-Selecting a colocation provider is a significant decision — your servers, your data, and potentially your entire business operation will depend on that provider's facility. Here are the key factors to evaluate.
+Selecting a colocation provider is a significant decision, your servers, your data, and potentially your entire business operation will depend on that provider's facility. Here are the key factors to evaluate.
 
 **Carrier neutrality**: Can you connect to multiple network providers? This is non-negotiable for most enterprise customers. Ask which providers have equipment in the meet-me room and whether there are any restrictions on connectivity.
 
-**Tier rating**: What tier of reliability does the facility target? Tier III (N+1 redundancy on power and cooling) is the minimum for enterprise workloads. Some facilities claim tier ratings without independent certification — ask whether the facility has been certified by the Uptime Institute or another recognised body.
+**Tier rating**: What tier of reliability does the facility target? Tier III (N+1 redundancy on power and cooling) is the minimum for enterprise workloads. Some facilities claim tier ratings without independent certification, ask whether the facility has been certified by the Uptime Institute or another recognised body.
 
 **Security**: What physical security measures are in place? Biometric access, 24/7 CCTV, mantraps, on-site security personnel, and individual rack locking should all be standard. Ask about the facility's security certifications and whether they have ISO 27001.
 
 **Power**: What is the power availability and reliability? Ask about the facility's total power capacity, the utilisation level (how much is already committed to existing customers), the generator fuel storage duration, and whether the facility has dedicated Kenya Power feeders.
 
-**SLA**: What does the Service Level Agreement guarantee? A professional colocation SLA should guarantee 99.99% or better uptime, with financial credits if the facility fails to meet this target. Read the SLA carefully — some providers exclude scheduled maintenance, force majeure events, or customer-caused outages from the SLA calculation.
+**SLA**: What does the Service Level Agreement guarantee? A professional colocation SLA should guarantee 99.99% or better uptime, with financial credits if the facility fails to meet this target. Read the SLA carefully, some providers exclude scheduled maintenance, force majeure events, or customer-caused outages from the SLA calculation.
 
 Colocation is not the right choice for every organisation. Small businesses with just one or two servers may be better served by cloud services. Organisations that do not want to manage any hardware at all should look at managed hosting or cloud. But for organisations that need control over their hardware, have compliance requirements that mandate data location, or have workloads that are not cost-effective to run in the cloud, colocation remains the most practical and cost-effective option in Kenya's growing data centre market.

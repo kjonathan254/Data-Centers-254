@@ -17,7 +17,7 @@ import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
 
 /**
- * Per-facility profile pages — the SEO landers for queries like
+ * Per-facility profile pages, the SEO landers for queries like
  * "Safaricom Limuru data centre". Fully static, server-rendered from
  * directory-data.ts, with JSON-LD and prev/next navigation.
  */
@@ -77,7 +77,7 @@ export async function generateMetadata({
     : "capacity undisclosed";
   const fullTitle = `${f.name}, ${f.city}`;
   const title = fullTitle.length + 8 <= 60 ? fullTitle : f.name;
-  const description = `${f.name} is a ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name} (${mw}). Specs, connectivity, power and sourcing — verified ${fmtVerified(f.lastVerified)}.`;
+  const description = `${f.name} is a ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name} (${mw}). Specs, connectivity, power and sourcing, verified ${fmtVerified(f.lastVerified)}.`;
   return {
     title,
     description,
@@ -88,7 +88,7 @@ export async function generateMetadata({
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: f.heroImage || "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${f.name} — Data Centre 254` }],
+      images: [{ url: f.heroImage || "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${f.name}, Data Centre 254` }],
     },
     twitter: { card: "summary_large_image", title, description, images: [f.heroImage || "/images/africa-dc-map.webp"] },
   };
@@ -201,7 +201,7 @@ export default async function FacilityPage({
             </p>
           </header>
 
-          {/* Verified facility photo — shown only where identity is publisher-confirmed */}
+          {/* Verified facility photo, shown only where identity is publisher-confirmed */}
           {f.heroImage && (
             <figure className="mt-8 max-w-3xl">
               <div className="img-frame relative aspect-[16/9]">
@@ -215,13 +215,13 @@ export default async function FacilityPage({
                 />
               </div>
               <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                {f.name} from the air — rooftop solar on the completed phase,
+                {f.name} from the air, rooftop solar on the completed phase,
                 the next phase under construction alongside. {f.heroImageCredit}
               </figcaption>
             </figure>
           )}
 
-          {/* Lead paragraph — synthesised from verified fields */}
+          {/* Lead paragraph, synthesised from verified fields */}
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
             {f.name} is a {stagePhrase(f.status)} data centre facility in{" "}
             {f.city}, Kenya, operated by {f.operator.name}.{" "}
@@ -229,14 +229,14 @@ export default async function FacilityPage({
               ? `Its designed capacity is ${f.totalCapacityMw} MW${f.itLoadMw ? `, of which ${f.itLoadMw} MW of IT load is live` : ""}.`
               : "Its total capacity has not been publicly disclosed."}{" "}
             {f.tierRating ? `The facility carries a Tier ${f.tierRating} rating. ` : ""}
-            It sits inside DC254&apos;s four-stage supply pipeline —{" "}
+            It sits inside DC254&apos;s four-stage supply pipeline , {" "}
             <Link href="/directory" className="text-cyan underline hover:underline">
               see how Kenya&apos;s market stages up
             </Link>
             .
           </p>
 
-          {/* Compare CTA — deep link preselects this facility plus city peers */}
+          {/* Compare CTA, deep link preselects this facility plus city peers */}
           {peers.length > 0 && (
             <div className="card-solid mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl p-4">
               <p className="flex items-center gap-2 text-sm text-muted-foreground">

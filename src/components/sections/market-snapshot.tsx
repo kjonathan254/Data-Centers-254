@@ -6,7 +6,7 @@ import {
 import { getMarketSnapshot } from "@/lib/directory-data";
 
 /**
- * Market Snapshot — pipeline-staged supply view (Live / Under Construction /
+ * Market Snapshot, pipeline-staged supply view (Live / Under Construction /
  * Committed / Early Stage) with the methodology printed underneath, DC-Byte
  * style but honest: built capacity and verified live IT load reported
  * separately. Server component; every number comes from directory-data.ts.
@@ -65,7 +65,7 @@ export default function MarketSnapshot() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
               Capacity moves through a pipeline before it serves a single
-              server. We stage it the way investors read it — so you can tell
+              server. We stage it the way investors read it, so you can tell
               working infrastructure from press releases.
             </p>
           </div>
@@ -115,14 +115,14 @@ export default function MarketSnapshot() {
           </div>
         </div>
 
-        {/* Printed definition — the trust layer that paid trackers bolt behind signup */}
+        {/* Printed definition, the trust layer that paid trackers bolt behind signup */}
         <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
           <strong className="font-medium text-muted-foreground">How we count:</strong>{" "}
           Total supply is the sum of designed capacity across all four stages.
           Of the {snap.stages[0].mw.toFixed(1)} MW of live capacity,{" "}
           {snap.liveItLoadMw.toFixed(1)} MW is verified in-service IT load;
           pipeline figures are developer-announced. Every facility carries its
-          source and verification date — last verified {fmtVerified(snap.lastVerified) || "August 2026"}.
+          source and verification date, last verified {fmtVerified(snap.lastVerified) || "August 2026"}.
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">

@@ -19,7 +19,7 @@ og_image: "/images/dc-gpu-cluster-3-wide.webp"
 reading_time: "10 min"
 images:
   - src: "/images/dc-gpu-cluster-3-wide.webp"
-    alt: "Data centre equipment aisles — edge cloud and content hosting"
+    alt: "Data centre equipment aisles, edge cloud and content hosting"
     caption: "Wingu bets on edge: smaller rooms, closer to users, feeding cloud and content"
     position: hero
   - src: "/images/hero-server-hall.webp"

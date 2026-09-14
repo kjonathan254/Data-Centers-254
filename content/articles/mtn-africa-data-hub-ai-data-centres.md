@@ -25,7 +25,7 @@ images:
     position: "hero"
   - src: "/images/grid-technician-pole-work.webp"
     alt: "Grid technician working on overhead power distribution lines"
-    caption: "AI workloads demand far higher power density than traditional enterprise colocation — and every one of those megawatts starts at the grid"
+    caption: "AI workloads demand far higher power density than traditional enterprise colocation, and every one of those megawatts starts at the grid"
     position: "section-break"
   - src: "/images/whats-inside-ai-data-center.webp"
     alt:  "Cutaway infographic of an AI data centre's systems"
@@ -79,7 +79,7 @@ That comparison is instructive. The Gulf states transformed themselves from data
 
 The formal announcement, published by IT News Africa on 31 August 2026, added useful structural detail to the original reporting. The agreement was signed by MTN Digital Infrastructure, the group subsidiary that houses MTN's towers, fibre, and data centre assets, and the venture will operate through Africa Data Hub Holding Limited as the platform through which future digital infrastructure opportunities are developed and scaled, with an initial focus on South Africa and Nigeria.
 
-Two details stand out for infrastructure watchers. First, Bayobab, MTN's digital connectivity business, is not just a supplier but a shareholder in the partnership, and will provide open-access connectivity and go-to-market support across its pan-African network. Bundling wholesale fibre with data centre capacity into one platform mirrors the integrated land-and-power-and-fibre model that successful data centre platforms use to shorten time-to-revenue. Second, the announcement framed the venture explicitly as part of MTN's Ambition 2030 strategy, with group digital infrastructure CEO Mazen Mroué describing a platform "capable of supporting hyperscalers, cloud providers, enterprises and technology innovators across Africa" — language that positions Africa Data Hub as wholesale infrastructure rather than an MTN-internal cloud play.
+Two details stand out for infrastructure watchers. First, Bayobab, MTN's digital connectivity business, is not just a supplier but a shareholder in the partnership, and will provide open-access connectivity and go-to-market support across its pan-African network. Bundling wholesale fibre with data centre capacity into one platform mirrors the integrated land-and-power-and-fibre model that successful data centre platforms use to shorten time-to-revenue. Second, the announcement framed the venture explicitly as part of MTN's Ambition 2030 strategy, with group digital infrastructure CEO Mazen Mroué describing a platform "capable of supporting hyperscalers, cloud providers, enterprises and technology innovators across Africa", language that positions Africa Data Hub as wholesale infrastructure rather than an MTN-internal cloud play.
 
 Mroué's framing also clarified the demand thesis: "Africa's digital economy is entering a new era, driven by rapid advances in artificial intelligence, cloud adoption and digital innovation. Realising this opportunity requires more than connectivity. It requires the infrastructure platforms that will power the next generation of digital services, businesses and innovation." For Al Ashram, the pitch is experience transfer: having watched data centre platforms accelerate cloud and AI growth in the Middle East, he described Africa as presenting "a similarly compelling opportunity" driven by demand, expanding digital economies, and the need for resilient, scalable infrastructure.
 

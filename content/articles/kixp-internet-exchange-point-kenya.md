@@ -52,7 +52,7 @@ external_sources:
     url: "https://www.kixp.or.ke/"
 faq:
   - question: "What is an Internet Exchange Point?"
-    answer: "An IX is a facility where different networks connect directly to exchange traffic. Without an IX, traffic between two networks in the same city might route through Europe or South Africa. With an IX, it stays local — faster and cheaper."
+    answer: "An IX is a facility where different networks connect directly to exchange traffic. Without an IX, traffic between two networks in the same city might route through Europe or South Africa. With an IX, it stays local, faster and cheaper."
   - question: "Who can connect to KIXP?"
     answer: "KIXP is open to any organisation that operates its own autonomous system (AS). This includes ISPs, mobile operators, content providers like Google and Netflix, cloud platforms, government networks, and educational institutions."
   - question: "How much traffic does KIXP handle?"
@@ -66,13 +66,13 @@ canonical_url: "https://data-centers-254.vercel.app/articles/kixp-internet-excha
 
 ![Submarine cable coming ashore at a Kenyan beach landing](/images/mombasa-cable-landing.webp)
 
-Every time a Safaricom subscriber in Nairobi opens the Kenya Revenue Authority iTax portal, and every time an Airtel user in Mombasa streams a video hosted on Google's local cache, that traffic flows through KIXP — the Kenya Internet Exchange Point. KIXP is the single most important piece of internet infrastructure that most Kenyans have never heard of, and it fundamentally shapes how fast, how cheap, and how reliable the internet feels in Kenya.
+Every time a Safaricom subscriber in Nairobi opens the Kenya Revenue Authority iTax portal, and every time an Airtel user in Mombasa streams a video hosted on Google's local cache, that traffic flows through KIXP, the Kenya Internet Exchange Point. KIXP is the single most important piece of internet infrastructure that most Kenyans have never heard of, and it fundamentally shapes how fast, how cheap, and how reliable the internet feels in Kenya.
 
 KIXP is an Internet Exchange Point (IXP): a physical facility where different networks meet to swap traffic directly. Instead of every local data request detouring through an undersea cable to Europe and back, KIXP keeps that traffic inside Kenya. The result is lower latency, lower costs, and a more resilient internet for the entire country.
 
 ## How Does KIXP Actually Work?
 
-At its core, KIXP is a high-speed Ethernet switch — technically, a set of redundant switching platforms — housed in [carrier-neutral data centres](/articles/what-is-a-data-centre) in Nairobi. Each member network runs a physical fibre connection from their own equipment to the KIXP switch. Using the Border Gateway Protocol (BGP), members advertise which IP addresses they can reach. When one member wants to send data to an IP address belonging to another member, the traffic goes straight across the switch rather than traveling through an upstream transit provider.
+At its core, KIXP is a high-speed Ethernet switch (technically, a set of redundant switching platforms) housed in [carrier-neutral data centres](/articles/what-is-a-data-centre) in Nairobi. Each member network runs a physical fibre connection from their own equipment to the KIXP switch. Using the Border Gateway Protocol (BGP), members advertise which IP addresses they can reach. When one member wants to send data to an IP address belonging to another member, the traffic goes straight across the switch rather than traveling through an upstream transit provider.
 
 The mechanics are straightforward, but the economics are profound. Without KIXP, a Safaricom customer accessing a website hosted on Liquid Intelligent Technologies would send traffic from Safaricom's network, through a transit provider, often routed via the [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa) to a point of presence in Europe or the Middle East, and then back down to Liquid's network in Nairobi. That round trip adds 150 to 250 milliseconds of latency and consumes expensive international bandwidth on both ends.
 
@@ -82,7 +82,7 @@ With KIXP, the same traffic crosses a single Ethernet switch in Nairobi. Latency
 
 ## The History of KIXP
 
-KIXP was established in 2000 by the [Telecommunications Service Providers Association of Kenya (TESPOK)](https://www.kixp.or.ke/), making it one of the first IXPs in sub-Saharan Africa. At the time, Kenya's internet was served almost entirely through satellite links. International bandwidth cost upwards of USD 7,000 per megabit per second per month — a price that made any meaningful local internet ecosystem impossible.
+KIXP was established in 2000 by the [Telecommunications Service Providers Association of Kenya (TESPOK)](https://www.kixp.or.ke/), making it one of the first IXPs in sub-Saharan Africa. At the time, Kenya's internet was served almost entirely through satellite links. International bandwidth cost upwards of USD 7,000 per megabit per second per month, a price that made any meaningful local internet ecosystem impossible.
 
 The early years were difficult. KIXP's founding members had to overcome regulatory resistance from the then-monopoly operator, Kenya Posts and Telecommunications Corporation (KPTC), and later Telkom Kenya. There was no legal framework for internet peering, and the dominant incumbent had little incentive to share traffic locally when it was earning revenue carrying that same traffic internationally.
 
@@ -104,7 +104,7 @@ KIXP's membership has expanded far beyond traditional ISPs. The current member r
 
 ## Peering vs Transit: What Is the Difference?
 
-Understanding KIXP requires understanding the distinction between peering and transit, because these two arrangements determine how most internet traffic flows — and how much it costs.
+Understanding KIXP requires understanding the distinction between peering and transit, because these two arrangements determine how most internet traffic flows, and how much it costs.
 
 | Characteristic | Peering (at KIXP) | Transit (upstream provider) |
 |---|---|---|
@@ -115,15 +115,15 @@ Understanding KIXP requires understanding the distinction between peering and tr
 | **Who uses it** | Networks exchanging local traffic | Networks needing global reach |
 | **Example** | Safaricom ↔ Google cache at KIXP | Small ISP → Liquid → London → destination |
 
-Most Kenyan networks use a combination. They peer at KIXP for local traffic — which, thanks to content caching, can represent 60–80% of total volume — and buy transit from an upstream provider for everything else. The more traffic a network can peer locally, the less transit it needs to purchase, and the lower its operating costs.
+Most Kenyan networks use a combination. They peer at KIXP for local traffic (which, thanks to content caching, can represent 60–80% of total volume) and buy transit from an upstream provider for everything else. The more traffic a network can peer locally, the less transit it needs to purchase, and the lower its operating costs.
 
 ## Why KIXP Matters for Internet Costs in Kenya
 
-Kenya has some of the most affordable mobile data prices in Africa. According to the Alliance for Affordable Internet (A4AI), 1 GB of mobile data in Kenya costs roughly 2–3% of monthly income at the national poverty line — well below the A4AI's affordability threshold of 2% for low-income groups (as measured at the median income level). KIXP is not the only reason, but it is a significant contributing factor.
+Kenya has some of the most affordable mobile data prices in Africa. According to the Alliance for Affordable Internet (A4AI), 1 GB of mobile data in Kenya costs roughly 2–3% of monthly income at the national poverty line, well below the A4AI's affordability threshold of 2% for low-income groups (as measured at the median income level). KIXP is not the only reason, but it is a significant contributing factor.
 
-Consider the arithmetic. If Safaricom handles 500 Gbps of total traffic during peak evening hours, and 70% of that traffic can be peered locally at KIXP (350 Gbps), then Safaricom only needs to purchase transit capacity for the remaining 150 Gbps. Without KIXP, that full 500 Gbps would need international transit. At current wholesale prices, the difference is tens of thousands of dollars per month — savings that directly affect consumer pricing.
+Consider the arithmetic. If Safaricom handles 500 Gbps of total traffic during peak evening hours, and 70% of that traffic can be peered locally at KIXP (350 Gbps), then Safaricom only needs to purchase transit capacity for the remaining 150 Gbps. Without KIXP, that full 500 Gbps would need international transit. At current wholesale prices, the difference is tens of thousands of dollars per month, savings that directly affect consumer pricing.
 
-KIXP also reduces the load on Kenya's international links. This is important for national resilience. The [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa) have finite capacity. During cable cuts — which happen several times a year — KIXP-local traffic is completely unaffected. Kenyans can still access local banking, government services, and locally cached content even when the country's connection to the global internet is degraded.
+KIXP also reduces the load on Kenya's international links. This is important for national resilience. The [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa) have finite capacity. During cable cuts (which happen several times a year) KIXP-local traffic is completely unaffected. Kenyans can still access local banking, government services, and locally cached content even when the country's connection to the global internet is degraded.
 
 ![Aerial view of the Port of Mombasa and its container terminal](/images/mombasa-port-wide.webp)
 
@@ -136,7 +136,7 @@ The technical specifications matter for reliability. KIXP's switching infrastruc
 - **Redundancy**: Dual switches in separate data centres ensure that a single hardware failure does not disconnect members. Each member is encouraged to connect to both sites.
 - **Low latency**: The entire switching fabric adds less than 1 millisecond of delay. Traffic between two members in the same data centre facility experiences sub-millisecond latency.
 - **Scalability**: The current platform supports 100 Gigabit Ethernet ports, with the ability to upgrade to 400 Gigabit as demand grows.
-- **Neutrality**: KIXP is operated by TESPOK on a non-profit basis. No member receives preferential treatment. The exchange does not sell transit — it only facilitates peering.
+- **Neutrality**: KIXP is operated by TESPOK on a non-profit basis. No member receives preferential treatment. The exchange does not sell transit, it only facilitates peering.
 
 The physical locations of KIXP's switching equipment are within commercial data centres in Nairobi. You can find these and similar facilities in the [Kenya data centre directory](/directory). Members collocate their own routers and servers in these same facilities, or they run dedicated fibre from their own premises to the KIXP point of presence.
 
@@ -146,9 +146,9 @@ The physical locations of KIXP's switching equipment are within commercial data 
 
 One of the most impactful developments at KIXP in the last decade has been the arrival of large content providers. Google installed a Global Cache node accessible via KIXP in the early 2010s. Netflix followed with its own Open Connect appliance. Meta, Cloudflare, and Akamai have all established local presence.
 
-Content caching works by storing popular content — YouTube videos, Netflix shows, Facebook images, web assets — on servers physically located in or near KIXP. When a Kenyan user requests that content, it is served from the local cache rather than from a data centre in Europe or the US. Because the cache connects to KIXP, every member network can reach it with minimal latency and zero international bandwidth cost.
+Content caching works by storing popular content (YouTube videos, Netflix shows, Facebook images, web assets) on servers physically located in or near KIXP. When a Kenyan user requests that content, it is served from the local cache rather than from a data centre in Europe or the US. Because the cache connects to KIXP, every member network can reach it with minimal latency and zero international bandwidth cost.
 
-The effect on traffic patterns has been dramatic. Before content caching, the vast majority of traffic on Kenyan networks was outbound — Kenyan users pulling content from overseas. Today, thanks to caching and the growth of local digital services like M-Pesa, KENET, and government portals, a substantial and growing fraction of traffic is genuinely local in both directions.
+The effect on traffic patterns has been dramatic. Before content caching, the vast majority of traffic on Kenyan networks was outbound, Kenyan users pulling content from overseas. Today, thanks to caching and the growth of local digital services like M-Pesa, KENET, and government portals, a substantial and growing fraction of traffic is genuinely local in both directions.
 
 ## How Does KIXP Compare to Other African IXPs?
 
@@ -160,7 +160,7 @@ Rwanda's RINEX, Tanzania's TIX, and Uganda's UIXP have all benefited from lesson
 
 ## The Policy and Regulatory Environment
 
-Kenya's regulatory framework has been broadly supportive of internet peering, though the relationship has not always been smooth. The Communications Authority of Kenya (CA) has not mandated peering — KIXP operates on a voluntary, bilateral peering model. Some policymakers have argued that mandatory peering would improve service quality, while the industry has generally preferred the current voluntary approach, arguing that it encourages investment and avoids the complexity of regulatory intervention.
+Kenya's regulatory framework has been broadly supportive of internet peering, though the relationship has not always been smooth. The Communications Authority of Kenya (CA) has not mandated peering, KIXP operates on a voluntary, bilateral peering model. Some policymakers have argued that mandatory peering would improve service quality, while the industry has generally preferred the current voluntary approach, arguing that it encourages investment and avoids the complexity of regulatory intervention.
 
 Taxation of digital services is a related policy issue that indirectly affects KIXP. Kenya's Digital Services Tax, introduced in 2021, imposed a levy on income from services delivered over the internet. While the tax does not directly target peering, it affects the economics of content providers operating in Kenya and, by extension, the incentives for maintaining local caching infrastructure.
 
@@ -170,11 +170,11 @@ The Kenya Information and Communications (Amendment) Act, 2013 also has implicat
 
 Despite its success, KIXP faces several challenges:
 
-**Limited regional interconnection**. Traffic between Kenya and its neighbours — Uganda, Tanzania, Rwanda — often still routes through Europe. While there are efforts to establish cross-border peering, regulatory differences, commercial disputes, and the lack of direct fibre links between national IXPs remain obstacles.
+**Limited regional interconnection**. Traffic between Kenya and its neighbours (Uganda, Tanzania, Rwanda) often still routes through Europe. While there are efforts to establish cross-border peering, regulatory differences, commercial disputes, and the lack of direct fibre links between national IXPs remain obstacles.
 
 **Concentration in Nairobi**. KIXP's infrastructure is concentrated in Nairobi. ISPs serving Mombasa, Kisumu, or coastal regions must backhaul traffic to Nairobi to peer, adding cost and latency. There have been discussions about establishing remote peering points or a secondary KIXP node in Mombasa, but no concrete plans have been implemented.
 
-**Power costs**. Kenya's electricity tariffs, while lower than many African countries, have been rising. Data centres — including those hosting KIXP — are significant power consumers, and these costs are ultimately borne by members.
+**Power costs**. Kenya's electricity tariffs, while lower than many African countries, have been rising. Data centres (including those hosting KIXP) are significant power consumers, and these costs are ultimately borne by members.
 
 **Security concerns**. Like any critical internet infrastructure, KIXP is a potential target for cyberattacks. While the exchange itself is a Layer 2 facility and does not inspect application-layer traffic, BGP hijacking and route leaks from misconfigured members are ongoing risks that require constant monitoring.
 
@@ -182,7 +182,7 @@ Despite its success, KIXP faces several challenges:
 
 **What is an Internet Exchange Point?**
 
-An IX is a facility where different networks connect directly to exchange traffic. Without an IX, traffic between two networks in the same city might route through Europe or South Africa. With an IX, it stays local — faster and cheaper.
+An IX is a facility where different networks connect directly to exchange traffic. Without an IX, traffic between two networks in the same city might route through Europe or South Africa. With an IX, it stays local, faster and cheaper.
 
 **Who can connect to KIXP?**
 
@@ -202,8 +202,8 @@ Peering is a direct, typically free, exchange of traffic between two networks at
 
 ## Why KIXP Will Become Even More Important
 
-Kenya's internet user base continues to grow. The Communications Authority of Kenya reports over 25 million internet subscribers as of 2025, with mobile internet penetration exceeding 60%. The government's digital transformation agenda — which includes moving services online, expanding e-commerce, and developing smart city infrastructure — will generate enormous volumes of local traffic.
+Kenya's internet user base continues to grow. The Communications Authority of Kenya reports over 25 million internet subscribers as of 2025, with mobile internet penetration exceeding 60%. The government's digital transformation agenda (which includes moving services online, expanding e-commerce, and developing smart city infrastructure) will generate enormous volumes of local traffic.
 
-Cloud computing adoption among Kenyan enterprises is accelerating. As more businesses migrate workloads to cloud platforms with local points of presence, the traffic between those platforms and end users will flow through KIXP. The same applies to edge computing, 5G networks, and the Internet of Things — all of which generate traffic that benefits from local peering.
+Cloud computing adoption among Kenyan enterprises is accelerating. As more businesses migrate workloads to cloud platforms with local points of presence, the traffic between those platforms and end users will flow through KIXP. The same applies to edge computing, 5G networks, and the Internet of Things, all of which generate traffic that benefits from local peering.
 
-KIXP is not a glamorous technology. It does not make headlines the way a new submarine cable or a data centre grand opening does. But it is the quiet infrastructure that makes everything else work efficiently. Without KIXP, Kenya's internet would be slower, more expensive, and more fragile. With it, the country has built one of the most effective peering ecosystems on the African continent — and that foundation will support the next generation of Kenya's digital economy.
+KIXP is not a glamorous technology. It does not make headlines the way a new submarine cable or a data centre grand opening does. But it is the quiet infrastructure that makes everything else work efficiently. Without KIXP, Kenya's internet would be slower, more expensive, and more fragile. With it, the country has built one of the most effective peering ecosystems on the African continent, and that foundation will support the next generation of Kenya's digital economy.

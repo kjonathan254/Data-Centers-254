@@ -6,7 +6,7 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Inside Data Centres",
   description:
-    "How data centres actually work — cooling, power, cabling, fire suppression and building design — plus the facilities operating in Kenya today. Plain-language explainers from DC254.",
+    "How data centres actually work (cooling, power, cabling, fire suppression and building design) plus the facilities operating in Kenya today. Plain-language explainers from DC254.",
   alternates: { canonical: "/data-centres" },
   keywords: [
     "how data centres work",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Inside Data Centres | Data Centre 254",
     description:
-      "Cooling, power, cabling and design — how the buildings behind Kenya's digital economy actually work.",
+      "Cooling, power, cabling and design, how the buildings behind Kenya's digital economy actually work.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",

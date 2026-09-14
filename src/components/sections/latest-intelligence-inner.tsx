@@ -16,7 +16,7 @@ interface Article {
 }
 
 /**
- * Latest intelligence — image-led article cards under a left-aligned
+ * Latest intelligence, image-led article cards under a left-aligned
  * editorial header. Server component; zero client JS.
  */
 export default function LatestIntelligenceInner({ articles }: { articles: Article[] }) {
@@ -25,7 +25,7 @@ export default function LatestIntelligenceInner({ articles }: { articles: Articl
   return (
     <section className="section-pad">
       <div className="container-site">
-        {/* Section header — left-aligned editorial pattern */}
+        {/* Section header, left-aligned editorial pattern */}
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="eyebrow">Latest intelligence</p>

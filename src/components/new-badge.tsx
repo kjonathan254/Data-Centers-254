@@ -1,5 +1,5 @@
 /**
- * "New" badge — green pill with a neon glow, shown on article cards in
+ * "New" badge, green pill with a neon glow, shown on article cards in
  * listings. Displayed only when isArticleFresh() is true (see
  * src/lib/articles.ts), so badge state can never disagree with the
  * freshness sort that puts those same stories on top.

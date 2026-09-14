@@ -4,14 +4,14 @@ import { rateLimit, clientIp } from "@/lib/rate-limit";
 import { resolveGroqKey, LLM_BASE_URL, llmTtsVoice } from "@/lib/chatbot/llm";
 
 /**
- * POST /api/chat/tts — HD voice for Jibu via Groq's free PlayAI TTS.
+ * POST /api/chat/tts, HD voice for Jibu via Groq's free PlayAI TTS.
  *
- * Request:  { text: string } (≤ 600 chars — Jibu's replies are short)
+ * Request:  { text: string } (≤ 600 chars, Jibu's replies are short)
  * Response: audio/wav stream on success.
  *
  * Any failure (no key, PlayAI terms not yet accepted at console.groq.com,
  * quota, network) returns 503 JSON and the client silently falls back to the
- * device-side Web Speech voice — the user never sees an error. A circuit
+ * device-side Web Speech voice, the user never sees an error. A circuit
  * breaker stops hammering Groq for 10 minutes after a config-level failure.
  */
 
@@ -27,7 +27,7 @@ let downUntil = 0;
 export async function POST(request: NextRequest) {
   const ip = clientIp(request);
   if ((await rateLimit("tts", ip, RATE_LIMIT, WINDOW_MS)).limited) {
-    return NextResponse.json({ error: "Too fast — one moment." }, { status: 429 });
+    return NextResponse.json({ error: "Too fast, one moment." }, { status: 429 });
   }
 
   const apiKey = resolveGroqKey();

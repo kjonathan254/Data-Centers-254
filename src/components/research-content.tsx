@@ -37,7 +37,7 @@ const reports = [
     title: "Kenya Data Centre Index 2026",
     period: "August 2026 · 10 pages",
     description:
-      "The first open, facility-level census of Kenya's data centre market — supply pipeline, quantum landscape, interconnection context, outlook and data provenance, every number sourced and dated. Superseded figures: the August dataset tracked 16 facilities; Brief / 01 carries the September verification at 26.",
+      "The first open, facility-level census of Kenya's data centre market, supply pipeline, quantum landscape, interconnection context, outlook and data provenance, every number sourced and dated. Superseded figures: the August dataset tracked 16 facilities; Brief / 01 carries the September verification at 26.",
     stats: [],
     summaryHref: null,
     pdfHref: "/reports/dc254-kenya-data-centre-index-2026.pdf",
@@ -64,7 +64,7 @@ export default function ResearchContent() {
           </h1>
           <p className="text-subtitle-center mt-4">
             Every report ships two ways: a free summary on the web, and a
-            downloadable deep-dive PDF. Open data — no signup wall.
+            downloadable deep-dive PDF. Open data, no signup wall.
           </p>
         </motion.div>
 
@@ -180,7 +180,7 @@ export default function ResearchContent() {
               </h2>
               <p className="text-sm leading-relaxed text-muted-foreground mt-2.5 mb-5">
                 Kenya&apos;s grid constraint, geothermal supply, PUE and the
-                energy-to-capacity equation — the sequel the 2027 watchlist
+                energy-to-capacity equation, the sequel the 2027 watchlist
                 keeps pointing at. Same shape as Brief / 01: a cover image, a
                 three-point summary, two infographics, dated sources.
               </p>
@@ -208,7 +208,7 @@ export default function ResearchContent() {
                 on: a relevant cover image, a three-point summary you can read
                 in thirty seconds, one or two infographics that carry the
                 argument, and dated sources at the back. No fifty-page decks,
-                no registration gates — the web edition is always free, the
+                no registration gates, the web edition is always free, the
                 PDF is always downloadable.
               </p>
             </div>

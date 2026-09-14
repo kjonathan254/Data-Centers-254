@@ -62,13 +62,13 @@ faq:
   - question: "Who owns submarine cables landing in Kenya?"
     answer: "Cables are owned by consortia of telecom operators, governments, and tech companies. TEAMS is owned by the Kenyan government (via Telkom Kenya), EASSy by a 21-member consortium, 2Africa by Meta and a consortium, and Africa-1 by China Telecom and partners."
   - question: "How fast are the connections through these cables?"
-    answer: "Modern cables like 2Africa deliver 180 Tbps of design capacity. EASSy was upgraded to 48 Tbps. The actual lit capacity varies, but Kenya's aggregate international bandwidth exceeds 20 Tbps — more than enough for current demand."
+    answer: "Modern cables like 2Africa deliver 180 Tbps of design capacity. EASSy was upgraded to 48 Tbps. The actual lit capacity varies, but Kenya's aggregate international bandwidth exceeds 20 Tbps, more than enough for current demand."
 canonical_url: "https://data-centers-254.vercel.app/articles/submarine-cables-landing-mombasa"
 ---
 
 Mombasa sits at the eastern edge of Kenya's coastline, and beneath its waters run the fibre optic cables that connect over 300 million people in East and Central Africa to the global internet. At least eight major submarine cable systems land at stations along the Mombasa coast, making this city the single most important internet gateway in the region. Every WhatsApp message sent from Nairobi, every M-Pesa transaction processed, and every Netflix stream watched in Kenya begins or ends its oceanic journey here.
 
-Submarine cables are the physical backbone of the internet. Despite the proliferation of satellite services like Starlink, more than 99% of intercontinental data traffic travels through these undersea fibre lines. For Kenya and its landlocked neighbours — Uganda, Rwanda, Burundi, South Sudan, and eastern DRC — Mombasa is the doorway to the digital world.
+Submarine cables are the physical backbone of the internet. Despite the proliferation of satellite services like Starlink, more than 99% of intercontinental data traffic travels through these undersea fibre lines. For Kenya and its landlocked neighbours (Uganda, Rwanda, Burundi, South Sudan, and eastern DRC) Mombasa is the doorway to the digital world.
 
 ![Wide aerial view of the Port of Mombasa](/images/mombasa-port-wide.webp)
 
@@ -78,23 +78,23 @@ Kenya's first submarine cable, TEAMS (The East African Marine System), landed in
 
 The cables currently landing in Mombasa include:
 
-- **TEAMS** (2009) — Owned by Telkom Kenya on behalf of the Kenyan government. Initial capacity 1.28 Tbps, subsequently upgraded. Connects Kenya to the United Arab Emirates and onwards to Europe and Asia.
+- **TEAMS** (2009), Owned by Telkom Kenya on behalf of the Kenyan government. Initial capacity 1.28 Tbps, subsequently upgraded. Connects Kenya to the United Arab Emirates and onwards to Europe and Asia.
 
-- **SEACOM** (2009) — Privately owned, connects South Africa, Mozambique, Tanzania, and Kenya to Europe and India. Played a crucial role in breaking the bandwidth monopoly in East Africa.
+- **SEACOM** (2009), Privately owned, connects South Africa, Mozambique, Tanzania, and Kenya to Europe and India. Played a crucial role in breaking the bandwidth monopoly in East Africa.
 
-- **EASSy** (2010) — The Eastern Africa Submarine System, a 21-member consortium cable running from South Africa to Sudan, with a branch landing in Mombasa. Connects to Europe via multiple landing points.
+- **EASSy** (2010), The Eastern Africa Submarine System, a 21-member consortium cable running from South Africa to Sudan, with a branch landing in Mombasa. Connects to Europe via multiple landing points.
 
-- **DARE** (2022) — The Djibouti Africa Regional Express, connecting Djibouti to Mombasa and on to South Africa. Designed to provide diversity and redundancy for landlocked East African nations.
+- **DARE** (2022), The Djibouti Africa Regional Express, connecting Djibouti to Mombasa and on to South Africa. Designed to provide diversity and redundancy for landlocked East African nations.
 
-- **2Africa** (2024) — One of the largest subsea cable projects globally, built by a consortium led by Meta. 2Africa lands in Mombasa and delivers 180 Tbps of design capacity, dwarfing all previous cables.
+- **2Africa** (2024), One of the largest subsea cable projects globally, built by a consortium led by Meta. 2Africa lands in Mombasa and delivers 180 Tbps of design capacity, dwarfing all previous cables.
 
-- **Africa-1** (2025) — A China Telecom-led cable connecting Africa to Asia via the Indian Ocean. Adds further capacity and route diversity.
+- **Africa-1** (2025), A China Telecom-led cable connecting Africa to Asia via the Indian Ocean. Adds further capacity and route diversity.
 
-- **PEACE** (2022) — Pakistan and East Africa Connecting Europe, with a branch to Mombasa. Provides a new route to Europe via Pakistan and the Middle East.
+- **PEACE** (2022), Pakistan and East Africa Connecting Europe, with a branch to Mombasa. Provides a new route to Europe via Pakistan and the Middle East.
 
-The cumulative design capacity of these systems exceeds 300 Tbps — an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
+The cumulative design capacity of these systems exceeds 300 Tbps, an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
 
-One development changes the geography without changing that count. At ITW Africa 2026 (September 2026), a consortium led by INDOI Ltd. (IOX) and Blue Trade Investments announced **LuLu**, a planned ~500km coastal cable system running from Mombasa to Lamu with landing points at Vipingo Special Economic Zone, Kilifi and Malindi in between. LuLu is not a tenth international system — it is Kenya's first dedicated coastal diversity route, pairing a subsea span (144 fibre pairs, up to 60 Tbps per pair) with a protected terrestrial path along the whole corridor. Its readiness-for-service target is Q2 2028, subject to contract execution; as of the announcement, no supplier was named and construction had not started. Full status check: [the LuLu coastal cable system](/articles/kenya-lulu-coastal-cable-system).
+One development changes the geography without changing that count. At ITW Africa 2026 (September 2026), a consortium led by INDOI Ltd. (IOX) and Blue Trade Investments announced **LuLu**, a planned ~500km coastal cable system running from Mombasa to Lamu with landing points at Vipingo Special Economic Zone, Kilifi and Malindi in between. LuLu is not a tenth international system, it is Kenya's first dedicated coastal diversity route, pairing a subsea span (144 fibre pairs, up to 60 Tbps per pair) with a protected terrestrial path along the whole corridor. Its readiness-for-service target is Q2 2028, subject to contract execution; as of the announcement, no supplier was named and construction had not started. Full status check: [the LuLu coastal cable system](/articles/kenya-lulu-coastal-cable-system).
 
 ![Diagram of subsea cable architecture from landing station to POP](/images/submarine-cable-diagram.webp)
 
@@ -102,7 +102,7 @@ One development changes the geography without changing that count. At ITW Africa
 
 A submarine cable does not plug directly into your phone. The journey from ocean floor to data centre involves several stages, each with its own infrastructure.
 
-When a submarine cable reaches shore, it terminates at a **cable landing station** — a purpose-built facility typically located in a secure, nondescript building near the coast. Inside, the cable's fibres are connected to terminal equipment that amplifies and splits the optical signals. From the landing station, the connection travels overland via **terrestrial fibre** — typically along railway lines, road reserves, or power line easements — to data centres in Nairobi, a distance of approximately 500 kilometres.
+When a submarine cable reaches shore, it terminates at a **cable landing station**, a purpose-built facility typically located in a secure, nondescript building near the coast. Inside, the cable's fibres are connected to terminal equipment that amplifies and splits the optical signals. From the landing station, the connection travels overland via **terrestrial fibre** (typically along railway lines, road reserves, or power line easements) to data centres in Nairobi, a distance of approximately 500 kilometres.
 
 In Nairobi, the cables connect to facilities like the [Kenya Internet Exchange Point (KIXP)](/articles/kixp-internet-exchange-point-kenya), where local traffic is handed off between ISPs, and to international carrier-neutral data centres like iXAfrica and Africa Data Centres, where global content providers and cloud platforms maintain their presence.
 
@@ -124,11 +124,11 @@ Mombasa's dominance as a cable landing point is not accidental. Several factors 
 
 ## What Happens When a Cable Is Cut?
 
-Submarine cables are vulnerable to damage from ship anchors, fishing trawlers, underwater landslides, and occasionally deliberate sabotage. Cable cuts are more common than most people realise — the Submarine Cable Almanac records dozens of outages globally each year.
+Submarine cables are vulnerable to damage from ship anchors, fishing trawlers, underwater landslides, and occasionally deliberate sabotage. Cable cuts are more common than most people realise, the Submarine Cable Almanac records dozens of outages globally each year.
 
 Kenya's multi-cable architecture provides natural redundancy. If TEAMS is cut, traffic can reroute through SEACOM, EASSy, or 2Africa. The [data centre licensing framework](/articles/kenya-data-centre-licensing-framework) also requires operators to maintain diverse connectivity paths, which further protects against single points of failure.
 
-The real risk is not a single cable cut but a simultaneous outage affecting multiple cables. This can happen if cables share a common geographic hazard — for example, if several cables pass through the same narrow strait and a single event damages all of them. The Indian Ocean has experienced such events, but Kenya's cable diversity (landing at geographically separated stations where possible) mitigates this risk.
+The real risk is not a single cable cut but a simultaneous outage affecting multiple cables. This can happen if cables share a common geographic hazard, for example, if several cables pass through the same narrow strait and a single event damages all of them. The Indian Ocean has experienced such events, but Kenya's cable diversity (landing at geographically separated stations where possible) mitigates this risk.
 
 Repair times vary. Shallow-water repairs near shore can be completed in days. Deep-water repairs in the open ocean typically take two to six weeks, depending on the availability of repair ships and weather conditions.
 
@@ -136,7 +136,7 @@ Repair times vary. Shallow-water repairs near shore can be completed in days. De
 
 ## The Satellite Question: Is Mombasa Still Relevant?
 
-Low Earth orbit (LEO) satellite constellations like Starlink, OneWeb, and Amazon's Project Kuiper are often presented as alternatives to submarine cables. For some use cases — particularly in remote areas far from fibre infrastructure — they are transformative. But for Kenya's international connectivity, satellites complement rather than replace submarine cables.
+Low Earth orbit (LEO) satellite constellations like Starlink, OneWeb, and Amazon's Project Kuiper are often presented as alternatives to submarine cables. For some use cases (particularly in remote areas far from fibre infrastructure) they are transformative. But for Kenya's international connectivity, satellites complement rather than replace submarine cables.
 
 Submarine cables still offer orders of magnitude more bandwidth at lower cost per bit than any satellite system. A single modern cable like 2Africa (180 Tbps) carries more capacity than all LEO satellites combined. Cables also have lower and more consistent latency, which matters for financial trading, real-time collaboration, and cloud computing workloads.
 
@@ -148,4 +148,4 @@ Where satellites excel is in providing connectivity to areas where terrestrial f
 
 The density of submarine cable connectivity in Mombasa is a significant competitive advantage for Kenya's data centre industry. International content providers and cloud platforms (Google, Microsoft, AWS, Netflix) need to be close to their users to deliver low-latency, high-quality experiences. Kenya's cable connectivity, combined with the data centre capacity in Nairobi, makes the country a natural hub for serving the East African market of over 300 million people.
 
-This is why companies like iXAfrica and Africa Data Centres are investing heavily in Nairobi — not just for the Kenyan market, but to serve as a regional hub for East and Central Africa. The submarine cables that land in Mombasa are the fundamental reason this strategy works.
+This is why companies like iXAfrica and Africa Data Centres are investing heavily in Nairobi, not just for the Kenyan market, but to serve as a regional hub for East and Central Africa. The submarine cables that land in Mombasa are the fundamental reason this strategy works.

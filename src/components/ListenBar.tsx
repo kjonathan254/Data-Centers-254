@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ListenBar — device-side text-to-speech for DC254 articles.
+ * ListenBar, device-side text-to-speech for DC254 articles.
  *
  * Approach: the browser's built-in Web Speech API. No audio files to host or
  * regenerate when an article changes, near-zero data cost for readers on
@@ -42,7 +42,7 @@ const WPM = 155; // approximate narration speed, for duration estimates
 const LS_VOICE = "dc254-listen-voice";
 const LS_RATE = "dc254-listen-rate";
 
-// Never-changing store — just lets useSyncExternalStore do client-only
+// Never-changing store, just lets useSyncExternalStore do client-only
 // feature detection without hydration mismatches or effect setState calls.
 const subscribeNoop = () => () => {};
 
@@ -93,7 +93,7 @@ function collectBlocks(root: HTMLElement): SpeechBlock[] {
   return blocks;
 }
 
-// Rank available English voices — en-GB preferred (closest to Kenyan
+// Rank available English voices, en-GB preferred (closest to Kenyan
 // English), then high-quality neural voices, then anything else.
 function scoreVoice(v: SpeechSynthesisVoice): number {
   const n = v.name.toLowerCase();
@@ -110,7 +110,7 @@ function scoreVoice(v: SpeechSynthesisVoice): number {
 
 export default function ListenBar({ targetId, slug }: Props) {
   // Client-only feature detection. React uses the server snapshot during
-  // hydration, then re-checks — no mismatch, no effect setState.
+  // hydration, then re-checks, no mismatch, no effect setState.
   const supported = useSyncExternalStore(
     subscribeNoop,
     () => typeof window !== "undefined" && "speechSynthesis" in window,
@@ -234,7 +234,7 @@ export default function ListenBar({ targetId, slug }: Props) {
     };
   }, [supported]);
 
-  // Keepalive — desktop Chrome silently stops long synthesis sessions;
+  // Keepalive, desktop Chrome silently stops long synthesis sessions;
   // a periodic pause/resume keeps the engine alive (standard workaround).
   useEffect(() => {
     if (status !== "playing") return;
@@ -269,7 +269,7 @@ export default function ListenBar({ targetId, slug }: Props) {
     if (!el) return;
     el.classList.add("dc-speaking");
     highlightRef.current = el;
-    // Only scroll when the block being read is off-screen — don't yank the
+    // Only scroll when the block being read is off-screen, don't yank the
     // reader around while they follow along.
     const r = el.getBoundingClientRect();
     if (r.top < 0 || r.bottom > window.innerHeight) {
@@ -374,7 +374,7 @@ export default function ListenBar({ targetId, slug }: Props) {
       synth.resume(); // resume a paused engine
       return;
     }
-    if (synth.speaking) return; // already playing — nothing to do
+    if (synth.speaking) return; // already playing, nothing to do
     speakFrom(idxRef.current);
   }, [speakFrom, status, trackStart]);
 
@@ -417,7 +417,7 @@ export default function ListenBar({ targetId, slug }: Props) {
     [status, voices]
   );
 
-  // Progress figures (from state — refs are only touched in handlers/effects).
+  // Progress figures (from state, refs are only touched in handlers/effects).
   const wordsDone = useMemo(() => {
     let s = 0;
     for (let i = 0; i < idx && i < wordCounts.length; i++) s += wordCounts[i];
@@ -507,7 +507,7 @@ export default function ListenBar({ targetId, slug }: Props) {
         )}
 
         <p className="mt-3 text-xs text-muted-foreground">
-          Read aloud with your device&apos;s built-in voice — no audio files,
+          Read aloud with your device&apos;s built-in voice, no audio files,
           minimal data use. Pick a different narrator or speed above.
         </p>
       </section>

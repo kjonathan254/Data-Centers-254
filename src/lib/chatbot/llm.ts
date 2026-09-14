@@ -1,5 +1,5 @@
 /**
- * Multi-provider LLM wiring for Jibu — the single place that knows how the
+ * Multi-provider LLM wiring for Jibu, the single place that knows how the
  * brain and the voice are wired. Everything degrades silently: when no key
  * is configured (or a key stops working), callers fall back to the
  * deterministic engine and the device-side voice. The site never breaks
@@ -8,14 +8,14 @@
  * Providers, in priority order (the first configured one answers; the rest
  * are fail-over slots that activate the moment their key appears in env):
  *
- *   1. groq        — GROQ_API_KEY (recommended) / CHAT_LLM_API_KEY /
+ *   1. groq       , GROQ_API_KEY (recommended) / CHAT_LLM_API_KEY /
  *                    GROQ_KEY / GROQ_TOKEN / DATACENTRE254_JIBU, or any env
  *                    var whose name mentions "groq"/"jibu" holding a gsk_…
  *                    key.  Base: https://api.groq.com/openai/v1
  *                    Also serves the playai-tts HD voice (Groq-only).
- *   2. nvidia      — NVIDIA_API_KEY (nvapi-…), free from build.nvidia.com →
+ *   2. nvidia     , NVIDIA_API_KEY (nvapi-…), free from build.nvidia.com →
  *                    "Get API Key".  Base: https://integrate.api.nvidia.com/v1
- *   3. huggingface — HF_TOKEN (hf_…), from huggingface.co/settings/tokens;
+ *   3. huggingface, HF_TOKEN (hf_…), from huggingface.co/settings/tokens;
  *                    monthly inference credits, OpenAI-compatible router.
  *                    Base: https://router.huggingface.co/v1
  *
@@ -32,7 +32,7 @@
  * Model ids were verified against the live catalogs on 2026-09-04:
  *   integrate.api.nvidia.com/v1/models and router.huggingface.co/v1/models.
  * The NVIDIA chain was then re-verified with a real account key on
- * 2026-09-05 — a catalog listing is no guarantee a model answers for your
+ * 2026-09-05, a catalog listing is no guarantee a model answers for your
  * account (see the NVIDIA_CHAIN note below). Chains self-heal regardless:
  * a refused id is remembered and skipped.
  */
@@ -135,7 +135,7 @@ const GROQ_CHAIN = [
 /**
  * NVIDIA chain re-verified 2026-09-05 with a real account key (1-token live
  * calls): only a subset of the /models catalog is actually deployed for a
- * given account — llama3-chatqa, gemma-3-12b and mistral-7b return 404
+ * given account, llama3-chatqa, gemma-3-12b and mistral-7b return 404
  * ("Function … Not found for account"), the deepseek deployments hang
  * indefinitely, and mistral-nemotron was flaky (500). What survived, ordered
  * by quality then speed:
@@ -145,7 +145,7 @@ const GROQ_CHAIN = [
  *   nemotron-3.5-lightning  1.4s with thinking:false (3427 chars of reasoning
  *                           and 15s without the toggle)
  *   deepseek-v4-pro-0813  user-requested; currently unreachable via the API
- *                         (kept last — the self-healing chain skips it for
+ *                         (kept last, the self-healing chain skips it for
  *                         free until NVIDIA fixes the deployment)
  */
 const NVIDIA_CHAIN = [
@@ -230,7 +230,7 @@ export function activeProviders(): ProviderSpec[] {
   return out;
 }
 
-/** Every provider slot with its configuration status — for /api/chat/health. */
+/** Every provider slot with its configuration status, for /api/chat/health. */
 export function allProviderConfigs() {
   return PRIORITY.map((p) => {
     const chain = chainFor(p.id).filter((m) => !rejectedSet(p.id).has(m));

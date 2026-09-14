@@ -252,7 +252,7 @@ export default function EastAfricaInfrastructureMap() {
           <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
-            Twenty-six facilities, eight submarine cables, and the fibre backbone that connects them —
+            Twenty-six facilities, eight submarine cables, and the fibre backbone that connects them,
             with the wider East African region for context.
           </p>
         </div>
@@ -337,7 +337,7 @@ export default function EastAfricaInfrastructureMap() {
                         ) : <span className="text-xs text-muted-foreground">Regional</span>}
                       </td>
                       <td className="px-4 py-3 text-muted-foreground text-xs hidden md:table-cell whitespace-nowrap">{r.specs}</td>
-                      <td className="px-4 py-3 text-muted-foreground text-xs hidden lg:table-cell text-right">{r.year ?? "—"}</td>
+                      <td className="px-4 py-3 text-muted-foreground text-xs hidden lg:table-cell text-right">{r.year ?? "-"}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -422,7 +422,7 @@ export default function EastAfricaInfrastructureMap() {
                   <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · Mombasa`} onClose={() => setFacilityPanel(null)}>
                     <FacilityCard f={facilityPanel} />
                     <div className="bg-surface/50 rounded-lg p-3 border border-border/20 text-xs text-muted-foreground leading-relaxed">
-                      Six subsea cables — SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE — come ashore at the
+                      Six subsea cables (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) come ashore at the
                       Nyali landing station, with Meta&rsquo;s Daraja cable in development. Mombasa is Kenya&rsquo;s
                       single point of contact with the global internet.
                     </div>
@@ -435,7 +435,7 @@ export default function EastAfricaInfrastructureMap() {
                     onClose={() => setCityPanel(null)}
                   >
                     {REGION_ITEMS.filter((i) => i.city === cityPanel).map((i) => <CityAssetRow key={i.id} item={i} />)}
-                    <p className="text-[11px] text-muted-foreground pt-1">Tracked in summary — DC254 profiles focus on Kenya.</p>
+                    <p className="text-[11px] text-muted-foreground pt-1">Tracked in summary, DC254 profiles focus on Kenya.</p>
                   </PanelShell>
                 )}
               </AnimatePresence>
@@ -447,7 +447,7 @@ export default function EastAfricaInfrastructureMap() {
               <div className="glass-card rounded-xl p-4 border-cyan/10">
                 <p className="text-section-label mb-3">How to read this map</p>
                 <ul className="space-y-2.5 text-xs text-muted-foreground leading-relaxed">
-                  <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters — tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
+                  <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters, tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: NEON }} /><span>Dot colours show status: green live, amber building, dashed cyan announced.</span></li>
                   <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid lines are the six subsea cables; dotted lines are terrestrial fibre.</span></li>
                 </ul>
@@ -472,7 +472,7 @@ export default function EastAfricaInfrastructureMap() {
                   Kenya&rsquo;s connectivity stack
                   <ArrowRight className="w-3.5 h-3.5 text-cyan group-hover:translate-x-0.5 transition-transform" />
                 </p>
-                <p className="text-xs text-muted-foreground mt-1">Cables, IXPs and fibre — explained for builders.</p>
+                <p className="text-xs text-muted-foreground mt-1">Cables, IXPs and fibre, explained for builders.</p>
               </a>
             </aside>
           </div>

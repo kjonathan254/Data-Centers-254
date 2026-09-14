@@ -19,12 +19,12 @@ og_image: "/images/construction-workers-site-review.webp"
 reading_time: "11 min"
 images:
   - src: "/images/construction-workers-site-review.webp"
-    alt:  "Construction crew in protective gear reviewing a build site — the industry Kenya's data centre careers are built on"
-    caption: "Kenya's data centre industry needs engineers, technicians, and specialists — and the paths in are clearer than most people think."
+    alt:  "Construction crew in protective gear reviewing a build site, the industry Kenya's data centre careers are built on"
+    caption: "Kenya's data centre industry needs engineers, technicians, and specialists, and the paths in are clearer than most people think."
     position: "hero"
   - src: "/images/diagram-network-vs-cyber-career.webp"
     alt:  "Comparison of network engineer and cybersecurity engineer roles"
-    caption: "Different tracks reward different credentials — networking and security roles rarely swap."
+    caption: "Different tracks reward different credentials, networking and security roles rarely swap."
     position: "diagram"
   - src: "/images/aerial-fibre-technician-utility-pole.webp"
     alt: "Field technician working on aerial fibre connections on a utility pole"
@@ -60,15 +60,15 @@ faq:
   - question: "Are there data centre training programmes in Kenya?"
     answer: "Several institutions offer relevant training, though dedicated data centre programmes are limited. The most common pathway is a general engineering or IT degree supplemented by industry certifications. Some operators, including iXAfrica and Africa Data Centres, offer internal training programmes for new hires."
   - question: "Is there demand for data centre professionals in Kenya?"
-    answer: "Yes, and demand is growing rapidly. Kenya's 19 operational data centres and several under-construction facilities need skilled staff. The planned expansion of the industry — including potential hyperscale facilities — will require hundreds of additional professionals over the next 5-10 years."
+    answer: "Yes, and demand is growing rapidly. Kenya's 19 operational data centres and several under-construction facilities need skilled staff. The planned expansion of the industry (including potential hyperscale facilities) will require hundreds of additional professionals over the next 5-10 years."
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-careers-kenya"
 ---
 
-Kenya's data centre industry is creating jobs that most Kenyans do not know exist. When a young person thinks about a career in technology, they think of software development, cybersecurity, or digital marketing. They do not think about designing cooling systems that prevent servers from melting, managing power distribution for buildings that consume more electricity than small towns, or maintaining the fibre optic networks that connect a country to the global internet. Yet these are the roles that keep Kenya's digital infrastructure running — and they are in growing demand.
+Kenya's data centre industry is creating jobs that most Kenyans do not know exist. When a young person thinks about a career in technology, they think of software development, cybersecurity, or digital marketing. They do not think about designing cooling systems that prevent servers from melting, managing power distribution for buildings that consume more electricity than small towns, or maintaining the fibre optic networks that connect a country to the global internet. Yet these are the roles that keep Kenya's digital infrastructure running, and they are in growing demand.
 
-The data centre industry in Kenya employs hundreds of people across a range of specialisations, from entry-level technicians to senior facility managers with decades of experience. As the industry grows — driven by increasing digitalisation, cloud adoption, and the potential for AI infrastructure investment — the demand for skilled professionals will only increase. For anyone considering a career in this space, understanding the roles, the required qualifications, and the pathways to entry is essential.
+The data centre industry in Kenya employs hundreds of people across a range of specialisations, from entry-level technicians to senior facility managers with decades of experience. As the industry grows (driven by increasing digitalisation, cloud adoption, and the potential for AI infrastructure investment) the demand for skilled professionals will only increase. For anyone considering a career in this space, understanding the roles, the required qualifications, and the pathways to entry is essential.
 
-![Construction crew in protective gear reviewing a build site — the industry Kenya's data centre careers are built on](/images/construction-workers-site-review.webp)
+![Construction crew in protective gear reviewing a build site, the industry Kenya's data centre careers are built on](/images/construction-workers-site-review.webp)
 
 ## The Core Roles: What People Actually Do
 
@@ -82,7 +82,7 @@ Day-to-day work includes monitoring power and cooling systems, responding to ala
 
 ### Network Engineer
 
-Network engineers manage the data centre's connectivity — both the internal network that connects servers to each other and the external network that connects the facility to the internet, submarine cables, and client networks. This role requires deep knowledge of networking protocols (BGP, OSPF, MPLS), fibre optic technologies, and network equipment from vendors like Cisco, Juniper, and Arista.
+Network engineers manage the data centre's connectivity, both the internal network that connects servers to each other and the external network that connects the facility to the internet, submarine cables, and client networks. This role requires deep knowledge of networking protocols (BGP, OSPF, MPLS), fibre optic technologies, and network equipment from vendors like Cisco, Juniper, and Arista.
 
 In a colocation facility like iXAfrica or Africa Data Centres, network engineers also manage cross-connects between different clients and ensure that each customer's network is properly isolated and performing optimally.
 
@@ -92,7 +92,7 @@ In a colocation facility like iXAfrica or Africa Data Centres, network engineers
 
 Operations managers oversee the day-to-day running of the facility. They coordinate between engineering teams, manage shift schedules, handle client onboarding, and ensure that service level agreements (SLAs) are met. This is a senior role that requires both technical understanding and strong management skills.
 
-In practice, the operations manager is the person who decides what happens when something goes wrong — and they need enough technical knowledge to make the right call quickly.
+In practice, the operations manager is the person who decides what happens when something goes wrong, and they need enough technical knowledge to make the right call quickly.
 
 **Qualifications**: Typically 5-10 years of experience in data centre operations, often starting in an engineering role. An MBA or operations management qualification is an advantage.
 
@@ -108,7 +108,7 @@ Good cabling work requires precision, patience, and attention to detail. A singl
 
 The data centre industry has a well-established certification framework that helps professionals demonstrate their knowledge and advance their careers.
 
-### CDCP — Certified Data Centre Professional
+### CDCP, Certified Data Centre Professional
 
 The CDCP, offered by the Infrastructure Masons Academy (formerly the Uptime Institute), is the most widely recognised entry-level data centre certification globally. It covers data centre design concepts, infrastructure components, operations best practices, and maintenance procedures. The certification requires passing a multiple-choice exam and is valid for three years.
 
@@ -138,8 +138,8 @@ Data centre salaries in Kenya vary significantly by role, experience, and employ
 | Network Engineer | 60,000–100,000 | 100,000–200,000 | 200,000–400,000 |
 | Electrical Engineer | 60,000–100,000 | 120,000–250,000 | 250,000–500,000 |
 | Cooling Engineer | 60,000–100,000 | 120,000–250,000 | 250,000–500,000 |
-| Operations Manager | — | 150,000–300,000 | 300,000–600,000+ |
-| Facility Manager | — | 200,000–400,000 | 400,000–800,000+ |
+| Operations Manager |, | 150,000–300,000 | 300,000–600,000+ |
+| Facility Manager |, | 200,000–400,000 | 400,000–800,000+ |
 
 These figures are approximate and based on industry reports and job listings. Senior roles at international operators can exceed these ranges, particularly when including benefits like medical insurance, housing allowances, and professional development budgets.
 
@@ -151,20 +151,20 @@ The most common pathways into Kenya's data centre industry are:
 
 **Engineering graduates.** A degree in electrical, mechanical, or telecommunications engineering is the most direct entry point. Most large operators run graduate programmes or hire junior engineers. Adding a CDCP certification significantly improves employability.
 
-**IT professionals transitioning.** Network engineers, systems administrators, and IT support staff can transition into data centre roles, particularly in networking and operations. The key gap to fill is understanding the physical infrastructure — power, cooling, and facilities management.
+**IT professionals transitioning.** Network engineers, systems administrators, and IT support staff can transition into data centre roles, particularly in networking and operations. The key gap to fill is understanding the physical infrastructure, power, cooling, and facilities management.
 
 **Trade and vocational.** Cabling technicians, electricians, and HVAC technicians can enter the industry with relevant trade qualifications and on-the-job training. These roles offer a practical pathway to senior positions through experience and additional certifications.
 
 **Military and telecom veterans.** People who have worked on communications infrastructure in the military or at telecom companies (Safaricom, Telkom Kenya) often have directly transferable skills.
 
-The [data centre tier ratings](/articles/data-centre-tier-ratings-explained) framework is important knowledge for anyone entering the field — understanding the reliability standards that facilities are built to will help you understand why things are designed the way they are.
+The [data centre tier ratings](/articles/data-centre-tier-ratings-explained) framework is important knowledge for anyone entering the field, understanding the reliability standards that facilities are built to will help you understand why things are designed the way they are.
 
 ![Field technician working on aerial fibre connections on a utility pole](/images/aerial-fibre-technician-utility-pole.webp)
 
 ## The Outlook
 
-Kenya's data centre industry is at an inflection point. The combination of regulatory clarity from the [licensing framework](/articles/kenya-data-centre-licensing-framework), growing demand from cloud and AI, and the country's geothermal energy advantage creates a strong foundation for job growth. The constraint, as always, is power supply — but as grid infrastructure improves, the industry will create hundreds of skilled, well-paying jobs.
+Kenya's data centre industry is at an inflection point. The combination of regulatory clarity from the [licensing framework](/articles/kenya-data-centre-licensing-framework), growing demand from cloud and AI, and the country's geothermal energy advantage creates a strong foundation for job growth. The constraint, as always, is power supply, but as grid infrastructure improves, the industry will create hundreds of skilled, well-paying jobs.
 
-For anyone considering this career path, the timing is good. The industry is small enough that capable professionals are noticed quickly, but growing fast enough that there is real demand. Start with the CDCP certification, build practical skills through training or entry-level roles, and develop specialisation in an area like power, cooling, or networking. The career path from there — to senior engineer, operations manager, and eventually facility director — is well-established and well-compensated.
+For anyone considering this career path, the timing is good. The industry is small enough that capable professionals are noticed quickly, but growing fast enough that there is real demand. Start with the CDCP certification, build practical skills through training or entry-level roles, and develop specialisation in an area like power, cooling, or networking. The career path from there (to senior engineer, operations manager, and eventually facility director) is well-established and well-compensated.
 
 ![Nairobi skyline lit up at night](/images/nairobi-skyline-night.webp)

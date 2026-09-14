@@ -7,7 +7,7 @@ const FROM_NAME = "Data Centre 254";
 
 // Contact form is an abuse magnet (mail-bombing to the inbox + Resend quota
 // burn): 5 sends per minute per IP, on top of the global proxy.ts limiter.
-// Persistent (Upstash) when configured — see src/lib/rate-limit.ts.
+// Persistent (Upstash) when configured, see src/lib/rate-limit.ts.
 const RATE_LIMIT = 5;
 const WINDOW_MS = 60_000;
 
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
     const resend = getResendClient();
 
     if (!resend) {
-      // No API key configured — fall back to console.log (dev mode)
+      // No API key configured, fall back to console.log (dev mode)
       console.log("--- Contact Form Submission (no RESEND_API_KEY) ---");
       console.log(`Name: ${cleanName}`);
       console.log(`Email: ${email}`);

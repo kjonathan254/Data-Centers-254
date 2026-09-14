@@ -18,7 +18,7 @@ const contents = [
   {
     icon: Building2Icon,
     title: "Facility register",
-    body: "Every tracked facility in the directory — operator, location, tier, capacity where disclosed, and status of announced expansions.",
+    body: "Every tracked facility in the directory, operator, location, tier, capacity where disclosed, and status of announced expansions.",
   },
   {
     icon: Zap,
@@ -28,7 +28,7 @@ const contents = [
   {
     icon: Globe2,
     title: "Connectivity position",
-    body: "Submarine cable landings, IXP health and why capacity concentrates in Nairobi and Mombasa — mapped.",
+    body: "Submarine cable landings, IXP health and why capacity concentrates in Nairobi and Mombasa, mapped.",
   },
   {
     icon: TrendingUp,
@@ -60,7 +60,7 @@ function Building2Icon(props: React.SVGProps<SVGSVGElement>) {
 const includes = [
   "12–15 page PDF, designed for reading and forwarding",
   "Facility register as a sortable CSV appendix",
-  "Every claim sourced — public filings, regulator data, operator announcements",
+  "Every claim sourced, public filings, regulator data, operator announcements",
   "Next edition lands the quarter after this one; buyers get launch notification first",
 ];
 
@@ -119,11 +119,11 @@ export default function DataExportsPage() {
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <Clock className="size-3.5" aria-hidden="true" />
-                Q4 2026 edition — in production now
+                Q4 2026 edition, in production now
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <ShieldCheck className="size-3.5" aria-hidden="true" />
-                Personal licence — no redistribution
+                Personal licence, no redistribution
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Database className="size-3.5" aria-hidden="true" />
@@ -132,7 +132,7 @@ export default function DataExportsPage() {
             </div>
           </div>
 
-          {/* Capture — checkout arrives with Stripe */}
+          {/* Capture, checkout arrives with Stripe */}
           <ExportInterestForm />
         </div>
       </main>

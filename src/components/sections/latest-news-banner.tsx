@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight, Clock } from "lucide-react";
 
 /**
- * Featured analysis — one wide editorial card: photograph left,
+ * Featured analysis, one wide editorial card: photograph left,
  * story right. Server component.
  */
 export default function LatestNewsBanner() {

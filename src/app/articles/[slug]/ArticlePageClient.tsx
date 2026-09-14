@@ -370,7 +370,7 @@ function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
     // Render images from markdown as styled figure blocks
     img: ({ src, alt, ..._rest }: { src?: string; alt?: string; [key: string]: unknown }) => {
       if (!src) return null;
-      // The hero image already renders at the top of the article — skip its
+      // The hero image already renders at the top of the article, skip its
       // mid-body markdown references to avoid showing the same photo twice.
       if (heroSrc && src === heroSrc) return null;
       const matched = imageMap.get(src);
@@ -467,7 +467,7 @@ export default function ArticlePageClient({ article, related }: Props) {
 
           <Separator className="bg-border/50 mb-0" />
 
-          {/* Hero image — article's own, or the cluster photograph as fallback */}
+          {/* Hero image, article's own, or the cluster photograph as fallback */}
           {heroImage ? (
             <ArticleImageBlock image={heroImage} />
           ) : (
@@ -498,7 +498,7 @@ export default function ArticlePageClient({ article, related }: Props) {
             </ReactMarkdown>
           </div>
 
-          {/* Newsletter CTA — highest-intent moment: reader just finished */}
+          {/* Newsletter CTA, highest-intent moment: reader just finished */}
           <SubscribeCompact source={`article:${frontmatter.slug}`} />
 
           {/* Internal links section */}

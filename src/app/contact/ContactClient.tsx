@@ -54,7 +54,7 @@ export default function ContactClient() {
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Corrections, tips, feedback, collaboration inquiries, or if you work in
-            the data centre industry and want to share knowledge — we want to hear from you.
+            the data centre industry and want to share knowledge, we want to hear from you.
           </p>
         </div>
 

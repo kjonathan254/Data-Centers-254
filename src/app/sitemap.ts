@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
 
-  // Static routes — all real, working pages
+  // Static routes, all real, working pages
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/directory`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },

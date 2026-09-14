@@ -24,7 +24,7 @@ images:
     position: "hero"
   - src: "/images/dc-environment-sustainability.webp"
     alt:  "Aerial view of a data centre campus with rooftop solar"
-    caption: "Capital goes into land, power, shells, and the systems inside — in that order."
+    caption: "Capital goes into land, power, shells, and the systems inside, in that order."
     position: "section-break"
   - src: "/images/dc-policy-regulation.webp"
     alt:  "National government building at dusk"
@@ -56,11 +56,11 @@ faq:
   - question: "Who are the potential customers for a new data centre?"
     answer: "The primary customer segments are: banks and financial institutions (the largest segment by revenue), telecom operators, government agencies, cloud and content providers, SMEs moving from on-premises to colocation, and international companies entering the Kenyan market. The [data centre directory](/directory) shows the facilities already serving these customers."
   - question: "Is there room for another data centre operator in Kenya?"
-    answer: "Yes. Kenya's current capacity of approximately 15MW is projected to need 25-30MW by 2030. The market is growing at 15-20% annually, and there are underserved segments (GPU-ready facilities, mid-market SME colocation, edge facilities in secondary cities). The key is differentiation — a new entrant that simply replicates what iXAfrica and Africa Data Centres offer will struggle. One that targets an underserved segment or offers unique capabilities (like GPU-ready zones, renewable-first design, or specialised compliance) can find a viable position."
+    answer: "Yes. Kenya's current capacity of approximately 15MW is projected to need 25-30MW by 2030. The market is growing at 15-20% annually, and there are underserved segments (GPU-ready facilities, mid-market SME colocation, edge facilities in secondary cities). The key is differentiation, a new entrant that simply replicates what iXAfrica and Africa Data Centres offer will struggle. One that targets an underserved segment or offers unique capabilities (like GPU-ready zones, renewable-first design, or specialised compliance) can find a viable position."
 canonical_url: "https://data-centers-254.vercel.app/articles/starting-data-centre-business-kenya"
 ---
 
-Building a data centre is one of the most capital-intensive infrastructure investments possible in Kenya's technology sector. A small colocation facility requires hundreds of millions of shillings in upfront capital, takes 18-36 months from concept to operational, and generates returns over a 15-25 year asset life. It is not a startup in the traditional sense — it is an infrastructure play that requires patience, deep pockets, and a clear understanding of the market.
+Building a data centre is one of the most capital-intensive infrastructure investments possible in Kenya's technology sector. A small colocation facility requires hundreds of millions of shillings in upfront capital, takes 18-36 months from concept to operational, and generates returns over a 15-25 year asset life. It is not a startup in the traditional sense, it is an infrastructure play that requires patience, deep pockets, and a clear understanding of the market.
 
 ![Nairobi City Hall, seat of the Nairobi City County government](/images/nairobi-city-hall-county.webp)
 
@@ -70,7 +70,7 @@ This guide is for investors, entrepreneurs, and organisations considering enteri
 
 Kenya's data centre market, as detailed in our [market outlook analysis](/articles/kenya-data-centre-market-outlook-2025-2030), is growing at 15-20% annually and is projected to reach $400-500 million by 2030. The current supply of approximately 15 megawatts of IT power capacity is expected to need 25-30 megawatts by 2030, creating a gap that new entrants can fill.
 
-But market growth alone does not guarantee success for a new entrant. The existing operators — iXAfrica, Africa Data Centres, and Safaricom — have established customer relationships, brand recognition, and the operational expertise that comes from running facilities in Kenya. A new entrant must offer something they do not: a different customer segment, a different location, a different technology approach, or a different pricing model.
+But market growth alone does not guarantee success for a new entrant. The existing operators (iXAfrica, Africa Data Centres, and Safaricom) have established customer relationships, brand recognition, and the operational expertise that comes from running facilities in Kenya. A new entrant must offer something they do not: a different customer segment, a different location, a different technology approach, or a different pricing model.
 
 ## Capital Requirements
 
@@ -96,7 +96,7 @@ Land costs vary enormously by location. Along Mombasa Road, industrial land suit
 
 ### Working Capital
 
-In addition to construction costs, a new data centre operator needs working capital to fund operations during the ramp-up period — typically 12-24 months before the facility reaches breakeven occupancy. This includes staff salaries, utility bills, marketing, and insurance. Working capital of KES 100-300 million should be budgeted.
+In addition to construction costs, a new data centre operator needs working capital to fund operations during the ramp-up period, typically 12-24 months before the facility reaches breakeven occupancy. This includes staff salaries, utility bills, marketing, and insurance. Working capital of KES 100-300 million should be budgeted.
 
 ### Total Investment Summary
 
@@ -136,13 +136,13 @@ Differentiation options for a new colocation entrant include: targeting a specif
 
 ### Strategy 2: Hybrid Cloud Hub
 
-Build a facility designed specifically as a hub for hybrid cloud deployments — where customers run some workloads in the data centre and some in the public cloud, with dedicated, high-speed connections between the two. This model targets enterprises that want data residency and low latency for sensitive workloads while leveraging cloud elasticity for other workloads. The facility would include Direct Connect/ExpressRoute capabilities for all major cloud providers.
+Build a facility designed specifically as a hub for hybrid cloud deployments, where customers run some workloads in the data centre and some in the public cloud, with dedicated, high-speed connections between the two. This model targets enterprises that want data residency and low latency for sensitive workloads while leveraging cloud elasticity for other workloads. The facility would include Direct Connect/ExpressRoute capabilities for all major cloud providers.
 
 ### Strategy 3: Edge and Regional
 
 ![Nairobi Expressway stretching across the city](/images/nairobi-expressway-wide.webp)
 
-Build smaller facilities (100-500kW) in locations outside Nairobi — Mombasa, Kisumu, Nakuru, or Konza Technopolis — serving regional demand and edge computing use cases. This strategy avoids direct competition with the Nairobi incumbents and serves a market that is currently underserved. The challenge is that demand in secondary cities is smaller and less proven.
+Build smaller facilities (100-500kW) in locations outside Nairobi (Mombasa, Kisumu, Nakuru, or Konza Technopolis) serving regional demand and edge computing use cases. This strategy avoids direct competition with the Nairobi incumbents and serves a market that is currently underserved. The challenge is that demand in secondary cities is smaller and less proven.
 
 ### Strategy 4: Specialised Facility
 
@@ -160,10 +160,10 @@ Colocation revenue comes from recurring monthly charges for rack space, power, a
 
 For a 200-rack facility at an average of KES 70,000 per rack per month and 70% occupancy (140 racks occupied), monthly colocation revenue would be approximately KES 9.8 million (KES 118 million annually). Adding interconnection revenue, remote hands, and other services, total annual revenue might reach KES 150-200 million.
 
-Operating expenses (power, staff, maintenance, insurance, connectivity costs, property costs) typically total 50-60% of revenue for a well-run facility. Net operating income of KES 60-100 million on a KES 500 million to 1 billion investment implies a 6-20% return on investment — attractive for infrastructure, though the payback period is 5-10 years.
+Operating expenses (power, staff, maintenance, insurance, connectivity costs, property costs) typically total 50-60% of revenue for a well-run facility. Net operating income of KES 60-100 million on a KES 500 million to 1 billion investment implies a 6-20% return on investment, attractive for infrastructure, though the payback period is 5-10 years.
 
 ## Key Success Factors
 
 The data centre business rewards operational excellence. The facilities that succeed are those that deliver reliable power and cooling, provide responsive customer service, maintain high security standards, and continuously invest in infrastructure upgrades. In Kenya's market, where the customer base is relatively small and relationships matter enormously, reputation and trust are critical differentiators.
 
-For any investor seriously considering the Kenyan data centre market, the recommendation is to start with thorough market research, engage experienced data centre design and operations consultants, secure land and power commitments early, and plan for a 10-15 year investment horizon. The opportunity is real and growing — but so is the competition, and only well-executed projects will capture their share of this expanding market.
+For any investor seriously considering the Kenyan data centre market, the recommendation is to start with thorough market research, engage experienced data centre design and operations consultants, secure land and power commitments early, and plan for a 10-15 year investment horizon. The opportunity is real and growing, but so is the competition, and only well-executed projects will capture their share of this expanding market.

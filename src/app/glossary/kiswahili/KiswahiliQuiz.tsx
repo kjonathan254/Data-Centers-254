@@ -69,11 +69,11 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
   return (
     <section className="mt-14 glass-card rounded-2xl border border-cyan/20 p-6 sm:p-8">
       <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-1">
-        Jaribio — test your vocabulary
+        Jaribio, test your vocabulary
       </h2>
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-2xl">
         Soma Kiswahili, jibu kwa Kiingereza. Maswali {ROUND_SIZE} kila raundi,
-        huchaguliwa nasibu kutoka kwenye kamusi — read the Kiswahili term, choose the
+        huchaguliwa nasibu kutoka kwenye kamusi, read the Kiswahili term, choose the
         English meaning. Fresh eight questions every round.
       </p>
 
@@ -83,7 +83,7 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
             onClick={start}
             className="inline-flex items-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-5 h-10 text-sm font-semibold hover:bg-cyan/90 transition-all"
           >
-            Anza — start the quiz <ChevronRight className="size-4" />
+            Anza, start the quiz <ChevronRight className="size-4" />
           </button>
           <span className="text-xs text-muted-foreground">{terms.length} terms in the pool</span>
         </div>
@@ -99,7 +99,7 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
             Swali {index + 1} / {questions.length}
           </p>
           <p className="text-2xl sm:text-3xl font-bold text-foreground mb-1">{q.sw}</p>
-          <p className="text-xs text-muted-foreground mb-6">Ni nini kwa Kiingereza? — what is it in English?</p>
+          <p className="text-xs text-muted-foreground mb-6">Ni nini kwa Kiingereza?, what is it in English?</p>
 
           <div className="grid sm:grid-cols-2 gap-2.5">
             {q.options.map((option) => {
@@ -131,14 +131,14 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
           {selected && (
             <div className="mt-5 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-                {selected === q.en ? "Sahihi! Correct. " : `Si sahihi — jibu ni "${q.en}". `}
+                {selected === q.en ? "Sahihi! Correct. " : `Si sahihi, jibu ni "${q.en}". `}
                 {q.def ? q.def : ""}
               </p>
               <button
                 onClick={next}
                 className="inline-flex items-center gap-1.5 bg-foreground text-background rounded-lg px-4 h-9 text-sm font-semibold hover:bg-foreground/90 transition-all shrink-0"
               >
-                {index + 1 >= questions.length ? "Matokeo — results" : "Endelea"} <ChevronRight className="size-4" />
+                {index + 1 >= questions.length ? "Matokeo, results" : "Endelea"} <ChevronRight className="size-4" />
               </button>
             </div>
           )}
@@ -153,18 +153,18 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
           </p>
           <p className="text-sm text-muted-foreground mb-6">
             {score === questions.length
-              ? "Kamili! Flawless — you are ready for any Kenyan NOC."
+              ? "Kamili! Flawless, you are ready for any Kenyan NOC."
               : score >= questions.length * 0.75
                 ? "Vizuri sana! Solid grasp of the vocabulary."
                 : score >= questions.length / 2
-                  ? "Nzuri — decent base. Scroll up and skim the definitions."
-                  : "Keep practising — the glossary above is the answer key."}
+                  ? "Nzuri, decent base. Scroll up and skim the definitions."
+                  : "Keep practising, the glossary above is the answer key."}
           </p>
           <button
             onClick={start}
             className="inline-flex items-center gap-2 bg-cyan text-background rounded-lg px-5 h-10 text-sm font-semibold hover:bg-cyan/90 transition-all"
           >
-            <RotateCcw className="size-4" /> Cheza tena — play again
+            <RotateCcw className="size-4" /> Cheza tena, play again
           </button>
         </div>
       )}

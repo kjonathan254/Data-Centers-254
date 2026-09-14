@@ -20,7 +20,7 @@ reading_time: "12 min"
 images:
   - src: "/images/national-assembly-chamber-session.webp"
     alt: "The National Assembly of Kenya in session in the chamber"
-    caption: "The rules start here — Parliament's Acts give the Communications Authority its licensing mandate over data centres"
+    caption: "The rules start here, Parliament's Acts give the Communications Authority its licensing mandate over data centres"
     position: hero
   - src: "/images/nairobi-westlands.webp"
     alt:  "Westlands commercial district in Nairobi"
@@ -52,7 +52,7 @@ external_sources:
     url: "https://www.gsma.com/r/spectrum/mobile-connectivity-index/"
 faq:
   - question: "Does a colocation data centre need a licence in Kenya?"
-    answer: "Yes. Any facility hosting third-party servers requires at minimum an NFP-T2 Network Facilities Provider licence from the Communications Authority. This became explicit under the Revised Telecommunications Market Structure published in March 2026 — and on 8 September 2026 the CA opened a consultation on a proposed standalone Data Centre licence that would replace NFP-T2 for colocation facilities, targeted for implementation in FY2027/28. Until that regime takes effect, NFP-T2 remains the licence of record."
+    answer: "Yes. Any facility hosting third-party servers requires at minimum an NFP-T2 Network Facilities Provider licence from the Communications Authority. This became explicit under the Revised Telecommunications Market Structure published in March 2026, and on 8 September 2026 the CA opened a consultation on a proposed standalone Data Centre licence that would replace NFP-T2 for colocation facilities, targeted for implementation in FY2027/28. Until that regime takes effect, NFP-T2 remains the licence of record."
   - question: "What is the penalty for operating a data centre without a licence?"
     answer: "The CA can issue fines up to KES 300,000 or direct you to cease operations. Under the Kenya Information and Communications Act, operating without a required licence is a regulatory violation that carries both financial penalties and potential enforcement action."
   - question: "What is the difference between NFP-T1 and NFP-T2 for data centres?"
@@ -68,11 +68,11 @@ On 6 March 2026, the Communications Authority of Kenya formally brought commerci
 
 ## Why Did the CA Decide to Licence Data Centres?
 
-Data centres have evolved from simple server rooms into critical national infrastructure. The CA's decision followed a formal public consultation that began with a paper published in December 2024, where the Authority argued that data centres, by virtue of mediating access to digital services, are functionally equivalent to communications tower companies and fibre operators — both of which have long been regulated as Network Facilities Providers.
+Data centres have evolved from simple server rooms into critical national infrastructure. The CA's decision followed a formal public consultation that began with a paper published in December 2024, where the Authority argued that data centres, by virtue of mediating access to digital services, are functionally equivalent to communications tower companies and fibre operators, both of which have long been regulated as Network Facilities Providers.
 
 The Authority wrote that "given that the facility owner in the second type of data centre arrangement significantly influences data accessibility, it is necessary to bring these arrangements within the licensing framework to protect users' data access rights." This was not a cosmetic reclassification. It was an assertion that data centres are the physical layer of the digital economy, and that leaving them unregulated was a gap that needed closing.
 
-The urgency was demonstrated in June 2026 when a power outage at the Huduma Kenya data centre in Nakuru brought government services offline across all forty-seven counties simultaneously. Millions of citizens were unable to access identity documents, business registrations, and essential services. The incident proved that data centre failures are no longer theoretical risks — they are events with immediate, nationwide consequences.
+The urgency was demonstrated in June 2026 when a power outage at the Huduma Kenya data centre in Nakuru brought government services offline across all forty-seven counties simultaneously. Millions of citizens were unable to access identity documents, business registrations, and essential services. The incident proved that data centre failures are no longer theoretical risks, they are events with immediate, nationwide consequences.
 
 ![Nairobi skyline at sunset](/images/nairobi-sunset-wide.webp)
 
@@ -80,7 +80,7 @@ The urgency was demonstrated in June 2026 when a power outage at the Huduma Keny
 
 The CA did not create a standalone "data centre licence" in the March 2026 framework. Instead, it placed data centres within the existing Network Facilities Provider framework. **NFP-T2** is the primary route for pure-play data centre operators, while **NFP-T1** is available for large integrated operators who also require nationwide spectrum rights.
 
-> **Update (8 September 2026):** The CA has opened a 30-day public consultation on a proposed standalone **Data Centre licence** that would remove colocation facilities from NFP-T2 entirely — with fees of KES 5,000/100,000 at application and issue, annual operating fees of KES 80,000 or 0.4% of turnover, 15-year validity, and implementation targeted across FY2026/27–FY2027/28. Full analysis: [Kenya's CA opens consultation on a standalone data centre licence](/articles/kenya-ca-standalone-data-centre-licence). Until that regime is finalised and implemented, the NFP-T2 route described below remains the licence of record.
+> **Update (8 September 2026):** The CA has opened a 30-day public consultation on a proposed standalone **Data Centre licence** that would remove colocation facilities from NFP-T2 entirely, with fees of KES 5,000/100,000 at application and issue, annual operating fees of KES 80,000 or 0.4% of turnover, 15-year validity, and implementation targeted across FY2026/27–FY2027/28. Full analysis: [Kenya's CA opens consultation on a standalone data centre licence](/articles/kenya-ca-standalone-data-centre-licence). Until that regime is finalised and implemented, the NFP-T2 route described below remains the licence of record.
 
 ### NFP-T1 vs NFP-T2 for Data Centre Operators
 
@@ -112,13 +112,13 @@ Key operators include **Africa Data Centres** (Liquid Intelligent Technologies),
 
 ## Is Power Supply a Bigger Problem Than Licensing?
 
-While the regulatory framework has taken a significant step forward, the single largest obstacle to data centre growth in Kenya remains the power supply. In May 2026, Microsoft and G42's planned one-billion-dollar AI data centre project — potentially the largest single foreign direct investment in Kenya's digital infrastructure — stalled after it became clear that the national grid could not reliably deliver the required power capacity. Government officials indicated that meeting the project's energy demands would require rationing power to other consumers.
+While the regulatory framework has taken a significant step forward, the single largest obstacle to data centre growth in Kenya remains the power supply. In May 2026, Microsoft and G42's planned one-billion-dollar AI data centre project (potentially the largest single foreign direct investment in Kenya's digital infrastructure) stalled after it became clear that the national grid could not reliably deliver the required power capacity. Government officials indicated that meeting the project's energy demands would require rationing power to other consumers.
 
 ![Data centre rooftop chillers and generators](/images/dc-chillers-roof.webp)
 
-Kenya's total installed generation capacity stands at approximately 3,500 megawatts, predominantly from geothermal and hydroelectric sources. But the Microsoft project alone was reported to require several hundred megawatts — a demand that would represent a significant share of the national grid's firm capacity. For more detail on this constraint, see our analysis of [data centre power and energy challenges](/energy).
+Kenya's total installed generation capacity stands at approximately 3,500 megawatts, predominantly from geothermal and hydroelectric sources. But the Microsoft project alone was reported to require several hundred megawatts, a demand that would represent a significant share of the national grid's firm capacity. For more detail on this constraint, see our analysis of [data centre power and energy challenges](/energy).
 
-The Huduma Kenya outage in June 2026 further illustrated the power reliability challenge: a single power supply failure at one data centre in Nakuru disrupted government services nationwide. This is not a resilience problem that licensing alone can solve — it requires investment in backup power systems, redundant feeds, and the expansion of Kenya's electricity generation and distribution infrastructure.
+The Huduma Kenya outage in June 2026 further illustrated the power reliability challenge: a single power supply failure at one data centre in Nakuru disrupted government services nationwide. This is not a resilience problem that licensing alone can solve, it requires investment in backup power systems, redundant feeds, and the expansion of Kenya's electricity generation and distribution infrastructure.
 
 ![High-voltage pylons on the backbone grid](/images/kenya-transmission-pylons.webp)
 
@@ -140,7 +140,7 @@ For existing operators, the immediate priority is ensuring they hold the appropr
 
 For prospective investors, particularly international operators evaluating East African market entry, the framework provides predictability that was previously absent. The fifteen-year licence term provides sufficient runway for return on investment, and the annual fee structure (percentage of gross turnover with a minimum floor) aligns the Authority's revenue with operator success.
 
-Kenya has progressively liberalised its ICT investment framework: the removal of the 30% local shareholding requirement, the introduction of Special Economic Zones with customs and tax relief on ICT equipment, and now the formal licensing of data centres all signal a deliberate strategy to position the country as a destination for digital infrastructure investment in Africa. The question is no longer whether Kenya is open for investment — it is whether the supporting infrastructure, particularly power, can scale fast enough.
+Kenya has progressively liberalised its ICT investment framework: the removal of the 30% local shareholding requirement, the introduction of Special Economic Zones with customs and tax relief on ICT equipment, and now the formal licensing of data centres all signal a deliberate strategy to position the country as a destination for digital infrastructure investment in Africa. The question is no longer whether Kenya is open for investment, it is whether the supporting infrastructure, particularly power, can scale fast enough.
 
 ## Sources and References
 

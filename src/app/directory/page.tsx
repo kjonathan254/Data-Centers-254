@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory — Data Centre 254" }],
+      images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory, Data Centre 254" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -111,7 +111,7 @@ export default async function DirectoryPage({
           <ul>
             {facilities.map((f) => (
               <li key={f.id}>
-                {f.name} — {f.operator.name} — {f.city}{f.tierRating ? `, ${f.tierRating}` : ""}
+                {f.name}, {f.operator.name}, {f.city}{f.tierRating ? `, ${f.tierRating}` : ""}
                 {f.itLoadMw ? `, ${f.itLoadMw}MW IT load` : ""}
                 {f.status !== "Operational" ? `, ${f.status}` : ""}
               </li>
@@ -129,11 +129,11 @@ export default async function DirectoryPage({
             full dataset is free to download below.
           </p>
         </div>
-        {/* Data export — the "free, no signup wall" promise, made real. Server-rendered: works with JS disabled. */}
+        {/* Data export, the "free, no signup wall" promise, made real. Server-rendered: works with JS disabled. */}
         <div className="container-site mt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
             Analysts and journalists: the full directory is free to download and
-            cite —{" "}
+            cite , {" "}
             <a
               href="/api/directory/csv"
               download
@@ -149,7 +149,7 @@ export default async function DirectoryPage({
               JSON API
             </a>{" "}
             · no signup wall. Every row carries its source and verification
-            date — see{" "}
+            date, see{" "}
             <Link href="/methodology" className="text-cyan underline underline-offset-2 hover:text-foreground">
               the methodology
             </Link>

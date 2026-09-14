@@ -6,7 +6,7 @@ import type { Facility } from "@/lib/directory-data";
 import CopyLinkButton from "@/components/compare/copy-link-button";
 
 /**
- * Side-by-side facility comparison — server-rendered from directory-data.ts.
+ * Side-by-side facility comparison, server-rendered from directory-data.ts.
  * Numeric rows highlight the leading facility; blanks render as an explicit
  * "Not disclosed" so the comparison stays honest (no invented data).
  */
@@ -28,7 +28,7 @@ const STAGE_ICON: Record<string, typeof CheckCircle> = {
 const VERIFIED_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function fmtVerified(v: string | null): string {
-  if (!v) return "—";
+  if (!v) return "-";
   const [y, m] = v.split("-");
   const mi = parseInt(m, 10) - 1;
   if (!y || Number.isNaN(mi) || !VERIFIED_MONTHS[mi]) return v;
@@ -60,7 +60,7 @@ const ROWS: RowSpec[] = [
   },
   {
     label: "Location",
-    value: (f) => [f.address, f.city].filter(Boolean).join(", ") || "—",
+    value: (f) => [f.address, f.city].filter(Boolean).join(", ") || "-",
   },
   {
     label: "Live IT load",
@@ -124,7 +124,7 @@ const ROWS: RowSpec[] = [
   },
   {
     label: "Notable",
-    value: (f) => f.notable ?? "—",
+    value: (f) => f.notable ?? "-",
     long: true,
   },
 ];
@@ -248,9 +248,9 @@ export default function CompareTable({ facilities }: { facilities: Facility[] })
       <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
         <strong className="font-medium text-muted-foreground">Reading this table:</strong>{" "}
         a cyan <span className="font-semibold text-cyan">Leads</span> flag marks the highest
-        figure in a row — it is not an endorsement, and &ldquo;Not disclosed&rdquo; means the
+        figure in a row, it is not an endorsement, and &ldquo;Not disclosed&rdquo; means the
         operator has not published the figure, not that it is zero. Every value carries a
-        source and a verification date on the facility&apos;s own profile — see{" "}
+        source and a verification date on the facility&apos;s own profile, see{" "}
         <Link href="/methodology" className="text-cyan underline underline-offset-2 hover:text-foreground">
           the methodology
         </Link>

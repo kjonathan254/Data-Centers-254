@@ -17,16 +17,16 @@ import {
 } from "@/lib/chatbot/llm";
 
 /**
- * POST /api/chat — the answer engine endpoint.
+ * POST /api/chat, the answer engine endpoint.
  *
  * Deterministic by default (zero cost, zero keys, corpus-grounded). When a
- * Groq key is configured, two LLM steps run on top — both grounded strictly
+ * Groq key is configured, two LLM steps run on top, both grounded strictly
  * in retrieved facts, both time-boxed, both degrading silently:
  *
- *   1. Confident path  — the deterministic draft is handed to the LLM to
+ *   1. Confident path , the deterministic draft is handed to the LLM to
  *      polish phrasing. A numeric guardrail rejects any output containing a
  *      figure that doesn't appear in the draft or the facts.
- *   2. Weak-match path — questions that scored below the retrieval threshold
+ *   2. Weak-match path, questions that scored below the retrieval threshold
  *      get a second chance: the nearest chunks are offered under an
  *      answer-or-NOT_IN_NOTES contract. If the model doesn't vouch for the
  *      answer, the honest deterministic reply stands.
@@ -34,9 +34,9 @@ import {
  * Env (all optional; see src/lib/chatbot/llm.ts for resolution order):
  *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN /
  *   DATACENTRE254_JIBU, or any groq-or-jibu-named var holding a gsk_… key)
- *   NVIDIA_API_KEY — free nvapi-… key from build.nvidia.com; dormant fail-over
- *   HF_TOKEN — HuggingFace Inference Providers token; dormant third slot
- *   GROQ_MODEL / NVIDIA_MODEL / HF_MODEL — pin a provider's first candidate;
+ *   NVIDIA_API_KEY, free nvapi-… key from build.nvidia.com; dormant fail-over
+ *   HF_TOKEN, HuggingFace Inference Providers token; dormant third slot
+ *   GROQ_MODEL / NVIDIA_MODEL / HF_MODEL, pin a provider's first candidate;
  *   otherwise each provider walks a self-healing candidate chain that advances
  *   whenever an id is retired, and a dead key hands over to the next provider.
  */
@@ -83,24 +83,24 @@ async function llmAnswer(
     : "(none)";
 
   const system = [
-    `You are ${BOT_IDENTITY.name}, ${BOT_IDENTITY.role} for Data Centre 254 (DC254) — a Kenyan publication tracking data centre infrastructure. ${BOT_IDENTITY.tagline}`,
-    `Voice: warm, sharp, concise. Kenyan English. Never use emoji, markdown, bold or headings — plain flowing sentences only.`,
+    `You are ${BOT_IDENTITY.name}, ${BOT_IDENTITY.role} for Data Centre 254 (DC254), a Kenyan publication tracking data centre infrastructure. ${BOT_IDENTITY.tagline}`,
+    `Voice: warm, sharp, concise. Kenyan English. Never use emoji, markdown, bold or headings, plain flowing sentences only.`,
     `HARD RULES: Ground every claim in the material provided. Never invent numbers, names, dates, capacities or statuses. Keep every figure exactly as given. Keep the reply under 90 words.`,
   ].join("\n");
 
   const task = weak
     ? [
         `QUESTION: ${message}`,
-        `SEARCH RESULT SNIPPETS (weak matches — may or may not be relevant):`,
+        `SEARCH RESULT SNIPPETS (weak matches, may or may not be relevant):`,
         factBlock,
-        `If — and only if — these snippets genuinely cover the question, write a direct, grounded answer citing what you used (e.g. "per DC254's verified records …").`,
+        `If (and only if) these snippets genuinely cover the question, write a direct, grounded answer citing what you used (e.g. "per DC254's verified records …").`,
         `If they do not cover it, reply with exactly this token and nothing else: NOT_IN_NOTES`,
       ].join("\n")
     : [
         `QUESTION: ${message}`,
         `VERIFIED FACTS:`,
         factBlock,
-        `DRAFT ANSWER (already verified — improve its flow and warmth, do not change any figure): ${deterministic}`,
+        `DRAFT ANSWER (already verified, improve its flow and warmth, do not change any figure): ${deterministic}`,
       ].join("\n");
 
   const controller = new AbortController();
@@ -115,7 +115,7 @@ async function llmAnswer(
   ];
 
   // Walk the providers, then each provider's model chain: when a provider has
-  // retired an id, it answers with a model-level error in ~150ms — remember
+  // retired an id, it answers with a model-level error in ~150ms, remember
   // the rejection and try the next candidate within the same request. A
   // 401/403 benches the whole provider (dead key) and hands over to the next
   // one. Any other failure (quota, network) ends the walk immediately. The
@@ -128,7 +128,7 @@ async function llmAnswer(
           // gpt-oss models are reasoners: with a tight max_tokens their chain
           // of thought eats the budget and content comes back empty. Give
           // reasoners a generous ceiling and ask gpt-oss for low reasoning
-          // effort — the polish task never needs deep deliberation.
+          // effort, the polish task never needs deep deliberation.
           const res = await fetch(`${provider.baseUrl}/chat/completions`, {
             method: "POST",
             headers: {
@@ -151,10 +151,10 @@ async function llmAnswer(
             try {
               errCode = String((JSON.parse(errBody) as { error?: { code?: string } })?.error?.code ?? "");
             } catch {
-              // non-JSON error body — fall through to status heuristics
+              // non-JSON error body, fall through to status heuristics
             }
             if (res.status === 401 || res.status === 403) {
-              // Key revoked or mistyped — bench this provider, try the next.
+              // Key revoked or mistyped, bench this provider, try the next.
               noteProviderAuthDead(provider.id);
               providerDead = true;
               break;
@@ -181,7 +181,7 @@ async function llmAnswer(
             return null;
           }
           if (weak && text.startsWith("NOT_IN_NOTES")) return null; // honesty contract honoured
-          // Strip markdown emphasis — the UI renders plain text + citation chips.
+          // Strip markdown emphasis, the UI renders plain text + citation chips.
           text = text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^#+\s*/gm, "").trim();
           if (!numbersConsistent(text, `${deterministic}\n${factBlock}`)) {
             noteLlmFailure();
@@ -194,7 +194,7 @@ async function llmAnswer(
           return null;
         }
       }
-      if (providerDead) continue; // benched — next provider answers
+      if (providerDead) continue; // benched, next provider answers
       // Every remaining candidate id of this provider was refused as a model
       // error this request; fall through to the next provider.
     }

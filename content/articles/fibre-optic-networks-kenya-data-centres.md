@@ -20,7 +20,7 @@ reading_time: "13 min"
 images:
   - src: "/images/dc-fibre-optics.webp"
     alt:  "Fibre optic termination equipment in a data centre"
-    caption: "Every data centre depends on multiple fibre connections from different providers to ensure redundancy — a single fibre cut should never take a facility offline"
+    caption: "Every data centre depends on multiple fibre connections from different providers to ensure redundancy, a single fibre cut should never take a facility offline"
     position: "hero"
   - src: "/images/mombasa-cable-landing-3.webp"
     alt:  "Submarine cable landing supported by orange buoys in the surf"
@@ -45,7 +45,7 @@ images:
     position: "section-break"
   - src: "/images/metro-fibre-civil-works.webp"
     alt:  "Cable drums staged for urban fibre works"
-    caption: "National backbones and metro fibre loops are built the unglamorous way — one trench and one drum at a time."
+    caption: "National backbones and metro fibre loops are built the unglamorous way, one trench and one drum at a time."
     position: "section-break"
 internal_links:
   - text: "submarine cables landing in Mombasa"
@@ -61,7 +61,7 @@ external_sources:
     url: "https://www.liquid.tech/"
 faq:
   - question: "How much fibre optic cable is in Kenya?"
-    answer: "Kenya has an estimated 15,000 to 20,000 kilometres of fibre optic cable, including the National Optic Fibre Backbone Infrastructure (NOFBI), operator-owned backbone networks, and metropolitan fibre in major towns. The four major operators — Liquid Intelligent Technologies, Safaricom, Telkom Kenya, and Jamii Telecommunications — collectively account for over 80% of the total."
+    answer: "Kenya has an estimated 15,000 to 20,000 kilometres of fibre optic cable, including the National Optic Fibre Backbone Infrastructure (NOFBI), operator-owned backbone networks, and metropolitan fibre in major towns. The four major operators (Liquid Intelligent Technologies, Safaricom, Telkom Kenya, and Jamii Telecommunications) collectively account for over 80% of the total."
   - question: "Who are the main fibre providers for data centres in Nairobi?"
     answer: "The dominant fibre providers serving Nairobi data centres are Liquid Intelligent Technologies (formerly Liquid Telecom), Safaricom, Telkom Kenya, and Jamii Telecommunications. Most carrier-neutral data centres have connections from at least two of these providers, plus direct connections to submarine cable landing stations in Mombasa."
   - question: "What is NOFBI and does it serve data centres?"
@@ -69,15 +69,15 @@ faq:
   - question: "How much does a dedicated fibre link to a data centre cost in Kenya?"
     answer: "A dedicated 1Gbps fibre connection from a Nairobi data centre to an office in the city centre typically costs KES 80,000 to KES 200,000 per month, depending on the provider, contract length, and whether it includes redundancy. Cross-country links to Mombasa or other towns are more expensive. Dark fibre (unlit fibre that the customer manages) is available from some providers for long-term leases."
   - question: "Why do data centres need multiple fibre providers?"
-    answer: "Redundancy. If a single provider's fibre is cut — whether by road construction, accidental damage, or equipment failure — traffic must automatically reroute through an alternative path. Carrier-neutral data centres typically require connections from at least two independent providers entering the building via different physical routes, ensuring that no single incident can isolate the facility from the internet."
+    answer: "Redundancy. If a single provider's fibre is cut (whether by road construction, accidental damage, or equipment failure) traffic must automatically reroute through an alternative path. Carrier-neutral data centres typically require connections from at least two independent providers entering the building via different physical routes, ensuring that no single incident can isolate the facility from the internet."
 canonical_url: "https://data-centers-254.vercel.app/articles/fibre-optic-networks-kenya-data-centres"
 ---
 
-A data centre without fibre connectivity is a warehouse full of expensive computers that nobody can reach. Every transaction on M-Pesa, every query to a bank's application, every page load on a Kenyan government website — all of it travels over fibre optic cables that connect data centres to users, to each other, and to the global internet. Kenya's fibre optic network is the circulatory system of its digital economy, and understanding how it works, who operates it, and where the weaknesses are, is essential for anyone investing in or depending on digital infrastructure.
+A data centre without fibre connectivity is a warehouse full of expensive computers that nobody can reach. Every transaction on M-Pesa, every query to a bank's application, every page load on a Kenyan government website, all of it travels over fibre optic cables that connect data centres to users, to each other, and to the global internet. Kenya's fibre optic network is the circulatory system of its digital economy, and understanding how it works, who operates it, and where the weaknesses are, is essential for anyone investing in or depending on digital infrastructure.
 
 ![Fibre optic termination equipment in a data centre](/images/dc-fibre-optics.webp)
 
-Kenya has built one of the most extensive fibre networks in sub-Saharan Africa over the past two decades. The combination of submarine cable landing stations in Mombasa, a competitive operator landscape, and government investment through the National Optic Fibre Backbone Infrastructure has created a network that reaches all 47 counties and connects to the global internet through multiple redundant paths. But coverage is uneven, pricing is opaque, and the "last mile" — the final connection from the fibre backbone to the actual data centre or office building — remains the most expensive and problematic part of the chain.
+Kenya has built one of the most extensive fibre networks in sub-Saharan Africa over the past two decades. The combination of submarine cable landing stations in Mombasa, a competitive operator landscape, and government investment through the National Optic Fibre Backbone Infrastructure has created a network that reaches all 47 counties and connects to the global internet through multiple redundant paths. But coverage is uneven, pricing is opaque, and the "last mile" (the final connection from the fibre backbone to the actual data centre or office building) remains the most expensive and problematic part of the chain.
 
 ## The Major Fibre Operators in Kenya
 
@@ -91,9 +91,9 @@ Liquid's strategic advantage for data centre connectivity is vertical integratio
 
 ### Safaricom
 
-Safaricom is Kenya's largest telecom operator by revenue and subscriber base, and its fibre network is extensive, particularly in Nairobi, Mombasa, and the corridors connecting major towns. Safaricom's fibre strategy has historically focused on serving its own needs — connecting base stations, enterprise clients, and its own data centres — but the company has increasingly offered wholesale fibre to third-party data centres and enterprises.
+Safaricom is Kenya's largest telecom operator by revenue and subscriber base, and its fibre network is extensive, particularly in Nairobi, Mombasa, and the corridors connecting major towns. Safaricom's fibre strategy has historically focused on serving its own needs (connecting base stations, enterprise clients, and its own data centres) but the company has increasingly offered wholesale fibre to third-party data centres and enterprises.
 
-Safaricom's unique advantage is its mobile network. The company operates the largest 4G and 5G network in Kenya, and many data centre customers want connectivity that spans both fixed fibre and mobile networks. Safaricom can offer integrated solutions that include dedicated fibre links, mobile backhaul, and even direct interconnection with the M-Pesa platform — a compelling proposition for financial services companies.
+Safaricom's unique advantage is its mobile network. The company operates the largest 4G and 5G network in Kenya, and many data centre customers want connectivity that spans both fixed fibre and mobile networks. Safaricom can offer integrated solutions that include dedicated fibre links, mobile backhaul, and even direct interconnection with the M-Pesa platform, a compelling proposition for financial services companies.
 
 ![Shore-based cable works on the Kenyan coast with a vessel offshore](/images/mombasa-cable-landing.webp)
 
@@ -101,11 +101,11 @@ Safaricom's unique advantage is its mobile network. The company operates the lar
 
 Telkom Kenya, majority-owned by the Helios Investment Partners-led consortium (now rebranded as Jamhuri Holdings), operates a significant fibre network that includes the former Kenya Telkom backbone inherited from the privatisation era. Telkom's network is particularly strong in Nairobi's central business district and along the Mombasa Road corridor where most data centres are concentrated.
 
-Telkom's competitive position is built on pricing and its role as an alternative to Safaricom and Liquid. For data centre operators, having Telkom as a second or third fibre provider is important for redundancy — it ensures that traffic can reroute if the primary provider has an outage, and it provides negotiating leverage on pricing.
+Telkom's competitive position is built on pricing and its role as an alternative to Safaricom and Liquid. For data centre operators, having Telkom as a second or third fibre provider is important for redundancy, it ensures that traffic can reroute if the primary provider has an outage, and it provides negotiating leverage on pricing.
 
 ### Jamii Telecommunications (Wananchi Group)
 
-Jamii Telecommunications, part of the Wananchi Group, operates fibre networks primarily in Nairobi's residential and commercial areas. The company's Waba fibre-to-the-home service has made it a significant player in the last-mile market, and it also provides enterprise and data centre connectivity. Jamii's advantage is its metro footprint in areas like Westlands, Kilimani, and Karen — neighbourhoods with high concentrations of businesses that need data centre connectivity.
+Jamii Telecommunications, part of the Wananchi Group, operates fibre networks primarily in Nairobi's residential and commercial areas. The company's Waba fibre-to-the-home service has made it a significant player in the last-mile market, and it also provides enterprise and data centre connectivity. Jamii's advantage is its metro footprint in areas like Westlands, Kilimani, and Karen, neighbourhoods with high concentrations of businesses that need data centre connectivity.
 
 ## How Fibre Reaches a Data Centre
 
@@ -115,11 +115,11 @@ The path from a user's phone or laptop to a server inside a data centre involves
 
 ### Submarine Cables to Landing Stations
 
-The journey begins (or ends) at the submarine cable landing stations in Mombasa. Kenya has four operational submarine cable systems: SEACOM, TEAMS, EASSy, and DARE1. Each cable lands at dedicated stations along the Mombasa coast and connects to terrestrial fibre networks that carry traffic inland to Nairobi, where the data centres are. The [submarine cables themselves](/articles/submarine-cables-landing-mombasa) provide Kenya's connection to the global internet — to Europe, Asia, the Middle East, and the rest of Africa.
+The journey begins (or ends) at the submarine cable landing stations in Mombasa. Kenya has four operational submarine cable systems: SEACOM, TEAMS, EASSy, and DARE1. Each cable lands at dedicated stations along the Mombasa coast and connects to terrestrial fibre networks that carry traffic inland to Nairobi, where the data centres are. The [submarine cables themselves](/articles/submarine-cables-landing-mombasa) provide Kenya's connection to the global internet, to Europe, Asia, the Middle East, and the rest of Africa.
 
 ### Long-Haul Backbone: Mombasa to Nairobi
 
-From the landing stations, traffic travels over long-haul fibre to Nairobi. This 500-kilometre route is one of the most critical infrastructure segments in Kenya's digital economy. Multiple operators have built parallel fibre routes between Mombasa and Nairobi, and most follow the Mombasa-Nairobi highway corridor. The diversity of routes is important — a single fibre cut along this corridor could potentially degrade connectivity for the entire country if all operators' cables followed the same physical path, which is why regulators encourage route diversity.
+From the landing stations, traffic travels over long-haul fibre to Nairobi. This 500-kilometre route is one of the most critical infrastructure segments in Kenya's digital economy. Multiple operators have built parallel fibre routes between Mombasa and Nairobi, and most follow the Mombasa-Nairobi highway corridor. The diversity of routes is important, a single fibre cut along this corridor could potentially degrade connectivity for the entire country if all operators' cables followed the same physical path, which is why regulators encourage route diversity.
 
 ### Metro Fibre: Nairobi Distribution
 
@@ -133,11 +133,11 @@ The final segment is inside the data centre itself. Fibre from external provider
 
 ## Redundancy: The Most Critical Requirement
 
-For data centre operators and their customers, fibre redundancy is not optional — it is the single most important connectivity requirement. A data centre with a single fibre connection is a single point of failure, regardless of how reliable that connection is on a day-to-day basis.
+For data centre operators and their customers, fibre redundancy is not optional, it is the single most important connectivity requirement. A data centre with a single fibre connection is a single point of failure, regardless of how reliable that connection is on a day-to-day basis.
 
-The standard requirement for a carrier-neutral colocation facility is at least two independent fibre connections from different providers, entering the building through different physical routes. This means the cables should not share the same trench, the same manhole, or the same conduit — if a construction crew digs up one road and cuts a fibre, the other connection should be unaffected.
+The standard requirement for a carrier-neutral colocation facility is at least two independent fibre connections from different providers, entering the building through different physical routes. This means the cables should not share the same trench, the same manhole, or the same conduit, if a construction crew digs up one road and cuts a fibre, the other connection should be unaffected.
 
-Beyond dual entry, larger facilities aim for three or more diverse fibre paths. This provides additional resilience against multiple simultaneous failures and also enables traffic engineering — routing different types of traffic (e.g., latency-sensitive financial transactions vs. bulk data transfers) over different paths based on their characteristics.
+Beyond dual entry, larger facilities aim for three or more diverse fibre paths. This provides additional resilience against multiple simultaneous failures and also enables traffic engineering, routing different types of traffic (e.g., latency-sensitive financial transactions vs. bulk data transfers) over different paths based on their characteristics.
 
 ## The National Optic Fibre Backbone Infrastructure (NOFBI)
 
@@ -153,21 +153,21 @@ Fibre connectivity pricing in Kenya is complex and often opaque. The market lack
 
 For data centre connectivity, the key pricing models are dedicated internet access (DIA), where the customer gets a committed bandwidth with symmetrical upload and download speeds; point-to-point links, which connect two specific locations (e.g., a bank's headquarters to its disaster recovery site in a data centre); and peering/transit, where the data centre connects to internet exchange points and upstream providers for global reach.
 
-A 1Gbps dedicated internet connection in Nairobi typically costs between KES 80,000 and KES 200,000 per month. 10Gbps connections range from KES 400,000 to KES 1.2 million per month, with significant volume discounts available for larger commitments. These prices have fallen substantially over the past five years — a 1Gbps connection that cost KES 300,000 in 2020 can now be had for under KES 100,000 — but they remain higher than equivalent connections in South Africa or Egypt, reflecting Kenya's smaller market and the costs of serving a geographically dispersed customer base.
+A 1Gbps dedicated internet connection in Nairobi typically costs between KES 80,000 and KES 200,000 per month. 10Gbps connections range from KES 400,000 to KES 1.2 million per month, with significant volume discounts available for larger commitments. These prices have fallen substantially over the past five years (a 1Gbps connection that cost KES 300,000 in 2020 can now be had for under KES 100,000) but they remain higher than equivalent connections in South Africa or Egypt, reflecting Kenya's smaller market and the costs of serving a geographically dispersed customer base.
 
 ## Challenges and Gaps
 
-Despite the progress, Kenya's fibre infrastructure faces significant challenges. Last-mile connectivity — the final segment from the backbone to the customer's premises — remains the most expensive part of the chain, often accounting for 40–60% of the total cost of a connectivity service. Getting fibre into older buildings in Nairobi's CBD, where building managements may charge access fees or where physical duct space is limited, can be prohibitively expensive.
+Despite the progress, Kenya's fibre infrastructure faces significant challenges. Last-mile connectivity (the final segment from the backbone to the customer's premises) remains the most expensive part of the chain, often accounting for 40–60% of the total cost of a connectivity service. Getting fibre into older buildings in Nairobi's CBD, where building managements may charge access fees or where physical duct space is limited, can be prohibitively expensive.
 
 Right-of-way challenges persist. Despite regulations requiring utility companies to coordinate and share duct space, fibre deployments are frequently delayed by county government permits, road construction, and disputes with other utility operators. These delays increase costs and slow the expansion of connectivity to new areas.
 
 ![Labelled diagram of a fibre patch panel with SC and FC connectors](/images/dc-networking.webp)
 
-Rural and peri-urban areas remain underserved. While NOFBI has connected county headquarters, the last-mile from county towns to individual facilities, schools, and businesses is often still missing. This matters for data centres because edge computing — placing smaller data processing facilities closer to end users — requires fibre connectivity in locations that currently lack it.
+Rural and peri-urban areas remain underserved. While NOFBI has connected county headquarters, the last-mile from county towns to individual facilities, schools, and businesses is often still missing. This matters for data centres because edge computing (placing smaller data processing facilities closer to end users) requires fibre connectivity in locations that currently lack it.
 
 ## The Future: 5G Backhaul, Edge, and New Submarine Cables
 
-Looking ahead, several trends will shape Kenya's fibre infrastructure. 5G deployment by Safaricom, Airtel, and others will require massive fibre backhaul — every 5G base station needs a fibre connection, and the density of 5G cells means far more fibre endpoints than 4G required. This will drive further investment in metro fibre networks.
+Looking ahead, several trends will shape Kenya's fibre infrastructure. 5G deployment by Safaricom, Airtel, and others will require massive fibre backhaul, every 5G base station needs a fibre connection, and the density of 5G cells means far more fibre endpoints than 4G required. This will drive further investment in metro fibre networks.
 
 ![Diagram of a long-distance microwave link between two sites](/images/diagram-microwave-data-link.webp)
 
@@ -175,4 +175,4 @@ Edge computing, where smaller data processing facilities are placed in towns and
 
 New submarine cable systems, including 2Africa (Meta-backed) and Equiano (Google-backed, landing in South Africa but with branching units that could serve East Africa), will add further capacity and resilience. More capacity means lower per-megabit costs, which will eventually flow through to data centre connectivity pricing.
 
-Kenya's fibre network is the foundation on which its entire digital economy is built. For data centre operators, the quality, diversity, and cost of fibre connectivity is a primary differentiator — and for customers choosing between facilities, it should be one of the first questions asked.
+Kenya's fibre network is the foundation on which its entire digital economy is built. For data centre operators, the quality, diversity, and cost of fibre connectivity is a primary differentiator, and for customers choosing between facilities, it should be one of the first questions asked.

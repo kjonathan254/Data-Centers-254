@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * PwaRegister — service worker registration + "Add to Home Screen" polish.
+ * PwaRegister, service worker registration + "Add to Home Screen" polish.
  *
  * - Registers /sw.js during idle time so it never competes with first paint.
  * - Android/desktop Chromium: captures the beforeinstallprompt event and
@@ -34,7 +34,7 @@ function wasDismissedRecently(key: string): boolean {
     if (!at) return false;
     return Date.now() - Number(at) < DISMISS_DAYS * 24 * 3600 * 1000;
   } catch {
-    return true; // private browsing — never nag
+    return true; // private browsing, never nag
   }
 }
 
@@ -68,7 +68,7 @@ export default function PwaRegister() {
     if ("serviceWorker" in navigator) {
       const register = () => {
         navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {
-          /* PWA is progressive — ignore failures */
+          /* PWA is progressive, ignore failures */
         });
       };
       if ("requestIdleCallback" in window) {
@@ -167,7 +167,7 @@ export default function PwaRegister() {
               {banner === "native" ? (
                 <>
                   One tap to install. Read articles offline, launch from your
-                  home screen — no app store needed.
+                  home screen, no app store needed.
                 </>
               ) : (
                 <>

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Data Centre 254",
-    description: "Get in touch — corrections, tips, feedback, or collaboration inquiries.",
+    description: "Get in touch, corrections, tips, feedback, or collaboration inquiries.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Contact — Data Centre 254" }],
+    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Contact, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -65,7 +65,7 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
-            {/* Explore dropdown — React hover/focus state, CSS transition */}
+            {/* Explore dropdown, React hover/focus state, CSS transition */}
             <div
               className="relative"
               onMouseEnter={() => setExploreOpen(true)}

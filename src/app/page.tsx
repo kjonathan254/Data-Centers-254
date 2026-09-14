@@ -24,31 +24,31 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* 1 — Fullscreen photographic opening with overlay text + verified stat strip */}
+        {/* 1, Fullscreen photographic opening with overlay text + verified stat strip */}
         <Hero />
-        {/* 2 — Breaking story, one line, straight to the reporting */}
+        {/* 2, Breaking story, one line, straight to the reporting */}
         <BreakingNewsBar />
-        {/* 3 — The strongest asset, searchable immediately (zero JS) */}
+        {/* 3, The strongest asset, searchable immediately (zero JS) */}
         <DirectorySearchBand />
-        {/* 3.5 — The product itself: flagship facilities, deep-linked */}
+        {/* 3.5, The product itself: flagship facilities, deep-linked */}
         <FeaturedFacilities />
-        {/* 3.75 — The flagship report: free summary + downloadable PDF */}
+        {/* 3.75, The flagship report: free summary + downloadable PDF */}
         <NewReportBanner />
-        {/* 4 — Freshest reporting, image-led cards */}
+        {/* 4, Freshest reporting, image-led cards */}
         <LatestIntelligence />
-        {/* 5 — One deep-dive feature */}
+        {/* 5, One deep-dive feature */}
         <LatestNewsBanner />
-        {/* 6 — From your pocket to the rack: the basics, with a real facility */}
+        {/* 6, From your pocket to the rack: the basics, with a real facility */}
         <WhatIsDC />
-        {/* 7 — Map + sourced metrics (cables, facilities, cities, latency) */}
+        {/* 7, Map + sourced metrics (cables, facilities, cities, latency) */}
         <TheScale />
-        {/* 8 — Every topic as an image-led entry point into 56 explainers */}
+        {/* 8, Every topic as an image-led entry point into 56 explainers */}
         <ReadTheLibrary />
-        {/* 9 — Audience entry points: students / journalists / operators / researchers */}
+        {/* 9, Audience entry points: students / journalists / operators / researchers */}
         <WhoWeHelp />
-        {/* 10 — The people inside the buildings */}
+        {/* 10, The people inside the buildings */}
         <CareersSection />
-        {/* 11 — Weekly briefing signup */}
+        {/* 11, Weekly briefing signup */}
         <NewsletterV2 />
       </main>
       <Footer />

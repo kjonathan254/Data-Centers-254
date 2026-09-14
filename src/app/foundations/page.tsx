@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "Foundations — DC254",
+  title: "Foundations: DC254",
   description:
-    "The 12 foundational articles that launched The Rack Report — the weekly intelligence briefing from DataCentre254.",
+    "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
   alternates: { canonical: "/foundations" },
   openGraph: {
     title: "Foundations | Data Centre 254",
     description:
-      "The 12 foundational articles that launched The Rack Report — the weekly intelligence briefing from DataCentre254.",
+      "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -30,7 +30,7 @@ const phases = [
   { name: "Infrastructure", range: [11, 12] as const, description: "The systems that make data centres possible." },
 ];
 
-// Foundational reading order — maps published article slugs to the
+// Foundational reading order, maps published article slugs to the
 // 1–12 phase order shown on the Foundations page.
 const FOUNDATIONAL_ORDER: Record<string, number> = {
   // Phase 1–6: Foundations (core concepts)

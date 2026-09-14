@@ -11,7 +11,7 @@ const clusterMeta: Record<string, { label: string; entry: string; route: string 
   },
   Kenya: {
     label: "Kenya",
-    entry: "Nairobi and Mombasa — the two cities where Kenya's digital economy actually lives.",
+    entry: "Nairobi and Mombasa, the two cities where Kenya's digital economy actually lives.",
     route: "/kenya",
   },
   Internet: {
@@ -36,12 +36,12 @@ const clusterMeta: Record<string, { label: string; entry: string; route: string 
   },
   Infrastructure: {
     label: "Data centres",
-    entry: "Cooling, power, cabling and design — how the buildings actually work.",
+    entry: "Cooling, power, cabling and design, how the buildings actually work.",
     route: "/data-centres",
   },
   Careers: {
     label: "Careers",
-    entry: "The jobs inside these buildings — roles most Kenyans have never heard of.",
+    entry: "The jobs inside these buildings, roles most Kenyans have never heard of.",
     route: "/careers",
   },
 };
@@ -54,7 +54,7 @@ interface Cluster {
 }
 
 /**
- * The library — every cluster as an image-led card. Server component.
+ * The library, every cluster as an image-led card. Server component.
  */
 export default function ReadTheLibraryInner({ clusters }: { clusters: Cluster[] }) {
   const total = clusters.reduce((sum, c) => sum + c.count, 0);

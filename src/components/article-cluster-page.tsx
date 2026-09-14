@@ -17,13 +17,13 @@ const clusterConfig: Record<
     title: "Beginner Guides",
     subtitle: "START HERE",
     description:
-      "New to data centres? Start here. These guides explain the basics in plain language — no engineering degree required. Every concept is tied to examples you already know, like M-Pesa, WhatsApp, and Netflix.",
+      "New to data centres? Start here. These guides explain the basics in plain language, no engineering degree required. Every concept is tied to examples you already know, like M-Pesa, WhatsApp, and Netflix.",
   },
   Kenya: {
     title: "Kenya\u2019s Data Centre Industry",
     subtitle: "KENYA FOCUS",
     description:
-      "Everything about data centres in Kenya — where they are, who owns them, how the market works, and why Kenya is becoming the data centre hub of East Africa.",
+      "Everything about data centres in Kenya, where they are, who owns them, how the market works, and why Kenya is becoming the data centre hub of East Africa.",
   },
   Internet: {
     title: "Internet & Connectivity",
@@ -35,7 +35,7 @@ const clusterConfig: Record<
     title: "Energy & Power",
     subtitle: "ENERGY",
     description:
-      "Data centres are massive electricity consumers. Kenya\u2019s geothermal advantage could make it Africa\u2019s green data centre hub — but the grid has limits.",
+      "Data centres are massive electricity consumers. Kenya\u2019s geothermal advantage could make it Africa\u2019s green data centre hub, but the grid has limits.",
   },
   Careers: {
     title: "Careers & Business",
@@ -53,7 +53,7 @@ const clusterConfig: Record<
     title: "Inside Data Centres",
     subtitle: "DATA CENTRES & INFRASTRUCTURE",
     description:
-      "The physical systems that make data centres work — cooling, power, cabling, fire suppression, and building design — plus the facilities operating in Kenya today.",
+      "The physical systems that make data centres work (cooling, power, cabling, fire suppression, and building design) plus the facilities operating in Kenya today.",
   },
   Policy: {
     title: "Policy & Regulation",
@@ -115,7 +115,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
         </div>
       </header>
 
-      {/* Article list — image thumbs + text rows */}
+      {/* Article list, image thumbs + text rows */}
       <div className="container-site py-14 sm:py-16">
         {articles.length === 0 ? (
           <p className="text-muted-foreground">Articles coming soon.</p>

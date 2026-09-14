@@ -7,7 +7,7 @@ import { BOT_IDENTITY, STARTER_QUESTIONS } from "@/lib/chatbot/identity";
 import { speakAnswer, stopSpeaking, speechSupported } from "@/components/chat/speak";
 
 /**
- * The shared chat experience — used by both the floating widget (panel) and
+ * The shared chat experience, used by both the floating widget (panel) and
  * the /chat page (full). Plain, honest UI: typewriter reveal, citation chips,
  * suggested follow-ups, device-side voice.
  */
@@ -151,7 +151,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
             shown: "",
           },
         ]);
-        // Tier 4 "log & learn" — unanswered questions feed the editorial radar.
+        // Tier 4 "log & learn", unanswered questions feed the editorial radar.
         if (typeof window !== "undefined") {
           const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
           gtag?.("event", "chatbot_question", {
@@ -171,7 +171,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
           {
             id: ++messageId,
             role: "bot",
-            text: "I lost that connection mid-thought — check your network and ask me again.",
+            text: "I lost that connection mid-thought, check your network and ask me again.",
             citations: undefined,
             suggestions: undefined,
             fallback: "error",
@@ -197,7 +197,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
             {BOT_IDENTITY.name} <span className="font-normal text-muted-foreground">· {BOT_IDENTITY.role}</span>
           </p>
           <p className="text-[11px] text-muted-foreground">
-            {busy ? "Scanning the verified dataset…" : offline ? "Offline — reconnect to chat" : `Answers grounded in ${new Date().toLocaleDateString("en-KE", { month: "long", year: "numeric" })} verified data`}
+            {busy ? "Scanning the verified dataset…" : offline ? "Offline, reconnect to chat" : `Answers grounded in ${new Date().toLocaleDateString("en-KE", { month: "long", year: "numeric" })} verified data`}
           </p>
         </div>
         {speechSupported() && (
@@ -257,7 +257,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
                 {m.shown?.length === m.text.length && m.fallback && m.fallback !== "error" && (
                   <p className="mt-1.5 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-amber-500/90">
                     <AlertTriangle className="size-3" />
-                    Outside the verified dataset — double-check before citing
+                    Outside the verified dataset, double-check before citing
                   </p>
                 )}
                 {m.shown?.length === m.text.length && m.citations && m.citations.length > 0 && (
@@ -334,7 +334,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
           </button>
         </div>
         <p className="mt-2 text-[10px] leading-relaxed text-muted-foreground/60">
-          {BOT_IDENTITY.name} answers only from DC254&apos;s verified dataset and articles — every figure carries its source. No signup, no tracking of your messages.
+          {BOT_IDENTITY.name} answers only from DC254&apos;s verified dataset and articles, every figure carries its source. No signup, no tracking of your messages.
         </p>
       </form>
     </div>

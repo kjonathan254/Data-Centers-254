@@ -20,15 +20,15 @@ reading_time: "14 min"
 images:
   - src: "/images/whats-inside-ai-data-center.webp"
     alt:  "Cutaway infographic of an AI data centre's systems"
-    caption: "Cloud services ultimately run on physical servers in data centres — understanding where those data centres are and how they connect to Kenya determines cloud performance"
+    caption: "Cloud services ultimately run on physical servers in data centres, understanding where those data centres are and how they connect to Kenya determines cloud performance"
     position: "hero"
   - src: "/images/hero-server-hall.webp"
     alt:  "Corridor inside a data centre hall"
-    caption: "Cloud performance in Kenya depends on network connectivity between users, local data centres, and the cloud provider's nearest region — typically in South Africa or Europe"
+    caption: "Cloud performance in Kenya depends on network connectivity between users, local data centres, and the cloud provider's nearest region, typically in South Africa or Europe"
     position: "section-break"
   - src: "/images/nairobi-skyline-night-kicc.webp"
     alt:  "KICC tower and the Nairobi skyline at night"
-    caption: "AWS has regions in Cape Town and Bahrain, Azure in Johannesburg and Cape Town, and Google Cloud in Johannesburg — all 100-200ms from Nairobi"
+    caption: "AWS has regions in Cape Town and Bahrain, Azure in Johannesburg and Cape Town, and Google Cloud in Johannesburg, all 100-200ms from Nairobi"
     position: "infographic"
   - src: "/images/dc-environment-sustainability.webp"
     alt:  "Aerial view of a data centre campus with rooftop solar"
@@ -64,17 +64,17 @@ When a Kenyan bank decides to move its core banking platform to the cloud, when 
 
 ![Cutaway infographic of an AI data centre's systems](/images/whats-inside-ai-data-center.webp)
 
-Kenya's cloud market in 2025 is served by a mix of global hyperscale providers operating remotely, local telecom operators offering cloud services from Kenyan data centres, and a growing number of managed service providers that help enterprises navigate the complexity. Understanding the landscape — who offers what, where the actual servers are, and what the trade-offs are — is essential for making informed decisions.
+Kenya's cloud market in 2025 is served by a mix of global hyperscale providers operating remotely, local telecom operators offering cloud services from Kenyan data centres, and a growing number of managed service providers that help enterprises navigate the complexity. Understanding the landscape (who offers what, where the actual servers are, and what the trade-offs are) is essential for making informed decisions.
 
 ## The Global Hyperscalers in Kenya
 
-The three global cloud providers — Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) — all serve Kenyan customers, but none of them operates a cloud region within Kenya's borders. This single fact shapes the entire competitive landscape.
+The three global cloud providers, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP), all serve Kenyan customers, but none of them operates a cloud region within Kenya's borders. This single fact shapes the entire competitive landscape.
 
 ### Amazon Web Services (AWS)
 
 AWS is the dominant cloud provider in Africa by market share, and Kenya is no exception. AWS launched its Africa (Cape Town) region in April 2020, becoming the first hyperscaler to have a physical presence on the African continent. The Cape Town region has three availability zones, providing the redundancy that enterprise customers require.
 
-From Nairobi, accessing AWS Cape Town involves traversing approximately 4,000 kilometres of submarine and terrestrial fibre, with typical round-trip latency of 50–80 milliseconds. For most business applications — web applications, APIs, databases serving internal users — this latency is acceptable and often imperceptible. For real-time applications like high-frequency trading, multiplayer gaming, or interactive video, it can be noticeable.
+From Nairobi, accessing AWS Cape Town involves traversing approximately 4,000 kilometres of submarine and terrestrial fibre, with typical round-trip latency of 50–80 milliseconds. For most business applications (web applications, APIs, databases serving internal users) this latency is acceptable and often imperceptible. For real-time applications like high-frequency trading, multiplayer gaming, or interactive video, it can be noticeable.
 
 AWS has been proactive in building its Kenyan ecosystem. The company operates AWS Direct Connect partnerships with data centre operators in Nairobi, allowing dedicated, private network connections between customer equipment in Nairobi and AWS Cape Town. These Direct Connect connections bypass the public internet, providing more consistent latency and bandwidth. AWS also runs active training and partner programmes in Kenya, working with local universities and technology companies to build cloud skills.
 
@@ -82,17 +82,17 @@ AWS's strength is breadth: with over 200 fully featured services spanning comput
 
 ### Microsoft Azure
 
-Microsoft Azure has been the most aggressive of the three hyperscalers in building a local presence in Kenya — not through a cloud region, but through partnerships and programmes that give it an on-the-ground advantage. Microsoft operates Azure regions in Johannesburg and Cape Town in South Africa, and in Bahrain for the Middle East. Latency from Nairobi to Johannesburg is comparable to AWS Cape Town, at 50–80 milliseconds.
+Microsoft Azure has been the most aggressive of the three hyperscalers in building a local presence in Kenya, not through a cloud region, but through partnerships and programmes that give it an on-the-ground advantage. Microsoft operates Azure regions in Johannesburg and Cape Town in South Africa, and in Bahrain for the Middle East. Latency from Nairobi to Johannesburg is comparable to AWS Cape Town, at 50–80 milliseconds.
 
 ![Corridor inside a data centre hall](/images/hero-server-hall.webp)
 
-Azure's unique advantage in Kenya is Microsoft's deep enterprise relationships. Microsoft products — Windows Server, Active Directory, Microsoft 365, SQL Server, Dynamics — are already deeply embedded in Kenyan banks, government agencies, and enterprises. Azure's integration with these existing systems makes it the path of least resistance for organisations that are already in the Microsoft ecosystem. A bank running SQL Server on-premises can migrate to Azure SQL Database with minimal application changes. A government agency using Microsoft 365 can extend its identity management to Azure Active Directory (now Microsoft Entra ID) for cloud workloads.
+Azure's unique advantage in Kenya is Microsoft's deep enterprise relationships. Microsoft products (Windows Server, Active Directory, Microsoft 365, SQL Server, Dynamics) are already deeply embedded in Kenyan banks, government agencies, and enterprises. Azure's integration with these existing systems makes it the path of least resistance for organisations that are already in the Microsoft ecosystem. A bank running SQL Server on-premises can migrate to Azure SQL Database with minimal application changes. A government agency using Microsoft 365 can extend its identity management to Azure Active Directory (now Microsoft Entra ID) for cloud workloads.
 
 Azure also benefits from Microsoft's investment in the Kenyan developer ecosystem. The Microsoft Africa Development Centre (ADC) in Nairobi employs hundreds of engineers working on global Microsoft products, and the company's partnership programmes with Kenyan universities, its AI Centre of Excellence, and its engagement with the Kenyan government's digitalisation agenda give it visibility and relationships that AWS and Google Cloud cannot easily match.
 
 ### Google Cloud Platform (GCP)
 
-Google Cloud is the third hyperscaler and, in Kenya, the smallest of the three by market share. Google Cloud's nearest region to Kenya is also in Johannesburg (launched 2023), with additional regions in Europe and the Middle East. Google Cloud's strength is in data analytics, machine learning, and open-source technologies — areas where Google's internal expertise, built through running its own global services (Search, YouTube, Gmail), translates into superior cloud offerings.
+Google Cloud is the third hyperscaler and, in Kenya, the smallest of the three by market share. Google Cloud's nearest region to Kenya is also in Johannesburg (launched 2023), with additional regions in Europe and the Middle East. Google Cloud's strength is in data analytics, machine learning, and open-source technologies, areas where Google's internal expertise, built through running its own global services (Search, YouTube, Gmail), translates into superior cloud offerings.
 
 For Kenyan organisations, Google Cloud's appeal is primarily in specific use cases: organisations running Kubernetes (Google created and open-sourced Kubernetes), companies building data lakes and analytics pipelines (BigQuery is widely regarded as the best cloud data warehouse), and startups building AI/ML applications (Vertex AI, TensorFlow, and Google's pre-trained models). Google Cloud often has the most aggressive pricing for compute-intensive workloads, which can make it attractive for cost-sensitive startups and research institutions.
 
@@ -106,7 +106,7 @@ Safaricom, Kenya's largest telecom operator, offers cloud services from its own 
 
 ![KICC tower and the Nairobi skyline at night](/images/nairobi-skyline-night-kicc.webp)
 
-Safaricom Cloud's limitations are real. Its service catalogue is much narrower than the hyperscalers — it lacks the breadth of managed services, AI/ML platforms, serverless computing, and advanced analytics that AWS and Azure offer. Its ecosystem of third-party tools and consulting partners is smaller. And its global reach is, by definition, limited to Kenya. For a Kenyan bank that needs to serve customers across East Africa, or a startup that plans to expand to Nigeria, Safaricom Cloud cannot provide the multi-region deployment that hyperscalers offer.
+Safaricom Cloud's limitations are real. Its service catalogue is much narrower than the hyperscalers, it lacks the breadth of managed services, AI/ML platforms, serverless computing, and advanced analytics that AWS and Azure offer. Its ecosystem of third-party tools and consulting partners is smaller. And its global reach is, by definition, limited to Kenya. For a Kenyan bank that needs to serve customers across East Africa, or a startup that plans to expand to Nigeria, Safaricom Cloud cannot provide the multi-region deployment that hyperscalers offer.
 
 Despite these limitations, Safaricom Cloud has a genuine market. Government agencies subject to data sovereignty requirements, banks that want their core systems in Kenya, and SMEs that value the simplicity of a single local provider all find value in Safaricom's offering.
 
@@ -144,4 +144,4 @@ The most significant trend in Kenya's cloud market is the adoption of hybrid and
 
 For Kenyan organisations, the hybrid model is particularly practical. It allows banks to keep core banking systems in Nairobi for low latency and regulatory compliance, while using AWS or Azure for development, testing, data analytics, and disaster recovery. It allows government agencies to keep citizen data onshore while leveraging global cloud capabilities for non-sensitive workloads. And it reduces vendor lock-in by distributing workloads across multiple providers.
 
-The data centre infrastructure being built in Kenya — carrier-neutral facilities with Direct Connect capabilities, interconnection to multiple cloud providers, and high-speed fibre connectivity — is the physical foundation that makes these hybrid strategies possible. As the cloud market matures, the quality of local data centre connectivity will increasingly determine how effectively Kenyan organisations can leverage global cloud services while meeting local requirements.
+The data centre infrastructure being built in Kenya, carrier-neutral facilities with Direct Connect capabilities, interconnection to multiple cloud providers, and high-speed fibre connectivity, is the physical foundation that makes these hybrid strategies possible. As the cloud market matures, the quality of local data centre connectivity will increasingly determine how effectively Kenyan organisations can leverage global cloud services while meeting local requirements.

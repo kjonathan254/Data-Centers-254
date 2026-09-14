@@ -20,7 +20,7 @@ reading_time: "10 min"
 images:
   - src: "/images/technician-ups-battery-room.webp"
     alt: "Power and battery infrastructure supporting server racks in a data centre"
-    caption: "A server is a computer whose job never ends — and it takes this kind of power and cooling infrastructure behind the racks to keep it that way"
+    caption: "A server is a computer whose job never ends, and it takes this kind of power and cooling infrastructure behind the racks to keep it that way"
     position: hero
   - src: "/images/dc-gpu-cluster.webp"
     alt:  "GPU cluster racks in a colocation facility"
@@ -28,11 +28,11 @@ images:
     position: "section-break"
   - src: "/images/fibre-splicing-technician-data-hall.webp"
     alt: "Technician working with network cabling in a data hall"
-    caption: "Servers are only half the story — the networks this technician is working on connect them to each other and to the outside world, routing data at speeds measured in billions of bits per second"
+    caption: "Servers are only half the story, the networks this technician is working on connect them to each other and to the outside world, routing data at speeds measured in billions of bits per second"
     position: "inline"
   - src: "/images/diagram-server-rack-42u.webp"
     alt:  "Labelled diagram of a 42U server rack"
-    caption: "A standard 42U rack stacks top-of-rack switching, compute, storage, and dual power feeds into roughly 600 mm of width — multiplied by hundreds, it becomes a data hall."
+    caption: "A standard 42U rack stacks top-of-rack switching, compute, storage, and dual power feeds into roughly 600 mm of width, multiplied by hundreds, it becomes a data hall."
     position: "diagram"
 
 internal_links:
@@ -55,7 +55,7 @@ faq:
   - question: "How much does a server cost?"
     answer: "A basic 1U rack server suitable for web hosting or small business applications costs approximately KES 150,000-400,000 ($1,000-3,000). A high-performance server with multiple processors, large memory, and fast storage can cost KES 1-5 million ($7,000-35,000). GPU servers for AI workloads cost KES 15-30 million ($100,000-200,000+) due to the cost of NVIDIA or AMD GPUs."
   - question: "Can a regular computer be used as a server?"
-    answer: "Technically yes — any computer can run server software (a web server, a file server, a database). Many small businesses and home users use regular computers or even Raspberry Pi devices as servers. However, for production use in a business environment, purpose-built servers are strongly recommended because they offer reliability (redundant components), performance (enterprise-grade processors and memory), manageability (remote management interfaces), and standardised form factors (rack mounting) that regular computers lack."
+    answer: "Technically yes, any computer can run server software (a web server, a file server, a database). Many small businesses and home users use regular computers or even Raspberry Pi devices as servers. However, for production use in a business environment, purpose-built servers are strongly recommended because they offer reliability (redundant components), performance (enterprise-grade processors and memory), manageability (remote management interfaces), and standardised form factors (rack mounting) that regular computers lack."
   - question: "What types of servers exist?"
     answer: "The main categories include: web servers (serve web pages), application servers (run application logic), database servers (store and retrieve data), file servers (store and share files), mail servers (send and receive email), DNS servers (translate domain names to IP addresses), and virtualisation servers (run multiple virtual machines on one physical server). In modern data centres, many of these functions are consolidated onto fewer, more powerful servers using virtualisation."
 canonical_url: "https://data-centers-254.vercel.app/articles/what-is-a-server"
@@ -77,17 +77,17 @@ A regular laptop is designed to be used for 3-5 years, turned on and off daily, 
 
 Servers use **ECC memory** (Error-Correcting Code RAM), which can detect and correct single-bit memory errors that would cause a regular computer to crash. In a server running 24/7 processing thousands of transactions per second, a memory error could corrupt a database or drop an ongoing transaction. ECC memory prevents this, adding a layer of reliability that standard desktop memory does not provide.
 
-Servers have **redundant power supplies** — two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime — there are multiple layers of redundancy between the grid and the processor.
+Servers have **redundant power supplies**, two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime, there are multiple layers of redundancy between the grid and the processor.
 
 ![GPU cluster racks in a colocation facility](/images/dc-gpu-cluster.webp)
 
-Servers use **hot-swappable components** — drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
+Servers use **hot-swappable components**, drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
 
 ### Form Factor: Designed for Density
 
-Servers are designed to be mounted in standard 19-inch equipment racks. The most common form factor is the **rack server** (also called a 1U or 2U server), which is a flat, rectangular box that slides into a rack like a book into a bookshelf. The "U" stands for "rack unit" — 1U is 44.45 millimetres (1.75 inches) tall. A standard 42U rack can hold 42 1U servers, though in practice, airflow and power requirements mean most racks hold 10-20 servers with space between them.
+Servers are designed to be mounted in standard 19-inch equipment racks. The most common form factor is the **rack server** (also called a 1U or 2U server), which is a flat, rectangular box that slides into a rack like a book into a bookshelf. The "U" stands for "rack unit", 1U is 44.45 millimetres (1.75 inches) tall. A standard 42U rack can hold 42 1U servers, though in practice, airflow and power requirements mean most racks hold 10-20 servers with space between them.
 
-The density of rack servers is remarkable. A single 42U rack, occupying less than half a square metre of floor space, can contain 20-40 servers — each one a powerful computer in its own right. A data centre hall with 200 racks can house 4,000-8,000 individual servers, processing millions of transactions per second for hundreds of different customers.
+The density of rack servers is remarkable. A single 42U rack, occupying less than half a square metre of floor space, can contain 20-40 servers, each one a powerful computer in its own right. A data centre hall with 200 racks can house 4,000-8,000 individual servers, processing millions of transactions per second for hundreds of different customers.
 
 Other server form factors include **blade servers** (compact server modules that slot into a chassis that provides shared power, cooling, and networking) and **tower servers** (standalone units that look like large desktop computers, typically used in small offices rather than data centres).
 
@@ -111,7 +111,7 @@ Database servers store, organise, and retrieve structured data. Every time you c
 
 ### Application Servers
 
-Application servers run the business logic of applications — the code that processes requests, applies business rules, and coordinates between web servers and databases. When you submit a loan application on a bank's website, the web server receives the form, the application server processes it (checking credit scores, calculating terms, applying rules), and the database server stores the result.
+Application servers run the business logic of applications, the code that processes requests, applies business rules, and coordinates between web servers and databases. When you submit a loan application on a bank's website, the web server receives the form, the application server processes it (checking credit scores, calculating terms, applying rules), and the database server stores the result.
 
 ### Virtualisation Hosts
 
@@ -133,4 +133,4 @@ A typical modern rack server for enterprise workloads might have two processors 
 
 ![Labelled diagram of a 42U server rack](/images/diagram-server-rack-42u.webp)
 
-Data centres exist because the collective needs of thousands of servers — for power, cooling, connectivity, and security — are best met by purpose-built facilities with dedicated infrastructure and expert staff. Every server you interact with online lives in a data centre, and understanding what servers are and how they work is the first step to understanding the entire digital infrastructure ecosystem that powers Kenya's economy.
+Data centres exist because the collective needs of thousands of servers (for power, cooling, connectivity, and security) are best met by purpose-built facilities with dedicated infrastructure and expert staff. Every server you interact with online lives in a data centre, and understanding what servers are and how they work is the first step to understanding the entire digital infrastructure ecosystem that powers Kenya's economy.

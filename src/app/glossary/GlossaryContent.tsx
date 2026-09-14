@@ -57,7 +57,7 @@ export default function GlossaryContent({
             Data Centre Glossary
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            {terms.length} essential terms explained in plain language — with
+            {terms.length} essential terms explained in plain language, with
             Kenya-specific context. Every definition includes real examples and
             links to deep-dive articles.
           </p>
@@ -73,7 +73,7 @@ export default function GlossaryContent({
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors sm:text-base">
-              Kamusi ya Kiswahili — the glossary in Swahili
+              Kamusi ya Kiswahili, the glossary in Swahili
             </p>
             <p className="text-xs text-muted-foreground mt-0.5 sm:text-sm">
               22 core data centre terms explained in plain Kiswahili, plus an
@@ -151,7 +151,7 @@ export default function GlossaryContent({
                   id={t.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
                   className="glass-card rounded-xl border border-border/50 overflow-hidden"
                 >
-                  {/* Term header — always visible */}
+                  {/* Term header, always visible */}
                   <button
                     onClick={() =>
                       setExpandedTerm(isExpanded ? null : t.term)

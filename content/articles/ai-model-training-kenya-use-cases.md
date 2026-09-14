@@ -22,15 +22,15 @@ reading_time: "12 min"
 images:
 - src: /images/ai-gpu-servers.webp
   alt:  "GPU servers racked in a data centre"
-  caption: "Training clusters need dense, well-cooled compute — the kind Kenya's new facilities are being built for."
+  caption: "Training clusters need dense, well-cooled compute, the kind Kenya's new facilities are being built for."
   position: hero
 - src: /images/fibre-splicing-termination.webp
   alt:  "Technician terminating fibre optic cable"
-  caption: "Training demands accelerators, fast interconnects, and storage that can feed them — interconnects that begin with fibre work like this."
+  caption: "Training demands accelerators, fast interconnects, and storage that can feed them, interconnects that begin with fibre work like this."
   position: section-break
 - src: /images/ups-switchgear-power-room.webp
   alt: UPS and switchgear line-up in a data centre power room
-  caption: AI training clusters demand 5-10 MW of reliable power supply — conditioned and backed up in rooms like this.
+  caption: AI training clusters demand 5-10 MW of reliable power supply, conditioned and backed up in rooms like this.
   position: inline
 internal_links:
 - text: Gpu Computing Kenya Ai Needs Data Centres
@@ -57,7 +57,7 @@ faq:
   answer: Several factors drive the push for local training. The Kenya Data Protection
     Act 2019 imposes obligations on personal data processing, making data sovereignty
     a real concern for banks and telcos handling sensitive customer data. Sending
-    large training datasets abroad incurs significant egress costs — transferring
+    large training datasets abroad incurs significant egress costs, transferring
     terabytes of financial or health data to US-based GPUs can cost thousands of dollars.
     Additionally, latency matters for iterative ML development workflows, and local
     training enables faster experimentation cycles. There are also strategic arguments
@@ -76,8 +76,8 @@ faq:
   answer: NCBA Bank and KCB Group are using machine learning for credit scoring and
     fraud detection. Safaricom leverages AI for network optimisation and customer
     service chatbots. Twiga Foods applies ML models for supply chain optimisation
-    and demand forecasting. Academic institutions — the University of Nairobi, Strathmore
-    University, and Kenyatta University — conduct AI research, often with limited
+    and demand forecasting. Academic institutions, the University of Nairobi, Strathmore
+    University, and Kenyatta University, conduct AI research, often with limited
     GPU resources. The iHub ecosystem and iCompute have incubated AI-focused startups,
     and the Microsoft Africa Development Centre in Nairobi contributes to global AI
     product development.
@@ -99,15 +99,15 @@ Kenya's digital economy has matured rapidly, and with that maturity comes an ine
 
 ![GPU servers racked in a data centre](/images/ai-gpu-servers.webp)
 
-Model training — the process of feeding large datasets through neural networks to adjust weights and produce a useful AI model — is fundamentally different from running inference. It demands orders of magnitude more compute, memory, storage throughput, and networking bandwidth. Understanding what this requires, and where Kenya stands in meeting those requirements, is essential for anyone tracking the [East African data centre market](/articles/ai-data-centres-east-africa).
+Model training (the process of feeding large datasets through neural networks to adjust weights and produce a useful AI model) is fundamentally different from running inference. It demands orders of magnitude more compute, memory, storage throughput, and networking bandwidth. Understanding what this requires, and where Kenya stands in meeting those requirements, is essential for anyone tracking the [East African data centre market](/articles/ai-data-centres-east-africa).
 
 ## What Model Training Actually Requires
 
 ### GPU Clusters and Compute Density
 
-Training modern AI models — whether large language models, computer vision systems, or recommender engines — requires clusters of specialised GPUs. A single NVIDIA H100 GPU delivers roughly 4 times the training throughput of the previous A100 generation. However, no single GPU is sufficient for serious training workloads. Production training happens across clusters of 64 to 512 GPUs working in parallel, organised into configurations such as NVIDIA DGX SuperPOD.
+Training modern AI models (whether large language models, computer vision systems, or recommender engines) requires clusters of specialised GPUs. A single NVIDIA H100 GPU delivers roughly 4 times the training throughput of the previous A100 generation. However, no single GPU is sufficient for serious training workloads. Production training happens across clusters of 64 to 512 GPUs working in parallel, organised into configurations such as NVIDIA DGX SuperPOD.
 
-Each H100 GPU consumes approximately 700 watts under load. A modest 64-GPU cluster draws around 45 kW just for the GPUs alone, before factoring in CPUs, memory, storage, networking, and cooling. A serious training facility — the kind that would serve multiple Kenyan enterprises — would need **5 to 10 MW of dedicated power capacity**.
+Each H100 GPU consumes approximately 700 watts under load. A modest 64-GPU cluster draws around 45 kW just for the GPUs alone, before factoring in CPUs, memory, storage, networking, and cooling. A serious training facility (the kind that would serve multiple Kenyan enterprises) would need **5 to 10 MW of dedicated power capacity**.
 
 ### High-Speed Interconnects
 
@@ -115,11 +115,11 @@ Distributed training across multiple GPUs requires extremely low-latency, high-b
 
 ### Storage and Data Pipelines
 
-Training a large language model might require ingesting terabytes of text data per hour. Storage systems must deliver sustained throughput of hundreds of gigabytes per second — far beyond what conventional enterprise storage provides. Parallel file systems such as Lustre or WekaIO are standard in training environments.
+Training a large language model might require ingesting terabytes of text data per hour. Storage systems must deliver sustained throughput of hundreds of gigabytes per second, far beyond what conventional enterprise storage provides. Parallel file systems such as Lustre or WekaIO are standard in training environments.
 
 ### Power and Cooling
 
-At H100 density levels, traditional air cooling becomes impractical. **Liquid cooling** — either direct-to-chip or immersion cooling — is essential to manage the 40-50 kW per rack thermal output that GPU training clusters generate. Kenya's relatively mild climate in Nairobi (average temperatures of 18-25°C) offers some advantage for free cooling, but liquid systems remain necessary for GPU-dense deployments.
+At H100 density levels, traditional air cooling becomes impractical. **Liquid cooling** (either direct-to-chip or immersion cooling) is essential to manage the 40-50 kW per rack thermal output that GPU training clusters generate. Kenya's relatively mild climate in Nairobi (average temperatures of 18-25°C) offers some advantage for free cooling, but liquid systems remain necessary for GPU-dense deployments.
 
 ![Technician terminating fibre optic cable](/images/fibre-splicing-termination.webp)
 
@@ -145,7 +145,7 @@ The **University of Nairobi's School of Computing and Informatics**, **Strathmor
 
 The **iHub** ecosystem in Nairobi continues to incubate AI-focused startups, and initiatives like **iCompute** have experimented with shared GPU resources. However, these remain small-scale compared to what is needed.
 
-## The Infrastructure Gap: Why Kenya Can't Train at Scale — Yet
+## The Infrastructure Gap: Why Kenya Can't Train at Scale, Yet
 
 ### No Commercial GPU Cloud in Kenya
 
@@ -155,15 +155,15 @@ As of mid-2026, **there is no commercially available GPU cloud in Kenya**. Organ
 - **Use European or US cloud regions** (higher latency, higher egress costs, and potential data residency complications)
 - **Deploy on-premises NVIDIA setups** (capital-intensive, requiring in-house expertise)
 
-The lack of local GPU cloud is not just an inconvenience — it is a structural impediment to Kenya's AI ambitions. According to [Microsoft's Azure infrastructure documentation](https://azure.microsoft.com/en-us/global-infrastructure/regions/), the closest Azure regions with GPU instances are in South Africa and the UAE, neither of which provides ideal latency for Kenyan users.
+The lack of local GPU cloud is not just an inconvenience, it is a structural impediment to Kenya's AI ambitions. According to [Microsoft's Azure infrastructure documentation](https://azure.microsoft.com/en-us/global-infrastructure/regions/), the closest Azure regions with GPU instances are in South Africa and the UAE, neither of which provides ideal latency for Kenyan users.
 
 ### Data Transfer Costs
 
-Moving a terabyte of data from Nairobi to AWS Cape Town costs approximately $80-120 in egress fees alone. Training a serious model might require moving 10-50 TB of data, translating to thousands of dollars purely in transfer costs — before any compute charges. For organisations with continuously growing datasets, these recurring costs become a significant operational burden.
+Moving a terabyte of data from Nairobi to AWS Cape Town costs approximately $80-120 in egress fees alone. Training a serious model might require moving 10-50 TB of data, translating to thousands of dollars purely in transfer costs, before any compute charges. For organisations with continuously growing datasets, these recurring costs become a significant operational burden.
 
 ### The Data Sovereignty Imperative
 
-The **Kenya Data Protection Act 2019**, overseen by the Office of the Data Protection Commissioner (ODPC), requires that personal data processing be conducted in accordance with Kenyan law. While the Act does not explicitly prohibit cross-border data transfers, it imposes conditions — including adequacy assessments and appropriate safeguards — that create compliance complexity for organisations sending Kenyan citizens' data to foreign GPU clusters. Banks and telcos, in particular, face scrutiny from the Central Bank of Kenya and the Communications Authority regarding where customer data is processed.
+The **Kenya Data Protection Act 2019**, overseen by the Office of the Data Protection Commissioner (ODPC), requires that personal data processing be conducted in accordance with Kenyan law. While the Act does not explicitly prohibit cross-border data transfers, it imposes conditions (including adequacy assessments and appropriate safeguards) that create compliance complexity for organisations sending Kenyan citizens' data to foreign GPU clusters. Banks and telcos, in particular, face scrutiny from the Central Bank of Kenya and the Communications Authority regarding where customer data is processed.
 
 ## Emerging Players and Investments
 
@@ -173,7 +173,7 @@ Microsoft's **Africa Development Centre (ADC)** in Nairobi, established in 2019 
 
 ### Google AI Lab in Accra
 
-[Google's AI research lab in Accra, Ghana](https://research.google/outreach/africa/), opened in 2018, serves the broader African continent and has produced research on applications relevant to East Africa, including agricultural AI and healthcare models. While not based in Nairobi, the lab's work demonstrates that major tech companies see Africa as a viable location for AI research investment — and Kenya's more mature tech ecosystem arguably makes it a stronger candidate for the next such investment.
+[Google's AI research lab in Accra, Ghana](https://research.google/outreach/africa/), opened in 2018, serves the broader African continent and has produced research on applications relevant to East Africa, including agricultural AI and healthcare models. While not based in Nairobi, the lab's work demonstrates that major tech companies see Africa as a viable location for AI research investment, and Kenya's more mature tech ecosystem arguably makes it a stronger candidate for the next such investment.
 
 ### Local GPU Hosting Experiments
 
@@ -199,9 +199,9 @@ Building a facility capable of supporting serious AI model training in Kenya wou
 
 ## Projecting Future Demand
 
-Kenya's digital economy is projected to contribute over 10% of GDP by 2030, up from approximately 7.5% in 2023. The fintech sector alone processes transactions worth trillions of shillings annually through M-Pesa and banking platforms. Each of these transactions generates data that could improve AI models — if the compute existed to train on it.
+Kenya's digital economy is projected to contribute over 10% of GDP by 2030, up from approximately 7.5% in 2023. The fintech sector alone processes transactions worth trillions of shillings annually through M-Pesa and banking platforms. Each of these transactions generates data that could improve AI models, if the compute existed to train on it.
 
-Conservative estimates suggest Kenya will need **50-100 MW of data centre capacity by 2030**, up from approximately 30 MW today. A significant portion of that new capacity will need to be GPU-ready. If even 10% of the projected capacity is allocated to AI training, that represents 5-10 MW of GPU-dense infrastructure — comparable to a mid-sized AI cluster in a European or Asian market.
+Conservative estimates suggest Kenya will need **50-100 MW of data centre capacity by 2030**, up from approximately 30 MW today. A significant portion of that new capacity will need to be GPU-ready. If even 10% of the projected capacity is allocated to AI training, that represents 5-10 MW of GPU-dense infrastructure, comparable to a mid-sized AI cluster in a European or Asian market.
 
 The question is no longer *whether* Kenya needs AI training infrastructure, but *when* and *who* will build it. The convergence of data sovereignty requirements, growing enterprise AI adoption, and the strategic importance of indigenous AI capability makes a compelling case that the first commercial GPU cloud in East Africa will likely launch in Kenya within the next three to five years.
 
@@ -213,7 +213,7 @@ Limited model training is possible using on-premises NVIDIA GPU setups at univer
 
 ### Why would a Kenyan company train AI models locally instead of using overseas cloud?
 
-Several factors drive the push for local training. The Kenya Data Protection Act 2019 imposes obligations on personal data processing, making data sovereignty a real concern for banks and telcos handling sensitive customer data. Sending large training datasets abroad incurs significant egress costs — transferring terabytes of financial or health data to US-based GPUs can cost thousands of dollars. Additionally, latency matters for iterative ML development workflows, and local training enables faster experimentation cycles. There are also strategic arguments around building indigenous AI capabilities rather than being dependent on foreign infrastructure.
+Several factors drive the push for local training. The Kenya Data Protection Act 2019 imposes obligations on personal data processing, making data sovereignty a real concern for banks and telcos handling sensitive customer data. Sending large training datasets abroad incurs significant egress costs, transferring terabytes of financial or health data to US-based GPUs can cost thousands of dollars. Additionally, latency matters for iterative ML development workflows, and local training enables faster experimentation cycles. There are also strategic arguments around building indigenous AI capabilities rather than being dependent on foreign infrastructure.
 
 ### What hardware does a Kenyan AI data centre need for serious model training?
 
@@ -221,7 +221,7 @@ A production-grade AI training facility requires NVIDIA A100 or H100 GPUs organi
 
 ### Which Kenyan organisations are actively using or developing AI models?
 
-NCBA Bank and KCB Group are using machine learning for credit scoring and fraud detection. Safaricom leverages AI for network optimisation and customer service chatbots. Twiga Foods applies ML models for supply chain optimisation and demand forecasting. Academic institutions — the University of Nairobi, Strathmore University, and Kenyatta University — conduct AI research, often with limited GPU resources. The iHub ecosystem and iCompute have incubated AI-focused startups, and the Microsoft Africa Development Centre in Nairobi contributes to global AI product development.
+NCBA Bank and KCB Group are using machine learning for credit scoring and fraud detection. Safaricom leverages AI for network optimisation and customer service chatbots. Twiga Foods applies ML models for supply chain optimisation and demand forecasting. Academic institutions (the University of Nairobi, Strathmore University, and Kenyatta University) conduct AI research, often with limited GPU resources. The iHub ecosystem and iCompute have incubated AI-focused startups, and the Microsoft Africa Development Centre in Nairobi contributes to global AI product development.
 
 ### How does Konza Technopolis fit into Kenya's AI infrastructure plans?
 

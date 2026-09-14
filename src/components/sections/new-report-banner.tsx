@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight, BookOpen, Download } from "lucide-react";
 
 /**
- * New report banner — the flagship DC254 report, surfaced on the homepage.
+ * New report banner, the flagship DC254 report, surfaced on the homepage.
  * Image-led editorial card matching the house style: photograph left,
  * content right, mono badge, cyan accents. Server component.
  * Structure: the headline block links to the free summary; the PDF chip
@@ -25,7 +25,7 @@ export default function NewReportBanner() {
         </div>
 
         <article className="card-solid card-solid-hover group mt-6 grid overflow-hidden lg:grid-cols-5">
-          {/* Photograph — links to the summary */}
+          {/* Photograph, links to the summary */}
           <Link
             href="/research/state-of-kenyan-data-centres-2026"
             aria-label="Read the free summary of State of Kenyan Data Centres 2026"
@@ -79,7 +79,7 @@ export default function NewReportBanner() {
               </div>
             </div>
 
-            {/* CTAs — real links, siblings of the headline link */}
+            {/* CTAs, real links, siblings of the headline link */}
             <div className="mt-5 flex flex-wrap items-center gap-2.5">
               <Link
                 href="/research/state-of-kenyan-data-centres-2026"

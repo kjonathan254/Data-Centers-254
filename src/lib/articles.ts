@@ -146,7 +146,7 @@ function byFreshness(a: Article, b: Article): number {
 /**
  * "New" badge window in hours. A story shows the green NEW badge in
  * listings while its freshness date (updated or published, whichever is
- * later) is within this window. Evaluated at build time — redeploy to
+ * later) is within this window. Evaluated at build time, redeploy to
  * refresh. Bump here if the editorial rule changes.
  */
 export const FRESH_WINDOW_HOURS = 48;
@@ -160,7 +160,7 @@ export function isArticleFresh(a: Article, now: Date = new Date()): boolean {
  * The photograph that represents this article in cards and grids:
  * its own hero image when the frontmatter defines one, else its first
  * body image, else the cluster photograph as a last resort. Using the
- * article's own hero keeps listing pages visually distinct — every
+ * article's own hero keeps listing pages visually distinct, every
  * card shows the story it links to, not the topic banner.
  */
 export function getArticleHeroImage(

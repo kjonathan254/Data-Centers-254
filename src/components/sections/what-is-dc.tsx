@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 const flowSteps = [
   {
     label: "Your phone",
-    reveal: "Every tap, swipe and search starts here — on a device you hold in your hand.",
+    reveal: "Every tap, swipe and search starts here, on a device you hold in your hand.",
   },
   {
     label: "Mobile network",
@@ -18,16 +18,16 @@ const flowSteps = [
   {
     label: "Data centre",
     highlight: true,
-    reveal: "A building in Nairobi processes it all — in a room you will never enter.",
+    reveal: "A building in Nairobi processes it all, in a room you will never enter.",
   },
   {
     label: "Cloud / internet",
-    reveal: "The response returns through the same chain — in reverse — in under a second.",
+    reveal: "The response returns through the same chain (in reverse) in under a second.",
   },
 ];
 
 /**
- * "What is a data centre" — the journey from pocket to server rack,
+ * "What is a data centre", the journey from pocket to server rack,
  * told as a numbered sequence beside a real facility photograph.
  * Server component.
  */
@@ -56,7 +56,7 @@ export default function WhatIsDC() {
             </div>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
               A carrier-neutral data centre campus, Nairobi. Backup generators,
-              cooling plant and security perimeters — the physical form of the cloud.
+              cooling plant and security perimeters, the physical form of the cloud.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default function WhatIsDC() {
           <div className="lg:pt-16">
             <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
               Every digital service depends on a physical chain of
-              infrastructure — cables, buildings, power lines — that most
+              infrastructure (cables, buildings, power lines) that most
               people never think about. Follow one tap from your pocket to
               the rack and back:
             </p>
@@ -102,7 +102,7 @@ export default function WhatIsDC() {
               ))}
             </ol>
 
-            {/* Cutaway infographic — what's actually inside the building */}
+            {/* Cutaway infographic, what's actually inside the building */}
             <div className="img-frame mt-10 max-w-sm">
               <div className="relative aspect-[736/1104]">
                 <Image
@@ -116,7 +116,7 @@ export default function WhatIsDC() {
             </div>
             <p className="mt-3 max-w-sm text-xs leading-relaxed text-muted-foreground">
               Open the building up: the systems inside a modern AI-ready data
-              centre — compute, cooling, power chains, networking, security.
+              centre, compute, cooling, power chains, networking, security.
             </p>
 
             <Link

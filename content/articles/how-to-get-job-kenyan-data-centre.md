@@ -20,15 +20,15 @@ reading_time: "12 min"
 images:
   - src: "/images/classroom-ict-training-kenya.webp"
     alt: "Instructor leading an ICT training class in Kenya"
-    caption: "The pipeline starts in training classrooms and certification labs — hands-on skill is what gets you hired."
+    caption: "The pipeline starts in training classrooms and certification labs, hands-on skill is what gets you hired."
     position: hero
   - src: "/images/hero-server-hall.webp"
     alt: "Blue-lit server racks in a data hall"
-    caption: "The racks are the workplace — every role exists to keep them running."
+    caption: "The racks are the workplace, every role exists to keep them running."
     position: "section-break"
   - src: "/images/diagram-network-vs-cyber-career.webp"
     alt:  "Comparison of network engineer and cybersecurity engineer roles"
-    caption: "Pick your track first — the certification roadmap looks different for each role."
+    caption: "Pick your track first, the certification roadmap looks different for each role."
     position: "diagram"
   - src: "/images/nairobi-westlands.webp"
     alt:  "Westlands commercial district in Nairobi"
@@ -36,7 +36,7 @@ images:
     position: "inline"
   - src: "/images/moringa-ixafrica-training-signing.webp"
     alt:  "iXAfrica and Moringa School representatives signing a partnership"
-    caption: "Signing day: iXAfrica and Moringa School formalise a partnership — the operator-to-training-institution links more Kenyan data centre careers now start through. Photo: iXAfrica Data Centre."
+    caption: "Signing day: iXAfrica and Moringa School formalise a partnership, the operator-to-training-institution links more Kenyan data centre careers now start through. Photo: iXAfrica Data Centre."
     position: "inline"
 internal_links:
   - text: "data centre careers overview"
@@ -60,13 +60,13 @@ faq:
   - question: "Where do I find data centre job openings in Kenya?"
     answer: "Data centre jobs in Kenya are posted on LinkedIn, the operators' own careers pages (iXAfrica, Africa Data Centres, Safaricom), and general job boards like BrighterMonday, JobwebKenya, and Fuzu. Networking through industry events, the Technology Service Providers of Kenya (TESPOK), and the Kenya ICT Board can also uncover unadvertised positions. Following the operators on LinkedIn and setting job alerts is recommended."
   - question: "Is there a skills gap in Kenya's data centre industry?"
-    answer: "Yes, there is a significant skills gap, particularly in specialised areas. Kenya produces many software engineers and general IT graduates, but data centre-specific skills — power engineering, precision cooling management, structured cabling, facility operations, and Tier certification standards — are in short supply. This skills gap is one of the biggest constraints on the industry's growth and represents a genuine opportunity for people who invest in the right training."
+    answer: "Yes, there is a significant skills gap, particularly in specialised areas. Kenya produces many software engineers and general IT graduates, but data centre-specific skills, power engineering, precision cooling management, structured cabling, facility operations, and Tier certification standards, are in short supply. This skills gap is one of the biggest constraints on the industry's growth and represents a genuine opportunity for people who invest in the right training."
 canonical_url: "https://data-centers-254.vercel.app/articles/how-to-get-job-kenyan-data-centre"
 ---
 
-Kenya's data centre industry is growing fast, and it needs people. Not just any people — it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.
+Kenya's data centre industry is growing fast, and it needs people. Not just any people, it needs network engineers who can configure BGP on a router at 3 AM during an outage, facility managers who understand both HVAC systems and power distribution, cabling technicians who can terminate 96 fibre strands in a day, and security operators who can manage access control for a facility housing billions of shillings worth of equipment. The demand for these skills is real, it is growing, and the supply is not keeping up.
 
-This guide is for anyone in Kenya who wants to work in a data centre — whether you are a fresh graduate trying to figure out where to start, an IT professional looking to transition from enterprise IT into infrastructure, or an engineer in a related field (power, cooling, telecommunications) who sees the opportunity. We will cover the roles that exist, the certifications employers actually look for, realistic salary expectations, and practical steps to get your foot in the door.
+This guide is for anyone in Kenya who wants to work in a data centre, whether you are a fresh graduate trying to figure out where to start, an IT professional looking to transition from enterprise IT into infrastructure, or an engineer in a related field (power, cooling, telecommunications) who sees the opportunity. We will cover the roles that exist, the certifications employers actually look for, realistic salary expectations, and practical steps to get your foot in the door.
 
 ## The Roles: What Jobs Actually Exist
 
@@ -76,35 +76,35 @@ Data centres employ a surprisingly diverse range of professionals. The common pe
 
 Network engineers are the backbone of data centre operations. They design, configure, and maintain the network infrastructure that connects servers to each other, to the internet, and to customers. In a Kenyan data centre, a network engineer's daily work might involve configuring BGP peering with Safaricom and Liquid Telecom, troubleshooting fibre connectivity issues, managing VLANs for different customers, and ensuring that the network monitoring systems are functioning correctly.
 
-The most in-demand networking certification in Kenyan data centres is the Cisco CCNA (Cisco Certified Network Associate). While not every data centre uses Cisco equipment exclusively — Juniper, Arista, and Huawei gear is also common — the CCNA demonstrates a solid understanding of networking fundamentals (IP addressing, routing, switching, VLANs, OSPF, BGP) that transfers across vendors. For more senior roles, the CCNP (Cisco Certified Network Professional) or vendor-specific certifications in data centre networking (like the Cisco CCNP Data Centre) are valued.
+The most in-demand networking certification in Kenyan data centres is the Cisco CCNA (Cisco Certified Network Associate). While not every data centre uses Cisco equipment exclusively (Juniper, Arista, and Huawei gear is also common) the CCNA demonstrates a solid understanding of networking fundamentals (IP addressing, routing, switching, VLANs, OSPF, BGP) that transfers across vendors. For more senior roles, the CCNP (Cisco Certified Network Professional) or vendor-specific certifications in data centre networking (like the Cisco CCNP Data Centre) are valued.
 
-Systems administrators manage the server infrastructure — operating systems, virtualisation platforms (VMware, Proxmox, KVM), container orchestration (Kubernetes), and storage systems. These roles require a blend of Linux system administration skills (command line proficiency, shell scripting, configuration management with Ansible or Puppet) and understanding of virtualisation and cloud platforms. Relevant certifications include CompTIA Server+, Red Hat Certified Engineer (RHCE), and Microsoft Azure Administrator (AZ-104).
+Systems administrators manage the server infrastructure, operating systems, virtualisation platforms (VMware, Proxmox, KVM), container orchestration (Kubernetes), and storage systems. These roles require a blend of Linux system administration skills (command line proficiency, shell scripting, configuration management with Ansible or Puppet) and understanding of virtualisation and cloud platforms. Relevant certifications include CompTIA Server+, Red Hat Certified Engineer (RHCE), and Microsoft Azure Administrator (AZ-104).
 
 ### Facility Operations and Engineering
 
 Facility operations is the discipline that most people outside the industry do not know exists, yet it is arguably more critical to a data centre's survival than any individual server or network device. Facility engineers are responsible for the physical infrastructure that keeps servers running: power distribution, cooling systems, fire suppression, and building management systems.
 
-A facility engineer in a Kenyan data centre needs to understand electrical engineering (how power flows from the Kenya Power transformer through UPS systems and PDUs to the rack), mechanical engineering (how chillers, CRAC units, and air handling units maintain temperature and humidity), and control systems (how the building management system coordinates everything). This is a specialised skill set that combines elements of electrical, mechanical, and controls engineering — and it is in critically short supply in Kenya.
+A facility engineer in a Kenyan data centre needs to understand electrical engineering (how power flows from the Kenya Power transformer through UPS systems and PDUs to the rack), mechanical engineering (how chillers, CRAC units, and air handling units maintain temperature and humidity), and control systems (how the building management system coordinates everything). This is a specialised skill set that combines elements of electrical, mechanical, and controls engineering, and it is in critically short supply in Kenya.
 
-The gold-standard certifications for facility roles come from the Uptime Institute (ATD — Accredited Tier Designer, and AOS — Accredited Operations Specialist) and from EPI (CDCP — Certified Data Centre Professional). These certifications are recognised globally and demonstrate that the holder understands the specific requirements of data centre facility design and operations. They are not widely available in Kenya — most candidates travel to South Africa, Dubai, or Europe for training — which means holders of these certifications are scarce and highly valued.
+The gold-standard certifications for facility roles come from the Uptime Institute (ATD (Accredited Tier Designer, and AOS) Accredited Operations Specialist) and from EPI (CDCP, Certified Data Centre Professional). These certifications are recognised globally and demonstrate that the holder understands the specific requirements of data centre facility design and operations. They are not widely available in Kenya (most candidates travel to South Africa, Dubai, or Europe for training) which means holders of these certifications are scarce and highly valued.
 
 ### Network Operations Centre (NOC) Staff
 
-The NOC is the nerve centre of a data centre. Staffed 24 hours a day, 7 days a week, the NOC team monitors the entire facility — power systems, cooling, network connectivity, security cameras, and environmental sensors — and responds to alarms, outages, and customer requests. NOC operators are often the first point of contact when something goes wrong, and their ability to quickly diagnose and escalate issues directly impacts the facility's uptime record.
+The NOC is the nerve centre of a data centre. Staffed 24 hours a day, 7 days a week, the NOC team monitors the entire facility (power systems, cooling, network connectivity, security cameras, and environmental sensors) and responds to alarms, outages, and customer requests. NOC operators are often the first point of contact when something goes wrong, and their ability to quickly diagnose and escalate issues directly impacts the facility's uptime record.
 
 ![Blue-lit server racks in a data hall](/images/hero-server-hall.webp)
 
-NOC roles are excellent entry points into the data centre industry. The technical barrier to entry is lower than for engineering roles — a diploma in IT or telecommunications, plus basic networking knowledge (TCP/IP, DNS, HTTP), can be sufficient for a junior NOC position. The trade-off is that NOC roles involve shift work, including nights and weekends, which not everyone can sustain long-term. However, many senior data centre professionals started their careers in NOC roles and used the experience as a foundation for engineering or management positions.
+NOC roles are excellent entry points into the data centre industry. The technical barrier to entry is lower than for engineering roles, a diploma in IT or telecommunications, plus basic networking knowledge (TCP/IP, DNS, HTTP), can be sufficient for a junior NOC position. The trade-off is that NOC roles involve shift work, including nights and weekends, which not everyone can sustain long-term. However, many senior data centre professionals started their careers in NOC roles and used the experience as a foundation for engineering or management positions.
 
 ### Cabling and Physical Infrastructure Technicians
 
-Structured cabling technicians install, maintain, and repair the physical cable plant within a data centre — copper patch cables, fibre optic cables, and the cable management systems that keep thousands of connections organised and traceable. This might seem like a low-skill role, but professional cabling in a data centre environment requires precision, knowledge of fibre optic safety, and the ability to work in environments with strict contamination controls (clean rooms and controlled access areas).
+Structured cabling technicians install, maintain, and repair the physical cable plant within a data centre, copper patch cables, fibre optic cables, and the cable management systems that keep thousands of connections organised and traceable. This might seem like a low-skill role, but professional cabling in a data centre environment requires precision, knowledge of fibre optic safety, and the ability to work in environments with strict contamination controls (clean rooms and controlled access areas).
 
 Cabling certifications from vendors like CommScope, Corning, or Panduit, or from industry bodies like the Fiber Optic Association (FOA), demonstrate competence and can differentiate candidates. In Kenya's market, where the skills gap is particularly acute in hands-on infrastructure roles, a certified cabling technician with demonstrated fibre termination skills can be immediately employable.
 
 ### Sales, Business Development, and Operations
 
-Not every data centre role is technical. Sales and business development professionals are responsible for acquiring new customers — banks, telecom companies, cloud providers, government agencies — and growing revenue. These roles require understanding of data centre concepts (enough to have credible conversations with technical buyers), strong relationship skills, and knowledge of the Kenyan enterprise market. Data centre sales roles in Kenya typically offer base salaries of KES 150,000–300,000 plus commission, with top performers earning significantly more.
+Not every data centre role is technical. Sales and business development professionals are responsible for acquiring new customers (banks, telecom companies, cloud providers, government agencies) and growing revenue. These roles require understanding of data centre concepts (enough to have credible conversations with technical buyers), strong relationship skills, and knowledge of the Kenyan enterprise market. Data centre sales roles in Kenya typically offer base salaries of KES 150,000–300,000 plus commission, with top performers earning significantly more.
 
 ## Certification Roadmap: Where to Start
 
@@ -153,6 +153,6 @@ To find job openings, monitor these channels: LinkedIn (follow the operators and
 
 ## Practical Steps to Get Started
 
-If you are reading this and want to work in a Kenyan data centre, here is a concrete action plan. First, identify which career path suits your background — networking, systems, facility, cabling, or sales — and research the certifications required. Second, start learning: Cisco Networking Academy offers free CCNA-level courses, and platforms like Coursera and Udemy have affordable data centre-specific courses. Third, build hands-on experience through homelabs (running your own servers, networking equipment, or virtualisation platforms at home), volunteer work, or internships. Fourth, network: attend industry events, join relevant LinkedIn groups, and connect with people already working in the industry. Fifth, apply strategically — target the operators directly rather than only responding to job postings, and tailor your CV to highlight relevant skills and certifications.
+If you are reading this and want to work in a Kenyan data centre, here is a concrete action plan. First, identify which career path suits your background (networking, systems, facility, cabling, or sales) and research the certifications required. Second, start learning: Cisco Networking Academy offers free CCNA-level courses, and platforms like Coursera and Udemy have affordable data centre-specific courses. Third, build hands-on experience through homelabs (running your own servers, networking equipment, or virtualisation platforms at home), volunteer work, or internships. Fourth, network: attend industry events, join relevant LinkedIn groups, and connect with people already working in the industry. Fifth, apply strategically, target the operators directly rather than only responding to job postings, and tailor your CV to highlight relevant skills and certifications.
 
-The data centre industry in Kenya is small enough that reputation and relationships matter, but growing fast enough that opportunities are genuine and increasing. The skills gap is real, and employers are actively looking for qualified candidates. The path is not easy — it requires investment in certifications, willingness to work shifts, and continuous learning — but for those who commit, the career trajectory and compensation are among the best in Kenya's technology sector.
+The data centre industry in Kenya is small enough that reputation and relationships matter, but growing fast enough that opportunities are genuine and increasing. The skills gap is real, and employers are actively looking for qualified candidates. The path is not easy (it requires investment in certifications, willingness to work shifts, and continuous learning) but for those who commit, the career trajectory and compensation are among the best in Kenya's technology sector.

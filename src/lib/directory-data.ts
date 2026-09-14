@@ -70,7 +70,7 @@ export interface Facility {
   dataConfidence: string;
   /** Hand-curated links to DC254 coverage of this facility/operator. */
   articleSlugs?: string[];
-  /** Per-claim source links — the claim, the source, the date. */
+  /** Per-claim source links, the claim, the source, the date. */
   sources?: SourceRef[];
   /** Cross-reference against the PeeringDB facility register. */
   peeringdbFacId?: number;
@@ -80,9 +80,9 @@ export interface Facility {
   carrierNeutral?: boolean;
   /** Third-party certification position, stated precisely (design vs constructed-facility). */
   certNote?: string | null;
-  /** Where marketing claims and available evidence part ways — said plainly. */
+  /** Where marketing claims and available evidence part ways, said plainly. */
   divergenceNote?: string | null;
-  /** Publisher-supplied, identity-confirmed photo of the facility — rendered as the page hero. */
+  /** Publisher-supplied, identity-confirmed photo of the facility, rendered as the page hero. */
   heroImage?: string;
   /** Credit line shown under the hero image. */
   heroImageCredit?: string;
@@ -138,7 +138,7 @@ const facilities: Facility[] = [
     coolingType: "Free-air cooling (operator-stated)",
     powerSource: "Kenya Power grid + on-site diesel generators",
     renewableClaim: "Kenya grid is 75%+ renewable (geothermal, hydro, wind)",
-    notable: "Phase one (NBOX1.1) unveiled 28 February 2025 alongside a new KIXP point of presence, with LINX Nairobi also on site. Operator cites up to 40 kW per rack and a campus PUE target of 1.25. On 27 January 2026 iXAfrica announced it will host Oracle Cloud Infrastructure's Nairobi region — no launch date given.",
+    notable: "Phase one (NBOX1.1) unveiled 28 February 2025 alongside a new KIXP point of presence, with LINX Nairobi also on site. Operator cites up to 40 kW per rack and a campus PUE target of 1.25. On 27 January 2026 iXAfrica announced it will host Oracle Cloud Infrastructure's Nairobi region, no launch date given.",
     lastVerified: "2026-09",
     dataSource: "iXAfrica website and press releases; PeeringDB register",
     dataConfidence: "High",
@@ -156,22 +156,22 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "iXAfrica — NBOX1 facility page", url: "https://ixafrica.co.ke/", kind: "operator" },
-      { label: "iXAfrica — OCI Nairobi announcement (27 Jan 2026)", url: "https://ixafrica.co.ke/media-center", kind: "operator" },
+      { label: "iXAfrica, NBOX1 facility page", url: "https://ixafrica.co.ke/", kind: "operator" },
+      { label: "iXAfrica, OCI Nairobi announcement (27 Jan 2026)", url: "https://ixafrica.co.ke/media-center", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/13572", kind: "registry" },
     ],
     peeringdbFacId: 13572,
     peeringdbNetworks: 44,
     peeringdbIxs: 3,
     carrierNeutral: true,
-    certNote: "Widely described as \"Tier III standard\" — but iXAfrica does not appear in Uptime Institute's Kenya awards directory, and no Uptime Tier certification, ISO 27001 or PCI DSS claim appeared on its own site when checked (Sep 2026). \"Built to Tier III standards\" is a design statement, not a third-party certification.",
+    certNote: "Widely described as \"Tier III standard\", but iXAfrica does not appear in Uptime Institute's Kenya awards directory, and no Uptime Tier certification, ISO 27001 or PCI DSS claim appeared on its own site when checked (Sep 2026). \"Built to Tier III standards\" is a design statement, not a third-party certification.",
     divergenceNote: "Marketing materials describe a 22.5 MW campus (NBOX1.1 4.5 MW + NBOX1.2 at 18 MW / 3,744 racks). Only phase one is verifiable as operating; the 18 MW second building is under construction, not confirmed complete.",
   },
   {
     id: "6",
     name: "iXAfrica NBOX1.2",
     slug: "ixafrica-nbox1-2",
-    description: "Second phase of iXAfrica's Mombasa Road campus. Financing is secured and construction is underway; on completion the NBOX1 campus will deliver 22.5 MW of IT power — the largest single-site campus in Greater East Africa.",
+    description: "Second phase of iXAfrica's Mombasa Road campus. Financing is secured and construction is underway; on completion the NBOX1 campus will deliver 22.5 MW of IT power, the largest single-site campus in Greater East Africa.",
     status: "Under Construction",
     address: "Cabanas, Mombasa Road, Industrial Area",
     city: "Nairobi",
@@ -197,8 +197,8 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "iXAfrica — campus plans and press releases", url: "https://ixafrica.co.ke/", kind: "operator" },
-      { label: "DataCenterDynamics — iXAfrica coverage", url: "https://www.datacenterdynamics.com/en/search/?q=iXAfrica", kind: "press" },
+      { label: "iXAfrica, campus plans and press releases", url: "https://ixafrica.co.ke/", kind: "operator" },
+      { label: "DataCenterDynamics, iXAfrica coverage", url: "https://www.datacenterdynamics.com/en/search/?q=iXAfrica", kind: "press" },
     ],
     carrierNeutral: true,
     certNote: null,
@@ -224,7 +224,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power (planned)",
     renewableClaim: null,
-    notable: "Land acquired in August 2023 (11 acres) in the Tilisi development. Planned for over 53 MW of IT load — iXAfrica's medium-term growth vector after NBOX1.2.",
+    notable: "Land acquired in August 2023 (11 acres) in the Tilisi development. Planned for over 53 MW of IT load, iXAfrica's medium-term growth vector after NBOX1.2.",
     lastVerified: "2026-09",
     dataSource: "iXAfrica campus announcements, DC254 editorial",
     dataConfidence: "Medium",
@@ -234,11 +234,11 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "iXAfrica — Tilisi campus announcements", url: "https://ixafrica.co.ke/media-center", kind: "operator" },
+      { label: "iXAfrica, Tilisi campus announcements", url: "https://ixafrica.co.ke/media-center", kind: "operator" },
     ],
     carrierNeutral: true,
     certNote: null,
-    divergenceNote: "Land secured and pre-build stage — no vertical construction confirmed. The 53 MW figure is the long-term master plan, not committed capacity. Do not confuse with NBOX1.2 (the 18 MW second building at the Mombasa Road campus).",
+    divergenceNote: "Land secured and pre-build stage, no vertical construction confirmed. The 53 MW figure is the long-term master plan, not committed capacity. Do not confuse with NBOX1.2 (the 18 MW second building at the Mombasa Road campus).",
   },
 
   // ── Africa Data Centres ────────────────────────────────────────────────
@@ -246,7 +246,7 @@ const facilities: Facility[] = [
     id: "2",
     name: "Africa Data Centres Nairobi 1 (NBO1)",
     slug: "africa-dc-nairobi-1",
-    description: "ADC's flagship East Africa facility at Sameer Business Park — the most densely connected data centre building in Kenya, with four internet exchanges on site.",
+    description: "ADC's flagship East Africa facility at Sameer Business Park, the most densely connected data centre building in Kenya, with four internet exchanges on site.",
     status: "Operational",
     address: "Sameer Business Park, Block A, Mombasa Road",
     city: "Nairobi",
@@ -262,7 +262,7 @@ const facilities: Facility[] = [
     coolingType: "Hot/cold-aisle containment; non-potable water used in cooling",
     powerSource: "Kenya Power + diesel backup",
     renewableClaim: null,
-    notable: "Opened as East Africa Data Centre (EADC) and rebranded under Cassava Technologies — \"East Africa Data Centre\" and \"Africa Data Centres Nairobi\" are the same building. Operator states 2,000 m² of secured server space, \"available site capacity 7.5 MW\", four data halls certified Uptime Institute Tier 3, and PCI DSS (first in the region). Exchanges on site: KIXP Nairobi, LINX Nairobi, BGP.Exchange, PLUGINS IX.",
+    notable: "Opened as East Africa Data Centre (EADC) and rebranded under Cassava Technologies, \"East Africa Data Centre\" and \"Africa Data Centres Nairobi\" are the same building. Operator states 2,000 m² of secured server space, \"available site capacity 7.5 MW\", four data halls certified Uptime Institute Tier 3, and PCI DSS (first in the region). Exchanges on site: KIXP Nairobi, LINX Nairobi, BGP.Exchange, PLUGINS IX.",
     lastVerified: "2026-09",
     dataSource: "Africa Data Centres website; PeeringDB register",
     dataConfidence: "High",
@@ -282,7 +282,7 @@ const facilities: Facility[] = [
       { certification: { name: "PCI DSS", type: "Payment Security" } },
     ],
     sources: [
-      { label: "Africa Data Centres — Nairobi facility page", url: "https://www.africadatacentres.com/nairobi/", kind: "operator" },
+      { label: "Africa Data Centres, Nairobi facility page", url: "https://www.africadatacentres.com/nairobi/", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/1964", kind: "registry" },
     ],
     peeringdbFacId: 1964,
@@ -290,13 +290,13 @@ const facilities: Facility[] = [
     peeringdbIxs: 4,
     carrierNeutral: true,
     certNote: "Operator wording: \"4 data halls certified Uptime Institute Tier 3 facility\", plus PCI DSS. Uptime Institute's records file the building under Liquid Telecom Group (legacy name).",
-    divergenceNote: "ADC announced two further Nairobi facilities (Nov 2021, the second up to 20 MW) and broke ground on a Sameer expansion in January 2023 — starting at 5 MW and scaling to an additional 15 MW, targeted for H1 2024 completion. No ADC page confirms that expansion completed or states the current commissioned IT load. \"7.5 MW\" is the operator's available site capacity, not an as-built commissioned figure — ask for as-built capacity in the specific hall.",
+    divergenceNote: "ADC announced two further Nairobi facilities (Nov 2021, the second up to 20 MW) and broke ground on a Sameer expansion in January 2023, starting at 5 MW and scaling to an additional 15 MW, targeted for H1 2024 completion. No ADC page confirms that expansion completed or states the current commissioned IT load. \"7.5 MW\" is the operator's available site capacity, not an as-built commissioned figure, ask for as-built capacity in the specific hall.",
   },
   {
     id: "3",
     name: "Africa Data Centres Nairobi 2 (planned expansion)",
     slug: "africa-dc-nairobi-2",
-    description: "Announced second Nairobi facility at the Sameer Business Park campus — groundbreaking January 2023, first phase from 5 MW scaling toward an additional 15 MW.",
+    description: "Announced second Nairobi facility at the Sameer Business Park campus, groundbreaking January 2023, first phase from 5 MW scaling toward an additional 15 MW.",
     status: "Under Construction",
     address: "Sameer Business Park, Mombasa Road",
     city: "Nairobi",
@@ -322,12 +322,12 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "DataCenterDynamics — ADC Nairobi expansion coverage", url: "https://www.datacenterdynamics.com/en/search/?q=Africa+Data+Centres+Nairobi", kind: "press" },
-      { label: "Africa Data Centres — facility list (only NBO1 listed as operating)", url: "https://www.africadatacentres.com/", kind: "operator" },
+      { label: "DataCenterDynamics, ADC Nairobi expansion coverage", url: "https://www.datacenterdynamics.com/en/search/?q=Africa+Data+Centres+Nairobi", kind: "press" },
+      { label: "Africa Data Centres, facility list (only NBO1 listed as operating)", url: "https://www.africadatacentres.com/", kind: "operator" },
     ],
     carrierNeutral: true,
     certNote: null,
-    divergenceNote: "ADC's own website lists only NBO1 under Nairobi — this expansion does not yet appear as an operating facility, and no completion date has been published. Capacity shown is the announced plan, not a confirmed as-built figure.",
+    divergenceNote: "ADC's own website lists only NBO1 under Nairobi, this expansion does not yet appear as an operating facility, and no completion date has been published. Capacity shown is the announced plan, not a confirmed as-built figure.",
   },
 
   // ── Safaricom ───────────────────────────────────────────────────────────
@@ -351,7 +351,7 @@ const facilities: Facility[] = [
     coolingType: "Precision air",
     powerSource: "Kenya Power + diesel generators",
     renewableClaim: null,
-    notable: "Supports M-Pesa (processes KES 20+ trillion annually), Safaricom's 4G/5G core, and enterprise cloud. Not carrier-neutral — primarily serves Safaricom's own services.",
+    notable: "Supports M-Pesa (processes KES 20+ trillion annually), Safaricom's 4G/5G core, and enterprise cloud. Not carrier-neutral, primarily serves Safaricom's own services.",
     lastVerified: "2026-09",
     dataSource: "Safaricom Annual Reports; TechCabal",
     dataConfidence: "Medium",
@@ -364,11 +364,11 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "Safaricom — annual reports and investor disclosures", url: "https://www.safaricom.co.ke/investor-relations", kind: "operator" },
+      { label: "Safaricom, annual reports and investor disclosures", url: "https://www.safaricom.co.ke/investor-relations", kind: "operator" },
     ],
     carrierNeutral: false,
     certNote: null,
-    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) — Safaricom's registered carrier-facing facility is Thika. Capacity figures here are estimates from press reporting, not operator-published.",
+    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026), Safaricom's registered carrier-facing facility is Thika. Capacity figures here are estimates from press reporting, not operator-published.",
   },
   {
     id: "16",
@@ -401,22 +401,22 @@ const facilities: Facility[] = [
     certifications: [],
     sources: [
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/5802", kind: "registry" },
-      { label: "Safaricom — enterprise colocation", url: "https://www.safaricom.co.ke/business", kind: "operator" },
+      { label: "Safaricom, enterprise colocation", url: "https://www.safaricom.co.ke/business", kind: "operator" },
     ],
     peeringdbFacId: 5802,
     peeringdbNetworks: 2,
     peeringdbIxs: 0,
     carrierNeutral: false,
-    certNote: "Awarded Uptime Institute Tier III Concurrently Maintainable Design Certification in September 2018 — a design-document certification (TCDD), not a constructed-facility certification.",
-    divergenceNote: "Capacity is not published anywhere primary — ask Safaricom directly for committed and available capacity.",
+    certNote: "Awarded Uptime Institute Tier III Concurrently Maintainable Design Certification in September 2018, a design-document certification (TCDD), not a constructed-facility certification.",
+    divergenceNote: "Capacity is not published anywhere primary, ask Safaricom directly for committed and available capacity.",
   },
   {
     id: "17",
     name: "Safaricom Red Hill (Limuru) Campus",
     slug: "safaricom-red-hill",
     heroImage: "/images/limuru-campus-aerial-solar.webp",
-    heroImageCredit: "Aerial view: DC254, September 2026 — identity confirmed by the publisher",
-    description: "Safaricom's newer three-building campus at Red Hill, Limuru — the strongest certification position in Kenya, with phase one completed March 2025.",
+    heroImageCredit: "Aerial view: DC254, September 2026, identity confirmed by the publisher",
+    description: "Safaricom's newer three-building campus at Red Hill, Limuru, the strongest certification position in Kenya, with phase one completed March 2025.",
     status: "Operational",
     address: "Red Hill, Limuru Road, Kiambu County",
     city: "Limuru",
@@ -445,12 +445,12 @@ const facilities: Facility[] = [
       { certification: { name: "Uptime Institute Tier III Constructed Facility (TCCF, 26 Mar 2024)", type: "Uptime Institute" } },
     ],
     sources: [
-      { label: "Uptime Institute — public certification directory", url: "https://uptimeinstitute.com/uptime-institute-professional-services", kind: "gov" },
-      { label: "Safaricom — Red Hill campus announcements", url: "https://www.safaricom.co.ke/media-centre", kind: "operator" },
+      { label: "Uptime Institute, public certification directory", url: "https://uptimeinstitute.com/uptime-institute-professional-services", kind: "gov" },
+      { label: "Safaricom, Red Hill campus announcements", url: "https://www.safaricom.co.ke/media-centre", kind: "operator" },
     ],
     carrierNeutral: false,
-    certNote: "Uptime's directory shows Red Hill holding both a Tier III Design certificate (expiring 2027) and a Tier III Certification of Constructed Facility awarded 26 March 2024 — meaning Uptime inspected the finished building, not just the drawings. The strongest formal certification record of any commercial operator facility in Kenya.",
-    divergenceNote: "\"2.8 MW\" circulating in press coverage is the end-of-phase-two target (January 2026) — no fetched source confirms phase two actually completed on that date, so treat 2.8 MW as planned rather than commissioned capacity.",
+    certNote: "Uptime's directory shows Red Hill holding both a Tier III Design certificate (expiring 2027) and a Tier III Certification of Constructed Facility awarded 26 March 2024, meaning Uptime inspected the finished building, not just the drawings. The strongest formal certification record of any commercial operator facility in Kenya.",
+    divergenceNote: "\"2.8 MW\" circulating in press coverage is the end-of-phase-two target (January 2026), no fetched source confirms phase two actually completed on that date, so treat 2.8 MW as planned rather than commissioned capacity.",
   },
 
   // ── Microsoft / G42 (early stage) ──────────────────────────────────────
@@ -484,20 +484,20 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "Semafor — Microsoft/G42 Kenya exclusive", url: "https://www.semafor.com/", kind: "press" },
-      { label: "Business Daily — Kenya coverage", url: "https://www.businessdailyafrica.com/", kind: "press" },
+      { label: "Semafor, Microsoft/G42 Kenya exclusive", url: "https://www.semafor.com/", kind: "press" },
+      { label: "Business Daily, Kenya coverage", url: "https://www.businessdailyafrica.com/", kind: "press" },
     ],
     carrierNeutral: undefined,
     certNote: null,
-    divergenceNote: "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints — Kenya Power cannot currently deliver the required 100+ MW at a single site. Treat the 100 MW figure as an announcement, not a pipeline.",
+    divergenceNote: "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints, Kenya Power cannot currently deliver the required 100+ MW at a single site. Treat the 100 MW figure as an announcement, not a pipeline.",
   },
 
   // ── Telkom Kenya (Nairobi sites) ───────────────────────────────────────
   {
     id: "18",
-    name: "Telkom Kenya — Milimani Exchange",
+    name: "Telkom Kenya: Milimani Exchange",
     slug: "telkom-milimani-nairobi",
-    description: "Telkom Kenya's open-access colocation site at Telkom Plaza, Upper Hill — sold as open-access colocation on the operator's own network.",
+    description: "Telkom Kenya's open-access colocation site at Telkom Plaza, Upper Hill, sold as open-access colocation on the operator's own network.",
     status: "Operational",
     address: "Telkom Plaza, Ralph Bunche Road, Upper Hill",
     city: "Nairobi",
@@ -525,7 +525,7 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "Telkom Kenya — carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
+      { label: "Telkom Kenya, carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/6929", kind: "registry" },
     ],
     peeringdbFacId: 6929,
@@ -533,11 +533,11 @@ const facilities: Facility[] = [
     peeringdbIxs: 0,
     carrierNeutral: false,
     certNote: null,
-    divergenceNote: "Operator-owned: tenants generally buy Telkom's transit rather than full carrier-neutrality — price it accordingly.",
+    divergenceNote: "Operator-owned: tenants generally buy Telkom's transit rather than full carrier-neutrality, price it accordingly.",
   },
   {
     id: "19",
-    name: "Telkom Kenya — Telephone House (Nairobi)",
+    name: "Telkom Kenya: Telephone House (Nairobi)",
     slug: "telkom-telephone-house-nairobi",
     description: "Telkom Kenya's central Nairobi exchange building on Koinange Street, registered on PeeringDB and offering operator colocation.",
     status: "Operational",
@@ -565,14 +565,14 @@ const facilities: Facility[] = [
     certifications: [],
     sources: [
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/6931", kind: "registry" },
-      { label: "Telkom Kenya — carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
+      { label: "Telkom Kenya, carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
     ],
     peeringdbFacId: 6931,
     peeringdbNetworks: 1,
     peeringdbIxs: 0,
     carrierNeutral: false,
     certNote: null,
-    divergenceNote: "Minimal public data — a single network registered on PeeringDB. Capacity and colocation terms are not published; approach Telkom directly.",
+    divergenceNote: "Minimal public data, a single network registered on PeeringDB. Capacity and colocation terms are not published; approach Telkom directly.",
   },
 
   // ── Liquid Intelligent Technologies Kenya ─────────────────────────────
@@ -608,19 +608,19 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "Liquid Intelligent Technologies — Kenya", url: "https://www.liquid.tech/", kind: "operator" },
+      { label: "Liquid Intelligent Technologies, Kenya", url: "https://www.liquid.tech/", kind: "operator" },
     ],
     carrierNeutral: true,
     certNote: null,
-    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026). Note the group relationship: Liquid's data centre arm was consolidated into Africa Data Centres (Sameer Business Park) — confirm with Liquid which Nairobi building you are being quoted for, and do not double-count it against ADC NBO1.",
+    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026). Note the group relationship: Liquid's data centre arm was consolidated into Africa Data Centres (Sameer Business Park), confirm with Liquid which Nairobi building you are being quoted for, and do not double-count it against ADC NBO1.",
   },
 
-  // ── iColo (Digital Realty) — Kenya's largest facility count ────────────
+  // ── iColo (Digital Realty), Kenya's largest facility count ────────────
   {
     id: "20",
     name: "iColo Nairobi One (NBO1)",
     slug: "icolo-nbo1",
-    description: "iColo's Karen flagship — launched September 2019 as \"the first truly carrier-neutral data centre in Nairobi\", and one of Kenya's best-connected buildings.",
+    description: "iColo's Karen flagship, launched September 2019 as \"the first truly carrier-neutral data centre in Nairobi\", and one of Kenya's best-connected buildings.",
     status: "Operational",
     address: "Langata South Road, Karen, Nairobi",
     city: "Nairobi",
@@ -636,7 +636,7 @@ const facilities: Facility[] = [
     coolingType: "N+2 cooling (per Digital Realty listing)",
     powerSource: "2N power (per Digital Realty listing)",
     renewableClaim: null,
-    notable: "iColo — a Digital Realty company — runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing.",
+    notable: "iColo (a Digital Realty company) runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing.",
     lastVerified: "2026-09",
     dataSource: "iColo website; Digital Realty listing; PeeringDB register",
     dataConfidence: "High",
@@ -653,8 +653,8 @@ const facilities: Facility[] = [
       { certification: { name: "PCI DSS", type: "Payment Security" } },
     ],
     sources: [
-      { label: "iColo — Nairobi One facility page", url: "https://www.icolo.io/", kind: "operator" },
-      { label: "Digital Realty — NBO1 listing", url: "https://www.digitalrealty.com/", kind: "operator" },
+      { label: "iColo, Nairobi One facility page", url: "https://www.icolo.io/", kind: "operator" },
+      { label: "Digital Realty, NBO1 listing", url: "https://www.digitalrealty.com/", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/6448", kind: "registry" },
     ],
     peeringdbFacId: 6448,
@@ -662,13 +662,13 @@ const facilities: Facility[] = [
     peeringdbIxs: 4,
     carrierNeutral: true,
     certNote: "ISO 27001 and PCI-DSS are claimed on the Digital Realty listing. No Uptime Institute Tier certification is published for this facility.",
-    divergenceNote: "Neither iColo's page nor Digital Realty's listing publishes an IT load figure for NBO1 — ask for committed and available capacity in kW before sizing a deployment.",
+    divergenceNote: "Neither iColo's page nor Digital Realty's listing publishes an IT load figure for NBO1, ask for committed and available capacity in kW before sizing a deployment.",
   },
   {
     id: "21",
     name: "iColo Nairobi Two (NBO2)",
     slug: "icolo-nbo2",
-    description: "iColo's second Nairobi building on Bogani East Road, Karen — formally launched 7 September 2026 as Digital Realty strengthens Nairobi's position as East Africa's digital gateway.",
+    description: "iColo's second Nairobi building on Bogani East Road, Karen, formally launched 7 September 2026 as Digital Realty strengthens Nairobi's position as East Africa's digital gateway.",
     status: "Operational",
     address: "Bogani East Road, Karen, Nairobi",
     city: "Nairobi",
@@ -696,8 +696,8 @@ const facilities: Facility[] = [
       { certification: { name: "PCI DSS", type: "Payment Security" } },
     ],
     sources: [
-      { label: "Capital FM (via allAfrica) — NBO2 launch, 7 Sep 2026", url: "https://allafrica.com/stories/202609080028.html", kind: "press" },
-      { label: "Digital Realty — NBO2 launch announcement", url: "https://www.digitalrealty.com/about/newsroom", kind: "operator" },
+      { label: "Capital FM (via allAfrica), NBO2 launch, 7 Sep 2026", url: "https://allafrica.com/stories/202609080028.html", kind: "press" },
+      { label: "Digital Realty, NBO2 launch announcement", url: "https://www.digitalrealty.com/about/newsroom", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/14166", kind: "registry" },
     ],
     peeringdbFacId: 14166,
@@ -705,13 +705,13 @@ const facilities: Facility[] = [
     peeringdbIxs: 1,
     carrierNeutral: true,
     certNote: "ISO 27001 and PCI-DSS per the Digital Realty listing. No Uptime Institute Tier certification published.",
-    divergenceNote: "A real, now formally launched, but still-ramping building: PeeringDB shows only two networks and a single exchange (record last updated September 2025) — not yet a peer of NBO1 on connectivity. Commissioned (as opposed to design) IT load has not been published; ask for as-built capacity before sizing a deployment.",
+    divergenceNote: "A real, now formally launched, but still-ramping building: PeeringDB shows only two networks and a single exchange (record last updated September 2025), not yet a peer of NBO1 on connectivity. Commissioned (as opposed to design) IT load has not been published; ask for as-built capacity before sizing a deployment.",
   },
   {
     id: "22",
     name: "iColo Mombasa One (MBA1)",
     slug: "icolo-mba1",
-    description: "Opened 2017 in Miritini — the densest interconnection point on the Kenyan coast, with 90+ networks registered and three internet exchanges on site.",
+    description: "Opened 2017 in Miritini, the densest interconnection point on the Kenyan coast, with 90+ networks registered and three internet exchanges on site.",
     status: "Operational",
     address: "Miritini, Mombasa",
     city: "Mombasa",
@@ -741,7 +741,7 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "iColo — Mombasa facility page", url: "https://www.icolo.io/locations/mombasa/", kind: "operator" },
+      { label: "iColo, Mombasa facility page", url: "https://www.icolo.io/locations/mombasa/", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/5019", kind: "registry" },
     ],
     peeringdbFacId: 5019,
@@ -749,13 +749,13 @@ const facilities: Facility[] = [
     peeringdbIxs: 3,
     carrierNeutral: true,
     certNote: null,
-    divergenceNote: "The 13 MW campus figure is the full master plan, not the current building — current IT power is 0.9 MW per the operator's own homepage.",
+    divergenceNote: "The 13 MW campus figure is the full master plan, not the current building, current IT power is 0.9 MW per the operator's own homepage.",
   },
   {
     id: "23",
     name: "iColo Mombasa Two (MBA2)",
     slug: "icolo-mba2",
-    description: "iColo's Nyali facility, opened 2022 — 600 racks and, the detail that matters for a cable landing, roughly 2 km from the nearest beach manhole.",
+    description: "iColo's Nyali facility, opened 2022, 600 racks and, the detail that matters for a cable landing, roughly 2 km from the nearest beach manhole.",
     status: "Operational",
     address: "Nyali, Mombasa",
     city: "Mombasa",
@@ -771,7 +771,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power + backup",
     renewableClaim: null,
-    notable: "1,200 m² of IT space on a 4,000 m² campus with 20+ networks, per iColo. Approximately 2 km to the nearest beach manhole — direct, short backhaul to submarine cable systems.",
+    notable: "1,200 m² of IT space on a 4,000 m² campus with 20+ networks, per iColo. Approximately 2 km to the nearest beach manhole, direct, short backhaul to submarine cable systems.",
     lastVerified: "2026-09",
     dataSource: "iColo website; PeeringDB register",
     dataConfidence: "High",
@@ -783,7 +783,7 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "iColo — locations", url: "https://www.icolo.io/", kind: "operator" },
+      { label: "iColo, locations", url: "https://www.icolo.io/", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/10232", kind: "registry" },
     ],
     peeringdbFacId: 10232,
@@ -799,7 +799,7 @@ const facilities: Facility[] = [
     id: "24",
     name: "PAIX Nairobi (NBO-1)",
     slug: "paix-nairobi",
-    description: "PAIX built inside Britam Tower in Upper Hill rather than on a suburban campus — the most central of Nairobi's carrier-neutral facilities.",
+    description: "PAIX built inside Britam Tower in Upper Hill rather than on a suburban campus, the most central of Nairobi's carrier-neutral facilities.",
     status: "Operational",
     address: "Britam Tower, Hospital Road, Upper Hill",
     city: "Nairobi",
@@ -829,7 +829,7 @@ const facilities: Facility[] = [
     ],
     certifications: [],
     sources: [
-      { label: "PAIX — Kenya facility page", url: "https://paix.io/datacentres/kenya/", kind: "operator" },
+      { label: "PAIX, Kenya facility page", url: "https://paix.io/datacentres/kenya/", kind: "operator" },
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/7995", kind: "registry" },
     ],
     peeringdbFacId: 7995,
@@ -837,7 +837,7 @@ const facilities: Facility[] = [
     peeringdbIxs: 3,
     carrierNeutral: true,
     certNote: "PAIX's group site refers to \"ISO and PCI-DSS frameworks\" rather than naming ISO 27001, and makes no Uptime Tier claim.",
-    divergenceNote: "The smallest of Nairobi's four carrier-neutral facilities by registered connectivity (37 networks vs 122 at ADC NBO1) — its case is location, not interconnection density. The 1.5 MVA figure is VA capacity, not MW IT load.",
+    divergenceNote: "The smallest of Nairobi's four carrier-neutral facilities by registered connectivity (37 networks vs 122 at ADC NBO1), its case is location, not interconnection density. The 1.5 MVA figure is VA capacity, not MW IT load.",
   },
 
   // ── Konza National Data Centre (government) ────────────────────────────
@@ -845,7 +845,7 @@ const facilities: Facility[] = [
     id: "25",
     name: "Konza National Data Centre",
     slug: "konza-national-dc",
-    description: "The government facility at Konza Technopolis — among the strongest formal certification records in Kenya, primarily serving government workloads and government cloud.",
+    description: "The government facility at Konza Technopolis, among the strongest formal certification records in Kenya, primarily serving government workloads and government cloud.",
     status: "Operational",
     address: "Konza Technopolis, Machakos County",
     city: "Konza",
@@ -861,7 +861,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power + backup",
     renewableClaim: null,
-    notable: "Operated by the Konza Technopolis Development Authority (KoTDA). Primarily serves government workloads — not a mainstream commercial colocation option for a private business.",
+    notable: "Operated by the Konza Technopolis Development Authority (KoTDA). Primarily serves government workloads, not a mainstream commercial colocation option for a private business.",
     lastVerified: "2026-09",
     dataSource: "Uptime Institute directory; PeeringDB; KoTDA",
     dataConfidence: "Medium",
@@ -873,20 +873,20 @@ const facilities: Facility[] = [
       { certification: { name: "Uptime Institute Tier III Design (13 Feb 2020)", type: "Uptime Institute" } },
     ],
     sources: [
-      { label: "Uptime Institute — public certification directory", url: "https://uptimeinstitute.com/uptime-institute-professional-services", kind: "gov" },
-      { label: "Konza Technopolis — National Data Centre", url: "https://konza.go.ke/", kind: "gov" },
+      { label: "Uptime Institute, public certification directory", url: "https://uptimeinstitute.com/uptime-institute-professional-services", kind: "gov" },
+      { label: "Konza Technopolis, National Data Centre", url: "https://konza.go.ke/", kind: "gov" },
     ],
     carrierNeutral: false,
     certNote: "Uptime's directory shows Konza with a Tier III Certification of Constructed Facility awarded 23 August 2022 and a Tier III Design certification dated 13 February 2020.",
-    divergenceNote: "The facility's own site (dc.konza.go.ke) did not resolve when checked (Sep 2026), so current capacity, cabinet availability and commercial terms are not verifiable from a primary source — approach KoTDA directly.",
+    divergenceNote: "The facility's own site (dc.konza.go.ke) did not resolve when checked (Sep 2026), so current capacity, cabinet availability and commercial terms are not verifiable from a primary source, approach KoTDA directly.",
   },
 
   // ── Telkom Telephone House Mombasa ─────────────────────────────────────
   {
     id: "26",
-    name: "Telkom Kenya — Telephone House (Mombasa)",
+    name: "Telkom Kenya: Telephone House (Mombasa)",
     slug: "telkom-telephone-house-mombasa",
-    description: "Telkom Kenya's Mombasa exchange building on Moi Avenue — an operator colocation site whose real strategic weight is submarine-cable landing participation.",
+    description: "Telkom Kenya's Mombasa exchange building on Moi Avenue, an operator colocation site whose real strategic weight is submarine-cable landing participation.",
     status: "Operational",
     address: "Telephone House, Moi Avenue, Mombasa",
     city: "Mombasa",
@@ -902,7 +902,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power + backup",
     renewableClaim: null,
-    notable: "Offers cross-connects to submarine cable systems. Telkom holds 23% of TEAMS, 10% of LION2 and 2.6% of EASSy — it is a cable landing party first and a colocation vendor second.",
+    notable: "Offers cross-connects to submarine cable systems. Telkom holds 23% of TEAMS, 10% of LION2 and 2.6% of EASSy, it is a cable landing party first and a colocation vendor second.",
     lastVerified: "2026-09",
     dataSource: "PeeringDB register; Telkom Kenya",
     dataConfidence: "Medium",
@@ -916,7 +916,7 @@ const facilities: Facility[] = [
     certifications: [],
     sources: [
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/6930", kind: "registry" },
-      { label: "Telkom Kenya — carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
+      { label: "Telkom Kenya, carrier services & hosting", url: "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting", kind: "operator" },
     ],
     peeringdbFacId: 6930,
     peeringdbNetworks: 9,
@@ -931,7 +931,7 @@ const facilities: Facility[] = [
     id: "27",
     name: "SEACOM Mombasa Cable Landing Station",
     slug: "seacom-mombasa-cls",
-    description: "The SEACOM cable landing station in Mombasa — not a commercial colocation facility, but a heavily used interconnection point with 30+ networks registered.",
+    description: "The SEACOM cable landing station in Mombasa, not a commercial colocation facility, but a heavily used interconnection point with 30+ networks registered.",
     status: "Operational",
     address: "Mombasa (Swahili Cultural Centre site)",
     city: "Mombasa",
@@ -947,7 +947,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: "Kenya Power + backup",
     renewableClaim: null,
-    notable: "SEACOM was the first private submarine cable to serve East Africa (2009). The landing station itself is registered on PeeringDB with 30+ networks — a measure of how much traffic is handed over here.",
+    notable: "SEACOM was the first private submarine cable to serve East Africa (2009). The landing station itself is registered on PeeringDB with 30+ networks, a measure of how much traffic is handed over here.",
     lastVerified: "2026-09",
     dataSource: "PeeringDB register; SEACOM",
     dataConfidence: "High",
@@ -959,14 +959,14 @@ const facilities: Facility[] = [
     certifications: [],
     sources: [
       { label: "PeeringDB facility record (fetched 8 Sep 2026)", url: "https://www.peeringdb.com/fac/1648", kind: "registry" },
-      { label: "SEACOM — network and landing stations", url: "https://www.seacom.mu/", kind: "operator" },
+      { label: "SEACOM, network and landing stations", url: "https://www.seacom.mu/", kind: "operator" },
     ],
     peeringdbFacId: 1648,
     peeringdbNetworks: 31,
     peeringdbIxs: 0,
     carrierNeutral: false,
     certNote: null,
-    divergenceNote: "A cable landing station, not commercial colocation — included because it appears on the PeeringDB register and matters for understanding Mombasa's connectivity role.",
+    divergenceNote: "A cable landing station, not commercial colocation, included because it appears on the PeeringDB register and matters for understanding Mombasa's connectivity role.",
   },
 
   // ── SimbaNET ───────────────────────────────────────────────────────────
@@ -974,7 +974,7 @@ const facilities: Facility[] = [
     id: "28",
     name: "SimbaNET Nairobi",
     slug: "simbanet-nairobi",
-    description: "SimbaNET Kenya's facility at Gateway Business Park on Mombasa Road — an operator-owned site registered on PeeringDB.",
+    description: "SimbaNET Kenya's facility at Gateway Business Park on Mombasa Road, an operator-owned site registered on PeeringDB.",
     status: "Operational",
     address: "Gateway Business Park, Mombasa Road",
     city: "Nairobi",
@@ -1040,12 +1040,12 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "Raxio Group — company site", url: "https://www.raxio.com/", kind: "operator" },
+      { label: "Raxio Group, company site", url: "https://www.raxio.com/", kind: "operator" },
       { label: "PeeringDB Kenya register (no Raxio facility listed, fetched 8 Sep 2026)", url: "https://www.peeringdb.com/api/fac?country=KE", kind: "registry" },
     ],
     carrierNeutral: true,
     certNote: null,
-    divergenceNote: "Previously listed here as operational since 2023 with capacity figures — those figures have been withdrawn pending verification: the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site. Treat as pipeline, not operating capacity.",
+    divergenceNote: "Previously listed here as operational since 2023 with capacity figures, those figures have been withdrawn pending verification: the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site. Treat as pipeline, not operating capacity.",
   },
 
   // ── Septris ─────────────────────────────────────────────────────────────
@@ -1082,7 +1082,7 @@ const facilities: Facility[] = [
     ],
     carrierNeutral: undefined,
     certNote: null,
-    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists — figures are estimates from the operator's own materials, not independently confirmed.",
+    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists, figures are estimates from the operator's own materials, not independently confirmed.",
   },
 
   // ── Global TS ───────────────────────────────────────────────────────────
@@ -1119,7 +1119,7 @@ const facilities: Facility[] = [
     ],
     carrierNeutral: undefined,
     certNote: null,
-    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists — figures are estimates, not independently confirmed.",
+    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists, figures are estimates, not independently confirmed.",
   },
 
   // ── Wananchi ────────────────────────────────────────────────────────────
@@ -1156,7 +1156,7 @@ const facilities: Facility[] = [
     ],
     carrierNeutral: false,
     certNote: null,
-    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026) — primarily an internal operator facility.",
+    divergenceNote: "Not listed on the PeeringDB facility register (checked 8 Sep 2026), primarily an internal operator facility.",
   },
 
   // ── Kenya Data Centres SME Facility (announced) ─────────────────────────
@@ -1180,7 +1180,7 @@ const facilities: Facility[] = [
     coolingType: null,
     powerSource: null,
     renewableClaim: null,
-    notable: "Announced plans targeting Kenya's SME colocation segment — an underserved tier between enterprise carriers and hyperscale campuses. Capacity and site undisclosed.",
+    notable: "Announced plans targeting Kenya's SME colocation segment, an underserved tier between enterprise carriers and hyperscale campuses. Capacity and site undisclosed.",
     lastVerified: "2026-09",
     dataSource: "DC254 market outlook research",
     dataConfidence: "Low",
@@ -1190,11 +1190,11 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "Kenya ICT Authority — digital infrastructure programmes", url: "https://www.ict.go.ke/", kind: "gov" },
+      { label: "Kenya ICT Authority, digital infrastructure programmes", url: "https://www.ict.go.ke/", kind: "gov" },
     ],
     carrierNeutral: undefined,
     certNote: null,
-    divergenceNote: "Announced intent only — no site, capacity or timeline disclosed. Included because it targets the SME tier our readers ask about most; treat as a signal, not a pipeline.",
+    divergenceNote: "Announced intent only, no site, capacity or timeline disclosed. Included because it targets the SME tier our readers ask about most; treat as a signal, not a pipeline.",
   },
 
   // ── Nxtra by Airtel Tatu City (under construction) ──────────────────────
@@ -1202,7 +1202,7 @@ const facilities: Facility[] = [
     id: "30",
     name: "Nxtra by Airtel Tatu City",
     slug: "nxtra-tatu-city",
-    description: "Airtel Africa's $150 million hyperscale campus at Tatu City, Ruiru — 44 MW of IT capacity across two 22 MW phases with high-density GPU-ready racks. Slated to be East Africa's largest single data centre facility when complete.",
+    description: "Airtel Africa's $150 million hyperscale campus at Tatu City, Ruiru, 44 MW of IT capacity across two 22 MW phases with high-density GPU-ready racks. Slated to be East Africa's largest single data centre facility when complete.",
     status: "Under Construction",
     address: "Tatu City, Eastern Bypass, Ruiru",
     city: "Ruiru",
@@ -1228,7 +1228,7 @@ const facilities: Facility[] = [
     connectivityFacility: [],
     certifications: [],
     sources: [
-      { label: "Airtel Africa — Tatu City data centre announcements", url: "https://www.airtel.africa/", kind: "operator" },
+      { label: "Airtel Africa, Tatu City data centre announcements", url: "https://www.airtel.africa/", kind: "operator" },
     ],
     carrierNeutral: undefined,
     certNote: null,

@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Interconnection and Peering in Kenya: KIXP"
 slug: data-centre-interconnection-peering-kenya
-meta_description: Understand data centre interconnection and peering in Kenya — how
+meta_description: Understand data centre interconnection and peering in Kenya, how
   KIXP works, peering vs transit economics, cross-connects within facilities, and
   why Kenya is becoming East Africa's interconnection hub with 100G capabilities and
   growing cloud provider presence.
@@ -22,7 +22,7 @@ og_image: "/images/fibre-patch-panel-sc-connectors.webp"
 reading_time: "13 min"
 images:
 - src: "/images/fibre-patch-panel-sc-connectors.webp"
-  alt: "Fibre patch panel with SC connectors — cross-connects in practice"
+  alt: "Fibre patch panel with SC connectors, cross-connects in practice"
   caption: "Peering is physical: a patch cable between two cages inside the same room"
   position: hero
 - src: /images/mombasa-port.webp
@@ -47,9 +47,9 @@ internal_links:
 - text: Nairobi Vs Mombasa Data Centre Locations
   href: /articles/nairobi-vs-mombasa-data-centre-locations
 external_sources:
-- title: KIXP — Kenya Internet Exchange Point Official Statistics
+- title: KIXP, Kenya Internet Exchange Point Official Statistics
   url: https://www.kixp.or.ke
-- title: Packet Clearing House — Internet Exchange Directory and Peering Data
+- title: Packet Clearing House, Internet Exchange Directory and Peering Data
   url: https://www.pch.net
 faq:
 - question: What is the difference between peering and transit?
@@ -61,7 +61,7 @@ faq:
     Kenyan networks, peering at KIXP keeps local traffic within the country, while
     transit connects them to the global internet via submarine cables like EASSy,
     Seacom, and TiGS. Most Kenyan ISPs and data centre operators use a combination
-    of both — peering for local content delivery and transit for international reach.
+    of both, peering for local content delivery and transit for international reach.
     The cost differential is significant: peering is typically free or involves a
     small port fee, while international transit can cost USD 50–200 per Mbps per month.'
 - question: How many members does KIXP have and what traffic does it handle?
@@ -80,8 +80,8 @@ faq:
   answer: A cross-connect is a physical cable link between two different networks
     or equipment within the same data centre facility. Unlike connections that route
     through the public internet, cross-connects provide direct, private, and typically
-    low-latency connectivity between a customer's equipment and their service providers
-    — whether that's an ISP, a cloud provider's on-ramp, a financial trading partner,
+    low-latency connectivity between a customer's equipment and their service providers,
+    whether that's an ISP, a cloud provider's on-ramp, a financial trading partner,
     or another enterprise. In Kenyan [colocation data centres](/articles/colocation-data-centre-kenya),
     cross-connects are a primary value driver because they enable customers to establish
     direct connections to multiple networks, cloud platforms, and partners from a
@@ -110,8 +110,8 @@ faq:
     IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected
     members. It benefits from South Africa's larger internet user base and mature
     telecom market. KIXP is East Africa's leading IXP and the most significant hub
-    for the wider East African region, handling 150+ Gbps peak traffic with 70+ members
-    — impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing
+    for the wider East African region, handling 150+ Gbps peak traffic with 70+ members,
+    impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing
     the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120
     Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's
     role as the [landing point for multiple submarine cables](/articles/submarine-cables-landing-mombasa),
@@ -123,7 +123,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/data-centre-intercon
 
 ## Introduction: Why Interconnection Is the Lifeblood of Data Centres
 
-A data centre is only as valuable as the networks it connects. In Kenya, where [fibre optic networks are expanding rapidly](/articles/fibre-optic-networks-kenya-data-centres) and submarine cables land at the Mombasa coast, interconnection — the ability to link networks, cloud platforms, and enterprises directly within and between facilities — has become the most important competitive differentiator for data centre operators.
+A data centre is only as valuable as the networks it connects. In Kenya, where [fibre optic networks are expanding rapidly](/articles/fibre-optic-networks-kenya-data-centres) and submarine cables land at the Mombasa coast, interconnection (the ability to link networks, cloud platforms, and enterprises directly within and between facilities) has become the most important competitive differentiator for data centre operators.
 
 This article explains how data centre interconnection and peering work in Kenya, covering the Kenya Internet Exchange Point (KIXP), cross-connects within facilities, the economics of peering versus transit, and why Kenya is consolidating its position as East Africa's premier interconnection hub.
 
@@ -132,7 +132,7 @@ This article explains how data centre interconnection and peering work in Kenya,
 
 ## What Is an Internet Exchange Point (IXP)?
 
-An **Internet Exchange Point (IXP)** is a physical infrastructure through which internet service providers (ISPs), content delivery networks (CDNs), cloud providers, and other networks exchange internet traffic directly with each other. Instead of traffic between two Kenyan networks — say, Safaricom and Telkom Kenya — travelling out of the country via submarine cables to Europe and back, an IXP allows that traffic to be exchanged locally within the same city.
+An **Internet Exchange Point (IXP)** is a physical infrastructure through which internet service providers (ISPs), content delivery networks (CDNs), cloud providers, and other networks exchange internet traffic directly with each other. Instead of traffic between two Kenyan networks (say, Safaricom and Telkom Kenya) travelling out of the country via submarine cables to Europe and back, an IXP allows that traffic to be exchanged locally within the same city.
 
 The benefits are substantial:
 
@@ -145,7 +145,7 @@ The benefits are substantial:
 
 ### History and Growth
 
-The **Kenya Internet Exchange Point (KIXP)** was established in 2002 by the Telecommunications Service Providers Association of Kenya (TESPOK), making it one of the first IXPs in East Africa. At launch, it handled just a few hundred megabits per second. Today, [according to KIXP's published data](https://www.kixp.or.ke), the exchange handles **peak traffic exceeding 150 Gbps** — a growth of several orders of magnitude that reflects Kenya's dramatic internet expansion.
+The **Kenya Internet Exchange Point (KIXP)** was established in 2002 by the Telecommunications Service Providers Association of Kenya (TESPOK), making it one of the first IXPs in East Africa. At launch, it handled just a few hundred megabits per second. Today, [according to KIXP's published data](https://www.kixp.or.ke), the exchange handles **peak traffic exceeding 150 Gbps**, a growth of several orders of magnitude that reflects Kenya's dramatic internet expansion.
 
 KIXP is a neutral, not-for-profit exchange operated by [Packet Clearing House](https://www.pch.net) in partnership with TESPOK. It operates from multiple points of presence (PoPs) across Nairobi's major data centre facilities, ensuring that members can connect from whichever facility they operate in.
 
@@ -164,7 +164,7 @@ KIXP's membership has evolved significantly. The current roster includes:
 - **Government and education networks**: Kenya Education Network (KENET), government data centres
 - **Enterprise and financial services**: Banks and other enterprises with direct IXP connections for low-latency financial applications
 
-This diverse membership is what makes KIXP powerful — the more networks that participate, the more traffic can be kept local.
+This diverse membership is what makes KIXP powerful, the more networks that participate, the more traffic can be kept local.
 
 ## Peering vs Transit: Understanding the Economics
 
@@ -179,11 +179,11 @@ Peering can be:
 
 ### What Is Transit?
 
-**Transit** is a commercial service where one network (the transit provider) agrees to carry another network's traffic to all destinations on the internet. Transit providers charge for this service, typically based on bandwidth capacity (per Mbps or per Gbps). For Kenyan networks, transit connects them to the global internet via submarine cables — EASSy, Seacom, and TiGS — landing in Mombasa.
+**Transit** is a commercial service where one network (the transit provider) agrees to carry another network's traffic to all destinations on the internet. Transit providers charge for this service, typically based on bandwidth capacity (per Mbps or per Gbps). For Kenyan networks, transit connects them to the global internet via submarine cables (EASSy, Seacom, and TiGS) landing in Mombasa.
 
 ### The Cost Case for Peering in Kenya
 
-The economics are compelling. **International transit from Kenya typically costs USD 50–200 per Mbps per month**, depending on the provider, capacity commitment, and route. By peering at KIXP, networks can offload a significant portion of their traffic — industry estimates suggest KIXP keeps **over 70% of locally-sourced traffic within Kenya**.
+The economics are compelling. **International transit from Kenya typically costs USD 50–200 per Mbps per month**, depending on the provider, capacity commitment, and route. By peering at KIXP, networks can offload a significant portion of their traffic, industry estimates suggest KIXP keeps **over 70% of locally-sourced traffic within Kenya**.
 
 For a mid-sized ISP with 10 Gbps of total traffic, if 7 Gbps can be peered locally at KIXP, the savings on transit costs alone can amount to **USD 350,000–1.4 million per month**. These savings flow through to lower retail broadband prices for consumers and more competitive enterprise connectivity offerings.
 
@@ -193,7 +193,7 @@ For a mid-sized ISP with 10 Gbps of total traffic, if 7 Gbps can be peered local
 
 ![Technician splicing fibre at a patch panel on a data centre floor](/images/fibre-splicing-technician-data-hall.webp)
 
-A **cross-connect** is a physical cable — typically fibre optic or copper — that directly links one party's equipment to another's within the same data centre. Cross-connects are the fundamental building block of data centre interconnection.
+A **cross-connect** is a physical cable (typically fibre optic or copper) that directly links one party's equipment to another's within the same data centre. Cross-connects are the fundamental building block of data centre interconnection.
 
 In practice, a cross-connect might connect:
 
@@ -235,7 +235,7 @@ KIXP's influence extends beyond Kenya's borders. Networks from Uganda, Tanzania,
 
 **Safaricom** is by far the largest traffic contributor at KIXP, reflecting its dominance in Kenya's mobile and fixed-line markets. **Telkom Kenya** and **Airtel Kenya** are also significant participants, using KIXP to exchange traffic with each other and with content providers.
 
-**Liquid Intelligent Technologies** plays a dual role — as both a significant traffic source and a carrier providing connectivity between Kenyan data centres and the broader Liquid network spanning over 20 African countries.
+**Liquid Intelligent Technologies** plays a dual role, as both a significant traffic source and a carrier providing connectivity between Kenyan data centres and the broader Liquid network spanning over 20 African countries.
 
 ### Content Delivery Networks and Cloud Providers
 
@@ -278,7 +278,7 @@ Several trends will shape Kenya's interconnection landscape in the coming years:
 
 ## Conclusion
 
-Data centre interconnection and peering are not technical niceties — they are fundamental to the value proposition of every data centre in Kenya. KIXP has evolved from a small experimental exchange into a critical piece of national digital infrastructure, handling over 150 Gbps of peak traffic and keeping the majority of locally-sourced content within Kenya's borders. Combined with direct cross-connects within facilities and the growing presence of global cloud providers, Kenya's interconnection ecosystem is a powerful reason why the country is becoming East Africa's undisputed digital hub.
+Data centre interconnection and peering are not technical niceties, they are fundamental to the value proposition of every data centre in Kenya. KIXP has evolved from a small experimental exchange into a critical piece of national digital infrastructure, handling over 150 Gbps of peak traffic and keeping the majority of locally-sourced content within Kenya's borders. Combined with direct cross-connects within facilities and the growing presence of global cloud providers, Kenya's interconnection ecosystem is a powerful reason why the country is becoming East Africa's undisputed digital hub.
 
 For enterprises selecting colocation facilities, for investors evaluating data centre opportunities, and for policymakers shaping the digital economy, understanding interconnection is essential. The facilities and exchanges that invest in connectivity density will be the ones that define Kenya's digital future.
 
@@ -286,7 +286,7 @@ For enterprises selecting colocation facilities, for investors evaluating data c
 
 ### What is the difference between peering and transit?
 
-Peering is a reciprocal arrangement where two networks exchange traffic directly at no cost, typically at an Internet Exchange Point (IXP) like KIXP. Both networks benefit by keeping local traffic local. Transit, by contrast, is a paid service where one network (the transit provider) carries another network's traffic to all destinations on the internet, including international routes. For Kenyan networks, peering at KIXP keeps local traffic within the country, while transit connects them to the global internet via submarine cables like EASSy, Seacom, and TiGS. Most Kenyan ISPs and data centre operators use a combination of both — peering for local content delivery and transit for international reach. The cost differential is significant: peering is typically free or involves a small port fee, while international transit can cost USD 50–200 per Mbps per month.
+Peering is a reciprocal arrangement where two networks exchange traffic directly at no cost, typically at an Internet Exchange Point (IXP) like KIXP. Both networks benefit by keeping local traffic local. Transit, by contrast, is a paid service where one network (the transit provider) carries another network's traffic to all destinations on the internet, including international routes. For Kenyan networks, peering at KIXP keeps local traffic within the country, while transit connects them to the global internet via submarine cables like EASSy, Seacom, and TiGS. Most Kenyan ISPs and data centre operators use a combination of both, peering for local content delivery and transit for international reach. The cost differential is significant: peering is typically free or involves a small port fee, while international transit can cost USD 50–200 per Mbps per month.
 
 ### How many members does KIXP have and what traffic does it handle?
 
@@ -294,7 +294,7 @@ As of 2025, KIXP has over 70 connected members spanning ISPs, mobile network ope
 
 ### What is a data centre cross-connect and why does it matter?
 
-A cross-connect is a physical cable link between two different networks or equipment within the same data centre facility. Unlike connections that route through the public internet, cross-connects provide direct, private, and typically low-latency connectivity between a customer's equipment and their service providers — whether that's an ISP, a cloud provider's on-ramp, a financial trading partner, or another enterprise. In Kenyan [colocation data centres](/articles/colocation-data-centre-kenya), cross-connects are a primary value driver because they enable customers to establish direct connections to multiple networks, cloud platforms, and partners from a single facility. Cross-connects are typically provisioned within 24–72 hours, offer guaranteed bandwidth, and eliminate the 'last mile' costs and latency of accessing networks from separate locations.
+A cross-connect is a physical cable link between two different networks or equipment within the same data centre facility. Unlike connections that route through the public internet, cross-connects provide direct, private, and typically low-latency connectivity between a customer's equipment and their service providers, whether that's an ISP, a cloud provider's on-ramp, a financial trading partner, or another enterprise. In Kenyan [colocation data centres](/articles/colocation-data-centre-kenya), cross-connects are a primary value driver because they enable customers to establish direct connections to multiple networks, cloud platforms, and partners from a single facility. Cross-connects are typically provisioned within 24–72 hours, offer guaranteed bandwidth, and eliminate the 'last mile' costs and latency of accessing networks from separate locations.
 
 ### Which global cloud providers are present at KIXP or interconnected in Kenyan data centres?
 
@@ -302,4 +302,4 @@ AWS (Amazon Web Services) has established a direct presence in Nairobi, intercon
 
 ### How does KIXP compare to NAPAfrica and IXPN?
 
-KIXP, NAPAfrica (South Africa), and IXPN (Nigeria) are Africa's three largest Internet Exchange Points, but they differ significantly in scale and maturity. NAPAfrica, operated by INX-ZA in Johannesburg and Cape Town, is Africa's largest IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected members. It benefits from South Africa's larger internet user base and mature telecom market. KIXP is East Africa's leading IXP and the most significant hub for the wider East African region, handling 150+ Gbps peak traffic with 70+ members — impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120 Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's role as the landing point for multiple submarine cables, making it a natural aggregation point for traffic flowing between East Africa, Southern Africa, and the rest of the world.
+KIXP, NAPAfrica (South Africa), and IXPN (Nigeria) are Africa's three largest Internet Exchange Points, but they differ significantly in scale and maturity. NAPAfrica, operated by INX-ZA in Johannesburg and Cape Town, is Africa's largest IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected members. It benefits from South Africa's larger internet user base and mature telecom market. KIXP is East Africa's leading IXP and the most significant hub for the wider East African region, handling 150+ Gbps peak traffic with 70+ members, impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120 Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's role as the landing point for multiple submarine cables, making it a natural aggregation point for traffic flowing between East Africa, Southern Africa, and the rest of the world.

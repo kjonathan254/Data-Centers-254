@@ -6,22 +6,22 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Infrastructure",
   description:
-    "Internet and connectivity infrastructure in Kenya — submarine cables, KIXP, terrestrial fibre, and the physical network that connects data centres to the world.",
+    "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and the physical network that connects data centres to the world.",
   alternates: { canonical: "/infrastructure" },
   openGraph: {
     title: "Infrastructure | Data Centre 254",
     description:
-      "Internet and connectivity infrastructure in Kenya — submarine cables, KIXP, terrestrial fibre, and the physical network powering data centres.",
+      "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and the physical network powering data centres.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Infrastructure — Data Centre 254" }],
+    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Infrastructure, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Infrastructure | Data Centre 254",
     description:
-      "Internet and connectivity infrastructure in Kenya — submarine cables, KIXP, terrestrial fibre, and more.",
+      "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and more.",
     images: ["/images/nbo2-launch-ribbon-cutting.webp"],
   },
 };

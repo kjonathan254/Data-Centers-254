@@ -6,7 +6,7 @@ import { trackSponsorClick } from '@/lib/newsletter-store';
  *
  * Newsletter sponsor links point here: /api/sponsor/click/{slug}?to={url}
  * We count the click per sponsor slug, then 302 to the real destination.
- * The tally per slug is what goes into the monthly sponsor report — the
+ * The tally per slug is what goes into the monthly sponsor report, the
  * thing that keeps sponsors renewing.
  *
  * `to` is restricted to https to prevent this becoming an open redirect.

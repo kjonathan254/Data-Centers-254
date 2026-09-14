@@ -1,16 +1,16 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// DC254 — PIDA / African Infrastructure Database (AID) layer.
+// DC254, PIDA / African Infrastructure Database (AID) layer.
 //
 // Source: AUDA-NEPAD "African Infrastructure Database" public API
-// (https://aid.nepad.org/aid/public/api — country-projects.php?country=Kenya),
+// (https://aid.nepad.org/aid/public/api, country-projects.php?country=Kenya),
 // authenticated with the DC254 API key. Fetched 2026-09-08 via browser session.
 //
 // Coverage note: Kenya's full registry holds 186 projects (~US$172bn capex,
 // 4 sectors: Transport / Energy / Water / ICT). The public endpoint serves the
 // first 100 records per request; this layer curates the digital-infrastructure
 // projects plus power/transport context items that bear on Kenya's data centre
-// build-out. Registry records are continental project preparations — NOT
-// verified built facilities — and must never be mixed into DC capacity counts
+// build-out. Registry records are continental project preparations, NOT
+// verified built facilities, and must never be mixed into DC capacity counts
 // (see /methodology).
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -32,7 +32,7 @@ export interface PidaProject {
 
 export const PIDA_SOURCE = {
   name: "African Infrastructure Database (AIDA-NEPAD / AUDA-NEPAD)",
-  label: "AUDA-NEPAD African Infrastructure Database — PIDA project registry",
+  label: "AUDA-NEPAD African Infrastructure Database: PIDA project registry",
   url: "https://aid.nepad.org/",
   api: "https://aid.nepad.org/aid/public/api/country-projects.php?country=Kenya",
   fetched: "2026-09-08",
@@ -60,7 +60,7 @@ export const PIDA_PROJECTS: PidaProject[] = [
     lng: 39.6682,
     countries: ["Kenya", "Uganda", "Tanzania", "South Sudan", "Somalia", "Ethiopia"],
     programme: "PIDA PAP 2",
-    note: "Continental-registry flagship: an EAC/IGAD-coordinated regional smart hub with data centre capacity at Mombasa, advanced as a PPP under PIDA PAP 2 and anchored in the IGAD Regional Infrastructure Masterplan. Registered at Project Structuring stage as of 2024 — a pipeline project, not a built facility. The Mombasa coordinates land inside Digital Realty's MBA1 campus area.",
+    note: "Continental-registry flagship: an EAC/IGAD-coordinated regional smart hub with data centre capacity at Mombasa, advanced as a PPP under PIDA PAP 2 and anchored in the IGAD Regional Infrastructure Masterplan. Registered at Project Structuring stage as of 2024, a pipeline project, not a built facility. The Mombasa coordinates land inside Digital Realty's MBA1 campus area.",
   },
   {
     id: 3103,
@@ -88,7 +88,7 @@ export const PIDA_PROJECTS: PidaProject[] = [
     lng: null,
     countries: ["Djibouti", "Somalia", "Kenya"],
     programme: null,
-    note: "Registry record for the live DARE1 cable: 4,763 km with landings at Berbera, Bossaso, Mogadishu, Mombasa and Dar es Salaam; Kenya treats it as TEAMS redundancy. Registry summary cites a 60 Tbit/s system design — we carry the conservative per-landing figure on our cable layer and flag the divergence.",
+    note: "Registry record for the live DARE1 cable: 4,763 km with landings at Berbera, Bossaso, Mogadishu, Mombasa and Dar es Salaam; Kenya treats it as TEAMS redundancy. Registry summary cites a 60 Tbit/s system design, we carry the conservative per-landing figure on our cable layer and flag the divergence.",
   },
   {
     id: 2393,
@@ -132,7 +132,7 @@ export const PIDA_PROJECTS: PidaProject[] = [
     lng: 36.82,
     countries: ["Kenya", "Tanzania", "Zambia"],
     programme: "PIDA PAP 1",
-    note: "The Kenya segment of the Zambia–Tanzania–Kenya (ZTK) 400 kV interconnector — the Eastern Africa Power Pool link that lets Kenyan data centres trade geothermal surpluses and shortfalls across borders. Directly relevant to the single-site power-delivery constraint that stalled the Microsoft–G42 project. (The registry carries a duplicate, un-coded record for the same project — one of the data-quality quirks of a continental registry.)",
+    note: "The Kenya segment of the Zambia–Tanzania–Kenya (ZTK) 400 kV interconnector, the Eastern Africa Power Pool link that lets Kenyan data centres trade geothermal surpluses and shortfalls across borders. Directly relevant to the single-site power-delivery constraint that stalled the Microsoft–G42 project. (The registry carries a duplicate, un-coded record for the same project, one of the data-quality quirks of a continental registry.)",
   },
   {
     id: 3162,
@@ -162,7 +162,7 @@ export const PIDA_PROJECTS: PidaProject[] = [
     lng: 36.85,
     countries: ["Kenya", "Uganda", "Rwanda", "South Sudan"],
     programme: "PIDA PAP 1",
-    note: "The operational Mombasa–Nairobi standard-gauge section of the regional Northern Corridor railway programme. Fibre often rides rail and power corridors — the SGR wayleave is one of the routes carrying terrestrial backhaul between the coast and Nairobi.",
+    note: "The operational Mombasa–Nairobi standard-gauge section of the regional Northern Corridor railway programme. Fibre often rides rail and power corridors, the SGR wayleave is one of the routes carrying terrestrial backhaul between the coast and Nairobi.",
   },
 ];
 

@@ -10,9 +10,9 @@ import { extractEntities, runIntents, fmtVerified, type BotReply, type Entities 
  *   3. exact-match editorial FAQ
  *   4. BM25 retrieval over the live index, confidence-gated
  *   5. the fallback ladder:
- *        tier 1 "reformulate" — nearest matches + chips
- *        tier 2 "partial"     — answer the trackable part, name the gap
- *        tier 3 "escalate"    — route to humans/tools
+ *        tier 1 "reformulate", nearest matches + chips
+ *        tier 2 "partial"    , answer the trackable part, name the gap
+ *        tier 3 "escalate"   , route to humans/tools
  *   Every escalation fires analytics (tier 4 "log & learn", client-side).
  */
 
@@ -27,7 +27,7 @@ export interface EngineResult extends BotReply {
   /**
    * True when the deterministic reply came from the below-threshold
    * "reformulate" tier. The LLM step may then attempt a grounded rescue from
-   * contextChunks — under a strict answer-or-NOT_IN_NOTES contract — and the
+   * contextChunks (under a strict answer-or-NOT_IN_NOTES contract) and the
    * reply is upgraded to a real answer only if it takes.
    */
   weak?: boolean;
@@ -45,7 +45,7 @@ function normScoreThreshold(query: string): number {
 }
 
 function trimToSentences(text: string, maxSentences: number): string {
-  // Mask decimal points first — "2.14" or "8.4 Tbps" must never read as a
+  // Mask decimal points first, "2.14" or "8.4 Tbps" must never read as a
   // sentence end (the old split turned "2.14 million" into "2. 14 million"
   // when the parts were re-joined). Restore after joining; extractive
   // composition has to stay lossless.
@@ -113,7 +113,7 @@ function composeExtractive(hit: { title: string; href: string; heading?: string;
 
 function escalate(query: string): EngineResult {
   return {
-    reply: `${BOT_IDENTITY.scopeReminder} You can also search the whole site, download the dataset, or write to the team directly — they answer humans fast.`,
+    reply: `${BOT_IDENTITY.scopeReminder} You can also search the whole site, download the dataset, or write to the team directly, they answer humans fast.`,
     citations: [
       { label: "Search the site", href: "/search" },
       { label: "Download the dataset", href: "/api/directory/csv" },
@@ -148,7 +148,7 @@ export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): Engi
   if (faq) return { ...faq, contextChunks: [] };
 
   // 3 ── Retrieval with confidence gate. When the question smells off-topic
-  // (celebrities, recipes, geopolitics…), we don't block it — a legitimate
+  // (celebrities, recipes, geopolitics…), we don't block it, a legitimate
   // question like "what did the president announce about data centres?"
   // contains the same words. We just raise the bar a lot: a real corpus hit
   // clears 0.5 easily, a stray keyword match doesn't.
@@ -190,11 +190,11 @@ export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): Engi
 
   // 4 ── Fallback ladder.
 
-  // Tier 1 — reformulate: we found *something*, just not confidently.
+  // Tier 1, reformulate: we found *something*, just not confidently.
   if (hits.length && hits[0].normalized > 0) {
     const nearest = hits.slice(0, 3).map((h) => h.chunk);
     return {
-      reply: `I'm not fully sure I read that right — but the closest things on the site are: ${nearest
+      reply: `I'm not fully sure I read that right, but the closest things on the site are: ${nearest
         .map((n) => `"${n.title}"`)
         .join(", ")}. Want me to take you to one, or ask me again in different words?`,
       citations: nearest.map((n) => ({ label: n.title, href: n.href })),
@@ -211,7 +211,7 @@ export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): Engi
     };
   }
 
-  // Tier 3 — escalate: completely outside my world.
+  // Tier 3, escalate: completely outside my world.
   return escalate(query);
 }
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Kamusi ya Kituo cha Data kwa Kiswahili — Data Centre 254",
+  name: "Kamusi ya Kituo cha Data kwa Kiswahili: Data Centre 254",
   description: "Misamiato muhimu ya vituo vya data iliyoelezwa kwa Kiswahili rahisi.",
   url: `${SITE_URL}/glossary/kiswahili`,
   inLanguage: "sw-KE",
@@ -37,10 +37,10 @@ export default function KiswahiliGlossaryPage() {
           <p className="text-section-label mb-4">Kamusi · Pilot ya Kiswahili</p>
           <h1 className="text-display-sm text-foreground mb-5 flex items-start gap-3">
             <Languages className="mt-1 size-7 shrink-0 text-cyan" />
-            Kamusi ya Kituo cha Data — kwa Kiswahili
+            Kamusi ya Kituo cha Data, kwa Kiswahili
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
-            Miundombinu ya kidijitali ya Kenya inajengwa na Watanzania wa Kenya —
+            Miundombinu ya kidijitali ya Kenya inajengwa na Watanzania wa Kenya,
             lakini karibu yote ya vifaa vya kujifunza kuhusu vituo vya data viko
             kwa Kiingereza pekee. Hii ni <strong className="text-foreground">pilot</strong>:
             misamiati {kiswahiliTerms.length} muhimu, kila moja imeelezwa kwa
@@ -54,8 +54,8 @@ export default function KiswahiliGlossaryPage() {
           </p>
           <p className="text-sm leading-relaxed text-muted-foreground max-w-2xl mb-10">
             Tunapima kama kuna mahitaji ya maudhui ya Kiswahili kwenye tovuti
-            hii. Kama ungependa kupata maelezo mengi kwa Kiswahili — kamusi
-            kamili, makala, au matoleo ya Kiswahili ya Kurasa za Msingi —
+            hii. Kama ungependa kupata maelezo mengi kwa Kiswahili, kamusi
+            kamili, makala, au matoleo ya Kiswahili ya Kurasa za Msingi:
             tuandikie. Maoni yako yataamua tunachojenga ifuatayo.
           </p>
 
@@ -82,7 +82,7 @@ export default function KiswahiliGlossaryPage() {
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-5">
               Tuambie ni nini ungependa: kamusi kamili zaidi, makala za kina kwa
               Kiswahili, au matoleo ya Kiswahili ya Kurasa za Msingi? Tunaomba
-              maoni ya watumiaji kabla ya kuwekeza — hii ni sehemu ya jinsi
+              maoni ya watumiaji kabla ya kuwekeza, hii ni sehemu ya jinsi
               tunavyojenga, sio tu tunavyochapisha.
             </p>
             <a
@@ -94,7 +94,7 @@ export default function KiswahiliGlossaryPage() {
             </a>
           </div>
 
-          {/* Jaribio — interactive vocabulary quiz */}
+          {/* Jaribio, interactive vocabulary quiz */}
           <KiswahiliQuiz terms={kiswahiliTerms} />
 
           {/* Cross-links */}
@@ -108,7 +108,7 @@ export default function KiswahiliGlossaryPage() {
               </li>
               <li>
                 <Link href="/beginners" className="text-cyan hover:underline">
-                  Kurasa za Msingi — anza kutoka mwanzo kabisa →
+                  Kurasa za Msingi, anza kutoka mwanzo kabisa →
                 </Link>
               </li>
               <li>

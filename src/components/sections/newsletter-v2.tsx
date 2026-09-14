@@ -5,7 +5,7 @@ import { useState } from "react";
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  subscribed: "You're on the list — the next issue of The Rack Report lands Monday morning.",
+  subscribed: "You're on the list, the next issue of The Rack Report lands Monday morning.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -29,7 +29,7 @@ export default function NewsletterV2() {
     const form = e.currentTarget;
     const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
     const company = (form.elements.namedItem("companyType") as HTMLInputElement)?.value;
-    // honeypot — real users never see or fill this
+    // honeypot, real users never see or fill this
     const honeypot = (form.elements.namedItem("website") as HTMLInputElement)?.value;
     if (!email) return;
 
@@ -87,7 +87,7 @@ export default function NewsletterV2() {
                 onSubmit={handleSubmit}
                 className="mt-6 flex flex-col items-stretch gap-2 text-left"
               >
-                {/* honeypot — visually hidden, ignored by humans */}
+                {/* honeypot, visually hidden, ignored by humans */}
                 <input
                   type="text"
                   name="website"

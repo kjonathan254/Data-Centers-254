@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 /**
- * POST /api/csp-report — Content-Security-Policy violation collector.
+ * POST /api/csp-report, Content-Security-Policy violation collector.
  *
  * Audit remediation #8: the site ships `Content-Security-Policy-Report-Only`
  * (see next.config.ts) while we observe what a real policy would block. Every
@@ -15,7 +15,7 @@ import { rateLimit, clientIp } from "@/lib/rate-limit";
  *    amplifier;
  *  - only the PATH of the reporting document is logged, never its query string,
  *    and no reporter IP is logged;
- *  - bodies over 4 KB are dropped unread — real CSP reports are a few hundred
+ *  - bodies over 4 KB are dropped unread, real CSP reports are a few hundred
  *    bytes;
  *  - parsing is defensive: anything malformed is silently discarded with 204.
  *
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       return new NextResponse(null, { status: 204 });
     }
 
-    // Path only — strip query/hash so no caller-controlled string beyond the
+    // Path only, strip query/hash so no caller-controlled string beyond the
     // route name ever reaches logs.
     const docUri = typeof report["document-uri"] === "string" ? report["document-uri"] : "";
     let docPath = "<unknown>";
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     // Single line, bounded, no raw report echo.
     console.log(`[csp-report] path=${docPath} directive=${directive} blocked=${blocked}`);
   } catch {
-    // Malformed body — not worth a 400 round trip; browsers treat 2xx as delivered.
+    // Malformed body, not worth a 400 round trip; browsers treat 2xx as delivered.
   }
 
   return new NextResponse(null, { status: 204 });

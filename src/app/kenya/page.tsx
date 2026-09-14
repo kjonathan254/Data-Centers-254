@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/nairobi-skyline.webp", width: 1200, height: 675, alt: "Kenya Data Centres — Data Centre 254" }],
+    images: [{ url: "/images/nairobi-skyline.webp", width: 1200, height: 675, alt: "Kenya Data Centres, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

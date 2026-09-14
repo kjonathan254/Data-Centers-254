@@ -47,7 +47,7 @@ const anatomy = [
   {
     icon: Server,
     name: "Infrastructure",
-    body: "What's happening with data centres — builds, capacity, operators.",
+    body: "What's happening with data centres, builds, capacity, operators.",
   },
   {
     icon: Zap,
@@ -72,7 +72,7 @@ const anatomy = [
   {
     icon: Eye,
     name: "What We're Watching",
-    body: "Two to three developments likely to matter next — before they land.",
+    body: "Two to three developments likely to matter next, before they land.",
   },
   {
     icon: Link2,
@@ -98,7 +98,7 @@ export default function RackReportPage() {
               Kenya&apos;s data-centre industry, in one weekly briefing.
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              The week&apos;s most important developments — written for the
+              The week&apos;s most important developments, written for the
               people building, financing and regulating Kenya&apos;s digital
               infrastructure. Every Monday, free.
             </p>
@@ -117,7 +117,7 @@ export default function RackReportPage() {
             </h2>
             <p className="text-sm text-muted-foreground mb-8">
               A consistent structure, so you can scan the whole industry in one
-              read — and jump straight to the section you care about.
+              read, and jump straight to the section you care about.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {anatomy.map((a) => (
@@ -138,7 +138,7 @@ export default function RackReportPage() {
           </div>
         </section>
 
-        {/* From the reporting — honest interim proof until Issue #001 ships */}
+        {/* From the reporting, honest interim proof until Issue #001 ships */}
         <section className="section-y border-b border-border/40">
           <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <h2 className="text-xl font-semibold text-foreground mb-2">
@@ -146,7 +146,7 @@ export default function RackReportPage() {
             </h2>
             <p className="text-sm text-muted-foreground mb-8">
               Issue #001 is being written. Until it lands, this is the reporting
-              the briefing draws on — researched, sourced, published openly.
+              the briefing draws on, researched, sourced, published openly.
             </p>
             <div className="grid gap-4">
               {latest.map((a) => (
@@ -182,7 +182,7 @@ export default function RackReportPage() {
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-5">
                 Reach Kenya&apos;s digital infrastructure decision-makers. The
-                Rack Report is a specialist channel — one sponsor per issue,
+                Rack Report is a specialist channel, one sponsor per issue,
                 clearly labelled, with a tracked click report every month.
                 Current audience numbers and pricing are always live, never
                 inflated.

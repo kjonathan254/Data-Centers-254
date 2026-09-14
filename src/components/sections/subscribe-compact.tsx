@@ -5,14 +5,14 @@ import { useState } from "react";
 type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  subscribed: "Done — you're on the list.",
+  subscribed: "Done, you're on the list.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
 
 /**
  * Compact end-of-article signup for The Rack Report. Sits right after the
- * article body — the moment a reader has just finished something useful is
+ * article body, the moment a reader has just finished something useful is
  * the highest-intent moment to ask. Each placement is source-tagged so the
  * media kit can eventually say which articles convert.
  */

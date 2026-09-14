@@ -52,11 +52,11 @@ faq:
   - question: "Can I negotiate a better SLA with a Kenyan data centre provider?"
     answer: "Yes, especially if you are committing significant rack space or a multi-year contract. Larger customers regularly negotiate custom SLA terms around response times, reporting frequency, and service credit percentages. Start by asking for their standard SLA document, then identify the gaps between their offering and your business requirements."
   - question: "What happens if a data centre breaches its SLA?"
-    answer: "Typically, you are entitled to service credits — a percentage refund on your monthly colocation fee for the month in which the breach occurred. Most providers offer 10% to 100% credit depending on the severity and duration of the outage. However, service credits rarely compensate for your actual business losses such as lost revenue, reputational damage, or regulatory penalties."
+    answer: "Typically, you are entitled to service credits, a percentage refund on your monthly colocation fee for the month in which the breach occurred. Most providers offer 10% to 100% credit depending on the severity and duration of the outage. However, service credits rarely compensate for your actual business losses such as lost revenue, reputational damage, or regulatory penalties."
   - question: "Do Kenyan data centres actually meet their published uptime SLAs?"
-    answer: "The major operators — Africa Data Centres, PAIX, Liquid Intelligent Technologies, and IXAfrica — generally meet or exceed their published SLAs, particularly for power and cooling. However, Kenya's national grid (Kenya Power) still experiences occasional outages, which is why robust on-site power infrastructure is critical. Always ask prospective providers for their historical SLA performance reports before signing."
+    answer: "The major operators (Africa Data Centres, PAIX, Liquid Intelligent Technologies, and IXAfrica) generally meet or exceed their published SLAs, particularly for power and cooling. However, Kenya's national grid (Kenya Power) still experiences occasional outages, which is why robust on-site power infrastructure is critical. Always ask prospective providers for their historical SLA performance reports before signing."
   - question: "Is a 99.999% uptime SLA realistic for a Kenyan data centre?"
-    answer: 'Genuine 99.999% (five nines) uptime is extremely demanding — it allows only 5.26 minutes of downtime per year. Very few facilities globally achieve this, and it typically requires a Tier IV design with 2N redundancy. In Kenya, some operators may market five nines but the contractual SLA may be lower. Always distinguish between marketing language and the legally binding commitment in your contract.'
+    answer: 'Genuine 99.999% (five nines) uptime is extremely demanding, it allows only 5.26 minutes of downtime per year. Very few facilities globally achieve this, and it typically requires a Tier IV design with 2N redundancy. In Kenya, some operators may market five nines but the contractual SLA may be lower. Always distinguish between marketing language and the legally binding commitment in your contract.'
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-sla-uptime-guarantees"
 ---
 
@@ -66,13 +66,13 @@ A **Service Level Agreement (SLA)** is a formal contract between a data centre o
 
 ![Data centre power distribution and backup systems](/images/dc-power-systems.webp)
 
-For any business placing IT equipment in a [colocation facility in Kenya](/articles/what-is-colocation-kenya), the SLA is arguably the single most important document you will sign. It transforms vague marketing promises like "we never go down" into measurable, enforceable commitments. Without a solid SLA, you have no contractual recourse when things go wrong — and in the data centre world, things eventually do.
+For any business placing IT equipment in a [colocation facility in Kenya](/articles/what-is-colocation-kenya), the SLA is arguably the single most important document you will sign. It transforms vague marketing promises like "we never go down" into measurable, enforceable commitments. Without a solid SLA, you have no contractual recourse when things go wrong, and in the data centre world, things eventually do.
 
 According to the [Uptime Institute](https://uptimeinstitute.com/tier-standard-topology), the global authority on data centre reliability, SLAs should be directly tied to the facility's design topology and operational practices. A well-crafted SLA protects both parties: the customer gets assurance, and the operator gets clear boundaries around their obligations.
 
 ## Why SLAs Matter for Your Business
 
-Imagine running a fintech application serving M-Pesa integrations from a Nairobi facility. Every minute of downtime means failed transactions, frustrated customers, and potential regulatory scrutiny from the Central Bank of Kenya. An SLA is not just a technical document — it is a business continuity tool.
+Imagine running a fintech application serving M-Pesa integrations from a Nairobi facility. Every minute of downtime means failed transactions, frustrated customers, and potential regulatory scrutiny from the Central Bank of Kenya. An SLA is not just a technical document, it is a business continuity tool.
 
 **The core reasons SLAs matter include:**
 
@@ -85,7 +85,7 @@ Imagine running a fintech application serving M-Pesa integrations from a Nairobi
 
 ### Uptime Percentage: The Numbers That Matter
 
-Uptime is the headline metric of any data centre SLA. It represents the percentage of time in a given period that the facility's critical systems — power, cooling, and network — are fully operational. Here is what the common tiers actually mean in terms of **annual unplanned downtime**:
+Uptime is the headline metric of any data centre SLA. It represents the percentage of time in a given period that the facility's critical systems (power, cooling, and network) are fully operational. Here is what the common tiers actually mean in terms of **annual unplanned downtime**:
 
 | Uptime Tier | Downtime Per Year | Downtime Per Month | Typical Use Case |
 |---|---|---|---|
@@ -94,11 +94,11 @@ Uptime is the headline metric of any data centre SLA. It represents the percenta
 | **99.99%** (Four nines) | 52 minutes, 36 seconds | 4 minutes, 23 seconds | Mission-critical workloads, fintech, e-commerce |
 | **99.999%** (Five nines) | 5 minutes, 16 seconds | 26 seconds | Ultra-critical systems, telecoms core, trading platforms |
 
-The jump from three nines to four nines is where most serious businesses draw the line. For a Kenyan e-commerce company processing thousands of orders daily, 8 hours and 46 minutes of annual downtime could mean millions of shillings in lost revenue. Four nines — less than an hour per year — is a far more comfortable target.
+The jump from three nines to four nines is where most serious businesses draw the line. For a Kenyan e-commerce company processing thousands of orders daily, 8 hours and 46 minutes of annual downtime could mean millions of shillings in lost revenue. Four nines (less than an hour per year) is a far more comfortable target.
 
 ### Power Usage Effectiveness (PUE) Guarantees
 
-Some advanced SLAs now include **PUE commitments**, promising that the facility will operate within a certain energy efficiency range. A PUE of 1.5 means that for every 1 kW of power delivered to your IT equipment, the facility uses 1.5 kW total (including cooling and overhead). Lower PUE values indicate better efficiency, which directly impacts your power costs — a critical factor given Kenya Power's commercial tariff structures.
+Some advanced SLAs now include **PUE commitments**, promising that the facility will operate within a certain energy efficiency range. A PUE of 1.5 means that for every 1 kW of power delivered to your IT equipment, the facility uses 1.5 kW total (including cooling and overhead). Lower PUE values indicate better efficiency, which directly impacts your power costs, a critical factor given Kenya Power's commercial tariff structures.
 
 ### Temperature and Humidity Ranges
 
@@ -106,7 +106,7 @@ Some advanced SLAs now include **PUE commitments**, promising that the facility 
 
 ### Response Times: Remote Hands and Smart Hands
 
-**Remote hands** refers to basic physical tasks — checking server status lights, rebooting equipment, connecting cables. **Smart hands** involves more skilled work — OS-level troubleshooting, hardware replacement, configuration changes. A typical SLA might guarantee:
+**Remote hands** refers to basic physical tasks (checking server status lights, rebooting equipment, connecting cables. **Smart hands** involves more skilled work) OS-level troubleshooting, hardware replacement, configuration changes. A typical SLA might guarantee:
 
 - **Remote hands response:** 15 minutes or less
 - **Smart hands response:** 30 minutes to 2 hours depending on complexity
@@ -117,10 +117,10 @@ For Kenyan operators, response time SLAs are particularly important because many
 
 Beyond initial response, SLAs should define **resolution timeframes** for different severity levels:
 
-- **Critical (P1):** Complete service outage — target resolution within 1–4 hours
-- **High (P2):** Major degradation — target resolution within 4–8 hours
-- **Medium (P3):** Minor issue with workaround available — target resolution within 24 hours
-- **Low (P4):** General enquiry or cosmetic issue — target resolution within 72 hours
+- **Critical (P1):** Complete service outage, target resolution within 1–4 hours
+- **High (P2):** Major degradation, target resolution within 4–8 hours
+- **Medium (P3):** Minor issue with workaround available, target resolution within 24 hours
+- **Low (P4):** General enquiry or cosmetic issue, target resolution within 72 hours
 
 ### Network Availability
 
@@ -132,16 +132,16 @@ For [understanding data centre tier ratings](/articles/data-centre-tier-ratings-
 
 The [Uptime Institute Tier Standard](https://uptimeinstitute.com/tier-standard-topology) provides a useful framework for understanding what level of SLA a facility can realistically support:
 
-### Tier I — Basic Capacity (No Meaningful SLA)
+### Tier I, Basic Capacity (No Meaningful SLA)
 Tier I facilities have no redundancy. A single power feed, a single cooling path, and no backup systems mean that any component failure causes an outage. These facilities typically cannot offer any meaningful uptime SLA. In Kenya, very few commercial colocation providers operate at Tier I.
 
-### Tier II — Redundant Capacity Components
+### Tier II, Redundant Capacity Components
 Tier II adds redundant components (like an extra UPS or chiller) but still relies on a single distribution path. SLAs here typically hover around **99.5% to 99.9%**. Suitable for non-critical workloads.
 
-### Tier III — Concurrently Maintainable (N+1)
+### Tier III, Concurrently Maintainable (N+1)
 Tier III is the sweet spot for most commercial data centres. With N+1 redundancy, any single component can fail or be taken offline for maintenance without affecting operations. These facilities typically guarantee **99.982% to 99.99% uptime**. In Kenya, operators like **Africa Data Centres** (their Nairobi facilities) and **IXAfrica** design to Tier III standards and publish SLAs in this range.
 
-### Tier IV — Fault Tolerant (2N)
+### Tier IV, Fault Tolerant (2N)
 Tier IV provides fully redundant, independent distribution paths. Even during maintenance, a complete failure of one path will not cause downtime. These facilities can credibly guarantee **99.995% or higher uptime**. Africa Data Centres' premium facilities and some Liquid Intelligent Technologies campuses in South Africa target Tier IV, though genuine Tier IV design in East Africa remains relatively rare.
 
 ## SLA Enforcement: Service Credits and Their Limits
@@ -161,7 +161,7 @@ Service credits are the primary enforcement mechanism in most data centre SLAs. 
 
 Here is the uncomfortable truth that every SLA signer must understand: **service credits almost never cover your actual business losses.** If a four-hour outage costs your fintech platform KES 10 million in failed transactions, a 25% service credit on a KES 500,000 colocation bill gives you just KES 125,000 back. That is a 1.25% recovery of your actual loss.
 
-This is not a flaw in the SLA — it is the standard industry model worldwide. Service credits are designed as a **contractual incentive**, not an insurance policy. For true loss protection, you need separate business interruption insurance.
+This is not a flaw in the SLA, it is the standard industry model worldwide. Service credits are designed as a **contractual incentive**, not an insurance policy. For true loss protection, you need separate business interruption insurance.
 
 ### Dispute Resolution
 
@@ -208,7 +208,7 @@ When choosing a provider, go beyond the headline uptime number. A practical eval
 
 One of the most important distinctions in the SLA world is the gap between what a provider **markets** and what they **contractually commit to**. A data centre's website might boldly state "99.999% uptime" in large type, but the actual SLA document buried in the contract appendix may guarantee only 99.9%.
 
-This is not unique to Kenya — it is a global industry practice. However, it is especially important to watch for in a rapidly growing market like East Africa, where competition is driving aggressive marketing. Here is how to protect yourself:
+This is not unique to Kenya, it is a global industry practice. However, it is especially important to watch for in a rapidly growing market like East Africa, where competition is driving aggressive marketing. Here is how to protect yourself:
 
 - **Always request the full SLA document before signing.** Do not rely on sales collateral or website claims.
 - **Identify the legally binding metrics.** The only numbers that matter are the ones in the signed contract with financial penalties attached.
@@ -223,7 +223,7 @@ If you are a serious colocation customer committing multiple racks or a private 
 
 ### Custom Uptime Targets
 
-Standard SLAs are designed for the average customer. If your workloads demand higher availability, negotiate for a four-nines or five-nines commitment — but expect to pay a premium for it.
+Standard SLAs are designed for the average customer. If your workloads demand higher availability, negotiate for a four-nines or five-nines commitment, but expect to pay a premium for it.
 
 ### Reporting Requirements
 
@@ -239,7 +239,7 @@ Ensure your SLA or master services agreement includes a clear **exit clause** th
 
 ### Maintenance Windows
 
-Scheduled maintenance is a common SLA exclusion. Negotiate for maintenance windows that fall outside your peak business hours — for example, 02:00–06:00 EAT on Sundays — and ensure the provider gives adequate advance notice (typically 7 to 14 days).
+Scheduled maintenance is a common SLA exclusion. Negotiate for maintenance windows that fall outside your peak business hours (for example, 02:00–06:00 EAT on Sundays) and ensure the provider gives adequate advance notice (typically 7 to 14 days).
 
 ## SLA Tier Comparison: At a Glance
 
@@ -252,11 +252,11 @@ Scheduled maintenance is a common SLA exclusion. Negotiate for maintenance windo
 | **Service credit (per breach)** | 10% of monthly fee | 10–25% of monthly fee | 25–100% of monthly fee |
 | **Remote hands response** | 30 minutes | 15 minutes | 10 minutes or less |
 | **SLA reporting** | Quarterly | Monthly | Real-time + monthly |
-| **Typical Kenyan providers** | Smaller facilities | Africa Data Centres, IXAfrica, Liquid | Rare — premium suites only |
+| **Typical Kenyan providers** | Smaller facilities | Africa Data Centres, IXAfrica, Liquid | Rare, premium suites only |
 
 ## Final Thoughts
 
-A data centre SLA is your primary contractual safeguard when entrusting your IT infrastructure to a third-party facility. In the Kenyan market, where the data centre industry is maturing rapidly and operators are competing intensely, SLAs are becoming more generous — but also more complex. The key is to look beyond the headline uptime percentage and understand the full picture: what metrics are covered, what exclusions apply, how enforcement works, and whether the contract reflects reality or marketing aspiration.
+A data centre SLA is your primary contractual safeguard when entrusting your IT infrastructure to a third-party facility. In the Kenyan market, where the data centre industry is maturing rapidly and operators are competing intensely, SLAs are becoming more generous, but also more complex. The key is to look beyond the headline uptime percentage and understand the full picture: what metrics are covered, what exclusions apply, how enforcement works, and whether the contract reflects reality or marketing aspiration.
 
 Before signing any colocation agreement in Kenya, invest time in reviewing the SLA thoroughly. Request historical performance data, negotiate where possible, and ensure you have independent monitoring in place. The strength of your SLA today determines the resilience of your business tomorrow.
 
@@ -274,12 +274,12 @@ Yes, especially if you are committing significant rack space or a multi-year con
 
 ### What happens if a data centre breaches its SLA?
 
-Typically, you are entitled to service credits — a percentage refund on your monthly colocation fee for the month in which the breach occurred. Most providers offer 10% to 100% credit depending on the severity and duration of the outage. However, service credits rarely compensate for your actual business losses such as lost revenue, reputational damage, or regulatory penalties.
+Typically, you are entitled to service credits, a percentage refund on your monthly colocation fee for the month in which the breach occurred. Most providers offer 10% to 100% credit depending on the severity and duration of the outage. However, service credits rarely compensate for your actual business losses such as lost revenue, reputational damage, or regulatory penalties.
 
 ### Do Kenyan data centres actually meet their published uptime SLAs?
 
-The major operators — Africa Data Centres, PAIX, Liquid Intelligent Technologies, and IXAfrica — generally meet or exceed their published SLAs, particularly for power and cooling. However, Kenya's national grid (Kenya Power) still experiences occasional outages, which is why robust on-site power infrastructure is critical. Always ask prospective providers for their historical SLA performance reports before signing.
+The major operators (Africa Data Centres, PAIX, Liquid Intelligent Technologies, and IXAfrica) generally meet or exceed their published SLAs, particularly for power and cooling. However, Kenya's national grid (Kenya Power) still experiences occasional outages, which is why robust on-site power infrastructure is critical. Always ask prospective providers for their historical SLA performance reports before signing.
 
 ### Is a 99.999% uptime SLA realistic for a Kenyan data centre?
 
-Genuine 99.999% ("five nines") uptime is extremely demanding — it allows only 5.26 minutes of downtime per year. Very few facilities globally achieve this, and it typically requires a Tier IV design with 2N redundancy. In Kenya, some operators may market "five nines" but the contractual SLA may be lower. Always distinguish between marketing language and the legally binding commitment in your contract.
+Genuine 99.999% ("five nines") uptime is extremely demanding, it allows only 5.26 minutes of downtime per year. Very few facilities globally achieve this, and it typically requires a Tier IV design with 2N redundancy. In Kenya, some operators may market "five nines" but the contractual SLA may be lower. Always distinguish between marketing language and the legally binding commitment in your contract.

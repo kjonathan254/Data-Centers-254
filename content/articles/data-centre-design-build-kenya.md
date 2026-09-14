@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Design and Build in Kenya: A Guide"
 slug: data-centre-design-build-kenya
-meta_description: Learn the full data centre design and build process in Kenya — from
+meta_description: Learn the full data centre design and build process in Kenya, from
   site selection and feasibility studies to MEP design, construction, commissioning
   and handover, covering Kenya Power grid connection, NEMA EIA requirements, KEBS
   standards and Nairobi County building approvals.
@@ -29,7 +29,7 @@ images:
 - src: /images/nbo2-launch-ribbon-cutting.webp
   alt: Officials marking the launch of the NBO2 data centre in Nairobi
   caption: Power distribution infrastructure is a critical design element in any Kenyan
-    data centre build — NBO2's September 2026 launch showed the end result of that design work
+    data centre build, NBO2's September 2026 launch showed the end result of that design work
   position: section-break
 - src: /images/dc-chillers-roof-3.webp
   alt: Data centre cooling systems including CRAC units and chilled water piping
@@ -37,7 +37,7 @@ images:
   position: inline
 - src: /images/diagram-office-rack-design.webp
   alt: Diagram of a medium enterprise office rack design with security and switching layers
-  caption: Even an enterprise office rack is designed layer by layer, zone by zone — the same discipline scales up to a Tier III data centre hall.
+  caption: Even an enterprise office rack is designed layer by layer, zone by zone, the same discipline scales up to a Tier III data centre hall.
   position: diagram
 
 - src: /images/construction-crane-scaffolding.webp
@@ -52,9 +52,9 @@ internal_links:
 - text: Data Centre Due Diligence Kenya
   href: /articles/data-centre-due-diligence-kenya
 external_sources:
-- title: Kenya Bureau of Standards (KEBS) — Building and Construction Standards
+- title: Kenya Bureau of Standards (KEBS), Building and Construction Standards
   url: https://www.kebs.org
-- title: National Environment Management Authority (NEMA) — EIA Guidelines
+- title: National Environment Management Authority (NEMA), EIA Guidelines
   url: https://www.nema.go.ke
 faq:
 - question: How long does it take to build a data centre in Kenya from site selection
@@ -121,7 +121,7 @@ canonical_url: https://data-centers-254.vercel.app/articles/data-centre-design-b
 
 ## Introduction: Why Data Centre Design and Build Matters in Kenya
 
-Kenya's digital economy is expanding at a pace that demands robust, locally-built data centre infrastructure. With the government's Digital Economy Blueprint, the growing presence of hyperscale cloud providers, and increasing enterprise demand for [colocation services in Kenya](/articles/colocation-data-centre-kenya), the country is witnessing a data centre construction boom. But building a data centre is far more complex than constructing a standard commercial building — it requires specialised knowledge of power systems, cooling, structural engineering, and regulatory compliance specific to the Kenyan context.
+Kenya's digital economy is expanding at a pace that demands robust, locally-built data centre infrastructure. With the government's Digital Economy Blueprint, the growing presence of hyperscale cloud providers, and increasing enterprise demand for [colocation services in Kenya](/articles/colocation-data-centre-kenya), the country is witnessing a data centre construction boom. But building a data centre is far more complex than constructing a standard commercial building, it requires specialised knowledge of power systems, cooling, structural engineering, and regulatory compliance specific to the Kenyan context.
 
 This guide walks through every stage of the data centre design and build process in Kenya, from initial site selection through to commissioning and handover.
 
@@ -140,13 +140,13 @@ Dual-grid feeds from independent KPLC substations are essential for any facility
 
 ### Fibre Connectivity and Network Proximity
 
-A data centre without diverse fibre connectivity has limited value. Kenyan site selection must confirm proximity to multiple fibre duct routes from operators such as Liquid Intelligent Technologies, Safaricom, Telkom Kenya, Jamii Telecommunications, and the Kenya Data Centres backbone. Proximity to submarine cable landing stations in Mombasa — particularly the EASSy, Seacom, and TiGS cable systems — is critical for facilities serving international traffic.
+A data centre without diverse fibre connectivity has limited value. Kenyan site selection must confirm proximity to multiple fibre duct routes from operators such as Liquid Intelligent Technologies, Safaricom, Telkom Kenya, Jamii Telecommunications, and the Kenya Data Centres backbone. Proximity to submarine cable landing stations in Mombasa (particularly the EASSy, Seacom, and TiGS cable systems) is critical for facilities serving international traffic.
 
 ### Flood Zones, Seismic Considerations, and Terrain
 
 **Kenya is not typically associated with major seismic activity**, but the Kenya Geological Survey has identified moderate seismic risk zones, particularly along the Rift Valley. The USGS seismic hazard maps for East Africa indicate that Nairobi falls within a low-to-moderate risk zone, but structural design must still comply with seismic loading requirements under the Kenyan building code.
 
-Flood risk is more immediate. Nairobi has experienced severe flooding events — notably in April 2024 when widespread floods displaced thousands and damaged infrastructure. Data centre sites must be evaluated against flood plain maps from the Ministry of Water and Irrigation, and the building's plinth level should be raised above historical flood lines. Mombasa's coastal locations face additional tidal surge and sea-level rise considerations.
+Flood risk is more immediate. Nairobi has experienced severe flooding events, notably in April 2024 when widespread floods displaced thousands and damaged infrastructure. Data centre sites must be evaluated against flood plain maps from the Ministry of Water and Irrigation, and the building's plinth level should be raised above historical flood lines. Mombasa's coastal locations face additional tidal surge and sea-level rise considerations.
 
 ### Land Ownership, Zoning, and Title Verification
 
@@ -170,9 +170,9 @@ Developers must evaluate demand for colocation, hyperscale, or hybrid cloud serv
 
 ![Diagram of a medium enterprise office rack design with security and switching layers](/images/diagram-office-rack-design.webp)
 
-The conceptual design phase establishes the facility's overall scope, target tier classification, capacity (in kW or MW), and architectural approach. Key decisions at this stage include whether to build a purpose-built facility or retrofit an existing commercial building — operators like **Africa Data Centres** and **PAIX** (Pan-African Internet Exchange) have taken both approaches in Kenya.
+The conceptual design phase establishes the facility's overall scope, target tier classification, capacity (in kW or MW), and architectural approach. Key decisions at this stage include whether to build a purpose-built facility or retrofit an existing commercial building, operators like **Africa Data Centres** and **PAIX** (Pan-African Internet Exchange) have taken both approaches in Kenya.
 
-The conceptual design produces initial floor plans, block layouts showing white space, electrical rooms, mechanical plant rooms, and support areas. It also defines the **resilience strategy** — N+1, 2N, or N+2 redundancy for critical systems.
+The conceptual design produces initial floor plans, block layouts showing white space, electrical rooms, mechanical plant rooms, and support areas. It also defines the **resilience strategy**, N+1, 2N, or N+2 redundancy for critical systems.
 
 ### Detailed Design
 
@@ -184,7 +184,7 @@ The detailed design phase translates the concept into construction-ready documen
 - **Mechanical engineering** designs for precision cooling, chilled water systems, air handling units, and ductwork
 
 ![Officials marking the launch of the NBO2 data centre in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
-*Power distribution infrastructure is a critical design element in any Kenyan data centre build — NBO2's September 2026 launch showed the end result of that design work*
+*Power distribution infrastructure is a critical design element in any Kenyan data centre build, NBO2's September 2026 launch showed the end result of that design work*
 
 ### MEP Design: The Most Critical Discipline
 
@@ -202,11 +202,11 @@ The detailed design phase translates the concept into construction-ready documen
 
 Many specialised data centre materials are not manufactured in Kenya and must be imported. This includes raised-floor panels, hot-aisle/cold-aisle containment systems, precision air-conditioning units, UPS systems, and automatic transfer switches (ATS). Lead times from manufacturers in Europe, China, and South Africa can range from 8 to 16 weeks, and **import duties and VAT (16%)** must be factored into project budgets.
 
-Standard construction materials — concrete, steel reinforcement, structural steel, and electrical cable — are readily available from Kenyan suppliers, though quality must be verified against **KEBS standards**. The [Kenya Bureau of Standards](https://www.kebs.org) certifies materials including cement (KS 02-542), steel reinforcement (KS 574), and electrical cables (KS IEC 60227).
+Standard construction materials (concrete, steel reinforcement, structural steel, and electrical cable) are readily available from Kenyan suppliers, though quality must be verified against **KEBS standards**. The [Kenya Bureau of Standards](https://www.kebs.org) certifies materials including cement (KS 02-542), steel reinforcement (KS 574), and electrical cables (KS IEC 60227).
 
 ### The Contractor Ecosystem
 
-Kenya's construction industry includes both large established firms and specialised subcontractors. For data centre projects, the contracting strategy typically involves a main contractor for civil and structural works, with specialist subcontractors for MEP installation. Finding contractors with specific data centre experience remains a challenge — while many firms have built industrial and commercial facilities, the precision requirements of data centre construction (tolerances for raised floors, cable routing, piping alignment) demand additional supervision and quality assurance.
+Kenya's construction industry includes both large established firms and specialised subcontractors. For data centre projects, the contracting strategy typically involves a main contractor for civil and structural works, with specialist subcontractors for MEP installation. Finding contractors with specific data centre experience remains a challenge, while many firms have built industrial and commercial facilities, the precision requirements of data centre construction (tolerances for raised floors, cable routing, piping alignment) demand additional supervision and quality assurance.
 
 ### Regulatory Compliance During Construction
 
@@ -258,7 +258,7 @@ Operators like **Liquid Intelligent Technologies**, which operates multiple faci
 
 ## Conclusion: Building Kenya's Digital Future
 
-The data centre design and build process in Kenya is complex but increasingly well-understood as the local industry matures. From site selection through commissioning, each phase requires careful attention to both international best practices and Kenya-specific regulatory, environmental, and infrastructure realities. As demand for digital infrastructure continues to grow — driven by cloud adoption, AI workloads, and Kenya's position as East Africa's technology hub — the construction pipeline is expected to accelerate. For developers and investors, understanding this build process is essential for delivering facilities that meet the performance, reliability, and compliance standards that modern digital services demand.
+The data centre design and build process in Kenya is complex but increasingly well-understood as the local industry matures. From site selection through commissioning, each phase requires careful attention to both international best practices and Kenya-specific regulatory, environmental, and infrastructure realities. As demand for digital infrastructure continues to grow (driven by cloud adoption, AI workloads, and Kenya's position as East Africa's technology hub) the construction pipeline is expected to accelerate. For developers and investors, understanding this build process is essential for delivering facilities that meet the performance, reliability, and compliance standards that modern digital services demand.
 
 ## Frequently Asked Questions
 

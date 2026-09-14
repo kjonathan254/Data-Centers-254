@@ -24,7 +24,7 @@ images:
     position: hero
   - src: "/images/grid-technician-pole-work.webp"
     alt:  "Grid technician working on overhead power distribution lines"
-    caption: "AI data centres need significantly more power than traditional facilities, making Kenya's geothermal advantage critical — and every megawatt starts at the grid"
+    caption: "AI data centres need significantly more power than traditional facilities, making Kenya's geothermal advantage critical, and every megawatt starts at the grid"
     position: "section-break"
   - src: "/images/dc-gpu-cluster-2.webp"
     alt:  "Server racks in a Nairobi data centre hall"

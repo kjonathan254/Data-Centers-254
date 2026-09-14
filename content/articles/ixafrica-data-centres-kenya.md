@@ -44,7 +44,7 @@ faq:
   - question: "Where is iXAfrica located?"
     answer: "iXAfrica NBOX1 is located along Mombasa Road in Nairobi's Industrial Area. The campus is positioned near key fibre routes connecting Nairobi to submarine cable landing stations in Mombasa."
   - question: "What is iXAfrica's total capacity?"
-    answer: "The current NBOX1 facility delivers 4.5 MW IT load with 500 racks. The NBOX1 campus is planned for 22.5 MW across multiple phases — the 18 MW NBOX1.2 expansion is under construction — and a further 53 MW campus at Tilisi is committed."
+    answer: "The current NBOX1 facility delivers 4.5 MW IT load with 500 racks. The NBOX1 campus is planned for 22.5 MW across multiple phases (the 18 MW NBOX1.2 expansion is under construction) and a further 53 MW campus at Tilisi is committed."
 canonical_url: "https://data-centers-254.vercel.app/articles/ixafrica-data-centres-kenya"
 ---
 

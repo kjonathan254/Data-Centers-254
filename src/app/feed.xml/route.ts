@@ -36,7 +36,7 @@ export async function GET() {
   <channel>
     <title>Data Centre 254</title>
     <link>${siteUrl()}</link>
-    <description>Inside Kenya's digital infrastructure — data centres, connectivity, power, and AI. Research and explainers from DC254.</description>
+    <description>Inside Kenya's digital infrastructure, data centres, connectivity, power, and AI. Research and explainers from DC254.</description>
     <language>en-ke</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${self}" rel="self" type="application/rss+xml" />

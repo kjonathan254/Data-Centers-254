@@ -5,11 +5,11 @@
  *   - UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN present → Upstash
  *     Redis via its REST API (no SDK; plain fetch, works on Vercel serverless)
  *   - otherwise → in-memory fallback (dev / pre-config; data survives only
- *     for the process lifetime — logs make this explicit)
+ *     for the process lifetime, logs make this explicit)
  *
  * Records kept here:
  *   - subscribers: email + role segmentation + source + status
- *     (segmentation is the media-kit asset — kept even when Resend is not
+ *     (segmentation is the media-kit asset, kept even when Resend is not
  *     configured, so signups are never lost while the key is missing)
  *   - export interests: emails captured on /data-exports pre-checkout
  *   - sponsor click counters: per-slug redirect tallies
@@ -165,7 +165,7 @@ export async function upsertSubscriber(input: {
 
   if (backend === "upstash") {
     await upstash("set", `nl:sub:${hash}`, JSON.stringify(record));
-    // counters only on first-time signup — re-activation of an
+    // counters only on first-time signup, re-activation of an
     // unsubscribed email was never decremented, so no re-increment
     if (!existing) {
       await upstash("incr", "nl:count:total");
@@ -287,7 +287,7 @@ export async function getStats(): Promise<NewsletterStats> {
         exportInterests: Number(exp ?? 0),
       };
     } catch {
-      // fall through to zeros on any Upstash hiccup — stats are display-only
+      // fall through to zeros on any Upstash hiccup, stats are display-only
       return { backend, total: 0, verified: 0, byRole, exportInterests: 0 };
     }
   }

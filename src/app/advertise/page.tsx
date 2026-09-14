@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/advertise" },
 };
 
-// The live-list block below must not be frozen at build time — ISR keeps
+// The live-list block below must not be frozen at build time, ISR keeps
 // the page cached while the audience numbers refresh every 5 minutes.
 export const revalidate = 300;
 
@@ -20,31 +20,31 @@ const opportunities = [
     icon: MailOpen,
     num: "01",
     title: "Briefing sponsorship",
-    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. A 75–100 word sponsored message with your logo and link, clearly labelled — plus a tracked click report every month.",
+    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. A 75–100 word sponsored message with your logo and link, clearly labelled, plus a tracked click report every month.",
   },
   {
     icon: PenLine,
     num: "02",
     title: "Sponsored intelligence",
-    body: "A researched editorial piece presented by your brand — for example “Kenya's Data Centre Power Challenge, presented by [Company]”. You attach to the reporting; the conclusions stay fully independent. That independence is exactly what makes the attachment worth paying for.",
+    body: "A researched editorial piece presented by your brand, for example “Kenya's Data Centre Power Challenge, presented by [Company]”. You attach to the reporting; the conclusions stay fully independent. That independence is exactly what makes the attachment worth paying for.",
   },
   {
     icon: BarChart3,
     num: "03",
     title: "Market reports",
-    body: "“Kenya Data Centre Market” — operators, capacity, locations, power, connectivity and investment in one report. License it for your team, or sponsor its production and put your brand on the definitive market document.",
+    body: "“Kenya Data Centre Market”, operators, capacity, locations, power, connectivity and investment in one report. License it for your team, or sponsor its production and put your brand on the definitive market document.",
   },
   {
     icon: Building2,
     num: "04",
     title: "Directory placement & featured listing",
-    body: "Operators and service providers can enrich their DC Directory profiles — certifications, capacity, connectivity, expansions, verified and sourced like every entry. Featured listings add priority placement in relevant searches. Paid placement changes prominence, never the data — verification stays mandatory in every tier.",
+    body: "Operators and service providers can enrich their DC Directory profiles, certifications, capacity, connectivity, expansions, verified and sourced like every entry. Featured listings add priority placement in relevant searches. Paid placement changes prominence, never the data, verification stays mandatory in every tier.",
   },
   {
     icon: MapPinned,
     num: "05",
     title: "Market sponsorship",
-    body: "Name sponsorship of the Kenya DC Directory or the Infrastructure Map — the two reference assets this market cites. One sponsor per section, clearly disclosed, in the tradition of the sponsored industry maps everybody already cites.",
+    body: "Name sponsorship of the Kenya DC Directory or the Infrastructure Map, the two reference assets this market cites. One sponsor per section, clearly disclosed, in the tradition of the sponsored industry maps everybody already cites.",
   },
   {
     icon: Building2,
@@ -61,7 +61,7 @@ const facts = [
 ];
 
 export default async function AdvertisePage() {
-  // Live signup segmentation — the real media-kit numbers. Display-only:
+  // Live signup segmentation, the real media-kit numbers. Display-only:
   // degrades to zeros without drama if the store is unreachable.
   let stats: Awaited<ReturnType<typeof getStats>> | null = null;
   try {
@@ -87,7 +87,7 @@ export default async function AdvertisePage() {
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-12">
             DataCentre254 is a specialist media channel focused exclusively on
-            Kenya&apos;s data-centre and digital-infrastructure ecosystem — not a
+            Kenya&apos;s data-centre and digital-infrastructure ecosystem, not a
             general tech site. Sponsorship here means your brand is associated
             with research and clarity, clearly labelled and never at the cost
             of editorial trust.
@@ -106,7 +106,7 @@ export default async function AdvertisePage() {
 
           {/* Commercial ladder */}
           <h2 className="text-xl font-semibold text-foreground mb-2">The commercial ladder</h2>
-          <p className="text-sm text-muted-foreground mb-6">Start where the fit is right — each rung deepens the relationship.</p>
+          <p className="text-sm text-muted-foreground mb-6">Start where the fit is right, each rung deepens the relationship.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
             {opportunities.map((o) => (
               <div key={o.num} className="rounded-xl border border-border/50 p-6 hover:border-cyan/30 transition-colors">
@@ -120,18 +120,18 @@ export default async function AdvertisePage() {
             ))}
           </div>
 
-          {/* Briefing sponsorship — slot pricing */}
+          {/* Briefing sponsorship, slot pricing */}
           <h2 className="text-xl font-semibold text-foreground mb-2">Sponsor The Rack Report</h2>
-          <p className="text-sm text-muted-foreground mb-6">The weekly intelligence briefing from DataCentre254 — infrastructure, power, connectivity, money and policy, every Monday.</p>
+          <p className="text-sm text-muted-foreground mb-6">The weekly intelligence briefing from DataCentre254, infrastructure, power, connectivity, money and policy, every Monday.</p>
           <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-14">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>
                 <p className="text-2xl font-bold text-foreground">$100–250</p>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">per slot, flat fee — priced on audience quality, not CPM</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">per slot, flat fee, priced on audience quality, not CPM</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">1 / issue</p>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, four briefings a month — never an ad block</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, four briefings a month, never an ad block</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">Monthly report</p>
@@ -141,7 +141,7 @@ export default async function AdvertisePage() {
             <p className="text-sm leading-relaxed text-muted-foreground mb-4">
               <strong className="text-foreground">Founding industry partners:</strong> the first two partners ever pay{" "}
               <strong className="text-foreground">$75 per slot</strong> for
-              their first two issues — after that, pricing follows the audience numbers below. Sponsors are vendors who
+              their first two issues, after that, pricing follows the audience numbers below. Sponsors are vendors who
               sell to this market: cooling, power, connectivity, construction, consulting. New to the briefing?{" "}
               <a href="/rack-report" className="text-cyan hover:underline">See what lands in every issue</a>.
             </p>
@@ -150,7 +150,7 @@ export default async function AdvertisePage() {
               <div className="rounded-lg border border-border/40 bg-accent/20 p-4">
                 <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-3 inline-flex items-center gap-1.5">
                   <TrendingUp className="size-3.5" aria-hidden="true" />
-                  Live list — {stats.total} subscriber{stats.total === 1 ? "" : "s"}
+                  Live list, {stats.total} subscriber{stats.total === 1 ? "" : "s"}
                 </p>
                 <div className="flex flex-wrap gap-x-5 gap-y-1.5">
                   {topRoles.map((r) => (
@@ -163,7 +163,7 @@ export default async function AdvertisePage() {
             ) : (
               <div className="rounded-lg border border-cyan/25 bg-cyan/5 p-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Founding partner window is open.</strong> The list is young —
+                  <strong className="text-foreground">Founding partner window is open.</strong> The list is young,
                   which is exactly why the founding rate exists. Lock a slot before the numbers move the price.
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default async function AdvertisePage() {
               <h2 className="text-lg font-semibold text-foreground">Get the media kit</h2>
             </div>
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-6">
-              Tell us who you are and what you&apos;d like to do — we&apos;ll share formats,
+              Tell us who you are and what you&apos;d like to do, we&apos;ll share formats,
               current audience numbers, and pricing. Every partnership is disclosed to
               readers, in line with our{" "}
               <a href="/editorial-policy" className="text-cyan underline hover:underline">editorial policy</a>.
@@ -199,7 +199,7 @@ export default async function AdvertisePage() {
               </a>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
-              Kevin Jonathan Otieno — Founder & Publisher, Nairobi, Kenya.
+              Kevin Jonathan Otieno, Founder & Publisher, Nairobi, Kenya.
             </p>
           </div>
         </div>

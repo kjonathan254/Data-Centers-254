@@ -2,7 +2,7 @@ import { getLatestArticles, isArticleFresh, getArticleHeroImage } from "@/lib/ar
 import LatestIntelligenceInner from "./latest-intelligence-inner";
 
 /**
- * Latest intelligence — picks the most recent articles but spreads them
+ * Latest intelligence, picks the most recent articles but spreads them
  * across distinct clusters, so the three homepage cards never show the
  * same topic (or the same photograph) three times in a row.
  */

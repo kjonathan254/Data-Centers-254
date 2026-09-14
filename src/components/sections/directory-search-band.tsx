@@ -3,9 +3,9 @@ import { Search, Map, ArrowRight, Zap } from "lucide-react";
 import { getFacilities } from "@/lib/directory-data";
 
 /**
- * Directory search band — sits directly under the hero so the platform's
+ * Directory search band, sits directly under the hero so the platform's
  * strongest asset (the verified DC Directory) is reachable immediately.
- * Native GET form to /directory — zero client JS.
+ * Native GET form to /directory, zero client JS.
  */
 export default function DirectorySearchBand() {
   const facilities = getFacilities();

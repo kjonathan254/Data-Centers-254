@@ -12,7 +12,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Data Centre",
     short: "A specialised building or room housing computer servers, storage, and networking equipment that processes, stores, and distributes data.",
     definition:
-      "A data centre is a purpose-built facility that houses IT equipment — servers, storage systems, and network switches — in a controlled environment. Key systems include precision cooling (maintaining 18–27°C), uninterruptible power supplies (UPS), backup generators, fire suppression, and physical security. Data centres range from small server rooms to hyperscale campuses spanning hundreds of thousands of square metres. In Kenya, facilities like iXAfrica in Nairobi and Africa Data Centres’ facilities form the core of the country’s digital infrastructure, supporting everything from M-Pesa transactions to government services and streaming platforms.",
+      "A data centre is a purpose-built facility that houses IT equipment (servers, storage systems, and network switches) in a controlled environment. Key systems include precision cooling (maintaining 18–27°C), uninterruptible power supplies (UPS), backup generators, fire suppression, and physical security. Data centres range from small server rooms to hyperscale campuses spanning hundreds of thousands of square metres. In Kenya, facilities like iXAfrica in Nairobi and Africa Data Centres’ facilities form the core of the country’s digital infrastructure, supporting everything from M-Pesa transactions to government services and streaming platforms.",
     category: "Fundamentals",
     relatedTerms: ["Tier Rating", "Colocation", "Hyperscale", "IT Load"],
     relatedArticles: [
@@ -36,7 +36,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Colocation",
     short: "A service where multiple organisations rent space (racks, cages, or private suites) in a shared data centre facility.",
     definition:
-      "Colocation (often shortened to ‘colo’) is a data centre service model where businesses rent physical space — from a single rack unit to a private suite — in a third-party facility. The colocation provider supplies the building, power, cooling, security, and network connectivity, while the customer supplies and manages their own servers and equipment. This is the dominant model in Kenya’s commercial data centre market. Companies like iXAfrica, Africa Data Centres, and Liquid Intelligent Technologies offer colocation services in Nairobi, allowing banks, telcos, and cloud providers to house equipment without building their own facilities.",
+      "Colocation (often shortened to ‘colo’) is a data centre service model where businesses rent physical space (from a single rack unit to a private suite) in a third-party facility. The colocation provider supplies the building, power, cooling, security, and network connectivity, while the customer supplies and manages their own servers and equipment. This is the dominant model in Kenya’s commercial data centre market. Companies like iXAfrica, Africa Data Centres, and Liquid Intelligent Technologies offer colocation services in Nairobi, allowing banks, telcos, and cloud providers to house equipment without building their own facilities.",
     category: "Services",
     relatedTerms: ["Data Centre", "Carrier-Neutral", "Cross-Connect", "Rack Unit"],
     relatedArticles: [
@@ -48,7 +48,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Hyperscale Data Centre",
     short: "A massive data centre operated by a single company (like Google, Microsoft, or AWS), typically exceeding 5,000 servers and 10 MW of IT load.",
     definition:
-      "Hyperscale data centres are enormous facilities designed and operated by large technology companies — Amazon Web Services, Microsoft Azure, Google Cloud, Meta, and others. They typically exceed 10 MW of IT load and house tens of thousands of servers in a highly automated, efficiently designed layout. Hyperscale facilities are characterised by standardised building designs, heavy use of automation, and very low PUE (often below 1.2). In Africa, Microsoft and G42’s joint venture has announced plans for hyperscale capacity in Kenya, which would be a first for East Africa and a major milestone for the region’s cloud ecosystem.",
+      "Hyperscale data centres are enormous facilities designed and operated by large technology companies, Amazon Web Services, Microsoft Azure, Google Cloud, Meta, and others. They typically exceed 10 MW of IT load and house tens of thousands of servers in a highly automated, efficiently designed layout. Hyperscale facilities are characterised by standardised building designs, heavy use of automation, and very low PUE (often below 1.2). In Africa, Microsoft and G42’s joint venture has announced plans for hyperscale capacity in Kenya, which would be a first for East Africa and a major milestone for the region’s cloud ecosystem.",
     category: "Infrastructure",
     relatedTerms: ["Data Centre", "PUE", "IT Load", "Edge Computing"],
     relatedArticles: [
@@ -72,7 +72,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Uptime SLA",
     short: "A contractual guarantee of availability, typically expressed as a percentage. ‘Five nines’ (99.999%) allows only 5.26 minutes of downtime per year.",
     definition:
-      "An uptime Service Level Agreement (SLA) is a contract between a data centre provider and its customer guaranteeing a minimum level of availability. The most common tiers are 99.9% (‘three nines’, allowing ~8.76 hours of downtime per year), 99.99% (‘four nines’, ~52.6 minutes), and 99.999% (‘five nines’, ~5.26 minutes). SLAs are backed by the facility’s infrastructure redundancy — a Tier III facility can realistically commit to 99.99%, while true five-nines requires Tier IV fault-tolerant design. In Kenya, enterprise customers (banks, telcos, government) typically require 99.99% or higher, which drives the design standards for commercial facilities.",
+      "An uptime Service Level Agreement (SLA) is a contract between a data centre provider and its customer guaranteeing a minimum level of availability. The most common tiers are 99.9% (‘three nines’, allowing ~8.76 hours of downtime per year), 99.99% (‘four nines’, ~52.6 minutes), and 99.999% (‘five nines’, ~5.26 minutes). SLAs are backed by the facility’s infrastructure redundancy, a Tier III facility can realistically commit to 99.99%, while true five-nines requires Tier IV fault-tolerant design. In Kenya, enterprise customers (banks, telcos, government) typically require 99.99% or higher, which drives the design standards for commercial facilities.",
     category: "Standards",
     relatedTerms: ["Tier Rating", "Redundancy"],
     relatedArticles: [
@@ -84,7 +84,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Submarine Cable",
     short: "A fibre optic cable laid on the ocean floor carrying intercontinental internet traffic. Six active cables land in Mombasa.",
     definition:
-      "Submarine cables are fibre optic communication cables laid on the seabed, carrying the vast majority of intercontinental internet traffic. They are typically 17–25mm in diameter and can carry tens of terabits per second. Kenya’s coastal city of Mombasa is the submarine cable gateway for East Africa, with six active cables: SEACOM (2009), TEAMS (2009), EASSy (2010), LION2 (2013), DARE1 (2022), and PEACE (2022), and a seventh — Meta’s Daraja cable — in development. These cables connect Kenya to Europe, Asia, South Africa, and the rest of the world, providing the international bandwidth that makes the country’s digital economy possible.",
+      "Submarine cables are fibre optic communication cables laid on the seabed, carrying the vast majority of intercontinental internet traffic. They are typically 17–25mm in diameter and can carry tens of terabits per second. Kenya’s coastal city of Mombasa is the submarine cable gateway for East Africa, with six active cables: SEACOM (2009), TEAMS (2009), EASSy (2010), LION2 (2013), DARE1 (2022), and PEACE (2022), and a seventh (Meta’s Daraja cable) in development. These cables connect Kenya to Europe, Asia, South Africa, and the rest of the world, providing the international bandwidth that makes the country’s digital economy possible.",
     category: "Connectivity",
     relatedTerms: ["Latency", "Bandwidth", "Fibre Optic"],
     relatedArticles: [
@@ -96,7 +96,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Internet Exchange Point (IXP)",
     short: "A facility where networks interconnect directly to exchange traffic locally, reducing latency and cost. Kenya’s is KIXP.",
     definition:
-      "An Internet Exchange Point (IXP) is a physical facility where internet service providers, content providers, and enterprises interconnect their networks and exchange traffic directly, rather than routing it through international links. This localises traffic, reducing latency and cost. Kenya’s IXP — the Kenya Internet Exchange Point (KIXP), operated by the Internet Society — is one of Africa’s most successful, handling significant volumes of local traffic. Without KIXP, a WhatsApp message between two Safaricom users in Nairobi might route through Mombasa and onto a submarine cable before returning. With KIXP, it stays local, reducing round-trip time from ~100ms to under 5ms.",
+      "An Internet Exchange Point (IXP) is a physical facility where internet service providers, content providers, and enterprises interconnect their networks and exchange traffic directly, rather than routing it through international links. This localises traffic, reducing latency and cost. Kenya’s IXP, the Kenya Internet Exchange Point (KIXP), operated by the Internet Society, is one of Africa’s most successful, handling significant volumes of local traffic. Without KIXP, a WhatsApp message between two Safaricom users in Nairobi might route through Mombasa and onto a submarine cable before returning. With KIXP, it stays local, reducing round-trip time from ~100ms to under 5ms.",
     category: "Connectivity",
     relatedTerms: ["Peering", "Submarine Cable", "Latency"],
     relatedArticles: [
@@ -108,7 +108,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Peering",
     short: "The direct interconnection of two networks to exchange traffic without a third-party intermediary, typically done at an IXP.",
     definition:
-      "Peering is a voluntary, reciprocal arrangement between two networks to exchange traffic directly. It can be public (at an IXP like KIXP) or private (a direct link between two parties). Peering reduces costs by bypassing transit providers, and reduces latency by keeping traffic local. In Kenya, peering at KIXP means that a user accessing a local bank’s website or a streaming service with local caches doesn’t need to traverse international links. For data centres, being connected to an IXP is a major selling point — it means tenants can peer with dozens of networks from a single facility. Carrier-neutral data centres that host IXP presence points are particularly valuable.",
+      "Peering is a voluntary, reciprocal arrangement between two networks to exchange traffic directly. It can be public (at an IXP like KIXP) or private (a direct link between two parties). Peering reduces costs by bypassing transit providers, and reduces latency by keeping traffic local. In Kenya, peering at KIXP means that a user accessing a local bank’s website or a streaming service with local caches doesn’t need to traverse international links. For data centres, being connected to an IXP is a major selling point, it means tenants can peer with dozens of networks from a single facility. Carrier-neutral data centres that host IXP presence points are particularly valuable.",
     category: "Connectivity",
     relatedTerms: ["Internet Exchange Point", "Carrier-Neutral", "Bandwidth"],
     relatedArticles: [
@@ -132,7 +132,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "CDN (Content Delivery Network)",
     short: "A geographically distributed network of servers that delivers web content to users from the nearest location, reducing load times.",
     definition:
-      "A Content Delivery Network (CDN) caches and serves web content — images, video, web pages, APIs — from servers located close to end users. Instead of every request travelling to an origin server (which might be in Europe or the US), the CDN serves a cached copy from a nearby ‘edge’ server. Major CDN providers like Cloudflare, Akamai, and Fastly have points of presence (PoPs) in Nairobi or nearby regions. For Kenyan users, CDNs are why Netflix streams smoothly, Google searches feel fast, and news sites load quickly. Data centres with CDN presence attract other tenants because CDN-connected facilities offer lower latency for popular internet services.",
+      "A Content Delivery Network (CDN) caches and serves web content (images, video, web pages, APIs) from servers located close to end users. Instead of every request travelling to an origin server (which might be in Europe or the US), the CDN serves a cached copy from a nearby ‘edge’ server. Major CDN providers like Cloudflare, Akamai, and Fastly have points of presence (PoPs) in Nairobi or nearby regions. For Kenyan users, CDNs are why Netflix streams smoothly, Google searches feel fast, and news sites load quickly. Data centres with CDN presence attract other tenants because CDN-connected facilities offer lower latency for popular internet services.",
     category: "Connectivity",
     relatedTerms: ["Edge Computing", "Latency", "Peering"],
     relatedArticles: [
@@ -144,7 +144,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "IT Load",
     short: "The amount of power consumed by the IT equipment (servers, storage, network) in a data centre, measured in kilowatts (kW) or megawatts (MW).",
     definition:
-      "IT load refers to the electrical power drawn by the actual computing equipment in a data centre — servers, storage arrays, switches, and routers. It excludes power used for cooling, lighting, and other facility overhead. IT load is the primary capacity metric for data centres: a facility rated at 2 MW IT load can support a specific number of server racks (typically 5–15 kW per rack). Kenyan data centres range from sub-1 MW facilities to iXAfrica’s planned 16 MW campus. IT load capacity determines how many tenants a facility can support and what types of workloads it can handle — AI/GPU computing requires significantly higher power per rack than standard enterprise servers.",
+      "IT load refers to the electrical power drawn by the actual computing equipment in a data centre, servers, storage arrays, switches, and routers. It excludes power used for cooling, lighting, and other facility overhead. IT load is the primary capacity metric for data centres: a facility rated at 2 MW IT load can support a specific number of server racks (typically 5–15 kW per rack). Kenyan data centres range from sub-1 MW facilities to iXAfrica’s planned 16 MW campus. IT load capacity determines how many tenants a facility can support and what types of workloads it can handle, AI/GPU computing requires significantly higher power per rack than standard enterprise servers.",
     category: "Infrastructure",
     relatedTerms: ["PUE", "Rack Unit", "Data Centre"],
     relatedArticles: [
@@ -192,7 +192,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Latency",
     short: "The time it takes for a data packet to travel from source to destination, measured in milliseconds (ms). Lower is better.",
     definition:
-      "Latency is the time delay between sending a request and receiving a response, measured in milliseconds. It’s influenced by the physical distance data travels, the number of network hops, and processing time at each hop. For context: a local network has sub-1ms latency, a Nairobi-to-Nairobi connection via KIXP is 1–5ms, Nairobi-to-Europe via submarine cable is 100–150ms, and satellite links (like Starlink) add 20–40ms. Low latency matters for real-time applications: video calls, online gaming, financial trading, and cloud computing. This is why having data centres in Nairobi matters — it means Kenyan users can access services with sub-10ms latency instead of 100ms+ if the nearest server were in Europe.",
+      "Latency is the time delay between sending a request and receiving a response, measured in milliseconds. It’s influenced by the physical distance data travels, the number of network hops, and processing time at each hop. For context: a local network has sub-1ms latency, a Nairobi-to-Nairobi connection via KIXP is 1–5ms, Nairobi-to-Europe via submarine cable is 100–150ms, and satellite links (like Starlink) add 20–40ms. Low latency matters for real-time applications: video calls, online gaming, financial trading, and cloud computing. This is why having data centres in Nairobi matters, it means Kenyan users can access services with sub-10ms latency instead of 100ms+ if the nearest server were in Europe.",
     category: "Connectivity",
     relatedTerms: ["Submarine Cable", "Internet Exchange Point", "CDN", "Edge Computing"],
     relatedArticles: [
@@ -216,7 +216,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "UPS (Uninterruptible Power Supply)",
     short: "A battery-based system that provides immediate backup power when the main grid fails, bridging the gap until generators start.",
     definition:
-      "A UPS is an electrical device that provides emergency power to IT equipment when the main power supply fails. It uses batteries to deliver power instantly (within milliseconds), preventing equipment shutdown during power transitions. UPS systems are the first line of defence in a data centre’s power chain: utility power → UPS → generator (if the outage persists). Modern data centres use modular UPS systems for scalability and N+1 redundancy. In Kenya, where grid reliability has improved but outages still occur, UPS systems are critical. They typically provide 10–15 minutes of runtime — enough for diesel generators to start and assume the load. Kenyan data centres like iXAfrica and Africa Data Centres maintain N+1 or 2N UPS configurations with battery monitoring and automatic transfer switches.",
+      "A UPS is an electrical device that provides emergency power to IT equipment when the main power supply fails. It uses batteries to deliver power instantly (within milliseconds), preventing equipment shutdown during power transitions. UPS systems are the first line of defence in a data centre’s power chain: utility power → UPS → generator (if the outage persists). Modern data centres use modular UPS systems for scalability and N+1 redundancy. In Kenya, where grid reliability has improved but outages still occur, UPS systems are critical. They typically provide 10–15 minutes of runtime, enough for diesel generators to start and assume the load. Kenyan data centres like iXAfrica and Africa Data Centres maintain N+1 or 2N UPS configurations with battery monitoring and automatic transfer switches.",
     category: "Infrastructure",
     relatedTerms: ["Redundancy", "IT Load"],
     relatedArticles: [

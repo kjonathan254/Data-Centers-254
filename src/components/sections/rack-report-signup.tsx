@@ -6,7 +6,7 @@ type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
   subscribed:
-    "You're on the list — Issue #001 lands Monday morning. Watch your inbox.",
+    "You're on the list, Issue #001 lands Monday morning. Watch your inbox.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -23,7 +23,7 @@ const ROLES = [
 
 /**
  * Signup form for the /rack-report landing page. Same pipeline as the
- * homepage band — POST /api/subscribe with a page-specific source tag.
+ * homepage band, POST /api/subscribe with a page-specific source tag.
  */
 export default function RackReportSignup() {
   const [state, setState] = useState<FormState>("idle");
@@ -35,7 +35,7 @@ export default function RackReportSignup() {
     const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
     const company = (form.elements.namedItem("companyType") as HTMLInputElement)
       ?.value;
-    // honeypot — real users never see or fill this
+    // honeypot, real users never see or fill this
     const honeypot = (form.elements.namedItem("website") as HTMLInputElement)
       ?.value;
     if (!email) return;
@@ -83,7 +83,7 @@ export default function RackReportSignup() {
             onSubmit={handleSubmit}
             className="flex flex-col items-stretch gap-2 text-left"
           >
-            {/* honeypot — visually hidden, ignored by humans */}
+            {/* honeypot, visually hidden, ignored by humans */}
             <input
               type="text"
               name="website"

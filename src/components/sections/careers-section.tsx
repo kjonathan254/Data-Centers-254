@@ -6,7 +6,7 @@ const roles = [
   {
     title: "Electrical engineer",
     reveal:
-      "Ensures megawatts of power from the grid — much of it geothermal from the Rift Valley — reach every server without a single flicker.",
+      "Ensures megawatts of power from the grid (much of it geothermal from the Rift Valley) reach every server without a single flicker.",
   },
   {
     title: "Network engineer",
@@ -16,12 +16,12 @@ const roles = [
   {
     title: "Cybersecurity analyst",
     reveal:
-      "Protects the servers that process Kenya's mobile money, banking transactions and government data — 24 hours a day.",
+      "Protects the servers that process Kenya's mobile money, banking transactions and government data, 24 hours a day.",
   },
 ];
 
 /**
- * Careers — the people behind the infrastructure. Photograph + role list.
+ * Careers, the people behind the infrastructure. Photograph + role list.
  * Server component.
  */
 export default function CareersSection() {
@@ -37,7 +37,7 @@ export default function CareersSection() {
             </h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
               A data centre needs engineers, technicians, analysts and
-              managers — all working in shifts, around the clock, in buildings
+              managers, all working in shifts, around the clock, in buildings
               most Kenyans will never enter.
             </p>
 
@@ -72,7 +72,7 @@ export default function CareersSection() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/tech-community-event-nairobi.webp"
-                  alt="A tech community session in Nairobi — real people building careers in Kenya's digital economy"
+                  alt="A tech community session in Nairobi, real people building careers in Kenya's digital economy"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"
                   className="object-cover"
@@ -80,7 +80,7 @@ export default function CareersSection() {
               </div>
             </div>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-              A tech community session in Nairobi — real people, real mentors,
+              A tech community session in Nairobi, real people, real mentors,
               real hiring conversations: the human layer of Kenya&apos;s digital
               economy.
             </p>

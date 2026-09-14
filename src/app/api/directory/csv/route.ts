@@ -2,7 +2,7 @@ import { getFacilities } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
 /**
- * Full directory as CSV — the "free, no signup wall" data export.
+ * Full directory as CSV, the "free, no signup wall" data export.
  * Prerendered at build time (force-static) so it stays in sync with
  * src/lib/directory-data.ts and costs nothing to serve.
  */

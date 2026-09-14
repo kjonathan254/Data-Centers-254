@@ -24,7 +24,7 @@ images:
     position: "hero"
   - src: "/images/technician-ups-battery-room.webp"
     alt:  "UPS battery strings and switchgear in a data centre power room"
-    caption: "Power and cooling are the two largest energy consumers — together they determine a facility's PUE, and the power half is won in rooms like this"
+    caption: "Power and cooling are the two largest energy consumers, together they determine a facility's PUE, and the power half is won in rooms like this"
     position: "section-break"
   - src: "/images/racks-cabling.webp"
     alt:  "Structured cabling connecting server racks"
@@ -65,14 +65,14 @@ faq:
   - question: "Is liquid cooling better than air cooling?"
     answer: "For high-density deployments (above 20 kW per rack), liquid cooling is significantly more efficient than air. Liquid transfers heat 1,000x more effectively than air, allowing denser computing. However, liquid cooling is more complex, expensive, and requires specialised equipment. Most Kenyan facilities still use air cooling."
   - question: "Can Kenya's climate help with cooling?"
-    answer: "Kenya's temperate climate in Nairobi (average 20-25°C) is favourable for free cooling — using outside air to cool the data centre without running compressors. This can significantly reduce cooling energy costs for parts of the year, especially at night and during cooler months."
+    answer: "Kenya's temperate climate in Nairobi (average 20-25°C) is favourable for free cooling, using outside air to cool the data centre without running compressors. This can significantly reduce cooling energy costs for parts of the year, especially at night and during cooler months."
 canonical_url: "https://data-centers-254.vercel.app/articles/data-centre-cooling-systems-explained"
 ---
 
 ![Data centre cooling systems](/images/dc-cooling.webp)
 *Precision air conditioning and cooling systems are the second-largest energy consumer in any data centre*
 
-Every server running inside a [what is a data centre](/articles/what-is-a-data-centre) is essentially a controlled heat source. Processors, memory modules, power supplies, and storage drives all convert electrical energy into thermal energy as a byproduct of computation. The fundamental challenge of data centre operations is removing that heat fast enough to keep hardware within safe operating ranges — typically 18–27°C as defined by [ASHRAE Data Centre Cooling Guidelines](https://www.ashrae.org/).
+Every server running inside a [what is a data centre](/articles/what-is-a-data-centre) is essentially a controlled heat source. Processors, memory modules, power supplies, and storage drives all convert electrical energy into thermal energy as a byproduct of computation. The fundamental challenge of data centre operations is removing that heat fast enough to keep hardware within safe operating ranges, typically 18–27°C as defined by [ASHRAE Data Centre Cooling Guidelines](https://www.ashrae.org/).
 
 Cooling is not optional infrastructure. It is the system that determines whether a facility can reliably operate at all. This article breaks down every major cooling technology used in data centres today, explains how each affects Power Usage Effectiveness, and examines what Kenyan operators are deploying given local climate conditions and grid realities.
 
@@ -80,10 +80,10 @@ Cooling is not optional infrastructure. It is the system that determines whether
 
 In a typical data centre, IT equipment accounts for roughly 50–60% of total electricity consumption. Cooling systems consume another 30–40%. The remaining 10–15% covers lighting, security, and ancillary systems. That makes cooling the single largest overhead category and the primary lever for improving operational efficiency.
 
-The relationship between cooling and overall efficiency is measured through PUE. A facility with a PUE of 2.0 spends exactly as much on cooling and other overhead as it does on actual computing. A facility with a PUE of 1.2 directs only 20% of its total power to non-IT loads — and the majority of that 20% is cooling. Every 0.1 improvement in PUE translates to meaningful cost savings at scale.
+The relationship between cooling and overall efficiency is measured through PUE. A facility with a PUE of 2.0 spends exactly as much on cooling and other overhead as it does on actual computing. A facility with a PUE of 1.2 directs only 20% of its total power to non-IT loads, and the majority of that 20% is cooling. Every 0.1 improvement in PUE translates to meaningful cost savings at scale.
 
 ![UPS battery strings and switchgear in a data centre power room](/images/technician-ups-battery-room.webp)
-*Power and cooling are the two largest energy consumers — together they determine a facility's PUE, and the power half is won in rooms like this*
+*Power and cooling are the two largest energy consumers, together they determine a facility's PUE, and the power half is won in rooms like this*
 
 Understanding the [Kenya power and data centres](/articles/kenya-power-infrastructure-data-centres) landscape is critical here. Kenya's electricity tariffs are among the highest in East Africa, so cooling inefficiency directly erodes the commercial viability of any colocation or hyperscale facility operating in Nairobi, Mombasa, or elsewhere in the country.
 
@@ -91,7 +91,7 @@ Understanding the [Kenya power and data centres](/articles/kenya-power-infrastru
 
 All data centre cooling systems perform the same basic function: absorb heat from IT equipment and reject it outside the facility. The differences lie in the medium used to transfer heat (air, water, or refrigerant), the mechanism driving the transfer (fans, pumps, compressors, or natural convection), and the level of precision in temperature and humidity control.
 
-The cooling chain typically works in stages. First, heat is captured at the server level — either by air flowing over heat sinks or by cold plates or immersion fluid in direct contact with components. That heat is then transported to a heat rejection system (chiller, cooling tower, or dry cooler) which transfers it to the external environment. Each stage in this chain introduces energy consumption and potential points of failure.
+The cooling chain typically works in stages. First, heat is captured at the server level, either by air flowing over heat sinks or by cold plates or immersion fluid in direct contact with components. That heat is then transported to a heat rejection system (chiller, cooling tower, or dry cooler) which transfers it to the external environment. Each stage in this chain introduces energy consumption and potential points of failure.
 
 ## The Six Major Cooling Types Compared
 
@@ -115,9 +115,9 @@ Computer Room Air Conditioning (CRAC) units and Computer Room Air Handler (CRAH)
 
 ![Illustrated overview of data centre rack components and airflow](/images/diagram-dc-rack-overview.webp)
 
-A CRAC unit contains its own refrigeration cycle — compressor, condenser, and evaporator — similar to a split-system air conditioner but with far tighter temperature and humidity control. It can operate independently, which makes it straightforward to deploy. However, the onboard compressor makes it less energy-efficient than alternatives that separate the cooling production from the air delivery.
+A CRAC unit contains its own refrigeration cycle (compressor, condenser, and evaporator) similar to a split-system air conditioner but with far tighter temperature and humidity control. It can operate independently, which makes it straightforward to deploy. However, the onboard compressor makes it less energy-efficient than alternatives that separate the cooling production from the air delivery.
 
-A CRAH unit, by contrast, does not have a compressor. It receives chilled water from a central chiller plant and uses a coil and fan to transfer that cooling to the data centre air. Because the chiller plant can be optimised separately — and because water transfers heat far more efficiently than refrigerant in small distributed units — CRAH-based systems generally achieve better PUE than CRAC-based systems in facilities above 500 kW of IT load.
+A CRAH unit, by contrast, does not have a compressor. It receives chilled water from a central chiller plant and uses a coil and fan to transfer that cooling to the data centre air. Because the chiller plant can be optimised separately (and because water transfers heat far more efficiently than refrigerant in small distributed units) CRAH-based systems generally achieve better PUE than CRAC-based systems in facilities above 500 kW of IT load.
 
 Most [data centre tier ratings](/articles/data-centre-tier-ratings-explained) at Tier II and above in East Africa use CRAH units fed by centralised chiller plants with N+1 or 2N redundancy. This provides the reliability and precision that enterprise and hyperscale customers demand.
 
@@ -136,7 +136,7 @@ The results are significant. Facilities that implement containment typically see
 
 Free cooling is not a single technology but a design philosophy: use the external environment as a heat sink whenever possible, and only run mechanical refrigeration when ambient conditions make it unavoidable. There are two main approaches.
 
-Air-side economisers draw outside air through filters and directly into the data centre white space when the outside temperature and humidity fall within acceptable ranges. This is the simplest and cheapest form of free cooling, but it requires robust filtration to prevent dust, pollen, and pollutants from entering the white space — a real concern in Nairobi and other urban African environments.
+Air-side economisers draw outside air through filters and directly into the data centre white space when the outside temperature and humidity fall within acceptable ranges. This is the simplest and cheapest form of free cooling, but it requires robust filtration to prevent dust, pollen, and pollutants from entering the white space, a real concern in Nairobi and other urban African environments.
 
 Water-side economisers use cooling towers or dry coolers to chill the water loop without engaging the chiller compressors. Because water is a much better heat transfer medium than air, water-side economisers can operate effectively at higher ambient temperatures than air-side systems. In Nairobi, where average temperatures range from 20–25°C and nighttime temperatures regularly drop below 18°C, water-side free cooling can displace mechanical cooling for a significant number of hours annually.
 
@@ -144,13 +144,13 @@ The [Schneider Electric Data Centre Efficiency](https://www.se.com/ww/en/work/pr
 
 ## Liquid Cooling: The Future of High-Density Computing
 
-As server power densities increase — driven by GPU-intensive AI workloads, high-performance computing, and converged infrastructure — air cooling is reaching its practical limits. Moving air is inherently inefficient because air has very low heat capacity compared to liquids. Water, for example, transfers heat roughly 1,000 times more effectively than air by volume.
+As server power densities increase (driven by GPU-intensive AI workloads, high-performance computing, and converged infrastructure) air cooling is reaching its practical limits. Moving air is inherently inefficient because air has very low heat capacity compared to liquids. Water, for example, transfers heat roughly 1,000 times more effectively than air by volume.
 
 Direct liquid cooling circulates chilled water through cold plates mounted directly on processors and other high-heat components. The water absorbs heat at the component level and carries it away to a heat rejection system. This approach can handle rack densities of 30–100 kW or more, far beyond what air cooling can manage without enormous airflow volumes.
 
-Immersion cooling takes this further by submerging entire server boards in a dielectric (non-conductive) fluid. The fluid absorbs heat from all components simultaneously and is then circulated through a heat exchanger. Immersion cooling achieves some of the lowest PUE values in the industry — often below 1.1 — because nearly all heat is captured directly with minimal thermal resistance.
+Immersion cooling takes this further by submerging entire server boards in a dielectric (non-conductive) fluid. The fluid absorbs heat from all components simultaneously and is then circulated through a heat exchanger. Immersion cooling achieves some of the lowest PUE values in the industry (often below 1.1) because nearly all heat is captured directly with minimal thermal resistance.
 
-While liquid cooling is still rare in Kenyan data centres today, the rapid growth of cloud computing, AI, and edge computing in East Africa is likely to drive adoption over the next five to ten years. Facilities that plan for liquid cooling infrastructure during initial construction — including floor load capacity, piping routes, and heat rejection systems — will be better positioned to serve high-density customers.
+While liquid cooling is still rare in Kenyan data centres today, the rapid growth of cloud computing, AI, and edge computing in East Africa is likely to drive adoption over the next five to ten years. Facilities that plan for liquid cooling infrastructure during initial construction (including floor load capacity, piping routes, and heat rejection systems) will be better positioned to serve high-density customers.
 
 ## Rear-Door Heat Exchangers: A Practical Middle Ground
 
@@ -168,7 +168,7 @@ In Nairobi, the main humidity challenge is seasonal variation. During the long r
 
 ## What Cooling Systems Are Used in Kenyan Data Centres?
 
-The data centre market in Kenya is anchored by facilities in Nairobi, with additional presence in Mombasa. The major operators — including Africa Data Centres, PAIX (now part of Liquid Intelligent Technologies), and several carrier-neutral colocation providers — predominantly use precision air cooling with CRAH units fed by centralised chiller plants.
+The data centre market in Kenya is anchored by facilities in Nairobi, with additional presence in Mombasa. The major operators, including Africa Data Centres, PAIX (now part of Liquid Intelligent Technologies), and several carrier-neutral colocation providers, predominantly use precision air cooling with CRAH units fed by centralised chiller plants.
 
 Most Tier III facilities in Nairobi deploy N+1 or 2N chiller configurations with water-side economiser capability. This gives them the redundancy required by their [data centre tier ratings](/articles/data-centre-tier-ratings-explained) while also allowing them to leverage Nairobi's favourable climate for free cooling during cooler periods. Raised floors with perforated tiles remain the standard air delivery method, supplemented by hot aisle containment in more recently built or upgraded halls.
 
@@ -180,7 +180,7 @@ Liquid cooling and immersion cooling are not yet mainstream in Kenyan facilities
 
 PUE remains the industry's primary metric for cooling efficiency, and understanding the relationship between cooling technology and PUE is essential for both operators and customers.
 
-A facility using only CRAC units with no containment and no free cooling will typically achieve a PUE of 1.8–2.0. Adding hot aisle containment might bring that down to 1.6–1.7. Upgrading to a CRAH system with water-side economisers and containment can achieve PUE values of 1.4–1.5. The most efficient facilities globally — using liquid cooling, free cooling, and advanced containment — operate at PUE values below 1.2.
+A facility using only CRAC units with no containment and no free cooling will typically achieve a PUE of 1.8–2.0. Adding hot aisle containment might bring that down to 1.6–1.7. Upgrading to a CRAH system with water-side economisers and containment can achieve PUE values of 1.4–1.5. The most efficient facilities globally (using liquid cooling, free cooling, and advanced containment) operate at PUE values below 1.2.
 
 ![Data centre cooling and power distribution equipment](/images/dc-cooling-crac-2.webp)
 *Cooling efficiency directly impacts a data centre's carbon footprint and operating costs*
@@ -191,9 +191,9 @@ For Kenyan operators, the economics are stark. At commercial electricity rates i
 
 Cooling technology in Kenyan data centres is evolving along three parallel tracks. First, existing air-cooled facilities are being optimised through better containment, elevated supply temperatures, and maximised free cooling hours. Second, new constructions are incorporating infrastructure that supports future liquid cooling deployment. Third, operators are investing in real-time monitoring and AI-driven cooling management systems that dynamically adjust cooling capacity to match actual IT load, eliminating the waste of overcooling.
 
-Nairobi's altitude (approximately 1,795 metres above sea level) and temperate climate are genuine competitive advantages for data centre operations. The thinner, cooler air at altitude improves both natural heat dissipation and cooling tower efficiency. Combined with Kenya's growing renewable energy portfolio — particularly geothermal and wind power — the country has the foundational conditions to develop some of the most operationally efficient data centres on the continent.
+Nairobi's altitude (approximately 1,795 metres above sea level) and temperate climate are genuine competitive advantages for data centre operations. The thinner, cooler air at altitude improves both natural heat dissipation and cooling tower efficiency. Combined with Kenya's growing renewable energy portfolio (particularly geothermal and wind power) the country has the foundational conditions to develop some of the most operationally efficient data centres on the continent.
 
-The operators that will lead this market are those that treat cooling not as a cost to be minimised but as a system to be engineered for maximum performance per watt. In a region where electricity is expensive and demand for digital infrastructure is growing rapidly, cooling efficiency is not just an operational concern — it is a strategic imperative.
+The operators that will lead this market are those that treat cooling not as a cost to be minimised but as a system to be engineered for maximum performance per watt. In a region where electricity is expensive and demand for digital infrastructure is growing rapidly, cooling efficiency is not just an operational concern, it is a strategic imperative.
 
 ---
 

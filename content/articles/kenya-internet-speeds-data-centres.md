@@ -24,7 +24,7 @@ images:
     position: hero
   - src: "/images/submarine-cables-map.webp"
     alt:  "Map of submarine cables landing on the East African coast"
-    caption: "Internet speed depends on every link in the chain — from the user's device to the cell tower or fibre connection, through backbone networks, to the data centre hosting the content"
+    caption: "Internet speed depends on every link in the chain, from the user's device to the cell tower or fibre connection, through backbone networks, to the data centre hosting the content"
     position: "section-break"
   - src: "/images/dc-fibre-optics.webp"
     alt:  "Fibre optic termination equipment in a data centre"
@@ -36,7 +36,7 @@ images:
     position: "inline"
   - src: "/images/diagram-satellite-connector-types.webp"
     alt:  "Chart of satellite and RF connector types"
-    caption: "Beyond fibre and microwave, satellite links keep remote Kenyan sites online — and every RF chain depends on choosing the right connector at each joint."
+    caption: "Beyond fibre and microwave, satellite links keep remote Kenyan sites online, and every RF chain depends on choosing the right connector at each joint."
     position: "diagram"
 
   - src: "/images/nairobi-street-fibre-trench.webp"
@@ -65,19 +65,19 @@ faq:
   - question: "How do Kenya's internet speeds compare globally?"
     answer: "Kenya ranks approximately 90-110th globally for mobile internet speed and 80-100th for fixed broadband. Within Africa, Kenya typically ranks 3rd-5th, behind Egypt, South Africa, and sometimes Morocco or Tunisia. While these rankings seem modest, they represent enormous progress from a decade ago when Kenya ranked much lower."
   - question: "Why does internet speed matter for data centres?"
-    answer: "Faster internet speeds increase demand for data centre services because they enable richer, more data-intensive applications — video streaming, cloud computing, real-time collaboration, AI applications. When users have faster connections, they consume more data, which requires more server capacity in data centres. Conversely, slow internet speeds constrain the types of applications that users can access, limiting data centre demand."
+    answer: "Faster internet speeds increase demand for data centre services because they enable richer, more data-intensive applications, video streaming, cloud computing, real-time collaboration, AI applications. When users have faster connections, they consume more data, which requires more server capacity in data centres. Conversely, slow internet speeds constrain the types of applications that users can access, limiting data centre demand."
   - question: "What is the difference between speed and latency?"
-    answer: "Speed (bandwidth) is how much data can be transferred per second — like the width of a pipe. Latency is how long it takes for a single piece of data to travel from one point to another — like the length of the pipe. You can have high speed (a wide pipe) but high latency (a long pipe). Data centres care about both: speed determines how much data they can serve, and latency determines how responsive applications feel to users."
+    answer: "Speed (bandwidth) is how much data can be transferred per second, like the width of a pipe. Latency is how long it takes for a single piece of data to travel from one point to another, like the length of the pipe. You can have high speed (a wide pipe) but high latency (a long pipe). Data centres care about both: speed determines how much data they can serve, and latency determines how responsive applications feel to users."
   - question: "What is 5G and how does it affect data centres?"
     answer: "5G is the fifth generation of mobile network technology, offering speeds of 100-1000 Mbps, latency under 10 milliseconds, and the ability to connect many more devices per cell tower than 4G. Safaricom has launched 5G in parts of Nairobi and other towns. 5G increases demand for data centre services by enabling data-intensive applications (HD video, AR/VR, IoT) and requires edge computing infrastructure at cell tower sites, creating new demand for distributed data processing."
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-internet-speeds-data-centres"
 ---
 
-When you open a banking app on your phone and your account balance loads instantly, when a YouTube video starts playing within seconds, or when a video call connects in high definition — you are experiencing the result of internet speed. The speed at which data travels between your device, the network, and the data centre where the service is hosted determines the quality of your digital experience. For Kenya's data centre industry, internet speeds are both an enabler and a measure of the country's digital maturity.
+When you open a banking app on your phone and your account balance loads instantly, when a YouTube video starts playing within seconds, or when a video call connects in high definition, you are experiencing the result of internet speed. The speed at which data travels between your device, the network, and the data centre where the service is hosted determines the quality of your digital experience. For Kenya's data centre industry, internet speeds are both an enabler and a measure of the country's digital maturity.
 
 ![Diagram of subsea cable architecture from landing station to POP](/images/submarine-cable-diagram.webp)
 
-Internet speed in Kenya has improved dramatically over the past decade, driven by submarine cable landings, fibre network expansion, mobile network upgrades, and the growth of local data centre capacity that keeps content and services close to users. But speed is not uniform — it varies by location, by technology, and by time of day. Understanding these variations, and what they mean for data centre demand and strategy, is important for anyone involved in Kenya's digital infrastructure.
+Internet speed in Kenya has improved dramatically over the past decade, driven by submarine cable landings, fibre network expansion, mobile network upgrades, and the growth of local data centre capacity that keeps content and services close to users. But speed is not uniform, it varies by location, by technology, and by time of day. Understanding these variations, and what they mean for data centre demand and strategy, is important for anyone involved in Kenya's digital infrastructure.
 
 ## Kenya's Internet Speed in Context
 
@@ -127,21 +127,21 @@ The server itself contributes to the speed equation. A slow or overloaded server
 
 ### The Bandwidth Demand Cycle
 
-Faster internet speeds create a virtuous cycle for data centre demand. When users get faster connections, they consume more data — they stream higher-quality video, use more cloud applications, upload and download larger files, and spend more time online. This increased consumption requires more server capacity in data centres to handle the traffic.
+Faster internet speeds create a virtuous cycle for data centre demand. When users get faster connections, they consume more data, they stream higher-quality video, use more cloud applications, upload and download larger files, and spend more time online. This increased consumption requires more server capacity in data centres to handle the traffic.
 
 The evidence is clear globally: as internet speeds increase, data traffic grows exponentially. In Kenya, mobile data consumption has grown from approximately 1 exabyte (1 billion gigabytes) per year in 2018 to over 10 exabytes in 2025. This growth is driven by both the increasing number of internet users (from 40 million to 55 million) and the increasing speed of connections (which enables more data-intensive usage).
 
 ### Content Localisation
 
-When internet speeds are high enough to support data-intensive applications like video streaming, the location of the server matters more, not less. A user streaming a 4K video on a fast fibre connection consumes 25-50 Mbps — and if the video server is in South Africa or Europe, every second of video requires a round trip of 100-400ms across submarine cables, adding to buffering and startup time.
+When internet speeds are high enough to support data-intensive applications like video streaming, the location of the server matters more, not less. A user streaming a 4K video on a fast fibre connection consumes 25-50 Mbps, and if the video server is in South Africa or Europe, every second of video requires a round trip of 100-400ms across submarine cables, adding to buffering and startup time.
 
-This creates demand for content localisation — placing content servers in Kenyan data centres so that popular content is served locally rather than fetched from overseas every time. Content delivery networks (CDNs) like Cloudflare, Akamai, and Google have established caching nodes in Kenya for precisely this reason, and their presence in Kenyan data centres is a direct result of increasing internet speeds.
+This creates demand for content localisation, placing content servers in Kenyan data centres so that popular content is served locally rather than fetched from overseas every time. Content delivery networks (CDNs) like Cloudflare, Akamai, and Google have established caching nodes in Kenya for precisely this reason, and their presence in Kenyan data centres is a direct result of increasing internet speeds.
 
 ### Cloud and SaaS Adoption
 
 ![Cargo ship at the Port of Mombasa](/images/mombasa-cargo-ship.webp)
 
-Cloud computing and Software-as-a-Service applications require reliable, reasonably fast internet connections. As Kenya's internet speeds have improved, cloud and SaaS adoption has accelerated — more organisations are moving their applications to the cloud, which requires server capacity in data centres (whether local or overseas). The [cloud services comparison guide](/articles/cloud-services-kenya-compared) covers the providers serving Kenya.
+Cloud computing and Software-as-a-Service applications require reliable, reasonably fast internet connections. As Kenya's internet speeds have improved, cloud and SaaS adoption has accelerated, more organisations are moving their applications to the cloud, which requires server capacity in data centres (whether local or overseas). The [cloud services comparison guide](/articles/cloud-services-kenya-compared) covers the providers serving Kenya.
 
 ## The Urban-Rural Speed Divide
 
@@ -149,18 +149,18 @@ Cloud computing and Software-as-a-Service applications require reliable, reasona
 
 One of Kenya's most significant digital infrastructure challenges is the gap between internet speeds in urban and rural areas. In Nairobi's wealthy neighbourhoods, fibre connections deliver 100-500 Mbps. In rural areas of North Eastern or parts of the Rift Valley, mobile connectivity may be limited to 3G with speeds of 2-5 Mbps, or may be unavailable entirely.
 
-This divide affects data centre demand unevenly. Urban users, with fast connections, generate the most data centre demand — they use cloud applications, stream video, and consume data-intensive services. Rural users, with slower connections, generate less demand per user but represent a large and growing market as mobile coverage expands.
+This divide affects data centre demand unevenly. Urban users, with fast connections, generate the most data centre demand, they use cloud applications, stream video, and consume data-intensive services. Rural users, with slower connections, generate less demand per user but represent a large and growing market as mobile coverage expands.
 
-For data centre operators, the urban-rural divide reinforces the concentration of demand in Nairobi. As internet speeds in rural areas improve (through 4G expansion, satellite internet like Starlink, and government connectivity programmes), demand for data centre services from rural-connected users will grow — but this demand will be served by the same Nairobi-based facilities, because the economics of building data centres in rural areas do not work at current demand levels.
+For data centre operators, the urban-rural divide reinforces the concentration of demand in Nairobi. As internet speeds in rural areas improve (through 4G expansion, satellite internet like Starlink, and government connectivity programmes), demand for data centre services from rural-connected users will grow, but this demand will be served by the same Nairobi-based facilities, because the economics of building data centres in rural areas do not work at current demand levels.
 
 ## 5G: The Next Speed Frontier
 
 Safaricom's 5G deployment, while still in its early stages, represents the next step in Kenya's internet speed evolution. 5G's promised speeds of 100-1000 Mbps, combined with sub-10ms latency and the ability to connect far more devices per cell tower, will enable new categories of data-intensive applications that drive data centre demand.
 
-These applications include augmented and virtual reality (which require both high speed and low latency), connected vehicles, remote healthcare (telemedicine, remote surgery), smart city infrastructure, and massive IoT deployments. Each of these applications generates data that must be processed somewhere — and increasingly, that somewhere will include edge computing facilities in Kenyan data centres.
+These applications include augmented and virtual reality (which require both high speed and low latency), connected vehicles, remote healthcare (telemedicine, remote surgery), smart city infrastructure, and massive IoT deployments. Each of these applications generates data that must be processed somewhere, and increasingly, that somewhere will include edge computing facilities in Kenyan data centres.
 
 ## The Outlook
 
 Kenya's internet speeds will continue to improve. 4G coverage is expanding, 5G is rolling out, fibre-to-the-home deployments are extending beyond Nairobi, and satellite internet services (Starlink) are providing high-speed options for previously unserved areas. Each speed improvement drives data consumption growth, which drives data centre demand. The data centres being built today are preparing for the traffic that tomorrow's faster connections will generate.
 
-For Kenya's data centre industry, the message is straightforward: faster internet speeds are the fuel that powers demand. Every improvement in speed — whether from 4G expansion, 5G rollout, fibre deployment, or submarine cable upgrades — translates directly into more traffic that needs to be processed, stored, and served from data centres. The relationship between internet speed and data centre demand is not just correlated — it is causal.
+For Kenya's data centre industry, the message is straightforward: faster internet speeds are the fuel that powers demand. Every improvement in speed (whether from 4G expansion, 5G rollout, fibre deployment, or submarine cable upgrades) translates directly into more traffic that needs to be processed, stored, and served from data centres. The relationship between internet speed and data centre demand is not just correlated, it is causal.

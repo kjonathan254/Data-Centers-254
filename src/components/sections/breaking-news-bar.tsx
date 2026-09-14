@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { getActiveBreakingNews } from "@/lib/breaking";
 
 /**
- * Breaking news strip — one line, one link, sits directly under the hero.
+ * Breaking news strip, one line, one link, sits directly under the hero.
  * Content is rotated via src/lib/breaking.ts (single source of truth).
  * Renders nothing when there is no active story (null, or expired past
  * the 72-hour window). Server component.

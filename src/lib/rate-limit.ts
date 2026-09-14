@@ -1,12 +1,12 @@
 /**
- * Shared rate limiter — audit remediation #9 (persistent rate limiting).
+ * Shared rate limiter, audit remediation #9 (persistent rate limiting).
  *
  * Two modes, selected automatically:
  *
  *  - PERSISTENT: when UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN are
  *    configured, counters live in Upstash Redis (fixed window via INCR +
  *    PEXPIRE over the REST API). Limits then hold across cold starts and are
- *    global across all serverless instances — one abuser can no longer
+ *    global across all serverless instances, one abuser can no longer
  *    multiply the limits by triggering parallel lambdas. Plain fetch only,
  *    so the module works in both the Node runtime and the Edge/proxy runtime.
  *

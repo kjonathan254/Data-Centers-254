@@ -5,7 +5,7 @@ import { useState } from "react";
 type FormState = "idle" | "submitting" | "done" | "already" | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  done: "Noted — you'll be first to know when the Q4 2026 snapshot lands.",
+  done: "Noted, you'll be first to know when the Q4 2026 snapshot lands.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -51,7 +51,7 @@ export default function ExportInterestForm() {
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
         Checkout is being wired up. Leave your email and we&apos;ll send the
-        buy link the day it lands — or request an invoice now if procurement
+        buy link the day it lands, or request an invoice now if procurement
         needs one.
       </p>
 

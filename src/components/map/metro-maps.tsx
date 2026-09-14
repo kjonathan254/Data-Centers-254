@@ -88,11 +88,11 @@ function NairobiMapInner({ dimmed, onFacility }: {
       <path d={corridor} fill="none" stroke="oklch(0.93 0.01 260 / 0.3)" strokeWidth={1.4} strokeDasharray="6 5" />
       <text x={nboP(-1.34, 36.868).x + 10} y={nboP(-1.34, 36.868).y + 4} fontSize={13} fontStyle="italic" fill="oklch(0.93 0.01 260 / 0.45)">Mombasa Rd (A8)</text>
 
-      {/* callout rows — tighten spacing to fit the full list */}
+      {/* callout rows, tighten spacing to fit the full list */}
       {left.map((f, i) => <Row key={f.id} f={f} x={LEFT_X} y={rowY(i, 96)} side="l" />)}
       {right.map((f, i) => <Row key={f.id} f={f} x={RIGHT_X} y={rowY(i, 108)} side="r" />)}
 
-      {/* KIXP — Nairobi IXP */}
+      {/* KIXP, Nairobi IXP */}
       <g>
         {(() => {
           const k = nboP(-1.283, 36.8245);
@@ -195,7 +195,7 @@ function MombasaMapInner({ dimmed, onFacility }: {
         <text x={ls.x - 16} y={ls.y + 3} textAnchor="end" fontSize={12} fill="oklch(0.93 0.01 260 / 0.55)">Nyali · Mombasa</text>
       </g>
 
-      {/* facility rows — every Mombasa facility on the register */}
+      {/* facility rows, every Mombasa facility on the register */}
       {facilities.map((f, i) => {
         const { x: mx, y: my } = msaP(f.lat, f.lng);
         const active = hover === f.id;

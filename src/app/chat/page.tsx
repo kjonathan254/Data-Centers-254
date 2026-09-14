@@ -9,28 +9,28 @@ import JibuChat from "@/components/chat/jibu-chat";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 
 /**
- * Jibu's home — the full-page chat experience. The floating widget is the
+ * Jibu's home, the full-page chat experience. The floating widget is the
  * everywhere-entry; this page is the destination for "meet the bot", with
  * capability cards that double as one-tap questions.
  */
 
 export const metadata: Metadata = {
   title: `Ask ${BOT_IDENTITY.name}: Kenya's Data Centre Answer Engine`,
-  description: `${BOT_IDENTITY.name} answers questions about Kenya's data centre market from DC254's verified dataset — capacity, operators, comparisons, submarine cables, AI readiness and green power. Every figure sourced and dated.`,
+  description: `${BOT_IDENTITY.name} answers questions about Kenya's data centre market from DC254's verified dataset, capacity, operators, comparisons, submarine cables, AI readiness and green power. Every figure sourced and dated.`,
   alternates: { canonical: "/chat" },
   openGraph: {
-    title: `Ask ${BOT_IDENTITY.name} — the DC254 answer engine`,
+    title: `Ask ${BOT_IDENTITY.name}: the DC254 answer engine`,
     description:
-      "Ask anything about Kenya's data centre market and get answers from the verified dataset — sources attached.",
+      "Ask anything about Kenya's data centre market and get answers from the verified dataset, sources attached.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${BOT_IDENTITY.name} — the DC254 answer engine` }],
+    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${BOT_IDENTITY.name}, the DC254 answer engine` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `Ask ${BOT_IDENTITY.name} — the DC254 answer engine`,
-    description: "Answers from the verified DC254 dataset — sources attached.",
+    title: `Ask ${BOT_IDENTITY.name}: the DC254 answer engine`,
+    description: "Answers from the verified DC254 dataset, sources attached.",
     images: ["/images/africa-dc-map.webp"],
   },
 };
@@ -58,7 +58,7 @@ export default function ChatPage() {
                 Kenya&apos;s data centre market, on call.
               </h1>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {BOT_IDENTITY.name} — {BOT_IDENTITY.meaning.toLowerCase()[0].toUpperCase() + BOT_IDENTITY.meaning.slice(1).toLowerCase()} —
+                {BOT_IDENTITY.name}: {BOT_IDENTITY.meaning.toLowerCase()[0].toUpperCase() + BOT_IDENTITY.meaning.slice(1).toLowerCase()},
                 answers from the same verified dataset this site publishes, not
                 from model memory. Every figure arrives with its source and its
                 verification date; when something isn&apos;t tracked, the bot says
@@ -71,7 +71,7 @@ export default function ChatPage() {
                   <strong className="text-foreground">The house rule:</strong> if a
                   number can&apos;t be verified, {BOT_IDENTITY.name} won&apos;t say it. That
                   is the same standard every directory row and article on DC254 is
-                  held to — see{" "}
+                  held to, see{" "}
                   <Link href="/methodology" className="text-cyan underline underline-offset-2 hover:text-foreground">
                     the methodology
                   </Link>
@@ -108,8 +108,8 @@ export default function ChatPage() {
                 <JibuChat variant="page" />
               </div>
               <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground/60">
-                {BOT_IDENTITY.name} is grounded in DC254&apos;s published corpus —
-                articles, directory and glossary — and links its sources on every
+                {BOT_IDENTITY.name} is grounded in DC254&apos;s published corpus:
+                articles, directory and glossary, and links its sources on every
                 answer. Voice playback uses your device&apos;s built-in speech engine;
                 no audio leaves your browser.
               </p>

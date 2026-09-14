@@ -37,7 +37,7 @@ export default function BrandLogo({
     <button
       onClick={handleClick}
       className={`relative flex items-center shrink-0 group ${className}`}
-      aria-label="Data Centre 254 — Home"
+      aria-label="Data Centre 254: Home"
     >
       <div className="relative">
         <Image
@@ -49,7 +49,7 @@ export default function BrandLogo({
           className="object-contain transition-all duration-300"
           sizes={`${width}px`}
         />
-        {/* Subtle glow on hover — matches the original Server icon effect */}
+        {/* Subtle glow on hover, matches the original Server icon effect */}
         <div className="absolute inset-0 bg-cyan/20 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       </div>
     </button>

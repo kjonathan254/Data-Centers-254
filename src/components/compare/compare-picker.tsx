@@ -7,7 +7,7 @@ import { MAX_COMPARE, type CompareCandidate } from "@/lib/compare";
 
 /**
  * Facility picker for the comparison page. Selection lives entirely in the
- * URL (?ids=slug,slug) — every add/remove does a router.replace so the server
+ * URL (?ids=slug,slug), every add/remove does a router.replace so the server
  * re-renders the table and the link in the address bar stays shareable.
  */
 
@@ -93,7 +93,7 @@ export default function ComparePicker({
           Comparing {selected.length} of {MAX_COMPARE} facilities
         </p>
         <p className="text-xs text-muted-foreground/70">
-          Pick up to {MAX_COMPARE} — the table below updates and the link stays shareable.
+          Pick up to {MAX_COMPARE}, the table below updates and the link stays shareable.
         </p>
       </div>
 
@@ -129,7 +129,7 @@ export default function ComparePicker({
             role="combobox"
             aria-expanded={open}
             aria-label="Add a facility to compare"
-            placeholder={full ? `Maximum of ${MAX_COMPARE} facilities` : "Add a facility — search by name, operator or city…"}
+            placeholder={full ? `Maximum of ${MAX_COMPARE} facilities` : "Add a facility, search by name, operator or city…"}
             value={query}
             disabled={full}
             onChange={(e) => {
