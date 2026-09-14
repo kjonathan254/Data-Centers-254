@@ -15,13 +15,17 @@ published_date: "2026-09-14"
 updated_date: "2026-09-14"
 cluster: "Kenya"
 category: "Market Analysis"
-og_image: "/images/highrise-construction-cranes-kenya.webp"
+og_image: "/images/amcham-2026-summit-speaker-stage.webp"
 reading_time: "7 min"
 images:
-  - src: "/images/highrise-construction-cranes-kenya.webp"
-    alt: "Construction cranes over high-rise developments in Nairobi"
-    caption: "Pledges become skylines slowly. The AmCham 2026 announcements are a demand signal for Kenya's construction and power sectors as much as its data centre market"
+  - src: "/images/amcham-2026-summit-speaker-stage.webp"
+    alt: "Speaker on stage at the AmCham Business Summit 2026 in Nairobi"
+    caption: "On stage at the AmCham Business Summit 2026 in Nairobi, where US companies pledged over $600 million (about Sh77.5 billion) in a single day, per The Star. Pledges start on stages like this one; the directory tracks which ones become megawatts"
     position: "hero"
+  - src: "/images/amcham-2026-quote-angela-nganga.webp"
+    alt: "AmCham Kenya quote card citing board president Angela Ng'ang'a on summit investments"
+    caption: "AmCham Kenya's live summit graphic quotes board president Angela Ng'ang'a: 'At our last summit, investments exceeded $2 billion', spanning the digital economy, energy, infrastructure, manufacturing and more. The 2026 one-day figure of $600 million is measured against that running total, per The Star"
+    position: "inline"
   - src: "/images/nbo2-launch-ribbon-cutting.webp"
     alt: "Officials cutting the ribbon at the NBO2 data centre launch in Nairobi"
     caption: "iColo (now Digital Realty) has form converting Nairobi announcements into buildings: NBO2, formally launched on 7 September 2026, is the campus the new $80M pledge extends"
@@ -57,6 +61,8 @@ For the general reader, the summit story is about manufacturing and trade. For t
 
 The $600 million figure needs its denominator. Kenya announced $2.9 billion across 20 deals earlier this year at the Kenya International Investment Conference, and previous AmCham summits have generated more than $2 billion in tracked commitments over their runs, per The Star. One day of $600 million is therefore a strong showing rather than a national record, and its composition matters more than its size: pledges spread across manufacturing (Coca-Cola's fresh $175 million; Mars Wrigley's $103 million production line), healthcare (SC Johnson's planned factory for up to two million malaria-related units daily; Pfizer's 15 new products), technology and data centres.
 
+![AmCham Kenya quote card citing board president Angela Ng'ang'a on summit investments](/images/amcham-2026-quote-angela-nganga.webp)
+
 The macro backdrop is friendlier than it has been in years. Kenya-US trade in goods and services reached $3.4 billion (Sh439.3 billion) in 2025 with the balance of trade near equilibrium, Trade and Investment Cabinet Secretary Lee Kinyanjui told the summit, and AGOA's duty-free access has been extended to 31 December 2028, which removes the deadline anxiety that has hung over Kenyan exporters. President William Ruto's framing to investors was blunt in the right way: "Capital goes where there is opportunity, but it stays where there is confidence."
 
 ## Oracle's First African Cloud Region
@@ -70,6 +76,8 @@ The verification status is honest and simple: this comes from summit coverage, a
 ## iColo's $80 Million Pledge
 
 The second announcement extends a story our readers already know. The Star reported that iColo, now operated under parent company Digital Realty, announced an $80 million data centre project in Nairobi at the summit. Three days before that report, on 7 September 2026, Digital Realty formally launched NBO2, the second facility of the iColo campus in Karen, inside a master plan of three data centres and a captive substation consuming over 20 MW at full build.
+
+![Officials cutting the ribbon at the NBO2 data centre launch in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
 
 Read together, the sequence is coherent: the campus that just commissioned its second building is advertising its third act. But the discipline matters as much as the momentum. The $80 million is a project-level pledge quoted in summit coverage, not a published building-level cost, and it has not yet been tied by Digital Realty to a specific building, groundbreak or timeline. Our NBO2 analysis already treats campus master plans as intent rather than inventory; this pledge joins that category until a shovel moves.
 

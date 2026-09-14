@@ -22,6 +22,14 @@ images:
     alt: "GPU server racks installed inside a data hall"
     caption: "The dependency behind every leapfrog claim: GPU-capable racks, in powered halls, on a stable grid. Africa holds roughly 1% of the world's data centres against about 15% of its population"
     position: "hero"
+  - src: "/images/aws-logo-conference-venue.webp"
+    alt: "AWS logo on the wall of a conference venue"
+    caption: "AWS branding at a company conference venue. The numbers behind the logo: $1.5 billion committed to African infrastructure through 2029, on top of more than $819 million invested since 2018, per remarks at the AWS Summit in Johannesburg reported by iAfrica"
+    position: "inline"
+  - src: "/images/aws-server-rack-logistics-workers.webp"
+    alt: "Logistics workers move a server rack through a fulfilment facility"
+    caption: "Server hardware moves through an Amazon logistics facility. Leapfrogs do not skip infrastructure: every committed dollar eventually converts into physical racks, shipped, powered and cooled somewhere, and the compute gap is measured in how few of those racks sit in Africa"
+    position: "inline"
   - src: "/images/diagram-power-chain-grid-to-gpu.webp"
     alt: "Labelled diagram of the power chain from grid to GPU rack"
     caption: "A labelled view of the power chain from grid connection to GPU rack. Every stage of this chain is where Africa's compute gap actually lives, and where each announced dollar must eventually land"
@@ -53,6 +61,8 @@ Amazon Web Services has committed a further $1.5 billion to African infrastructu
 
 That argument deserves the attention of anyone tracking African data centre capacity, because it is the same argument Kenyan policymakers use. This article walks through what AWS committed, why the leapfrog analogy that frames these commitments is appealing and incomplete, and what the numbers imply for a market like Kenya.
 
+![AWS logo on the wall of a conference venue](/images/aws-logo-conference-venue.webp)
+
 ## What AWS Actually Committed
 
 The headline is the $1.5 billion through 2029. The useful details sit around it. The Cape Town cloud region now carries 154 services, which Ball used to argue that African developers are no longer working with a stripped-down regional feature set. Her framing of strategy was about direction of trade: enabling local developers to build for regional markets rather than consuming technology developed elsewhere.
@@ -67,6 +77,8 @@ iAfrica's critique of that analogy is the best part of the report, and it is ana
 
 Read those two numbers against the commitments and the gap quantifies itself. AWS's $1.5 billion and Microsoft's $1.4 billion equivalent together cover a fraction of the McKinsey range. The leapfrog story is therefore not wrong; it is a description of where the demand is heading, funded so far at a tenth of the level its own analogy requires. Leapfrogs do not skip infrastructure. They skip incumbent business models by building the infrastructure early. That is what M-Pesa rode, and it is what any African AI story must eventually stand on: powered halls with racks in them.
 
+![Logistics workers move a server rack through a fulfilment facility](/images/aws-server-rack-logistics-workers.webp)
+
 ## Why the Cloud Region Detail Matters for East Africa
 
 There is a geographic asymmetry inside the numbers that matters for Kenya. The region Ball cites is Cape Town; the $1.4 billion Microsoft figure is South African. Southern Africa is where hyperscaler capital has concentrated, because it has the grid, the fibre and the enterprise base today. East Africa's share of that investment wave is so far measured in partnerships and positioning rather than regions: Kenya's pitch leans on iXAfrica's hyperscale AI-ready campus, Digital Realty's freshly launched NBO2, and a power story (geothermal-backed, low-carbon, competitively priced) that is genuinely differentiated on the input costs that matter for compute.
@@ -76,5 +88,7 @@ The implication is not that Kenya loses the wave. It is that Kenya wins it by ma
 ## How to Track Commitments Like These
 
 The verification habit this site applies to every hyperscaler announcement applies here. Commitments are dated intentions; capacity is commissioned MW. The numbers to watch from this announcement are none of the headline figures: they are the eventual facility list (which halls, which countries), the MW those halls draw, and the service count trajectory of any East African region if one is announced. Against the McKinsey 2.2 GW target for 2030, four years is short, and power projects move at the speed of transmission lines. That arithmetic, not enthusiasm, is what will decide whether 2029 reads as the start of Africa's compute decade or the preamble to it.
+
+![Labelled diagram of the power chain from grid to GPU rack](/images/diagram-power-chain-grid-to-gpu.webp)
 
 Sources: iAfrica.com, "AWS Commits $1.5bn to Africa Through 2029 and Makes the Leapfrog Case. The Analogy Has a Gap" (12 September 2026), reporting remarks by Jyoti Ball (AWS general manager, sub-Saharan Africa) at the AWS Summit in Johannesburg; AWS investment and training figures, Cape Town service count, Microsoft R20.5 billion / R5.5 billion spend, and McKinsey 0.4 to 2.2 GW / $10-20 billion projections as reported therein. Kenya facility figures from the DC254 directory (September 2026 verification).

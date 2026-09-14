@@ -57,6 +57,8 @@ The report matters for Kenya for a simple reason: the country is on the shortlis
 
 The argument from the US side has three parts. First, demand is real: governments, banks and large companies across Africa increasingly want local cloud and AI services, and they want sensitive data stored inside their own borders, which regulators and procurement rules are starting to require anyway. Second, supply is constrained elsewhere: as Goyal put it, "many mature markets face increasing environmental and power constraints," while Africa's gaps in infrastructure present "an opportunity rather than a disadvantage." Third, the US government is actively promoting American vendors: a State Department spokesperson described the goal of keeping American AI the "gold standard" and the US the "partner of choice" for governments upgrading telecoms networks and AI capabilities, and pointed to new undersea cable construction across the Atlantic as evidence that connectivity is improving faster than compute.
 
+![Map of submarine cable systems touching African shores](/images/submarine-cables-map.webp)
+
 That third part is the genuinely new element. African data centre demand has been discussed for a decade as a commercial story. What the Fox report captures is its emergence as an arena of state-backed competition, with US embassies brokering deals that explicitly displace rival bids. The State Department framing ("partner of choice") and the competition references in the deal flow below are not our words; they are the words of the people doing the deals.
 
 ## The Deals Behind the Headlines
