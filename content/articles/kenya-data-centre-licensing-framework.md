@@ -1,7 +1,7 @@
 ---
 title: "Kenya Data Centre Licensing: NFP-T1 and NFP-T2 Explained"
 slug: "kenya-data-centre-licensing-framework"
-meta_description: "Kenya now requires data centre operators to hold an NFP-T2 licence (KES 15M, 15-year term). Here is what the CA's new framework means for operators, investors, and engineers."
+meta_description: "Kenya now requires data centre operators to hold an NFP-T2 licence (KES 15M, 15-year term). What the CA framework means for operators and investors."
 primary_keyword: "Kenya data centre licensing"
 secondary_keywords:
   - "NFP-T2 licence Kenya"

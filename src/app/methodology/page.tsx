@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Methodology: How DC254 Verifies Its Data",
   description:
-    "The DC254 verification methodology: how facility data is sourced and verified, our update cadence, data confidence levels, and the corrections policy behind Kenya's data centre directory.",
+    "The DC254 verification methodology: how facility data is sourced and verified, update cadence, confidence levels, and the corrections policy.",
   alternates: { canonical: "/methodology" },
 };
 

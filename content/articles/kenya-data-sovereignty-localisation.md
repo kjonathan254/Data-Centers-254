@@ -1,9 +1,7 @@
 ---
 title: Kenya Data Sovereignty and Data Localisation Requirements
 slug: kenya-data-sovereignty-localisation
-meta_description: Understand Kenya's data sovereignty and data localisation rules
-  under the Data Protection Act 2019, cross-border transfer requirements, sector-specific
-  obligations, and how they drive data centre demand.
+meta_description: "Kenya's data sovereignty rules under the Data Protection Act 2019: cross-border transfer limits, sector obligations, and data centre demand."
 primary_keyword: Kenya data sovereignty
 secondary_keywords:
 - data localisation Kenya

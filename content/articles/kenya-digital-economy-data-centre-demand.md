@@ -1,9 +1,7 @@
 ---
 title: Kenya Digital Economy and Data Centre Demand Drivers
 slug: kenya-digital-economy-data-centre-demand
-meta_description: A comprehensive analysis of the macroeconomic forces driving data
-  centre demand in Kenya, from M-Pesa and fintech to 5G, e-commerce, and government
-  digitisation.
+meta_description: "The macroeconomic forces driving data centre demand in Kenya, from M-Pesa and fintech to 5G, e-commerce, and government digitisation."
 primary_keyword: Kenya digital economy data centre demand
 secondary_keywords:
 - data centre demand Kenya

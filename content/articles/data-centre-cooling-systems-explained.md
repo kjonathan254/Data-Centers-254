@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Cooling Systems: How Servers Stay Cool in Kenya"
 slug: "data-centre-cooling-systems-explained"
-meta_description: "Cooling accounts for up to 40% of a data centre's total energy use. From CRAC units to liquid cooling, here is how data centres in Kenya keep servers at optimal temperature."
+meta_description: "Cooling can eat up to 40% of a data centre's energy. From CRAC units to liquid cooling, how Kenyan facilities keep servers at optimal temperature."
 primary_keyword: "data centre cooling systems"
 secondary_keywords:
   - "data centre cooling Kenya"

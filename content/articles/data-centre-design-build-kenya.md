@@ -1,10 +1,7 @@
 ---
 title: "Data Centre Design and Build in Kenya: A Guide"
 slug: data-centre-design-build-kenya
-meta_description: Learn the full data centre design and build process in Kenya, from
-  site selection and feasibility studies to MEP design, construction, commissioning
-  and handover, covering Kenya Power grid connection, NEMA EIA requirements, KEBS
-  standards and Nairobi County building approvals.
+meta_description: "The full data centre design and build process in Kenya: site selection, feasibility, MEP design, commissioning, Kenya Power connection, and NEMA EIA."
 primary_keyword: data centre design and build Kenya
 secondary_keywords:
 - data centre construction Kenya

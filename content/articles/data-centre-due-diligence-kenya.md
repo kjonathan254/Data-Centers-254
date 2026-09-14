@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Due Diligence in Kenya: A Checklist"
 slug: "data-centre-due-diligence-kenya"
-meta_description: "Choosing a Kenyan data centre requires rigorous evaluation of power, cooling, connectivity, security, and compliance. This due diligence checklist covers every factor a bank, telco, or enterprise should assess before signing a contract."
+meta_description: "A due diligence checklist for choosing a Kenyan data centre: power, cooling, connectivity, security, and compliance, before you sign."
 primary_keyword: "data centre due diligence Kenya"
 secondary_keywords:
   - "how to choose data centre Kenya"

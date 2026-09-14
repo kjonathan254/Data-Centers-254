@@ -1,7 +1,7 @@
 ---
 title: "Kenya Internet Speeds and What They Mean for Data Centres"
 slug: "kenya-internet-speeds-data-centres"
-meta_description: "Kenya's average mobile internet speed exceeds 25 Mbps and fixed broadband reaches 50+ Mbps in Nairobi. Understand how internet speeds affect data centre demand, user experience, and the country's digital competitiveness."
+meta_description: "Kenya's average mobile internet speed tops 25 Mbps. How speeds shape data centre demand, user experience, and digital competitiveness."
 primary_keyword: "Kenya internet speeds"
 secondary_keywords:
   - "broadband speed Kenya"

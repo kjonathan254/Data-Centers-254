@@ -1,9 +1,7 @@
 ---
 title: "Building Codes for Data Centres in Kenya"
 slug: building-codes-data-centres-kenya
-meta_description: A comprehensive guide to the building codes, physical regulations,
-  and approval processes governing data centre construction in Kenya, from county
-  approvals and NCA registration to NEMA EIAs and fire safety codes.
+meta_description: "The building codes and approvals that govern data centre construction in Kenya: county permits, NCA registration, NEMA EIAs, and fire safety."
 primary_keyword: building codes data centres Kenya
 secondary_keywords:
 - National Construction Authority Kenya data centres

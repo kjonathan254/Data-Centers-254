@@ -4,9 +4,9 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About DC254: Mission & Methodology",
   description:
-    "Data Centre 254 is Kenya's independent knowledge platform for digital infrastructure. Founded by Kevin Jonathan Otieno, we translate complex data centre, connectivity, and power infrastructure into accessible knowledge.",
+    "Data Centre 254 is Kenya's independent knowledge platform for digital infrastructure. Our mission, methodology, and the person behind the work.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About | Data Centre 254",

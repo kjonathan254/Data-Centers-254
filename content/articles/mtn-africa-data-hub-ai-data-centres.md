@@ -1,7 +1,7 @@
 ---
 title: "MTN and Al Ashram's Africa Data Hub, Explained"
 slug: "mtn-africa-data-hub-ai-data-centres"
-meta_description: "MTN Group and Dubai investor Tarek Al Ashram have launched Africa Data Hub to build AI data centres across Africa, starting with 150MW in Nigeria and South Africa. What the venture involves and what it means for Kenya."
+meta_description: "MTN Group and Dubai investor Tarek Al Ashram launched Africa Data Hub to build AI data centres, starting with 150MW in Nigeria and South Africa."
 primary_keyword: "Africa Data Hub MTN"
 secondary_keywords:
   - "MTN AI data centres"

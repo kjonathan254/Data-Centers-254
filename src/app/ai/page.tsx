@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "AI Infrastructure",
+  title: "AI Infrastructure & Compute in Kenya",
   description:
     "AI infrastructure in Kenya, GPU capacity, cloud regions, AI-ready data centres, and the computing demand shaping Africa's next technology frontier.",
   alternates: { canonical: "/ai" },

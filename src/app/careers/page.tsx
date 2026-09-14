@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "Careers & Business",
+  title: "Data Centre Careers & Business in Kenya",
   description: "Data centre jobs in Kenya, certifications, how to get started, business opportunities, and investment in the data centre industry.",
   alternates: { canonical: "/careers" },
   keywords: ["data centre jobs Kenya", "CDCP certification", "data centre careers Nairobi", "colocation business Kenya", "data centre investment Africa", "DCIM skills", "facility manager Kenya"],

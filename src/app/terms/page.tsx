@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Use",
+  title: "Terms of Use & Disclaimers",
   description:
     "Terms governing the use of Data Centre 254, content ownership, permitted use, accuracy disclaimers, and liability. Governed by the laws of Kenya.",
   alternates: { canonical: "/terms" },

@@ -1,7 +1,7 @@
 ---
 title: "CA Opens Consultation on a Standalone Data Centre Licence"
 slug: "kenya-ca-standalone-data-centre-licence"
-meta_description: "The Communications Authority of Kenya has opened a 30-day consultation on a standalone Data Centre licence that would move colocation facilities out of the NFP-T2 telecom regime. Fees, timeline, and what it means for operators."
+meta_description: "The CA's 30-day consultation on a standalone Data Centre licence would move colocation out of the NFP-T2 regime. Fees, timeline, implications."
 primary_keyword: "Kenya standalone data centre licence"
 secondary_keywords:
   - "Communications Authority data centre licence"

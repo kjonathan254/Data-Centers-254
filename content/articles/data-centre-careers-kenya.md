@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Careers in Kenya: Jobs and Certifications"
 slug: "data-centre-careers-kenya"
-meta_description: "Kenya's data centre industry needs facility engineers, cooling specialists, network architects, and compliance managers. Here is a guide to the roles, certifications, and how to enter the field."
+meta_description: "Kenya's data centre industry needs facility engineers, cooling specialists, and network architects. The roles, certifications, and entry paths."
 primary_keyword: "data centre careers Kenya"
 secondary_keywords:
   - "CDCP certification Kenya"

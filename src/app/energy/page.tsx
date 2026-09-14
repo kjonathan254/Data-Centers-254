@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "Energy & Power",
+  title: "Energy & Power for Kenyan Data Centres",
   description: "How much electricity do data centres use? Can Kenya's geothermal energy power AI? Understanding the energy question behind data centres.",
   alternates: { canonical: "/energy" },
   keywords: ["data centre power Kenya", "geothermal energy data centre", "PUE", "Kenya electricity grid", "renewable energy data centre", "AI power consumption", "Olkaria geothermal"],

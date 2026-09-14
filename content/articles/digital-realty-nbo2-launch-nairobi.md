@@ -1,7 +1,7 @@
 ---
 title: "Digital Realty Launches NBO2: The 'Gateway' Claim, Tested"
 slug: "digital-realty-nbo2-launch-nairobi"
-meta_description: "Digital Realty formally launched NBO2 in Nairobi on 7 September 2026. We separate what the launch actually delivers (verified capacity, real interconnection, ramping reality) from the gateway rhetoric."
+meta_description: "Digital Realty formally launched NBO2 in Nairobi on 7 September 2026. What the launch delivers: verified capacity, interconnection, ramping reality."
 primary_keyword: "Digital Realty NBO2"
 secondary_keywords:
   - "NBO2 data centre Nairobi"

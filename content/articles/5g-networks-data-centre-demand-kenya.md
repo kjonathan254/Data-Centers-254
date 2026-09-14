@@ -1,7 +1,7 @@
 ---
 title: "5G Networks and Their Impact on Data Centre Demand in Kenya"
 slug: 5g-networks-data-centre-demand-kenya
-meta_description: "How Kenya's 5G rollout by Safaricom and Airtel is driving unprecedented demand for edge data centres, Multi-Access Edge Computing nodes, and expanded colocation infrastructure across the country."
+meta_description: "How Kenya's 5G rollout by Safaricom and Airtel is driving demand for edge data centres, MEC nodes, and expanded colocation infrastructure."
 primary_keyword: "5G data centre demand Kenya"
 secondary_keywords:
   - "Multi-Access Edge Computing Kenya"

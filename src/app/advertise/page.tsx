@@ -5,9 +5,9 @@ import { Mail, Phone, Megaphone, MailOpen, MapPin, Building2, PenLine, TrendingU
 import { getStats, SUBSCRIBER_ROLES } from "@/lib/newsletter-store";
 
 export const metadata: Metadata = {
-  title: "Advertise & Partner",
+  title: "Advertise & Partner with DC254",
   description:
-    "Reach a specialist audience across Kenya's rapidly developing digital infrastructure ecosystem. Sponsor The Rack Report, commission sponsored intelligence, or license market data.",
+    "Reach a specialist audience across Kenya's digital infrastructure ecosystem. Sponsor The Rack Report, commission intelligence, or license data.",
   alternates: { canonical: "/advertise" },
 };
 

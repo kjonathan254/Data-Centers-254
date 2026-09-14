@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "Infrastructure",
+  title: "Infrastructure: Fibre, Cables & Power",
   description:
     "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and the physical network that connects data centres to the world.",
   alternates: { canonical: "/infrastructure" },

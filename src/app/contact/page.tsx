@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Data Centre 254",
   description:
     "Get in touch with Data Centre 254. Corrections, tips, feedback, collaboration inquiries, or just say hello.",
   alternates: { canonical: "/contact" },

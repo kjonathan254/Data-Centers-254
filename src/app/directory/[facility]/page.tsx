@@ -77,7 +77,13 @@ export async function generateMetadata({
     : "capacity undisclosed";
   const fullTitle = `${f.name}, ${f.city}`;
   const title = fullTitle.length + 8 <= 60 ? fullTitle : f.name;
-  const description = `${f.name} is a ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name} (${mw}). Specs, connectivity, power and sourcing, verified ${fmtVerified(f.lastVerified)}.`;
+  let base = `${f.name}: ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name} (${mw}).`;
+  if (base.length > 158) {
+    // long operator or facility names: drop the capacity parenthetical
+    base = `${f.name}: ${stagePhrase(f.status)} data centre in ${f.city}, Kenya, operated by ${f.operator.name}.`;
+  }
+  const tail = ` Specs, connectivity and power, verified ${fmtVerified(f.lastVerified)}.`;
+  const description = base.length + tail.length <= 158 ? base + tail : base;
   return {
     title,
     description,

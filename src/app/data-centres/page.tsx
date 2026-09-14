@@ -4,9 +4,9 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "Inside Data Centres",
+  title: "Inside Data Centres: How They Work",
   description:
-    "How data centres actually work (cooling, power, cabling, fire suppression and building design) plus the facilities operating in Kenya today. Plain-language explainers from DC254.",
+    "How data centres actually work: cooling, power, cabling, fire suppression, and design, plus the facilities operating in Kenya today.",
   alternates: { canonical: "/data-centres" },
   keywords: [
     "how data centres work",

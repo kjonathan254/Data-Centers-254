@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import { CheckCircle2, FileQuestion, Database, Scale, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Editorial Policy",
+  title: "Editorial Policy & Standards",
   description:
     "How Data Centre 254 researches, labels, and verifies its content, fact labels, sourcing standards, corrections, and editorial independence.",
   alternates: { canonical: "/editorial-policy" },

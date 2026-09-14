@@ -1,10 +1,7 @@
 ---
 title: "Data Centre Interconnection and Peering in Kenya: KIXP"
 slug: data-centre-interconnection-peering-kenya
-meta_description: Understand data centre interconnection and peering in Kenya, how
-  KIXP works, peering vs transit economics, cross-connects within facilities, and
-  why Kenya is becoming East Africa's interconnection hub with 100G capabilities and
-  growing cloud provider presence.
+meta_description: "How interconnection and peering work in Kenya: KIXP, peering vs transit economics, cross-connects, and why Nairobi is East Africa's hub."
 primary_keyword: data centre interconnection peering Kenya
 secondary_keywords:
 - KIXP Kenya Internet Exchange Point

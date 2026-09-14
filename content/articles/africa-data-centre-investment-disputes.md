@@ -1,7 +1,7 @@
 ---
 title: "Africa's Data Centre Boom: Managing the Disputes Risk"
 slug: "africa-data-centre-investment-disputes"
-meta_description: "Less than 1% of global data centre capacity sits in Africa, and investors are racing in. HSF Kramer maps the dispute risks: power, land, water, supply chains, regulation."
+meta_description: "Less than 1% of global data centre capacity sits in Africa, and investors are racing in. HSF Kramer maps the dispute risks: power, land, water."
 primary_keyword: "data centre investment disputes Africa"
 secondary_keywords:
   - "Africa data centre investment risk"

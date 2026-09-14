@@ -20,7 +20,7 @@ import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-
 export const metadata: Metadata = {
   title: "Kenya Data Centre Tracker: Pipeline & Operators",
   description:
-    "Track Kenya's data centre supply as it moves: live capacity league, the under-construction / committed / early-stage pipeline board, dated deliveries, operator scoreboard and a data-confidence watchlist. Verified and sourced by Data Centre 254.",
+    "Track Kenya's data centre supply as it moves: live capacity league, pipeline board, dated deliveries, operator scoreboard, and a confidence watchlist.",
   alternates: { canonical: "/tracker" },
   openGraph: {
     title: "Kenya Data Centre Tracker | Data Centre 254",

@@ -15,7 +15,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "State of Kenyan Data Centres 2026: Annual Review",
   description:
-    "The verified annual review of Kenya's data centre market: 26 tracked facilities, the live supply pipeline, interconnection league table, certification leaders, the power constraint, and what 2027 will decide.",
+    "The verified annual review of Kenya's data centre market: 26 tracked facilities, the live pipeline, interconnection league, and the power constraint.",
   alternates: { canonical: "/research/state-of-kenyan-data-centres-2026" },
   openGraph: {
     title: "State of Kenyan Data Centres 2026 | Data Centre 254",

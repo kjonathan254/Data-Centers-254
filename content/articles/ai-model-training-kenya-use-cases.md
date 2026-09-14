@@ -1,9 +1,7 @@
 ---
 title: "AI Model Training in Kenya: Use Cases, Infrastructure"
 slug: ai-model-training-kenya-use-cases
-meta_description: Discover how Kenyan organisations are pursuing AI model training
-  locally, the infrastructure gaps they face, and what it will take to build GPU-ready
-  data centres in Nairobi and beyond.
+meta_description: "How Kenyan organisations are pursuing AI model training locally, the infrastructure gaps they face, and what GPU-ready data centres will take."
 primary_keyword: AI model training Kenya
 secondary_keywords:
 - GPU data centres Kenya

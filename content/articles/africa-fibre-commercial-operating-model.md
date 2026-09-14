@@ -1,7 +1,7 @@
 ---
 title: "Africa's Fibre Is Built: Now Comes the Hard Part"
 slug: "africa-fibre-commercial-operating-model"
-meta_description: "Africa's fibre boom keeps growing, WIOCC's $300m raise, South Africa's R14.4bn township push, Kenya's 2.1m fixed lines. The hard part comes after the build: prepaid plans, wholesale partners and billing systems that work."
+meta_description: "WIOCC's $300m raise, Kenya's 2.1m fixed lines: the hard part of Africa's fibre boom is what comes after the build, from prepaid plans to wholesale billing."
 primary_keyword: "Africa fibre commercial operating model"
 secondary_keywords:
   - "fibre wholesale open access Africa"

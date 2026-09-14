@@ -1,9 +1,7 @@
 ---
 title: What Is a Hyperscale Data Centre?
 slug: what-is-hyperscale-data-centre
-meta_description: Learn what hyperscale data centres are, how they differ from enterprise
-  and colocation facilities, and why Kenya has not yet attracted hyperscale investment
-  from AWS, Azure, or Google.
+meta_description: "What hyperscale data centres are, how they differ from enterprise and colocation sites, and why Kenya has not yet attracted AWS or Google."
 primary_keyword: hyperscale data centre
 secondary_keywords:
 - hyperscale data centre Africa

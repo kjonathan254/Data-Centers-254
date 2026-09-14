@@ -1,7 +1,7 @@
 ---
 title: "G2M Fibre Route Is Live: An East-West Data Artery"
 slug: "paratus-g2m-fibre-route-live"
-meta_description: "Paratus Group's 2,000 km Goma-to-Mombasa fibre route is live, linking DRC, Rwanda, Uganda and Kenya to subsea cable capacity. Why an east-west artery matters for Mombasa's cable-landing risk."
+meta_description: "Paratus Group's 2,000 km Goma-to-Mombasa fibre route is live, linking DRC, Rwanda, Uganda and Kenya to subsea capacity. Why it matters."
 primary_keyword: "G2M fibre route"
 secondary_keywords:
   - "Goma to Mombasa fibre"

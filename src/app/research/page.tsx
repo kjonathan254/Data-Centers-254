@@ -4,9 +4,9 @@ import Footer from "@/components/footer";
 import ResearchContent from "@/components/research-content";
 
 export const metadata: Metadata = {
-  title: "Research",
+  title: "Research: Kenya Data Centre Reports",
   description:
-    "DC254 reports and briefs on Kenya's digital infrastructure, every report ships as a free web summary plus a downloadable deep-dive PDF. Open data, no signup wall.",
+    "DC254 reports and briefs on Kenya's digital infrastructure: free web summaries plus downloadable deep-dive PDFs. Open data, no signup wall.",
   alternates: { canonical: "/research" },
   openGraph: {
     title: "Reports & Briefs | Data Centre 254",

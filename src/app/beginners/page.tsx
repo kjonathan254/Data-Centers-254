@@ -4,12 +4,12 @@ import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
 
 export const metadata: Metadata = {
-  title: "Beginner Guides",
-  description: "New to data centres? Start here. Plain-language guides that explain data centres, servers, cloud computing, and more, using examples you already know like M-Pesa and WhatsApp.",
+  title: "Beginner Guides to Data Centres",
+  description: "New to data centres? Plain-language guides that explain servers, cloud, and connectivity using examples you already know, like M-Pesa and WhatsApp.",
   alternates: { canonical: "/beginners" },
   openGraph: {
     title: "Beginner Guides | Data Centre 254",
-    description: "New to data centres? Start here. Plain-language guides that explain data centres, servers, cloud computing, and more, using examples you already know like M-Pesa and WhatsApp.",
+    description: "New to data centres? Plain-language guides that explain servers, cloud, and connectivity using examples you already know, like M-Pesa and WhatsApp.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",

@@ -1,7 +1,7 @@
 ---
 title: "Kenya ICT Policy Framework and Data Centre Industry Impact"
 slug: "kenya-ict-policy-framework-data-centres"
-meta_description: "A comprehensive analysis of Kenya's ICT policy environment and its direct impact on the data centre industry, covering the Digital Masterplan, licensing frameworks, cybersecurity strategy, and comparative African policy landscapes."
+meta_description: "Kenya's ICT policy environment and its impact on data centres: the Digital Masterplan, licensing, cybersecurity strategy, and African comparisons."
 primary_keyword: "Kenya ICT policy framework data centres"
 secondary_keywords:
   - "Kenya Digital Masterplan 2022-2032"

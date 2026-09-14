@@ -1,7 +1,7 @@
 ---
 title: "Kenya Power and Data Centres: The Electricity Constraint"
 slug: "kenya-power-infrastructure-data-centres"
-meta_description: "Kenya's geothermal advantage makes it attractive for data centres, but grid reliability and transmission bottlenecks remain the single largest obstacle to growth."
+meta_description: "Kenya's geothermal advantage attracts data centres, but grid reliability and transmission bottlenecks remain the biggest obstacle to growth."
 primary_keyword: "Kenya data centre power"
 secondary_keywords:
   - "geothermal data centre Kenya"

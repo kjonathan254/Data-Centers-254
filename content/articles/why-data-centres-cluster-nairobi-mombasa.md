@@ -1,7 +1,7 @@
 ---
 title: "Why Kenya's Data Centres Cluster in Nairobi and Mombasa"
 slug: "why-data-centres-cluster-nairobi-mombasa"
-meta_description: "13 of Kenya's 14 tracked data centre facilities sit in just two cities. The explanation comes down to three forces: where subsea cables land, where the grid is strongest, and where demand actually lives. An investigation into the geography of Kenya's digital infrastructure."
+meta_description: "13 of Kenya's 14 tracked data centres sit in two cities. The three forces behind the cluster: where cables land, where the grid is, where demand lives."
 primary_keyword: "why data centres cluster in Nairobi and Mombasa"
 secondary_keywords:
   - "Kenya data centre locations"

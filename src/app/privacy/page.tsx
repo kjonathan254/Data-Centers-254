@@ -3,9 +3,9 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy & Data Practices",
   description:
-    "How Data Centre 254 collects, uses, and protects your data, briefing subscriptions, contact messages, and analytics. Compliant with the Kenya Data Protection Act, 2019.",
+    "How Data Centre 254 collects, uses, and protects your data: subscriptions, contact messages, analytics. Compliant with the Kenya Data Protection Act.",
   alternates: { canonical: "/privacy" },
 };
 

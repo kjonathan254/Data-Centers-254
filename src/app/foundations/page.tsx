@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "Foundations: DC254",
+  title: "Foundations: Data Centre Basics",
   description:
     "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
   alternates: { canonical: "/foundations" },

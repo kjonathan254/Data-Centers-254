@@ -1,7 +1,7 @@
 ---
 title: "Keppel's US$1.2B Tokyo Deal: Signal for African Capital"
 slug: "keppel-dc-reit-tokyo-acquisition-signals"
-meta_description: "Keppel DC REIT is paying 190 billion yen for two Tokyo hyperscale facilities. The deal's metrics (escalators, WALE, concentration) are the benchmarks African assets must meet."
+meta_description: "Keppel DC REIT is paying 190 billion yen for two Tokyo hyperscale facilities. The deal metrics are the benchmarks African assets must meet."
 primary_keyword: "Keppel DC REIT Tokyo data centres"
 secondary_keywords:
   - "Keppel DC REIT acquisition"

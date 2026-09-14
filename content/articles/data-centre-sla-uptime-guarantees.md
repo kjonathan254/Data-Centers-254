@@ -1,7 +1,7 @@
 ---
 title: "What Is a Data Centre SLA? Understanding Uptime Guarantees"
 slug: data-centre-sla-uptime-guarantees
-meta_description: "Learn what a data centre Service Level Agreement (SLA) is, how uptime guarantees like 99.9% and 99.999% translate to real downtime, and what Kenyan operators actually commit to in their contracts."
+meta_description: "What a data centre SLA is, how 99.9% and 99.999% uptime guarantees translate to real downtime, and what Kenyan operators commit to."
 primary_keyword: "data centre SLA"
 secondary_keywords:
   - "uptime guarantee data centre"

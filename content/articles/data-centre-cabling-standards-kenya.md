@@ -1,7 +1,7 @@
 ---
 title: "Data Centre Cabling Standards and Best Practices in Kenya"
 slug: "data-centre-cabling-standards-kenya"
-meta_description: "A comprehensive guide to structured cabling standards, copper and fibre best practices, testing protocols, and certification requirements for data centres in Kenya."
+meta_description: "A guide to structured cabling standards, copper and fibre best practices, testing protocols, and certification for data centres in Kenya."
 primary_keyword: "data centre cabling standards Kenya"
 secondary_keywords:
   - "structured cabling Kenya"

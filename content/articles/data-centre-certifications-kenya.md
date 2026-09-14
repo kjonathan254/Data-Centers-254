@@ -1,9 +1,7 @@
 ---
 title: Data Centre Certifications Worth Having in Kenya
 slug: data-centre-certifications-kenya
-meta_description: Complete guide to data centre certifications in Kenya, CDCP, CDCS,
-  CDCE, CCNP, AWS, Azure, PMP, and more, with KES costs, local training providers,
-  exam requirements, and real career impact.
+meta_description: "Guide to data centre certifications in Kenya, CDCP, CDCS, CCNP, AWS, Azure, PMP, with KES costs, local trainers, exam requirements, career impact."
 primary_keyword: data centre certifications Kenya
 secondary_keywords:
 - CDCP certification Kenya cost

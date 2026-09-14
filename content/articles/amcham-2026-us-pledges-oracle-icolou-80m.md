@@ -1,7 +1,7 @@
 ---
 title: "AmCham 2026: $600M US Pledges, Oracle Cloud, iColo $80M"
 slug: "amcham-2026-us-pledges-oracle-icolou-80m"
-meta_description: "AmCham 2026 produced $600 million (Sh77.5bn) in one-day US pledges for Kenya. The data centre headlines: Oracle's first African cloud region and an $80M iColo Nairobi project."
+meta_description: "AmCham 2026 delivered $600 million (Sh77.5bn) in one-day US pledges for Kenya, headlined by Oracle's first African cloud region and iColo's $80M project."
 primary_keyword: "AmCham 2026 Kenya investment"
 secondary_keywords:
   - "Oracle cloud region Kenya"

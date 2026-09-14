@@ -1,7 +1,7 @@
 ---
 title: "How to Get a Job in a Kenyan Data Centre"
 slug: "how-to-get-job-kenyan-data-centre"
-meta_description: "Kenya's data centre industry needs network engineers, facility managers, cooling technicians, and security specialists. This guide covers the certifications, skills, salary ranges, and hiring pathways for data centre careers in Kenya."
+meta_description: "The certifications, skills, salary ranges, and hiring pathways for data centre careers in Kenya, from network engineer to facility manager."
 primary_keyword: "data centre jobs Kenya"
 secondary_keywords:
   - "how to work in a data centre Kenya"

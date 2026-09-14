@@ -1,7 +1,7 @@
 ---
 title: "Kenya's Data Centre Market in Numbers (2026)"
 slug: "kenya-data-centre-market-numbers"
-meta_description: "The verified numbers behind Kenya's data centre market: 26 tracked facilities, published IT load, six independent market estimates compared, and what each figure actually measures."
+meta_description: "The verified numbers behind Kenya's data centre market: 26 tracked facilities, six independent estimates compared, and what each measures."
 primary_keyword: "Kenya data centre market"
 secondary_keywords:
   - "Kenya data centre market size"

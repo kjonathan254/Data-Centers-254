@@ -1,7 +1,7 @@
 ---
 title: "US Backs Africa's AI Data Centre Push: Where Kenya Fits"
 slug: "us-africa-ai-data-centre-frontier-kenya"
-meta_description: "The US is backing AI data centre deals across Africa as power and permitting limits bite at home. Lesotho, Gabon, Ivory Coast, and where Kenya fits in the frontier map."
+meta_description: "The US is backing AI data centre deals across Africa as power limits bite at home. Lesotho, Gabon, Ivory Coast, and where Kenya fits."
 primary_keyword: "Africa AI data centre frontier"
 secondary_keywords:
   - "US data centre investment Africa"

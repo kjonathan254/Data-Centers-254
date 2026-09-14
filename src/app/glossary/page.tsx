@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Data Centre Glossary: 19 Key Terms Explained",
   description:
-    "Plain-language definitions for 19 essential data centre terms, from PUE and tier ratings to submarine cables and peering. Every term explained with Kenya-specific context.",
+    "Plain-language definitions for 19 essential data centre terms, from PUE and tier ratings to submarine cables, with Kenya-specific context.",
   alternates: { canonical: "/glossary" },
   openGraph: {
     title: "Data Centre Glossary | Data Centre 254",

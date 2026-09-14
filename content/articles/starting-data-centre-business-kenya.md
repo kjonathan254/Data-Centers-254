@@ -1,7 +1,7 @@
 ---
 title: "Starting a Data Centre Business in Kenya"
 slug: "starting-data-centre-business-kenya"
-meta_description: "Starting a data centre company in Kenya requires KES 500M-2B+ in capital, an NFP-T2 licence, suitable land, and a clear market strategy. This guide covers the investment requirements, regulatory steps, and go-to-market options."
+meta_description: "Starting a data centre company in Kenya takes KES 500M-2B+, an NFP-T2 licence, land, and a market strategy. The investment and regulatory steps."
 primary_keyword: "start data centre business Kenya"
 secondary_keywords:
   - "data centre investment Kenya"

@@ -1,7 +1,7 @@
 ---
 title: "GPU Computing in Kenya: Why AI Needs Data Centres"
 slug: "gpu-computing-kenya-ai-needs-data-centres"
-meta_description: "AI workloads demand GPU-dense data centres with 20-40kW per rack. Explore Kenya's emerging GPU infrastructure, the AI use cases driving demand, and what this means for East Africa's digital economy."
+meta_description: "AI workloads demand GPU-dense data centres at 20-40kW per rack. Kenya's emerging GPU infrastructure and the use cases driving demand."
 primary_keyword: "GPU computing Kenya"
 secondary_keywords:
   - "AI data centre Kenya"

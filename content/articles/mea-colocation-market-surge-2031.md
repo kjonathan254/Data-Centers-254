@@ -1,7 +1,7 @@
 ---
 title: "MEA Colocation Market Surges to $12.88 Billion by 2031"
 slug: "mea-colocation-market-surge-2031"
-meta_description: "Arizton values the Middle East & Africa colocation market at $3.33 billion in 2025, rising to $12.88 billion by 2031 at a 25.32% CAGR. Here is where Nairobi fits in."
+meta_description: "Arizton values the Middle East and Africa colocation market at $3.33bn in 2025, rising to $12.88bn by 2031. Where Nairobi fits in."
 primary_keyword: "MEA data centre colocation market"
 secondary_keywords:
   - "Middle East Africa data centre market"

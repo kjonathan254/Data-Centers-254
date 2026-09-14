@@ -1,7 +1,7 @@
 ---
 title: "DigitalOcean's AI Cloud and Kenya's Hosting Market"
 slug: "digitalocean-ai-cloud-kenya-hosting"
-meta_description: "DigitalOcean's AI bet finally shows in its numbers: $894M in reservations, AI ARR up 212%, and 155 MW of committed data centre capacity. Here is what that megawatt race means for Kenyan developers and hosts."
+meta_description: "DigitalOcean's AI bet shows in its numbers: $894M in reservations, AI ARR up 212%, 155 MW committed. What the megawatt race means for Kenyan hosts."
 primary_keyword: "DigitalOcean AI cloud"
 secondary_keywords:
   - "DigitalOcean AI ARR"

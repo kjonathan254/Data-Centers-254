@@ -1,7 +1,7 @@
 ---
 title: "Safaricom Data Centres: M-Pesa, 5G and the Digital Economy"
 slug: "safaricom-data-centre-operations-kenya"
-meta_description: "Safaricom operates Kenya's most critical data centre, supporting M-Pesa, mobile network infrastructure, and enterprise cloud services. Now partnering with Microsoft and G42 on a planned $1 billion AI facility."
+meta_description: "Safaricom runs Kenya's most critical data centre, supporting M-Pesa and enterprise cloud. Now partnering with Microsoft and G42 on a $1bn AI facility."
 primary_keyword: "Safaricom data centre"
 secondary_keywords:
   - "Safaricom M-Pesa infrastructure"

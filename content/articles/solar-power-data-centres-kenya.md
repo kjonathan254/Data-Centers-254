@@ -1,7 +1,7 @@
 ---
 title: "Solar Power for Data Centres in Kenya: The Economics"
 slug: "solar-power-data-centres-kenya"
-meta_description: "Kenya's solar irradiance of 4-6 kWh/m²/day makes solar PV a compelling option for data centres. Explore the economics, hybrid configurations, battery storage, and real-world feasibility of solar-powered data centres in East Africa."
+meta_description: "Kenya's strong solar irradiance makes PV compelling for data centres. The economics, hybrid configurations, battery storage, and feasibility."
 primary_keyword: "solar power data centres Kenya"
 secondary_keywords:
   - "renewable energy data centres Kenya"

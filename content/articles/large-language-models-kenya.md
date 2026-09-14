@@ -1,7 +1,7 @@
 ---
 title: "Large Language Models in Kenya: Adoption and Infrastructure"
 slug: "large-language-models-kenya"
-meta_description: "Large language models are transforming Kenyan businesses from banking to agriculture. This article examines LLM adoption across Kenya, the infrastructure gap, data sovereignty concerns, and the ecosystem emerging to support local AI deployment."
+meta_description: "LLMs are transforming Kenyan businesses from banking to agriculture. The adoption trends, infrastructure gap, and sovereignty concerns explained."
 primary_keyword: "large language models Kenya"
 secondary_keywords:
   - "generative AI Kenya"

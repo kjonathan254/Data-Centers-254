@@ -1,7 +1,7 @@
 ---
 title: "AWS Commits $1.5bn to Africa: The Compute Gap Behind It"
 slug: "aws-1-5bn-africa-compute-gap-kenya"
-meta_description: "AWS has committed $1.5bn to African infrastructure through 2029, on top of $819m since 2018. The leapfrog analogy is appealing and incomplete: mobile money rode built networks, AI needs compute that does not exist yet."
+meta_description: "AWS has committed $1.5bn to African infrastructure through 2029, on top of $819m since 2018. The leapfrog analogy is appealing, and incomplete."
 primary_keyword: "AWS Africa investment"
 secondary_keywords:
   - "AWS $1.5 billion Africa"

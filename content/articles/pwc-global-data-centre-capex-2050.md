@@ -1,7 +1,7 @@
 ---
 title: "PwC's $31.6 Trillion Forecast: Where Kenya Fits In"
 slug: "pwc-global-data-centre-capex-2050"
-meta_description: "PwC projects US$31.6 trillion of data centre capex through 2050, and Africa's $255 billion share is the only non-AI bet on the map. Kenya's renewable grid is the quiet edge."
+meta_description: "PwC projects $31.6 trillion of data centre capex through 2050, and Africa's $255bn share is the only non-AI bet. Kenya's grid is the quiet edge."
 primary_keyword: "global data centre capex forecast"
 secondary_keywords:
   - "PwC data centre outlook"

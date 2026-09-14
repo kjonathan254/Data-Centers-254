@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Data Centre in Swahili: Kamusi ya Misamiati 24",
   description:
-    "Pilot ya Kiswahili: misamiati 24 muhimu ya vituo vya data kwa lugha rahisi ya Kiswahili, kutoka kolokesheni na peering hadi kebo za chini ya bahari na PUE. \"Data centre\" kwa Kiswahili ni \"Kituo cha Data\".",
+    "Pilot ya Kiswahili: misamiati 24 muhimu ya vituo vya data, kutoka kolokesheni na peering hadi kebo za chini ya bahari na PUE, kwa lugha rahisi.",
   alternates: { canonical: "/glossary/kiswahili" },
 };
 

@@ -1,9 +1,7 @@
 ---
 title: Career Progression Paths in African Data Centres
 slug: career-progression-african-data-centres
-meta_description: Explore realistic career ladders in Africa's data centre industry
-  (from entry-level cable technician to VP of Operations) with Kenyan salary ranges,
-  certification requirements, and regional mobility across East Africa.
+meta_description: "Realistic career ladders in Africa's data centre industry, from cable technician to VP of Operations, with Kenyan salary ranges and certifications."
 primary_keyword: career progression data centres Africa
 secondary_keywords:
 - data centre career ladder Kenya

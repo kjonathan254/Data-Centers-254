@@ -1,7 +1,7 @@
 ---
 title: "Data Centre PUE Explained: Power Efficiency in Kenya"
 slug: "data-centre-pue-power-usage-effectiveness"
-meta_description: "Power Usage Effectiveness (PUE) is the key metric for data centre energy efficiency. Learn how PUE is calculated, what good and bad PUE values look like, and how Kenyan facilities can improve their efficiency."
+meta_description: "PUE is the key metric for data centre energy efficiency. How it is calculated, what good values look like, and how Kenyan facilities improve."
 primary_keyword: "data centre PUE"
 secondary_keywords:
   - "power usage effectiveness"

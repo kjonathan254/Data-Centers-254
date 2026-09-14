@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "FAQ: Kenya's data centres, answered",
   description:
-    "How many data centres does Kenya have? Which is the largest? What powers them? Straight answers from DC254's verified directory of Kenyan and East African digital infrastructure.",
+    "How many data centres does Kenya have? Which is the largest? What powers them? Straight answers from DC254's verified directory.",
   alternates: { canonical: "/faq" },
   openGraph: {
     title: "FAQ: Kenya's data centres, answered | Data Centre 254",

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | DC254",
   },
   description:
-    "An independent Kenyan educational and research platform explaining the infrastructure behind Kenya's digital economy. Data centres, connectivity, power, AI, and the systems that make the digital world work.",
+    "Kenya's independent data centre platform: verified facility directory, market research, and plain-language explainers. Sourced and dated.",
   keywords: [
     "data centres Kenya",
     "data center Nairobi",

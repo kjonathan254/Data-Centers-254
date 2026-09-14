@@ -1,7 +1,7 @@
 ---
 title: "Fire Suppression Systems in Kenyan Data Centres"
 slug: "fire-suppression-systems-kenyan-data-centres"
-meta_description: "An in-depth guide to fire detection and suppression systems for data centres in Kenya, covering clean agents, VESDA, regulatory requirements, and real facility installations."
+meta_description: "An in-depth guide to fire detection and suppression in Kenyan data centres: clean agents, VESDA, regulatory requirements, real installations."
 primary_keyword: "fire suppression systems Kenyan data centres"
 secondary_keywords:
   - "clean agent fire suppression Kenya"

@@ -1,9 +1,7 @@
 ---
 title: UPS Systems and Backup Power for Kenyan Data Centres
 slug: ups-backup-power-kenyan-data-centres
-meta_description: A comprehensive guide to Uninterruptible Power Supply (UPS) systems
-  in Kenyan data centres, covering types, battery technologies, sizing, redundancy,
-  generators, and Kenya-specific challenges.
+meta_description: "A guide to UPS systems in Kenyan data centres: types, battery technologies, sizing, redundancy, generators, and Kenya-specific challenges."
 primary_keyword: UPS systems Kenya
 secondary_keywords:
 - data centre backup power Kenya

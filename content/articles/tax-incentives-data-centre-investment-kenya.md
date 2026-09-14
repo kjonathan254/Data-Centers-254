@@ -1,7 +1,7 @@
 ---
 title: "Tax Incentives for Data Centres in Kenya"
 slug: "tax-incentives-data-centre-investment-kenya"
-meta_description: "A comprehensive guide to tax incentives, investment benefits, and fiscal frameworks available for data centre development in Kenya, including SEZ benefits, VAT exemptions, capital allowances, and African market comparisons."
+meta_description: "The tax incentives for data centre development in Kenya: SEZ benefits, VAT exemptions, capital allowances, and how they compare regionally."
 primary_keyword: "tax incentives data centre investment Kenya"
 secondary_keywords:
   - "Special Economic Zones Act Kenya data centres"

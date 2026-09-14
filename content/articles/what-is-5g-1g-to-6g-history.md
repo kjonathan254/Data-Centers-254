@@ -1,7 +1,7 @@
 ---
 title: "What Is 5G? From 1G to 6G, and Why It Matters in Kenya"
 slug: "what-is-5g-1g-to-6g-history"
-meta_description: "5G explained in plain language: what the 'G' means, the full history from analogue 1G through 2G, 3G and 4G to 5G, why each generation mattered in Kenya, and what the 6G future actually holds."
+meta_description: "5G explained in plain language: what the G means, the full history from 1G to 5G, why each generation mattered in Kenya, and the 6G future."
 primary_keyword: "what is 5G"
 secondary_keywords:
   - "5G history 1G to 5G"

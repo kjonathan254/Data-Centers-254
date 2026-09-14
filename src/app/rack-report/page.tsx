@@ -20,7 +20,7 @@ import { getLatestArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "The Rack Report: Kenya's Data Centre Weekly",
   description:
-    "The Rack Report is the weekly intelligence briefing from DataCentre254: data centres, power, cloud, connectivity, investment and policy in Kenya and East Africa. Free, every Monday.",
+    "The Rack Report is DC254's weekly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free every Monday.",
   alternates: { canonical: "/rack-report" },
   openGraph: {
     title: "The Rack Report: Kenya's Data Centre Weekly",

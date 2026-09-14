@@ -1,7 +1,7 @@
 ---
 title: "Women in Data Centres: Growing Kenya's Technical Workforce"
 slug: women-in-data-centres-kenya
-meta_description: "Exploring gender diversity in Kenya's data centre industry, current participation, barriers, career pathways, and the initiatives driving more women into technical infrastructure roles."
+meta_description: "Gender diversity in Kenya's data centre industry: current participation, barriers, career pathways, and the initiatives driving change."
 primary_keyword: "women in data centres Kenya"
 secondary_keywords:
   - "gender diversity Kenyan tech sector"
