@@ -16,32 +16,32 @@ published_date: "2026-09-15"
 updated_date: "2026-09-15"
 category: "AI & Infrastructure"
 cluster: "Kenya"
-og_image: "/images/mombasa-port-wide.webp"
+og_image: "/images/amaco-mombasa-port-terminal.webp"
 reading_time: "9 min"
 images:
-  - src: "/images/mombasa-port-wide.webp"
-    alt: "Wide view of the Port of Mombasa, where the proposed Hercules platform would anchor"
+  - src: "/images/amaco-mombasa-port-terminal.webp"
+    alt: "Container yard and blue gantry cranes at the Port of Mombasa"
     caption: "The Port of Mombasa, East Africa's largest gateway. The proposed Hercules platform would sit in this ecosystem, close to both its fuel supply and the submarine cables"
     position: "hero"
-  - src: "/images/mombasa-cargo-ship.webp"
-    alt: "Cargo shipping operations at the Port of Mombasa"
-    caption: "Amaco's plan starts with fuel delivered by sea: liquefied natural gas shipped into the port, the same trade route that makes Mombasa a natural energy gateway"
+  - src: "/images/amaco-lng-carrier.webp"
+    alt: "LNG carrier ship with spherical storage tanks at sea"
+    caption: "An LNG carrier under way, illustrative. Amaco's plan starts with fuel delivered by sea: liquefied natural gas cooled into liquid and shipped to the port, the same trade route that makes Mombasa a natural energy gateway"
     position: "inline"
-  - src: "/images/mombasa-cable-landing.webp"
-    alt: "Submarine cable landing infrastructure on the Kenyan coast"
-    caption: "Landing-station infrastructure on the Kenyan coast. Eight submarine cable systems come ashore near Mombasa, so a data centre here skips the 500 km backhaul to Nairobi"
+  - src: "/images/amaco-cable-landing-beach.webp"
+    alt: "Landing crew guiding a submarine cable ashore on a Kenyan beach, with marker buoys running out to the cable ship offshore"
+    caption: "A landing crew guides a submarine cable ashore on the Kenyan coast. Eight submarine cable systems come ashore near Mombasa, so a data centre here skips the 500 km backhaul to Nairobi"
     position: "section-break"
-  - src: "/images/dc-power-systems.webp"
-    alt: "Power distribution equipment inside a data centre facility"
-    caption: "Power distribution inside a data facility. HERCULES' core claim is folding generation, cooling and computing into one independently powered design"
+  - src: "/images/amaco-power-barge.webp"
+    alt: "Floating power barge with gas turbine exhaust stacks moored near a city coastline"
+    caption: "A floating power barge of the kind proposed for HERCULES, illustrative: a gas-fired power plant mounted on a moored platform, feeding the data centre without drawing on the national grid"
     position: "section-break"
   - src: "/images/whats-inside-ai-data-center-wide.webp"
     alt: "Server racks inside an AI data centre hall"
     caption: "Inside an AI data hall. AI racks draw far more power per rack than ordinary servers, which is why the power design is the project's main selling point"
     position: "inline"
-  - src: "/images/construction-crane-scaffolding.webp"
-    alt: "Construction cranes on a building site"
-    caption: "If approvals land, the reported estimate is about 28 months of construction. Nothing has broken ground yet (Construction Review Online, 10 September 2026)"
+  - src: "/images/amaco-dongo-kundu-sez.webp"
+    alt: "Artist's impression of the Dongo Kundu Special Economic Zone near Mombasa"
+    caption: "An artist's impression of the Dongo Kundu Special Economic Zone, the 3,000-acre ARISE-run industrial park next to the candidate sites. If approvals land, the reported estimate is about 28 months of construction (Construction Review Online, 10 September 2026)"
     position: "section-break"
 internal_links:
   - text: "why Kenya's data centres cluster in Nairobi and Mombasa"
@@ -95,7 +95,7 @@ The story has moved quickly from idea to paperwork. In September 2026, Amaco ann
 
 So this article does what DC254 always does: it collects what is confirmed, explains the technology in plain language, and separates the parts of the story that are solid from the parts that are still a pitch.
 
-![Wide view of the Port of Mombasa](/images/mombasa-port-wide.webp)
+![Container yard and blue gantry cranes at the Port of Mombasa](/images/amaco-mombasa-port-terminal.webp)
 
 ## What is actually proposed
 
@@ -105,7 +105,7 @@ The computing part would be an AI data centre: a facility packed with servers ar
 
 **The power barge, explained in plain terms.** The heart of the proposal is a power barge, an unmotorised floating platform that carries a power plant on its hull, the way a cargo barge carries goods (Business Daily, 10 September 2026). Power barges are not science fiction; they are used around the world where building a plant on land is slow or complicated. The plant is assembled in a shipyard, floated to its destination, connected, and switched on.
 
-![Cargo shipping operations at the Port of Mombasa](/images/mombasa-cargo-ship.webp)
+![LNG carrier ship with spherical storage tanks at sea](/images/amaco-lng-carrier.webp)
 
 In Amaco's plan, the barge burns liquefied natural gas (LNG, which is natural gas cooled until it turns into a liquid that ships can carry) to generate electricity. That electricity feeds the data centre directly, and the same integrated system handles cooling, with heat and cold recovered and reused inside the platform rather than vented (w.media, 21 August 2026). Because the package makes its own power, it does not depend on the grid and does not compete with Kenyan homes and hospitals for electricity. Amaco also says the design can later add renewable energy and hydrogen, though it starts on gas (TechCabal, 20 August 2026).
 
@@ -121,7 +121,7 @@ In September 2026 the project gained its most credible ingredient so far. Amaco 
 
 Why does this matter? Because turbine supply is one of the hardest bottlenecks in the global power business right now, and GE Vernova is the industry's biggest player, with more than 7,000 large turbines totalling over 800 GW of capacity across more than 120 countries (Business Daily, 10 September 2026). A vendor of that size engaging publicly signals the project has moved beyond brochure stage. To keep it honest: a cooperation agreement is still not a hardware order with delivery dates, both sides describe integration "as the platform develops". But it is more than most concept proposals ever secure.
 
-![Submarine cable landing infrastructure on the Kenyan coast](/images/mombasa-cable-landing.webp)
+![Landing crew guiding a submarine cable ashore on a Kenyan beach](/images/amaco-cable-landing-beach.webp)
 
 ## Why Mombasa, and why off-grid
 
@@ -133,7 +133,7 @@ The off-grid choice addresses the constraint that has capped every big Kenyan da
 
 There is even a plan for the surplus. Amaco has said the system could contribute additional generation to Kenya's broader energy needs, and Construction Review Online reports a potential export path to the local grid near the Mariakani substation (Kenyans.co.ke, 22 August 2026; Construction Review Online, 10 September 2026). That would make the project unusual in a second way: a data centre that adds electricity to the grid instead of straining it.
 
-![Power distribution equipment inside a data centre facility](/images/dc-power-systems.webp)
+![Floating power barge with gas turbine exhaust stacks moored near a coastline](/images/amaco-power-barge.webp)
 
 ## What is confirmed, and what is not
 
@@ -170,7 +170,7 @@ Big proposals announce themselves loudly and then go quiet, so the useful discip
 5. **Financing**, in the form of named lenders, equity partners, or a final investment decision.
 6. **Offtake interest** from the Dongo Kundu SEZ's industrial tenants, the demand pool Amaco says justifies the site.
 
-![Construction cranes on a building site](/images/construction-crane-scaffolding.webp)
+![Artist's impression of the Dongo Kundu Special Economic Zone near Mombasa](/images/amaco-dongo-kundu-sez.webp)
 
 If those milestones start landing, Mombasa's long-standing role as a cable and transit stop could grow into something new: the first credible attempt at a third force in Kenya's data centre map, built on self-supplied power and port demand rather than the grid. That is exactly why we flagged the proposal when it first appeared, and why this article will be updated as the facts change. Until then, the honest label is the one we gave it in August: a serious test of whether the coast can host compute at scale, and no more than that yet.
 
