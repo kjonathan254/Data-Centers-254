@@ -145,14 +145,21 @@ function byFreshness(a: Article, b: Article): number {
 
 /**
  * "New" badge window in hours. A story shows the green NEW badge in
- * listings while its freshness date (updated or published, whichever is
- * later) is within this window. Evaluated at build time, redeploy to
- * refresh. Bump here if the editorial rule changes.
+ * listings while its published date is within this window. Evaluated at
+ * build time, redeploy to refresh. Bump here if the editorial rule
+ * changes.
+ *
+ * Editorial rule (15 Sep 2026): the badge keys off published_date ONLY.
+ * Bumping updated_date refreshes listings order but must not re-badge
+ * an old story as New, so updated stories stop wearing the badge the
+ * day after their original publish date.
  */
-export const FRESH_WINDOW_HOURS = 48;
+export const FRESH_WINDOW_HOURS = 24;
 
 export function isArticleFresh(a: Article, now: Date = new Date()): boolean {
-  const ageHours = (now.getTime() - freshnessDate(a).getTime()) / 3_600_000;
+  const ageHours =
+    (now.getTime() - new Date(a.frontmatter.published_date).getTime()) /
+    3_600_000;
   return ageHours <= FRESH_WINDOW_HOURS;
 }
 
