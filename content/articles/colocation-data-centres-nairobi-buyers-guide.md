@@ -131,7 +131,11 @@ Brochures grade themselves, so bring your own test. These are the questions that
 
 ## Sizing the decision: rack, cage, or neither?
 
-Three honest paths exist for a Kenyan organisation outgrowing the office cupboard. The first is colocation starting small: a quarter or half rack, two to five servers, monthly cost in the range you will discover by quoting, since Kenyan operators rarely publish prices. The second is a private cage or suite, which makes sense when you own many machines and need physical separation from other tenants. The third is staying out of hardware entirely: if your actual need is one or two virtual machines, a [Nairobi VPS paid with M-Pesa](/articles/vps-hosting-kenya-mpesa-payment) is cheaper and faster to start, and nothing is lost by beginning there.
+Three honest paths exist for a Kenyan organisation outgrowing the office cupboard:
+
+1. **Colocation, starting small.** A quarter or half rack, two to five servers. Monthly cost sits in the range you will discover by quoting, since Kenyan operators rarely publish prices.
+2. **A private cage or suite.** This makes sense when you own many machines and need physical separation from other tenants.
+3. **Staying out of hardware entirely.** If your actual need is one or two virtual machines, a [Nairobi VPS paid with M-Pesa](/articles/vps-hosting-kenya-mpesa-payment) is cheaper and faster to start, and nothing is lost by beginning there.
 
 The economics tip toward colocation when machines are numerous, workloads run around the clock, or compliance rules demand that you control the hardware. Kenya's data protection regime, discussed in our [GPU cloud in Kenya](/articles/gpu-cloud-infrastructure-kenya) guide, is one reason some enterprises prefer physical control of the boxes holding personal data. The economics tip away from colocation when workloads are light, bursty, or experimental, because idle racks earn nobody anything.
 

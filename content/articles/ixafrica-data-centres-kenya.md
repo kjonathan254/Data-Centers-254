@@ -129,7 +129,11 @@ The board of directors includes William Barney (Bill), founder and chairman of A
 
 ## Role in Kenya's Data Centre Ecosystem
 
-iXAfrica occupies a specific and important position in Kenya's data centre landscape. The market has three broad categories of provider. The first is telecom-integrated facilities, led by Safaricom, which primarily serve their own network and enterprise cloud requirements. The second is Africa Data Centres (a subsidiary of the Remgro-owned Digital Realty competitor), which operates facilities at Sameer Park and Westlands. The third is iXAfrica, which is the only provider building a greenfield, purpose-designed hyperscale campus.
+iXAfrica occupies a specific and important position in Kenya's data centre landscape. The market has three broad categories of provider:
+
+- **Telecom-integrated facilities**, led by Safaricom, which primarily serve their own network and enterprise cloud requirements.
+- **Africa Data Centres** (a subsidiary of the Remgro-owned Digital Realty competitor), which operates facilities at Sameer Park and Westlands.
+- **iXAfrica**, the only provider building a greenfield, purpose-designed hyperscale campus.
 
 This distinction matters. Africa Data Centres' Nairobi facilities are capable and well-established, but they were not originally designed for the rack densities that AI workloads demand. iXAfrica's NBOX1 was designed from its first architectural drawings to support 40 to 50 kW per rack and to be upgradeable to liquid cooling for even higher densities. In practice, this means iXAfrica is currently the only facility in Kenya that can host NVIDIA GPU clusters and similar AI infrastructure without requiring the customer to accept design compromises.
 

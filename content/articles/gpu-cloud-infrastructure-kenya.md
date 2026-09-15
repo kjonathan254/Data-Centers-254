@@ -111,7 +111,11 @@ Every AI training run is an electricity bill. An AI rack draws many kilowatts, s
 
 The point of all this infrastructure is not prestige; it is the work. Three families of use cases come up again and again in the Kenyan market, and our deeper piece on [AI model training use cases in Kenya](/articles/ai-model-training-kenya-use-cases) profiles them properly.
 
-The first is finance: credit scoring models trained on Kenyan mobile money patterns, which understand the local reality of irregular incomes better than models trained on Western banking data. The second is agriculture: computer vision (AI that looks at images) checking crops for disease using photos of Kenyan fields, deployed at the edge close to the farms. The third is language: models that speak Kiswahili, Sheng and Kenya's local languages, trained on local text so digital services stop being foreign by default. Each of these runs on Kenyan data, which each, under the rules above, wants Kenyan compute.
+- ✔ **Finance:** credit scoring models trained on Kenyan mobile money patterns. They understand the local reality of irregular incomes better than models trained on Western banking data.
+- ✔ **Agriculture:** computer vision (AI that looks at images) checking crops for disease using photos of Kenyan fields, deployed at the edge close to the farms.
+- ✔ **Language:** models that speak Kiswahili, Sheng and Kenya's local languages, trained on local text so digital services stop being foreign by default.
+
+Each of these runs on Kenyan data. And under the rules above, each one wants Kenyan compute.
 
 ![Diagram of the power chain from grid to GPU rack](/images/diagram-power-chain-grid-to-gpu.webp)
 
