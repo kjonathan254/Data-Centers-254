@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-16"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/dc-business-investment.webp"
@@ -46,6 +46,8 @@ internal_links:
   - text: "data centre directory"
     href: "/directory"
 external_sources:
+  - title: "Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)"
+    url: "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf"
   - title: "Africa Data Centres"
     url: "https://www.africadatacentres.com/"
   - title: "iXAfrica"
@@ -125,6 +127,8 @@ Based on current expansion plans, demand trends, and the structural drivers outl
 Colocation revenue is expected to grow from approximately $100 million to $220–250 million, while managed services and interconnection revenue will grow faster, roughly doubling from $60–80 million to $150–200 million. The total addressable market, including the value of services consumed within data centres (cloud computing, content delivery, financial transaction processing), is substantially larger, potentially $1–2 billion by 2030.
 
 The investment required to support this growth is estimated at $300–500 million over the five-year period. This includes new facility construction, expansion of existing sites, power infrastructure upgrades, and the development of specialised capabilities like GPU-ready zones and liquid cooling systems. The returns on this investment are attractive by African infrastructure standards, colocation facilities in Nairobi typically achieve 12–18% unlevered IRR, with higher returns available for operators who can differentiate on services, connectivity, or energy efficiency.
+
+The Kenyan government has now put its own weight behind this trajectory. Writing in September 2026, the Principal Secretary for ICT and the Digital Economy, Eng. John Kipchumba Tanui, framed the global context (a colocation and interconnection market worth about US$119 billion in 2025, heading toward roughly US$147 billion in 2026) against Africa's share of it (under 1 percent of global data centre capacity, for a continent holding about 18 percent of the world's population). His essay, which we fact-checked and unpacked in [Kenya's data centre and compute hub plan, explained](/articles/kenya-data-centre-compute-hub-plan-explained), commits the state to converting that gap into operating capacity, which is exactly the demand side this projection assumes.
 
 ## Risks and Challenges
 

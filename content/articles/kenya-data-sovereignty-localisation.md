@@ -12,7 +12,7 @@ secondary_keywords:
 author: Kevin Jonathan Onyango Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
-updated_date: '2026-08-28'
+updated_date: '2026-09-16'
 category: Policy
 cluster: Policy
 og_image: /images/nairobi-westlands.webp
@@ -41,6 +41,8 @@ internal_links:
 - text: Kenya Data Centre Market Outlook 2025 2030
   href: /articles/kenya-data-centre-market-outlook-2025-2030
 external_sources:
+- title: Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)
+  url: https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf
 - title: Office of the Data Protection Commissioner, Kenya
   url: https://www.odpc.go.ke
 - title: Kenya Data Protection Act, 2019, Kenya Law
@@ -208,6 +210,8 @@ This demand manifests in several ways:
 - **Local cloud growth**: Kenyan cloud service providers such as **Africa's Talking**, **Safaricom Cloud**, and **Ilara Health** (for health-tech) benefit from the preference for local data hosting, as compliance-conscious organisations choose domestic providers over international alternatives.
 
 According to market projections covered in our [Kenya data centre market outlook 2025–2030](/articles/kenya-data-centre-market-outlook-2025-2030), regulatory compliance is expected to be one of the top three demand drivers for new data centre capacity in Kenya through the end of the decade.
+
+The government's own economic framing now says the same thing. In September 2026, the Principal Secretary for ICT and the Digital Economy warned that if African data continues to be processed mainly outside the continent, Africa will export the raw material of its digital economy and import the resulting intelligence, platforms and services. That argument, from the essay we unpack in [Kenya's data centre and compute hub plan, explained](/articles/kenya-data-centre-compute-hub-plan-explained), turns localisation from a compliance burden into an industrial strategy: the point is not only to keep data in Kenya, but to build the Kenyan compute that does something valuable with it.
 
 ## How Multinational Cloud Providers Navigate Kenya's Rules
 

@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-16"
 category: "Policy & Regulation"
 cluster: "Policy"
 og_image: "/images/highrise-construction-cranes-kenya.webp"
@@ -38,6 +38,8 @@ internal_links:
   - text: "data centre due diligence in Kenya"
     href: "/articles/data-centre-due-diligence-kenya"
 external_sources:
+  - title: "Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)"
+    url: "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf"
   - title: "Kenya Investment Authority (KenInvest) Official Portal"
     url: "https://www.invest.go.ke/"
   - title: "Kenya Revenue Authority VAT Guidelines"
@@ -185,6 +187,8 @@ The Kenyan government has signalled its intention to introduce **additional tax 
 - **Reduced VAT** on data centre services to promote cloud adoption and digital transformation
 
 These proposals reflect a growing recognition within government that **targeted fiscal incentives** are necessary to attract the scale of data centre investment required to support Kenya's digital economy ambitions. For investors, staying engaged with the legislative process through industry associations and direct engagement with the National Treasury is essential to understanding and influencing these developments.
+
+External validation for this direction arrived in September 2026, when the Principal Secretary for ICT and the Digital Economy argued that Kenya's incentives must reward local computing services, AI capacity, additional renewable generation, skills and digital exports, not merely construction, and should include clawbacks where promised outcomes are missed. He pointed to Malaysia, which attracted over RM110 billion in approved data centre and cloud investment from 2021 by tying incentives to outcomes and sustainability rules. The full argument, with our fact-check against the market, is in [Kenya's data centre and compute hub plan, explained](/articles/kenya-data-centre-compute-hub-plan-explained).
 
 ## Comparative Analysis: Tax Incentives Across African Markets
 

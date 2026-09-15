@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-16"
 category: "Renewable Energy"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant.webp"
@@ -42,6 +42,8 @@ internal_links:
   - text: "energy challenges overview"
     href: "/articles/data-centre-cooling-systems-explained"
 external_sources:
+  - title: "Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)"
+    url: "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf"
   - title: "Kenya Electricity Generating Company (KenGen)"
     url: "https://www.kengen.co.ke/"
   - title: "Geothermal Development Company (GDC)"
@@ -137,5 +139,7 @@ Additional prospects at Suswa, Baringo, Silali, and other Rift Valley sites are 
 Kenya's geothermal resource is not just an energy supply, it is a competitive advantage in the global data centre market. As environmental sustainability becomes a criterion for data centre site selection, as ESG reporting requirements drive companies to reduce their carbon footprint, and as customers (particularly international enterprises) demand green infrastructure, Kenya's geothermal grid becomes a marketable asset.
 
 No amount of on-site solar panels at a data centre in South Africa can match the carbon intensity of running on Kenya's geothermal-dominated grid. No amount of corporate renewable energy certificates can substitute for the measurable, verifiable reality of drawing power from a grid that is 90%+ renewable. This is a structural advantage that will become more valuable over time, and Kenyan data centre operators should be communicating it aggressively to domestic and international customers.
+
+National policy has caught up with this argument. The Principal Secretary for ICT and the Digital Economy, writing in September 2026, made additional geothermal capacity for green computing an explicit national ask: dedicated renewable megawatts along the Naivasha, Nakuru and Baringo corridor, built new for computing rather than reallocated from households and existing industry. His essay, fact-checked in [Kenya's data centre and compute hub plan, explained](/articles/kenya-data-centre-compute-hub-plan-explained), also cites the geothermal corridor as the anchor of the Microsoft and G42 discussions near Naivasha, evidence that green baseload power is now the opening card in Kenya's hyperscale pitches.
 
 The Rift Valley's heat, rising through fractures in the Earth's crust to turn turbines and generate electricity, is an unlikely hero in Kenya's digital economy story. But it is the foundation on which the country's data centre industry is built, and it is the reason that Kenya can credibly position itself as home to Africa's greenest data centres.

@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-16"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/nairobi-skyline-night-kicc.webp"
@@ -42,6 +42,8 @@ internal_links:
   - text: "data centre directory"
     href: "/directory"
 external_sources:
+  - title: "Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)"
+    url: "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf"
   - title: "Kenya Digital Economy Blueprint"
     url: "https://www.go.ke/"
   - title: "World Bank - Kenya Digital Economy"
@@ -119,3 +121,5 @@ Domestically, the challenges include power reliability in some areas, a skills g
 Kenya's position as East Africa's digital hub is real but not guaranteed. Maintaining and strengthening it requires continued investment in data centre capacity (as the [licensing framework](/articles/kenya-data-centre-licensing-framework) provides regulatory clarity), expansion of connectivity to underserved areas, development of specialised skills, and policy coherence that supports rather than impedes digital infrastructure investment.
 
 The data centres being built today (iXAfrica's expansion, Africa Data Centres' growth, and the next wave of facilities currently in planning) are the physical manifestation of Kenya's digital hub positioning. They are the buildings that make the digital economy possible. And they are the reason that, when a company anywhere in East Africa needs to decide where to host its servers, Nairobi remains the first and most logical choice.
+
+The clearest statement of that ambition now sits at the top of government. In a September 2026 essay, the Principal Secretary for ICT and the Digital Economy, Eng. John Kipchumba Tanui, argued that Kenya has already built the cables and that the next national assignment is compute: cloud regions, AI-ready capacity and the services built on top of them. We unpacked the full plan and fact-checked its claims against our directory in [Kenya's data centre and compute hub plan, explained](/articles/kenya-data-centre-compute-hub-plan-explained). If the state executes even part of it, the hub positioning this guide describes stops being a description and becomes a strategy.
