@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-14"
+updated_date: "2026-09-15"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/nbo2-launch-ribbon-cutting.webp"
@@ -105,4 +105,4 @@ For Kenyan buyers, the consolidation cuts both ways. The upside: capital depth, 
 
 ## What it means for the market this quarter
 
-Three practical takeaways. First, Kenya's operating map now has 26 verified entries in [our directory](/directory), but only eight genuinely carrier-neutral buildings, so every new neutral rack is absorbed quickly; NBO2's ramp is worth watching monthly. Second, the competitive response is already in the market: iXAfrica's 22.5 MW Mombasa Road campus expansion, the Tilisi land commitment, and Africa Data Centres' Sameer expansion are all racing the same demand curve, which means pricing power is shifting to buyers in the near term, whatever the press releases imply. Third, for the government's hub ambitions, the binding constraint remains power delivery and interconnection density, not concrete. [Our market-in-numbers reference](/articles/kenya-data-centre-market-numbers) tracks all three, and the [NBO2 entry](/directory/icolo-nbo2) will be re-verified the moment its interconnection record moves.
+Three practical takeaways. First, Kenya's operating map now has 27 verified entries in [our directory](/directory), but only eight genuinely carrier-neutral buildings, so every new neutral rack is absorbed quickly; NBO2's ramp is worth watching monthly. Second, the competitive response is already in the market: iXAfrica's 22.5 MW Mombasa Road campus expansion, the Tilisi land commitment, and Africa Data Centres' Sameer expansion are all racing the same demand curve, which means pricing power is shifting to buyers in the near term, whatever the press releases imply. Third, for the government's hub ambitions, the binding constraint remains power delivery and interconnection density, not concrete. [Our market-in-numbers reference](/articles/kenya-data-centre-market-numbers) tracks all three, and the [NBO2 entry](/directory/icolo-nbo2) will be re-verified the moment its interconnection record moves.

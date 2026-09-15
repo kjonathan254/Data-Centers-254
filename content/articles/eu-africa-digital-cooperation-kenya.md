@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Onyango Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-08"
+updated_date: "2026-09-15"
 category: "Policy"
 cluster: "Policy"
 og_image: "/images/dc-policy-regulation.webp"
@@ -67,7 +67,7 @@ That offer converges on six priorities: **trusted connectivity, data governance,
 
 ## Kenya and Ghana: the two test cases
 
-The brief's most useful section for our readers is its pairing of country models. **Ghana** illustrates the market-led partnership: a stable, competitive telecoms and cloud environment where European engagement works through commercial frameworks. **Kenya** illustrates the comprehensive model, and here the brief could have been written from our own research notes. Kenya brings East Africa's densest data centre cluster ([26 verified facilities](/directory), the region's deepest interconnection), an existing **EU-Kenya Digital Partnership** with dedicated funding, a regulator with a track record, and a data protection regime that aligns naturally with European standards.
+The brief's most useful section for our readers is its pairing of country models. **Ghana** illustrates the market-led partnership: a stable, competitive telecoms and cloud environment where European engagement works through commercial frameworks. **Kenya** illustrates the comprehensive model, and here the brief could have been written from our own research notes. Kenya brings East Africa's densest data centre cluster ([27 verified facilities](/directory), the region's deepest interconnection), an existing **EU-Kenya Digital Partnership** with dedicated funding, a regulator with a track record, and a data protection regime that aligns naturally with European standards.
 
 The machinery behind the Kenya relationship is already visible on the ground. The EU's **Global Gateway** framework has channelled significant digital funding toward Kenya, including the EUR 102 million EU-Kenya Digital Partnership package announced in June 2026 and the AfricaConnect research-and-education network boost. The **Digital Investment Facility** (implemented with GIZ and HAUS under the Data Governance in Africa initiative) commissions the Xalam Analytics country data centre briefings we regularly cite ([the free Kenya brief](https://d4dhub.eu/news/dif-country-market-briefs) is the best public market document in this space), alongside green data centre e-learning and cybersecurity guidance. And the **D4D Hub** provides the political umbrella, with Team Europe actively courting African counterparts at events from GITEX Africa to the New Space Africa conference.
 
