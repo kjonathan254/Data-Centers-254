@@ -49,6 +49,10 @@ const nextConfig: NextConfig = {
     return [
       // /index was a duplicate of /directory — permanently redirect legacy links
       { source: "/index", destination: "/directory", permanent: true },
+      // /internet was an orphaned duplicate of the Internet & Connectivity hub
+      // at /infrastructure (both listed cluster="Internet"). 308 so any legacy
+      // links and crawl equity flow to the single, nav-linked hub.
+      { source: "/internet", destination: "/infrastructure", permanent: true },
       // /news surfaces never existed as pages — send crawled links to real homes
       { source: "/news", destination: "/tracker", permanent: true },
       {

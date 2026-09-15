@@ -34,12 +34,12 @@ export const CLUSTER_META: Record<
   },
   Infrastructure: {
     label: "Infrastructure",
-    href: "/infrastructure",
+    href: "/data-centres",
     color: "text-blue-400 bg-blue-400/10 border-blue-400/25",
   },
   Policy: {
     label: "Policy & Regulation",
-    href: "/research",
+    href: "/policy",
     color: "text-amber-400 bg-amber-400/10 border-amber-400/25",
   },
 };

@@ -32,7 +32,7 @@ const clusterMeta: Record<string, { label: string; entry: string; route: string 
   Policy: {
     label: "Policy",
     entry: "Licensing, data protection and the rules shaping who builds what, where.",
-    route: "/research",
+    route: "/policy",
   },
   Infrastructure: {
     label: "Data centres",

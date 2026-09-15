@@ -18,12 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Cluster landing pages (article listings)
     { url: `${baseUrl}/beginners`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/kenya`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/internet`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    // NOTE: /internet intentionally absent, 308-redirected to /infrastructure
+    { url: `${baseUrl}/policy`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/energy`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/careers`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/ai`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/infrastructure`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/infrastructure/map`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    // Knowledge Base hub, was missing from the sitemap entirely
+    { url: `${baseUrl}/data-centres`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     // Content pages
     { url: `${baseUrl}/foundations`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/research`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
