@@ -20,6 +20,8 @@ import type {
 } from "@/lib/articles";
 import { CLUSTER_META } from "@/lib/cluster-meta";
 import { getClusterImage } from "@/lib/imagery";
+import { PORTRAIT_IMAGE_DIMS } from "@/lib/portrait-images";
+import { IMAGE_FOCUS } from "@/lib/image-focus";
 
 // ─── Types ────────────────────────────────────────────────────────────────
 
@@ -97,11 +99,52 @@ function TableOfContents({ headings }: { headings: HeadingItem[] }) {
 
 // ─── Article Image ────────────────────────────────────────────────────────
 
+// Portrait photos (taller than wide) lose heads and feet to the fixed-height
+// object-cover bands below, so they render at their natural aspect ratio,
+// centred, at a readable column width instead of being cropped.
+function PortraitFigure({
+  src, alt, caption, priority,
+}: { src: string; alt: string; caption?: string; priority?: boolean }) {
+  const dims = PORTRAIT_IMAGE_DIMS[src];
+  if (!dims) return null;
+  return (
+    <figure className="my-8">
+      <div className="flex justify-center">
+        <Image
+          src={src}
+          alt={alt}
+          width={dims.width}
+          height={dims.height}
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 448px"
+          className="w-full max-w-md rounded-xl h-auto"
+        />
+      </div>
+      {caption && (
+        <figcaption className="text-xs text-muted-foreground mt-2 leading-relaxed max-w-md mx-auto">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 function ArticleImageBlock({ image }: { image: ArticleImage }) {
   const isHero = image.position === "hero";
   const isInfographic = image.position === "infographic";
   const isSectionBreak = image.position === "section-break";
   const isDiagram = image.position === "diagram";
+
+  if (!isDiagram && PORTRAIT_IMAGE_DIMS[image.src]) {
+    return (
+      <PortraitFigure
+        src={image.src}
+        alt={image.alt}
+        caption={image.caption}
+        priority={isHero}
+      />
+    );
+  }
 
   return (
     <figure
@@ -141,6 +184,11 @@ function ArticleImageBlock({ image }: { image: ArticleImage }) {
             alt={image.alt}
             fill
             className="object-cover"
+            style={
+              IMAGE_FOCUS[image.src]
+                ? { objectPosition: IMAGE_FOCUS[image.src] }
+                : undefined
+            }
             sizes={
               isHero
                 ? "(max-width: 1024px) 100vw, 896px"
@@ -378,10 +426,24 @@ function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
         return <ArticleImageBlock image={matched} />;
       }
       // Generic image without frontmatter mapping
+      if (PORTRAIT_IMAGE_DIMS[src]) {
+        return <PortraitFigure src={src} alt={alt || ""} caption={alt || undefined} />;
+      }
       return (
         <figure className="my-8">
           <div className="relative overflow-hidden rounded-xl h-48 sm:h-64">
-            <Image src={src} alt={alt || ""} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
+            <Image
+              src={src}
+              alt={alt || ""}
+              fill
+              className="object-cover"
+              style={
+                IMAGE_FOCUS[src]
+                  ? { objectPosition: IMAGE_FOCUS[src] }
+                  : undefined
+              }
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
           </div>
           {alt && <figcaption className="text-xs text-muted-foreground mt-2">{alt}</figcaption>}
         </figure>

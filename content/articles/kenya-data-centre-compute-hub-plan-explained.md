@@ -26,7 +26,7 @@ images:
     caption: "Tatu City, the special planning area on Nairobi's northern edge where Nxtra by Airtel is building a two-phase 44 MW campus"
     position: "inline"
   - src: "/images/oracle-ixafrica-partnership.webp"
-    alt: "Oracle and iXAfrica executives shaking hands in front of server racks at the iXAfrica data centre"
+    alt: "Oracle's Kenya country leader and iXAfrica CEO Snehar Shah meet at the iXAfrica data centre in Nairobi"
     caption: "Oracle's Kenya country leader and iXAfrica CEO Snehar Shah meet at the facility named in January 2026 as host partner for Oracle Cloud Infrastructure's Nairobi region"
     position: "inline"
   - src: "/images/kenya-geothermal-plant-olkaria.webp"
@@ -79,15 +79,21 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-centre-compute-hub-plan-explained"
 ---
 
-On 15 September 2026, Eng. John Kipchumba Tanui, CBS, Kenya's Principal Secretary for ICT and the Digital Economy, published a long essay on LinkedIn with an ambitious title: Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub. It is the most complete public statement yet of how Kenya's government sees this industry. It tells the story of how the country got here, sizes up the competition, admits the risks, and sets out what the state should do next. Pieces like this usually stay buried in policy language, so we read every word, checked the load-bearing claims against our verified directory, and translated it into plain English.
+On 15 September 2026, Eng. John Kipchumba Tanui, CBS, Kenya's Principal Secretary for ICT and the Digital Economy, published a long essay on LinkedIn with an ambitious title: Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub. It is the most complete public statement yet of how Kenya's government sees this industry. It tells the story of how the country got here, sizes up the competition, admits the risks, and sets out what the state should do next.
+
+Pieces like this usually stay buried in policy language, so we read every word, checked the load-bearing claims against our verified directory, and translated it into plain English.
 
 ![Eng. John Kipchumba Tanui, Principal Secretary for ICT and the Digital Economy, speaking at a Konza Technopolis event](/images/tanui-ps-konza-podium.webp)
 
 ## The one-sentence version
 
-Kenya built the cables. Now it needs the compute. Tanui's opening argument is that every digital transaction, from an M-PESA payment to an AI chatbot answer, has a physical home: a building full of servers, storage and network equipment. Countries that host those buildings gain speed, control over their own data, technology investment and the base required for artificial intelligence. Countries that do not host them stay dependent. His framing is worth quoting exactly, because it is the whole essay in two lines: "Kenya has already built the cables. The next national assignment is to build the compute."
+Kenya built the cables. Now it needs the compute. Tanui's opening argument is that every digital transaction, from an M-PESA payment to an AI chatbot answer, has a physical home: a building full of servers, storage and network equipment.
 
-For a newcomer, the word compute is the one to unpack. Cables are the roads that carry data in and out of the country. Compute is the factory work at the end of the road: the machines that actually process your mobile money record, your eCitizen application or a Kiswahili AI model's training data. Today, far too much of that factory work for African data happens outside Africa. The PS's sharpest line makes the stakes plain: if African data continues to be processed mainly outside the continent, Africa will "export the raw material of its digital economy and import the resulting intelligence, platforms and services."
+Countries that host those buildings gain speed, control over their own data, technology investment and the base required for artificial intelligence. Countries that do not host them stay dependent. His framing is worth quoting exactly, because it is the whole essay in two lines: "Kenya has already built the cables. The next national assignment is to build the compute."
+
+For a newcomer, the word compute is the one to unpack. Cables are the roads that carry data in and out of the country. Compute is the factory work at the end of the road: the machines that actually process your mobile money record, your eCitizen application or a Kiswahili AI model's training data.
+
+Today, far too much of that factory work for African data happens outside Africa. The PS's sharpest line makes the stakes plain: if African data continues to be processed mainly outside the continent, Africa will "export the raw material of its digital economy and import the resulting intelligence, platforms and services."
 
 ## The numbers he builds the case on
 
@@ -118,11 +124,15 @@ This is where the essay earns its credibility, because it is more sceptical than
 
 ![Tatu City boulevard with Tatu City signage and office buildings under construction](/images/tatu-city-aerial.webp)
 
-**The Oracle cloud region: announced, not live.** President Ruto announced Kenya's first Oracle Cloud Infrastructure (OCI) public cloud region in January 2024. In January 2026, iXAfrica was named as the host partner in Nairobi (iXAfrica announcement, 27 Jan 2026). The region is under development and comes into service only after construction, power and cloud fit-out are done. When it lands, it will be the first real test of whether Kenya can host a global public cloud region, not just interconnection. You can see the facility it will run on, [iXAfrica NBOX1 in our verified facility directory](/directory/ixafrica-nbox1).
+**The Oracle cloud region: announced, not live.** President Ruto announced Kenya's first Oracle Cloud Infrastructure (OCI) public cloud region in January 2024. In January 2026, iXAfrica was named as the host partner in Nairobi (iXAfrica announcement, 27 Jan 2026). The region is under development and comes into service only after construction, power and cloud fit-out are done.
 
-![Oracle and iXAfrica executives shaking hands in front of server racks at the iXAfrica data centre](/images/oracle-ixafrica-partnership.webp)
+When it lands, it will be the first real test of whether Kenya can host a global public cloud region, not just interconnection. You can see the facility it will run on, [iXAfrica NBOX1 in our verified facility directory](/directory/ixafrica-nbox1).
 
-**Tatu City: the biggest thing being built right now.** Nxtra by Airtel, Airtel Africa's data-centre subsidiary, is developing a two-phase, 44 MW campus inside the Tatu City special planning area on Nairobi's northern edge. Trade press reported the groundbreaking and a US$150 million investment in September 2025 (DataCenterDynamics, 12 Sep 2025), and the PS cites commissioning targeted in 2027. No completion date is independently confirmed, so our verified directory has tracked it as Under Construction since the groundbreaking, and it now appears on our national infrastructure map too.
+![Oracle's Kenya country leader and iXAfrica CEO Snehar Shah meet at the iXAfrica data centre in Nairobi](/images/oracle-ixafrica-partnership.webp)
+
+**Tatu City: the biggest thing being built right now.** Nxtra by Airtel, Airtel Africa's data-centre subsidiary, is developing a two-phase, 44 MW campus inside the Tatu City special planning area on Nairobi's northern edge. Trade press reported the groundbreaking and a US$150 million investment in September 2025 (DataCenterDynamics, 12 Sep 2025), and the PS cites commissioning targeted in 2027.
+
+No completion date is independently confirmed, so our verified directory has tracked it as Under Construction since the groundbreaking, and it now appears on our national infrastructure map too.
 
 **Digital Realty NBO2: open.** The new Nairobi Two (NBO2) facility in Karen, about 6.5 MW of design load (the PS's essay cites 6.4 MW), expands the former iColo campus and connects more than 100 networks, with access to two internet exchange points. It is real, operating capacity, and it completes iColo's transition to the Digital Realty brand in Kenya.
 
@@ -150,9 +160,13 @@ On the rules side, one policy thread connects directly to the essay's compute ar
 
 ![Principal Secretary John Tanui addressing an audience at a Konza Technopolis podium](/images/tanui-ps-konza-address.webp)
 
-The essay is unusual for a government piece because it names the failure modes. Ireland shows what happens when data centre growth outruns the grid: 22 percent of national electricity by 2024, and new sites now expected to bring additional renewable generation with them. Northern Virginia shows the employment trap: thousands of construction jobs, then roughly 50 permanent staff per large facility, which means success must be measured by the digital economy the facilities enable, not headcount inside the halls. Malaysia shows the incentive trap from the other side: it attracted over RM110 billion in approved investment by tying incentives to outcomes, and the PS argues Kenya should reward operating capacity, local cloud services, additional renewable generation and skills, with clawbacks where outcomes are missed.
+The essay is unusual for a government piece because it names the failure modes. Ireland shows what happens when data centre growth outruns the grid: 22 percent of national electricity by 2024, and new sites now expected to bring additional renewable generation with them.
 
-He also lists the local risks plainly: electricity availability and price, competition with households for infrastructure, noise and land-use friction, cybersecurity and over-dependence on a single cloud provider, and the possibility of building capacity faster than workloads arrive. For context, Kenya's entire national peak demand is around 2,439MW, which is why every large campus conversation in Kenya is really an energy conversation. The practical discipline he proposes is disclosure: each major project should publish its expected electricity demand, the source of additional generation, water requirements, cooling technology and its contribution to local skills.
+Northern Virginia shows the employment trap: thousands of construction jobs, then roughly 50 permanent staff per large facility, which means success must be measured by the digital economy the facilities enable, not headcount inside the halls. Malaysia shows the incentive trap from the other side: it attracted over RM110 billion in approved investment by tying incentives to outcomes, and the PS argues Kenya should reward operating capacity, local cloud services, additional renewable generation and skills, with clawbacks where outcomes are missed.
+
+He also lists the local risks plainly: electricity availability and price, competition with households for infrastructure, noise and land-use friction, cybersecurity and over-dependence on a single cloud provider, and the possibility of building capacity faster than workloads arrive.
+
+For context, Kenya's entire national peak demand is around 2,439MW, which is why every large campus conversation in Kenya is really an energy conversation. The practical discipline he proposes is disclosure: each major project should publish its expected electricity demand, the source of additional generation, water requirements, cooling technology and its contribution to local skills.
 
 ## His to-do list for the government
 
@@ -173,9 +187,13 @@ That last one should sound familiar. A public scoreboard of live megawatts and o
 
 ## Our fact-check verdict
 
-We ran the essay's checkable claims against our own verified data, and it holds up well. The iXAfrica OCI host-partner announcement (27 January 2026) matches our directory entry exactly. The Digital Realty NBO2 opening and its 100-plus networks match our tracked records. The Nxtra Tatu City figures align with trade-press reporting from September 2025 (groundbreaking, US$150 million) and with our own directory entry, which records the launch target slipping to July 2027; we have now also placed the campus on our national infrastructure map. The cautious framing of Microsoft and G42 matches the line our directory has carried since launch. The Africa capacity gap he cites (about 18 percent of population, under 1 percent of capacity) is consistent with the estimates used across industry research.
+We ran the essay's checkable claims against our own verified data, and it holds up well. The iXAfrica OCI host-partner announcement (27 January 2026) matches our directory entry exactly. The Digital Realty NBO2 opening and its 100-plus networks match our tracked records.
 
-What we could not verify: any completion dates. The 2027 commissioning target for Tatu City is a stated plan, not a confirmed date, and the OCI region has no public launch date. To his credit, the essay itself flags that gap between confidence and capacity. As he puts it, the test is whether "the innovation, computing and intelligence produced by this infrastructure also happen in Kenya." On the evidence in this piece, the government's thinking and the observable pipeline are, for once, pointed in the same direction.
+The Nxtra Tatu City figures align with trade-press reporting from September 2025 (groundbreaking, US$150 million) and with our own directory entry, which records the launch target slipping to July 2027; we have now also placed the campus on our national infrastructure map. The cautious framing of Microsoft and G42 matches the line our directory has carried since launch. The Africa capacity gap he cites (about 18 percent of population, under 1 percent of capacity) is consistent with the estimates used across industry research.
+
+What we could not verify: any completion dates. The 2027 commissioning target for Tatu City is a stated plan, not a confirmed date, and the OCI region has no public launch date.
+
+To his credit, the essay itself flags that gap between confidence and capacity. As he puts it, the test is whether "the innovation, computing and intelligence produced by this infrastructure also happen in Kenya." On the evidence in this piece, the government's thinking and the observable pipeline are, for once, pointed in the same direction.
 
 ## What this means for you
 
