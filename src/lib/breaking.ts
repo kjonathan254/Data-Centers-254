@@ -40,11 +40,11 @@ const BREAKING_TTL_HOURS = 72;
 export const breakingNews: BreakingItem | null = {
   label: "Policy",
   title:
-    "CA opens 30-day consultation on a standalone data centre licence, the NFP-T2 era may be ending",
-  href: "/articles/kenya-ca-standalone-data-centre-licence",
-  dateText: "8 Sep 2026",
-  publishedAt: "2026-09-08",
-  serious: true,
+    "Kenya's ICT PS lays out the national plan to become Africa's data centre and compute hub",
+  href: "/articles/kenya-data-centre-compute-hub-plan-explained",
+  dateText: "15 Sep 2026",
+  publishedAt: "2026-09-15",
+  serious: false,
 };
 
 /**

@@ -6,7 +6,7 @@ import ArticleClusterPage from "@/components/article-cluster-page";
 export const metadata: Metadata = {
   title: "Policy & Regulation: Kenya Data Centre Rules",
   description:
-    "Licensing, data protection, taxation, and the regulatory frameworks shaping Kenya's data centre industry. Nine deep dives, all sourced and dated.",
+    "Licensing, data protection, taxation, and the regulatory frameworks shaping Kenya's data centre industry. Ten deep dives, all sourced and dated.",
   alternates: { canonical: "/policy" },
   keywords: [
     "Kenya data centre regulation",
