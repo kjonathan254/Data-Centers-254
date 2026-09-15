@@ -161,3 +161,5 @@ ADC enters this period from a position of strength. It has the largest continent
 For Kenya's digital economy, ADC's continued investment is unambiguously positive. More capacity, more connectivity options, and more competition ultimately serve the enterprises, governments, and citizens who depend on digital infrastructure. Whether you are evaluating colocation providers for your organisation or tracking the development of East Africa's digital ecosystem, Africa Data Centres is an operator that will remain central to the conversation for years to come.
 
 Explore all operators and facilities in our [data centre directory](/directory), learn the basics with our guide to [colocation in Kenya](/articles/what-is-colocation-kenya), or read about the international connectivity that makes Kenya's data centres strategically valuable in our overview of [submarine cables in Mombasa](/articles/submarine-cables-landing-mombasa).
+
+Weighing ADC against another pan-African operator? Our fact-checked [Raxio vs Africa Data Centres in Kenya](/articles/raxio-vs-africa-data-centres-kenya-comparison) comparison separates what is open from what is only announced.
