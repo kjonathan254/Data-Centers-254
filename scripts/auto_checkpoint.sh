@@ -14,9 +14,16 @@
 # It is never written to disk, .git/config, or this file. The
 # watcher dies with the container, so the token dies with it.
 #
+# NOTE (verified 2026-09-15): this sandbox reaps background
+# processes at tool-call boundaries, and tool shells do not
+# source rc files. Daemon mode therefore does NOT persist
+# between calls. Primary usage is --once, run by the agent
+# between work chunks: one cycle = desync check + auto-commit
+# + push. This keeps respawn exposure to a single work chunk.
+#
 # USAGE:
-#   DC254_PUSH_TOKEN=<token> nohup bash scripts/auto_checkpoint.sh >/dev/null 2>&1 &
-#   bash scripts/auto_checkpoint.sh --once     (single test cycle)
+#   DC254_PUSH_TOKEN=<token> bash scripts/auto_checkpoint.sh --once
+#   (daemon mode below still works where long-lived shells exist)
 #
 # Logs: /home/z/my-project/checkpoint.log
 # Alert flag: /tmp/DC254_ROLLBACK_ALERT (checked by session_check.sh)

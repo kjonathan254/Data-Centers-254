@@ -13,8 +13,12 @@
 #                                           until it has passed this boot.
 #   bash scripts/session_check.sh --hook    internal: rc-file hook, silent
 #                                           unless CRITICAL, once per boot.
-#   bash scripts/auto_checkpoint.sh         companion watcher (gap-1 fix):
-#                                           10-min auto-commit + push + desync alert.
+#   bash scripts/auto_checkpoint.sh --once  save point between work chunks:
+#                                           desync check + auto-commit + push.
+#                                           (NOTE: daemons are reaped at tool-call
+#                                           boundaries in this sandbox; verified
+#                                           2026-09-15. --once is the only reliable
+#                                           mode; agents should run it between chunks.)
 #
 # v2: expected content counts are pulled from origin/main
 # dynamically (no hardcoded 77/27 that rots as content grows).
@@ -132,16 +136,16 @@ else
   echo "[WARN]  em dash reappeared in $EMDASH_FILES file(s)"
 fi
 
-# ---------- 5. mid-session protections status ----------
+# ---------- 5. mid-session protection status ----------
 if [ -f /tmp/DC254_ROLLBACK_ALERT ]; then
-  echo "[CRIT]  watcher raised ROLLBACK ALERT earlier this boot (see /home/z/my-project/checkpoint.log)"
+  echo "[CRIT]  ROLLBACK ALERT flag present (see /home/z/my-project/checkpoint.log)"
   CRITICAL=1
 fi
-if command -v pgrep >/dev/null 2>&1 && pgrep -f "auto_checkpoint.sh" >/dev/null 2>&1; then
-  echo "[OK]    auto-checkpoint watcher running"
+UNPUSHED="$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)"
+if [ "$UNPUSHED" -eq 0 ]; then
+  echo "[OK]    nothing unpushed (respawn exposure: zero)"
 else
-  echo "[WARN]  watcher NOT running: launch with"
-  echo "        DC254_PUSH_TOKEN=<token> nohup bash scripts/auto_checkpoint.sh >/dev/null 2>&1 &"
+  echo "[WARN]  $UNPUSHED unpushed commit(s); run: bash scripts/auto_checkpoint.sh --once"
 fi
 
 # ---------- 6. hygiene ----------
