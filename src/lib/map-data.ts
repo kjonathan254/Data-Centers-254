@@ -54,6 +54,7 @@ export const KENYA_FACILITIES: KenyaFacility[] = [
   { id: "konza", metro: "none", openedYear: null, name: "Konza National Data Centre", shortName: "Konza NDC", operator: "KoTDA (Government of Kenya)", status: "Operational", city: "konza", lat: -1.4400, lng: 37.3000, totalMW: 0, tier: "Tier III TCCF (2022)", racks: 140, note: "Government facility at Konza Technopolis. Uptime Tier III Constructed Facility (23 Aug 2022) + Design (13 Feb 2020). Serves government workloads primarily." },
   { id: "tilisi", metro: "none", openedYear: null, name: "iXAfrica NBOX2 (Tilisi)", shortName: "iXAfrica Tilisi", operator: "iXAfrica Data Centres", status: "Committed", city: "nairobi", lat: -1.1800, lng: 36.6500, totalMW: 53, tier: "Planned hyperscale", racks: null, note: "11 acres acquired in the Tilisi development (Aug 2023), planned for over 53 MW of IT load. Pre-build; do not confuse with NBOX1.2 on Mombasa Road." },
   { id: "kdc", metro: "none", openedYear: null, name: "Kenya Data Centres SME Facility", shortName: "KDC SME", operator: "Kenya Data Centres (ICT Authority)", status: "Early Stage", city: "nairobi", lat: -1.2860, lng: 36.8200, totalMW: 0, tier: "Announced", racks: null, note: "Announced SME-focused colocation facility, site and capacity undisclosed. A signal of where the market is heading, not a pipeline." },
+  { id: "nxtra-tatu", metro: "none", openedYear: null, name: "Nxtra by Airtel Tatu City", shortName: "Nxtra Tatu", operator: "Nxtra by Airtel", status: "Under Construction", city: "nairobi", lat: -1.1572, lng: 36.8770, totalMW: 44, tier: "Planned hyperscale", racks: null, aiReady: true, note: "Two-phase 44 MW hyperscale campus at Tatu City, Ruiru ($150M, grounded Sep 2025). Launch reported slipped to Jul 2027; the ICT PS cites commissioning targeted 2027 (15 Sep 2026). Treat the opening date as unconfirmed." },
 
   // ── Mombasa metro (4) ──
   { id: "icolo-mba1", metro: "mombasa", openedYear: 2017, name: "iColo Mombasa One (MBA1)", shortName: "iColo MBA1", operator: "iColo (Digital Realty)", status: "Operational", city: "mombasa", lat: -3.9650, lng: 39.6550, totalMW: 0.9, tier: "Carrier-neutral", racks: 250, note: "Miritini. The densest interconnection point on the Kenyan coast: 94 networks, 3 exchanges. Campus master plan: 13 MW / 1,800 racks." },
@@ -63,7 +64,7 @@ export const KENYA_FACILITIES: KenyaFacility[] = [
 ];
 
 export const LIVE_MW = 28.2;    // built (designed) capacity of operational facilities, where published
-export const PIPELINE_MW = 186; // UC (18+15) + Committed (53) + Early Stage (100), announced basis
+export const PIPELINE_MW = 230; // UC (18+15+44) + Committed (53) + Early Stage (100), announced basis
 
 // ── Regional (context) assets ───────────────────────────────────────────────
 

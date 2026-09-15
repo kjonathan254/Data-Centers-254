@@ -22,7 +22,7 @@ const sections = [
     body: [
       "Briefing subscriptions. When you subscribe to The Rack Report, our weekly intelligence briefing, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. Subscriber records are stored on this website's infrastructure and, where our email service is configured, also as contacts in Resend, our email service provider. You can unsubscribe at any time using the link in every email, which erases your subscription record.",
       "Contact form messages. When you contact us through the contact form, we receive your name, email address, subject, and message. This is delivered to our email inbox through Resend and is used solely to respond to you.",
-      "Analytics. We use Google Analytics 4 to understand how the site is used, pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties.",
+      "Analytics. We use Google Analytics 4 to understand how the site is used, pages visited, approximate location (country/city), device and browser type, and referring sources. Google Analytics may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties. We also use Microsoft Clarity, a cookieless analytics tool that shows how pages are used (heatmaps, scroll depth, and where visitors get stuck). Clarity masks all text that visitors type, records no form entries or passwords, and sets no cookies.",
     ],
   },
   {
@@ -34,13 +34,13 @@ const sections = [
   {
     title: "4. Third-Party Services",
     body: [
-      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Resend (briefing contact storage and email delivery), and Google Analytics 4 (aggregate audience analytics). Each processes data on our instructions under its own privacy terms.",
+      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Resend (briefing contact storage and email delivery), Google Analytics 4 (aggregate audience analytics), and Microsoft Clarity (cookieless, masked usage analytics). Each processes data on our instructions under its own privacy terms.",
     ],
   },
   {
     title: "5. Cookies",
     body: [
-      "The website itself sets no tracking cookies of its own. The only cookies on this site come from Google Analytics, used to measure aggregate traffic. You can block or delete analytics cookies through your browser settings without losing access to any part of the site.",
+      "The website itself sets no tracking cookies of its own. The only cookies on this site come from Google Analytics, used to measure aggregate traffic. Microsoft Clarity, our other analytics tool, is cookieless and sets no cookies at all. You can block or delete analytics cookies through your browser settings without losing access to any part of the site.",
     ],
   },
   {

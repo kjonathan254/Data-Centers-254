@@ -189,6 +189,17 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-GDS6XW6RS3"
           strategy="lazyOnload"
         />
+        {/* Microsoft Clarity: cookieless behavioural analytics (heatmaps, session
+            replays with automatic input masking, rage-click detection). Inline
+            init like GA4; the tag fetch is async and never blocks rendering. */}
+        <Script
+          id="ms-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "yimqsgqdql");',
+          }}
+        />
         {children}
         <ChatWidget />
         <Analytics />
