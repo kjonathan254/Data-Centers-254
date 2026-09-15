@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const nairobi = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasa = facilities.filter((f) => f.city === "Mombasa").length;
   const title = `Kenya Data Centre Directory: ${facilities.length} Facilities`;
-  const description = `How many data centres are in Kenya? ${facilities.length} facilities tracked and verified, ${operational} of them operational (${nairobi} in Nairobi, ${mombasa} in Mombasa). Staged pipeline, search, filter, and compare. Every facility verified and sourced.`;
+  const description = `How many data centres are in Kenya? ${facilities.length} tracked, ${operational} operational (${nairobi} in Nairobi, ${mombasa} in Mombasa). Search, filter, and compare, fully sourced.`;
   return {
     title,
     description,

@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Compare Kenya Data Centres Side by Side",
   description:
-    "Put any Kenyan data centres head to head, IT load, designed capacity, racks, tier rating, AI readiness, connectivity, cooling and power, with every figure sourced and dated. Free from Data Centre 254.",
+    "Put any Kenyan data centres head to head: IT load, capacity, racks, tier rating, AI readiness, connectivity, cooling and power. Sourced and dated.",
   alternates: { canonical: "/directory/compare" },
   openGraph: {
     title: "Compare Kenya Data Centres Side by Side | Data Centre 254",

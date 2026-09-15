@@ -9,9 +9,9 @@ import { PIDA_PROJECTS, PIDA_SOURCE } from "@/lib/pida-data";
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "Kenya Data Centre Map: 26 Facilities, 8 Subsea Cables | Data Centre 254",
+  title: "Kenya Data Centre Map: Facilities & Subsea Cables",
   description:
-    "Interactive map of every data centre in Kenya (Nairobi, Mombasa and beyond) plus the eight submarine cables landing at the coast, the fibre backbone of East Africa, and the PIDA continental project layer.",
+    "Interactive map of every data centre in Kenya, plus the eight submarine cables landing at the coast and the fibre backbone of East Africa.",
   alternates: { canonical: "/infrastructure/map" },
   openGraph: {
     title: "Every data centre in Kenya, mapped | Data Centre 254",
