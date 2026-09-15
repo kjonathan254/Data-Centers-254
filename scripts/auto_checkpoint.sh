@@ -41,7 +41,8 @@ if [ "$ONCE" -eq 0 ] && [ -f "$PIDFILE" ]; then
 fi
 echo $$ > "$PIDFILE"
 if [ -n "${DC254_PUSH_TOKEN:-}" ]; then TSTAT="set"; else TSTAT="unset"; fi
-log "watcher ${ONCE:+(once mode) }started pid=$$ interval=${INTERVAL}s token=$TSTAT"
+if [ "$ONCE" -eq 1 ]; then MODE="(once mode) "; else MODE=""; fi
+log "watcher ${MODE}started pid=$$ interval=${INTERVAL}s token=$TSTAT"
 
 while :; do
   cd "$REPO" 2>/dev/null || { log "FATAL: repo directory missing"; exit 1; }
