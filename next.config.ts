@@ -1,4 +1,64 @@
 import type { NextConfig } from "next";
+import { existsSync, readdirSync } from "fs";
+import { join } from "path";
+
+/**
+ * Bare-slug safety net: people (and bots) guess article URLs without the
+ * /articles/ segment — /gpu-cloud-infrastructure-kenya instead of
+ * /articles/gpu-cloud-infrastructure-kenya — and hit a 404. One permanent
+ * redirect per real article slug auto-heals those links and consolidates any
+ * stray crawl equity into the canonical page.
+ *
+ * Generated from content/articles/ at build time, so new articles are covered
+ * with zero manual steps. Two guard rails:
+ *  - a slug is skipped if it collides with a real top-level route (any
+ *    src/app segment or public/ entry), so /directory, /policy, /reports etc.
+ *    can never be shadowed — config redirects are checked before filesystem
+ *    routes, which makes the collision guard load-bearing;
+ *  - only clean lowercase slugs pass (no dots, no odd characters).
+ */
+function articleSlugRedirects() {
+  const root = process.cwd();
+  const articlesDir = join(root, "content", "articles");
+  if (!existsSync(articlesDir)) return [];
+
+  const slugs = readdirSync(articlesDir)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => f.replace(/\.md$/, ""))
+    .filter((s) => /^[a-z0-9-]+$/.test(s));
+
+  const reserved = new Set<string>([
+    "api", "_next", "_vercel", "articles", "favicon.ico", "robots.txt",
+    "sitemap.xml", "sw.js", "offline", "index",
+  ]);
+  for (const dir of ["src/app", "public"]) {
+    const p = join(root, dir);
+    if (existsSync(p)) {
+      for (const e of readdirSync(p)) {
+        reserved.add(e.includes(".") ? e.replace(/\.[^.]+$/, "") : e);
+      }
+    }
+  }
+
+  const redirects: { source: string; destination: string; permanent: boolean }[] = [];
+  const skipped: string[] = [];
+  for (const slug of slugs) {
+    if (reserved.has(slug)) {
+      skipped.push(slug);
+      continue;
+    }
+    redirects.push({
+      source: `/${slug}`,
+      destination: `/articles/${slug}`,
+      permanent: true,
+    });
+  }
+  console.log(
+    `next.config: ${redirects.length} bare-slug -> /articles/ redirects` +
+      (skipped.length ? `, skipped collisions: ${skipped.join(", ")}` : "")
+  );
+  return redirects;
+}
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -60,6 +120,8 @@ const nextConfig: NextConfig = {
         destination: "/articles/kenya-data-centre-licensing-framework",
         permanent: true,
       },
+      // Auto-heal guessed article URLs: /<slug> -> /articles/<slug>
+      ...articleSlugRedirects(),
     ];
   },
   async headers() {
