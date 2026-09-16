@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-15"
+updated_date: "2026-09-16"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/dc-business-investment.webp"
@@ -58,7 +58,7 @@ faq:
   - question: "What is Kenya's total data centre capacity?"
     answer: "Published, verifiable operating capacity in Kenya is roughly 28 MW of total facility capacity, with about 13 MW of live IT load reported by the EU-commissioned Kenya market briefing and around 30 MW under construction as of its 2025 edition. Kenya's operating capacity is small by global standards but growing at a projected ~30% CAGR."
   - question: "How many submarine cables land in Kenya?"
-    answer: "Eight live cable systems land at Mombasa, SEACOM and TEAMS (2009), EASSy (2010), EIG (2011), LION2 (2012), DARE1 (2015), PEACE (2022) and 2Africa (2024, the largest cable system ever built), with the Meta-backed Daraja cable in development and scheduled for service in 2026 (Business Daily, 14 September 2026)."
+    answer: "Seven live cable systems land on the Kenyan coast: SEACOM and TEAMS (2009), EASSy (2010), LION2 (2012), DARE1 (2021), PEACE (2022) and 2Africa (2024, the largest cable system ever built). Africa-1 landed at Mombasa in 2024 and awaits full service, and the Meta-backed Daraja cable is in development (Business Daily, 14 September 2026)."
   - question: "Is Kenya's data centre capacity really powered by renewables?"
     answer: "Largely, yes. About 93% of Kenya's electricity generation in 2024 came from renewables (geothermal, hydro and wind) so workloads hosted in Nairobi are among the greenest on the continent by grid mix. The constraint is not cleanliness but deliverable capacity at single-site scale, which has stalled the largest announced projects."
 ---
@@ -101,7 +101,7 @@ What the reputable sources do agree on is direction. Xalam projects roughly 30% 
 
 In a market where most facilities claim "Tier III" without third-party certification, interconnection is the honest differentiator. The PeeringDB register shows a steep hierarchy: ADC Nairobi 1 leads with 122 networks and four exchanges (KIXP Nairobi, LINX Nairobi, BGP.Exchange and PLUGINS IX all on site); iColo Mombasa One is the densest building on the coast with 94 networks, a function of its proximity to the submarine cable landing stations; iColo Nairobi One carries 62 networks and four exchanges; iXAfrica NBOX1 has 44; PAIX has 37. At the other end, several registered facilities carry fewer than five networks, real buildings, but not yet interconnection destinations.
 
-Kenya's submarine position underwrites all of it: eight live cable systems land at Mombasa (SEACOM and TEAMS from 2009, EASSy, EIG, LION2, DARE1, PEACE and 2Africa, the largest cable system ever built), with the Meta-backed Daraja cable, hosted by Safaricom, in development. On [our infrastructure map](/infrastructure/map) you can see each facility, its registered networks and the cable routes together.
+Kenya's submarine position underwrites all of it: seven live cable systems land on the Kenyan coast (SEACOM and TEAMS from 2009, EASSy, LION2, DARE1, PEACE and 2Africa, the largest cable system ever built), with Africa-1 landed and awaiting service, and the Meta-backed Daraja cable, hosted by Safaricom, in development. On [our infrastructure map](/infrastructure/map) you can see each facility, its registered networks and the cable routes together.
 
 ## Power: Kenya's unfair advantage and its hard ceiling
 

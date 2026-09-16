@@ -21,7 +21,7 @@ DC254 translates complex digital infrastructure topics into accessible, well-sou
 ## Topic Clusters (Article Collections)
 
 - [Data Centres](https://data-centers-254.vercel.app/data-centres): Fundamentals — what data centres are, how they work, colocation, tiers.
-- [Internet & Connectivity](https://data-centers-254.vercel.app/internet): Subsea cables, ISPs, IXPs, and how the internet reaches Kenya.
+- [Internet & Connectivity](https://data-centers-254.vercel.app/infrastructure): Subsea cables, ISPs, IXPs, and how the internet reaches Kenya.
 - [Energy](https://data-centers-254.vercel.app/energy): Grid, geothermal, and the power economics of data centres.
 - [AI](https://data-centers-254.vercel.app/ai): AI infrastructure, GPU compute, and what AI means for East Africa.
 - [Careers](https://data-centers-254.vercel.app/careers): Data centre jobs, skills, and career paths in Kenya.

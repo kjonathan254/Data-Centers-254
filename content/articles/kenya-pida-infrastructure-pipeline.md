@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-08"
+updated_date: "2026-09-16"
 category: "Policy"
 cluster: "Policy"
 og_image: "/images/dc-policy-regulation.webp"
@@ -106,7 +106,7 @@ construction site. But a continental registry explicitly reserving data centre
 capacity at Mombasa, in a PPP wrapper with six-country backing, is a signal of
 institutional intent that no local market report captures. If it proceeds, it
 would stack regional data centre demand directly onto the cable-landing geography
-where eight submarine cables already surface.
+where seven live submarine cable systems surface (nine in total).
 
 **The Juba–Nairobi Fiber Optic Link (PIDA I.02.30.06, US$45 million).** The
 Kenyan segment (roughly 700 km, part of the national NOFBI fibre backbone) is

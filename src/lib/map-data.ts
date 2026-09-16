@@ -121,12 +121,12 @@ export const LANDING_STATION = { lat: -3.982, lng: 39.723, name: "Mombasa cable 
 
 export const SUBSEA_CABLES: SubseaCable[] = [
   // North-bound cables end on a vertical label stack (x ≈ 42.35°E), clean fan, no crossings
-  { id: "dare1", name: "DARE1", year: 2015, live: true, designTbps: 0.96, note: "Direct express route to Djibouti", waypoints: [[-3.982, 39.735], [-1.52, 42.27], [0.94, 42.35]], label: "DARE1 · 1 Tbps" },
+  { id: "dare1", name: "DARE1", year: 2021, live: true, designTbps: 0.96, note: "Direct express route to Djibouti", waypoints: [[-3.982, 39.735], [-1.52, 42.27], [0.94, 42.35]], label: "DARE1 · 1 Tbps" },
   { id: "seacom", name: "SEACOM", year: 2009, live: true, designTbps: 1.28, note: "First private submarine cable in East Africa", waypoints: [[-3.982, 39.723], [-1.91, 41.89], [0.16, 42.35]], label: "SEACOM · 1.3 Tbps" },
   { id: "peace", name: "PEACE", year: 2022, live: true, designTbps: 16, note: "High-capacity eastbound route", waypoints: [[-3.982, 39.73], [-2.30, 41.51], [-0.62, 42.35]], label: "PEACE · 16 Tbps" },
   { id: "teams", name: "TEAMS", year: 2009, live: true, designTbps: 1.28, note: "Kenya's first government-backed cable", waypoints: [[-3.982, 39.72], [-2.69, 41.13], [-1.40, 42.35]], label: "TEAMS · 1.3 Tbps" },
-  { id: "eig", name: "EIG", year: 2011, live: true, designTbps: null, note: "Europe–India Gateway; Kenya share undisclosed", waypoints: [[-3.982, 39.728], [-1.20, 41.70], [0.60, 42.35]], label: "EIG · landed Mombasa" },
-  { id: "2africa", name: "2Africa", year: 2024, live: true, designTbps: null, note: "Largest submarine cable system ever built (180 Tbps system design); Kenya share undisclosed", waypoints: [[-3.982, 39.705], [-4.80, 40.10], [-6.20, 41.50]], label: "2Africa · 180 Tbps system" },
+  { id: "2africa", name: "2Africa", year: 2024, live: true, designTbps: null, note: "Largest submarine cable system ever built (180 Tbps system design); Kenya segment RFS June 2024 via Airtel, core system completed November 2025", waypoints: [[-3.982, 39.705], [-4.80, 40.10], [-6.20, 41.50]], label: "2Africa · 180 Tbps system" },
+  { id: "africa1", name: "Africa-1", year: 2024, live: false, designTbps: null, note: "Telecom Egypt-led consortium; landed Mombasa 2024, ready-for-service not yet announced", waypoints: [[-3.982, 39.74], [-1.0, 41.9], [1.4, 42.35]], label: "Africa-1 · landed, service pending" },
   { id: "daraja", name: "Daraja", year: 2026, live: false, designTbps: null, note: "Meta-backed cable, in development, Salalah to Mombasa, hosted by Safaricom (announced Oct 2025, 24 fibre pairs)", waypoints: [[-3.982, 39.715], [-3.08, 40.75], [-2.17, 42.35]], label: "Daraja · in development" },
   { id: "eassy", name: "EASSy", year: 2010, live: true, designTbps: 4.72, note: "7,000 km along the east coast", waypoints: [[-3.982, 39.71], [-5.2, 39.85], [-6.84, 40.4]], label: "EASSy · 4.7 Tbps" },
   { id: "lion2", name: "LION2", year: 2012, live: true, designTbps: 1.5, note: "Link to Madagascar & Réunion", waypoints: [[-3.982, 39.7], [-5.6, 40.6], [-7.62, 41.9]], label: "LION2 · 1.5 Tbps" },

@@ -22,9 +22,9 @@ export default function TheScale() {
     linkLabel?: string;
   }[] = [
     {
-      value: "6",
+      value: "7",
       label: "Active submarine cables",
-      note: "SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE land in Mombasa, a 7th (Meta's Daraja) is in development.",
+      note: "SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa land on the Kenyan coast, with Africa-1 landed and Daraja in development.",
       source: "Verified",
     },
     {

@@ -252,7 +252,7 @@ export default function EastAfricaInfrastructureMap() {
           <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
-            Twenty-six facilities, eight submarine cables, and the fibre backbone that connects them,
+            Twenty-seven facilities, nine submarine cable systems (seven live), and the fibre backbone that connects them,
             with the wider East African region for context.
           </p>
         </div>

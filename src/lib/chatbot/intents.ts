@@ -507,7 +507,7 @@ const INTENTS: Intent[] = [
       const live = SUBSEA_CABLES.filter((c) => c.live);
       const totalTbps = live.reduce((s, c) => s + (c.designTbps ?? 0), 0);
       return ok({
-        reply: `Six submarine cable systems are live at the Mombasa landing station, ${live.map((c) => `${c.name} (${c.designTbps ?? "?"} Tbps)`).join(", ")}, roughly ${totalTbps.toFixed(1)} Tbps of designed capacity. Meta's Daraja is in development. Every one of them lands at the same shoreline, which is Kenya's strength and its single point of failure in one sentence.`,
+        reply: `${live.length} submarine cable systems are live on the Kenyan coast, ${live.map((c) => `${c.name} (${c.designTbps ?? "?"} Tbps)`).join(", ")}, roughly ${totalTbps.toFixed(1)} Tbps of designed capacity. Meta's Daraja is in development. Every one of them lands at the same shoreline, which is Kenya's strength and its single point of failure in one sentence.`,
         citations: [
           { label: "See the cable map", href: "/infrastructure/map" },
           { label: "Fibre & connectivity articles", href: "/infrastructure" },

@@ -11,12 +11,12 @@ export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: "Kenya Data Centre Map: Facilities & Subsea Cables",
   description:
-    "Interactive map of every data centre in Kenya, plus the eight submarine cables landing at the coast and the fibre backbone of East Africa.",
+    "Interactive map of every data centre in Kenya, plus the nine submarine cable systems at the coast (seven live) and the fibre backbone of East Africa.",
   alternates: { canonical: "/infrastructure/map" },
   openGraph: {
     title: "Kenya Data Centre Map: Facilities & Subsea Cables",
     description:
-      "Zoom from East Africa to the Nairobi cluster: 26 facilities, eight subsea cables, the fibre routes connecting them, and the continental PIDA project layer.",
+      "Zoom from East Africa to the Nairobi cluster: 27 facilities, nine subsea cable systems (seven live), the fibre routes connecting them, and the continental PIDA project layer.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kenya Data Centre Map: Facilities & Subsea Cables",
     description:
-      "26 facilities, eight submarine cables, and the fibre backbone, zoom from East Africa down to the Nairobi cluster.",
+      "27 facilities, nine submarine cable systems (seven live), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.",
     images: ["/images/og-infrastructure-map.webp"],
   },
 };

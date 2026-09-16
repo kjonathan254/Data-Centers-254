@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-30"
-updated_date: "2026-09-15"
+updated_date: "2026-09-16"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/mombasa-old-town-wide.webp"
@@ -25,7 +25,7 @@ images:
     position: hero
   - src: "/images/submarine-cables-map.webp"
     alt:  "Map of submarine cables landing on the East African coast"
-    caption: "SEACOM, TEAMS, EASSy, EIG, LION2, DARE1 and PEACE converge on Mombasa, joined since 2024 by 2Africa, with Daraja due in 2026, the chokepoint of Kenya's internet"
+    caption: "Seven live systems, from SEACOM and TEAMS to PEACE and 2Africa, converge on the Mombasa coast, the chokepoint of Kenya's internet"
     position: "infographic"
   - src: "/images/kenya-transmission-pylons.webp"
     alt:  "High-voltage pylons on the backbone grid"
@@ -67,7 +67,7 @@ external_sources:
     url: "https://www.businessdailyafrica.com/bd/corporate/technology/inside-mombasa-s-rise-as-kenya-s-key-tech-hub-5595036"
 faq:
   - question: "Why are Kenya's data centres concentrated in Nairobi and Mombasa?"
-    answer: "Three forces explain the concentration. First, eight submarine cable systems make landfall on the Mombasa coast (SEACOM, TEAMS, EASSy, EIG, LION2, DARE1, PEACE, and 2Africa), with Meta's Daraja scheduled to join them in 2026, so international bandwidth is cheapest and most reliable near the landing stations. Second, the national grid's strongest transmission corridors run from the Rift Valley geothermal belt into Nairobi, making large blocks of dependable power easiest to secure there. Third, the demand (banks, telcos, government systems, cloud on-ramps and the KIXP internet exchange) is concentrated in Nairobi. Data centres follow cables, power, and customers, and in Kenya all three point to the same two cities."
+    answer: "Three forces explain the concentration. First, seven live submarine cable systems make landfall on the Kenyan coast (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE, and 2Africa), with Africa-1 landed at Mombasa and Meta's Daraja in development, so international bandwidth is cheapest and most reliable near the landing stations. Second, the national grid's strongest transmission corridors run from the Rift Valley geothermal belt into Nairobi, making large blocks of dependable power easiest to secure there. Third, the demand (banks, telcos, government systems, cloud on-ramps and the KIXP internet exchange) is concentrated in Nairobi. Data centres follow cables, power, and customers, and in Kenya all three point to the same two cities."
   - question: "Could a data centre be built in Kisumu, Nakuru, or Eldoret?"
     answer: "Technically yes, nothing stops a small edge facility from being built in any Kenyan town with grid power and fibre backhaul. What those towns lack is the combination that makes larger facilities economic: direct access to multiple fibre routes, high-capacity grid connections with reliable supply, dense enterprise demand, and the specialised workforce data centres require. Until one of those factors changes locally, facilities in upcountry towns will remain small edge sites rather than full data centres."
   - question: "Does Mombasa's cable access make it a better data centre location than Nairobi?"
@@ -89,7 +89,7 @@ Two clarifications matter before going further. First, "two cities" is still sli
 
 ## Force 1: The cables land in Mombasa
 
-Kenya's connection to the global internet is physical, and it arrives on the ocean floor. Eight submarine cable systems now land on or near the Mombasa coast: SEACOM, TEAMS, EASSy, EIG, LION2, DARE1, PEACE, and 2Africa, the 37,000 km consortium system live in Kenya since 2024 and fully completed in November 2025. A ninth, Meta's Daraja, a 4,108 km Oman-to-Mombasa route with Safaricom as landing partner, is scheduled for service in 2026 (Business Daily, September 14, 2026). Every international phone call, every Netflix stream cached locally, every cloud query routed to a European or American region travels through one of a handful of landing stations on that coastline. The economics follow the infrastructure: bandwidth is cheapest and most dependable within reach of the landing stations, because backhauling traffic hundreds of kilometres inland before it reaches the world adds cost, complexity, and a failure point.
+Kenya's connection to the global internet is physical, and it arrives on the ocean floor. Seven live submarine cable systems now land on or near the Mombasa coast: SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE, and 2Africa, the 45,000 km consortium system live in Kenya since June 2024 and fully completed in November 2025. Africa-1 landed at Mombasa in 2024 and awaits full service, and Meta's Daraja, a 4,108 km Oman-to-Mombasa route with Safaricom as landing partner, is in development (announced October 2025; Business Daily, September 14, 2026). Every international phone call, every Netflix stream cached locally, every cloud query routed to a European or American region travels through one of a handful of landing stations on that coastline. The economics follow the infrastructure: bandwidth is cheapest and most dependable within reach of the landing stations, because backhauling traffic hundreds of kilometres inland before it reaches the world adds cost, complexity, and a failure point.
 
 ![Map of submarine cables landing on the East African coast](/images/submarine-cables-map.webp)
 
@@ -139,7 +139,7 @@ The quieter transformation is the growth of edge computing, which does not move 
 
 ### Why are Kenya's data centres concentrated in Nairobi and Mombasa?
 
-Because all three forces that decide data centre locations point the same way. Eight submarine cable systems land on the Mombasa coast (SEACOM, TEAMS, EASSy, EIG, LION2, DARE1, PEACE, and 2Africa), with Meta's Daraja scheduled to join them in 2026, making international bandwidth cheapest near the landing stations. The grid's strongest corridors carry geothermal power from the Rift Valley into Nairobi, where large blocks of dependable electricity are easiest to contract. And the demand (banks, telcos, fintech, government systems, and the KIXP exchange) is concentrated in the capital. Facilities follow inputs and customers, and in Kenya both point to the same two cities.
+Because all three forces that decide data centre locations point the same way. Seven live submarine cable systems land on the Kenyan coast (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE, and 2Africa), with Africa-1 landed at Mombasa and Meta's Daraja in development, making international bandwidth cheapest near the landing stations. The grid's strongest corridors carry geothermal power from the Rift Valley into Nairobi, where large blocks of dependable electricity are easiest to contract. And the demand (banks, telcos, fintech, government systems, and the KIXP exchange) is concentrated in the capital. Facilities follow inputs and customers, and in Kenya both point to the same two cities.
 
 ### Could a data centre be built in Kisumu, Nakuru, or Eldoret?
 

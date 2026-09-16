@@ -82,9 +82,9 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
   {
     term: "Submarine Cable",
-    short: "A fibre optic cable laid on the ocean floor carrying intercontinental internet traffic. Six active cables land in Mombasa.",
+    short: "A fibre optic cable laid on the ocean floor carrying intercontinental internet traffic. Seven active cables land on the Kenyan coast.",
     definition:
-      "Submarine cables are fibre optic communication cables laid on the seabed, carrying the vast majority of intercontinental internet traffic. They are typically 17–25mm in diameter and can carry tens of terabits per second. Kenya’s coastal city of Mombasa is the submarine cable gateway for East Africa, with six active cables: SEACOM (2009), TEAMS (2009), EASSy (2010), LION2 (2013), DARE1 (2022), and PEACE (2022), and a seventh (Meta’s Daraja cable) in development. These cables connect Kenya to Europe, Asia, South Africa, and the rest of the world, providing the international bandwidth that makes the country’s digital economy possible.",
+      "Submarine cables are fibre optic communication cables laid on the seabed, carrying the vast majority of intercontinental internet traffic. They are typically 17–25mm in diameter and can carry tens of terabits per second. Kenya’s coastal city of Mombasa is the submarine cable gateway for East Africa, with seven active cables: SEACOM (2009), TEAMS (2009), EASSy (2010), LION2 (2012), DARE1 (2021), PEACE (2022) and 2Africa (2024), plus Africa-1 (landed 2024, service pending) and Meta’s Daraja cable (in development). These cables connect Kenya to Europe, Asia, South Africa, and the rest of the world, providing the international bandwidth that makes the country’s digital economy possible.",
     category: "Connectivity",
     relatedTerms: ["Latency", "Bandwidth", "Fibre Optic"],
     relatedArticles: [

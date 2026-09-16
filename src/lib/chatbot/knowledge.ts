@@ -175,7 +175,7 @@ export function getFaqPairs(): FaqPair[] {
     },
     {
       q: "How many submarine cables connect Kenya to the global internet?",
-      a: "Six international submarine cable systems are live in Kenya (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) all landing on the coast at Mombasa. A seventh, Meta's Daraja, is in development. This concentration is both Kenya's strength and its single point of failure.",
+      a: "Seven international submarine cable systems are live in Kenya (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa), landing on the Kenyan coast at Mombasa and Mtwapa. Africa-1 landed at Mombasa in 2024 and awaits full service, and Meta's Daraja is in development. This concentration is both Kenya's strength and its single point of failure.",
       keywords: ["submarine cables", "undersea cables", "internet cables", "cables connect"],
       links: [{ label: "The infrastructure map", href: "/infrastructure/map" }],
     },

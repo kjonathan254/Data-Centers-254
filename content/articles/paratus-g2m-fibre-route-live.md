@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-08"
+updated_date: "2026-09-16"
 category: "Connectivity"
 cluster: "Infrastructure"
 og_image: "/images/dc-fibre-optics.webp"
@@ -65,7 +65,7 @@ The company behind it has been assembling this quietly. Paratus (a pan-African n
 
 ## Why an east-west artery matters more than it sounds
 
-The unglamorous truth about African bandwidth is that it fails in corollaries. Kenya's submarine capacity is extraordinary on paper (six live cable systems land at Mombasa, from SEACOM and TEAMS to the 16 Tbps PEACE route) but the region's *terrestrial* diversity has lagged. Cut or degrade the inland corridor and you learn exactly how much of the network was really diversified. Carnegie's April 2025 analysis put Mombasa's single-point-of-failure risk bluntly, and the concern compounds as traffic grows: [our own infrastructure map](/infrastructure/map) shows seven cable systems (six live, Daraja in development) converging on one coastal bottleneck.
+The unglamorous truth about African bandwidth is that it fails in corollaries. Kenya's submarine capacity is extraordinary on paper (seven live cable systems land on the Kenyan coast, from SEACOM and TEAMS to the 16 Tbps PEACE route) but the region's *terrestrial* diversity has lagged. Cut or degrade the inland corridor and you learn exactly how much of the network was really diversified. Carnegie's April 2025 analysis put Mombasa's single-point-of-failure risk bluntly, and the concern compounds as traffic grows: [our own infrastructure map](/infrastructure/map) shows nine cable systems (seven live, with Africa-1 landed and Daraja in development) converging on one coastal bottleneck.
 
 The G2M adds three specific kinds of resilience:
 

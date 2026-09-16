@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-27"
-updated_date: "2026-08-27"
+updated_date: "2026-09-16"
 category: "AI & Cloud"
 cluster: "AI"
 og_image: "/images/dc-gpu-cluster.webp"
@@ -110,7 +110,7 @@ East Africa has a combination of structural advantages that no other region on t
 
 For AI data centres, which consume power continuously and care deeply about cost predictability, geothermal is the ideal energy source. A GPU cluster running a three-month training job needs guaranteed, affordable power around the clock. Geothermal provides exactly that.
 
-**Submarine cable connectivity.** Mombasa is the landing point for at least eight submarine cable systems, including EASSy, Seacom, TEAMS, DARE1, and others. This gives Kenya more international bandwidth capacity than any other country in East or Central Africa. Combined with the [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa), Kenya has established itself as the region's internet gateway.
+**Submarine cable connectivity.** Mombasa is the landing point for seven live submarine cable systems, including EASSy, Seacom, TEAMS, DARE1 and 2Africa, with Africa-1 landed and Daraja in development. This gives Kenya more international bandwidth capacity than any other country in East or Central Africa. Combined with the [submarine cables landing in Mombasa](/articles/submarine-cables-landing-mombasa), Kenya has established itself as the region's internet gateway.
 
 For AI data centres, this connectivity serves two purposes. It provides low-latency links to global AI model repositories, cloud platforms, and research networks. It also enables Kenya-based facilities to serve as regional hubs, connecting to landlocked neighbours via terrestrial fibre through Uganda, Rwanda, Burundi, eastern DRC, South Sudan, and Ethiopia.
 

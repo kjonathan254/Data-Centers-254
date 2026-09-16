@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
-updated_date: "2026-09-10"
+updated_date: "2026-09-16"
 category: "Infrastructure"
 cluster: "Infrastructure"
 og_image: "/images/kenya-coast-beach.webp"
@@ -72,7 +72,7 @@ The dual-path architecture is the interesting engineering choice. Submarine cabl
 
 ## Why Coastal Diversity Matters for Kenya
 
-The case for LuLu starts with geography. Kenya's eight international cable systems land in the Mombasa area, which means every gigabit flowing into and out of the country (and much of East Africa's) passes through one metropolitan shoreline. A ship anchor drag off Mombasa has repeatedly degraded regional connectivity, and each incident restarts the same conversation about redundancy. Inland fibre routes to Nairobi and the landlocked neighbours mitigate part of the exposure, but the landing concentration itself has never had a coastal alternative. LuLu would give carriers and content platforms a second physical geometry: traffic can enter at one landing point, transit the coastal corridor, and exit at another, with the terrestrial path as backup.
+The case for LuLu starts with geography. Kenya's seven live international cable systems land in the Mombasa area, which means every gigabit flowing into and out of the country (and much of East Africa's) passes through one metropolitan shoreline. A ship anchor drag off Mombasa has repeatedly degraded regional connectivity, and each incident restarts the same conversation about redundancy. Inland fibre routes to Nairobi and the landlocked neighbours mitigate part of the exposure, but the landing concentration itself has never had a coastal alternative. LuLu would give carriers and content platforms a second physical geometry: traffic can enter at one landing point, transit the coastal corridor, and exit at another, with the terrestrial path as backup.
 
 The second case is economic development. Vipingo SEZ is the anchor tenant story (an industrial zone with power, logistics and now a planned fibre landing positioned for data centre and fintech tenants) but Kilifi, Malindi and Lamu all stand to gain direct access to high-capacity infrastructure that currently terminates hundreds of kilometres away. Coastal tourism economies are also digitising fast, and local landing points reduce the cost of serving them.
 

@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-15"
-updated_date: "2026-09-15"
+updated_date: "2026-09-16"
 category: "AI & Infrastructure"
 cluster: "Kenya"
 og_image: "/images/amaco-mombasa-port-terminal.webp"
@@ -29,7 +29,7 @@ images:
     position: "inline"
   - src: "/images/amaco-cable-landing-beach.webp"
     alt: "Landing crew guiding a submarine cable ashore on a Kenyan beach, with marker buoys running out to the cable ship offshore"
-    caption: "A landing crew guides a submarine cable ashore on the Kenyan coast. Eight submarine cable systems come ashore near Mombasa, so a data centre here skips the 500 km backhaul to Nairobi"
+    caption: "A landing crew guides a submarine cable ashore on the Kenyan coast. Seven live submarine cable systems come ashore near Mombasa, so a data centre here skips the 500 km backhaul to Nairobi"
     position: "section-break"
   - src: "/images/amaco-power-barge.webp"
     alt: "Floating power barge with gas turbine exhaust stacks moored near a city coastline"
@@ -79,7 +79,7 @@ faq:
   - question: "What is a power barge?"
     answer: "A power barge is an unmotorised floating platform that carries a power plant on its hull, the way a cargo barge carries goods. It can be built in a shipyard, floated to its destination and connected to customers there, which makes it useful where building a plant on land is slow or complicated. In the Amaco plan, the barge burns liquefied natural gas to generate electricity for the data centre and its cooling systems."
   - question: "Why Mombasa and not Nairobi?"
-    answer: "Mombasa offers inputs Nairobi does not: eight submarine cable systems make landfall on its coast, its port can deliver LNG fuel by ship, and the nearby 3,000-acre Dongo Kundu Special Economic Zone supplies industrial demand. Amaco cites a pipeline of about 75 MW of potential industrial base-load demand plus another 75 to 100 MW from initial data centre customers (Business Daily, 10 September 2026). Nairobi still holds most of Kenya's data centre demand, so the project bets on the port economy rather than the capital's enterprise base."
+    answer: "Mombasa offers inputs Nairobi does not: seven live submarine cable systems make landfall on its coast (with Africa-1 landed and awaiting service), its port can deliver LNG fuel by ship, and the nearby 3,000-acre Dongo Kundu Special Economic Zone supplies industrial demand. Amaco cites a pipeline of about 75 MW of potential industrial base-load demand plus another 75 to 100 MW from initial data centre customers (Business Daily, 10 September 2026). Nairobi still holds most of Kenya's data centre demand, so the project bets on the port economy rather than the capital's enterprise base."
   - question: "How big will the Mombasa data centre be?"
     answer: "No capacity figure has been disclosed. Amaco's spokesperson described it as 'one of the world's largest AI data-centre facilities', and reported demand at the site runs 75 to 100 MW for initial data centre customers. For scale, a 100 MW AI campus would add demand equal to roughly 4 percent of Kenya's record peak electricity demand of 2,439 MW, reached in December 2025 (TechCabal, 20 August 2026). Treat any capacity number you see as unofficial until Amaco publishes one."
   - question: "When will the Amaco data centre be built?"
@@ -125,7 +125,7 @@ Why does this matter? Because turbine supply is one of the hardest bottlenecks i
 
 ## Why Mombasa, and why off-grid
 
-Kenya's data centres cluster in Nairobi because the customers are there; our analysis of [why Kenya's data centres cluster in Nairobi and Mombasa](/articles/why-data-centres-cluster-nairobi-mombasa) explains the three forces behind that map. Mombasa has always offered a different set of inputs. Eight submarine cable systems make landfall on its coast (SEACOM, TEAMS, EASSy, EIG, LION2, DARE1, PEACE and 2Africa), with Meta's Daraja scheduled to join them in 2026, and [the landing stations themselves](/articles/submarine-cables-landing-mombasa) already anchor facilities like [iColo MBA1](/directory/icolo-mba1), the coast's busiest interconnection point. The port matters twice for this project: it is where LNG fuel can be delivered, and it is where the cables come ashore.
+Kenya's data centres cluster in Nairobi because the customers are there; our analysis of [why Kenya's data centres cluster in Nairobi and Mombasa](/articles/why-data-centres-cluster-nairobi-mombasa) explains the three forces behind that map. Mombasa has always offered a different set of inputs. Seven live submarine cable systems make landfall on its coast (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa), with Africa-1 landed and Meta's Daraja in development, and [the landing stations themselves](/articles/submarine-cables-landing-mombasa) already anchor facilities like [iColo MBA1](/directory/icolo-mba1), the coast's busiest interconnection point. The port matters twice for this project: it is where LNG fuel can be delivered, and it is where the cables come ashore.
 
 The candidate sites are Dongo Kundu and Kilindini, next to the port and the 3,000-acre Dongo Kundu Special Economic Zone, where industrial park developer ARISE operates (Construction Review Online, 10 September 2026). Amaco points to a demand pipeline of roughly 75 MW of potential base-load demand from heavy industry, plus another 75 to 100 MW potentially from initial data centre customers (Business Daily, 10 September 2026). In other words, the project bets on the port economy and the SEZ rather than on Nairobi's banks and telcos.
 
@@ -190,7 +190,7 @@ A power barge is an unmotorised floating platform that carries a power plant on 
 
 ### Why Mombasa and not Nairobi?
 
-Mombasa offers inputs Nairobi does not: eight submarine cable systems make landfall on its coast, its port can deliver LNG fuel by ship, and the nearby 3,000-acre Dongo Kundu Special Economic Zone supplies industrial demand. Amaco cites a pipeline of about 75 MW of potential industrial base-load demand plus another 75 to 100 MW from initial data centre customers (Business Daily, 10 September 2026). Nairobi still holds most of Kenya's data centre demand, so the project bets on the port economy rather than the capital's enterprise base.
+Mombasa offers inputs Nairobi does not: seven live submarine cable systems make landfall on its coast (with Africa-1 landed and awaiting service), its port can deliver LNG fuel by ship, and the nearby 3,000-acre Dongo Kundu Special Economic Zone supplies industrial demand. Amaco cites a pipeline of about 75 MW of potential industrial base-load demand plus another 75 to 100 MW from initial data centre customers (Business Daily, 10 September 2026). Nairobi still holds most of Kenya's data centre demand, so the project bets on the port economy rather than the capital's enterprise base.
 
 ### How big will the Mombasa data centre be?
 

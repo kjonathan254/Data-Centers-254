@@ -1,7 +1,7 @@
 ---
 title: "Submarine Cables in Mombasa: East Africa's Gateway"
 slug: "submarine-cables-landing-mombasa"
-meta_description: "Mombasa is East Africa's submarine cable hub: at least 8 major undersea cables land here, connecting Kenya to Europe, Asia, and Africa."
+meta_description: "Mombasa is East Africa's submarine cable hub: seven live undersea cable systems land here, connecting Kenya to Europe, Asia, and Africa."
 primary_keyword: "submarine cables Mombasa"
 secondary_keywords:
   - "subsea cables Kenya"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-08-27"
+updated_date: "2026-09-16"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/mombasa-cable-landing-4.webp"
@@ -50,11 +50,17 @@ internal_links:
 external_sources:
   - title: "Africa-1 Submarine Cable System"
     url: "https://www.africa-1.africa/"
+  - title: "DataCenterDynamics: 2Africa cable goes live between South Africa and Kenya (14 June 2024)"
+    url: "https://www.datacenterdynamics.com/en/news/2024-06-14/2africa-cable-goes-live-between-south-africa-and-kenya/"
+  - title: "Meta Engineering: Announcing the Completion of the Core 2Africa System (17 November 2025)"
+    url: "https://engineering.fb.com/"
+  - title: "SubmarineNetworks: DARE-1 Cable Ready for Service (1 April 2021)"
+    url: "https://www.submarinenetworks.com/"
   - title: "GSMA Mobile Connectivity Index"
     url: "https://www.gsma.com/r/spectrum/mobile-connectivity-index/"
 faq:
   - question: "How many submarine cables land in Mombasa?"
-    answer: "At least 8 major submarine cables currently land in Mombasa, including TEAMS, EASSy, SEACOM, DARE, and the newer 2Africa and Africa-1 systems. This makes Mombasa the most connected coastal city in East and Central Africa."
+    answer: "Seven live submarine cable systems land in Mombasa (TEAMS, SEACOM, EASSy, LION2, DARE1, PEACE and 2Africa), with Africa-1 landed and awaiting full service. This makes Mombasa the most connected coastal city in East and Central Africa."
   - question: "Why do cables land in Mombasa and not other Kenyan cities?"
     answer: "Mombasa is geographically the closest Kenyan port to the open Indian Ocean shipping lanes where cables are laid. The route from Mombasa to Nairobi is also relatively short (about 500 km), making terrestrial fibre connections practical. Other coastal cities like Lamu lack the existing infrastructure and demand."
   - question: "What happens if a submarine cable is cut?"
@@ -66,7 +72,7 @@ faq:
 canonical_url: "https://data-centers-254.vercel.app/articles/submarine-cables-landing-mombasa"
 ---
 
-Mombasa sits at the eastern edge of Kenya's coastline, and beneath its waters run the fibre optic cables that connect over 300 million people in East and Central Africa to the global internet. At least eight major submarine cable systems land at stations along the Mombasa coast, making this city the single most important internet gateway in the region. Every WhatsApp message sent from Nairobi, every M-Pesa transaction processed, and every Netflix stream watched in Kenya begins or ends its oceanic journey here.
+Mombasa sits at the eastern edge of Kenya's coastline, and beneath its waters run the fibre optic cables that connect over 300 million people in East and Central Africa to the global internet. Seven live submarine cable systems land at stations along the Mombasa coast, with two more landed or in development, making this city the single most important internet gateway in the region. Every WhatsApp message sent from Nairobi, every M-Pesa transaction processed, and every Netflix stream watched in Kenya begins or ends its oceanic journey here.
 
 Submarine cables are the physical backbone of the internet. Despite the proliferation of satellite services like Starlink, more than 99% of intercontinental data traffic travels through these undersea fibre lines. For Kenya and its landlocked neighbours (Uganda, Rwanda, Burundi, South Sudan, and eastern DRC) Mombasa is the doorway to the digital world.
 
@@ -84,15 +90,19 @@ The cables currently landing in Mombasa include:
 
 - **EASSy** (2010), The Eastern Africa Submarine System, a 21-member consortium cable running from South Africa to Sudan, with a branch landing in Mombasa. Connects to Europe via multiple landing points.
 
-- **DARE** (2022), The Djibouti Africa Regional Express, connecting Djibouti to Mombasa and on to South Africa. Designed to provide diversity and redundancy for landlocked East African nations.
+- **LION2** (2012), The Lower Indian Ocean Network 2, an Orange-led cable linking Mombasa to Madagascar and Réunion. Ready for service since April 2012.
 
-- **2Africa** (2024), One of the largest subsea cable projects globally, built by a consortium led by Meta. 2Africa lands in Mombasa and delivers 180 Tbps of design capacity, dwarfing all previous cables.
+- **DARE1** (2021), The Djibouti Africa Regional Express, in service since February 2021 and connecting Djibouti, Mogadishu and Mombasa. Designed to provide diversity and redundancy for landlocked East African nations.
 
-- **Africa-1** (2025), A China Telecom-led cable connecting Africa to Asia via the Indian Ocean. Adds further capacity and route diversity.
+- **2Africa** (2024), One of the largest subsea cable projects globally, built by a consortium led by Meta. Its Kenya segment went live in June 2024, it lands at Mombasa and Mtwapa, and it delivers 180 Tbps of design capacity, dwarfing all previous cables.
+
+- **Africa-1** (landed 2024), A Telecom Egypt-led consortium cable connecting Africa to Asia via the Indian Ocean, with landings in Mombasa, Karachi and Egypt. The cable has come ashore at Mombasa but its ready-for-service date has not been announced, so DC254 does not count it among the live systems yet.
 
 - **PEACE** (2022), Pakistan and East Africa Connecting Europe, with a branch to Mombasa. Provides a new route to Europe via Pakistan and the Middle East.
 
-The cumulative design capacity of these systems exceeds 300 Tbps, an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
+The cumulative design capacity of the live systems approaches 300 Tbps, an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
+
+One more system is on the way. Daraja, a Meta-backed cable hosted by Safaricom, was announced in October 2025 to run from Salalah in Oman to Mombasa with 24 fibre pairs. It is in development and does not change the live count yet.
 
 One development changes the geography without changing that count. At ITW Africa 2026 (September 2026), a consortium led by INDOI Ltd. (IOX) and Blue Trade Investments announced **LuLu**, a planned ~500km coastal cable system running from Mombasa to Lamu with landing points at Vipingo Special Economic Zone, Kilifi and Malindi in between. LuLu is not a tenth international system, it is Kenya's first dedicated coastal diversity route, pairing a subsea span (144 fibre pairs, up to 60 Tbps per pair) with a protected terrestrial path along the whole corridor. Its readiness-for-service target is Q2 2028, subject to contract execution; as of the announcement, no supplier was named and construction had not started. Full status check: [the LuLu coastal cable system](/articles/kenya-lulu-coastal-cable-system).
 
