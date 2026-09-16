@@ -1,0 +1,127 @@
+# facilities parsed: 27
+# articles total: 84, long: 0
+# facilities total: 27, long: 0
+# static hits total: 99, long: 4
+
+== TOP 15 LONGEST ARTICLE TITLES ==
+ 59  5G Networks and Their Impact on Data Centre Demand in Kenya
+ 59  AI Ethics and Governance for Data Centres and Tech in Kenya
+ 59  Data Centre Cooling Systems: How Servers Stay Cool in Kenya
+ 59  Fibre Networks Powering Kenya's Data Centres: The Last Mile
+ 59  Large Language Models in Kenya: Adoption and Infrastructure
+ 59  What Is a Data Centre? A Plain-Language Guide for Beginners
+ 59  What Is a Server? The Machines That Power Everything Online
+ 58  What Is a Data Centre SLA? Understanding Uptime Guarantees
+ 58  Kenya ICT Policy Framework and Data Centre Industry Impact
+ 58  Safaricom Data Centres: M-Pesa, 5G and the Digital Economy
+ 58  Women in Data Centres: Growing Kenya's Technical Workforce
+ 57  Amaco's Mombasa AI Data Centre: A Power Plant That Floats
+ 57  Data Centre Cabling Standards and Best Practices in Kenya
+ 57  Digital Realty Launches NBO2: The 'Gateway' Claim, Tested
+ 57  Europe's Playbook for Africa's Digital Edge: Kenya's Part
+
+== STATIC PAGE TITLES (rendered) ==
+ 34  about/page.tsx  ::  About DC254: Mission & Methodology
+ 31  about/page.tsx  ::  About | Data Centre 254 | DC254
+ 20  about/page.tsx  ::  Data Centres | DC254
+ 20  about/page.tsx  ::  Connectivity | DC254
+ 22  about/page.tsx  ::  Power & Energy | DC254
+ 27  about/page.tsx  ::  Policy & Regulation | DC254
+ 29  about/page.tsx  ::  Business & Investment | DC254
+ 15  about/page.tsx  ::  Careers | DC254
+ 30  advertise/page.tsx  ::  Advertise & Partner with DC254
+ 28  advertise/page.tsx  ::  Briefing sponsorship | DC254
+ 30  advertise/page.tsx  ::  Sponsored intelligence | DC254
+ 22  advertise/page.tsx  ::  Market reports | DC254
+ 46  advertise/page.tsx  ::  Directory placement & featured listing | DC254
+ 26  advertise/page.tsx  ::  Market sponsorship | DC254
+ 35  advertise/page.tsx  ::  Annual industry partnership | DC254
+ 44  ai/page.tsx  ::  AI Infrastructure & Compute in Kenya | DC254
+ 43  ai/page.tsx  ::  AI Infrastructure | Data Centre 254 | DC254
+ 39  beginners/page.tsx  ::  Beginner Guides to Data Centres | DC254
+ 41  beginners/page.tsx  ::  Beginner Guides | Data Centre 254 | DC254
+ 47  careers/page.tsx  ::  Data Centre Careers & Business in Kenya | DC254
+ 44  careers/page.tsx  ::  Careers & Business | Data Centre 254 | DC254
+ 31  contact/page.tsx  ::  Contact Data Centre 254 | DC254
+ 33  contact/page.tsx  ::  Contact | Data Centre 254 | DC254
+ 42  data-centres/page.tsx  ::  Inside Data Centres: How They Work | DC254
+ 45  data-centres/page.tsx  ::  Inside Data Centres | Data Centre 254 | DC254
+ 55  data-exports/page.tsx  ::  Kenya Data Centre Market Snapshot: Data Exports | DC254
+ 25  data-exports/page.tsx  ::  Facility register | DC254
+ 23  data-exports/page.tsx  ::  Power economics | DC254
+ 29  data-exports/page.tsx  ::  Connectivity position | DC254
+ 28  data-exports/page.tsx  ::  Deal flow & forecast | DC254
+ 47  directory/compare/page.tsx  ::  Compare Kenya Data Centres Side by Side | DC254
+ 65  directory/compare/page.tsx  ::  Compare Kenya Data Centres Side by Side | Data Centre 254 | DC254 <<LONG
+ 36  editorial-policy/page.tsx  ::  Editorial Policy & Standards | DC254
+ 22  editorial-policy/page.tsx  ::  Sourcing first | DC254
+ 31  editorial-policy/page.tsx  ::  Verification with dates | DC254
+ 27  editorial-policy/page.tsx  ::  Corrections welcome | DC254
+ 20  editorial-policy/page.tsx  ::  Independence | DC254
+ 46  energy/page.tsx  ::  Energy & Power for Kenyan Data Centres | DC254
+ 40  energy/page.tsx  ::  Energy & Power | Data Centre 254 | DC254
+ 43  faq/page.tsx  ::  FAQ: Kenya's data centres, answered | DC254
+ 61  faq/page.tsx  ::  FAQ: Kenya's data centres, answered | Data Centre 254 | DC254 <<LONG
+ 39  foundations/page.tsx  ::  Foundations: Data Centre Basics | DC254
+ 37  foundations/page.tsx  ::  Foundations | Data Centre 254 | DC254
+ 54  glossary/kiswahili/page.tsx  ::  Data Centre in Swahili: Kamusi ya Misamiati 24 | DC254
+ 52  glossary/page.tsx  ::  Data Centre Glossary: 19 Key Terms Explained | DC254
+ 46  glossary/page.tsx  ::  Data Centre Glossary | Data Centre 254 | DC254
+ 57  infrastructure/map/page.tsx  ::  Kenya Data Centre Map: Facilities & Subsea Cables | DC254
+ 60  infrastructure/map/page.tsx  ::  Every data centre in Kenya, mapped | Data Centre 254 | DC254
+ 42  infrastructure/map/page.tsx  ::  Every data centre in Kenya, mapped | DC254
+ 45  infrastructure/page.tsx  ::  Infrastructure: Fibre, Cables & Power | DC254
+ 40  infrastructure/page.tsx  ::  Infrastructure | Data Centre 254 | DC254
+ 36  kenya/page.tsx  ::  Kenya's Data Centre Industry | DC254
+ 54  kenya/page.tsx  ::  Kenya's Data Centre Industry | Data Centre 254 | DC254
+ 55  layout.tsx  ::  Data Centre 254 | Inside Kenya's Digital Infrastructure
+  5  layout.tsx  ::  DC254
+ 48  layout.tsx  ::  Data Centre 254 | Kenya's Digital Infrastructure
+ 40  methodology/page.tsx  ::  Methodology: How DC254 Verifies Its Data
+ 20  methodology/page.tsx  ::  1. The claim | DC254
+ 21  methodology/page.tsx  ::  2. The source | DC254
+ 28  methodology/page.tsx  ::  3. The date verified | DC254
+ 31  methodology/page.tsx  ::  4. Independent evidence | DC254
+ 62  methodology/page.tsx  ::  DC Directory: monthly sweep, quarterly re-verification | DC254 <<LONG
+ 43  methodology/page.tsx  ::  News & market moves: as they happen | DC254
+ 59  methodology/page.tsx  ::  Explainers & reference articles: reviewed on change | DC254
+ 35  methodology/page.tsx  ::  What we count as a facility | DC254
+ 23  methodology/page.tsx  ::  What we exclude | DC254
+ 31  methodology/page.tsx  ::  One building, one entry | DC254
+ 34  methodology/page.tsx  ::  Announced is not operating | DC254
+ 64  news/kenya-data-centre-licensing-framework/page.tsx  ::  Kenya Data Centre Licensing: NFP-T1 and NFP-T2 Explained | DC254 <<LONG
+ 22  offline/page.tsx  ::  You're offline | DC254
+ 52  policy/page.tsx  ::  Policy & Regulation: Kenya Data Centre Rules | DC254
+ 45  policy/page.tsx  ::  Policy & Regulation | Data Centre 254 | DC254
+ 39  privacy/page.tsx  ::  Privacy Policy & Data Practices | DC254
+ 21  privacy/page.tsx  ::  1. Who We Are | DC254
+ 26  privacy/page.tsx  ::  2. What We Collect | DC254
+ 33  privacy/page.tsx  ::  3. What We Do NOT Collect | DC254
+ 31  privacy/page.tsx  ::  4. Third-Party Services | DC254
+ 18  privacy/page.tsx  ::  5. Cookies | DC254
+ 32  privacy/page.tsx  ::  6. How Long We Keep Data | DC254
+ 22  privacy/page.tsx  ::  7. Your Rights | DC254
+ 33  privacy/page.tsx  ::  8. Changes to This Policy | DC254
+ 51  rack-report/page.tsx  ::  The Rack Report: Kenya's Data Centre Weekly | DC254
+ 43  research/page.tsx  ::  Research: Kenya Data Centre Reports | DC254
+ 42  research/page.tsx  ::  Reports & Briefs | Data Centre 254 | DC254
+ 56  research/state-of-kenyan-data-centres-2026/page.tsx  ::  State of Kenyan Data Centres 2026: Annual Review | DC254
+ 59  research/state-of-kenyan-data-centres-2026/page.tsx  ::  State of Kenyan Data Centres 2026 | Data Centre 254 | DC254
+ 34  search/page.tsx  ::  Search DC254 Articles & Facilities
+ 34  terms/page.tsx  ::  Terms of Use & Disclaimers | DC254
+ 30  terms/page.tsx  ::  1. Acceptance of Terms | DC254
+ 25  terms/page.tsx  ::  2. About the Site | DC254
+ 31  terms/page.tsx  ::  3. Ownership of Content | DC254
+ 24  terms/page.tsx  ::  4. Permitted Use | DC254
+ 46  terms/page.tsx  ::  5. Accuracy and No Professional Advice | DC254
+ 25  terms/page.tsx  ::  6. External Links | DC254
+ 34  terms/page.tsx  ::  7. Limitation of Liability | DC254
+ 24  terms/page.tsx  ::  8. Governing Law | DC254
+ 55  tracker/page.tsx  ::  Kenya Data Centre Tracker: Pipeline & Operators | DC254
+ 51  tracker/page.tsx  ::  Kenya Data Centre Tracker | Data Centre 254 | DC254
+ 33  tracker/page.tsx  ::  Kenya Data Centre Tracker | DC254
+
+== ARTICLE TITLES 50-60 (fine, context) ==
+# 55
+
+== ARTICLE TITLES < 30 (maybe too thin, context) ==

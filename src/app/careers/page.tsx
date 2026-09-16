@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/careers" },
   keywords: ["data centre jobs Kenya", "CDCP certification", "data centre careers Nairobi", "colocation business Kenya", "data centre investment Africa", "DCIM skills", "facility manager Kenya"],
   openGraph: {
-    title: "Careers & Business | Data Centre 254",
+    title: "Careers & Business",
     description: "Data centre jobs in Kenya, certifications, business opportunities, and investment in the data centre industry.",
     siteName: "Data Centre 254",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Careers & Business | Data Centre 254",
+    title: "Careers & Business",
     description: "Data centre jobs, certifications, and business opportunities in Kenya's growing DC industry.",
     images: ["/images/nbo2-launch-ribbon-cutting.webp"],
   },

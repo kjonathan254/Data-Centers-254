@@ -1,5 +1,5 @@
 ---
-title: "What Is a Server? The Machines That Power Everything Online"
+title: "What Is a Server? The Machines Powering the Internet"
 slug: "what-is-a-server"
 meta_description: "A server is a specialised computer that serves other computers over a network. The types, how they differ from PCs, and why they live in data centres."
 primary_keyword: "what is a server"

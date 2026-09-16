@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Data Centre 254 is Kenya's independent knowledge platform for digital infrastructure. Our mission, methodology, and the person behind the work.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About | Data Centre 254",
+    title: "About",
     description:
       "Kenya's independent knowledge platform for digital infrastructure. Our mission, methodology, and the person behind it.",
     siteName: "Data Centre 254",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Data Centre 254",
+    title: "About",
     description:
       "Kenya's independent knowledge platform for digital infrastructure.",
     images: ["/images/founder-photo.webp"],

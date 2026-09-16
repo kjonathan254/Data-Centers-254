@@ -1,5 +1,5 @@
 ---
-title: "Geothermal Power for Kenya's Data Centres: Rift Advantage"
+title: "Geothermal for Kenya's Data Centres: Rift Advantage"
 slug: "geothermal-energy-kenya-data-centres"
 meta_description: "Kenya draws about 45% of its electricity from geothermal, giving data centres some of the world's lowest-carbon power. How the Rift Valley does it."
 primary_keyword: "geothermal energy Kenya data centres"

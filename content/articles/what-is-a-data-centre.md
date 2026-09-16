@@ -1,5 +1,5 @@
 ---
-title: "What Is a Data Centre? A Plain-Language Guide for Beginners"
+title: "What Is a Data Centre? A Plain-Language Guide"
 slug: "what-is-a-data-centre"
 meta_description: "A data centre is a specialised building housing the computers behind every app, website, and digital service you use. How they work, explained."
 primary_keyword: "what is a data centre"

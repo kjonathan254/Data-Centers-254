@@ -1,5 +1,5 @@
 ---
-title: "AI Ethics and Governance for Data Centres and Tech in Kenya"
+title: "AI Ethics and Governance for Data Centres in Kenya"
 slug: "ai-ethics-governance-kenya"
 meta_description: "Kenya's AI governance landscape is evolving fast. What the regulatory developments and sector-specific concerns mean for data centre operators."
 primary_keyword: "AI ethics governance Kenya"

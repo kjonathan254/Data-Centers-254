@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "How many data centres does Kenya have? Which is the largest? What powers them? Straight answers from DC254's verified directory.",
   alternates: { canonical: "/faq" },
   openGraph: {
-    title: "FAQ: Kenya's data centres, answered | Data Centre 254",
+    title: "FAQ: Kenya's data centres, answered",
     description:
       "How many data centres does Kenya have? Which is the largest? What powers them? Straight answers from the verified DC254 directory.",
     siteName: "Data Centre 254",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAQ: Kenya's data centres, answered | Data Centre 254",
+    title: "FAQ: Kenya's data centres, answered",
     description:
       "How many data centres does Kenya have? Which is the largest? What powers them? Answers from the verified DC254 directory.",
     images: ["/images/africa-dc-map.webp"],

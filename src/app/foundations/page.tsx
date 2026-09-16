@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
   alternates: { canonical: "/foundations" },
   openGraph: {
-    title: "Foundations | Data Centre 254",
+    title: "Foundations",
     description:
       "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
     siteName: "Data Centre 254",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Foundations | Data Centre 254",
+    title: "Foundations",
     description: "The 12 foundational articles that launched The Rack Report.",
     images: ["/images/og-default.png"],
   },

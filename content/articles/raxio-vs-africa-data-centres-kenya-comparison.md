@@ -1,5 +1,5 @@
 ---
-title: "Raxio vs Africa Data Centres in Kenya: What's Real (2026)"
+title: "Raxio vs Africa Data Centres in Kenya: What's Real"
 slug: "raxio-vs-africa-data-centres-kenya-comparison"
 meta_description: "Raxio and Africa Data Centres are both expanding in Kenya, but only one has doors open. A fact-checked, plain-English comparison for buyers."
 primary_keyword: "raxio vs africa data centres"

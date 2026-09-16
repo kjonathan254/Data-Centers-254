@@ -1,5 +1,5 @@
 ---
-title: "Amaco's Mombasa AI Data Centre: A Power Plant That Floats"
+title: "Amaco's Mombasa AI Data Centre: A Floating Power Plant"
 slug: "amaco-hercules-mombasa-ai-data-centre"
 meta_description: "A Greek energy firm plans a $1.5 billion AI data centre in Mombasa with its own floating power plant. What is confirmed, what is not, and why it matters."
 primary_keyword: "Amaco Mombasa data centre"

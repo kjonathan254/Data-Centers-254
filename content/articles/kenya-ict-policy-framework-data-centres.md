@@ -1,5 +1,5 @@
 ---
-title: "Kenya ICT Policy Framework and Data Centre Industry Impact"
+title: "Kenya ICT Policy and Data Centre Industry Impact"
 slug: "kenya-ict-policy-framework-data-centres"
 meta_description: "Kenya's ICT policy environment and its impact on data centres: the Digital Masterplan, licensing, cybersecurity strategy, and African comparisons."
 primary_keyword: "Kenya ICT policy framework data centres"

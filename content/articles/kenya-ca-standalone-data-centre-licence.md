@@ -1,5 +1,5 @@
 ---
-title: "CA Opens Consultation on a Standalone Data Centre Licence"
+title: "CA Consultation: Standalone Data Centre Licence"
 slug: "kenya-ca-standalone-data-centre-licence"
 meta_description: "The CA's 30-day consultation on a standalone Data Centre licence would move colocation out of the NFP-T2 regime. Fees, timeline, implications."
 primary_keyword: "Kenya standalone data centre licence"

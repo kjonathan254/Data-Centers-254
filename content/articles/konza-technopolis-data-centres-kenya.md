@@ -1,5 +1,5 @@
 ---
-title: "Konza Technopolis and the Future of Data Centres in Kenya"
+title: "Konza Technopolis and Kenya's Data Centre Future"
 slug: konza-technopolis-data-centres-kenya
 meta_description: "Inside Konza Technopolis, Kenya's 5,000-acre smart city: purpose-built infrastructure, SEZ incentives, and what it means for data centres."
 primary_keyword: "Konza Technopolis data centres Kenya"

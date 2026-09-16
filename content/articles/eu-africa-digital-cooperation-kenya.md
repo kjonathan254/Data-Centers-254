@@ -1,5 +1,5 @@
 ---
-title: "Europe's Playbook for Africa's Digital Edge: Kenya's Part"
+title: "Europe's Digital Playbook for Africa: Kenya's Part"
 slug: "eu-africa-digital-cooperation-kenya"
 meta_description: "A new EU security institute brief maps how Europe wants to partner on Africa's digital infrastructure and AI, with Ghana and Kenya as test cases."
 primary_keyword: "EU-Africa digital cooperation"

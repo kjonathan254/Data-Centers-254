@@ -1,5 +1,5 @@
 ---
-title: "Kenya Internet Speeds and What They Mean for Data Centres"
+title: "Kenya Internet Speeds: What They Mean for Data Centres"
 slug: "kenya-internet-speeds-data-centres"
 meta_description: "Kenya's average mobile internet speed tops 25 Mbps. How speeds shape data centre demand, user experience, and digital competitiveness."
 primary_keyword: "Kenya internet speeds"

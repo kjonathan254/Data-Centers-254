@@ -1,5 +1,5 @@
 ---
-title: "What Is a Data Centre SLA? Understanding Uptime Guarantees"
+title: "What Is a Data Centre SLA? Uptime Guarantees"
 slug: data-centre-sla-uptime-guarantees
 meta_description: "What a data centre SLA is, how 99.9% and 99.999% uptime guarantees translate to real downtime, and what Kenyan operators commit to."
 primary_keyword: "data centre SLA"

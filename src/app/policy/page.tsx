@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "data centre policy East Africa",
   ],
   openGraph: {
-    title: "Policy & Regulation | Data Centre 254",
+    title: "Policy & Regulation",
     description:
       "Licensing, data protection, taxation, and the rules shaping who builds what, where, in Kenya's data centre industry.",
     siteName: "Data Centre 254",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Policy & Regulation | Data Centre 254",
+    title: "Policy & Regulation",
     description:
       "Licensing, data protection, taxation, and the rules shaping Kenya's data centre industry.",
     images: ["/images/dc-policy-regulation.webp"],

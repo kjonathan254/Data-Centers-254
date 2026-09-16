@@ -1,5 +1,5 @@
 ---
-title: "Fibre Networks Powering Kenya's Data Centres: The Last Mile"
+title: "Fibre Networks and Kenya's Data Centre Last Mile"
 slug: "fibre-optic-networks-kenya-data-centres"
 meta_description: "Kenya's 15,000+ km of fibre connects its data centres to the world. Operators, pricing, redundancy, and the last-mile challenges that decide speed."
 primary_keyword: "fibre optic networks Kenya"

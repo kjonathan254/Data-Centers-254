@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Interactive map of every data centre in Kenya, plus the eight submarine cables landing at the coast and the fibre backbone of East Africa.",
   alternates: { canonical: "/infrastructure/map" },
   openGraph: {
-    title: "Every data centre in Kenya, mapped | Data Centre 254",
+    title: "Every data centre in Kenya, mapped",
     description:
       "Zoom from East Africa to the Nairobi cluster: 26 facilities, eight subsea cables, the fibre routes connecting them, and the continental PIDA project layer.",
     siteName: "Data Centre 254",

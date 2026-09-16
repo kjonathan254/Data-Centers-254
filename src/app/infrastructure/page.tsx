@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and the physical network that connects data centres to the world.",
   alternates: { canonical: "/infrastructure" },
   openGraph: {
-    title: "Infrastructure | Data Centre 254",
+    title: "Infrastructure",
     description:
       "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and the physical network powering data centres.",
     siteName: "Data Centre 254",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infrastructure | Data Centre 254",
+    title: "Infrastructure",
     description:
       "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and more.",
     images: ["/images/nbo2-launch-ribbon-cutting.webp"],
