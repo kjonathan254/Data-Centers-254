@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.bbc.com",
+    "name": "Raila Odinga says election systems hacked",
+    "snippet": "Aug 9, 2017 — He rejected provisional results from Tuesday's vote indicating a strong lead for President Uhuru Kenyatta. But Kenya's chief electoral officer ... Read more",
+    "host_name": "www.bbc.com",
+    "rank": 0,
+    "date": "Aug 9, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.aljazeera.com",
+    "name": "Election chief says 'hacking attempt did not succeed'",
+    "snippet": "Aug 11, 2017 — Election commission denies opposition claims of digital fraud as final vote results are expected on Friday.",
+    "host_name": "www.aljazeera.com",
+    "rank": 1,
+    "date": "Aug 11, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://cipit.strathmore.edu",
+    "name": "Kenyan Elections and Alleged Hacking - CIPIT",
+    "snippet": "Aug 18, 2017 — On 11 th August, the IEBC declared Uhuru Kenyatta as the winner of the election with 54.27% of votes cast with Raila Odinga coming in second with ... Read more",
+    "host_name": "cipit.strathmore.edu",
+    "rank": 2,
+    "date": "Aug 18, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cyberdefensemagazine.com",
+    "name": "Kenya opposition claims election results manipulated in",
+    "snippet": "Aug 15, 2017 — Kenya opposition claims hackers have manipulated the results of the recent election by breaking into the database of Kenya's electoral ...",
+    "host_name": "www.cyberdefensemagazine.com",
+    "rank": 3,
+    "date": "Aug 15, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.theeastafrican.co.ke",
+    "name": "Raila Odinga says IEBC systems were hacked",
+    "snippet": "Jul 5, 2020 — Nasa presidential candidate Raila Odinga (centre) when he alleged hacking of Kenya elections on August 9, 2017 in Nairobi. Read more",
+    "host_name": "www.theeastafrican.co.ke",
+    "rank": 4,
+    "date": "Jul 5, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.nytimes.com",
+    "name": "Kenya Election Returns Were Hacked, Opposition Leader",
+    "snippet": "Aug 9, 2017 — Raila Odinga said preliminary results that put him behind the incumbent, Uhuru Kenyatta, were a fraud. At least one person was reported ...",
+    "host_name": "www.nytimes.com",
+    "rank": 5,
+    "date": "Aug 9, 2017",
+    "favicon": ""
+  }
+]

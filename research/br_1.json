@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.ncc.gov.ng",
+    "name": "Advisory on Recent Kenyan Critical Information",
+    "snippet": "The attack began on 23 July 2023 , just barely four weeks after President Ruto released thousands of government services on the e-citizen platform in an effort ... Read more",
+    "host_name": "www.ncc.gov.ng",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cipit.strathmore.edu",
+    "name": "Kenya's Digital Infrastructure Under Threat? A Look at  - CIPIT",
+    "snippet": "Aug 22, 2023 — The attack denied Kenyans essential services like purchasing electricity tokens, M-Pesa transactions and government services that are accessible ... Read more",
+    "host_name": "cipit.strathmore.edu",
+    "rank": 1,
+    "date": "Aug 22, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.bbc.com",
+    "name": "Kenya cyber-attack: Why is eCitizen down?",
+    "snippet": "Jul 28, 2023 — The government has confirmed that there was a cyber- attack on the eCitizen portal, used by the public to access over 5,000 government services . Read more",
+    "host_name": "www.bbc.com",
+    "rank": 2,
+    "date": "Jul 28, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.techmonitor.ai",
+    "name": "Anonymous Sudan DDoS cyberattack hits Kenya's digital",
+    "snippet": "Jul 28, 2023 — Anonymous Sudan's attack comes just weeks after the e-Citizen platform was expanded to cover 5,000 additional government services . The Kenyan ... Read more",
+    "host_name": "www.techmonitor.ai",
+    "rank": 3,
+    "date": "Jul 28, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.studocu.com",
+    "name": "The eCitizen Platform Attack: Lessons for Cybersecurity",
+    "snippet": "This analysis examines the July 2023 cyberattack on Kenya's eCitizen platform, exploring its causes, consequences, and the lessons learned. Read more",
+    "host_name": "www.studocu.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "Anonymous Sudan",
+    "snippet": "They are alleged to have committed over 35,000 distributed denial-of- service ( DDoS ) attacks against entire small countries, government agencies, universities, ... Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.aa.com.tr",
+    "name": "Kenyan gov't says its e-Citizen portal suffered cyberattack",
+    "snippet": "Jul 28, 2023 — According to an ICT Ministry statement, the temporary disruption was caused by a cyberattack on the platform utilizing a technique known as a ... Read more",
+    "host_name": "www.aa.com.tr",
+    "rank": 6,
+    "date": "Jul 28, 2023",
+    "favicon": ""
+  }
+]

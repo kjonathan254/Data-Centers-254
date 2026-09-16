@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.bbc.com",
+    "name": "Africa's internet vulnerability and how to fix it",
+    "snippet": "May 14, 2024 — A cut to two of the undersea cables , which carry the data around the continent, early on Sunday morning, led to the recent disruption. fibre ...",
+    "host_name": "www.bbc.com",
+    "rank": 0,
+    "date": "May 14, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cablefree.net",
+    "name": "Fibre Cut - Avoiding Network Outage Using Wireless",
+    "snippet": "Consider a Gigabit Wireless resilience strategy for your fibre network to avoid downtime, unproductivity and loss of business for clients. The vast majority of ... Read more",
+    "host_name": "www.cablefree.net",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.internetsociety.org",
+    "name": "2024 East Africa Submarine Cable Outage Report",
+    "snippet": "Jul 23, 2024 — Not only did these cables reduce latency in the sub-region by 400%, but they also reduced Internet costs by more than 50%—at the time, roughly ...",
+    "host_name": "www.internetsociety.org",
+    "rank": 2,
+    "date": "Jul 23, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://insights.techcabal.com",
+    "name": "Three charts that explain the internet outage across Africa",
+    "snippet": "Apr 10, 2024 — On March 14, over a dozen African countries experienced internet outages due to damage to submarine fibre optic cables along the West African ... Read more",
+    "host_name": "insights.techcabal.com",
+    "rank": 3,
+    "date": "Apr 10, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.spectrum.com",
+    "name": "Internet redundancy, A smart approach to disaster recovery",
+    "snippet": "You can't afford even a minute of downtime. Does your business continuity plan include internet connectivity? $12,900 per minute — Average cost of an IT outage . Read more",
+    "host_name": "www.spectrum.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://citizen.digital",
+    "name": "Internet disruption: Why Kenyans may have to wait longer",
+    "snippet": "May 14, 2024 — \"All these cuts have had an impact that is now a recurring issue forcing a lot of businesses to kick in their business continuity processes. Read more",
+    "host_name": "citizen.digital",
+    "rank": 5,
+    "date": "May 14, 2024",
+    "favicon": ""
+  }
+]

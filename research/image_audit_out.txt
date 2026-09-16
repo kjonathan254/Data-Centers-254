@@ -1,0 +1,98 @@
+images total: 165   referenced: 151   never referenced: 14
+articles missing og_image: 0
+
+== NEVER REFERENCED (deploy pool for new articles) ==
+  aws-logo-sign-summit-venue.webp                      678x452  15KB
+  dc-careers-tech.webp                                 1024x1024  73KB
+  dc-gpu-cluster-4-wide.webp                           1600x1000  53KB
+  dc-server-chip-2.webp                                1920x1350  78KB
+  dc-server-chip-3.webp                                1920x1280  191KB
+  dc-server-chip-4-wide.webp                           1920x1200  257KB
+  dc-switchgear-2.webp                                 1920x1077  157KB
+  dc-woman-engineer-laptop.webp                        2000x1335  176KB
+  dc-woman-engineer-racks.webp                         2000x1335  371KB
+  dc-women-engineers-corridor.webp                     2000x1335  402KB
+  digital-realty-lhr20-render.webp                     1536x1024  212KB
+  kenya-wind-turbines-4.webp                           705x435  48KB
+  kenya-wind-turbines-5.webp                           701x438  41KB
+  nairobi-city-council-seal.webp                       300x300  11KB
+
+== LOW-RES (<800px wide) ==
+  aerial-fibre-technician-utility-pole.webp            733x418  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  amaco-cable-landing-beach.webp                       750x501  used in: content/articles/amaco-hercules-mombasa-ai-data-centre.md,co
+  amaco-dongo-kundu-sez.webp                           443x320  used in: content/articles/amaco-hercules-mombasa-ai-data-centre.md
+  amaco-lng-carrier.webp                               640x480  used in: content/articles/amaco-hercules-mombasa-ai-data-centre.md
+  amaco-mombasa-port-terminal.webp                     739x415  used in: content/articles/amaco-hercules-mombasa-ai-data-centre.md
+  amaco-power-barge.webp                               678x452  used in: content/articles/amaco-hercules-mombasa-ai-data-centre.md
+  amcham-2026-summit-speaker-stage.webp                783x662  used in: content/articles/amcham-2026-us-pledges-oracle-icolou-80m.md
+  aws-logo-sign-summit-venue.webp                      678x452  used in: UNUSED
+  classroom-ict-training-kenya.webp                    736x736  used in: content/articles/data-centre-careers-kenya.md,content/articl
+  constitution-kenya-pocket-hand.webp                  467x391  used in: content/articles/kenya-ict-policy-framework-data-centres.md
+  construction-crane-scaffolding.webp                  588x312  used in: content/articles/building-codes-data-centres-kenya.md,conten
+  construction-workers-site-review.webp                588x375  used in: content/articles/building-codes-data-centres-kenya.md,conten
+  dc-engineer-rack-inspection.webp                     736x1313  used in: content/articles/africa-data-centres-kenya-operations.md,con
+  dc-networking.webp                                   678x452  used in: content/articles/5g-networks-data-centre-demand-kenya.md,con
+  dc-servers-racks.webp                                512x512  used in: content/articles/africa-data-centres-kenya-operations.md,con
+  diagram-cable-gauge-breaker-chart.webp               736x917  used in: content/articles/data-centre-cabling-standards-kenya.md,src/
+  diagram-dc-rack-overview.webp                        736x1096  used in: content/articles/data-centre-cooling-systems-explained.md,sr
+  diagram-microwave-data-link.webp                     735x555  used in: content/articles/fibre-optic-networks-kenya-data-centres.md
+  diagram-network-protocols.webp                       736x736  used in: content/articles/data-centre-certifications-kenya.md,content
+  diagram-network-rack-components.webp                 736x990  used in: content/articles/what-is-a-data-centre.md,src/lib/portrait-i
+  diagram-network-vs-cyber-career.webp                 736x981  used in: content/articles/data-centre-careers-kenya.md,content/articl
+  diagram-office-rack-design.webp                      736x981  used in: content/articles/data-centre-design-build-kenya.md,src/lib/p
+  diagram-power-chain-grid-to-gpu.webp                 736x1318  used in: content/articles/aws-1-5bn-africa-compute-gap-kenya.md,conte
+  diagram-satellite-connector-types.webp               736x1104  used in: content/articles/kenya-internet-speeds-data-centres.md,src/l
+  diagram-server-rack-42u.webp                         736x1104  used in: content/articles/colocation-data-centres-nairobi-buyers-guid
+  diagram-ssh-tcp-vpn.webp                             736x981  used in: content/articles/data-centre-security-explained.md,src/lib/p
+  diagram-telecom-mast-anatomy.webp                    736x896  used in: content/articles/safaricom-data-centre-operations-kenya.md,s
+  diagram-telecom-tower-components.webp                718x900  used in: content/articles/5g-networks-data-centre-demand-kenya.md,src
+  diagram-tower-installation-rru-aau.webp              688x1223  used in: content/articles/edge-computing-east-africa.md,src/lib/portr
+  digital-realty-logo.webp                             588x282  used in: content/articles/digital-realty-nbo2-launch-nairobi.md
+  fibre-billboard-nairobi-street.webp                  500x255  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  fibre-handhole-duct-cables.webp                      639x480  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  fibre-patch-panel-sc-connectors.webp                 697x440  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  fibre-splicing-technician-data-hall.webp             480x640  used in: content/articles/data-centre-interconnection-peering-kenya.m
+  fibre-splicing-termination.webp                      736x981  used in: content/articles/ai-model-training-kenya-use-cases.md,conten
+  grid-technician-pole-work.webp                       736x1309  used in: content/articles/ai-data-centres-east-africa.md,content/arti
+  hero-dc-nairobi.webp                                 678x452  used in: content/articles/colocation-data-centres-nairobi-buyers-guid
+  highrise-construction-cranes-kenya.webp              588x384  used in: content/articles/building-codes-data-centres-kenya.md,conten
+  junior-technician-server-aisle.webp                  736x1308  used in: src/lib/portrait-images.ts
+  kenya-geothermal-plant-2.webp                        595x400  used in: content/articles/ai-data-centres-east-africa.md
+  kenya-geothermal-plant-4.webp                        588x390  used in: content/articles/geothermal-energy-kenya-data-centres.md
+  kenya-power-feeder-works.webp                        681x450  used in: content/articles/kenya-power-tariffs-data-centres.md
+  kenya-solar-farm-3.webp                              588x339  used in: content/articles/kenya-power-tariffs-data-centres.md
+  kenya-solar-farm-4.webp                              588x330  used in: content/articles/solar-power-data-centres-kenya.md
+  kenya-solar-farm-5.webp                              588x366  used in: content/articles/solar-power-data-centres-kenya.md
+  kenya-solar-farm.webp                                720x500  used in: content/articles/kenya-power-tariffs-data-centres.md,content
+  kenya-wind-turbines-2.webp                           678x381  used in: content/articles/kenya-power-infrastructure-data-centres.md
+  kenya-wind-turbines-3.webp                           678x452  used in: content/articles/kenya-digital-economy-data-centre-demand.md
+  kenya-wind-turbines-4.webp                           705x435  used in: UNUSED
+  kenya-wind-turbines-5.webp                           701x438  used in: UNUSED
+  kenyan-parliament-buildings.webp                     640x412  used in: content/articles/konza-technopolis-data-centres-kenya.md
+  last-mile-pole-erection-makueni.webp                 554x554  used in: content/articles/kenya-internet-speeds-data-centres.md
+  limuru-campus-aerial-solar.webp                      710x344  used in: src/app/research/state-of-kenyan-data-centres-2026/page.tsx,
+  metro-fibre-civil-works.webp                         736x981  used in: content/articles/fibre-optic-networks-kenya-data-centres.md,
+  mombasa-cable-landing-2.webp                         512x382  used in: content/articles/fibre-optic-networks-kenya-data-centres.md,
+  mombasa-cable-landing-3.webp                         588x294  used in: content/articles/5g-networks-data-centre-demand-kenya.md,con
+  mombasa-cable-landing-4.webp                         758x404  used in: content/articles/5g-networks-data-centre-demand-kenya.md,con
+  mombasa-cable-landing.webp                           739x415  used in: content/articles/5g-networks-data-centre-demand-kenya.md,con
+  moringa-ixafrica-training-signing.webp               518x592  used in: content/articles/how-to-get-job-kenyan-data-centre.md,src/li
+  nairobi-city-council-seal.webp                       300x300  used in: UNUSED
+  nairobi-street-fibre-trench.webp                     750x375  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  parliament-clock-tower-aerial.webp                   387x516  used in: src/lib/portrait-images.ts
+  poor-cable-management-example.webp                   736x981  used in: content/articles/data-centre-cabling-standards-kenya.md,src/
+  racks-cabling.webp                                   625x350  used in: content/articles/career-progression-african-data-centres.md,
+  rerec-pole-handover-kenya.webp                       678x452  used in: content/articles/career-progression-african-data-centres.md,
+  server-rack-patch-cabling.webp                       736x1104  used in: content/articles/career-progression-african-data-centres.md,
+  site-visit-power-hall-kenya.webp                     678x452  used in: content/articles/kenya-data-sovereignty-localisation.md,cont
+  submarine-cables-map.webp                            478x457  used in: content/articles/africa-fibre-commercial-operating-model.md,
+  tanui-ps-konza-address.webp                          679x452  used in: content/articles/kenya-data-centre-compute-hub-plan-explaine
+  tanui-ps-konza-podium.webp                           739x415  used in: content/articles/kenya-data-centre-compute-hub-plan-explaine
+  tech-community-event-nairobi.webp                    736x981  used in: content/articles/women-in-data-centres-kenya.md,src/componen
+  technician-rack-cabling-kenya.webp                   485x600  used in: content/articles/liquid-intelligent-technologies-kenya.md,co
+  ups-switchgear-power-room.webp                       480x640  used in: content/articles/ai-model-training-kenya-use-cases.md,conten
+  whats-inside-ai-data-center-wide.webp                736x460  used in: content/articles/africa-data-centres-kenya-operations.md,con
+  whats-inside-ai-data-center.webp                     736x1104  used in: content/articles/ai-ethics-governance-kenya.md,content/artic
+  woman-network-engineer-patch-panel.webp              736x1104  used in: content/articles/vps-hosting-kenya-mpesa-payment.md,src/lib/
+  worlds-largest-data-centers-2026.webp                725x864  used in: content/articles/keppel-dc-reit-tokyo-acquisition-signals.md
+
