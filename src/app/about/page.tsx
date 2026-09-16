@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/founder-photo.webp", width: 800, height: 800, alt: "Kevin Jonathan Onyango Otieno, Founder of Data Centre 254" }],
+    images: [{ url: "/images/founder-photo.webp", width: 800, height: 800, alt: "Kevin Jonathan Otieno, Founder of Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-cyan/20 shrink-0">
                   <Image
                     src="/images/founder-photo.webp"
-                    alt="Kevin Jonathan Onyango Otieno, Founder of Data Centre 254"
+                    alt="Kevin Jonathan Otieno, Founder of Data Centre 254"
                     fill
                     className="object-cover"
                     sizes="144px"
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Data Centre 254 was founded and is operated by <strong className="text-foreground">Kevin Jonathan Onyango Otieno</strong>,
+                  Data Centre 254 was founded and is operated by <strong className="text-foreground">Kevin Jonathan Otieno</strong>,
                   a Kenyan founder, writer and content creator with a background in communications,
                   digital media, digital marketing and technology. He is self-taught in areas of AI,
                   cloud computing and digital infrastructure.

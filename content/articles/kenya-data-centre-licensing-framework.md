@@ -9,7 +9,7 @@ secondary_keywords:
   - "Kenya telecoms licensing framework"
   - "data centre regulation East Africa"
   - "NFP-T1 vs NFP-T2"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-21"
 updated_date: "2026-08-27"

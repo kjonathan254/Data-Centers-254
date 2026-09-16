@@ -9,7 +9,7 @@ secondary_keywords:
   - "Kenya Data Protection Act AI"
   - "open-source LLMs Kenya"
   - "AI startups Nairobi"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

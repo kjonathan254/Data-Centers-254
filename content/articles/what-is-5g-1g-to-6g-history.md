@@ -9,7 +9,7 @@ secondary_keywords:
   - "what is 6G"
   - "5G Kenya Safaricom Airtel"
   - "importance of 5G"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-13"
 updated_date: "2026-09-13"

@@ -9,7 +9,7 @@ secondary_keywords:
   - "artificial intelligence infrastructure Kenya"
   - "data centre AI East Africa"
   - "high performance computing Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

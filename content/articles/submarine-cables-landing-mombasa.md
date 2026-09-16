@@ -9,7 +9,7 @@ secondary_keywords:
   - "TEAMS cable Kenya"
   - "Djibouti Africa Regional Express"
   - "undersea internet cables East Africa"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
 updated_date: "2026-08-27"

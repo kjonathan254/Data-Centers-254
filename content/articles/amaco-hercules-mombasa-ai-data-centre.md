@@ -10,7 +10,7 @@ secondary_keywords:
   - "off-grid data centre Kenya"
   - "GE Vernova Amaco Kenya"
   - "Mombasa AI hub"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-15"
 updated_date: "2026-09-15"

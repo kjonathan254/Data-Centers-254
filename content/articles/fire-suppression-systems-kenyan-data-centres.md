@@ -9,7 +9,7 @@ secondary_keywords:
   - "FM-200 Novec 1230 comparison"
   - "Kenya fire safety regulations data centre"
   - "NFPA 75 data centre fire protection"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

@@ -9,10 +9,10 @@ secondary_keywords:
   - "NOFBI Kenya"
   - "Liquid Intelligent Technologies Kenya"
   - "Safaricom fibre network"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-16"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/dc-fibre-optics.webp"
@@ -28,7 +28,7 @@ images:
     position: "section-break"
   - src: "/images/mombasa-cable-landing-2.webp"
     alt:  "Crews hauling a submarine cable ashore at Mombasa"
-    caption: "Kenya's fibre network connects to four submarine cable systems landing in Mombasa, providing redundancy and multiple routing options to Europe, Asia, and the Middle East"
+    caption: "Kenya's fibre network connects to eight live submarine cable systems landing in Mombasa, providing redundancy and multiple routing options to Europe, Asia, and the Middle East"
     position: "infographic"
   - src: "/images/dc-networking.webp"
     alt:  "Labelled diagram of a fibre patch panel with SC and FC connectors"
@@ -115,7 +115,7 @@ The path from a user's phone or laptop to a server inside a data centre involves
 
 ### Submarine Cables to Landing Stations
 
-The journey begins (or ends) at the submarine cable landing stations in Mombasa. Kenya has four operational submarine cable systems: SEACOM, TEAMS, EASSy, and DARE1. Each cable lands at dedicated stations along the Mombasa coast and connects to terrestrial fibre networks that carry traffic inland to Nairobi, where the data centres are. The [submarine cables themselves](/articles/submarine-cables-landing-mombasa) provide Kenya's connection to the global internet, to Europe, Asia, the Middle East, and the rest of Africa.
+The journey begins (or ends) at the submarine cable landing stations in Mombasa. Kenya has eight live submarine cable systems as of September 2026: SEACOM, TEAMS, EASSy, DARE1, EIG, LION2, PEACE, and 2Africa, with a ninth (Daraja) in development. Each cable lands at dedicated stations along the Mombasa coast and connects to terrestrial fibre networks that carry traffic inland to Nairobi, where the data centres are. The [submarine cables themselves](/articles/submarine-cables-landing-mombasa) provide Kenya's connection to the global internet, to Europe, Asia, the Middle East, and the rest of Africa.
 
 ### Long-Haul Backbone: Mombasa to Nairobi
 

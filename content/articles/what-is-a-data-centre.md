@@ -9,7 +9,7 @@ secondary_keywords:
   - "types of data centres"
   - "data centre basics Kenya"
   - "server room vs data centre"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-25"
 updated_date: "2026-08-27"

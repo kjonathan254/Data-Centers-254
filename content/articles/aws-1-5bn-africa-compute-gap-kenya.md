@@ -9,7 +9,7 @@ secondary_keywords:
   - "AI compute Africa"
   - "leapfrog Africa cloud"
   - "AWS Cape Town region"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-14"
 updated_date: "2026-09-14"

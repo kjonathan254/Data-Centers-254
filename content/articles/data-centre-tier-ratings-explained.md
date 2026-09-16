@@ -9,7 +9,7 @@ secondary_keywords:
   - "data centre reliability standards"
   - "N+1 redundancy data centre"
   - "2N redundancy data centre"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
 updated_date: "2026-08-27"

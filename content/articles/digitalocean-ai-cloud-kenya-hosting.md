@@ -9,7 +9,7 @@ secondary_keywords:
   - "Kenya cloud hosting for startups"
   - "AI data centre demand Africa"
   - "DigitalOcean DOCN earnings 2026"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
 updated_date: "2026-09-08"

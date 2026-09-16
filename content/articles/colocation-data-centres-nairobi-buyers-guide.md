@@ -8,7 +8,7 @@ secondary_keywords:
   - "server rack space leasing nairobi"
   - "carrier neutral data centres kenya"
   - "colocation providers nairobi"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
 updated_date: "2026-09-16"

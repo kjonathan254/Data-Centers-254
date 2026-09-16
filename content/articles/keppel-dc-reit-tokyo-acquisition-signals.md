@@ -10,7 +10,7 @@ secondary_keywords:
   - "hyperscale facility valuation"
   - "data centre investment benchmarks"
   - "African data centre capital markets"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-04"
 updated_date: "2026-09-04"

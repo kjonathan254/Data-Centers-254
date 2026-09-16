@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     "digital economy Kenya",
     "hyperscale East Africa",
   ],
-  authors: [{ name: "Kevin Jonathan Onyango Otieno", url: siteUrl("/about") }],
-  creator: "Kevin Jonathan Onyango Otieno",
+  authors: [{ name: "Kevin Jonathan Otieno", url: siteUrl("/about") }],
+  creator: "Kevin Jonathan Otieno",
   publisher: "Data Centre 254",
   icons: {
     icon: [
@@ -117,7 +117,7 @@ export default function RootLayout({
                 "Kenya's independent knowledge and intelligence platform for digital infrastructure. Translating complex data centre, connectivity, and power infrastructure into accessible knowledge.",
               founder: {
                 "@type": "Person",
-                name: "Kevin Jonathan Onyango Otieno",
+                name: "Kevin Jonathan Otieno",
                 jobTitle: "Founder & Researcher",
                 description: "Kenyan founder, writer and content creator with a background in communications, digital media, digital marketing and technology. Self-taught in AI, cloud computing and digital infrastructure.",
                 email: "elmaccommunicationslimited@gmail.com",

@@ -9,7 +9,7 @@ secondary_keywords:
   - "capital allowances data centre plant machinery Kenya"
   - "Kenya Investment Authority data centre incentives"
   - "Kenya corporate tax rate data centres"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-09-16"

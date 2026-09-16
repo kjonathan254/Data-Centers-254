@@ -10,7 +10,7 @@ secondary_keywords:
   - "Kenya 100% renewable 2030"
   - "Olkaria geothermal data centre"
   - "green industrial parks Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-31"
 updated_date: "2026-08-31"

@@ -9,7 +9,7 @@ secondary_keywords:
   - "Microsoft G42 Kenya data centre"
   - "Safaricom 5G infrastructure"
   - "enterprise data centre Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
 updated_date: "2026-09-14"

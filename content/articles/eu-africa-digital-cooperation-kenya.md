@@ -9,7 +9,7 @@ secondary_keywords:
   - "Kenya EU digital partnership"
   - "Africa data governance policy"
   - "D4D Hub Digital Investment Facility"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
 updated_date: "2026-09-15"

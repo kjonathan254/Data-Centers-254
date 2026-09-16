@@ -9,7 +9,7 @@ secondary_keywords:
   - "Kenya colocation market 2026"
   - "East Africa data centre growth"
   - "Kenya data centre statistics"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
 updated_date: "2026-09-15"

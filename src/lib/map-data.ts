@@ -141,6 +141,7 @@ export const FIBRE_ROUTES: { id: string; waypoints: [number, number][]; note?: s
   { id: "dar-kigali", waypoints: [[-6.81, 39.27], [-6.2, 37.4], [-5.0, 35.4], [-3.5, 33.4], [-2.5, 31.5], [-1.95, 30.06]] },
   { id: "djibouti-addis", waypoints: [[11.5, 42.9], [10.8, 42.0], [9.9, 40.4], [9.02, 38.75]] },
   { id: "g2m", waypoints: [[-4.04, 39.66], [-2.1, 37.5], [-1.28, 36.82], [-0.4, 31.7], [-1.05, 30.9], [-1.68, 29.23]], note: "Paratus Goma–Mombasa (G2M) route, live 2026, Goma via Kigali, Kampala and Nairobi to the Mombasa cable landing" },
+  { id: "berbera-ethiopia", waypoints: [[11.34, 45.01], [9.56, 44.07], [9.02, 38.75]], note: "Somcable terrestrial backbone from the Berbera cable landings (2Africa, PEACE) via Hargeisa into Ethiopia; extensions toward South Sudan reported 15 Sep 2026 (Business Daily)" },
 ];
 
 export const KIXP = { name: "KIXP", members: 140, peakGbps: 2900, year: 2000, city: "nairobi" as const };

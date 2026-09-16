@@ -9,7 +9,7 @@ secondary_keywords:
   - "US investment Kenya data centres"
   - "African Data Centres Oracle"
   - "Sh77.5 billion US pledges Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-14"
 updated_date: "2026-09-14"

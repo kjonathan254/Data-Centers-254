@@ -9,7 +9,7 @@ secondary_keywords:
   - "Mombasa data centre potential"
   - "Nairobi data centre corridor"
   - "data centre site selection Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

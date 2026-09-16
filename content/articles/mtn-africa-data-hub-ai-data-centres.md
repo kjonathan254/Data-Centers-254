@@ -10,7 +10,7 @@ secondary_keywords:
   - "AI data centre capacity Africa"
   - "AI infrastructure Africa"
   - "Gulf Data Hub"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
 updated_date: "2026-08-31"

@@ -9,7 +9,7 @@ secondary_keywords:
 - data centre salary ranges Kenya
 - data centre career path Nairobi
 - African data centre careers
-author: Kevin Jonathan Onyango Otieno
+author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
 updated_date: '2026-08-28'

@@ -98,7 +98,7 @@ export default function EditorialPolicyPage() {
           <h2 className="text-xl font-semibold text-foreground mb-2">Who is behind DC254</h2>
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-10">
             Data Centre 254 is founded, researched, and written by{" "}
-            <strong className="text-foreground font-semibold">Kevin Jonathan Onyango Otieno</strong>,
+            <strong className="text-foreground font-semibold">Kevin Jonathan Otieno</strong>,
             a Kenyan writer and researcher with a background in communications, digital
             media, digital marketing, and technology, and self-taught depth in AI, cloud
             computing, and digital infrastructure. He publishes from Nairobi, Kenya.

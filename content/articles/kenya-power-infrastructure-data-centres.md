@@ -9,7 +9,7 @@ secondary_keywords:
   - "PUE data centre"
   - "Kenya electricity grid capacity"
   - "renewable energy data centres"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
 updated_date: "2026-08-27"

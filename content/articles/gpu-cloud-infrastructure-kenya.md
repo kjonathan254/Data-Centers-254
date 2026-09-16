@@ -8,7 +8,7 @@ secondary_keywords:
   - "nvidia hardware enterprise east africa"
   - "ai ready data centre kenya"
   - "local ai hosting kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
 updated_date: "2026-09-16"

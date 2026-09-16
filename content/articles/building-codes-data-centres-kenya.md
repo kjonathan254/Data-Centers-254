@@ -9,7 +9,7 @@ secondary_keywords:
 - Kenya fire safety codes data centres
 - KEBS standards data centre construction
 - data centre zoning regulations Kenya
-author: Kevin Jonathan Onyango Otieno
+author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
 updated_date: '2026-08-28'

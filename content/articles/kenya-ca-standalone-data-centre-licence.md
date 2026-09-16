@@ -9,10 +9,10 @@ secondary_keywords:
   - "NFP-T2 data centre licence"
   - "data centre regulation Kenya"
   - "colocation licence Kenya"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
-updated_date: "2026-09-14"
+updated_date: "2026-09-16"
 category: "Policy"
 cluster: "Policy"
 og_image: "/images/national-assembly-chamber-session.webp"
@@ -37,6 +37,10 @@ internal_links:
     href: "/directory"
   - text: "PwC's global capex forecast and Africa's share"
     href: "/articles/pwc-global-data-centre-capex-2050"
+  - text: "What the Data Protection Act means for data centres"
+    href: "/articles/kenya-data-protection-act-data-centres"
+  - text: "Kenya data sovereignty and localisation requirements"
+    href: "/articles/kenya-data-sovereignty-localisation"
 external_sources:
   - title: "Developing Telecoms, Kenya regulator proposes standalone licence for data centres (9 Sep 2026)"
     url: "https://developingtelecoms.com/telecom-technology/data-centres-networks/20797-kenya-regulator-proposes-standalone-licence-for-data-centres.html"
@@ -57,6 +61,8 @@ faq:
     answer: "Stakeholders have 30 days from 8 September 2026 to review and comment on the proposed framework, putting the comment deadline around 8 October 2026. Submissions go through the Communications Authority's open consultations portal at ca.go.ke."
   - question: "What will the standalone data centre licence cost?"
     answer: "Under the proposal, the application fee would be KES 5,000 with an initial licence fee of KES 100,000. Annual operating fees would be KES 80,000 or 0.4% of annual gross turnover, whichever is higher. Licences would be valid for 15 years. That is a substantial cut on the current NFP-T2 route, whose 15-year licence fee runs to KES 15 million (or 0.4% of gross annual turnover, whichever is higher), though the Universal Service Fund levy, presently 0.5% of annual gross revenue, still applies on top. Entities already holding NFP or Application Service Provider (ASP) licences could establish and operate data centres without obtaining the separate licence."
+  - question: "Does the standalone data centre licence replace Data Protection Act registration?"
+    answer: "No. The two regimes run in parallel. The Communications Authority licenses the facility as infrastructure, while the Data Protection Act 2019 obligations (ODPC registration where thresholds are met, breach notification, Section 48 transfer restrictions) apply to the operator and its tenants regardless of which CA licence they hold. A standalone data centre licence is not a data protection clearance, and regulated tenants will still require contractual data residency and audit rights on top of both regimes."
   - question: "Do CBK or SASRA regulations apply when setting up a data centre?"
     answer: "Not to the facility itself. The Communications Authority is the regulator that licenses the data centre operator, and the draft standalone licence framework sits entirely in that regime. The Central Bank of Kenya (CBK) and the SACCO Societies Regulatory Authority (SASRA) license banks and SACCOs respectively, and their outsourcing and ICT guidelines then reach the data centre indirectly: a regulated institution using your facility must satisfy its supervisor on where data sits, audit access, business continuity and exit rights. The practical effect is contractual rather than licensing: expect CBK- and SASRA-regulated customers to demand audit rights, in-country data location, and stronger SLA commitments than unregulated customers."
 canonical_url: "https://data-centers-254.vercel.app/articles/kenya-ca-standalone-data-centre-licence"
@@ -92,6 +98,12 @@ The CA is not promising a quick flip. The proposed data centre regime is schedul
 
 For operators, the practical reading is that NFP-T2 remains the licence of record through at least FY2026/27, and anyone entering the market now should still plan around the March 2026 framework while tracking the consultation's outcome. The two-step roadmap also means there is a second window (between finalisation and implementation) where the market structure documents themselves get amended. That is where transition mechanics (existing licence holders, renewal dates, fee harmonisation) will be settled.
 
+## Where the ODPC Fits In
+
+A standalone CA licence licenses the building, not the data. The Data Protection Act 2019 runs in parallel and applies to the same facility regardless of what the Communications Authority decides: the operator is typically a data processor (and often a controller for its own staff and security data), and tenants are controllers of the personal data on their racks. In practice three DPA obligations land on the facility first. Registration with the Office of the Data Protection Commissioner (ODPC) where thresholds are met. Breach notification duties, where a facility that suffers a security incident must notify affected customers promptly so controllers can meet their own 72-hour ODPC notification window. And Section 48 transfer restrictions, which govern what tenants may do with personal data that leaves the country, rules our [Data Protection Act explainer](/articles/kenya-data-protection-act-data-centres) unpacks in full.
+
+For the consultation, the intersection is mostly about what the new licence does NOT settle. Data residency commitments, audit access and cross-transfer safeguards live in customer contracts and DPA compliance, not in CA licence conditions, and regulated tenants (banks under CBK guidance, SACCOs under SASRA) will keep demanding contractual in-country storage regardless of which regime licenses the rack. There is also a convergence point worth watching: both regulators now collect information about the same facilities, the CA for visibility over data centre operations, the ODPC through registration and breach reporting. Operators responding to the consultation may reasonably ask the Authority to align data-related conditions with ODPC requirements rather than invent parallel ones. For the sovereignty backdrop behind all of this, see [our data localisation deep dive](/articles/kenya-data-sovereignty-localisation).
+
 ## What It Means for Operators and Investors
 
 The direction of travel is regulatory clarity, and clarity is what investors have asked for since the AI investment cycle reached Kenya. Business Daily's reporting framed the move within the government's ambition to position Kenya as the digital gateway for Eastern and Central Africa, citing PwC's 2026 outlook work on data centre investment, the same research that projects Africa attracting $255 billion of cumulative data centre capex through 2050. A regulator that splits data centres out of a telecom framework into a purpose-built licence is making the market easier to underwrite: licence conditions matched to the business, fees scaled to facility economics, and a 15-year validity period that survives political cycles.
@@ -102,4 +114,4 @@ The risks in the transition are real but manageable. Facilities licensed under N
 
 The consultation is open through the CA's consultations portal at ca.go.ke, with comments due within 30 days of 8 September 2026. Operators, industry bodies, tenants, and investors with Kenyan data centre exposure all have standing to comment. For context on the framework being revised, see our full explainer on [Kenya's data centre licensing framework](/articles/kenya-data-centre-licensing-framework), and for the facilities this licence will cover, browse the [Kenya data centre directory](/directory).
 
-Sources: Communications Authority of Kenya open consultations; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026); w.media (September 2026). Facts verified against multiple independent outlets on 10 September 2026; fee comparison and Universal Service Fund detail verified against w.media on 12 September 2026.
+Sources: Communications Authority of Kenya open consultations; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026); w.media (September 2026). Facts verified against multiple independent outlets on 10 September 2026; fee comparison and Universal Service Fund detail verified against w.media on 12 September 2026. ODPC intersection section added 16 September 2026, verified against our Data Protection Act explainer (Section 48, 72-hour notification) first published with dated sources.

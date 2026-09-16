@@ -9,7 +9,7 @@ secondary_keywords:
 - Data Protection Act 2019 Section 48
 - ODPC data transfer guidelines
 - data localisation driving data centre demand
-author: Kevin Jonathan Onyango Otieno
+author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
 updated_date: '2026-09-16'

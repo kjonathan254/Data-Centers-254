@@ -9,7 +9,7 @@ secondary_keywords:
   - "east west fibre route Africa"
   - "Mombasa submarine cable landing"
   - "East Africa terrestrial fibre backbone"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
 updated_date: "2026-09-08"

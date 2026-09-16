@@ -9,7 +9,7 @@ secondary_keywords:
   - "Konza SEZ data centre incentives"
   - "data centre investment Konza Technopolis"
   - "Kenya Silicon Savannah data centres"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

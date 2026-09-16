@@ -9,7 +9,7 @@ secondary_keywords:
   - "ISO 27001 data centre Kenya"
   - "data centre compliance Kenya"
   - "data centre access control"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"

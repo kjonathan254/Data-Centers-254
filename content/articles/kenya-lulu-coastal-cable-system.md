@@ -9,7 +9,7 @@ secondary_keywords:
   - "IOX cable Kenya"
   - "Vipingo SEZ data centre"
   - "Kenya submarine cable diversity"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
 updated_date: "2026-09-10"

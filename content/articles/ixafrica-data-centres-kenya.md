@@ -9,7 +9,7 @@ secondary_keywords:
   - "hyperscale data centre Kenya"
   - "AI-ready data centre East Africa"
   - "Actis investment Africa"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
 updated_date: "2026-08-29"

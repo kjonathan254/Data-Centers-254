@@ -9,7 +9,7 @@ secondary_keywords:
   - "data centre power consumption Kenya"
   - "reduce data centre energy costs"
   - "green data centre metrics"
-author: "Kevin Jonathan Onyango Otieno"
+author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
 updated_date: "2026-08-28"
