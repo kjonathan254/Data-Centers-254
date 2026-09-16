@@ -11,6 +11,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
+new: false
 updated_date: "2026-09-16"
 category: "Connectivity"
 cluster: "Internet"
@@ -47,6 +48,8 @@ internal_links:
 external_sources:
   - title: "AWS, Local Zones Locations page (fetched 16 Sep 2026; Nairobi, Kenya Zone listed, parent region Africa (Cape Town))"
     url: "https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations/"
+  - title: "AWS Direct Connect announces new location in Nairobi, Kenya (3 September 2025; East African Data Centres NBO1)"
+    url: "https://aws.amazon.com/about-aws/whats-new/2025/09/aws-direct-connect-location-nairobi-kenya/"
   - title: "Business Wire, AWS Announces Global Expansion of AWS Local Zones (16 Feb 2022; Nairobi among 32 new metros planned)"
     url: "https://www.businesswire.com/news/home/20220216005387/en/"
   - title: "Data Center Dynamics, AWS announces Local Zones in 32 cities (17 Feb 2022)"
@@ -63,7 +66,7 @@ faq:
   - question: "Why does my app feel slow in Kenya even with fast internet?"
     answer: "Because bandwidth and latency are different things. Bandwidth is how much data can move at once, like the width of a pipe. Latency is how long each round trip takes, like the length of the pipe. A fast fibre connection can still feel sluggish if every tap has to travel to a server in Europe and back before anything happens on screen. The fix is to shorten the trip, not just buy more bandwidth."
   - question: "Does AWS have servers in Kenya?"
-    answer: "AWS lists a Local Zone in Nairobi on its official Local Zones locations page (fetched 16 September 2026), with Cape Town as the parent region. A Local Zone is a small AWS outpost in a metro city that runs core services like compute and storage close to users, with a design goal of single-digit millisecond latency. AWS announced Nairobi among 32 new Local Zone metros in February 2022. For bigger workloads, the nearest full AWS regions remain outside Kenya, so many teams mix Local Zones or local hosts with a main region."
+    answer: "AWS lists a Local Zone in Nairobi on its official Local Zones locations page (fetched 16 September 2026), with Cape Town as the parent region. A Local Zone is a small AWS outpost in a metro city that runs core services like compute and storage close to users, with a design goal of single-digit millisecond latency. AWS announced Nairobi among 32 new Local Zone metros in February 2022. Since September 2025 there is also an AWS Direct Connect location inside East African Data Centres NBO1 near Nairobi, a private network pipe straight into AWS. For bigger workloads, the nearest full AWS regions remain outside Kenya, so many teams mix Local Zones, Direct Connect or local hosts with a main region."
   - question: "What is a CDN and does it help in Kenya?"
     answer: "A CDN (content delivery network) is a company that keeps copies of your static files, images, videos and pages, in many cities at once. Those copies are called a cache, and the buildings they sit in are edge locations. When a Kenyan user opens your site, the files come from Nairobi instead of Europe, which saves the whole long round trip. CDNPlanet lists Cloudflare with points of presence in Nairobi and Mombasa, Amazon CloudFront in Nairobi, EdgeNext in Nairobi and CDNetworks around Nairobi and Kiambu (fetched 16 September 2026), so yes, CDNs now have real Kenyan presence."
   - question: "How can I measure my own latency?"
@@ -109,7 +112,7 @@ The Kenyan edge map is real now. CDNPlanet's Kenya listings (fetched 16 Septembe
 
 A CDN accelerates files, but the application still thinks wherever its server lives. For apps where every millisecond counts (chat, gaming, trading tools, anything with a database in the loop), the fix is to run the application close to the user. Two roads lead there from Kenya.
 
-The first is an edge cloud. AWS defines Local Zones as small outposts that extend a cloud region into a metro city, running core services like compute, storage and databases near users, with a design goal of single-digit millisecond latency (AWS, 2020). AWS announced Nairobi among 32 new Local Zone metros in February 2022 (Business Wire, 16 February 2022; Data Center Dynamics, 17 February 2022), and its official locations page lists the Nairobi, Kenya Zone today, attached to the Africa (Cape Town) region as its parent (fetched 16 September 2026). In plain terms: part of AWS now sits in Nairobi, close enough for the snappy round trips that used to require hosting in Europe. If your workloads already run on AWS, this is the road of least change.
+The first is an edge cloud. AWS defines Local Zones as small outposts that extend a cloud region into a metro city, running core services like compute, storage and databases near users, with a design goal of single-digit millisecond latency (AWS, 2020). AWS announced Nairobi among 32 new Local Zone metros in February 2022 (Business Wire, 16 February 2022; Data Center Dynamics, 17 February 2022), and its official locations page lists the Nairobi, Kenya Zone today, attached to the Africa (Cape Town) region as its parent (fetched 16 September 2026). In plain terms: part of AWS now sits in Nairobi, close enough for the snappy round trips that used to require hosting in Europe. If your workloads already run on AWS, this is the road of least change. There is also a private pipe option: in September 2025 AWS opened a Direct Connect location inside East African Data Centres NBO1 near Nairobi (AWS announcement, 3 September 2025). Direct Connect is AWS's dedicated private link between your own equipment and AWS, bypassing the public internet entirely, which buys predictable latency and bandwidth for hybrid setups where part of the workload sits in Kenya and the rest in a full AWS region.
 
 The second road is Kenyan hosting outright: rent a VPS in a Nairobi data centre, or place your own servers in one. A VPS (virtual private server) is a slice of a machine you rent monthly, and our guide to [VPS hosting in Kenya paid with M-Pesa](/articles/vps-hosting-kenya-mpesa-payment) lists verified local providers. Hosting fully inside Nairobi keeps the entire round trip local, and it pairs naturally with [peering and interconnection in Kenya](/articles/data-centre-interconnection-peering-kenya), where networks exchange traffic directly inside the same buildings instead of detouring abroad. This is the deeper story of [edge computing in East Africa](/articles/edge-computing-east-africa): compute moving toward users, one facility at a time.
 
@@ -145,7 +148,7 @@ Because bandwidth and latency are different things. Bandwidth is how much data c
 
 ### Does AWS have servers in Kenya?
 
-AWS lists a Local Zone in Nairobi on its official Local Zones locations page (fetched 16 September 2026), with Cape Town as the parent region. A Local Zone is a small AWS outpost in a metro city that runs core services like compute and storage close to users, with a design goal of single-digit millisecond latency. AWS announced Nairobi among 32 new Local Zone metros in February 2022. For bigger workloads, the nearest full AWS regions remain outside Kenya, so many teams mix Local Zones or local hosts with a main region.
+AWS lists a Local Zone in Nairobi on its official Local Zones locations page (fetched 16 September 2026), with Cape Town as the parent region. A Local Zone is a small AWS outpost in a metro city that runs core services like compute and storage close to users, with a design goal of single-digit millisecond latency. AWS announced Nairobi among 32 new Local Zone metros in February 2022. Since September 2025 there is also an AWS Direct Connect location inside East African Data Centres NBO1 near Nairobi, a private network pipe straight into AWS. For bigger workloads, the nearest full AWS regions remain outside Kenya, so many teams mix Local Zones, Direct Connect or local hosts with a main region.
 
 ### What is a CDN and does it help in Kenya?
 

@@ -11,6 +11,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
+new: false
 updated_date: "2026-09-16"
 category: "AI & Infrastructure"
 cluster: "AI"
@@ -49,6 +50,8 @@ external_sources:
     url: "https://ixafrica.co.ke/"
   - title: "iXAfrica, Putting Kenya on the Map as a Data Centre Leader (fetched 16 Sep 2026; NBOX1 campus 22.5MW design capacity)"
     url: "https://ixafrica.co.ke/"
+  - title: "iXAfrica / iafrica.com: Atlancis Technologies, Everse Technology and iXAfrica unveil East and Central Africa's first GPU-powered AI infrastructure (10 November 2025; NVIDIA GPUs, Nairobi campus)"
+    url: "https://ixafrica.co.ke/"
   - title: "Marcopolis, IXAfrica: Building East Africa's First AI-Ready, Hyperscaler-Ready Data Centre (18 Jul 2025; high-density GPU hosting)"
     url: "https://marcopolis.net/"
   - title: "DLA Piper Data Protection Laws of the World, Kenya (updated 23 Mar 2026; Data Protection Act in force 25 Nov 2019)"
@@ -65,7 +68,7 @@ faq:
   - question: "Does Kenyan law require data to stay in Kenya?"
     answer: "Kenya's Data Protection Act, in force since 25 November 2019, is the primary law, and the regulator's own handbook states that organisations can meet localisation requirements by processing personal data through a data centre located in Kenya, or by storing a serving copy of the data in Kenya. Every data controller and processor must also register with the Office of the Data Protection Commissioner before processing personal data. The exact duty depends on your sector and data type, so get legal advice for your case, but the direction is clear: Kenyan personal data is expected to have a Kenyan home."
   - question: "Can I rent GPUs by the hour in Kenya today?"
-    answer: "The by-the-hour model familiar from global clouds is still mostly abroad. Inside Kenya, AI compute today comes mainly through AI-ready facilities: iXAfrica's NBOX1 campus in Nairobi is explicitly built and marketed for high-density GPU hosting with a 22.5MW design capacity, and similar capacity is emerging as new facilities launch. For most Kenyan teams that means engaging a local provider for dedicated or reserved capacity rather than swiping a card for one hour of training. Global clouds remain the option for small experiments, if you have the payment method and accept the data leaving the country."
+    answer: "The by-the-hour model familiar from global clouds is still mostly abroad. Inside Kenya, AI compute today comes mainly through AI-ready facilities: iXAfrica's NBOX1 campus in Nairobi is explicitly built and marketed for high-density GPU hosting with a 22.5MW design capacity, and since November 2025 the campus hosts a GPU-powered AI infrastructure service unveiled by Atlancis Technologies, Everse Technology and iXAfrica, built on NVIDIA GPUs. Similar capacity is emerging as new facilities launch. For most Kenyan teams that means engaging a local provider for dedicated or reserved capacity rather than swiping a card for one hour of training. Global clouds remain the option for small experiments, if you have the payment method and accept the data leaving the country."
   - question: "What makes a data centre AI-ready?"
     answer: "Three upgrades over a normal facility. Power density: AI racks draw many kilowatts each, several times an ordinary server rack, so floors, breakers and cooling must be engineered for the heat. Networking: training clusters pass enormous amounts of data between machines, so the cabling between racks matters as much as the internet connection. Space and weight: GPU machines are heavier and deeper than standard servers. A facility advertising AI-ready today, like iXAfrica's Nairobi campus, is claiming all three."
 canonical_url: "https://data-centers-254.vercel.app/articles/gpu-cloud-infrastructure-kenya"
@@ -98,6 +101,8 @@ This is the concept engineers call data gravity: data is heavy, in a legal and p
 So where would a Kenyan team actually rent GPU power today? The honest map, as of September 2026, is short but real, and it starts with one name.
 
 **iXAfrica NBOX1**, in Nairobi, is the flagship. The operator announced it as East Africa's first hyperscale, carrier-neutral, AI-ready data centre (February 2025), and trade coverage highlights its high-density GPU hosting capability (Marcopolis, July 2025). The campus's overall design capacity, what it is built to reach, is 22.5MW per the operator (fetched 16 September 2026), with a second campus, NBOX2, planned at Tilisi. Design capacity is a plan, not a switch-on date, so buyers should always ask what is live today. We unpack what hyperscale means in a separate guide.
+
+**The full stack is already running, not just the shells.** In November 2025, Atlancis Technologies, Everse Technology and iXAfrica jointly unveiled what the partners describe as East and Central Africa's first GPU-powered AI infrastructure, hosted at iXAfrica's Nairobi campus and built on NVIDIA GPUs (announcement dated 10 November 2025). The distinction matters: a facility that could host GPUs is a shell, while a facility where GPU clusters are installed, powered and cooled is a working AI factory, and Nairobi now has one. Kenyan teams can engage local providers for GPU capacity instead of importing every training run.
 
 Beyond iXAfrica, the pattern to know is this: Kenya's operational colocation market (NBO1 on Mombasa Road, the new NBO2, iColo, PAIX, all covered in our [Nairobi colocation buyer's guide](/articles/colocation-data-centres-nairobi-buyers-guide)) provides the shells, and AI-ready capability is arriving as those shells upgrade their power and cooling. The loudest sign of where this is heading is the [Amaco HERCULES proposal](/articles/amaco-hercules-mombasa-ai-data-centre): a $1.5 billion AI data centre plan for Mombasa that would generate its own electricity on a floating power barge, precisely because AI at scale is a power story before it is a software story.
 
@@ -141,7 +146,7 @@ Kenya's Data Protection Act, in force since 25 November 2019, is the primary law
 
 ### Can I rent GPUs by the hour in Kenya today?
 
-The by-the-hour model familiar from global clouds is still mostly abroad. Inside Kenya, AI compute today comes mainly through AI-ready facilities: iXAfrica's NBOX1 campus in Nairobi is explicitly built and marketed for high-density GPU hosting with a 22.5MW design capacity, and similar capacity is emerging as new facilities launch. For most Kenyan teams that means engaging a local provider for dedicated or reserved capacity rather than swiping a card for one hour of training. Global clouds remain the option for small experiments, if you have the payment method and accept the data leaving the country.
+The by-the-hour model familiar from global clouds is still mostly abroad. Inside Kenya, AI compute today comes mainly through AI-ready facilities: iXAfrica's NBOX1 campus in Nairobi is explicitly built and marketed for high-density GPU hosting with a 22.5MW design capacity, and since November 2025 the campus hosts a GPU-powered AI infrastructure service unveiled by Atlancis Technologies, Everse Technology and iXAfrica, built on NVIDIA GPUs. Similar capacity is emerging as new facilities launch. For most Kenyan teams that means engaging a local provider for dedicated or reserved capacity rather than swiping a card for one hour of training. Global clouds remain the option for small experiments, if you have the payment method and accept the data leaving the country.
 
 ### What makes a data centre AI-ready?
 

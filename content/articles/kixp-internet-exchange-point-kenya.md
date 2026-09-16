@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-08-27"
+updated_date: "2026-09-16"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/submarine-cables-map.webp"
@@ -50,13 +50,23 @@ external_sources:
     url: "https://www.internetsociety.org/resources/deploying-internet-exchange-points/"
   - title: "KIXP - Kenya Internet Exchange Point"
     url: "https://www.kixp.or.ke/"
+  - title: "Internet Society: Anchoring the African Internet Ecosystem (24 June 2020, KIXP 1 Gbps 2012 to 19 Gbps 2020)"
+    url: "https://www.internetsociety.org/resources/deploy360/2020/anchoring-the-african-internet-ecosystem/"
+  - title: "TESPOK: KIXP historic peak of 1.3 Tbps (25 June 2024)"
+    url: "https://www.facebook.com/tespokkenya/"
+  - title: "iXAfrica press release: KIXP peering node partnership (10 December 2024)"
+    url: "https://ixafrica.co.ke/"
+  - title: "PeeringDB: KIXP Nairobi exchange profile (April 2026 snapshot)"
+    url: "https://www.peeringdb.com/ix/240"
+  - title: "Communications Authority of Kenya sector statistics, Q3 2025/26 (reported 19 June 2026)"
+    url: "https://www.ca.go.ke/"
 faq:
   - question: "What is an Internet Exchange Point?"
     answer: "An IX is a facility where different networks connect directly to exchange traffic. Without an IX, traffic between two networks in the same city might route through Europe or South Africa. With an IX, it stays local, faster and cheaper."
   - question: "Who can connect to KIXP?"
     answer: "KIXP is open to any organisation that operates its own autonomous system (AS). This includes ISPs, mobile operators, content providers like Google and Netflix, cloud platforms, government networks, and educational institutions."
   - question: "How much traffic does KIXP handle?"
-    answer: "KIXP handles over 100 Gbps of peak traffic, making it one of the largest IXPs in East Africa. The volume has grown significantly as more content providers and cloud services establish local presence."
+    answer: "KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by April 2026 PeeringDB listed 142 peering networks with 3 Tbps of connected capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence."
   - question: "Does KIXP reduce internet costs for users?"
     answer: "Indirectly, yes. By keeping traffic local, ISPs avoid paying for international bandwidth on every local connection. This cost saving can be passed on to consumers. KIXP has been cited as a factor in Kenya's relatively affordable internet prices."
   - question: "What is peering vs transit?"
@@ -88,7 +98,7 @@ The early years were difficult. KIXP's founding members had to overcome regulato
 
 The breakthrough came with the liberalisation of Kenya's telecommunications sector in the mid-2000s. The Communications Commission of Kenya (now the Communications Authority of Kenya) issued new licensing frameworks that encouraged competition and infrastructure sharing. When TEAMS and SEACOM submarine cables landed in Mombasa in 2009–2010, international bandwidth prices collapsed. But paradoxically, this made KIXP *more* important, not less: cheaper international bandwidth meant more Kenyans came online, which meant more local content and services, which meant more traffic that benefited from local peering.
 
-By 2012, KIXP was handling over 1 Gbps of traffic. By 2018, it had crossed 30 Gbps. Today, peak traffic exceeds 100 Gbps, with over 60 connected members.
+By 2012, KIXP was handling over 1 Gbps of peak traffic, and the Internet Society measured 19 Gbps by 2020, with the exchange's cost savings to members quadrupling over the previous decade. The curve then steepened dramatically: TESPOK announced a historic peak of 1.3 Tbps in June 2024, and by April 2026 PeeringDB listed KIXP Nairobi with 142 peering networks, 158 connections and 3 Tbps of connected port capacity. Each local cache a network installs compounds the effect, because cached content pulls more traffic onto the exchange.
 
 ## Who Connects to KIXP?
 
@@ -129,7 +139,7 @@ KIXP also reduces the load on Kenya's international links. This is important for
 
 ## KIXP's Technical Infrastructure
 
-KIXP operates multiple switching platforms across two or more data centre facilities in Nairobi to ensure redundancy. The exchange uses a Layer 2 Ethernet fabric, meaning it operates at the data link layer. Members establish BGP sessions (typically over 10 Gigabit or 100 Gigabit Ethernet ports) to exchange routing information.
+KIXP operates multiple switching platforms across carrier-neutral data centre facilities in Nairobi to ensure redundancy, and in December 2024 it announced a peering node partnership with iXAfrica Data Centers, extending the exchange into one of the facilities where cloud and AI workloads are now hosted. The exchange uses a Layer 2 Ethernet fabric, meaning it operates at the data link layer. Members establish BGP sessions (typically over 10 Gigabit or 100 Gigabit Ethernet ports) to exchange routing information.
 
 The technical specifications matter for reliability. KIXP's switching infrastructure is designed to deliver:
 
@@ -154,7 +164,7 @@ The effect on traffic patterns has been dramatic. Before content caching, the va
 
 KIXP is frequently cited as a model for internet exchange development in Africa. According to the [Internet Society](https://www.internetsociety.org/resources/deploying-internet-exchange-points/), Kenya was among the first countries on the continent to establish a functional IXP, and its experience has informed IXP deployment strategies across the region.
 
-South Africa's NAPAfrica, based in Johannesburg and Cape Town, handles significantly more traffic (over 1 Tbps at peak) due to the country's larger economy and more developed hosting sector. Nigeria's IXPN, based in Lagos and Abuja, handles comparable volumes to KIXP. But on a per-capita basis, Kenya's peering ecosystem punches above its weight. The combination of high mobile penetration, strong local content growth, and a competitive ISP market has driven KIXP's traffic to levels that countries with larger populations have struggled to match.
+South Africa's NAPAfrica, based in Johannesburg and Cape Town, handles several times KIXP's volume due to the country's larger economy and more developed hosting sector, though KIXP's 1.3 Tbps peak now puts it in the same terabit class as the biggest African exchanges. Nigeria's IXPN, based in Lagos and Abuja, has grown rapidly on similar dynamics. But on a per-capita basis, Kenya's peering ecosystem punches above its weight. The combination of high mobile penetration, strong local content growth, and a competitive ISP market has driven KIXP's traffic to levels that countries with larger populations have struggled to match.
 
 Rwanda's RINEX, Tanzania's TIX, and Uganda's UIXP have all benefited from lessons learned at KIXP. Regional interconnection between East African IXPs is an ongoing effort, with the goal of keeping intra-African traffic on the continent rather than routing through Europe.
 
@@ -190,7 +200,7 @@ KIXP is open to any organisation that operates its own autonomous system (AS). T
 
 **How much traffic does KIXP handle?**
 
-KIXP handles over 100 Gbps of peak traffic, making it one of the largest IXPs in East Africa. The volume has grown significantly as more content providers and cloud services establish local presence.
+KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by April 2026 PeeringDB listed 142 peering networks with 3 Tbps of connected capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence.
 
 **Does KIXP reduce internet costs for users?**
 
@@ -202,7 +212,7 @@ Peering is a direct, typically free, exchange of traffic between two networks at
 
 ## Why KIXP Will Become Even More Important
 
-Kenya's internet user base continues to grow. The Communications Authority of Kenya reports over 25 million internet subscribers as of 2025, with mobile internet penetration exceeding 60%. The government's digital transformation agenda (which includes moving services online, expanding e-commerce, and developing smart city infrastructure) will generate enormous volumes of local traffic.
+Kenya's internet user base continues to grow. The Communications Authority of Kenya counted 84.1 million active mobile subscriptions and 62.6 million mobile broadband subscriptions in the third quarter of the 2025/26 financial year, with mobile broadband uptake still climbing quarter on quarter. The government's digital transformation agenda (which includes moving services online, expanding e-commerce, and developing smart city infrastructure) will generate enormous volumes of local traffic.
 
 Cloud computing adoption among Kenyan enterprises is accelerating. As more businesses migrate workloads to cloud platforms with local points of presence, the traffic between those platforms and end users will flow through KIXP. The same applies to edge computing, 5G networks, and the Internet of Things, all of which generate traffic that benefits from local peering.
 

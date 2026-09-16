@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-08-27"
+updated_date: "2026-09-16"
 category: "Data Centres"
 cluster: "Beginner"
 og_image: "/images/technician-ups-battery-room.webp"
@@ -41,6 +41,8 @@ images:
 internal_links:
   - text: "what is a data centre"
     href: "/articles/what-is-a-data-centre"
+  - text: "Nairobi colocation buyer's guide"
+    href: "/articles/colocation-data-centres-nairobi-buyers-guide"
   - text: "Kenya data centre directory"
     href: "/directory"
   - text: "data centre careers in Kenya"
@@ -50,9 +52,15 @@ external_sources:
     url: "https://uptimeinstitute.com/tier-standard/"
   - title: "Schneider Electric Data Centre Reference Designs"
     url: "https://www.se.com/ww/en/work/products-services/offerings/data-centers/"
+  - title: "DataCenterDynamics: East Africa Data Centre obtains Tier III certification (18 May 2017)"
+    url: "https://www.datacenterdynamics.com/en/news/eadc-obtains-tier-iii-certification/"
+  - title: "Uptime Institute: List of Tier-Certified Data Centers (checked 16 September 2026)"
+    url: "https://uptimeinstitute.com/resources/research-and-reports/tier-certification-list"
+  - title: "Raxio Group: all facilities Uptime Institute Tier III Certified (fetched 16 September 2026)"
+    url: "https://www.raxiogroup.com/"
 faq:
   - question: "What tier are most Kenyan data centres?"
-    answer: "Most commercial data centres in Nairobi target Tier III certification. iXAfrica NBOX1.1 is designed to Tier III standards. Africa Data Centres' facilities also target Tier III. Smaller enterprise data centres operated by telecom companies may be Tier II or uncertified."
+    answer: "Most commercial data centres in Nairobi target Tier III. Africa Data Centres' East Africa Data Centre was the first facility in central and eastern Africa to earn Uptime Institute Tier III Design certification (May 2017), iXAfrica NBOX1 is designed to Tier III standards, and Raxio certifies all of its facilities to Uptime Tier III as a group policy. Smaller enterprise data centres operated by telecom companies may be Tier II or uncertified. As of September 2026, no Kenyan facility has announced Uptime Tier IV certification."
   - question: "Does a data centre need to be certified to claim a tier?"
     answer: "No. Any operator can claim a tier rating, but only Uptime Institute-certified facilities have been independently verified. Certification requires a formal audit of the facility's design and operations, which typically costs USD 50,000-200,000. In practice, many Kenyan facilities are 'designed to Tier III' but not formally certified."
   - question: "What is N+1 redundancy?"
@@ -94,7 +102,7 @@ Tier III is the standard that most commercial data centres target globally, and 
 
 In a Tier III facility, you can replace a UPS unit, swap out a cooling module, or perform maintenance on a power distribution panel while the servers keep running normally. This "concurrent maintainability" is what enterprises require: the ability to maintain infrastructure without scheduled downtime.
 
-Tier III guarantees 99.982% availability, no more than 1.6 hours of downtime per year. This is the minimum requirement for most enterprise contracts, banking regulations, and cloud service level agreements. In Kenya, iXAfrica NBOX1.1, Africa Data Centres' Nairobi facilities, and several other commercial operators design to this standard.
+Tier III guarantees 99.982% availability, no more than 1.6 hours of downtime per year. This is the minimum requirement for most enterprise contracts, banking regulations, and cloud service level agreements. In Kenya, iXAfrica NBOX1, Africa Data Centres' Nairobi facilities, and several other commercial operators design to this standard. The certification history starts earlier than most people think: East Africa Data Centre, now operated by Africa Data Centres, became the first facility in central and eastern Africa to earn Uptime Tier III Design certification in May 2017, and Raxio applies Uptime Tier III certification across its facilities as a group-wide policy.
 
 ![Structured cabling connecting server racks](/images/server-rack-patch-cabling.webp)
 
@@ -107,6 +115,12 @@ Achieving Tier IV requires 2N or greater redundancy: two completely independent,
 Tier IV guarantees 99.995% availability, no more than 26 minutes of downtime per year. This level of reliability is required for the most critical applications: financial trading platforms, military systems, healthcare life-support systems, and similar workloads where any downtime has immediate, serious consequences.
 
 Very few facilities in Africa have achieved Tier IV certification. The cost premium over Tier III is substantial, typically 25-40% higher construction cost and 15-25% higher operating cost. For most Kenyan use cases, Tier III provides more than adequate reliability.
+
+## Does Kenya Have a Tier IV Data Centre?
+
+As of September 2026, no data centre in Kenya has announced Uptime Institute Tier IV certification, and DC254 has found no Kenyan facility at Tier IV on the Uptime Institute's issued-awards register. The strongest independently verified reliability claims in the Kenyan market sit at Tier III: East Africa Data Centre (now operated by Africa Data Centres) earned the first Tier III Design certification in central and eastern Africa in May 2017, Raxio applies Uptime Tier III certification across its facilities, and iXAfrica's NBOX1 campus is designed to Tier III standards.
+
+That is not a gap Kenya needs to apologise for. Tier IV exists for workloads where a momentary blip is unacceptable, such as high-frequency trading platforms or hospital life-support systems, and it carries the cost premium described above. Kenya's rational benchmark is Tier III reliability paired with the country's green, low-cost geothermal grid, which is exactly the combination most local operators sell. If your workload genuinely needs fault tolerance, the practical routes are software-level redundancy spread across two independent Tier III facilities (the approach hyperscalers use globally), or waiting for a verified Tier IV announcement. Whenever any operator claims a tier, ask for the Uptime certificate number and check it against the [official register](https://uptimeinstitute.com/resources/research-and-reports/tier-certification-list) rather than the brochure, and see [our Nairobi colocation buyer's guide](/articles/colocation-data-centres-nairobi-buyers-guide) for the questions that actually matter in a lease.
 
 ## N+1, 2N, and 2(N+1): The Redundancy Math
 

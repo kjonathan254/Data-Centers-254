@@ -46,6 +46,8 @@ export interface ArticleFrontmatter {
   external_sources: ExternalSource[];
   faq: ArticleFaq[];
   canonical_url?: string;
+  /** Set false to keep the green New badge off a story regardless of publish date. */
+  new?: boolean;
 }
 
 export interface Article {
@@ -157,7 +159,8 @@ function byFreshness(a: Article, b: Article): number {
 export const FRESH_WINDOW_HOURS = 24;
 
 export function isArticleFresh(a: Article, now: Date = new Date()): boolean {
-  const ageHours =
+  if (a.frontmatter.new === false) return false;
+  const ageHours = 
     (now.getTime() - new Date(a.frontmatter.published_date).getTime()) /
     3_600_000;
   return ageHours <= FRESH_WINDOW_HOURS;
