@@ -4,9 +4,12 @@
  * scripts/pwa-prebuild.mjs at build time (__BUILD_STAMP__ replaced).
  *
  * Strategy:
- *  - Navigations (article/HTML): stale-while-revalidate. Serve the cached
- *    copy instantly, refresh it in the background. Cache misses go to the
- *    network, then to the precached /offline fallback.
+ *  - Navigations (article/HTML): network-first. Always try the network so a
+ *    deployed update is visible on the very first visit; fall back to the
+ *    cached copy only when the network fails, then to the precached /offline
+ *    fallback. (Stale-while-revalidate was rejected: it served one stale
+ *    render per deploy, so freshly updated numbers looked wrong to anyone
+ *    checking right after a release.)
  *  - Static assets (/_next/static, /images, fonts): cache-first. They are
  *    content-hashed or immutable within a build.
  *  - Next.js RSC payload requests, /api/* and cross-origin traffic: never
@@ -101,23 +104,8 @@ async function cacheFirst(request, event) {
   }
 }
 
-async function staleWhileRevalidatePage(request, event) {
+async function networkFirstPage(request, event) {
   const cache = await caches.open(PAGE_CACHE);
-  const cached = await cache.match(request);
-
-  const revalidate = (async () => {
-    try {
-      const fresh = await fetch(request, { cache: "no-cache" });
-      if (fresh && fresh.ok) await cache.put(request, fresh.clone());
-    } catch (err) {
-      /* offline — cached copy (if any) keeps working */
-    }
-  })();
-
-  if (cached) {
-    event.waitUntil(revalidate);
-    return cached;
-  }
 
   try {
     const fresh = await fetch(request, { cache: "no-cache" });
@@ -131,6 +119,7 @@ async function staleWhileRevalidatePage(request, event) {
       (await caches.open(CORE_CACHE)).match(OFFLINE_URL);
     return fallback || fresh;
   } catch (err) {
+    // Network unreachable: cached copy keeps the site usable, else offline.
     const fallback =
       (await cache.match(request)) ||
       (await caches.open(CORE_CACHE)).match(OFFLINE_URL);
@@ -156,7 +145,7 @@ self.addEventListener("fetch", (event) => {
   if (request.headers.get("RSC") || url.searchParams.has("_rsc")) return;
 
   if (request.mode === "navigate") {
-    event.respondWith(staleWhileRevalidatePage(request, event));
+    event.respondWith(networkFirstPage(request, event));
     return;
   }
   if (isStaticAsset(url)) {
