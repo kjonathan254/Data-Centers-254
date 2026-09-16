@@ -37,7 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/data-exports`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/rack-report`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/search`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
+    // /search is deliberately noindexed (internal search tool, empty state
+    // without JS), so it must not be listed in the sitemap: a sitemap entry
+    // would contradict the noindex and confuse crawlers.
     // Trust & legal pages
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
