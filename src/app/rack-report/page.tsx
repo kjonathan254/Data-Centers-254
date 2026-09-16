@@ -138,15 +138,41 @@ export default function RackReportPage() {
           </div>
         </section>
 
-        {/* From the reporting, honest interim proof until Issue #001 ships */}
+        {/* Issue #001 download */}
         <section className="section-y border-b border-border/40">
           <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <h2 className="text-xl font-semibold text-foreground mb-2">
-              From the reporting
+              Read Issue #001
             </h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              Issue 001 shipped on Monday 14 September 2026: the CA&apos;s
+              standalone data centre licence consultation, $600M in AmCham
+              pledges, Amaco&apos;s $1.5 billion Mombasa plan, LuLu and the
+              northern route, and four things to watch next.
+            </p>
+            <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-8 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-foreground mb-1">
+                  The Rack Report · Issue 001
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Monday 14 September 2026 · 8 pages · PDF, about 300 KB
+                </p>
+              </div>
+              <a
+                href="/reports/rack-report-issue-1.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-6 h-11 text-sm font-semibold hover:bg-cyan/90 transition-all shrink-0"
+              >
+                Download the PDF
+              </a>
+            </div>
+            <h3 className="text-sm font-semibold text-foreground mb-2">
+              From the reporting
+            </h3>
             <p className="text-sm text-muted-foreground mb-8">
-              Issue #001 is being written. Until it lands, this is the reporting
-              the briefing draws on, researched, sourced, published openly.
+              The reporting the briefing draws on, researched, sourced,
+              published openly.
             </p>
             <div className="grid gap-4">
               {latest.map((a) => (
