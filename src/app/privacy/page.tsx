@@ -13,7 +13,7 @@ const sections = [
   {
     title: "1. Who We Are",
     body: [
-      "Data Centre 254 (\"DC254\", \"we\", \"us\") is an independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy. It is founded and published by Kevin Jonathan Otieno from Nairobi, Kenya.",
+      "Data Centre 254 (\"DC254\", \"we\", \"us\") is an independent Kenyan educational and research platform explaining the physical infrastructure behind Kenya's digital economy. It is founded and published by Kevin Jonathan Onyango Otieno from Nairobi, Kenya.",
       "This policy explains what personal data we collect when you visit data-centers-254.vercel.app, subscribe to our briefing, or contact us, and the rights you have over that data under the Kenya Data Protection Act, 2019.",
     ],
   },
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
             <section className="rounded-xl border border-border/50 bg-accent/30 p-5">
               <h2 className="text-base font-semibold text-foreground mb-2">9. Contact</h2>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Questions about this policy or your data? Contact Kevin Jonathan Otieno at{" "}
+                Questions about this policy or your data? Contact Kevin Jonathan Onyango Otieno at{" "}
                 <a href="mailto:elmaccommunicationslimited@gmail.com" className="text-cyan underline hover:underline">
                   elmaccommunicationslimited@gmail.com
                 </a>{", "}

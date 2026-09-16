@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "AI infrastructure in Kenya, GPU capacity, cloud regions, AI-ready data centres, and the computing demand shaping Africa's next technology frontier.",
   alternates: { canonical: "/ai" },
   openGraph: {
-    title: "AI Infrastructure",
+    title: "AI Infrastructure & Compute in Kenya",
     description:
       "AI infrastructure in Kenya, GPU capacity, cloud regions, AI-ready data centres, and the computing demand shaping Africa's technology frontier.",
     siteName: "Data Centre 254",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Infrastructure",
+    title: "AI Infrastructure & Compute in Kenya",
     description:
       "AI infrastructure in Kenya, GPU capacity, cloud regions, AI-ready data centres, and computing demand.",
     images: ["/images/ai-gpu-servers.webp"],

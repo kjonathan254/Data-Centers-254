@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "New to data centres? Plain-language guides that explain servers, cloud, and connectivity using examples you already know, like M-Pesa and WhatsApp.",
   alternates: { canonical: "/beginners" },
   openGraph: {
-    title: "Beginner Guides",
+    title: "Beginner Guides to Data Centres",
     description: "New to data centres? Plain-language guides that explain servers, cloud, and connectivity using examples you already know, like M-Pesa and WhatsApp.",
     siteName: "Data Centre 254",
     type: "website",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Beginner Guides",
+    title: "Beginner Guides to Data Centres",
     description: "New to data centres? Start here. Plain-language guides using M-Pesa, WhatsApp, and Netflix examples.",
     images: ["/images/dc-gpu-cluster.webp"],
   },

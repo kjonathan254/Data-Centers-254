@@ -199,7 +199,7 @@ export default async function AdvertisePage() {
               </a>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
-              Kevin Jonathan Otieno, Founder & Publisher, Nairobi, Kenya.
+              Kevin Jonathan Onyango Otieno, Founder & Publisher, Nairobi, Kenya.
             </p>
           </div>
         </div>

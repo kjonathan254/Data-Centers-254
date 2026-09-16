@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Get in touch with Data Centre 254. Corrections, tips, feedback, collaboration inquiries, or just say hello.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact",
+    title: "Contact Data Centre 254",
     description: "Get in touch, corrections, tips, feedback, or collaboration inquiries.",
     siteName: "Data Centre 254",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact",
+    title: "Contact Data Centre 254",
     description: "Get in touch with Data Centre 254.",
     images: ["/images/og-default.png"],
   },

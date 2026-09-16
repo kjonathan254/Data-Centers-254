@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Track Kenya's data centre supply as it moves: live capacity league, pipeline board, dated deliveries, operator scoreboard, and a confidence watchlist.",
   alternates: { canonical: "/tracker" },
   openGraph: {
-    title: "Kenya Data Centre Tracker",
+    title: "Kenya Data Centre Tracker: Pipeline & Operators",
     description:
       "Live capacity, pipeline board, dated deliveries and operator scoreboard, every figure sourced and dated.",
     siteName: "Data Centre 254",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kenya Data Centre Tracker",
+    title: "Kenya Data Centre Tracker: Pipeline & Operators",
     description: "Live capacity, pipeline board, dated deliveries and operator scoreboard, sourced and dated.",
     images: ["/images/africa-dc-map.webp"],
   },

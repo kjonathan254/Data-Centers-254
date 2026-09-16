@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "tiers data centre",
   ],
   openGraph: {
-    title: "Inside Data Centres",
+    title: "Inside Data Centres: How They Work",
     description:
       "Cooling, power, cabling and design, how the buildings behind Kenya's digital economy actually work.",
     siteName: "Data Centre 254",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Inside Data Centres",
+    title: "Inside Data Centres: How They Work",
     description: "How the buildings behind Kenya's digital economy actually work.",
     images: ["/images/dc-cooling-crac.webp"],
   },

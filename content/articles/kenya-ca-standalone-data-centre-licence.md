@@ -14,7 +14,7 @@ author_bio_link: "/about"
 published_date: "2026-09-10"
 updated_date: "2026-09-14"
 category: "Policy"
-cluster: "Kenya"
+cluster: "Policy"
 og_image: "/images/national-assembly-chamber-session.webp"
 reading_time: "9 min"
 images:

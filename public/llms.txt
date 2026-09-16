@@ -31,5 +31,5 @@ DC254 translates complex digital infrastructure topics into accessible, well-sou
 ## Usage Notes
 
 - Individual articles live under `/articles/<slug>` and include JSON-LD structured data (Article, FAQPage, BreadcrumbList).
-- Content is authored by Kevin Jonathan Otieno, founder of DC254.
+- Content is authored by Kevin Jonathan Onyango Otieno, founder of DC254.
 - Contact: elmaccommunicationslimited@gmail.com

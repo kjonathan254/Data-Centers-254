@@ -19,7 +19,7 @@ const sections = [
   {
     title: "2. About the Site",
     body: [
-      "DC254 is an independent Kenyan educational and research platform covering data centres, connectivity, energy, and AI infrastructure. It is published by Kevin Jonathan Otieno, Nairobi, Kenya.",
+      "DC254 is an independent Kenyan educational and research platform covering data centres, connectivity, energy, and AI infrastructure. It is published by Kevin Jonathan Onyango Otieno, Nairobi, Kenya.",
     ],
   },
   {

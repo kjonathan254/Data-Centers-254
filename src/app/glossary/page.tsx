@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Plain-language definitions for 19 essential data centre terms, from PUE and tier ratings to submarine cables, with Kenya-specific context.",
   alternates: { canonical: "/glossary" },
   openGraph: {
-    title: "Data Centre Glossary",
+    title: "Data Centre Glossary: 19 Key Terms Explained",
     description:
       "19 essential data centre terms explained in plain language with Kenya-specific context. PUE, tier ratings, colocation, submarine cables, and more.",
     siteName: "Data Centre 254",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Data Centre Glossary",
+    title: "Data Centre Glossary: 19 Key Terms Explained",
     description: "19 essential data centre terms explained with Kenya context.",
     images: ["/images/og-default.png"],
   },

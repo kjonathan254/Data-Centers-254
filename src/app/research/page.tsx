@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "DC254 reports and briefs on Kenya's digital infrastructure: free web summaries plus downloadable deep-dive PDFs. Open data, no signup wall.",
   alternates: { canonical: "/research" },
   openGraph: {
-    title: "Reports & Briefs",
+    title: "Research: Kenya Data Centre Reports",
     description:
       "Free summaries plus downloadable deep-dive PDFs on Kenya's data centre market.",
     siteName: "Data Centre 254",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reports & Briefs",
+    title: "Research: Kenya Data Centre Reports",
     description:
       "Free summaries plus downloadable deep-dive PDFs on Kenya's data centre market.",
     images: ["/images/og-default.png"],
