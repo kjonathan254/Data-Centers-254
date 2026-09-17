@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-15"
-updated_date: "2026-09-16"
+updated_date: "2026-09-17"
 category: "AI & Infrastructure"
 cluster: "Kenya"
 og_image: "/images/amaco-mombasa-port-terminal.webp"
@@ -56,6 +56,8 @@ internal_links:
     href: "/articles/kenya-ca-standalone-data-centre-licence"
   - text: "Kenya's power infrastructure and the data centre constraint"
     href: "/articles/kenya-power-infrastructure-data-centres"
+  - text: "how power reliability shapes data centre design"
+    href: "/articles/kenya-power-reliability-data-centres"
 external_sources:
   - title: "Business Daily, Greek firm Amaco plans Sh194bn AI data centre in Mombasa (17 Aug 2026)"
     url: "https://www.businessdailyafrica.com/bd/corporate/technology/greek-firm-amaco-plans-sh194bn-ai-data-centre-5561498"
@@ -129,7 +131,7 @@ Kenya's data centres cluster in Nairobi because the customers are there; our ana
 
 The candidate sites are Dongo Kundu and Kilindini, next to the port and the 3,000-acre Dongo Kundu Special Economic Zone, where industrial park developer ARISE operates (Construction Review Online, 10 September 2026). Amaco points to a demand pipeline of roughly 75 MW of potential base-load demand from heavy industry, plus another 75 to 100 MW potentially from initial data centre customers (Business Daily, 10 September 2026). In other words, the project bets on the port economy and the SEZ rather than on Nairobi's banks and telcos.
 
-The off-grid choice addresses the constraint that has capped every big Kenyan data centre plan so far: electricity. Kenya's record peak demand was 2,439 MW, reached in December 2025, so a single 100 MW AI campus would add demand equal to about 4 percent of the national peak (TechCabal, 20 August 2026). The cautionary tale is the Microsoft-G42 project near Olkaria in Nakuru County, announced in May 2024 at about $1 billion, which has stalled partly over a power request that grew from 60 MW to 1,000 MW, roughly a third of Kenya's total installed generation (Kenyans.co.ke, 22 August 2026; Business Daily, 10 September 2026). Amaco's answer is to sidestep that fight entirely: bring your own power plant.
+The off-grid choice addresses the constraint that has capped every big Kenyan data centre plan so far: electricity. Kenya's record peak demand was 2,439 MW, reached in December 2025, so a single 100 MW AI campus would add demand equal to about 4 percent of the national peak (TechCabal, 20 August 2026). The cautionary tale is the Microsoft-G42 project near Olkaria in Nakuru County, announced in May 2024 at about $1 billion, which has stalled partly over a power request that grew from 60 MW to 1,000 MW, roughly a third of Kenya's total installed generation (Kenyans.co.ke, 22 August 2026; Business Daily, 10 September 2026). Amaco's answer is to sidestep that fight entirely: bring your own power plant. We unpack the generation-versus-reliability logic behind moves like this, and the questions buyers should ask any facility about power, in [our power reliability explainer](/articles/kenya-power-reliability-data-centres).
 
 There is even a plan for the surplus. Amaco has said the system could contribute additional generation to Kenya's broader energy needs, and Construction Review Online reports a potential export path to the local grid near the Mariakani substation (Kenyans.co.ke, 22 August 2026; Construction Review Online, 10 September 2026). That would make the project unusual in a second way: a data centre that adds electricity to the grid instead of straining it.
 

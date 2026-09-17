@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-05"
-updated_date: "2026-09-05"
+updated_date: "2026-09-17"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/nairobi-street-fibre-trench.webp"
@@ -54,6 +54,8 @@ internal_links:
     href: "/articles/data-centre-interconnection-peering-kenya"
   - text: "how 5G is lifting data centre demand in Kenya"
     href: "/articles/5g-networks-data-centre-demand-kenya"
+  - text: "what the US DFC's $155m WIOCC bet means for Kenya"
+    href: "/articles/us-dfc-wiocc-155m-kenya-digital-infrastructure"
 external_sources:
   - title: "TelcoTitans (Africa's fibre boom needs a commercial operating model) not just more network (4 September 2026)"
     url: "https://www.telcotitans.com/infrawatch/africas-fibre-boom-needs-a-commercial-operating-model-not-just-more-network/10834.article"
@@ -132,6 +134,8 @@ Readers of this publication should care about fibre business models for a direct
 ![SC connectors and yellow patch cords on a fibre patch panel](/images/fibre-patch-panel-sc-connectors.webp)
 
 The WIOCC deal makes the connection explicit: the same $300 million funding data centre deployment and terrestrial open-access fibre. Carrier-neutral facilities and open-access networks share one commercial philosophy (build once, serve many partners) and they rise or fall on the same operational capability: coverage and capacity data partners can trust, ordering that does not require weeks of email, and settlement that does not require an audit to reconcile. Operators and investors evaluating Africa's digital infrastructure should therefore score fibre providers and data centre operators on the same axis: not just how much network they have built, but how efficiently they can turn that network into partner-ready products.
+
+The capital has kept arriving since that analysis. On 16 September 2026, the US International Development Finance Corporation committed up to $155 million in equity to WIOCC, the largest equity investment in the agency's history (Reuters, 16 September 2026), stacking on top of the $300 million above. We unpack what that money changes for Kenyan bandwidth prices and data centre buyers in [our DFC-WIOCC explainer](/articles/us-dfc-wiocc-155m-kenya-digital-infrastructure).
 
 ## The Takeaway for Operators and Investors
 
