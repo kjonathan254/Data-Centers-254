@@ -12,7 +12,7 @@ author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
 new: false
-updated_date: "2026-09-16"
+updated_date: "2026-09-18"
 category: "Data Centres"
 cluster: "Kenya"
 og_image: "/images/hero-dc-nairobi.webp"
@@ -110,7 +110,7 @@ Numbers first, then names. Kenya's data centre market is small by global standar
 
 **iColo Nairobi One**, part of Digital Realty, and **PAIX Data Centres'** Nairobi facility round out the commercial options, alongside earlier-generation facilities and the Kenyatta University-based academic node. Our directory pages carry the per-facility detail, including [ADC NBO1](/directory/africa-dc-nairobi-1) and [iColo NBO1](/directory/icolo-nbo1).
 
-One caution on names you may see in the market: **Raxio**, a pan-African operator, has announced Kenya as a target market, but as of 16 September 2026 no opened Nairobi facility is verifiable from primary sources, so treat anything implying it is open today with care. We unpack that situation separately in [Raxio vs Africa Data Centres in Kenya](/articles/raxio-vs-africa-data-centres-kenya-comparison).
+One note on names you may see in the market: **Raxio**, a pan-African operator, has announced Kenya as a target market, but as of 16 September 2026 its first Nairobi facility has not opened yet, so for planning purposes it is an upcoming option rather than an open one today. We unpack that situation separately in [Raxio vs Africa Data Centres in Kenya](/articles/raxio-vs-africa-data-centres-kenya-comparison).
 
 ![Server racks with neatly organised cabling](/images/racks-cabling.webp)
 
