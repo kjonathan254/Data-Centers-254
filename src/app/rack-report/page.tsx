@@ -138,35 +138,47 @@ export default function RackReportPage() {
           </div>
         </section>
 
-        {/* Issue #001 download */}
+        {/* Issue #002 download */}
         <section className="section-y border-b border-border/40">
           <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <h2 className="text-xl font-semibold text-foreground mb-2">
-              Read Issue #001
+              Read Issue #002
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
-              Issue 001 shipped on Monday 14 September 2026: the CA&apos;s
-              standalone data centre licence consultation, $600M in AmCham
-              pledges, Amaco&apos;s $1.5 billion Mombasa plan, LuLu and the
-              northern route, and four things to watch next.
+              Issue 002 ships on Monday 21 September 2026: the US DFC&apos;s
+              largest-ever equity bet, up to $155M into WIOCC and what it means
+              for Kenya&apos;s bandwidth, NBO2&apos;s 6.4MW of delivered
+              capacity, why generation is not reliability, and twenty days
+              left on the CA licence consultation.
             </p>
-            <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-8 flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-4 flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
                 <p className="text-sm font-semibold text-foreground mb-1">
-                  The Rack Report · Issue 001
+                  The Rack Report · Issue 002
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Monday 14 September 2026 · 8 pages · PDF, about 300 KB
+                  Monday 21 September 2026 · 8 pages · PDF, about 430 KB
                 </p>
               </div>
               <a
-                href="/reports/rack-report-issue-1.pdf"
+                href="/reports/rack-report-issue-2.pdf"
                 download
                 className="inline-flex items-center justify-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-6 h-11 text-sm font-semibold hover:bg-cyan/90 transition-all shrink-0"
               >
                 Download the PDF
               </a>
             </div>
+            <p className="text-xs text-muted-foreground mb-8">
+              Past issues:{" "}
+              <a
+                href="/reports/rack-report-issue-1.pdf"
+                className="text-cyan hover:underline"
+              >
+                Issue 001 · 14 September 2026
+              </a>{" "}
+              · the CA licence consultation, $600M in AmCham pledges, Amaco&apos;s
+              $1.5B Mombasa plan, LuLu and the northern route.
+            </p>
             <h3 className="text-sm font-semibold text-foreground mb-2">
               From the reporting
             </h3>
