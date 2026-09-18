@@ -122,7 +122,7 @@ export default function MarketSnapshot() {
           Of the {snap.stages[0].mw.toFixed(1)} MW of live capacity,{" "}
           {snap.liveItLoadMw.toFixed(1)} MW is verified in-service IT load;
           pipeline figures are developer-announced. Every facility carries its
-          source and verification date, last verified {fmtVerified(snap.lastVerified) || "August 2026"}.
+          source and verification date, last verified {fmtVerified(snap.lastVerified) || "September 2026"}.
         </p>
 
         <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">

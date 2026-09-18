@@ -26,7 +26,7 @@ export interface BotReply {
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 export function fmtVerified(v: string | null | undefined): string {
-  if (!v) return "August 2026";
+  if (!v) return "September 2026";
   const [y, m] = v.split("-");
   const mi = parseInt(m ?? "", 10) - 1;
   if (!y || Number.isNaN(mi) || !MONTHS[mi]) return v;

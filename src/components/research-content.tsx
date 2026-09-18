@@ -33,6 +33,30 @@ const reports = [
     featured: true,
   },
   {
+    edition: "Rack Report · Issue 002",
+    title: "The Rack Report, Issue 002",
+    period: "21 September 2026 · 8 pages",
+    description:
+      "The weekly intelligence briefing for the people building, financing and regulating Kenya's digital infrastructure. Issue 002: the US DFC's largest-ever equity bet, up to $155M into WIOCC and what it means for Kenya's bandwidth, NBO2's 6.4MW of delivered capacity, why generation is not reliability, and twenty days left on the CA licence consultation.",
+    stats: [],
+    summaryHref: "/rack-report",
+    pdfHref: "/reports/rack-report-issue-2.pdf",
+    pdfMeta: "PDF · 8 pages · 0.4 MB",
+    featured: false,
+  },
+  {
+    edition: "Rack Report · Issue 001",
+    title: "The Rack Report, Issue 001",
+    period: "14 September 2026 · 8 pages",
+    description:
+      "The first issue of the briefing: the CA licence consultation, $600M in AmCham pledges, Amaco's $1.5B Mombasa plan, and LuLu and the northern route. The PDF is the exact edition subscribers receive; the Rack Report page carries the signup and the week's reporting behind it.",
+    stats: [],
+    summaryHref: "/rack-report",
+    pdfHref: "/reports/rack-report-issue-1.pdf",
+    pdfMeta: "PDF · 8 pages · 0.3 MB",
+    featured: false,
+  },
+  {
     edition: "Index · First edition",
     title: "Kenya Data Centre Index 2026",
     period: "August 2026 · 10 pages",

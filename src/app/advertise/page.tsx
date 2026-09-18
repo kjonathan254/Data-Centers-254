@@ -3,6 +3,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Mail, Phone, Megaphone, MailOpen, MapPin, Building2, PenLine, TrendingUp, BarChart3, MapPinned } from "lucide-react";
 import { getStats, SUBSCRIBER_ROLES } from "@/lib/newsletter-store";
+import { getFacilities } from "@/lib/directory-data";
+import { getAllArticles, CLUSTER_META } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Advertise & Partner with DC254",
@@ -54,12 +56,6 @@ const opportunities = [
   },
 ];
 
-const facts = [
-  { icon: Building2, value: "26", label: "Verified facilities in the DC Directory" },
-  { icon: PenLine, value: "60+", label: "Researched explainers across 7 clusters" },
-  { icon: MapPin, value: "Kenya-first", label: "Audience of builders, operators & students" },
-];
-
 export default async function AdvertisePage() {
   // Live signup segmentation, the real media-kit numbers. Display-only:
   // degrades to zeros without drama if the store is unreachable.
@@ -70,6 +66,15 @@ export default async function AdvertisePage() {
     stats = null;
   }
   const hasAudience = (stats?.total ?? 0) > 0;
+  // Media-kit facts read from the live datasets, never hardcoded.
+  const facilities = getFacilities();
+  const explainers = getAllArticles().length;
+  const clusterCount = Object.keys(CLUSTER_META).length;
+  const facts = [
+    { icon: Building2, value: String(facilities.length), label: "Verified facilities in the DC Directory" },
+    { icon: PenLine, value: String(explainers), label: `Researched explainers across ${clusterCount} clusters` },
+    { icon: MapPin, value: "Kenya-first", label: "Audience of builders, operators & students" },
+  ];
   const topRoles = stats
     ? SUBSCRIBER_ROLES.filter((r) => stats!.byRole[r.value] > 0)
         .sort((a, b) => stats!.byRole[b.value] - stats!.byRole[a.value])

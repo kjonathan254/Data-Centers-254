@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Map } from "lucide-react";
 import { getFacilities } from "@/lib/directory-data";
+import { getAllArticles } from "@/lib/articles";
+import { SUBSEA_CABLES } from "@/lib/map-data";
 
 /**
  * Fullscreen photographic hero, real server-hall image, text overlay,
@@ -11,12 +13,15 @@ import { getFacilities } from "@/lib/directory-data";
 export default function Hero() {
   const facilities = getFacilities();
   const operators = new Set(facilities.map((f) => f.operator.name)).size;
+  // All four stats read from the verified datasets, never hardcoded.
+  const liveCables = SUBSEA_CABLES.filter((c) => c.live).length;
+  const explainers = getAllArticles().length;
 
   const stats = [
     { value: String(facilities.length), label: "Verified facilities" },
     { value: String(operators), label: "Operators tracked" },
-    { value: "6", label: "Subsea cables live" },
-    { value: "56+", label: "Explainers published" },
+    { value: String(liveCables), label: "Subsea cables live" },
+    { value: String(explainers), label: "Explainers published" },
   ];
 
   return (
@@ -84,7 +89,7 @@ export default function Hero() {
           ))}
         </dl>
         <p className="mt-4 text-[11px] text-muted-foreground/80">
-          Directory data last verified August 2026 ·{" "}
+          Directory data last verified September 2026 ·{" "}
           <Link href="/methodology" className="text-cyan/80 underline underline-offset-2 hover:text-cyan">
             How we verify
           </Link>

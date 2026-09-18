@@ -39,7 +39,7 @@ function StatsBand() {
   const stats = [
     { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
     { label: "Live capacity", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW announced pipeline` },
-    { label: "Subsea cables", value: "8", sub: `≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps named · Daraja in development` },
+    { label: "Subsea cables", value: String(SUBSEA_CABLES.filter((c) => c.live).length), sub: `of ${SUBSEA_CABLES.length} systems · ≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps named` },
     { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
   ];
   return (

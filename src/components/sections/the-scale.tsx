@@ -109,7 +109,7 @@ export default function TheScale() {
           <Link href="/methodology" className="text-cyan underline hover:underline">
             read the DC254 methodology
           </Link>
-          . Directory data last verified August 2026.
+          . Directory data last verified September 2026.
         </p>
 
         {/* Global context, where Kenya sits in the world's largest facilities */}

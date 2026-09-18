@@ -99,9 +99,20 @@ const countRules = [
     title: "Announced is not operating",
     body: "Committed, early-stage and under-construction projects are labelled as such and never counted as operating capacity. Where a press-release figure (e.g. a groundbreaking MW target) is shown, the entry states plainly that it is a plan, not an as-built figure.",
   },
+  {
+    title: "How we count subsea cables",
+    body: "A cable counts as live only when ready-for-service is confirmed, not when it lands or is announced. Nine systems are landed or named at the Kenyan coast: seven are live (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa), Africa-1 has landed but ready-for-service is not yet announced, and Daraja is in development. The homepage \u201cSubsea cables live\u201d figure reads from this same verified dataset.",
+  },
 ];
 
 const updateLog = [
+  {
+    date: "18 September 2026",
+    changes: [
+      "Fixed the homepage stat strip: \u201cSubsea cables live\u201d now reads directly from the verified cable dataset (7 live of 9 systems) instead of a hardcoded number, the explainer count updates itself from the article index (97), and the verification stamp moved to September 2026.",
+      "Listed the Rack Report PDF editions (Issues 001 and 002) on the Research page alongside the report PDFs.",
+    ],
+  },
   {
     date: "8 September 2026",
     changes: [
@@ -367,7 +378,7 @@ export default function MethodologyPage() {
             You are welcome to cite our data in reports, articles, and briefs.
             Please credit &ldquo;Data Centre 254&rdquo; with a link to the
             relevant page, and include the verification date shown on the entry
-            (for example: &ldquo;DC254 Directory, verified August 2026&rdquo;).
+            (for example: &ldquo;DC254 Directory, verified September 2026&rdquo;).
             For bulk data, interviews, or briefing requests,{" "}
             <Link href="/contact" className="text-cyan underline hover:underline">
               contact us
