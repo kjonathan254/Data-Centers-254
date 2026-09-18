@@ -71,8 +71,15 @@ const securityHeaders = [
   },
   // Audit remediation #8 — CSP stage 2: ENFORCED (flipped from report-only
   // after codebase-wide verification: no iframes, no external scripts/fonts/
-  // CDNs, no client-side external fetches, no eval/importScripts; GA4 is the
-  // only third party and is fully covered below).
+  // CDNs, no client-side external fetches, no eval/importScripts).
+  //
+  // Third parties covered: GA4 (googletagmanager + google-analytics) and
+  // Microsoft Clarity (www.clarity.ms). Clarity was loaded by layout.tsx but
+  // NOT permitted by this policy — every real browser silently blocked the
+  // tag and fired CSP violations at /api/csp-report (security audit
+  // remediation). The three Clarity origins below are the minimal documented
+  // set: script-src for the tag itself, connect-src for the beacon, img-src
+  // for the pixel fallback.
   //
   // What this policy does for the site: even if an article, dependency or
   // comment ever tried to inject malicious content, the browser refuses to
@@ -92,12 +99,12 @@ const securityHeaders = [
       "object-src 'none'",
       "frame-ancestors 'self'",
       "form-action 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://*.clarity.ms",
       "font-src 'self' data:",
       "media-src 'self' blob:",
-      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms",
       "report-uri /api/csp-report",
     ].join("; "),
   },

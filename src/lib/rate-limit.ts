@@ -40,6 +40,22 @@ const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
 const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 const PERSISTENT = Boolean(UPSTASH_URL && UPSTASH_TOKEN);
 
+// AUDIT REMEDIATION — memory-mode fallback used to be completely silent, so a
+// deployment missing its Upstash vars (or a failing Redis call) quietly lost
+// global enforcement and nobody noticed. Warn once per instance so Vercel log
+// drains can alert on the degraded state. Never throws, never rate-limits
+// differently — pure observability.
+const PROD = process.env.NODE_ENV === "production";
+let warnedMemoryMode = false;
+function warnMemoryMode(reason: string): void {
+  if (warnedMemoryMode || !PROD) return;
+  warnedMemoryMode = true;
+  console.warn(
+    `[rate-limit] MEMORY MODE active (${reason}) — limits are per-instance and reset on cold start. ` +
+      "Configure UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN for global enforcement."
+  );
+}
+
 // ─── In-memory fallback store (original behaviour + leak guard) ──────────────
 const hits = new Map<string, { count: number; reset: number }>();
 
@@ -130,6 +146,9 @@ export async function rateLimit(
   if (PERSISTENT) {
     const viaRedis = await redisLimit(bucket, ip, limit, windowMs);
     if (viaRedis) return viaRedis;
+    warnMemoryMode("Redis limiter unreachable or erroring");
+  } else {
+    warnMemoryMode("UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN not set");
   }
   return memLimit(bucket, ip, limit, windowMs);
 }

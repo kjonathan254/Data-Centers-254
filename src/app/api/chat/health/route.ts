@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { timingSafeEqual } from "crypto";
 import {
   allProviderConfigs,
   activeProviders,
@@ -11,27 +12,31 @@ import { rateLimit, clientIp, persistentLimitingActive } from "@/lib/rate-limit"
 /**
  * GET /api/chat/health, LLM wiring diagnostic for Jibu.
  *
- * Answers the exact question that is otherwise invisible from outside a
- * serverless deployment: "why is Jibu running deterministic?"
+ * AUDIT REMEDIATION — this endpoint used to run live provider probes and
+ * return the full provider chain (active slot, benched state, candidate
+ * models, limiter backend, operational hints) to ANY anonymous caller. That
+ * burned LLM-provider quota on every probe and disclosed operational
+ * configuration to the public. New access model:
  *
- * Jibu walks a provider priority chain (groq → nvidia → huggingface; see
- * src/lib/chatbot/llm.ts). This endpoint reports every slot:
+ *  - Unauthenticated callers get a generic verdict only: { ok, service }.
+ *    No provider names, no probes (zero LLM calls), no hints, no internals.
  *
- *   configured     , a key for that provider is visible to this deployment
- *   benched        , the key was refused (401/403) earlier on this instance
- *   active         , the provider that would answer right now (first configured)
+ *  - Full diagnostics require the HEALTH_TOKEN env var, passed as
+ *    /api/chat/health?key=<token> or Authorization: Bearer <token>. If
+ *    HEALTH_TOKEN is unset, full diagnostics are simply unavailable —
+ *    set it in Vercel env vars to use the debug view again.
+ *
+ * Full-diagnostic answers (token holders only) still report every slot:
+ *
+ *   configured  — a key for that provider is visible to this deployment
+ *   benched     — the key was refused (401/403) earlier on this instance
+ *   active      — the provider that would answer right now (first configured)
  *
  * The active slot additionally gets a live probe:
- *   reachable      , could the deployment reach the provider at all?
- *   authOk         , does the provider accept the key? (a 1-token chat call;
- *                     /models is public on NIM/HF and proves nothing about auth)
- *   modelAvailable , does the provider accept the current candidate model?
- *   availableModels, the ids the account/catalog lists (public metadata), capped.
- *
+ *   reachable, authOk (1-token chat call), modelAvailable, availableModels.
  * Reports booleans and public model ids only, keys are never echoed, logged
  * or inferred. When no key is configured the answer is returned immediately
- * (no network call, no secret in scope). A light per-IP limiter keeps probes
- * polite.
+ * (no network call, no secret in scope). A per-IP limiter stays as backstop.
  */
 
 export const runtime = "nodejs";
@@ -39,6 +44,27 @@ export const runtime = "nodejs";
 const RATE_LIMIT = 10;
 const WINDOW_MS = 60_000;
 const MAX_LISTED_MODELS = 60;
+
+/**
+ * Constant-time comparison of the presented credential against HEALTH_TOKEN.
+ * Returns false when the env var is unset — full diagnostics are opt-in per
+ * deployment, never on by default.
+ */
+function tokenMatches(presented: string | null): boolean {
+  const expected = process.env.HEALTH_TOKEN;
+  if (!expected || !presented) return false;
+  const a = Buffer.from(presented);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+function isAuthorized(request: NextRequest): boolean {
+  const key = request.nextUrl.searchParams.get("key");
+  const auth = request.headers.get("authorization");
+  const bearer = auth?.startsWith("Bearer ") ? auth.slice(7).trim() : null;
+  return tokenMatches(key) || tokenMatches(bearer);
+}
 
 type Probe = {
   reachable: boolean | null;
@@ -166,6 +192,14 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Slow down a little." }, { status: 429 });
   }
 
+  // Generic public verdict: no provider calls, no configuration disclosure.
+  if (!isAuthorized(request)) {
+    return NextResponse.json(
+      { ok: true, service: "jibu", full: false },
+      { headers: { "Cache-Control": "no-store" } }
+    );
+  }
+
   const configs = allProviderConfigs();
   const actives = activeProviders();
   const activeSpec = actives[0] ?? null;
@@ -202,6 +236,7 @@ export async function GET(request: NextRequest) {
   return NextResponse.json(
     {
       ok: true,
+      full: true,
       keyResolved: Boolean(activeSpec),
       active: activeSpec?.id ?? null,
       providers,

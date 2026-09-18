@@ -67,13 +67,27 @@ export async function POST(req: NextRequest) {
     const resend = getResendClient();
 
     if (!resend) {
-      // No API key configured, fall back to console.log (dev mode)
-      console.log("--- Contact Form Submission (no RESEND_API_KEY) ---");
-      console.log(`Name: ${cleanName}`);
-      console.log(`Email: ${email}`);
-      console.log(`Subject: ${cleanSubject}`);
-      console.log(`Message: ${cleanMessage.substring(0, 200)}${cleanMessage.length > 200 ? "..." : ""}`);
-      console.log("-------------------------------------------");
+      // Security audit remediation: the old fallback logged the submitter's
+      // name, email, subject and message preview to server logs AND still
+      // returned success to the visitor — real messages were effectively
+      // lost and personal data landed in logs with unknown retention.
+      // Production now fails closed with a clear temporary-service error;
+      // local dev keeps a PII-free line so the flow stays testable.
+      if (process.env.NODE_ENV === 'production') {
+        console.error(
+          '[contact] RESEND_API_KEY is not configured — submission rejected (fail closed). Configure the key and redeploy.'
+        );
+        return NextResponse.json(
+          {
+            error:
+              'The message service is temporarily unavailable. Please try again shortly or use the address listed on the contact page.',
+          },
+          { status: 503 }
+        );
+      }
+      console.log(
+        '[contact] dev fallback: submission accepted (email delivery not configured, contents not logged)'
+      );
       return NextResponse.json({ success: true });
     }
 
