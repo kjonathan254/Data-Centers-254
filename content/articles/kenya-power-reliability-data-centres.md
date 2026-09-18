@@ -1,5 +1,5 @@
 ---
-title: "Power Reliability, Not Generation, Shapes Kenya Data Centres"
+title: "Why Power Reliability Shapes Kenya's Data Centres"
 slug: "kenya-power-reliability-data-centres"
 meta_description: "Africa's problem is grid reliability, not generation. How uptime engineering, geothermal baseload and on-site power shape Kenya's data centres."
 primary_keyword: "power reliability Kenya data centres"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-17"
-updated_date: "2026-09-17"
+updated_date: "2026-09-18"
 category: "Power & Energy"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant.webp"

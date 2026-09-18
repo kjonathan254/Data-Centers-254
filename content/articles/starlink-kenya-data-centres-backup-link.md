@@ -13,16 +13,24 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
-updated_date: "2026-09-16"
+updated_date: "2026-09-18"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/diagram-satellite-connector-types.webp"
+og_image: "/images/starlink-dish-router-indoor.webp"
 reading_time: "9 min"
 images:
+  - src: "/images/starlink-dish-router-indoor.webp"
+    alt: "Starlink dish and Wi-Fi router installed indoors, city skyline outside the window"
+    caption: "A Starlink terminal installed in Nairobi: dish, router and power, the whole kit a business needs for a physically separate backup path"
+    position: "hero"
+  - src: "/images/starlink-kit-box.webp"
+    alt: "Illustration of the Starlink kit box with dish, router and cabling"
+    caption: "The standard Starlink kit, dish, router, cables and power supply, product illustration. Rapid deployment is the product: a working link in hours, not months"
+    position: "inline"
   - src: "/images/diagram-satellite-connector-types.webp"
     alt: "Diagram of satellite internet connection types from dish to terminal"
-    caption: "Satellite internet is no longer the slow cousin of the network: low Earth orbit systems like Starlink have moved it from last resort to last line of defence"
-    position: "hero"
+    caption: "How satellite paths fit a wider network: diagram of satellite internet connection types from dish to terminal"
+    position: "inline"
   - src: "/images/last-mile-pole-erection-makueni.webp"
     alt: "Technicians erecting a fibre distribution pole in rural Makueni"
     caption: "The economics are brutal on rural last-mile routes like this one in Makueni. A satellite terminal needs no poles, no trench and no wayleave negotiations"
@@ -75,13 +83,17 @@ canonical_url: "https://data-centers-254.vercel.app/articles/starlink-kenya-data
 
 When Starlink switched on in Kenya in July 2023, the conversation was about homes: rural families, remote workers, the places fibre had never reached. Three years later the more interesting story is enterprise. Kenya has 25,000 Starlink dishes as of March 2026 (Communications Authority data via Tech-ish, 19 June 2026), a licensing regime that just made satellites considerably more expensive to operate (Techlabari, 8 April 2026), a network that hit capacity limits in July 2026 (TechCabal, 7 July 2026), and a growing number of businesses asking the question this article answers: what is satellite actually for, in a country whose data centres run on fibre and undersea cables?
 
-![Diagram of satellite internet connection types from dish to terminal](/images/diagram-satellite-connector-types.webp)
+![Starlink dish and Wi-Fi router installed indoors, city skyline outside the window](/images/starlink-dish-router-indoor.webp)
 
 ## The numbers: fast growth, small share, real limits
 
 Start with the facts. Starlink launched in Kenya in July 2023 (The Kenya Times, 23 September 2025) and recorded nearly 2,000 percent subscriber growth in its first year, with aggressive pricing that put a mini kit at KSh 27,000 and promotional monthly service around KSh 1,300 by October 2024 (Space in Africa, 14 October 2024). Growth then moderated: 7,933 net additions in the year to March 2026, against 12,562 the year before (Space in Africa, 21 June 2026). The base stood at 24,999 subscribers in March 2026, about 0.9 percent of fixed internet (Tech-ish, 19 June 2026), and in July 2026 the company limited new signups as the Kenyan network reached capacity (TechCabal, 7 July 2026).
 
 Read those numbers like a data centre operator would. A 0.9 percent share is not a fibre competitor; Kenya's fixed market is fibre-first and the big providers kept their customers by cutting prices and improving packages. But 25,000 diverse, independent, non-terrestrial links is a meaningful resilience layer for the enterprises that bought them, and the July 2026 capacity clamp is the reminder that satellite capacity is a shared, finite resource in a way a fibre pair is not.
+
+![Illustration of the Starlink kit box with dish, router and cabling](/images/starlink-kit-box.webp)
+
+![Diagram of satellite internet connection types from dish to terminal](/images/diagram-satellite-connector-types.webp)
 
 ## What Starlink is actually good for in enterprise Kenya
 

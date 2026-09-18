@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-18"
 category: "AI & Infrastructure"
 cluster: "AI"
 og_image: "/images/dc-gpu-cluster-3.webp"
@@ -37,6 +37,22 @@ images:
   - src: "/images/dc-gpu-cluster-5.webp"
     alt:  "Consumer GeForce graphics card"
     caption: "Consumer cards sit at one end of a spectrum that ends with passive, liquid-cooled datacentre accelerators."
+    position: "inline"
+  - src: "/images/nvidia-gpu-cards-board.webp"
+    alt: "NVIDIA GPU accelerator cards mounted on a server motherboard, server racks behind"
+    caption: "GPU accelerator cards on a server board, illustrative render. This is the hardware AI runs on, and it is why data centres, not clouds in the abstract, are where AI actually lives"
+    position: "inline"
+  - src: "/images/nvidia-h100-chip-render.webp"
+    alt: "Illustrative render of an NVIDIA H100 accelerator chip on a circuit board"
+    caption: "An NVIDIA H100-class accelerator, illustrative render. One H100 server can draw 10kW on its own, densities that ordinary racks were never designed to carry"
+    position: "inline"
+  - src: "/images/ups-switchgear-power-room.webp"
+    alt: "UPS units and switchgear in a data centre power room"
+    caption: "Power distribution in a facility power room: PDUs, UPS and switchgear sized for the loads of the day, not for 40kW GPU racks"
+    position: "inline"
+  - src: "/images/nvidia-hq-building.webp"
+    alt: "NVIDIA logo on the company headquarters building"
+    caption: "NVIDIA headquarters. Its InfiniBand and NVLink interconnects are the reason GPU clusters behave like one machine, and they shape the networks AI-ready facilities must build"
     position: "inline"
 
 internal_links:
@@ -77,7 +93,11 @@ To understand the infrastructure challenge, it helps to understand why AI needs 
 
 Central processing units (CPUs), the general-purpose processors in traditional servers, are designed to handle a wide variety of tasks sequentially. They are good at doing one complex thing at a time. GPUs, originally designed for rendering graphics (where millions of pixels must be calculated simultaneously), are designed to do thousands of simpler things at the same time. For deep learning, this parallelism makes GPUs 10 to 100 times faster than equivalent CPUs.
 
+![NVIDIA GPU accelerator cards mounted on a server motherboard, server racks behind](/images/nvidia-gpu-cards-board.webp)
+
 The scale of modern AI is staggering. GPT-4, for example, was trained on an estimated 13 trillion tokens of text using approximately 25,000 GPUs over several months. The training run consumed an estimated 50 gigawatt-hours of electricity, enough to power 5,000 Kenyan homes for a year. Even inference (running a trained model to generate responses) requires significant GPU resources, as millions of users make simultaneous requests.
+
+![Illustrative render of an NVIDIA H100 accelerator chip on a circuit board](/images/nvidia-h100-chip-render.webp)
 
 ## What GPU Computing Demands from Data Centres
 
@@ -88,6 +108,8 @@ The most obvious impact of GPU computing on data centres is power density. A tra
 ![CRAC cooling units behind server racks](/images/dc-cooling-crac.webp)
 
 This power density has cascading effects on every aspect of data centre design. Standard power distribution units (PDUs) rated for 20–30kW per rack must be replaced with higher-capacity units. Electrical cable sizes must increase to carry more current without excessive voltage drop. Floor loading (the weight per square metre that the raised floor can support) must be designed for heavier transformers and switchgear. And the total power demand of the facility increases, requiring larger transformer connections from Kenya Power and larger generator capacity for backup.
+
+![UPS units and switchgear in a data centre power room](/images/ups-switchgear-power-room.webp)
 
 ### Cooling
 
@@ -107,7 +129,7 @@ For Kenyan data centres, liquid cooling represents both a challenge and an oppor
 
 GPU computing also has specific networking requirements. AI training clusters require high-bandwidth, low-latency interconnects between GPU servers, because training large models requires distributing the computation across many GPUs that must communicate frequently. NVIDIA's InfiniBand and NVLink technologies provide these high-speed interconnects, with bandwidths of 400–800 Gbps between servers.
 
-![Power distribution for high-density computing]((/images/dc-power-systems.webp)
+![NVIDIA logo on the company headquarters building](/images/nvidia-hq-building.webp)
 
 This networking requirement affects data centre design in several ways. The cabling between GPU servers must support these high-speed interconnects, using specialised optical cables and switches. The network topology within a GPU cluster is different from a traditional data centre network, with spine-leaf or fat-tree topologies optimised for east-west (server-to-server) traffic rather than north-south (server-to-internet) traffic.
 

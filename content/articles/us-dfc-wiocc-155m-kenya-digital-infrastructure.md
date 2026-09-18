@@ -1,5 +1,5 @@
 ---
-title: "US DFC Bets Up to $155M on WIOCC: What It Means for Kenya"
+title: "US DFC Bets Up to $155M on WIOCC: Kenya's Windfall"
 slug: "us-dfc-wiocc-155m-kenya-digital-infrastructure"
 meta_description: "The US DFC is putting up to $155m into WIOCC, its largest ever equity deal. What the money means for Kenya's bandwidth, open access and data centres."
 primary_keyword: "DFC WIOCC investment Kenya"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-17"
-updated_date: "2026-09-17"
+updated_date: "2026-09-18"
 category: "Connectivity"
 cluster: "Infrastructure"
 og_image: "/images/dc-server-chip-3.webp"
