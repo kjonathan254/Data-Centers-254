@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/og-default.png", width: 1152, height: 864, alt: "Research, Data Centre 254" }],
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "Research, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -77,8 +77,8 @@ export const metadata: Metadata = {
     locale: "en_KE",
     images: [{
       url: "/images/og-default.png",
-      width: 1152,
-      height: 864,
+      width: 1200,
+      height: 630,
       alt: "Data Centre 254, Understanding Kenya's Digital Infrastructure",
     }],
   },
