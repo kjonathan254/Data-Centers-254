@@ -87,7 +87,8 @@ export default function NewsletterV2() {
             Get The Rack Report
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            The weekly briefing on Kenya&apos;s data-centre industry.
+            A weekly briefing on new facilities, capacity changes, power,
+            cables, operators and major infrastructure deals in East Africa.
           </p>
           <p className="mt-3 text-sm font-medium text-foreground/90">
             Data centres. Power. Cloud. Connectivity. Investment. Policy.

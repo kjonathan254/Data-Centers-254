@@ -40,8 +40,8 @@ const reports = [
       "The first quarterly edition, pinned to the frozen 2026-Q3 snapshot: the quarter's supply picture, digests from the three new market trackers (subsea cables, power tariffs, licensing), the first East Africa regional records, and the citable dataset bundle in CSV. The figures you cite are the figures the bundle contains.",
     stats: [
       { icon: Layers, value: "31", label: "records" },
-      { icon: Gauge, value: "230 MW", label: "pipeline" },
-      { icon: Network, value: "7", label: "cables live" },
+      { icon: Gauge, value: "230 MW", label: "announced pipeline" },
+      { icon: Network, value: "7", label: "cables in service" },
       { icon: ShieldCheck, value: "4", label: "countries" },
     ],
     summaryHref: "/research/state-of-the-market-2026-q3",

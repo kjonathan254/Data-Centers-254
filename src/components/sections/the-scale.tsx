@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
+import { getPlatformStats } from "@/lib/site-stats";
 
 /**
  * The scale, "There is no cloud": full-width infrastructure map plus a
  * four-metric sourced row. Absorbs the old standalone "2 seconds" section.
- * Server component; counts derive from directory-data.ts so the homepage
- * never drifts from the directory.
+ * Server component; every figure and label comes from site-stats.ts so the
+ * homepage never drifts from the directory, map or methodology.
  */
 export default function TheScale() {
-  const snap = getMarketSnapshot();
-  const facilities = getFacilities();
-  const pipelineMw = Math.round(snap.totalSupplyMw - snap.stages[0].mw);
+  const stats = getPlatformStats();
   const metrics: {
     value: string;
     label: string;
@@ -22,15 +20,15 @@ export default function TheScale() {
     linkLabel?: string;
   }[] = [
     {
-      value: "7",
-      label: "Active submarine cables",
-      note: "SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa land on the Kenyan coast, with Africa-1 landed and Daraja in development.",
+      value: String(stats.cables.inService),
+      label: "Subsea cables in service",
+      note: `Of ${stats.cables.tracked} tracked systems, seven land on the Kenyan coast today; Africa-1 is landed with RFS pending, Daraja announced and LuLu planned.`,
       source: "Verified",
     },
     {
-      value: String(facilities.length),
-      label: "Known facilities",
-      note: "The buildings that house the servers, storage and networking behind Kenya's digital economy, live, under construction, and committed.",
+      value: String(stats.totalTracked),
+      label: "Tracked facilities & projects",
+      note: `${stats.kenyaFacilities} verified facilities in Kenya plus ${stats.regionalRecords} East Africa reference records, live, under construction, committed and early stage.`,
       source: "DC254 database",
     },
     {
@@ -42,9 +40,9 @@ export default function TheScale() {
       linkLabel: "Read the investigation",
     },
     {
-      value: "~14 MW",
-      label: "Installed IT capacity",
-      note: `Combined operational IT load across Kenya's tracked facilities, with ${pipelineMw} MW more announced across the build pipeline.`,
+      value: `${stats.publishedItLoadMw} MW`,
+      label: "Published in-service IT load",
+      note: `Verified IT load across operational Kenyan facilities. Live designed capacity is higher at ${stats.designedLiveMw} MW, with ${stats.pipelineMw} MW more announced across the build pipeline.`,
       source: "DC254 database",
       href: "/directory",
       linkLabel: "View the market snapshot",
@@ -109,7 +107,7 @@ export default function TheScale() {
           <Link href="/methodology" className="text-cyan underline hover:underline">
             read the DC254 methodology
           </Link>
-          . Directory data last verified September 2026.
+          . Directory data last verified {new Date(`${stats.lastVerified}T00:00:00`).toLocaleDateString("en-KE", { month: "long", year: "numeric" })}.
         </p>
 
         {/* Global context, where Kenya sits in the world's largest facilities */}
@@ -117,7 +115,7 @@ export default function TheScale() {
           <div>
             <p className="eyebrow">Global context</p>
             <h3 className="mt-3 text-xl font-semibold text-foreground sm:text-2xl">
-              Kenya&apos;s {snap.facilities} tracked facilities sit inside a much bigger machine.
+              Kenya&apos;s {stats.kenyaFacilities} tracked facilities sit inside a much bigger machine.
             </h3>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               The largest data centre campuses on Earth, led by China

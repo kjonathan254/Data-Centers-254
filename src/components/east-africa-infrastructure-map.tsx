@@ -10,9 +10,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   KENYA_FACILITIES, REGION_ITEMS, CONTEXT_CITIES, SUBSEA_CABLES,
-  LANDING_STATION, KIXP, LIVE_MW, PIPELINE_MW, CABLE_TOTAL_TBPS,
+  LANDING_STATION, KIXP, LIVE_MW, PIPELINE_MW,
   type DcStatus, type KenyaFacility,
 } from "@/lib/map-data";
+import { SUBSEA_CABLES as CABLE_REGISTER } from "@/lib/market-trackers";
 import { CYAN, NEON, AMBER, STATUS_COLOR } from "./map/shared";
 import { CountryMap } from "./map/country-map";
 import { NairobiMap, MombasaMap } from "./map/metro-maps";
@@ -38,8 +39,8 @@ function StatsBand() {
   const nbo = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
   const stats = [
     { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
-    { label: "Live capacity", value: `${LIVE_MW} MW`, sub: `${PIPELINE_MW} MW announced pipeline` },
-    { label: "Subsea cables", value: String(SUBSEA_CABLES.filter((c) => c.live).length), sub: `of ${SUBSEA_CABLES.length} systems · ≈${CABLE_TOTAL_TBPS.toFixed(1)} Tbps named` },
+    { label: "Mapped live capacity", value: `${LIVE_MW} MW`, sub: `of ${PIPELINE_MW} MW announced pipeline` },
+    { label: "Subsea cables", value: String(CABLE_REGISTER.filter((c) => c.status === "In service").length), sub: `in service of ${CABLE_REGISTER.length} tracked systems` },
     { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
   ];
   return (
@@ -252,8 +253,8 @@ export default function EastAfricaInfrastructureMap() {
           <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
-            Twenty-seven facilities, nine submarine cable systems (seven live), and the fibre backbone that connects them,
-            with the wider East African region for context.
+            Twenty-seven facilities in Kenya, ten tracked submarine cable systems (seven in service), and the fibre backbone
+            that connects them, with the wider East African region for context.
           </p>
         </div>
 
@@ -413,7 +414,7 @@ export default function EastAfricaInfrastructureMap() {
                     <FacilityCard f={facilityPanel} />
                     <a href="/directory">
                       <Button variant="outline" size="sm" className="w-full mt-2 border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan">
-                        Browse all 26 in the directory <ArrowRight className="w-4 h-4 ml-1" />
+                        Browse all {KENYA_FACILITIES.length} in the directory <ArrowRight className="w-4 h-4 ml-1" />
                       </Button>
                     </a>
                   </PanelShell>
@@ -422,9 +423,9 @@ export default function EastAfricaInfrastructureMap() {
                   <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · Mombasa`} onClose={() => setFacilityPanel(null)}>
                     <FacilityCard f={facilityPanel} />
                     <div className="bg-surface/50 rounded-lg p-3 border border-border/20 text-xs text-muted-foreground leading-relaxed">
-                      Six subsea cables (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) come ashore at the
-                      Nyali landing station, with Meta&rsquo;s Daraja cable in development. Mombasa is Kenya&rsquo;s
-                      single point of contact with the global internet.
+                      Six of the seven in-service cable systems (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) come
+                      ashore here, with 2Africa also in service since 2024 and Meta&rsquo;s Daraja in development.
+                      Mombasa is Kenya&rsquo;s single point of contact with the global internet.
                     </div>
                   </PanelShell>
                 )}
@@ -449,7 +450,7 @@ export default function EastAfricaInfrastructureMap() {
                 <ul className="space-y-2.5 text-xs text-muted-foreground leading-relaxed">
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters, tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: NEON }} /><span>Dot colours show status: green live, amber building, dashed cyan announced.</span></li>
-                  <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid lines are the six subsea cables; dotted lines are terrestrial fibre.</span></li>
+                  <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid lines are the six drawn cable routes (of {CABLE_REGISTER.length} tracked systems); dotted lines are terrestrial fibre.</span></li>
                 </ul>
               </div>
               <div className="glass-card rounded-xl p-4 border-cyan/10">
@@ -465,6 +466,9 @@ export default function EastAfricaInfrastructureMap() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-2 text-[10px] leading-snug text-muted-foreground/70">
+                  Routes drawn for these systems; the cable tracker also lists LuLu (planned, 2026).
+                </p>
               </div>
               <a href="/infrastructure" className="block glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group">
                 <p className="text-section-label mb-2">Deep dive</p>

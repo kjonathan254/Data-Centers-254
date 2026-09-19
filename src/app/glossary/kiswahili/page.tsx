@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Mail, Languages, BookOpen } from "lucide-react";
 import { kiswahiliTerms } from "@/lib/glossary-kiswahili";
+import { glossaryTerms } from "@/lib/glossary-data";
 import KiswahiliQuiz from "./KiswahiliQuiz";
 import { SITE_URL } from "@/lib/site";
 
@@ -107,7 +108,7 @@ export default function KiswahiliGlossaryPage() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/glossary" className="text-cyan hover:underline">
-                  Kamusi kamili ya Kiingereza, misamiati 19 na muktadha wa Kenya →
+                  Kamusi kamili ya Kiingereza, misamiati {glossaryTerms.length} na muktadha wa Kenya →
                 </Link>
               </li>
               <li>

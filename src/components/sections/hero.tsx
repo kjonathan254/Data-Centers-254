@@ -1,28 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Map } from "lucide-react";
-import { getFacilities } from "@/lib/directory-data";
+import { ArrowRight, Map, FileText } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
-import { SUBSEA_CABLES } from "@/lib/map-data";
+import { getPlatformStats, STAT_LABELS } from "@/lib/site-stats";
 
 /**
  * Fullscreen photographic hero, real server-hall image, text overlay,
  * verified-platform stat strip anchored to the bottom edge.
  * Server component: zero client JS, zero scroll effects, zero pinning.
+ * All figures come from site-stats.ts so the labels here match the
+ * directory, map and methodology word for word.
  */
 export default function Hero() {
-  const facilities = getFacilities();
-  const operators = new Set(facilities.map((f) => f.operator.name)).size;
-  // All four stats read from the verified datasets, never hardcoded.
-  const liveCables = SUBSEA_CABLES.filter((c) => c.live).length;
+  const stats_ = getPlatformStats();
   const explainers = getAllArticles().length;
 
+  // All four stats read from the verified datasets, never hardcoded.
   const stats = [
-    { value: String(facilities.length), label: "Verified facilities" },
-    { value: String(operators), label: "Operators tracked" },
-    { value: String(liveCables), label: "Subsea cables live" },
+    { value: String(stats_.totalTracked), label: STAT_LABELS.totalTracked },
+    { value: String(stats_.operators), label: STAT_LABELS.operators },
+    { value: String(stats_.cables.inService), label: STAT_LABELS.cablesInService },
     { value: String(explainers), label: "Explainers published" },
   ];
+
+  const verifiedDate = new Date(`${stats_.lastVerified}T00:00:00`).toLocaleDateString(
+    "en-KE",
+    { month: "long", year: "numeric" }
+  );
 
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
@@ -54,7 +58,11 @@ export default function Hero() {
           Inside Kenya&apos;s digital infrastructure.
         </h1>
 
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-4 max-w-xl text-base font-medium text-foreground sm:text-lg">
+          The verified directory, market data and infrastructure intelligence
+          platform for Kenya&apos;s data-centre economy.
+        </p>
+        <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Every M-Pesa transaction, every stream, every AI query runs through
           buildings most people will never enter. DC254 maps, explains and
           tracks them, in plain language, with verified data.
@@ -75,6 +83,13 @@ export default function Hero() {
             <Map className="size-4" />
             View the Infrastructure Map
           </Link>
+          <Link
+            href="/research/state-of-the-market-2026-q3"
+            className="inline-flex h-12 items-center justify-center gap-2 px-2 text-base font-medium text-cyan transition-colors hover:text-cyan/80 sm:px-4"
+          >
+            <FileText className="size-4" />
+            Read the latest market report
+          </Link>
         </div>
 
         {/* Stat strip, the platform's verified numbers as the hero's base */}
@@ -89,7 +104,9 @@ export default function Hero() {
           ))}
         </dl>
         <p className="mt-4 text-[11px] text-muted-foreground/80">
-          Directory data last verified September 2026 ·{" "}
+          {stats_.kenyaFacilities} verified facilities in Kenya ·{" "}
+          {stats_.regionalRecords} East Africa reference records · last verified{" "}
+          {verifiedDate} ·{" "}
           <Link href="/methodology" className="text-cyan/80 underline underline-offset-2 hover:text-cyan">
             How we verify
           </Link>

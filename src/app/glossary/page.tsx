@@ -5,15 +5,18 @@ import GlossaryContent from "./GlossaryContent";
 import { glossaryTerms, glossaryCategories } from "@/lib/glossary-data";
 import { SITE_URL } from "@/lib/site";
 
+// Derived so the claimed term count can never drift from the list itself.
+const N_TERMS = glossaryTerms.length;
+
 export const metadata: Metadata = {
-  title: "Data Centre Glossary: 19 Key Terms Explained",
+  title: `Data Centre Glossary: ${N_TERMS} Key Terms Explained`,
   description:
-    "Plain-language definitions for 19 essential data centre terms, from PUE and tier ratings to submarine cables, with Kenya-specific context.",
+    `Plain-language definitions for ${N_TERMS} essential data centre terms, from PUE and tier ratings to submarine cables, with Kenya-specific context.`,
   alternates: { canonical: "/glossary" },
   openGraph: {
-    title: "Data Centre Glossary: 19 Key Terms Explained",
+    title: `Data Centre Glossary: ${N_TERMS} Key Terms Explained`,
     description:
-      "19 essential data centre terms explained in plain language with Kenya-specific context. PUE, tier ratings, colocation, submarine cables, and more.",
+      `${N_TERMS} essential data centre terms explained in plain language with Kenya-specific context. PUE, tier ratings, colocation, submarine cables, and more.`,
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
@@ -21,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Data Centre Glossary: 19 Key Terms Explained",
-    description: "19 essential data centre terms explained with Kenya context.",
+    title: `Data Centre Glossary: ${N_TERMS} Key Terms Explained`,
+    description: `${N_TERMS} essential data centre terms explained with Kenya context.`,
     images: ["/images/og-default.png"],
   },
 };

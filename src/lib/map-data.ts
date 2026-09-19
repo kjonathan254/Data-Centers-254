@@ -63,8 +63,20 @@ export const KENYA_FACILITIES: KenyaFacility[] = [
   { id: "seacom-cls", metro: "mombasa", openedYear: 2009, name: "SEACOM Mombasa Cable Landing Station", shortName: "SEACOM CLS", operator: "SEACOM", status: "Operational", city: "mombasa", lat: -3.9880, lng: 39.7250, totalMW: 0, tier: "Cable landing station", racks: null, note: "Not commercial colocation, a landing station with 31 networks registered. Included for completeness of the register." },
 ];
 
-export const LIVE_MW = 28.2;    // built (designed) capacity of operational facilities, where published
-export const PIPELINE_MW = 230; // UC (18+15+44) + Committed (53) + Early Stage (100), announced basis
+// Derived, never hardcoded: the map-layer figures are sums over the list
+// above, so a dataset edit updates the map automatically. NOTE the scope
+// difference vs the directory: this sum counts only operational facilities
+// with a published MW figure (landing stations and unpublished sites add 0),
+// so it is labelled "mapped live capacity" (28.2 MW), not the directory's
+// 38.5 MW "live designed capacity". See site-stats.ts for canonical labels.
+const r1 = (n: number) => Math.round(n * 10) / 10;
+const operationalMw = KENYA_FACILITIES
+  .filter((f) => f.status === "Operational")
+  .reduce((s, f) => s + (f.totalMW || 0), 0);
+export const LIVE_MW = r1(operationalMw);
+export const PIPELINE_MW = Math.round(
+  KENYA_FACILITIES.reduce((s, f) => s + (f.totalMW || 0), 0) - operationalMw
+);
 
 // ── Regional (context) assets ───────────────────────────────────────────────
 

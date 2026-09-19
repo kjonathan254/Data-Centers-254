@@ -356,6 +356,44 @@ export default function MethodologyPage() {
             </p>
           </div>
 
+          {/* Editorial identity, the human behind the dataset */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Who is behind DC254
+          </h2>
+          <div className="rounded-xl border border-border/50 bg-accent/30 p-6 mb-14">
+            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-4">
+              DC254 is built and run by{" "}
+              <strong className="text-foreground">Kevin Jonathan Otieno</strong>{" "}
+              (Elmac Communications), a Kenyan-owned, independent research
+              effort tracking East Africa&apos;s digital infrastructure in
+              public. The dataset, the verification dates and the correction
+              log on this site are maintained in the open, so every reader
+              can see not just what we claim, but how old each claim is and
+              when we got it wrong.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-4">
+              Independence rule: no operator, vendor or investor pays for
+              coverage, listings, ratings or removals, and any future
+              sponsored material will be clearly labelled as sponsored,
+              separate from the verified dataset. When a company featured
+              here disputes an entry, the challenge, the source and the
+              outcome are handled through the corrections policy above, not
+              quietly edited away.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
+              The background and reasoning behind this approach is set out in
+              the{" "}
+              <Link href="/editorial-policy" className="text-cyan underline hover:underline">
+                Editorial Policy
+              </Link>
+              . For interviews, briefings or bulk data, use the{" "}
+              <Link href="/contact" className="text-cyan underline hover:underline">
+                contact page
+              </Link>
+              .
+            </p>
+          </div>
+
           {/* Citing DC254 */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Citing DC254

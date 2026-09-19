@@ -6,24 +6,25 @@ import { Database, ArrowRight } from "lucide-react";
 import EastAfricaInfrastructureMap from "@/components/east-africa-infrastructure-map";
 import { PIDA_PROJECTS, PIDA_SOURCE } from "@/lib/pida-data";
 import { getDirectoryStats } from "@/lib/directory-data";
+import { getPlatformStats } from "@/lib/site-stats";
 
 export const dynamic = 'force-dynamic';
 
-// Derived from the verified facility dataset so metadata never goes stale
 // Derived from the verified facility dataset so metadata never goes stale.
 // Kenya-scoped count: the map plots the Kenya census; the 4 East Africa
 // regional records live in the directory, not on the metro maps yet.
 const FACILITY_COUNT = getDirectoryStats().totalFacilities - getDirectoryStats().regionalCount;
+const CABLES = getPlatformStats().cables;
 
 export function generateMetadata(): Metadata {
   return {
     title: "Kenya Data Centre Map: Facilities & Subsea Cables",
     description:
-      "Interactive map of every data centre in Kenya, plus the nine submarine cable systems at the coast (seven live) and the fibre backbone of East Africa.",
+      `Interactive map of every data centre in Kenya, plus ${CABLES.tracked} tracked submarine cable systems at the coast (${CABLES.inService} in service) and the fibre backbone of East Africa.`,
     alternates: { canonical: "/infrastructure/map" },
     openGraph: {
       title: "Kenya Data Centre Map: Facilities & Subsea Cables",
-      description: `Zoom from East Africa to the Nairobi cluster: ${FACILITY_COUNT} facilities, nine subsea cable systems (seven live), the fibre routes connecting them, and the continental PIDA project layer.`,
+      description: `Zoom from East Africa to the Nairobi cluster: ${FACILITY_COUNT} facilities, ${CABLES.tracked} tracked subsea cable systems (${CABLES.inService} in service), the fibre routes connecting them, and the continental PIDA project layer.`,
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
@@ -32,7 +33,7 @@ export function generateMetadata(): Metadata {
     twitter: {
       card: "summary_large_image",
       title: "Kenya Data Centre Map: Facilities & Subsea Cables",
-      description: `${FACILITY_COUNT} facilities, nine submarine cable systems (seven live), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.`,
+      description: `${FACILITY_COUNT} facilities, ${CABLES.tracked} tracked submarine cable systems (${CABLES.inService} in service), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.`,
       images: ["/images/og-infrastructure-map.webp"],
     },
   };
