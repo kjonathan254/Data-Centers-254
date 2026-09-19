@@ -128,6 +128,7 @@ export default function ComparePicker({
             type="text"
             role="combobox"
             aria-expanded={open}
+            aria-controls="compare-facility-results"
             aria-label="Add a facility to compare"
             placeholder={full ? `Maximum of ${MAX_COMPARE} facilities` : "Add a facility, search by name, operator or city…"}
             value={query}
@@ -142,7 +143,12 @@ export default function ComparePicker({
         </div>
 
         {open && !full && results.length > 0 && (
-          <ul className="absolute z-30 mt-2 max-h-72 w-full overflow-y-auto rounded-xl border border-border bg-card p-1.5 shadow-xl shadow-black/30">
+          <ul
+            id="compare-facility-results"
+            role="listbox"
+            aria-label="Matching facilities"
+            className="absolute z-30 mt-2 max-h-72 w-full overflow-y-auto rounded-xl border border-border bg-card p-1.5 shadow-xl shadow-black/30"
+          >
             {results.map((c) => (
               <li key={c.slug}>
                 <button

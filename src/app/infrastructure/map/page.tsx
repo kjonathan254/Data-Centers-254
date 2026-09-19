@@ -5,31 +5,35 @@ import Link from "next/link";
 import { Database, ArrowRight } from "lucide-react";
 import EastAfricaInfrastructureMap from "@/components/east-africa-infrastructure-map";
 import { PIDA_PROJECTS, PIDA_SOURCE } from "@/lib/pida-data";
+import { getDirectoryStats } from "@/lib/directory-data";
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: "Kenya Data Centre Map: Facilities & Subsea Cables",
-  description:
-    "Interactive map of every data centre in Kenya, plus the nine submarine cable systems at the coast (seven live) and the fibre backbone of East Africa.",
-  alternates: { canonical: "/infrastructure/map" },
-  openGraph: {
+// Derived from the verified facility dataset so metadata never goes stale
+const FACILITY_COUNT = getDirectoryStats().totalFacilities;
+
+export function generateMetadata(): Metadata {
+  return {
     title: "Kenya Data Centre Map: Facilities & Subsea Cables",
     description:
-      "Zoom from East Africa to the Nairobi cluster: 27 facilities, nine subsea cable systems (seven live), the fibre routes connecting them, and the continental PIDA project layer.",
-    siteName: "Data Centre 254",
-    type: "website",
-    locale: "en_KE",
-    images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "Kenya data centre map, Data Centre 254" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kenya Data Centre Map: Facilities & Subsea Cables",
-    description:
-      "27 facilities, nine submarine cable systems (seven live), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.",
-    images: ["/images/og-infrastructure-map.webp"],
-  },
-};
+      "Interactive map of every data centre in Kenya, plus the nine submarine cable systems at the coast (seven live) and the fibre backbone of East Africa.",
+    alternates: { canonical: "/infrastructure/map" },
+    openGraph: {
+      title: "Kenya Data Centre Map: Facilities & Subsea Cables",
+      description: `Zoom from East Africa to the Nairobi cluster: ${FACILITY_COUNT} facilities, nine subsea cable systems (seven live), the fibre routes connecting them, and the continental PIDA project layer.`,
+      siteName: "Data Centre 254",
+      type: "website",
+      locale: "en_KE",
+      images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "Kenya data centre map, Data Centre 254" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Kenya Data Centre Map: Facilities & Subsea Cables",
+      description: `${FACILITY_COUNT} facilities, nine submarine cable systems (seven live), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.`,
+      images: ["/images/og-infrastructure-map.webp"],
+    },
+  };
+}
 
 const sectorBadge: Record<string, string> = {
   ICT: "border-cyan/30 text-cyan bg-cyan/5",

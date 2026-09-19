@@ -11,6 +11,10 @@ Checks every content/articles/*.md for:
   (article slugs, hub routes, /directory[/slug])
 - no em dash (house rule)
 - FAQ >= 2, external_sources >= 1, body >= 800 words
+- decorative separator lines in body (full-line dashes/equals; markdown
+  table delimiter rows are fine and not flagged)
+- README stats cross-check: article and cluster counts claimed in README
+  must match the content directory
 """
 import os, re, sys
 
@@ -50,7 +54,10 @@ def resolve(href):
         return href[11:] in facility_slugs
     return False
 
-errors, warnings = [], 0
+errors, warnings = [], []
+
+# cluster names actually in use (for the README cross-check)
+cluster_names = set()
 for fn in sorted(os.listdir(ART)):
     if not fn.endswith(".md"):
         continue
@@ -124,12 +131,44 @@ for fn in sorted(os.listdir(ART)):
     words = len(re.sub(r'\s+', ' ', body).split())
     if words < 800:
         errors.append(f"{fn}: body only {words} words")
-    if "----------" in body or "=====" in body:
-        warnings += 1
+    # decorative separators: a line made only of dashes/equals. Markdown
+    # table delimiter rows start with '|' so they are not matched.
+    if re.search(r"^-{8,}[ \t]*$", body, re.M):
+        warnings.append(f"{fn}: decorative dash separator line (use proper markdown)")
+    if re.search(r"^={5,}[ \t]*$", body, re.M):
+        warnings.append(f"{fn}: decorative equals separator line (use proper markdown)")
+
+    fm_cluster = re.search(r'^cluster:\s*"?([^"\n]+)"?\s*$', fm_raw, re.M)
+    if fm_cluster:
+        cluster_names.add(fm_cluster.group(1).strip())
+
+# README stats cross-check: claimed counts must match the content directory
+readme_path = os.path.join(REPO, "README.md")
+readme = open(readme_path, encoding="utf-8").read()
+n_articles = len(article_slugs)
+for m in re.finditer(r"(\d+)\+?\s+Articles", readme):
+    if int(m.group(1)) != n_articles:
+        warnings.append(
+            f"README: claims {m.group(1)} articles, actual {n_articles} (update README.md)"
+        )
+for m in re.finditer(r"(\d+)\+?\s+markdown articles", readme):
+    if int(m.group(1)) != n_articles:
+        warnings.append(
+            f"README: claims {m.group(1)} markdown articles, actual {n_articles} (update README.md)"
+        )
+for m in re.finditer(r"(\d+)\s+clusters?", readme):
+    if int(m.group(1)) != len(cluster_names):
+        warnings.append(
+            f"README: claims {m.group(1)} clusters, actual {len(cluster_names)}: "
+            f"{sorted(cluster_names)} (update README.md)"
+        )
 
 print(f"articles checked: {len(article_slugs)}")
+print(f"clusters: {len(cluster_names)}")
 if warnings:
-    print(f"warnings: {warnings}")
+    print(f"\n{len(warnings)} WARNINGS:")
+    for w in warnings:
+        print(f"  {w}")
 if errors:
     print(f"\n{len(errors)} ERRORS:")
     for e in errors:

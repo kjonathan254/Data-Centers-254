@@ -99,7 +99,6 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
     }, 14);
     timersRef.current.push(timer);
     return () => window.clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages.length]);
 
   useEffect(() => () => timersRef.current.forEach((t) => window.clearInterval(t)), []);

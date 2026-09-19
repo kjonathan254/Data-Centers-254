@@ -11,7 +11,7 @@ Live at [data-centers-254.vercel.app](https://data-centers-254.vercel.app).
 ## What It Does
 
 - **DC Directory** — Verified directory of Kenya's data centre facilities, operators, and connectivity providers
-- **50+ Articles** — Researched explainers across 7 clusters: Beginners, Kenya, Internet, Energy, AI, Careers, Data Centres
+- **97 Articles** — Researched explainers across 8 clusters: Beginner, Kenya, Internet, Energy, AI, Careers, Infrastructure, Policy
 - **Search** — Unified search across articles and facilities
 - **Newsletter** — DC254 Brief subscriber capture (email → Resend Contacts)
 - **Contact Form** — Email delivery via Resend
@@ -68,7 +68,7 @@ src/
 │   ├── glossary-data.ts     # Glossary terms
 │   └── site.ts              # Canonical site URL utility
 content/
-└── articles/                # 50+ markdown articles with YAML frontmatter
+└── articles/                # 97 markdown articles with YAML frontmatter
 ```
 
 ## Newsletter & Contact (Resend)

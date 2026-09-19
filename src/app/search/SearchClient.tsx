@@ -54,37 +54,69 @@ export default function SearchClient() {
   const [query, setQuery] = useState(initialQ);
   const [articles, setArticles] = useState<ArticleResult[]>([]);
   const [facilities, setFacilities] = useState<FacilityResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [searched, setSearched] = useState(false);
+  // Derive from the URL so the ?q= mount search shows the spinner without
+  // any synchronous setState inside the effect body.
+  const [loading, setLoading] = useState(initialQ.length >= 2);
+  const [searched, setSearched] = useState(initialQ.length >= 2);
 
-  const doSearch = useCallback(async (q: string) => {
-    if (q.length < 2) {
-      setArticles([]);
-      setFacilities([]);
-      setSearched(false);
-      return;
-    }
-    setLoading(true);
-    setSearched(true);
-    try {
+  // Pure fetch with no state updates: the mount effect consumes it
+  // asynchronously, user submits go through doSearch below.
+  const fetchResults = useCallback(
+    async (q: string): Promise<{ articles: ArticleResult[]; facilities: FacilityResult[] }> => {
       const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
       const data = await res.json();
-      setArticles(data.articles || []);
-      setFacilities(data.facilities || []);
-    } catch {
-      setArticles([]);
-      setFacilities([]);
-    }
-    setLoading(false);
-  }, []);
+      return { articles: data.articles || [], facilities: data.facilities || [] };
+    },
+    []
+  );
 
-  // Search on load if ?q= is present
+  const doSearch = useCallback(
+    async (q: string) => {
+      if (q.length < 2) {
+        setArticles([]);
+        setFacilities([]);
+        setSearched(false);
+        return;
+      }
+      setLoading(true);
+      setSearched(true);
+      try {
+        const { articles, facilities } = await fetchResults(q);
+        setArticles(articles);
+        setFacilities(facilities);
+      } catch {
+        setArticles([]);
+        setFacilities([]);
+      }
+      setLoading(false);
+    },
+    [fetchResults]
+  );
+
+  // Search on load if ?q= is present. All state updates happen in async
+  // callbacks; cleanup cancels stale writes (React StrictMode safe).
   useEffect(() => {
-    if (initialQ.length >= 2) {
-      doSearch(initialQ);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (initialQ.length < 2) return;
+    let cancelled = false;
+    fetchResults(initialQ)
+      .then(({ articles, facilities }) => {
+        if (cancelled) return;
+        setArticles(articles);
+        setFacilities(facilities);
+        setSearched(true);
+        setLoading(false);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setArticles([]);
+        setFacilities([]);
+        setSearched(true);
+        setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [fetchResults, initialQ]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

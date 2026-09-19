@@ -40,6 +40,37 @@ export default function JibuWelcome({
 }) {
   const [visible, setVisible] = useState(false);
 
+  function report(action: WelcomeAction) {
+    try {
+      const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+      gtag?.("event", "jibu_welcome", { action });
+      track("jibu_welcome", { action });
+    } catch {
+      // Analytics must never break the greeting.
+    }
+  }
+
+  function quiet() {
+    try {
+      localStorage.setItem(JIBU_WELCOME_KEY, String(Date.now()));
+    } catch {
+      // Private mode, the session guard still limits repeats.
+    }
+  }
+
+  function dismiss() {
+    report("dismiss");
+    quiet();
+    setVisible(false);
+  }
+
+  function ask() {
+    report("ask");
+    quiet();
+    setVisible(false);
+    onAsk();
+  }
+
   useEffect(() => {
     const timer = window.setTimeout(() => {
       let mayShow = true;
@@ -73,39 +104,7 @@ export default function JibuWelcome({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
-
-  function report(action: WelcomeAction) {
-    try {
-      const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
-      gtag?.("event", "jibu_welcome", { action });
-      track("jibu_welcome", { action });
-    } catch {
-      // Analytics must never break the greeting.
-    }
-  }
-
-  function quiet() {
-    try {
-      localStorage.setItem(JIBU_WELCOME_KEY, String(Date.now()));
-    } catch {
-      // Private mode, the session guard still limits repeats.
-    }
-  }
-
-  function dismiss() {
-    report("dismiss");
-    quiet();
-    setVisible(false);
-  }
-
-  function ask() {
-    report("ask");
-    quiet();
-    setVisible(false);
-    onAsk();
-  }
 
   if (!visible) return null;
 
