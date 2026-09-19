@@ -81,7 +81,7 @@ function confirmationEmailHtml(verifyUrl: string, unsubscribeUrl: string): strin
     <h1 style="font-size:22px;margin:0 0 16px;color:#ffffff;">Confirm your subscription</h1>
     <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">
       You asked to subscribe to <strong>The Rack Report</strong> - Data Centre 254's
-      weekly intelligence briefing on Kenya's data centres, connectivity, and power infrastructure.
+      monthly intelligence briefing on Kenya's data centres, connectivity, and power infrastructure.
     </p>
     <p style="font-size:15px;line-height:1.6;margin:0 0 24px;">
       Confirm it was you to start receiving the briefing:

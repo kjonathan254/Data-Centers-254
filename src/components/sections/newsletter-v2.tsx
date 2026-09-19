@@ -14,7 +14,7 @@ const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
   check:
     "Almost there - check your inbox and click the confirmation link.",
   subscribed:
-    "You're on the list, the next issue of The Rack Report lands Monday morning.",
+    "You're on the list, the next issue of The Rack Report lands on the first Monday of the month.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -87,7 +87,7 @@ export default function NewsletterV2() {
             Get The Rack Report
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            A weekly briefing on new facilities, capacity changes, power,
+            A monthly briefing on new facilities, capacity changes, power,
             cables, operators and major infrastructure deals in East Africa.
           </p>
           <p className="mt-3 text-sm font-medium text-foreground/90">
@@ -166,7 +166,7 @@ export default function NewsletterV2() {
                 </p>
               )}
               <p className="mt-4 text-xs text-muted-foreground">
-                Free. Weekly. No industry noise.
+                Free. Monthly. No industry noise.
               </p>
               <a
                 href="/rack-report"

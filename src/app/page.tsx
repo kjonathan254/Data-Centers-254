@@ -48,7 +48,7 @@ export default function Home() {
         <WhoWeHelp />
         {/* 10, The people inside the buildings */}
         <CareersSection />
-        {/* 11, Weekly briefing signup */}
+        {/* 11, Monthly briefing signup */}
         <NewsletterV2 />
       </main>
       <Footer />

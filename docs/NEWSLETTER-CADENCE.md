@@ -2,21 +2,29 @@
 
 **Owner: Kevin Jonathan Otieno. Companion to docs/NEWS-TO-ASSETS-PLAYBOOK.md
 and docs/RESEARCH-VERIFICATION-STANDARDS.md. This page formalises what the
-signup forms promise ("Free. Weekly. No industry noise.") so the commitment
-survives beyond any single week's energy.**
+signup forms promise ("Free. Monthly. No industry noise.") so the commitment
+survives beyond any single month's energy.**
+
+> **Cadence change, September 2026:** The Rack Report moved from weekly to
+> **monthly** (first Monday) with Issue 002, which ships **Monday
+> 5 October 2026**. Issue numbering continues sequentially from the weekly
+> era (Issue 001 shipped 14 September 2026). Rationale: one deeply sourced
+> issue a month is sustainable alongside the reporting load, and a promise
+> kept twelve times a year beats one kept in spirit fifty-two.
 
 ## The two streams
 
 | Stream | Cadence | Send window | Format | Status page |
 |---|---|---|---|---|
-| The Rack Report | Weekly, every Monday | 06:00 EAT (03:00 UTC) | 8-page PDF + email | /rack-report |
+| The Rack Report | Monthly, first Monday | 06:00 EAT (03:00 UTC) | 8-page PDF + email | /rack-report |
 | DC254 Brief | Monthly, first Tuesday | 06:00 EAT | Email + web summary | /research |
 
-- **The Rack Report** is the flagship: the week's most important
+- **The Rack Report** is the flagship: the month's most important
   developments in the fixed nine-section anatomy (Headline, By the Numbers,
   Infrastructure, Power, Connectivity, Money, Policy, What We're Watching,
-  From DataCentre254). Issue numbering is sequential and never skips; if a
-  Monday must slip, the issue ships Tuesday with a dated editor's note.
+  From DataCentre254). Issue numbering is sequential and never skips; if the
+  first Monday must slip, the issue ships the next day with a dated editor's
+  note.
 - **The DC254 Brief** is the monthly digest: what changed in the durable
   assets (directory, trackers, snapshots), what shipped on the site, and
   what the next month is watching. It is the segmentation-aware stream.
@@ -26,7 +34,7 @@ survives beyond any single week's energy.**
 1. **A cadence is a promise, printed on the page.** The signup forms, the
    landing pages and this document state the same schedule. If the schedule
    changes, all three change together in one commit.
-2. **Never skip silently.** A missed week gets a dated note in the next
+2. **Never skip silently.** A missed month gets a dated note in the next
    issue. Reliability is part of the trust product.
 3. **Issues are numbered.** Issue N+1 follows issue N; the archive lives in
    `docs/newsletter/` (working files) and `public/reports/` (published PDFs).
@@ -46,7 +54,7 @@ page. The segments, from `src/lib/newsletter-store.ts`:
 | `journalist` | Dated, sourced figures they can cite; dataset bundles; corrections log |
 | `vendor` | Operator expansion signals, market-entry explainers |
 | `student` | Beginner cluster, glossary, Kiswahili glossary, career explainers |
-| `other` | The shared core: weekly headline + one durable-asset update |
+| `other` | The shared core: monthly headline + one durable-asset update |
 
 Segmentation is **ordering, not exclusion**: everyone gets the Rack Report
 core; the DC254 Brief and any future segment digests lead with the section

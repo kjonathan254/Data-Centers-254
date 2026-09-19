@@ -43,20 +43,16 @@ export default function Footer() {
             <div className="mb-5">
               <BrandLogo variant="footer" />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-xs">
-              Inside Kenya&apos;s digital infrastructure. Data centres,
-              connectivity, power, AI, and the systems that make the digital world work.
+            {/* Institutional positioning, three lines: brand · what it does · who edits it. */}
+            <p className="text-sm font-medium text-foreground/80 leading-relaxed mb-4 max-w-xs">
+              Research &middot; Reporting &middot; Data &middot; Digital Infrastructure
             </p>
-            {/* Editorial transparency: a named editor behind every claim (audit recommendation). */}
-            <p className="text-xs text-muted-foreground/80 leading-relaxed mb-6 max-w-xs">
-              Edited by{" "}
-              <Link href="/about" className="text-foreground/80 hover:text-cyan underline underline-offset-2">
+            <p className="text-xs text-muted-foreground leading-relaxed mb-6 max-w-xs">
+              Editor:{" "}
+              <Link href="/about" className="text-foreground/70 hover:text-cyan underline underline-offset-2">
                 Kevin Jonathan Otieno
               </Link>
-              , Elmac Communications, Nairobi ·{" "}
-              <Link href="/methodology" className="text-cyan/80 hover:text-cyan underline underline-offset-2">
-                how we verify
-              </Link>
+              {" "}· Elmac Communications &mdash; Nairobi, Kenya
             </p>
             <div className="flex items-center gap-2">
               <a

@@ -21,7 +21,7 @@ export default function SubscribeVerifiedPage() {
           <h1 className="text-3xl font-bold tracking-tight text-white">Subscription confirmed</h1>
           <p className="mt-4 text-base leading-relaxed text-white/70">
             You&apos;re on the list for <strong className="text-white">The Rack Report</strong> -
-            the weekly intelligence briefing on Kenya&apos;s data centres, connectivity,
+            the monthly intelligence briefing on Kenya&apos;s data centres, connectivity,
             and power infrastructure. The next edition lands in your inbox.
           </p>
           <p className="mt-3 text-sm text-white/50">

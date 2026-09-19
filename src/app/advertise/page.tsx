@@ -22,7 +22,7 @@ const opportunities = [
     icon: MailOpen,
     num: "01",
     title: "Briefing sponsorship",
-    body: "One sponsor per issue of The Rack Report, the weekly intelligence briefing on East Africa's data centre build-out. A 75–100 word sponsored message with your logo and link, clearly labelled, plus a tracked click report every month.",
+    body: "One sponsor per issue of The Rack Report, the monthly intelligence briefing on East Africa's data centre build-out. A 75–100 word sponsored message with your logo and link, clearly labelled, plus a tracked click report every month.",
   },
   {
     icon: PenLine,
@@ -127,7 +127,7 @@ export default async function AdvertisePage() {
 
           {/* Briefing sponsorship, slot pricing */}
           <h2 className="text-xl font-semibold text-foreground mb-2">Sponsor The Rack Report</h2>
-          <p className="text-sm text-muted-foreground mb-6">The weekly intelligence briefing from DataCentre254, infrastructure, power, connectivity, money and policy, every Monday.</p>
+          <p className="text-sm text-muted-foreground mb-6">The monthly intelligence briefing from DataCentre254: infrastructure, power, connectivity, money and policy, first Monday of the month.</p>
           <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-14">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>
@@ -136,7 +136,7 @@ export default async function AdvertisePage() {
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">1 / issue</p>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, four briefings a month, never an ad block</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">one sponsor per issue, one briefing a month, never an ad block</p>
               </div>
               <div>
                 <p className="text-2xl font-bold text-foreground">Monthly report</p>
@@ -146,7 +146,7 @@ export default async function AdvertisePage() {
             <p className="text-sm leading-relaxed text-muted-foreground mb-4">
               <strong className="text-foreground">Founding industry partners:</strong> the first two partners ever pay{" "}
               <strong className="text-foreground">$75 per slot</strong> for
-              their first two issues, after that, pricing follows the audience numbers below. The cadence is formal: one issue every Monday 06:00 EAT, never skipped silently. Sponsors are vendors who
+              their first two issues, after that, pricing follows the audience numbers below. The cadence is formal: one issue every first Monday 06:00 EAT, never skipped silently. Sponsors are vendors who
               sell to this market: cooling, power, connectivity, construction, consulting. New to the briefing?{" "}
               <a href="/rack-report" className="text-cyan hover:underline">See what lands in every issue</a>.
             </p>

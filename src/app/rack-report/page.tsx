@@ -18,14 +18,14 @@ import RackReportSignup from "@/components/sections/rack-report-signup";
 import { getLatestArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "The Rack Report: Kenya's Data Centre Weekly",
+  title: "The Rack Report: Kenya's Data Centre Monthly",
   description:
-    "The Rack Report is DC254's weekly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free every Monday.",
+    "The Rack Report is DC254's monthly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free, first Monday of the month.",
   alternates: { canonical: "/rack-report" },
   openGraph: {
-    title: "The Rack Report: Kenya's Data Centre Weekly",
+    title: "The Rack Report: Kenya's Data Centre Monthly",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ const anatomy = [
   {
     icon: Newspaper,
     name: "The Headline",
-    body: "The biggest development of the week, and what it actually means.",
+    body: "The biggest development of the month, and what it actually means.",
   },
   {
     icon: BarChart3,
@@ -77,7 +77,7 @@ const anatomy = [
   {
     icon: Link2,
     name: "From DataCentre254",
-    body: "Links to our strongest analysis of the week, for going deeper.",
+    body: "Links to our strongest analysis of the month, for going deeper.",
   },
 ];
 
@@ -95,12 +95,12 @@ export default function RackReportPage() {
               The Rack Report · by DataCentre254
             </p>
             <h1 className="text-display-sm text-foreground mb-5">
-              Kenya&apos;s data-centre industry, in one weekly briefing.
+              Kenya&apos;s data-centre industry, in one monthly briefing.
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              The week&apos;s most important developments, written for the
+              The month&apos;s most important developments, written for the
               people building, financing and regulating Kenya&apos;s digital
-              infrastructure. Every Monday, free.
+              infrastructure. First Monday of the month, free.
             </p>
             <p className="text-sm font-medium text-foreground/90 mb-8">
               Data centres. Power. Cloud. Connectivity. Investment. Policy.
@@ -145,15 +145,15 @@ export default function RackReportPage() {
               Publication cadence
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
-              A cadence is a promise, so here it is in writing. If a Monday
-              ever slips, the issue ships Tuesday with a dated editor&apos;s
-              note; issues are numbered and never skipped silently.
+              A cadence is a promise, so here it is in writing. If the first
+              Monday ever slips, the issue ships the next day with a dated
+              editor&apos;s note; issues are numbered and never skipped silently.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 {
-                  t: "Every Monday",
-                  b: "One issue, every week, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
+                  t: "Monthly, first Monday",
+                  b: "One issue, every month, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
                 },
                 {
                   t: "One sponsor, labelled",
@@ -180,11 +180,11 @@ export default function RackReportPage() {
               Read Issue #002
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
-              Issue 002 ships on Monday 21 September 2026: the US DFC&apos;s
+              Issue 002 ships on Monday 5 October 2026: the US DFC&apos;s
               largest-ever equity bet, up to $155M into WIOCC and what it means
               for Kenya&apos;s bandwidth, NBO2&apos;s 6.4MW of delivered
-              capacity, why generation is not reliability, and twenty days
-              left on the CA licence consultation.
+              capacity, why generation is not reliability, and the CA licence
+              consultation closing on 8 October.
             </p>
             <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-4 flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
@@ -192,7 +192,7 @@ export default function RackReportPage() {
                   The Rack Report · Issue 002
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Monday 21 September 2026 · 8 pages · PDF, about 430 KB
+                  Monday 5 October 2026 · 8 pages · PDF, about 430 KB
                 </p>
               </div>
               <a
