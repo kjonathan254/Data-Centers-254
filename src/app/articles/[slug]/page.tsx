@@ -96,6 +96,10 @@ export default async function ArticlePage({ params }: PageProps) {
       "@type": "Organization",
       name: "Data Centre 254",
       url: siteUrl(),
+      parentOrganization: {
+        "@type": "Organization",
+        name: "Elmac Communications Ltd",
+      },
       logo: {
         "@type": "ImageObject",
         url: siteUrl("/logo.png"),

@@ -109,7 +109,9 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Data Centre 254 was founded and is operated by <strong className="text-foreground">Kevin Jonathan Otieno</strong>,
+                  Data Centre 254 is published by <strong className="text-foreground">Elmac Communications Ltd</strong>,
+                  a Kenyan communications company, and was founded and is operated by{" "}
+                  <strong className="text-foreground">Kevin Jonathan Otieno</strong>,
                   a Kenyan founder, writer and content creator with a background in communications,
                   digital media, digital marketing and technology. He is self-taught in areas of AI,
                   cloud computing and digital infrastructure.

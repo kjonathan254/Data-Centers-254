@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "Data Centre 254 | Inside Kenya's Digital Infrastructure",
+    default: "Data Centre 254 | Digital infrastructure intelligence from Kenya",
     template: "%s | DC254",
   },
   description:
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
   openGraph: {
-    title: "Data Centre 254 | Inside Kenya's Digital Infrastructure",
+    title: "Data Centre 254 | Digital infrastructure intelligence from Kenya",
     description:
       "Understanding the physical infrastructure behind Kenya's digital economy. Data centres, connectivity, power, cloud, AI, and the systems that make the digital world work.",
     siteName: "Data Centre 254",

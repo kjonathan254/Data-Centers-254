@@ -364,7 +364,7 @@ export default function MethodologyPage() {
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-4">
               DC254 is built and run by{" "}
               <strong className="text-foreground">Kevin Jonathan Otieno</strong>{" "}
-              (Elmac Communications), a Kenyan-owned, independent research
+              (Elmac Communications Ltd), a Kenyan-owned, independent research
               effort tracking East Africa&apos;s digital infrastructure in
               public. The dataset, the verification dates and the correction
               log on this site are maintained in the open, so every reader

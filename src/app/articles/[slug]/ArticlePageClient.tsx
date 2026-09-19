@@ -501,25 +501,31 @@ export default function ArticlePageClient({ article, related }: Props) {
             {frontmatter.title}
           </h1>
 
-          {/* Meta row */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-4">
-            <span className="font-medium text-foreground/80">
-              <Link href={frontmatter.author_bio_link} className="hover:text-cyan transition-colors">
-                {frontmatter.author}
-              </Link>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Calendar className="size-3.5" />
-              {new Date(frontmatter.published_date).toLocaleDateString("en-KE", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="size-3.5" />
-              {frontmatter.reading_time}
-            </span>
+          {/* Meta row: byline over publication line — the person under the masthead */}
+          <div className="mb-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+              <span className="font-medium text-foreground/80">
+                Written and edited by{" "}
+                <Link href={frontmatter.author_bio_link} className="hover:text-cyan transition-colors">
+                  {frontmatter.author}
+                </Link>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="size-3.5" />
+                {new Date(frontmatter.published_date).toLocaleDateString("en-KE", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock className="size-3.5" />
+                {frontmatter.reading_time}
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground mt-1.5">
+              DataCentre254 &middot; An Elmac Communications Ltd publication
+            </p>
           </div>
 
           {/* Share buttons */}

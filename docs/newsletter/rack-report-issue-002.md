@@ -94,7 +94,7 @@ All articles at data-centers-254.vercel.app. Every figure cited above carries it
 
 **Corrections and tips.** Spotted something wrong or know something we should verify? DC254 corrects errors openly and quickly. Reach the newsroom through the contact page at data-centers-254.vercel.app, or reply to any edition of this briefing by email.
 
-**Masthead.** Published by DataCentre254, Kenya's open data centre directory and intelligence library. Edited and written by Kevin Jonathan Otieno. The Rack Report accepts one sponsor per issue, always clearly labelled, with audience numbers published live and never inflated.
+**Masthead.** Published by DataCentre254, Kenya's open data centre directory and intelligence library. An Elmac Communications Ltd publication. Written and edited by Kevin Jonathan Otieno. The Rack Report accepts one sponsor per issue, always clearly labelled, with audience numbers published live and never inflated.
 
 ---
 

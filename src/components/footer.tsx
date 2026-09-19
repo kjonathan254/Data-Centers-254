@@ -43,18 +43,25 @@ export default function Footer() {
             <div className="mb-5">
               <BrandLogo variant="footer" />
             </div>
-            {/* Institutional positioning, three lines: brand · what it does · who edits it. */}
-            <p className="text-sm font-medium text-foreground/80 leading-relaxed mb-4 max-w-xs">
-              Research &middot; Reporting &middot; Data &middot; Digital Infrastructure
+            {/* Masthead hierarchy: brand · tagline · publisher · place.
+                Reads as a publication Elmac owns and operates, not a client credit. */}
+            <p className="text-base font-semibold tracking-tight text-foreground mb-2">
+              DataCentre254
             </p>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-6 max-w-xs">
-              Editor:{" "}
+            <p className="text-sm font-medium text-foreground/80 leading-relaxed mb-2 max-w-xs">
+              Digital infrastructure intelligence from Kenya
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
+              An{" "}
               <Link href="/about" className="text-foreground/70 hover:text-cyan underline underline-offset-2">
-                Kevin Jonathan Otieno
-              </Link>
-              {" "}· Elmac Communications &mdash; Nairobi, Kenya
+                Elmac Communications Ltd
+              </Link>{" "}
+              publication
             </p>
-            <div className="flex items-center gap-2">
+            <p className="text-xs text-muted-foreground leading-relaxed mt-1.5 max-w-xs">
+              Nairobi, Kenya
+            </p>
+            <div className="mt-6 flex items-center gap-2">
               <a
                 href="https://x.com/FinallyKayvoh"
                 target="_blank"
@@ -130,14 +137,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Data Centre 254. Inside Kenya&apos;s Digital Infrastructure.
+            &copy; {new Date().getFullYear()} Data Centre 254. All rights reserved.
           </p>
-          <div className="flex items-center gap-3 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-neon animate-pulse" />
-              Nairobi, Kenya
-            </span>
-          </div>
+          <p className="text-xs text-muted-foreground">
+            An Elmac Communications Ltd publication
+          </p>
         </div>
         <div className="pb-6 flex flex-wrap items-center justify-center sm:justify-between gap-x-5 gap-y-2 text-xs text-muted-foreground">
           <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
