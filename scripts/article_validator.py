@@ -15,10 +15,12 @@ Checks every content/articles/*.md for:
   table delimiter rows are fine and not flagged)
 - README stats cross-check: article and cluster counts claimed in README
   must match the content directory
+- dataset integrity: versioned directory JSON (src/data/directory/current.json)
+  must parse, slugs must be unique, every facility must join to an operator
 - facility re-verification cadence: lastVerified older than six months
   is flagged against the quarterly cadence promised in /methodology
 """
-import datetime, os, re, sys
+import datetime, json, os, re, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(REPO, "content", "articles")
@@ -40,11 +42,21 @@ for root, _dirs, files in os.walk(APP):
         STATIC_ROUTES.add(p)
 
 article_slugs = {fn[:-3] for fn in os.listdir(ART) if fn.endswith(".md")}
+
+# The directory dataset is now a versioned JSON file (Phase 2). Parse it as
+# data, not text: slugs, operator joins and lastVerified all come from here.
+DATASET = os.path.join(REPO, "src", "data", "directory", "current.json")
 facility_slugs = set()
-dd = open(os.path.join(REPO, "src", "lib", "directory-data.ts"), encoding="utf-8").read()
-m = re.search(r"const facilities[\s\S]*", dd)
-for fm in re.finditer(r'slug:\s*"([^"]+)"', m.group(0) if m else ""):
-    facility_slugs.add(fm.group(1))
+try:
+    with open(DATASET, encoding="utf-8") as _fh:
+        dataset = json.load(_fh)
+    facility_slugs = {f["slug"] for f in dataset["facilities"]}
+    _op_ids = {o["id"] for o in dataset["operators"]}
+except (OSError, ValueError) as exc:
+    dataset = None
+    errors_pre = [f"directory dataset: cannot parse {DATASET}: {exc}"]
+else:
+    errors_pre = []
 
 def resolve(href):
     base = href.rstrip("/") or "/"
@@ -57,6 +69,7 @@ def resolve(href):
     return False
 
 errors, warnings = [], []
+errors.extend(errors_pre)
 
 # cluster names actually in use (for the README cross-check)
 cluster_names = set()
@@ -165,31 +178,37 @@ for m in re.finditer(r"(\d+)\s+clusters?", readme):
             f"{sorted(cluster_names)} (update README.md)"
         )
 
-# Facility re-verification cadence (Phase 1): /methodology promises a monthly
-# sweep and a quarterly full re-verification. Warn when any facility record's
-# lastVerified month is more than six months old (one grace cycle), so data
-# staleness surfaces in CI instead of on a public page.
-fac_span = re.search(r"const facilities[\s\S]*?\n\];", dd)
-if fac_span:
-    fac_text = fac_span.group(0)
-    fac_slugs = re.findall(r'\bslug:\s*"([^"]+)"', fac_text)
-    fac_verified = re.findall(r'lastVerified:\s*"(\d{4}-\d{2})"', fac_text)
-    if len(fac_slugs) != len(fac_verified):
-        warnings.append(
-            f"directory-data: cannot pair slug/lastVerified fields "
-            f"({len(fac_slugs)} slugs vs {len(fac_verified)} lastVerified) for the cadence check"
-        )
-    else:
-        today = datetime.date.today()
-        now_months = today.year * 12 + today.month
-        for fslug, ym in zip(fac_slugs, fac_verified):
-            age = now_months - (int(ym[:4]) * 12 + int(ym[5:7]))
-            if age > 6:
-                warnings.append(
-                    f"directory-data: facility '{fslug}' lastVerified {ym} "
-                    f"({age} months ago) exceeds the quarterly re-verification "
-                    f"cadence promised in /methodology"
-                )
+# Facility re-verification cadence (Phase 1) + dataset integrity (Phase 2):
+# /methodology promises a monthly sweep and a quarterly full re-verification.
+# Warn when any facility record's lastVerified month is more than six months
+# old (one grace cycle), so data staleness surfaces in CI instead of on a
+# public page. Integrity checks make the JSON source of truth self-defending.
+if dataset is not None:
+    facs = dataset["facilities"]
+    _slug_list = [f["slug"] for f in facs]
+    dupes = sorted({s for s in _slug_list if _slug_list.count(s) > 1})
+    if dupes:
+        errors.append(f"directory dataset: duplicate facility slugs: {dupes}")
+    unjoined = [f["slug"] for f in facs if f.get("operatorId") not in _op_ids]
+    if unjoined:
+        errors.append(f"directory dataset: facilities with unknown operatorId: {unjoined}")
+    nover = [f["slug"] for f in facs if not re.fullmatch(r"\d{4}-\d{2}", f.get("lastVerified", ""))]
+    if nover:
+        errors.append(f"directory dataset: records missing YYYY-MM lastVerified: {nover}")
+    today = datetime.date.today()
+    now_months = today.year * 12 + today.month
+    for f in facs:
+        ym = f["lastVerified"]
+        age = now_months - (int(ym[:4]) * 12 + int(ym[5:7]))
+        if age > 6:
+            warnings.append(
+                f"directory dataset: facility '{f['slug']}' lastVerified {ym} "
+                f"({age} months ago) exceeds the quarterly re-verification "
+                f"cadence promised in /methodology"
+            )
+    counts = dataset.get("meta", {}).get("recordCounts", {})
+    if counts.get("facilities") not in (None, len(facs)):
+        errors.append("directory dataset: meta.recordCounts.facilities does not match the actual record count")
 
 print(f"articles checked: {len(article_slugs)}")
 print(f"clusters: {len(cluster_names)}")

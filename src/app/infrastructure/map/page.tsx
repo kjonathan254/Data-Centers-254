@@ -10,7 +10,10 @@ import { getDirectoryStats } from "@/lib/directory-data";
 export const dynamic = 'force-dynamic';
 
 // Derived from the verified facility dataset so metadata never goes stale
-const FACILITY_COUNT = getDirectoryStats().totalFacilities;
+// Derived from the verified facility dataset so metadata never goes stale.
+// Kenya-scoped count: the map plots the Kenya census; the 4 East Africa
+// regional records live in the directory, not on the metro maps yet.
+const FACILITY_COUNT = getDirectoryStats().totalFacilities - getDirectoryStats().regionalCount;
 
 export function generateMetadata(): Metadata {
   return {

@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Directory from "@/components/sections/directory";
 import MarketSnapshot from "@/components/sections/market-snapshot";
-import { getFacilities } from "@/lib/directory-data";
+import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -42,6 +42,8 @@ export default async function DirectoryPage({
 }) {
   const { search } = await searchParams;
   const facilities = getFacilities();
+  const snap = getMarketSnapshot();
+  const regional = facilities.filter((f) => (f.country || "Kenya") !== "Kenya");
   const opNames = [...new Set(facilities.map((f) => f.operator.name))];
   const operationalCount = facilities.filter((f) => f.status === "Operational").length;
   const nairobiCount = facilities.filter((f) => f.city === "Nairobi").length;
@@ -50,8 +52,8 @@ export default async function DirectoryPage({
   const datasetJsonLd = {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    name: "DC254 Kenya Data Centre Directory",
-    description: `A verified, source-cited database of ${facilities.length} data centre facilities in Kenya, covering operators, operational status, IT load in MW, rack counts, tier ratings, AI readiness and connectivity for Nairobi, Mombasa and beyond.`,
+    name: "DC254 Kenya & East Africa Data Centre Directory",
+    description: `A verified, source-cited database of ${facilities.length} data centre facilities (${snap.kenyaFacilities} in Kenya, ${snap.regionalFacilities} across East Africa), covering operators, operational status, IT load in MW, rack counts, tier ratings, AI readiness and connectivity.`,
     url: `${SITE_URL}/directory`,
     isAccessibleForFree: true,
     keywords: [
@@ -121,10 +123,11 @@ export default async function DirectoryPage({
         <div className="container-site mt-6">
           <h2 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h2>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mb-2">
-            DC254 currently tracks <strong className="text-foreground">{facilities.length} data centre facilities</strong> in Kenya,
-            of which <strong className="text-foreground">{operationalCount} are operational</strong> ({nairobiCount} in
-            Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza). The
-            remaining {facilities.length - operationalCount} sites are under construction, committed, or at an early
+            DC254 currently tracks <strong className="text-foreground">{snap.kenyaFacilities} data centre facilities in Kenya</strong>,
+            of which {operationalCount - regional.filter((f) => f.status === "Operational").length} are operational ({nairobiCount} in
+            Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza), plus {snap.regionalFacilities} verified
+            East Africa records: {regional.map((f) => `${f.name} (${f.country || "Kenya"})`).join(", ")}. The
+            remaining {facilities.length - operationalCount} tracked sites are under construction, committed, or at an early
             stage. Every row is verified against a published source and dated, and the
             full dataset is free to download below.
           </p>

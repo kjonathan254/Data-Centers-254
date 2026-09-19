@@ -26,6 +26,7 @@ interface Op { name: string; slug: string; type: string; parentCompany: string |
 interface Facility {
   id: string; name: string; slug: string; description: string | null;
   status: string; address: string | null; city: string; region: string;
+  country?: string;
   itLoadMw: number | null; totalCapacityMw: number | null; rackCount: number | null;
   tierRating: string | null; facilityType: string | null; aiReady: boolean;
   openedDate: string | null; expansionDate: string | null;
@@ -45,7 +46,7 @@ interface Facility {
 interface FilterMeta {
   operators: { id: string; name: string }[];
   statuses: { value: string; count: number }[];
-  cities: string[]; types: string[];
+  cities: string[]; types: string[]; countries?: string[];
 }
 
 interface DirStats { totalFacilities: number; operationalCount: number; totalMw: number; totalRacks: number; aiReadyCount: number; carrierNeutralCount: number; }
@@ -76,6 +77,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
   const [search, setSearch] = useState(initialSearch);
   const [status, setStatus] = useState("all");
   const [operator, setOperator] = useState("all");
+  const [country, setCountry] = useState("all");
   const [facilityType, setFacilityType] = useState("all");
   const [sortBy, setSortBy] = useState("itLoadMw");
   const [sortOrder, setSortOrder] = useState("desc");
@@ -89,6 +91,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
       if (search) p.set("search", search);
       if (status !== "all") p.set("status", status);
       if (operator !== "all") p.set("operator", operator);
+      if (country !== "all") p.set("country", country);
       if (facilityType !== "all") p.set("type", facilityType);
       p.set("sortBy", sortBy); p.set("sortOrder", sortOrder);
       const r = await fetch(`/api/directory?${p}`);
@@ -96,12 +99,12 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
       setData(await r.json());
     } catch { setError("Could not load directory data"); }
     finally { setLoading(false); }
-  }, [search, status, operator, facilityType, sortBy, sortOrder]);
+  }, [search, status, operator, country, facilityType, sortBy, sortOrder]);
 
   useEffect(() => { setLoading(true); setError(null); const t = setTimeout(fetchDir, 300); return () => clearTimeout(t); }, [fetchDir]);
   useEffect(() => { fetchDir(); }, []);
 
-  const activeCount = [status !== "all", operator !== "all", facilityType !== "all"].filter(Boolean).length;
+  const activeCount = [status !== "all", operator !== "all", country !== "all", facilityType !== "all"].filter(Boolean).length;
 
   return (
     <section id="directory" className="py-14 lg:py-20">
@@ -109,12 +112,12 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
 
         {/* Header, left-aligned, editorial */}
         <div className="max-w-2xl">
-          <span className="eyebrow">Kenya DC Directory</span>
+          <span className="eyebrow">Kenya &amp; East Africa DC Directory</span>
           <h1 className="h-display mt-3 text-foreground">Every data centre in one place.</h1>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-            A searchable database of data centre facilities in Kenya. Every
-            facility verified and sourced, the asset that makes Data Centre
-            254 different.
+            A searchable database of data centre facilities in Kenya, with the
+            first verified records from across East Africa. Every facility
+            verified and sourced, the asset that makes Data Centre 254 different.
           </p>
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5">
@@ -167,17 +170,20 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
           </div>
 
           {showFilters && data && (
-            <div className="card-solid rounded-xl p-5 mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="card-solid rounded-xl p-5 mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Status</label>
                 <Select value={status} onValueChange={setStatus}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent><SelectItem value="all">All Statuses</SelectItem>{data.filters.statuses.map((s) => <SelectItem key={s.value} value={s.value}>{s.value} ({s.count})</SelectItem>)}</SelectContent></Select></div>
+              <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Country</label>
+                <Select value={country} onValueChange={setCountry}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
+                  <SelectContent><SelectItem value="all">All Countries</SelectItem>{(data.filters.countries ?? []).map((c) => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent></Select></div>
               <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Operator</label>
                 <Select value={operator} onValueChange={setOperator}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent><SelectItem value="all">All Operators</SelectItem>{data.filters.operators.map((o) => <SelectItem key={o.id} value={o.id}>{o.name}</SelectItem>)}</SelectContent></Select></div>
               <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Type</label>
                 <Select value={facilityType} onValueChange={setFacilityType}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent><SelectItem value="all">All Types</SelectItem>{data.filters.types.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}</SelectContent></Select></div>
-              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setFacilityType("all"); }} className="text-xs text-cyan underline hover:underline sm:col-span-3 text-left">Clear all filters</button>}
+              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setCountry("all"); setFacilityType("all"); }} className="text-xs text-cyan underline hover:underline sm:col-span-2 lg:col-span-4 text-left">Clear all filters</button>}
             </div>
           )}
         </div>
@@ -222,7 +228,7 @@ export default function DirectorySection({ initialSearch = "" }: { initialSearch
                       <GitCompareArrows className="size-3.5" />
                       {inCompare ? "Added to compare" : "Compare"}
                     </button>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}</span>{f.peeringdbNetworks !== undefined && <span title="Networks registered on PeeringDB">{f.peeringdbNetworks} networks</span>}{f.sources && f.sources.length > 0 && <span className="inline-flex items-center gap-1 text-cyan/80" title="Named sources on the profile"><ExternalLink className="size-3" />{f.sources.length}</span>}<span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}{f.country && f.country !== "Kenya" ? `, ${f.country}` : ""}</span>{f.peeringdbNetworks !== undefined && <span title="Networks registered on PeeringDB">{f.peeringdbNetworks} networks</span>}{f.sources && f.sources.length > 0 && <span className="inline-flex items-center gap-1 text-cyan/80" title="Named sources on the profile"><ExternalLink className="size-3" />{f.sources.length}</span>}<span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
                   </div>
                 </article>
               );

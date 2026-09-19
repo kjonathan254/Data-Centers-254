@@ -33,6 +33,23 @@ const reports = [
     featured: true,
   },
   {
+    edition: "SOTM · 2026-Q3",
+    title: "State of the Market 2026-Q3",
+    period: "Quarterly Report · 19 September 2026",
+    description:
+      "The first quarterly edition, pinned to the frozen 2026-Q3 snapshot: the quarter's supply picture, digests from the three new market trackers (subsea cables, power tariffs, licensing), the first East Africa regional records, and the citable dataset bundle in CSV. The figures you cite are the figures the bundle contains.",
+    stats: [
+      { icon: Layers, value: "31", label: "records" },
+      { icon: Gauge, value: "230 MW", label: "pipeline" },
+      { icon: Network, value: "7", label: "cables live" },
+      { icon: ShieldCheck, value: "4", label: "countries" },
+    ],
+    summaryHref: "/research/state-of-the-market-2026-q3",
+    pdfHref: "/datasets/dc254-dataset-bundle-2026-Q3.zip",
+    pdfMeta: "Dataset bundle · CSV · CC BY 4.0",
+    featured: false,
+  },
+  {
     edition: "Rack Report · Issue 002",
     title: "The Rack Report, Issue 002",
     period: "21 September 2026 · 8 pages",

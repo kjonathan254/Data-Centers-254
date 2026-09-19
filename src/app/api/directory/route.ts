@@ -6,6 +6,7 @@ export async function GET(request: NextRequest) {
   const search = (searchParams.get('search') || '').slice(0, 100);
   const status = searchParams.get('status') || '';
   const city = searchParams.get('city') || '';
+  const country = searchParams.get('country') || '';
   const operator = searchParams.get('operator') || '';
   const facilityType = searchParams.get('type') || '';
   const aiReady = searchParams.get('aiReady') || '';
@@ -27,6 +28,7 @@ export async function GET(request: NextRequest) {
   }
   if (status && status !== 'all') results = results.filter((f) => f.status === status);
   if (city && city !== 'all') results = results.filter((f) => f.city === city);
+  if (country && country !== 'all') results = results.filter((f) => (f.country || 'Kenya') === country);
   if (operator && operator !== 'all') results = results.filter((f) => f.operatorId === operator);
   if (facilityType && facilityType !== 'all') results = results.filter((f) => f.facilityType === facilityType);
   if (aiReady === 'true') results = results.filter((f) => f.aiReady);

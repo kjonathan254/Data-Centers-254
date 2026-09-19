@@ -57,6 +57,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified: contentDate, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/directory`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/tracker`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.8 },
+    // Market tracker sub-pages (Phase 2): cables, power tariffs, licensing.
+    // Dated from their own verified month in market-trackers.ts (Sep 2026).
+    { url: `${baseUrl}/tracker/cables`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/tracker/power`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/tracker/licensing`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/directory/compare`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/chat`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/methodology`, lastModified: verifiedDate, changeFrequency: "monthly", priority: 0.6 },
@@ -77,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/foundations`, lastModified: contentDate, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/research`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/research/state-of-kenyan-data-centres-2026`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/research/state-of-the-market-2026-q3`, lastModified: new Date("2026-09-19T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/glossary`, lastModified: contentDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/glossary/kiswahili`, lastModified: contentDate, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/about`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.5 },

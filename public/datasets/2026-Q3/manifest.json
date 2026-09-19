@@ -1,0 +1,47 @@
+{
+  "datasetId": "dc254-dataset-bundle",
+  "edition": "2026-Q3",
+  "releasedAt": "2026-09-19",
+  "publisher": "Data Centre 254",
+  "publisherUrl": "https://data-centers-254.vercel.app",
+  "snapshotOf": "2026-Q3",
+  "recordCounts": {
+    "facilities": 31,
+    "operators": 18,
+    "subseaCables": 10,
+    "tariffBenchmarks": 10,
+    "licensingRegimes": 3
+  },
+  "files": [
+    {
+      "name": "facilities-2026-Q3.csv",
+      "description": "Facility-level records: status, capacity, operator, verification date, confidence."
+    },
+    {
+      "name": "operators-2026-Q3.csv",
+      "description": "Operator records with parent company and HQ country."
+    },
+    {
+      "name": "subsea-cables-2026-Q3.csv",
+      "description": "Submarine cable systems at Kenyan landings: status, RFS, owners, sources."
+    },
+    {
+      "name": "power-tariffs-2026-Q3.csv",
+      "description": "Power tariff benchmarks with basis labels (published / DC254 estimate / reported)."
+    },
+    {
+      "name": "licensing-2026-Q3.csv",
+      "description": "Licensing regimes: NFP-T2, proposed standalone licence, ODPC obligations."
+    },
+    {
+      "name": "README.txt",
+      "description": "Data dictionary, confidence grades and citation guidance."
+    }
+  ],
+  "licence": "CC BY 4.0. Cite as: Data Centre 254, 'DC254 Dataset Bundle, 2026-Q3 edition', released <date>, https://data-centers-254.vercel.app/research/state-of-the-market-2026-q3.",
+  "verification": {
+    "method": "Every row carries named sources and a last-verified month. Confidence grades: High = operator-confirmed; Medium = single-source or mixed; Low = fragmentary.",
+    "methodologyUrl": "https://data-centers-254.vercel.app/methodology",
+    "correctionsUrl": "https://data-centers-254.vercel.app/corrections"
+  }
+}

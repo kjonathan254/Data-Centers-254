@@ -146,9 +146,14 @@ export default async function AdvertisePage() {
             <p className="text-sm leading-relaxed text-muted-foreground mb-4">
               <strong className="text-foreground">Founding industry partners:</strong> the first two partners ever pay{" "}
               <strong className="text-foreground">$75 per slot</strong> for
-              their first two issues, after that, pricing follows the audience numbers below. Sponsors are vendors who
+              their first two issues, after that, pricing follows the audience numbers below. The cadence is formal: one issue every Monday 06:00 EAT, never skipped silently. Sponsors are vendors who
               sell to this market: cooling, power, connectivity, construction, consulting. New to the briefing?{" "}
               <a href="/rack-report" className="text-cyan hover:underline">See what lands in every issue</a>.
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">
+              The audience is segmented at signup (operators, IT leadership, investors, journalists,
+              vendors, students), so a slot reaches the roles that matter to you. Segment-by-segment
+              inventory is in the media kit.
             </p>
             {/* Live audience composition */}
             {hasAudience && stats ? (

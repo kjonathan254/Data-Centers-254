@@ -10,8 +10,10 @@ Live at [data-centers-254.vercel.app](https://data-centers-254.vercel.app).
 
 ## What It Does
 
-- **DC Directory** — Verified directory of Kenya's data centre facilities, operators, and connectivity providers
+- **DC Directory** — Verified directory of Kenya's data centre facilities plus the first East Africa regional records (Tanzania, Uganda, Rwanda), from a versioned, quarterly-snapshotted dataset (`src/data/directory/`)
 - **97 Articles** — Researched explainers across 8 clusters: Beginner, Kenya, Internet, Energy, AI, Careers, Infrastructure, Policy
+- **Market Trackers** — Capacity pipeline (`/tracker`), subsea cables (`/tracker/cables`), power tariffs (`/tracker/power`) and licensing (`/tracker/licensing`), every row sourced and dated
+- **State of the Market** — Quarterly report with a frozen dataset snapshot and a free CC BY dataset bundle (`/research/state-of-the-market-2026-q3`)
 - **Search** — Unified search across articles and facilities
 - **Newsletter** — DC254 Brief subscriber capture (email → Resend Contacts)
 - **Contact Form** — Email delivery via Resend
@@ -31,7 +33,7 @@ Live at [data-centers-254.vercel.app](https://data-centers-254.vercel.app).
 | Analytics | Google Analytics (optional) |
 | Deployment | Vercel |
 
-There is **no database** — articles are markdown files, directory data lives in typed TypeScript modules, and newsletter subscribers are stored as contacts in [Resend](https://resend.com). Everything is statically rendered where possible, so it deploys cleanly to serverless.
+There is **no database** — articles are markdown files, the directory dataset is a versioned JSON file (`src/data/directory/current.json`, with frozen quarterly snapshots under `snapshots/` and quarterly CSV bundles in `public/datasets/`), and newsletter subscribers are stored as contacts in [Resend](https://resend.com). Everything is statically rendered where possible, so it deploys cleanly to serverless.
 
 ## Project Structure
 
@@ -64,9 +66,14 @@ src/
 │   └── brand-logo.tsx       # DC254 logo (3 variants)
 ├── lib/
 │   ├── articles.ts          # Markdown article loader (gray-matter)
-│   ├── directory-data.ts    # Facility/operator/connectivity data
+│   ├── directory-data.ts    # Typed loader over the versioned directory JSON
+│   ├── market-trackers.ts   # Subsea cables, power tariffs, licensing trackers
 │   ├── glossary-data.ts     # Glossary terms
 │   └── site.ts              # Canonical site URL utility
+├── data/
+│   └── directory/           # Versioned dataset source of truth
+│       ├── current.json     #   live dataset (31 facilities, 18 operators)
+│       └── snapshots/       #   frozen quarterly snapshots (2026-Q3.json)
 content/
 └── articles/                # 97 markdown articles with YAML frontmatter
 ```

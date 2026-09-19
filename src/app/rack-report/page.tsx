@@ -138,6 +138,41 @@ export default function RackReportPage() {
           </div>
         </section>
 
+        {/* Publication cadence, the promise, printed (docs/NEWSLETTER-CADENCE.md) */}
+        <section className="section-y border-b border-border/40">
+          <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h2 className="text-xl font-semibold text-foreground mb-2">
+              Publication cadence
+            </h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              A cadence is a promise, so here it is in writing. If a Monday
+              ever slips, the issue ships Tuesday with a dated editor&apos;s
+              note; issues are numbered and never skipped silently.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                {
+                  t: "Every Monday",
+                  b: "One issue, every week, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
+                },
+                {
+                  t: "One sponsor, labelled",
+                  b: "A single clearly-marked sponsor message per issue, never blended into the reporting.",
+                },
+                {
+                  t: "Sources in the send",
+                  b: "Same verification chain as the site: dated claims, named sources, confidence stated.",
+                },
+              ].map((c) => (
+                <div key={c.t} className="rounded-xl border border-border/50 bg-card/60 p-5">
+                  <p className="text-sm font-semibold text-foreground mb-1">{c.t}</p>
+                  <p className="text-xs leading-relaxed text-muted-foreground">{c.b}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Issue #002 download */}
         <section className="section-y border-b border-border/40">
           <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">

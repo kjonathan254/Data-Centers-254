@@ -1,0 +1,11 @@
+metric,value,basis,note
+"Energy charge, off-peak (22:00-06:00)",from ~KES 10/kWh,DC254 benchmark estimate,Lowest TOU band for large commercial and industrial customers; surplus geothermal base-load sets the floor.
+"Energy charge, peak (18:00-22:00)",up to ~KES 18/kWh,DC254 benchmark estimate,Evening surge band. A 24/7 data centre load mostly avoids the peak band's cost weighting.
+Blended average energy charge,KES 13-16/kWh,DC254 benchmark estimate,"Weighted across TOU bands for a constant 24/7 load pattern, the normal operating case for a data centre."
+Effective all-in cost,KES 15-20/kWh ($0.10-0.13),DC254 benchmark estimate,"Blended energy charge plus demand charges, fuel levy and other pass-through costs."
+Demand charge,KES 300-500 per kVA per month,DC254 benchmark estimate,"A 2 MVA contracted demand carries KES 600,000-1,000,000 per month on demand charges alone; peak-draw management is a core competency."
+Pass-through costs and levies,+15-25% on the base energy charge,DC254 benchmark estimate,"FECC, inflation and forex adjustment charges, and the renewable energy levy, each small per-kWh additions that compound."
+Regional comparison: Kenya,KES 15-20/kWh effective,Reported range,"Competitive in Africa, strengthened by a 90%+ renewable grid mix and Nairobi's free-cooling climate."
+Regional comparison: South Africa,"KES 15-22/kWh, +20-40% effective",Reported range,"Similar published rates, but load shedding adds generator fuel, battery wear and operational complexity."
+Regional comparison: Nigeria,up to KES 50+/kWh effective,Reported range,Grid tariff KES 20-35/kWh plus KES 30-50/kWh of diesel self-generation; roughly three times the Kenyan all-in cost.
+Regional comparison: Egypt / Ethiopia,KES 8-12 / KES 6-10 per kWh,Reported range,Subsidised gas (Egypt) and hydro (Ethiopia) set the regional floor; both trade against grid reliability and connectivity.

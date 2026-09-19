@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import TrackerNav from "@/components/tracker-nav";
 import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
@@ -227,6 +228,7 @@ export default function TrackerPage() {
               </p>
             </div>
           </div>
+          <TrackerNav current="/tracker" />
 
           {/* Momentum strip */}
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
@@ -518,6 +520,15 @@ export default function TrackerPage() {
 
           {/* Cross-links */}
           <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border/40 pt-8 text-sm">
+            <Link href="/tracker/cables" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
+              Subsea cable tracker <ArrowRight className="size-3.5" />
+            </Link>
+            <Link href="/tracker/power" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
+              Power tariff tracker <ArrowRight className="size-3.5" />
+            </Link>
+            <Link href="/tracker/licensing" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
+              Licensing tracker <ArrowRight className="size-3.5" />
+            </Link>
             <Link href="/directory" className="inline-flex items-center gap-1.5 text-cyan underline hover:underline">
               Browse every facility <ArrowRight className="size-3.5" />
             </Link>

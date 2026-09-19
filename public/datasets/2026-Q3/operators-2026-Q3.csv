@@ -1,0 +1,19 @@
+id,name,slug,type,parentCompany,hqCountry,websiteUrl
+ixafrica,iXAfrica Data Centres,ixafrica,Commercial,,Kenya,https://ixafrica.co.ke
+africa-dc,Africa Data Centres,africa-data-centres,Commercial,Liquid Intelligent Technologies (Cassava Technologies),South Africa,https://africadatacentres.com
+safaricom,Safaricom,safaricom,Telecom,,Kenya,https://safaricom.co.ke
+telkom-ke,Telkom Kenya,telkom-kenya,Telecom,Helios Investment Partners,Kenya,https://telkom.co.ke
+liquid-ke,Liquid Intelligent Technologies Kenya,liquid-kenya,Commercial,Cassava Technologies,Kenya,https://liquid.intelligent
+wingu,Wingu Africa,wingu,Commercial,Wingu Group,Kenya,https://wingu.africa
+raxio,Raxio Data Centres,raxio,Commercial,Raxio Group,UAE,https://raxio.com
+septris,Septris EO Ltd,septris,Commercial,,Kenya,
+kotda,Konza Technopolis Development Authority (KoTDA),kotda,Government,Government of Kenya,Kenya,
+icolo,iColo (Digital Realty),icolo,Commercial,Digital Realty,Kenya,https://www.icolo.io
+global-ts,Global Telecommunications & Services,global-ts,Commercial,,Kenya,
+wananchi,Wananchi Group,wananchi,Commercial,,Kenya,
+paix,PAIX Data Centres,paix,Commercial,,Kenya,https://paix.io
+seacom,SEACOM,seacom,Carrier,,South Africa,https://www.seacom.mu
+simbanet,SimbaNET Kenya,simbanet,Telecom,,Kenya,https://www.simbanet.co.ke
+kenya-data-centres,Kenya Data Centres (ICT Authority),kenya-data-centres,Government,Kenya ICT Authority,Kenya,
+nxtra,Nxtra by Airtel,nxtra,Commercial,Bharti Airtel (Airtel Africa),India,https://www.nxtra.in
+nita-u,National Information Technology Authority - Uganda (NITA-U),nita-u,Government,Government of Uganda,Uganda,https://nita.go.ug
