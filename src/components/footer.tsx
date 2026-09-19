@@ -22,6 +22,7 @@ const platformLinks = [
   { label: "Data Exports", href: "/data-exports" },
   { label: "Ask Jibu", href: "/chat" },
   { label: "Methodology", href: "/methodology" },
+  { label: "Corrections", href: "/corrections" },
   { label: "Glossary", href: "/glossary" },
   { label: "Kiswahili Glossary", href: "/glossary/kiswahili" },
   { label: "FAQ", href: "/faq" },

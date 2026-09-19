@@ -12,6 +12,7 @@ import {
   Scale,
   Mail,
 } from "lucide-react";
+import { correctionsLog, formatCorrectionDate } from "@/lib/corrections-data";
 
 export const metadata: Metadata = {
   title: "Methodology: How DC254 Verifies Its Data",
@@ -105,28 +106,9 @@ const countRules = [
   },
 ];
 
-const updateLog = [
-  {
-    date: "18 September 2026",
-    changes: [
-      "Fixed the homepage stat strip: \u201cSubsea cables live\u201d now reads directly from the verified cable dataset (7 live of 9 systems) instead of a hardcoded number, the explainer count updates itself from the article index (97), and the verification stamp moved to September 2026.",
-      "Listed the Rack Report PDF editions (Issues 001 and 002) on the Research page alongside the report PDFs.",
-    ],
-  },
-  {
-    date: "8 September 2026",
-    changes: [
-      "Added the four iColo (Digital Realty) facilities (NBO1, NBO2, MBA1, MBA2) previously missing despite MBA1 being the most interconnected building on the Kenyan coast (94 networks on PeeringDB).",
-      "Added PAIX Nairobi (Britam Tower), Safaricom Thika, Safaricom Red Hill (Limuru), Telkom Milimani, Telkom Telephone House (Nairobi and Mombasa), Konza National Data Centre, SEACOM Mombasa cable landing station, and SimbaNET Nairobi.",
-      "Removed Wingu Nairobi after checking the operator's own website, which names only Djibouti, Ethiopia and Tanzania, Wingu does not operate in Kenya, despite appearing in many round-ups (including ours previously).",
-      "Removed Africa Data Centres Mombasa: no operator page, no register entry, and no independent evidence supports it.",
-      "Reclassified ADC Nairobi 2 as under construction, ADC's own site lists only NBO1 in Nairobi, and no source confirms the January 2023 expansion completed.",
-      "Withdrew the capacity figures previously shown for Raxio Nairobi and reclassified it as early stage, the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site.",
-      "Updated iColo NBO2 for its formal launch on 7 September 2026 (Capital FM / Digital Realty), still ramping on interconnection.",
-      "Cross-checked every PeeringDB-registered Kenyan facility (14 records fetched 8 Sep 2026) and added per-entry network and exchange counts.",
-    ],
-  },
-];
+// The corrections log lives in src/lib/corrections-data.ts, shared with the
+// /corrections page so both surfaces always show the same dated record.
+const updateLog = correctionsLog;
 
 export default function MethodologyPage() {
   return (
@@ -333,7 +315,7 @@ export default function MethodologyPage() {
           <div className="mb-14 space-y-4">
             {updateLog.map((u) => (
               <div key={u.date} className="rounded-xl border border-border/50 bg-accent/30 p-6">
-                <p className="mb-3 text-sm font-semibold text-cyan">{u.date}</p>
+                <p className="mb-3 text-sm font-semibold text-cyan">{formatCorrectionDate(u.date)}</p>
                 <ul className="space-y-2.5">
                   {u.changes.map((c, i) => (
                     <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground">
@@ -366,7 +348,11 @@ export default function MethodologyPage() {
               source. Corrections are acknowledged within 48 hours and, where
               your source checks out, applied within five working days with the
               verification date updated. Material corrections are noted on the
-              page itself, accuracy beats ego.
+              page itself and in the full public log on the{" "}
+              <Link href="/corrections" className="text-cyan underline hover:underline">
+                corrections page
+              </Link>
+              , accuracy beats ego.
             </p>
           </div>
 

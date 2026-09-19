@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
+import { latestCorrectionDate } from "@/lib/corrections-data";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -43,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const verifiedDate =
     monthToDate(getMarketSnapshot().lastVerified) ?? contentDate;
   const fixedDate = new Date("2026-09-18T00:00:00Z");
+  // Corrections page moves only when a correction lands, so it dates from
+  // the newest log entry, not from deploy time.
+  const latestCorrection = latestCorrectionDate();
+  const correctionsDate = latestCorrection
+    ? new Date(`${latestCorrection}T00:00:00Z`)
+    : fixedDate;
 
   // Static routes, all real, working pages. Each entry carries the date of
   // the editorial source that actually drives the page.
@@ -83,6 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy`, lastModified: fixedDate, changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: fixedDate, changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/editorial-policy`, lastModified: fixedDate, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${baseUrl}/corrections`, lastModified: correctionsDate, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/advertise`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.5 },
   ];
 

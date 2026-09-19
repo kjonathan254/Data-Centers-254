@@ -15,8 +15,10 @@ Checks every content/articles/*.md for:
   table delimiter rows are fine and not flagged)
 - README stats cross-check: article and cluster counts claimed in README
   must match the content directory
+- facility re-verification cadence: lastVerified older than six months
+  is flagged against the quarterly cadence promised in /methodology
 """
-import os, re, sys
+import datetime, os, re, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(REPO, "content", "articles")
@@ -162,6 +164,32 @@ for m in re.finditer(r"(\d+)\s+clusters?", readme):
             f"README: claims {m.group(1)} clusters, actual {len(cluster_names)}: "
             f"{sorted(cluster_names)} (update README.md)"
         )
+
+# Facility re-verification cadence (Phase 1): /methodology promises a monthly
+# sweep and a quarterly full re-verification. Warn when any facility record's
+# lastVerified month is more than six months old (one grace cycle), so data
+# staleness surfaces in CI instead of on a public page.
+fac_span = re.search(r"const facilities[\s\S]*?\n\];", dd)
+if fac_span:
+    fac_text = fac_span.group(0)
+    fac_slugs = re.findall(r'\bslug:\s*"([^"]+)"', fac_text)
+    fac_verified = re.findall(r'lastVerified:\s*"(\d{4}-\d{2})"', fac_text)
+    if len(fac_slugs) != len(fac_verified):
+        warnings.append(
+            f"directory-data: cannot pair slug/lastVerified fields "
+            f"({len(fac_slugs)} slugs vs {len(fac_verified)} lastVerified) for the cadence check"
+        )
+    else:
+        today = datetime.date.today()
+        now_months = today.year * 12 + today.month
+        for fslug, ym in zip(fac_slugs, fac_verified):
+            age = now_months - (int(ym[:4]) * 12 + int(ym[5:7]))
+            if age > 6:
+                warnings.append(
+                    f"directory-data: facility '{fslug}' lastVerified {ym} "
+                    f"({age} months ago) exceeds the quarterly re-verification "
+                    f"cadence promised in /methodology"
+                )
 
 print(f"articles checked: {len(article_slugs)}")
 print(f"clusters: {len(cluster_names)}")

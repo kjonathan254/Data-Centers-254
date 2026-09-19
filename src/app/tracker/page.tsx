@@ -8,6 +8,7 @@ import {
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-data";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Kenya Data Centre Tracker, the working view of the supply pipeline.
@@ -144,10 +145,60 @@ export default function TrackerPage() {
   const aiReady = facilities.filter((f) => f.aiReady).length;
   const lastVerified = snap.lastVerified;
 
+  // Phase 1: schema.org Dataset markup so the tracker is citable as a
+  // structured object (mirrors the directory page's Dataset JSON-LD).
+  const trackerJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "DC254 Kenya Data Centre Tracker: Supply Pipeline & Verified Capacity",
+    description: `A source-cited working view of Kenya's data centre supply pipeline: ${snap.facilities} tracked facilities (${snap.stages.map((s) => `${s.count} ${s.stage.toLowerCase()}`).join(", ")}), ${Math.round(snap.liveItLoadMw * 10) / 10} MW of verified live IT load and ${Math.round(snap.totalSupplyMw * 10) / 10} MW of designed capacity, with an operator scoreboard and per-record verification dates.`,
+    url: `${SITE_URL}/tracker`,
+    isAccessibleForFree: true,
+    keywords: [
+      "Kenya",
+      "data centre pipeline",
+      "capacity tracker",
+      "colocation",
+      "Nairobi",
+      "Mombasa",
+      "submarine cables",
+      "East Africa",
+    ],
+    creator: {
+      "@type": "Organization",
+      name: "Data Centre 254",
+      url: SITE_URL,
+    },
+    temporalCoverage: lastVerified,
+    variableMeasured: [
+      "Operational status",
+      "Live IT load (MW)",
+      "Designed capacity (MW)",
+      "Pipeline stage",
+      "Last verified date",
+    ],
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/csv",
+        contentUrl: `${SITE_URL}/api/directory/csv`,
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: `${SITE_URL}/api/directory`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 py-10 lg:py-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(trackerJsonLd) }}
+        />
         <div className="container-site">
           {/* Header */}
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

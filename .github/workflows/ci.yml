@@ -5,6 +5,13 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # Phase 1: weekly full validation sweep so verification is continuous,
+  # not just event-driven. Monday 06:17 UTC (09:17 EAT); odd minute to
+  # avoid the top-of-hour Actions queue crunch.
+  schedule:
+    - cron: "17 6 * * 1"
+  # Manual trigger from the Actions tab (e.g. before a release or report).
+  workflow_dispatch:
 
 jobs:
   content:
