@@ -114,6 +114,15 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Production build |
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
+| `npm run validate:content` | Validate article frontmatter, links, images, FAQs |
+
+## CI
+
+GitHub Actions workflow lives at `.github/workflows/ci.yml` (required location for Actions to pick it up). It runs on every push/PR to `main`:
+
+1. **Content validation** — `scripts/article_validator.py` (frontmatter, internal links, images, FAQ coverage, word depth)
+2. **Lint + build** — `npm ci`, `npm run lint`, `npm run build`
+3. **Dependency audit** — `npm audit` (report-only)
 
 ## Deploying to Vercel
 
