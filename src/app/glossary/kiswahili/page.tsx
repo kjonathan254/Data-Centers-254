@@ -40,11 +40,15 @@ export default function KiswahiliGlossaryPage() {
             Kamusi ya Kituo cha Data, kwa Kiswahili
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
-            Miundombinu ya kidijitali ya Kenya inajengwa na Watanzania wa Kenya,
-            lakini karibu yote ya vifaa vya kujifunza kuhusu vituo vya data viko
-            kwa Kiingereza pekee. Hii ni <strong className="text-foreground">pilot</strong>:
-            misamiati {kiswahiliTerms.length} muhimu, kila moja imeelezwa kwa
-            Kiswahili rahisi na muktadha wa Kenya.
+            Miundombinu ya kidijitali ya Kenya inakua kwa kasi, lakini nyenzo
+            nyingi za kujifunza kuhusu vituo vya data bado zinapatikana kwa
+            Kiingereza pekee.
+          </p>
+          <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
+            Hii ni <strong className="text-foreground">pilot</strong>{" "}
+            inayotambulisha misamiati {kiswahiliTerms.length} muhimu kuhusu
+            vituo vya data, kila mmoja ukielezwa kwa Kiswahili rahisi na
+            kuwekwa katika muktadha wa Kenya.
           </p>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
             Looking for the English phrase? "Data centre" in Swahili is{' '}
