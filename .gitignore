@@ -26,8 +26,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Local data (never commit subscriber or runtime data)
-data/
+# Local data at the repo root (never commit subscriber or runtime data).
+# Anchored so the versioned dataset under src/data/ stays tracked.
+/data/
 
 # Editors & OS
 .vscode/
