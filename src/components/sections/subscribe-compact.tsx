@@ -2,9 +2,16 @@
 
 import { useState } from "react";
 
-type FormState = "idle" | "submitting" | "subscribed" | "already" | "error";
+type FormState =
+  | "idle"
+  | "submitting"
+  | "check"
+  | "subscribed"
+  | "already"
+  | "error";
 
 const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
+  check: "Almost there - check your inbox and click the confirmation link.",
   subscribed: "Done, you're on the list.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
@@ -46,8 +53,18 @@ export default function SubscribeCompact({
       });
       const data = await res.json();
       if (res.ok) {
-        setState(data.message === "Already subscribed" ? "already" : "subscribed");
+        if (data.message === "Already subscribed") {
+          setState("already");
+        } else if (
+          typeof data.message === "string" &&
+          data.message.startsWith("Check your inbox")
+        ) {
+          setState("check");
+        } else {
+          setState("subscribed");
+        }
       } else {
+        // Covers 429/503 (rate limit, email stack down) and any other failure.
         setState("error");
       }
     } catch {
@@ -69,7 +86,7 @@ export default function SubscribeCompact({
         Data centres. Power. Cloud. Connectivity. Investment. Policy.
       </p>
 
-      {state === "subscribed" || state === "already" ? (
+      {state === "subscribed" || state === "already" || state === "check" ? (
         <p
           className="mt-4 rounded-lg border border-neon/25 bg-neon/10 px-4 py-3 text-sm text-foreground"
           role="status"

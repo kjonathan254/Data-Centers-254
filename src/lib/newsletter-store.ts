@@ -44,6 +44,7 @@ export interface SubscriberRecord {
   status: SubscriberStatus;
   createdAt: string;
   verifiedAt: string | null;
+  unsubscribedAt?: string | null;
 }
 
 export interface NewsletterStats {
@@ -109,6 +110,11 @@ function memIncr(key: string): number {
   return next;
 }
 
+function memDecr(key: string): void {
+  const next = Math.max(0, (memCounts.get(key) ?? 1) - 1);
+  memCounts.set(key, next);
+}
+
 /* ---------------- helpers ---------------- */
 
 export async function emailHash(email: string): Promise<string> {
@@ -153,6 +159,12 @@ export async function upsertSubscriber(input: {
     return { created: false, record: existing };
   }
 
+  // A scrubbed tombstone (see scrubSubscriber) had its counters decremented,
+  // so a returning address must re-increment; a plain unsubscribed record
+  // was never decremented, so it must not be.
+  const resubscribed = existing?.status === "unsubscribed";
+  const wasScrubbed = resubscribed && existing.email === "";
+
   const record: SubscriberRecord = {
     email,
     role: normalizeRole(input.role),
@@ -161,25 +173,36 @@ export async function upsertSubscriber(input: {
     status: input.status ?? "unverified",
     createdAt: existing?.createdAt ?? new Date().toISOString(),
     verifiedAt: input.status === "verified" ? new Date().toISOString() : null,
+    unsubscribedAt: null,
   };
 
+  const firstCounted = !existing || wasScrubbed;
   if (backend === "upstash") {
     await upstash("set", `nl:sub:${hash}`, JSON.stringify(record));
-    // counters only on first-time signup, re-activation of an
-    // unsubscribed email was never decremented, so no re-increment
-    if (!existing) {
+    if (firstCounted) {
       await upstash("incr", "nl:count:total");
       await upstash("incr", `nl:count:role:${record.role}`);
     }
+    if (record.status === "unverified") {
+      // Double opt-in: an unconfirmed request is personal data for a signup
+      // the visitor may have abandoned. Auto-erases after 60 days; confirming
+      // (markSubscriber -> persistSubscriber) makes the record permanent.
+      // Aggregate counters are intentionally not rolled back.
+      try {
+        await upstash("expire", `nl:sub:${hash}`, 60 * 24 * 3600);
+      } catch {
+        // TTL is hygiene, not correctness - never fail the signup over it.
+      }
+    }
   } else {
     memSubs.set(hash, record);
-    if (!existing) {
+    if (firstCounted) {
       memIncr("nl:count:total");
       memIncr(`nl:count:role:${record.role}`);
     }
   }
 
-  return { created: !existing, record };
+  return { created: firstCounted, record };
 }
 
 export async function getSubscriber(
@@ -212,12 +235,58 @@ export async function markSubscriber(
         ? existing.verifiedAt ?? new Date().toISOString()
         : existing.verifiedAt,
   };
+  const hash = await emailHash(email);
   if (storageBackend() === "upstash") {
-    const hash = await emailHash(email);
     await upstash("set", `nl:sub:${hash}`, JSON.stringify(updated));
+    if (status === "verified") {
+      // A confirmed subscription is permanent - clear the 60-day
+      // double-opt-in auto-erasure TTL set by upsertSubscriber.
+      try {
+        await upstash("persist", `nl:sub:${hash}`);
+      } catch {
+        // Hygiene only - never fail verification over it.
+      }
+    }
   } else {
-    const hash = await emailHash(email);
     memSubs.set(hash, updated);
+  }
+  return true;
+}
+
+/**
+ * Erase the personal details of a subscription record (unsubscribe / data
+ * erasure request / hard bounce). The record becomes an anonymised tombstone
+ * keyed by email hash: no email, role, company, or source remains, but the
+ * address is not counted twice if it ever returns.
+ *
+ * Idempotent: scrubbing an already-scrubbed or unknown address is a no-op.
+ * Returns true when a live record was scrubbed this call.
+ */
+export async function scrubSubscriber(email: string): Promise<boolean> {
+  const existing = await getSubscriber(email);
+  if (!existing) return false;
+  if (existing.status === "unsubscribed" && existing.email === "") return false;
+
+  const hash = await emailHash(email);
+  const tombstone: SubscriberRecord = {
+    email: "",
+    role: "other",
+    companyType: "",
+    source: "",
+    status: "unsubscribed",
+    createdAt: existing.createdAt,
+    verifiedAt: existing.verifiedAt,
+    unsubscribedAt: new Date().toISOString(),
+  };
+
+  if (storageBackend() === "upstash") {
+    await upstash("set", `nl:sub:${hash}`, JSON.stringify(tombstone));
+    await upstash("decr", "nl:count:total");
+    await upstash("decr", `nl:count:role:${existing.role}`);
+  } else {
+    memSubs.set(hash, tombstone);
+    memDecr("nl:count:total");
+    memDecr(`nl:count:role:${existing.role}`);
   }
   return true;
 }

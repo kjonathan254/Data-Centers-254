@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import ConsentGate from "@/components/consent-gate";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -175,33 +175,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {/* GA4: inline init queues events immediately; the 170KB gtag.js fetch is
-            deferred to window load (lazyOnload) so it never blocks the main thread. */}
-        <Script
-          id="ga-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-GDS6XW6RS3');",
-          }}
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GDS6XW6RS3"
-          strategy="lazyOnload"
-        />
-        {/* Microsoft Clarity: cookieless behavioural analytics (heatmaps, session
-            replays with automatic input masking, rage-click detection). Inline
-            init like GA4; the tag fetch is async and never blocks rendering. */}
-        <Script
-          id="ms-clarity"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html:
-              '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "yimqsgqdql");',
-          }}
-        />
         {children}
         <ChatWidget />
+        {/* GA4 + Clarity load only after the visitor consents via this gate;
+            see src/components/consent-gate.tsx and the privacy policy. */}
+        <ConsentGate />
         <Analytics />
         <PwaRegister />
         <Toaster />
