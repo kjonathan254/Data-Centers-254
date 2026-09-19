@@ -9,18 +9,22 @@ import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const facilities = getFacilities();
-  const operational = facilities.filter((f) => f.status === "Operational").length;
+  const regional = facilities.filter((f) => (f.country || "Kenya") !== "Kenya");
+  const kenyaCount = facilities.length - regional.length;
+  const kenyaOp = facilities.filter((f) => f.status === "Operational" && (f.country || "Kenya") === "Kenya").length;
   const nairobi = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasa = facilities.filter((f) => f.city === "Mombasa").length;
-  const title = `Kenya Data Centre Directory: ${facilities.length} Facilities`;
-  const description = `How many data centres are in Kenya? ${facilities.length} tracked, ${operational} operational (${nairobi} in Nairobi, ${mombasa} in Mombasa). Search, filter, and compare, fully sourced.`;
+  // Canonical labels, per the audit: 31 = tracked incl. regional records,
+  // 27 = verified facilities in Kenya. Never blended in one number.
+  const title = `Kenya Data Centre Directory: ${facilities.length} Tracked, ${kenyaCount} in Kenya`;
+  const description = `How many data centres are in Kenya? ${kenyaCount} verified Kenyan facilities, ${kenyaOp} operational (${nairobi} in Nairobi, ${mombasa} in Mombasa), plus ${regional.length} East Africa reference records. Search, filter, and compare, fully sourced.`;
   return {
     title,
     description,
     alternates: { canonical: "/directory" },
     openGraph: {
       title,
-      description: `${facilities.length} Kenya data centre facilities tracked and verified, ${operational} operational. Search, filter, and compare with a staged market snapshot.`,
+      description: `${kenyaCount} Kenya data centre facilities verified and sourced, ${kenyaOp} operational, plus ${regional.length} East Africa reference records. Search, filter, and compare with a staged market snapshot.`,
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
@@ -29,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title,
-      description: `${facilities.length} Kenya data centres tracked and verified, ${operational} operational. Search, filter, and compare.`,
+      description: `${kenyaCount} Kenya data centres verified and sourced, ${kenyaOp} operational. Search, filter, and compare.`,
       images: ["/images/africa-dc-map.webp"],
     },
   };
@@ -48,6 +52,11 @@ export default async function DirectoryPage({
   const operationalCount = facilities.filter((f) => f.status === "Operational").length;
   const nairobiCount = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasaCount = facilities.filter((f) => f.city === "Mombasa").length;
+  // Tab counts for the directory's four views (server-computed, passed down).
+  const kenyaCount = facilities.length - regional.length;
+  const pipelineCount = facilities.filter(
+    (f) => (f.country || "Kenya") === "Kenya" && f.status !== "Operational"
+  ).length;
 
   const datasetJsonLd = {
     "@context": "https://schema.org",
@@ -160,7 +169,10 @@ export default async function DirectoryPage({
           </p>
         </div>
         <MarketSnapshot />
-        <Directory initialSearch={search ?? ""} />
+        <Directory
+          initialSearch={search ?? ""}
+          tabCounts={{ kenya: kenyaCount, ea: regional.length, pipeline: pipelineCount }}
+        />
       </main>
       <Footer />
     </div>
