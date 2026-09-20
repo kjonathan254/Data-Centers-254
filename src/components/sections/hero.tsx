@@ -15,10 +15,11 @@ export default function Hero() {
   const stats_ = getPlatformStats();
   const explainers = getAllArticles().length;
 
-  // All four stats read from the verified datasets, never hardcoded.
+  // All three stats read from the verified datasets, never hardcoded.
+  // The three-beat strip the homepage leads with: what exists, what
+  // connects us, what we have explained.
   const stats = [
-    { value: String(stats_.totalTracked), label: STAT_LABELS.totalTracked },
-    { value: String(stats_.operators), label: STAT_LABELS.operators },
+    { value: String(stats_.totalTracked), label: "Tracked facilities & projects" },
     { value: String(stats_.cables.inService), label: STAT_LABELS.cablesInService },
     { value: String(explainers), label: "Explainers published" },
   ];
@@ -52,20 +53,20 @@ export default function Hero() {
 
       {/* Overlay content */}
       <div className="relative z-10 container-site pb-14 pt-36 sm:pb-16">
-        <p className="eyebrow">Kenya&apos;s Data Centre Intelligence Platform</p>
+        <p className="eyebrow">Kenya&apos;s digital infrastructure intelligence platform</p>
 
         <h1 className="h-display-xl mt-5 max-w-3xl text-foreground">
           Inside Kenya&apos;s digital infrastructure.
         </h1>
 
         <p className="mt-4 max-w-xl text-base font-medium text-foreground sm:text-lg">
-          The verified directory, market data and infrastructure intelligence
-          platform for Kenya&apos;s data-centre economy.
+          DC254 maps, explains and tracks the facilities, cables, power
+          systems and projects behind Kenya&apos;s digital economy, with
+          sourced data and clear analysis.
         </p>
         <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Every M-Pesa transaction, every stream, every AI query runs through
-          buildings most people will never enter. DC254 maps, explains and
-          tracks them, in plain language, with verified data.
+          buildings most people will never enter.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -81,19 +82,19 @@ export default function Hero() {
             className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-border bg-background/40 px-7 text-base font-medium text-foreground backdrop-blur-sm transition-colors hover:border-cyan/40 hover:text-cyan"
           >
             <Map className="size-4" />
-            View the Infrastructure Map
+            Open the Infrastructure Map
           </Link>
           <Link
             href="/research/state-of-the-market-2026-q3"
             className="inline-flex h-12 items-center justify-center gap-2 px-2 text-base font-medium text-cyan transition-colors hover:text-cyan/80 sm:px-4"
           >
             <FileText className="size-4" />
-            Read the latest market report
+            Read the 2026 Market Report
           </Link>
         </div>
 
         {/* Stat strip, the platform's verified numbers as the hero's base */}
-        <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border/60 pt-6 sm:grid-cols-4 sm:gap-8">
+        <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border/60 pt-6 sm:grid-cols-3 sm:gap-8">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col">
               <dd className="stat-value order-1">{s.value}</dd>

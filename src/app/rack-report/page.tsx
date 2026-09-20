@@ -95,17 +95,34 @@ export default function RackReportPage() {
               The Rack Report · by DataCentre254
             </p>
             <h1 className="text-display-sm text-foreground mb-5">
-              Kenya&apos;s data-centre industry, in one monthly briefing.
+              The monthly briefing on Kenya and East Africa&apos;s digital
+              infrastructure.
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              The month&apos;s most important developments, written for the
-              people building, financing and regulating Kenya&apos;s digital
-              infrastructure. First Monday of the month, free.
+              The Rack Report is DC254&apos;s monthly infrastructure briefing.
+              Every issue distils the most important developments across the
+              market: new and expanding data centres, operator activity,
+              capacity changes, power and connectivity, subsea cables, AI
+              projects, policy and major investment announcements.
             </p>
-            <p className="text-sm font-medium text-foreground/90 mb-8">
-              Data centres. Power. Cloud. Connectivity. Investment. Policy.
+            <p className="text-sm font-medium text-foreground/90 mb-8 max-w-2xl mx-auto">
+              The goal is not to repeat every press release. It is to help you
+              understand what actually changed, what is verified, what remains
+              uncertain and what deserves attention next.
             </p>
             <RackReportSignup />
+            <p className="mt-5 text-xs text-muted-foreground">
+              Prefer to look first?{" "}
+              <a
+                href="/reports/rack-report-issue-1.pdf"
+                target="_blank"
+                rel="noopener"
+                className="text-cyan underline underline-offset-2 hover:text-cyan"
+              >
+                Read a sample issue
+              </a>{" "}
+              (Issue 001, PDF).
+            </p>
           </div>
         </section>
 

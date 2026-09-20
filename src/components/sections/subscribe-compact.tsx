@@ -137,7 +137,7 @@ export default function SubscribeCompact({
               disabled={state === "submitting"}
               className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-5 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {state === "submitting" ? "One moment…" : "Get The Rack Report"}
+              {state === "submitting" ? "One moment…" : "Get the next issue"}
             </button>
           </form>
           {state === "error" && (
@@ -146,7 +146,7 @@ export default function SubscribeCompact({
             </p>
           )}
           <p className="mt-3 text-xs text-muted-foreground">
-            Free. Monthly. No industry noise.
+            One issue each month. Unsubscribe anytime.
           </p>
         </>
       )}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Cpu, CheckCircle, HardHat, Megaphone } from "lucide-react";
 import { getFacilities, type Facility } from "@/lib/directory-data";
+import { getPlatformStats } from "@/lib/site-stats";
 
 /**
  * Featured facilities, the product, on the front page.
@@ -38,6 +39,26 @@ export default function FeaturedFacilities() {
 
   if (featured.length === 0) return null;
 
+  // Status breakdown, derived, never hardcoded, so the line moves with the
+  // dataset. Same stage language as the directory's pipeline tab.
+  const stageOrder = ["Operational", "Under Construction", "Committed", "Early Stage", "Announced"];
+  const counts = new Map<string, number>();
+  for (const f of facilities) counts.set(f.status, (counts.get(f.status) ?? 0) + 1);
+  const breakdown = stageOrder
+    .filter((s) => counts.has(s))
+    .map((s) => `${counts.get(s)} ${s.toLowerCase()}`)
+    .join(" \u00b7 ");
+  const extras = [...counts.keys()].filter((s) => !stageOrder.includes(s));
+  for (const s of extras) {
+    counts.set(s, counts.get(s) ?? 0);
+  }
+  const extraPart = extras.map((s) => `${counts.get(s)} ${s.toLowerCase()}`).join(" \u00b7 ");
+  const statusLine = extraPart ? `${breakdown} \u00b7 ${extraPart}` : breakdown;
+
+  const verifiedDate = new Date(
+    `${getPlatformStats().lastVerified}T00:00:00`
+  ).toLocaleDateString("en-KE", { month: "long", year: "numeric" });
+
   return (
     <section id="featured-facilities" className="section-y">
       <div className="container-site">
@@ -45,19 +66,22 @@ export default function FeaturedFacilities() {
           <div>
             <p className="eyebrow">The DC Directory</p>
             <h2 className="h-display mt-3 max-w-2xl text-foreground">
-              Kenya&apos;s data centres, verified.
+              Every known data-centre facility in Kenya.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Every facility carries an operator, a capacity figure and a named
-              source, no press-release numbers. Four of the buildings running
-              the country&apos;s internet, below.
+              With operator, location, status, capacity, source and
+              verification date on every record. This is a structured market
+              record, not a list of articles.
+            </p>
+            <p className="mt-3 text-xs font-mono uppercase tracking-wider text-muted-foreground">
+              {statusLine} &mdash; directory last verified {verifiedDate}
             </p>
           </div>
           <Link
             href="/directory"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5"
           >
-            View all {facilities.length} facilities
+            View the full directory
             <ArrowRight className="size-4" />
           </Link>
         </div>

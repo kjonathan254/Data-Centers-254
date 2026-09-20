@@ -1,15 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BookOpen, Download } from "lucide-react";
+import { getPlatformStats } from "@/lib/site-stats";
 
 /**
- * New report banner, the flagship DC254 report, surfaced on the homepage.
+ * Report banner, the flagship DC254 report, surfaced on the homepage.
  * Image-led editorial card matching the house style: photograph left,
  * content right, mono badge, cyan accents. Server component.
  * Structure: the headline block links to the free summary; the PDF chip
  * is a real download link. Anchors are siblings, never nested.
+ * Takeaways are derived from the live datasets so the banner never
+ * repeats a stale print-run figure.
  */
 export default function NewReportBanner() {
+  const stats = getPlatformStats();
+  const takeaways = [
+    {
+      t: "Live versus announced",
+      b: `${stats.designedLiveMw} MW live designed capacity against ${stats.pipelineMw} MW announced across the build pipeline, staged honestly.`,
+    },
+    {
+      t: "The operator landscape",
+      b: `${stats.operators} operators tracked, who is carrier-neutral, who is incumbent-backed, and where the interconnection sits.`,
+    },
+    {
+      t: "What shapes 2027",
+      b: "The four events, from hyperscale entries to licence decisions, most likely to move the market next year.",
+    },
+  ];
+
   return (
     <section className="section-y border-t border-border/40">
       <div className="container-site">
@@ -63,21 +82,19 @@ export default function NewReportBanner() {
               </p>
             </Link>
 
-            {/* Stat strip */}
-            <div className="mt-5 grid grid-cols-3 gap-2 sm:max-w-md">
-              <div className="rounded-lg border border-border/40 bg-accent/20 px-3 py-2 text-center">
-                <p className="text-sm font-bold text-foreground tabular-nums">26</p>
-                <p className="text-[10px] text-muted-foreground">facilities</p>
-              </div>
-              <div className="rounded-lg border border-border/40 bg-accent/20 px-3 py-2 text-center">
-                <p className="text-sm font-bold text-foreground tabular-nums">186 MW</p>
-                <p className="text-[10px] text-muted-foreground">pipeline</p>
-              </div>
-              <div className="rounded-lg border border-border/40 bg-accent/20 px-3 py-2 text-center">
-                <p className="text-sm font-bold text-foreground tabular-nums">8/20</p>
-                <p className="text-[10px] text-muted-foreground">carrier-neutral</p>
-              </div>
-            </div>
+            {/* Takeaways, the report's three answers, derived from the datasets */}
+            <dl className="mt-5 space-y-2.5 max-w-2xl">
+              {takeaways.map((t) => (
+                <div key={t.t} className="flex gap-3">
+                  <dt className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-cyan/80 pt-0.5">
+                    {t.t}
+                  </dt>
+                  <dd className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                    {t.b}
+                  </dd>
+                </div>
+              ))}
+            </dl>
 
             {/* CTAs, real links, siblings of the headline link */}
             <div className="mt-5 flex flex-wrap items-center gap-2.5">

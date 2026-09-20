@@ -2,17 +2,13 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Hero from "@/components/sections/hero";
-import BreakingNewsBar from "@/components/sections/breaking-news-bar";
+import ProofBand from "@/components/sections/proof-band";
 import DirectorySearchBand from "@/components/sections/directory-search-band";
 import FeaturedFacilities from "@/components/sections/featured-facilities";
+import TheScale from "@/components/sections/the-scale";
 import NewReportBanner from "@/components/sections/new-report-banner";
 import LatestIntelligence from "@/components/sections/latest-intelligence";
-import LatestNewsBanner from "@/components/sections/latest-news-banner";
-import WhatIsDC from "@/components/sections/what-is-dc";
-import TheScale from "@/components/sections/the-scale";
-import ReadTheLibrary from "@/components/sections/read-the-library";
-import WhoWeHelp from "@/components/sections/who-we-help";
-import CareersSection from "@/components/sections/careers-section";
+import StartHere from "@/components/sections/start-here";
 import NewsletterV2 from "@/components/sections/newsletter-v2";
 
 export const metadata: Metadata = {
@@ -24,31 +20,24 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* 1, Fullscreen photographic opening with overlay text + verified stat strip */}
+        {/* 1-2, Fullscreen photographic opening: proposition, three primary
+               actions, verified stat strip - the whole product in one screen */}
         <Hero />
-        {/* 2, Breaking story, one line, straight to the reporting */}
-        <BreakingNewsBar />
-        {/* 3, The strongest asset, searchable immediately (zero JS) */}
+        {/* 3, Trust: what the numbers are and when they were last verified */}
+        <ProofBand />
+        {/* 4, Directory as the lead product: search immediately, then the
+               flagship records and the market structure */}
         <DirectorySearchBand />
-        {/* 3.5, The product itself: flagship facilities, deep-linked */}
         <FeaturedFacilities />
-        {/* 3.75, The flagship report: free summary + downloadable PDF */}
-        <NewReportBanner />
-        {/* 4, Freshest reporting, image-led cards */}
-        <LatestIntelligence />
-        {/* 5, One deep-dive feature */}
-        <LatestNewsBanner />
-        {/* 6, From your pocket to the rack: the basics, with a real facility */}
-        <WhatIsDC />
-        {/* 7, Map + sourced metrics (cables, facilities, cities, latency) */}
+        {/* 5, The map as a product: one preview, one action */}
         <TheScale />
-        {/* 8, Every topic as an image-led entry point into 56 explainers */}
-        <ReadTheLibrary />
-        {/* 9, Audience entry points: students / journalists / operators / researchers */}
-        <WhoWeHelp />
-        {/* 10, The people inside the buildings */}
-        <CareersSection />
-        {/* 11, Monthly briefing signup */}
+        {/* 6, The report: the interpretation layer over the directory */}
+        <NewReportBanner />
+        {/* 7, Market intelligence: freshest reporting, image-led cards */}
+        <LatestIntelligence />
+        {/* 8, Learn the infrastructure: three beginner doors, not nine categories */}
+        <StartHere />
+        {/* 9, Stay informed: The Rack Report, monthly */}
         <NewsletterV2 />
       </main>
       <Footer />
