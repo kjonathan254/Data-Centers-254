@@ -38,12 +38,12 @@ export interface BreakingItem {
 const BREAKING_TTL_HOURS = 72;
 
 export const breakingNews: BreakingItem | null = {
-  label: "Policy",
+  label: "New analysis",
   title:
-    "Kenya's ICT PS lays out the national plan to become Africa's data centre and compute hub",
-  href: "/articles/kenya-data-centre-compute-hub-plan-explained",
-  dateText: "15 Sep 2026",
-  publishedAt: "2026-09-15",
+    "Ethiopia plans to double power exports to Kenya: what 400 MW means for data centres",
+  href: "/articles/ethiopia-power-exports-kenya-data-centres",
+  dateText: "21 Sep 2026",
+  publishedAt: "2026-09-21",
   serious: false,
 };
 
