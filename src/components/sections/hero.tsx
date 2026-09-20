@@ -60,13 +60,13 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 max-w-xl text-base font-medium text-foreground sm:text-lg">
-          DC254 maps, explains and tracks the facilities, cables, power
-          systems and projects behind Kenya&apos;s digital economy, with
-          sourced data and clear analysis.
+          The verified directory, market data and infrastructure intelligence
+          platform for Kenya&apos;s data-centre economy.
         </p>
         <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Every M-Pesa transaction, every stream, every AI query runs through
-          buildings most people will never enter.
+          buildings most people will never enter. DC254 maps, explains and
+          tracks them, in plain language, with verified data.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
