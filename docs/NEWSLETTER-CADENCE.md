@@ -2,8 +2,8 @@
 
 **Owner: Kevin Jonathan Otieno. Companion to docs/NEWS-TO-ASSETS-PLAYBOOK.md
 and docs/RESEARCH-VERIFICATION-STANDARDS.md. This page formalises what the
-signup forms promise ("Free. Monthly. No industry noise.") so the commitment
-survives beyond any single month's energy.**
+signup forms promise ("One concise email each month. Unsubscribe anytime.")
+so the commitment survives beyond any single month's energy.**
 
 > **Cadence change, September 2026:** The Rack Report moved from weekly to
 > **monthly** (first Monday) with Issue 002, which ships **Monday
