@@ -8,9 +8,9 @@ const RATE_LIMIT = 60; // requests per window
 const WINDOW_MS = 60_000; // 1 minute window
 
 export async function proxy(req: NextRequest) {
-  // Only rate-limit API routes (except the root /api health check)
+  // Only rate-limit API routes (except the /api health check)
   const { pathname } = req.nextUrl;
-  if (!pathname.startsWith('/api/') || pathname === '/api') {
+  if (!pathname.startsWith('/api/') || pathname === '/api' || pathname === '/api/health') {
     return NextResponse.next();
   }
 

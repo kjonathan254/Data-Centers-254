@@ -184,9 +184,8 @@ function MombasaMapInner({ dimmed, forcedCable, selectedId, onFacility }: {
         const d = smoothPath([ls, { x: ls.x + 38, y: ls.y - 14 + endY * 0.08 }, { x: (ls.x + end.x) / 2 + 18, y: (ls.y + end.y) / 2 }, end]);
         const active = hoverCable === c.id || forcedCable === c.id;
         const someActive = hoverCable !== null || forcedCable != null;
-        const dim = dimmed.has(c.live ? "cable-live" : "cable-dev");
         return (
-          <g key={c.id} opacity={dim ? 0.2 : someActive && !active ? 0.35 : 1}
+          <g key={c.id} opacity={someActive && !active ? 0.35 : 1}
             onMouseEnter={() => setHoverCable(c.id)} onMouseLeave={() => setHoverCable(null)}>
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 0.25 : 0.12} strokeWidth={7} strokeLinecap="round" />
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 1 : 0.8} strokeWidth={active ? 3 : 2.2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />

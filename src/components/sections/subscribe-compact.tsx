@@ -30,6 +30,10 @@ export default function SubscribeCompact({
 }) {
   const [state, setState] = useState<FormState>("idle");
   const [role, setRole] = useState("other");
+  // The API returns specific, retryable copy for known failures (rate limit,
+  // email stack down). Show it verbatim instead of a generic message so a
+  // 503 during an outage does not read as "the form is broken".
+  const [serverError, setServerError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -39,6 +43,7 @@ export default function SubscribeCompact({
     if (!email) return;
 
     setState("submitting");
+    setServerError(null);
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
@@ -65,9 +70,16 @@ export default function SubscribeCompact({
         }
       } else {
         // Covers 429/503 (rate limit, email stack down) and any other failure.
+        // Surface the server's message when it has one; fall back to generic.
+        setServerError(
+          typeof data?.error === "string" && data.error.trim() !== ""
+            ? data.error
+            : null
+        );
         setState("error");
       }
     } catch {
+      setServerError(null);
       setState("error");
     }
   }
@@ -142,7 +154,7 @@ export default function SubscribeCompact({
           </form>
           {state === "error" && (
             <p className="mt-2 text-xs text-destructive" role="alert">
-              {messages.error}
+              {serverError ?? messages.error}
             </p>
           )}
           <p className="mt-3 text-xs text-muted-foreground">

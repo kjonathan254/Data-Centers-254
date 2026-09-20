@@ -205,13 +205,15 @@ export default function EastAfricaInfrastructureMap() {
 
   const dimmedMapKeys = useMemo(() => {
     const set = new Set<string>(dimmedFacilities);
-    if (typeFilter === "cable") set.add("datacenter");
-    if (typeFilter === "datacenter" || typeFilter === "ixp") { set.add("cable"); set.add("cable-live"); set.add("cable-dev"); }
-    if (typeFilter === "cable") { set.delete("cable"); set.add("ixp"); }
-    if (q) {
-      for (const c of SUBSEA_CABLES) {
-        if (!c.name.toLowerCase().includes(q)) { set.add("cable-live"); set.add("cable-dev"); set.add(c.live ? "cable-live" : "cable-dev"); }
-      }
+    // Key contract with CountryMap: "datacenter" dims DC clusters, "ixp" dims
+    // regional city bubbles, "cable" dims subsea routes + terrestrial fibre.
+    if (typeFilter === "cable") { set.add("datacenter"); set.add("ixp"); }
+    if (typeFilter === "datacenter" || typeFilter === "ixp") set.add("cable");
+    // Search: keep cable routes lit only when the query matches a cable name,
+    // so "PEACE" highlights cables while "nairobi" highlights facilities.
+    if (q && typeFilter !== "cable") {
+      const anyCable = SUBSEA_CABLES.some((c) => c.name.toLowerCase().includes(q));
+      if (!anyCable) set.add("cable");
     }
     return set;
   }, [dimmedFacilities, typeFilter, q]);
@@ -223,6 +225,14 @@ export default function EastAfricaInfrastructureMap() {
   }, [dimmedFacilities, typeFilter]);
 
   const reset = () => { setMode("country"); setCityPanel(null); setFacilityPanel(null); };
+
+  // One-line confirmation of what the status/search filters highlight, so the
+  // dimming on the map reads as intended filtering, not as a rendering glitch.
+  // Map view only (the list shows its own filtered rows), suppressed for the
+  // cable-only view (facilities are meant to be dim there) and whenever no
+  // facility-affecting filter is active.
+  const showFacilityFeedback =
+    viewMode === "map" && (statusFilter !== "all" || q !== "") && typeFilter !== "cable";
 
   const openMetro = (m: "nairobi" | "mombasa") => { setMode(m); setCityPanel(null); };
 
@@ -279,8 +289,9 @@ export default function EastAfricaInfrastructureMap() {
           <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
-            Twenty-seven facilities in Kenya, ten tracked submarine cable systems (seven in service), and the fibre backbone
-            that connects them, with the wider East African region for context.
+            {KENYA_FACILITIES.length} facilities in Kenya, {CABLE_REGISTER.length} tracked submarine
+            cable systems ({CABLE_REGISTER.filter((c) => c.status === "In service").length} in service),
+            and the fibre backbone that connects them, with the wider East African region for context.
           </p>
         </div>
 
@@ -326,6 +337,12 @@ export default function EastAfricaInfrastructureMap() {
               </div>
             </div>
           </div>
+          {showFacilityFeedback && (
+            <p className="text-xs text-muted-foreground" aria-live="polite">
+              Highlighting <span className="font-medium text-foreground">{facilityVisible.size}</span> of{" "}
+              {KENYA_FACILITIES.length} facilities on the map
+            </p>
+          )}
         </div>
 
         {viewMode === "list" ? (

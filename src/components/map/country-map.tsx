@@ -147,7 +147,9 @@ function CountryMapInner({
       {/* subsea cables, hover or focus to trace the route */}
       {SUBSEA_CABLES.map((c) => {
         const d = smoothPath(toPts(c.waypoints, proj));
-        const dimByFilter = dimmed.has("datacenter") || dimmed.has("ixp");
+        // Dimmed when a datacentre/IXP filter is active - the shared "cable"
+        // key is set by the parent exactly for those filters.
+        const dimByFilter = dimmed.has("cable");
         const isActive = activeCable === c.id;
         const someActive = activeCable !== null;
         const col = c.live ? CYAN : AMBER;
@@ -184,7 +186,7 @@ function CountryMapInner({
         const anchorEnd = c.id !== "eassy";
         const isActive = activeCable === c.id;
         const someActive = activeCable !== null;
-        const dimByFilter = dimmed.has("datacenter") || dimmed.has("ixp");
+        const dimByFilter = dimmed.has("cable");
         return (
           <g
             key={`lbl-${c.id}`}
