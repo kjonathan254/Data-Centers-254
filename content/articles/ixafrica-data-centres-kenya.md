@@ -12,16 +12,20 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
-updated_date: "2026-08-29"
+updated_date: "2026-09-20"
 category: "Operators"
 cluster: "Kenya"
-og_image: "/images/nairobi-skyline-night-kicc.webp"
+og_image: "/images/ixafrica-nbox1-campus-aerial.webp"
 reading_time: "12 min"
 images:
-  - src: "/images/hero-server-hall.webp"
-    alt:  "Corridor inside a data centre hall"
-    caption: "iXAfrica NBOX1 delivers hyperscale capacity to the East African market"
+  - src: "/images/ixafrica-nbox1-campus-aerial.webp"
+    alt:  "Aerial view of the iXAfrica NBOX1 data centre campus beside Nairobi's Mombasa Road"
+    caption: "iXAfrica's NBOX1 campus beside Mombasa Road, Nairobi: the first phase went live in early 2025 and the site is designed to carry 22.5 MW of IT load across its phases"
     position: "hero"
+  - src: "/images/ixafrica-datacentre-technician.webp"
+    alt:  "An iXAfrica technician standing in front of switchgear cabinets inside the facility's electrical room"
+    caption: "Operations at NBOX1: the facility's electrical rooms convert Kenya's 22.5 MW grid allocation into the redundant power paths that racks actually consume"
+    position: "inline"
   - src: "/images/whats-inside-ai-data-center.webp"
     alt:  "Cutaway infographic of an AI data centre's systems"
     caption: "Nairobi's Mombasa Road corridor is becoming Kenya's data centre district"
@@ -50,7 +54,7 @@ canonical_url: "https://data-centers-254.vercel.app/articles/ixafrica-data-centr
 
 When the first phase of iXAfrica's NBOX1 facility went live in early 2025, it marked a turning point for East Africa's digital infrastructure. For the first time, the region had a purpose-built, carrier-neutral, hyperscale data centre engineered to handle the power and cooling demands of modern AI workloads. Backed by Actis, one of the world's most active emerging market investors, iXAfrica has moved quickly from a greenfield startup to the largest operational data centre platform in East and Central Africa, serving everyone from Kenyan banks to global satellite operators.
 
-![Corridor inside a data centre hall](/images/hero-server-hall.webp)
+![Aerial view of the iXAfrica NBOX1 data centre campus beside Nairobi's Mombasa Road](/images/ixafrica-nbox1-campus-aerial.webp)
 
 This profile examines how iXAfrica was built, what its facilities deliver, who leads it, and why its trajectory matters for Kenya's position as a digital hub for a region of over 300 million people.
 
@@ -92,6 +96,8 @@ The NBOX1 site is designed as a multi-phase campus. The next phase, designated N
 In September 2025, iXAfrica announced it had secured financing for this 20 MW expansion, signalling that the growth phase is moving from planning to construction. The expansion is designed to accommodate the type of large-footprint deployments that hyperscale cloud providers require: dedicated halls, custom build-outs, and the power and cooling infrastructure to support multi-megawatt commitments from a single tenant.
 
 The full NBOX1 campus sits on 17,300 square metres of land with a total building footprint of 15,587 square metres, providing significant room for the additional data halls and supporting infrastructure that NBOX1.2 will require. The site's power allocation from the grid is 22.5 MW, ensuring that the full campus build-out is supported by committed utility power rather than speculative capacity.
+
+![An iXAfrica technician standing in front of switchgear cabinets inside the facility's electrical room](/images/ixafrica-datacentre-technician.webp)
 
 ## NBOX2: The Tilisi Campus Expansion
 

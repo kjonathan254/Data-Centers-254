@@ -48,6 +48,23 @@ images:
     caption: "Wind (led by the Lake Turkana project) adds intermittent capacity to Kenya's renewable-heavy grid."
     position: "inline"
 
+  - src: "/images/kenya-transmission-towers-riftvalley.webp"
+    alt: "High-voltage transmission towers crossing Kenyan rangeland toward distant mountains"
+    caption: "The Rift Valley to Nairobi corridor: the transmission path Kenya's data centre build-out depends on, operating near its limits at peak demand"
+    position: "inline"
+  - src: "/images/kenya-hv-substation-yard.webp"
+    alt: "Yard of a high-voltage substation with busbars, insulators and gantries under a wide sky"
+    caption: "Substation capacity is where grid power becomes deliverable power: new substations and feeders for large data centre loads can take 2-4 years to build"
+    position: "inline"
+  - src: "/images/diagram-grid-connections-overview.webp"
+    alt: "Diagram showing a solar farm, battery storage, wind farm and a data centre connecting to a central grid hub"
+    caption: "The grid connection picture Kenya is building toward: utility supply, on-site solar and storage, wind and the data centre all meeting at a well-connected grid"
+    position: "diagram"
+  - src: "/images/hv-power-transformer-bay.webp"
+    alt: "A large high-voltage power transformer on a plinth inside a substation bay"
+    caption: "Transformer capacity gates very large loads: a dedicated connection for a 50+ megawatt facility stands or falls on equipment like this"
+    position: "inline"
+
   - src: "/images/grid-technician-pole-work.webp"
     alt:  "Field technician working on overhead power lines"
     caption: "Closing Kenya's power gap means physical construction: corridors, distribution upgrades, and the crews that build them."
@@ -117,9 +134,13 @@ Kenya's national grid is managed by Kenya Power and Lighting Company (KPLC), whi
 
 **Insufficient transmission capacity to Nairobi.** The corridor from the Rift Valley geothermal fields to Nairobi carries the bulk of the country's power to its largest load centre. During peak demand periods, this corridor operates near its limits, and any disruption (a line fault, maintenance shutdown, or generation shortfall) can cause voltage instability or load shedding in Nairobi.
 
+![High-voltage transmission towers crossing Kenyan rangeland toward distant mountains](/images/kenya-transmission-towers-riftvalley.webp)
+
 **Limited redundancy on critical paths.** A single transmission line failure can disconnect significant generation capacity from the grid. The system is resilient against small disruptions but vulnerable to simultaneous failures or large-scale events.
 
 **Distribution constraints in data centre zones.** Even when the national grid has adequate power, delivering it to specific data centre locations along Mombasa Road and other Nairobi corridors requires sufficient local distribution infrastructure. Building new substations and feeders for large data centre loads can take 2-4 years.
+
+![Yard of a high-voltage substation with busbars, insulators and gantries under a wide sky](/images/kenya-hv-substation-yard.webp)
 
 The June 2026 Huduma Centre data centre outage in Nakuru demonstrated the practical consequences. A single power supply failure at one facility disrupted government services nationwide. While this was attributed to inadequate backup power at the facility, it highlighted the broader fragility of power supply to critical digital infrastructure.
 
@@ -159,7 +180,11 @@ Solving Kenya's data centre power constraint requires action on multiple fronts:
 
 **Grid-scale storage.** Battery energy storage systems (BESS) can help manage peak demand and provide backup without diesel generators. Kenya's renewable-heavy grid makes storage particularly valuable for smoothing the output of variable sources.
 
+![Diagram showing a solar farm, battery storage, wind farm and a data centre connecting to a central grid hub](/images/diagram-grid-connections-overview.webp)
+
 **Dedicated power infrastructure.** For very large facilities (50+ megawatts), building a dedicated power connection (essentially a private transmission line from a generation source to the data centre) may be the most practical solution. This is what hyperscale operators typically do in other markets.
+
+![A large high-voltage power transformer on a plinth inside a substation bay](/images/hv-power-transformer-bay.webp)
 
 The policy environment is supportive. The [data centre licensing framework](/articles/kenya-data-centre-licensing-framework) provides regulatory clarity. The National Digital Superhighway Programme signals government commitment. But until the power constraint is addressed through tangible infrastructure investment, Kenya's data centre ambitions will remain capped by the available watts.
 

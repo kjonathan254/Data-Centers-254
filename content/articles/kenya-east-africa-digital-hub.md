@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-09-16"
+updated_date: "2026-09-20"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/nairobi-skyline-night-kicc.webp"
@@ -26,6 +26,14 @@ images:
     alt:  "Nairobi Expressway stretching across the city"
     caption: "Kenya's four submarine cable landing stations in Mombasa and its central position in the East African fibre network create unmatched connectivity advantages"
     position: "section-break"
+  - src: "/images/gerd-dam-aerial.webp"
+    alt:  "Aerial view of the Grand Ethiopian Renaissance Dam with its spillway flowing into the Blue Nile"
+    caption: "The regional energy picture now crosses borders: Ethiopian hydropower from plants like GERD arrives in Kenya over the 500 kV interconnector, adding headroom to the grid that hosts the hub's data centres"
+    position: "inline"
+  - src: "/images/gerd-turbine-pit.webp"
+    alt:  "Turbine shaft assembly inside a hydropower powerhouse"
+    caption: "Cross-border power trade is the physical layer beneath East Africa's digital integration: generation capacity like this is what regional electricity markets, and the data centres they power, are built on"
+    position: "inline"
   - src: "/images/site-visit-power-hall-kenya.webp"
     alt:  "Engineers and officials on a technical visit inside a facility power hall"
     caption: "Kenya's young technical workforce is the hub's quiet advantage, skills built walking real power halls and switchgear rooms, not just classrooms."
@@ -86,6 +94,10 @@ Kenya's energy mix is a structural advantage that most discussions of digital in
 
 For data centres, this matters in two ways. First, cost: at KES 12–18 per kilowatt-hour ($0.08–0.12), Kenya's industrial electricity is cheaper than Nigeria ($0.20–0.35 including generator costs), competitive with South Africa ($0.10–0.15 plus load shedding costs), and only slightly more expensive than Egypt ($0.05–0.07, subsidised). Second, sustainability: as global companies face increasing pressure to reduce the carbon footprint of their digital infrastructure, Kenya's renewable grid offers a genuine green advantage that no amount of on-site solar can fully replicate in a country dependent on fossil fuel generation.
 
+The energy advantage also now has a cross-border dimension. Kenya imports up to 200 MW of Ethiopian hydropower over the 1,069 km, 500 kV HVDC interconnector that was energised commercially in 2022, with the volume scheduled to double to 400 MW from December 2026. The imports add system headroom during dry hydrology years and peak hours, and they reinforce the regional integration that makes Kenya's hub position durable rather than purely domestic.
+
+![Aerial view of the Grand Ethiopian Renaissance Dam with its spillway flowing into the Blue Nile](/images/gerd-dam-aerial.webp)
+
 ## The Talent Pool
 
 Kenya's human capital is a critical component of its digital hub positioning. The country produces approximately 50,000 university graduates annually, with significant numbers in engineering, computer science, mathematics, and related fields. The University of Nairobi, Strathmore University, Jomo Kenyatta University of Agriculture and Technology (JKUAT), and Kenyatta University all have established computer science and engineering programmes.
@@ -107,6 +119,8 @@ The banking sector is equally significant. Kenya's banks have been among the mos
 Kenya's digital infrastructure does not serve Kenya alone. Organisations across East Africa (in Uganda, Tanzania, Rwanda, Burundi, South Sudan, and the eastern Democratic Republic of Congo) connect to services hosted in Kenyan data centres. The reasons are practical: Kenya has the most data centre capacity, the best connectivity, and the most service providers in the region. A bank in Kampala may choose to host its disaster recovery systems in a Nairobi data centre because the connectivity, expertise, and competitive pricing available in Kenya are superior to what is available domestically.
 
 This regional role is self-reinforcing. As more regional organisations use Kenyan data centres, the data centre operators invest in more capacity, more connectivity, and more services, making Kenya even more attractive. The [data centre market outlook](/articles/kenya-data-centre-market-outlook-2025-2030) projects continued growth driven in part by this regional demand.
+
+![Turbine shaft assembly inside a hydropower powerhouse](/images/gerd-turbine-pit.webp)
 
 ## The Challenges
 
