@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X, Search, List, MapIcon, ArrowRight, Zap, Cable, Network,
@@ -34,21 +34,44 @@ const CITY_NAMES: Record<string, string> = {
 
 // ─── STATS ──────────────────────────────────────────────────────────────────
 
+/** Ease-out count-up on mount. SSR renders the final value; the animation
+ *  is a client-only polish. Respects prefers-reduced-motion. */
+function CountUp({ value, format }: { value: number; format: (n: number) => string }) {
+  const [display, setDisplay] = useState(value);
+  useEffect(() => {
+    if (typeof window === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const duration = 900;
+    let raf = 0;
+    const t0 = performance.now();
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - t0) / duration);
+      setDisplay(value * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [value]);
+  return <>{format(display)}</>;
+}
+
 function StatsBand() {
   const ops = KENYA_FACILITIES.filter((f) => f.status === "Operational").length;
   const nbo = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
+  const int = (n: number) => String(Math.round(n));
   const stats = [
-    { label: "Facilities", value: String(KENYA_FACILITIES.length), sub: `${ops} operational · ${nbo} in Nairobi metro` },
-    { label: "Mapped live capacity", value: `${LIVE_MW} MW`, sub: `of ${PIPELINE_MW} MW announced pipeline` },
-    { label: "Subsea cables", value: String(CABLE_REGISTER.filter((c) => c.status === "In service").length), sub: `in service of ${CABLE_REGISTER.length} tracked systems` },
-    { label: "KIXP Nairobi", value: `${KIXP.members}`, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
+    { label: "Facilities", value: KENYA_FACILITIES.length, format: int, sub: `${ops} operational · ${nbo} in Nairobi metro` },
+    { label: "Mapped live capacity", value: LIVE_MW, format: (n: number) => `${n.toFixed(1)} MW`, sub: `of ${PIPELINE_MW} MW announced pipeline` },
+    { label: "Subsea cables", value: CABLE_REGISTER.filter((c) => c.status === "In service").length, format: int, sub: `in service of ${CABLE_REGISTER.length} tracked systems` },
+    { label: "KIXP Nairobi", value: KIXP.members, format: int, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
   ];
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
       {stats.map((s) => (
         <div key={s.label} className="glass-card rounded-xl p-3 md:p-4 border-cyan/10">
           <p className="text-section-label mb-1">{s.label}</p>
-          <p className="text-foreground text-xl md:text-2xl font-bold tracking-tight">{s.value}</p>
+          <p className="text-foreground text-xl md:text-2xl font-bold tracking-tight tabular-nums">
+            <CountUp value={s.value} format={s.format} />
+          </p>
           <p className="text-muted-foreground text-xs mt-1">{s.sub}</p>
         </div>
       ))}
@@ -158,6 +181,9 @@ export default function EastAfricaInfrastructureMap() {
   const [search, setSearch] = useState("");
   const [cityPanel, setCityPanel] = useState<string | null>(null);
   const [facilityPanel, setFacilityPanel] = useState<KenyaFacility | null>(null);
+  // Cable traced from the country map OR the side-rail cable list -
+  // one shared state keeps both highlights in sync.
+  const [activeCable, setActiveCable] = useState<string | null>(null);
 
   const q = search.trim().toLowerCase();
 
@@ -391,13 +417,15 @@ export default function EastAfricaInfrastructureMap() {
                   {mode === "country" && (
                     <CountryMap
                       dimmed={dimmedMapKeys}
+                      activeCable={activeCable}
+                      onHoverCable={setActiveCable}
                       onOpenNairobi={() => openMetro("nairobi")}
                       onOpenMombasa={() => openMetro("mombasa")}
                       onOpenCity={(id) => setCityPanel((p) => (p === id ? null : id))}
                     />
                   )}
-                  {mode === "nairobi" && <NairobiMap dimmed={metroDimmed} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
-                  {mode === "mombasa" && <MombasaMap dimmed={metroDimmed} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
+                  {mode === "nairobi" && <NairobiMap dimmed={metroDimmed} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
+                  {mode === "mombasa" && <MombasaMap dimmed={metroDimmed} forcedCable={activeCable} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
                 </motion.div>
               </AnimatePresence>
 
@@ -450,24 +478,37 @@ export default function EastAfricaInfrastructureMap() {
                 <ul className="space-y-2.5 text-xs text-muted-foreground leading-relaxed">
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters, tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: NEON }} /><span>Dot colours show status: green live, amber building, dashed cyan announced.</span></li>
-                  <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid lines are the six drawn cable routes (of {CABLE_REGISTER.length} tracked systems); dotted lines are terrestrial fibre.</span></li>
+                  <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid cyan lines are the {SUBSEA_CABLES.filter((c) => c.live).length} in-service cable routes (of {CABLE_REGISTER.length} tracked systems), dashed amber routes are still in development, dotted lines are terrestrial fibre.</span></li>
+                  <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0 border border-dashed" style={{ borderColor: CYAN }} /><span>Hover any cable — on the map or in the cable list — to trace its route.</span></li>
                 </ul>
               </div>
               <div className="glass-card rounded-xl p-4 border-cyan/10">
                 <p className="text-section-label mb-3">Cables landing in Mombasa</p>
                 <ul className="divide-y divide-border/30">
                   {SUBSEA_CABLES.map((c) => (
-                    <li key={c.id} className="flex items-center gap-2 py-2 text-xs">
-                      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: c.live ? CYAN : AMBER }} />
-                      <span className="text-foreground font-medium">{c.name}</span>
-                      <span className="text-muted-foreground ml-auto whitespace-nowrap">
-                        {c.designTbps ? `${c.designTbps} Tbps` : "in development"} · {c.year}
-                      </span>
+                    <li key={c.id}>
+                      <button
+                        type="button"
+                        onMouseEnter={() => setActiveCable(c.id)}
+                        onMouseLeave={() => setActiveCable(null)}
+                        onFocus={() => setActiveCable(c.id)}
+                        onBlur={() => setActiveCable(null)}
+                        onClick={() => setMode("country")}
+                        aria-label={`${c.name}, ${c.designTbps ? `${c.designTbps} terabits per second design capacity` : "in development"}, ${c.live ? "in service" : "in development"} since ${c.year}, trace route on map`}
+                        className={`flex w-full items-center gap-2 py-2 text-xs rounded-md px-1.5 -mx-1.5 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50 ${activeCable === c.id ? "bg-cyan/10" : "hover:bg-cyan/5"}`}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: c.live ? CYAN : AMBER }} />
+                        <span className={`font-medium transition-colors ${activeCable === c.id ? "text-cyan" : "text-foreground"}`}>{c.name}</span>
+                        <span className="text-muted-foreground ml-auto whitespace-nowrap">
+                          {c.designTbps ? `${c.designTbps} Tbps` : "in development"} · {c.year}
+                        </span>
+                        <ChevronRight className={`w-3 h-3 shrink-0 transition-all ${activeCable === c.id ? "text-cyan translate-x-0.5" : "text-muted-foreground/50"}`} />
+                      </button>
                     </li>
                   ))}
                 </ul>
                 <p className="mt-2 text-[10px] leading-snug text-muted-foreground/70">
-                  Routes drawn for these systems; the cable tracker also lists LuLu (planned, 2026).
+                  Hover a cable to trace its route on the map. The cable tracker also lists LuLu (planned, 2026).
                 </p>
               </div>
               <a href="/infrastructure" className="block glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group">

@@ -27,11 +27,16 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
 
 function CountryMapInner({
   dimmed,
+  activeCable,
+  onHoverCable,
   onOpenNairobi,
   onOpenMombasa,
   onOpenCity,
 }: {
   dimmed: Set<string>;
+  /** Cable id currently hovered (map or side rail), highlights its route. */
+  activeCable: string | null;
+  onHoverCable: (id: string | null) => void;
   onOpenNairobi: () => void;
   onOpenMombasa: () => void;
   onOpenCity: (id: string) => void;
@@ -139,19 +144,35 @@ function CountryMapInner({
         );
       })}
 
-      {/* subsea cables */}
+      {/* subsea cables, hover or focus to trace the route */}
       {SUBSEA_CABLES.map((c) => {
         const d = smoothPath(toPts(c.waypoints, proj));
-        const dim = dimmed.has("datacenter") || dimmed.has("ixp");
+        const dimByFilter = dimmed.has("datacenter") || dimmed.has("ixp");
+        const isActive = activeCable === c.id;
+        const someActive = activeCable !== null;
+        const col = c.live ? CYAN : AMBER;
         return (
-          <g key={c.id} opacity={dim ? 0.18 : 1}>
-            <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={0.14} strokeWidth={6} strokeLinecap="round" />
-            <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={c.live ? 0.85 : 0.7} strokeWidth={2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
+          <g
+            key={c.id}
+            className="cursor-pointer focus:outline-none"
+            opacity={dimByFilter ? 0.18 : someActive && !isActive ? 0.3 : 1}
+            tabIndex={dimByFilter ? -1 : 0}
+            role="button"
+            aria-label={`${c.name} submarine cable, ${c.live ? "in service" : "in development"}${c.designTbps ? `, ${c.designTbps} terabits per second design capacity` : ""}`}
+            onMouseEnter={() => onHoverCable(c.id)}
+            onMouseLeave={() => onHoverCable(null)}
+            onFocus={() => onHoverCable(c.id)}
+            onBlur={() => onHoverCable(null)}
+          >
+            <path d={d} fill="none" stroke={col} strokeOpacity={0.14} strokeWidth={6} strokeLinecap="round" />
+            <path d={d} fill="none" stroke={col} strokeOpacity={isActive ? 1 : c.live ? 0.85 : 0.7} strokeWidth={isActive ? 3.2 : 2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
             {c.live && (
               <path d={d} fill="none" stroke="oklch(0.95 0.06 195)" strokeOpacity={0.9}
                 strokeWidth={2.6} strokeLinecap="round" pathLength={100}
-                className="dc254-flow" opacity={dim ? 0 : 1} />
+                className="dc254-flow" opacity={dimByFilter || (someActive && !isActive) ? 0 : 1} />
             )}
+            {/* invisible hit area so the thin route is easy to hover */}
+            <path d={d} fill="none" stroke="transparent" strokeWidth={26} strokeLinecap="round" pointerEvents="stroke" />
           </g>
         );
       })}
@@ -161,19 +182,37 @@ function CountryMapInner({
         const [lat, lng] = c.waypoints[c.waypoints.length - 1];
         const p = proj(lat, lng);
         const anchorEnd = c.id !== "eassy";
+        const isActive = activeCable === c.id;
+        const someActive = activeCable !== null;
+        const dimByFilter = dimmed.has("datacenter") || dimmed.has("ixp");
         return (
-          <text
+          <g
             key={`lbl-${c.id}`}
-            x={p.x + (anchorEnd ? -10 : 10)}
-            y={p.y + 4}
-            textAnchor={anchorEnd ? "end" : "start"}
-            fontSize={22}
-            fontWeight={500}
-            fill={c.live ? "oklch(0.78 0.14 195 / 0.8)" : "oklch(0.85 0.12 85 / 0.85)"}
-            opacity={dimmed.has("datacenter") || dimmed.has("ixp") ? 0.18 : 1}
+            pointerEvents="none"
+            opacity={dimByFilter ? 0.18 : someActive && !isActive ? 0.4 : 1}
           >
-            {c.label}
-          </text>
+            <text
+              x={p.x + (anchorEnd ? -10 : 10)}
+              y={p.y + 4}
+              textAnchor={anchorEnd ? "end" : "start"}
+              fontSize={isActive ? 27 : 22}
+              fontWeight={isActive ? 750 : 500}
+              fill={isActive ? "oklch(0.95 0.05 195)" : c.live ? "oklch(0.78 0.14 195 / 0.8)" : "oklch(0.85 0.12 85 / 0.85)"}
+            >
+              {c.label}
+            </text>
+            {isActive && (
+              <text
+                x={p.x + (anchorEnd ? -10 : 10)}
+                y={p.y + 26}
+                textAnchor={anchorEnd ? "end" : "start"}
+                fontSize={16}
+                fill="oklch(0.93 0.01 260 / 0.7)"
+              >
+                {c.year} · {c.live ? "in service" : "in development"}
+              </text>
+            )}
+          </g>
         );
       })}
 
@@ -220,7 +259,16 @@ function CountryMapInner({
         const items = REGION_ITEMS.filter((i) => i.city === city.id);
         const dim = !items.some((i) => !dimmed.has(i.type)) || (dimmed.has("datacenter") && dimmed.has("ixp"));
         return (
-          <g key={city.id} className="cursor-pointer" onClick={() => onOpenCity(city.id)} opacity={dim ? 0.25 : 1}>
+          <g
+            key={city.id}
+            className="cursor-pointer focus:outline-none"
+            onClick={() => onOpenCity(city.id)}
+            opacity={dim ? 0.25 : 1}
+            tabIndex={0}
+            role="button"
+            aria-label={`${city.name}, ${REGION_ITEMS.filter((i) => i.city === city.id).length} tracked regional assets, open details`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenCity(city.id); } }}
+          >
             <circle cx={x} cy={y} r={10} fill="oklch(0.2 0.03 250 / 0.9)" stroke="oklch(0.93 0.01 260 / 0.55)" strokeWidth={1.4} />
             <text x={x} y={y + 1} textAnchor="middle" dominantBaseline="central" fontSize={11.5} fontWeight={700} fill="oklch(0.93 0.01 260)">{items.length}</text>
             <text x={x} y={y + 26} textAnchor="middle" fontSize={20} fontWeight={500} fill="oklch(0.93 0.01 260 / 0.5)">{city.name}</text>
@@ -240,7 +288,15 @@ function CountryMapInner({
       </g>
 
       {/* Mombasa cluster, click to zoom */}
-      <g className="map-cluster cursor-pointer" onClick={onOpenMombasa} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
+      <g
+        className="map-cluster cursor-pointer focus:outline-none"
+        onClick={onOpenMombasa}
+        opacity={dimmed.has("datacenter") ? 0.25 : 1}
+        tabIndex={0}
+        role="button"
+        aria-label={`Mombasa cluster: ${msaCount} data centres and the cable landing station, zoom into the Mombasa metro map`}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenMombasa(); } }}
+      >
         <circle cx={msa.x} cy={msa.y} r={17} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2} filter="url(#clusterGlow)" />
         <circle cx={msa.x} cy={msa.y} r={17} fill="none" stroke={CYAN} strokeOpacity={0.4} strokeWidth={1}>
           <animate attributeName="r" from="17" to="30" dur="2.2s" repeatCount="indefinite" />
@@ -252,7 +308,15 @@ function CountryMapInner({
       </g>
 
       {/* Nairobi cluster, click to zoom */}
-      <g className="map-cluster cursor-pointer" onClick={onOpenNairobi} opacity={dimmed.has("datacenter") ? 0.25 : 1}>
+      <g
+        className="map-cluster cursor-pointer focus:outline-none"
+        onClick={onOpenNairobi}
+        opacity={dimmed.has("datacenter") ? 0.25 : 1}
+        tabIndex={0}
+        role="button"
+        aria-label={`Nairobi cluster: ${nboCount} data centres, zoom into the Nairobi metro map`}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenNairobi(); } }}
+      >
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2.4} filter="url(#clusterGlow)" />
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="none" stroke={CYAN} strokeOpacity={0.45} strokeWidth={1.2}>
           <animate attributeName="r" from="21" to="38" dur="2s" repeatCount="indefinite" />

@@ -11,8 +11,10 @@ import { CYAN, AMBER, STATUS_COLOR, smoothPath } from "./shared";
 
 const nboP = (lat: number, lng: number) => metroProj(NBO_FRAME, lat, lng);
 
-function NairobiMapInner({ dimmed, onFacility }: {
+function NairobiMapInner({ dimmed, selectedId, onFacility }: {
   dimmed: Set<string>;
+  /** Facility open in the side panel, kept highlighted on the map. */
+  selectedId?: string | null;
   onFacility: (f: KenyaFacility) => void;
 }) {
   const [hover, setHover] = useState<string | null>(null);
@@ -32,18 +34,22 @@ function NairobiMapInner({ dimmed, onFacility }: {
 
   const Row = ({ f, x, y, side }: { f: KenyaFacility; x: number; y: number; side: "l" | "r" }) => {
     const { x: mx, y: my } = nboP(f.lat, f.lng);
-    const active = hover === f.id;
+    const active = hover === f.id || selectedId === f.id;
     const dim = dimmed.has(f.id);
     const color = STATUS_COLOR[f.status];
     const rectX = side === "r" ? x - 6 : x - 240;
     const dashed = f.status !== "Operational";
     return (
       <g
-        className="cursor-pointer"
+        className="cursor-pointer focus:outline-none"
         opacity={dim ? 0.18 : 1}
         onMouseEnter={() => setHover(f.id)}
         onMouseLeave={() => setHover(null)}
         onClick={() => onFacility(f)}
+        tabIndex={dim ? -1 : 0}
+        role="button"
+        aria-label={`${f.name}, ${f.operator}, ${f.status}${f.totalMW > 0 ? `, ${f.totalMW} megawatts` : ""}, open details`}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onFacility(f); } }}
       >
         {/* hit area */}
         <rect x={rectX} y={y - 19} width={246} height={40} rx={8} fill={active ? "oklch(0.93 0.01 260 / 0.07)" : "transparent"} />
@@ -108,12 +114,14 @@ function NairobiMapInner({ dimmed, onFacility }: {
       {/* markers on top */}
       {items.map((f) => {
         const { x, y } = nboP(f.lat, f.lng);
-        const active = hover === f.id;
+        const active = hover === f.id || selectedId === f.id;
         const dim = dimmed.has(f.id);
         return (
-          <g key={f.id} className="cursor-pointer" opacity={dim ? 0.18 : 1}
+          <g key={f.id} className="cursor-pointer focus:outline-none" opacity={dim ? 0.18 : 1}
             onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)}
-            onClick={() => onFacility(f)}>
+            onClick={() => onFacility(f)}
+            tabIndex={dim ? -1 : 0} role="button" aria-label={`${f.name}, ${f.status}, open details`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onFacility(f); } }}>
             {active && <circle cx={x} cy={y} r={13} fill={CYAN} fillOpacity={0.15} />}
             {f.status !== "Operational" ? (
               <>
@@ -138,8 +146,12 @@ export const NairobiMap = memo(NairobiMapInner);
 
 const msaP = (lat: number, lng: number) => metroProj(MSA_FRAME, lat, lng);
 
-function MombasaMapInner({ dimmed, onFacility }: {
+function MombasaMapInner({ dimmed, forcedCable, selectedId, onFacility }: {
   dimmed: Set<string>;
+  /** Cable highlighted from the side rail, synced with the fan. */
+  forcedCable?: string | null;
+  /** Facility open in the side panel, kept highlighted on the map. */
+  selectedId?: string | null;
   onFacility: (f: KenyaFacility) => void;
 }) {
   const [hover, setHover] = useState<string | null>(null);
@@ -165,20 +177,21 @@ function MombasaMapInner({ dimmed, onFacility }: {
       <text x={600} y={470} fontSize={24} fontStyle="italic" fill="oklch(0.78 0.06 230 / 0.5)">Indian Ocean</text>
       <text x={380} y={330} textAnchor="middle" fontSize={13.5} fontStyle="italic" fill="oklch(0.93 0.01 260 / 0.45)">Mombasa Island</text>
 
-      {/* cable fan */}
+      {/* cable fan, hover on the map or from the side rail list */}
       {SUBSEA_CABLES.map((c, i) => {
         const endY = fanEnds[i];
         const end = { x: 512, y: endY };
         const d = smoothPath([ls, { x: ls.x + 38, y: ls.y - 14 + endY * 0.08 }, { x: (ls.x + end.x) / 2 + 18, y: (ls.y + end.y) / 2 }, end]);
-        const active = hoverCable === c.id;
+        const active = hoverCable === c.id || forcedCable === c.id;
+        const someActive = hoverCable !== null || forcedCable != null;
         const dim = dimmed.has(c.live ? "cable-live" : "cable-dev");
         return (
-          <g key={c.id} opacity={dim ? 0.2 : 1}
+          <g key={c.id} opacity={dim ? 0.2 : someActive && !active ? 0.35 : 1}
             onMouseEnter={() => setHoverCable(c.id)} onMouseLeave={() => setHoverCable(null)}>
             <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 0.25 : 0.12} strokeWidth={7} strokeLinecap="round" />
-            <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 1 : 0.8} strokeWidth={2.2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
+            <path d={d} fill="none" stroke={c.live ? CYAN : AMBER} strokeOpacity={active ? 1 : 0.8} strokeWidth={active ? 3 : 2.2} strokeLinecap="round" strokeDasharray={c.live ? undefined : "7 5"} />
             <circle cx={end.x} cy={end.y} r={active ? 5 : 3.5} fill={c.live ? CYAN : AMBER} />
-            <text x={end.x + 14} y={end.y + 4} fontSize={14.5} fontWeight={550} fill={c.live ? "oklch(0.93 0.01 260 / 0.92)" : AMBER}>{c.label}</text>
+            <text x={end.x + 14} y={end.y + 4} fontSize={14.5} fontWeight={active ? 700 : 550} fill={c.live ? "oklch(0.93 0.01 260 / 0.92)" : AMBER}>{c.label}</text>
             <text x={end.x + 14} y={end.y + 20} fontSize={11.5} fill="oklch(0.93 0.01 260 / 0.45)">{c.year}{c.live ? " · live" : ""}</text>
           </g>
         );
@@ -198,14 +211,17 @@ function MombasaMapInner({ dimmed, onFacility }: {
       {/* facility rows, every Mombasa facility on the register */}
       {facilities.map((f, i) => {
         const { x: mx, y: my } = msaP(f.lat, f.lng);
-        const active = hover === f.id;
+        const active = hover === f.id || selectedId === f.id;
         const dim = dimmed.has(f.id);
         const color = STATUS_COLOR[f.status];
         const y = rowY(i);
         return (
-          <g key={f.id} className="cursor-pointer" opacity={dim ? 0.18 : 1}
+          <g key={f.id} className="cursor-pointer focus:outline-none" opacity={dim ? 0.18 : 1}
             onMouseEnter={() => setHover(f.id)} onMouseLeave={() => setHover(null)}
-            onClick={() => onFacility(f)}>
+            onClick={() => onFacility(f)}
+            tabIndex={dim ? -1 : 0} role="button"
+            aria-label={`${f.name}, ${f.operator}, ${f.status}, open details`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onFacility(f); } }}>
             <rect x={10} y={y - 20} width={252} height={42} rx={8} fill={active ? "oklch(0.93 0.01 260 / 0.07)" : "transparent"} />
             <polyline
               points={`${mx - 11},${my} ${mx - 48},${y} ${ROW_X + 10},${y}`}
