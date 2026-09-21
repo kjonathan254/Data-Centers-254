@@ -14,7 +14,7 @@ author_bio_link: "/about"
 published_date: "2026-08-27"
 updated_date: "2026-08-27"
 category: "Data Centres"
-cluster: "Beginner"
+cluster: "Infrastructure"
 og_image: "/images/dc-cooling-crac.webp"
 reading_time: "10 min"
 images:

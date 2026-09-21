@@ -26,13 +26,28 @@ export const PRICE_PER_MTOK_INPUT = 0.042;
 /** Choice/Score answers below this confidence are routed to human review. */
 export const CONFIDENCE_MIN_AUTO = 0.6;
 /**
- * Noul bands for evidence judgments:
- *   >= VERIFIED_MIN  → treat as supported (still logged for audit)
- *   <  UNSUPPORTED_MAX → treat as unsupported
- *   in between         → human review
+ * Noul bands for evidence judgments — INTERNAL review/ranking signals only.
+ *
+ * Editorial decision (2026-09-21, approved by the editor): Evidence Engine
+ * v0.1 ships scores as a review/ranking signal with NO hard gates — no
+ * record may be hidden, suppressed, or publicly badged on these bands, and
+ * no UI may surface them to readers as "verified" claims. AI grades
+ * evidence, never establishes facts.
+ *
+ * Calibration is empirical, cut at the two natural gaps of the observed
+ * composite (min of traceability/independence) distribution across all 31
+ * records [range 0.04–0.66]: a near-empty cohort ≤ 0.14, the homepage-
+ * sourced bulk 0.21–0.48, and the registry/press-corroborated cohort
+ * 0.55–0.66. The previous 0.75/0.5 cuts produced 0% verified because they
+ * were aspirational rather than observed. Re-calibrate when the
+ * distribution shape changes, not on a schedule.
+ *
+ *   composite >= NOUL_VERIFIED_MIN    → strongest-evidence cohort
+ *   composite <  NOUL_UNSUPPORTED_MAX → no traceable evidence cohort
+ *   in between                        → review (source-improvement worklist)
  */
-export const NOUL_VERIFIED_MIN = 0.75;
-export const NOUL_UNSUPPORTED_MAX = 0.5;
+export const NOUL_VERIFIED_MIN = 0.55;
+export const NOUL_UNSUPPORTED_MAX = 0.2;
 
 // ─── Article topic taxonomy (mirrors the site's clusters) ────────────────
 
