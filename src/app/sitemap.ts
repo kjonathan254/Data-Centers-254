@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/methodology`, lastModified: verifiedDate, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/faq`, lastModified: verifiedDate, changeFrequency: "monthly", priority: 0.6 },
     // Cluster landing pages (article listings)
+    { url: `${baseUrl}/articles`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/beginners`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/kenya`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     // NOTE: /internet intentionally absent, 308-redirected to /infrastructure
