@@ -1,5 +1,5 @@
 ---
-title: "Meta's Petal Cable: What It Means for Kenya"
+title: "Meta's Petal Cable: 1 Pbps and What It Means for Kenya"
 slug: "meta-petal-petabit-subsea-cable-kenya"
 meta_description: "Meta's Petal cable will carry 1 petabit per second across the Atlantic by 2029. It doesn't land in Africa: here's why it still changes Kenya's connectivity math."
 primary_keyword: "Meta Petal cable"
@@ -15,20 +15,20 @@ published_date: "2026-09-22"
 updated_date: "2026-09-22"
 category: "Connectivity"
 cluster: "Internet"
-og_image: "/images/submarine-cables-map.webp"
+og_image: "/images/mombasa-cable-landing-3.webp"
 reading_time: "8 min"
 images:
+  - src: "/images/mombasa-cable-landing-3.webp"
+    alt: "Cable landing infrastructure on the Kenyan coast"
+    caption: "Petal will never touch Kenya's coast. What lands here, and the trunk capacity riding above it, is the real Kenya story."
+    position: "hero"
   - src: "/images/submarine-cables-map.webp"
     alt: "World map of submarine cable routes linking Africa, Europe and the Americas"
     caption: "Petal adds a petabit-class link on the Europe-to-United States leg, the far end of the routes that carry East African traffic to the Americas"
-    position: "hero"
+    position: "section-break"
   - src: "/images/submarine-cable-diagram.webp"
     alt: "Diagram of subsea cable architecture from landing station to POP"
     caption: "Petal's leap comes from two-core fibre: two transmission cores inside one cable, doubling capacity without doubling the physical plant"
-    position: "section-break"
-  - src: "/images/mombasa-cable-landing-3.webp"
-    alt: "Cable landing infrastructure on the Kenyan coast"
-    caption: "Petal does not change what lands on Kenya's coast: seven live systems at Mombasa, with Africa-1 awaiting full service"
     position: "inline"
   - src: "/images/submarine-cable-diver.webp"
     alt: "Diver inspecting a submarine cable on the seabed"
@@ -76,7 +76,7 @@ So let's deal with the obvious question first, because credibility depends on it
 
 The headline number is capacity. Where traditional transoceanic cables carry terabits per second, Petal is designed to deliver 1 petabit per second, by Meta's own illustration, roughly the network capacity required for 75% of the world's population to stream music at the same time. That is not an incremental upgrade; it is the largest generational increase in transoceanic capacity of any system, ever, according to Meta. For context, 2Africa, the Meta-led consortium system that has been live at Mombasa and Mtwapa since June 2024, carries a design capacity of 180 Tbps. Petal is more than five times that on a single span a fraction of the length.
 
-The engineering story behind the number matters just as much. Petal will be the first cable to deploy multi-core fibre technology at transoceanic distances, carrying traffic in two separate cores inside the same cable. The practical consequence: twice the data without a proportional increase in fibre, physical materials, or power. Meta points to its engineering blog for the technical deep-dive, but the headline is simple: the industry has found a way to multiply capacity per cable rather than laying more of them.
+The engineering story behind the number matters just as much. Petal will be the first cable to deploy multi-core fibre technology at transoceanic distances, carrying traffic in two separate cores inside the same cable. The practical consequence: twice the data without a proportional increase in fibre, physical materials, or power. Meta points to its engineering blog for the technical deep-dive, but the headline is simple: the industry has found a way to multiply capacity per cable rather than laying more of them. It is also worth reading Petal as what it really is: a story about the stack that carries AI, cloud and digital services, where compute demand fills data centres, data centres fill networks, and networks ride subsea cables between continents. Petal is the bottom of that stack getting a generational upgrade.
 
 ## Petal does not land in Africa: here's why it still matters to Kenya
 
