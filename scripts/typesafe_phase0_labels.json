@@ -1,0 +1,44 @@
+{
+  "note": "Ground-truth labels for Phase 0 calibration. Assigned by the coding agent BEFORE any TypeSafe call, from article titles/descriptions and facility record fields. These are agent-assigned labels: the site owner's editorial review is the real authority. Topic ground truth for articles = each file's own frontmatter cluster (objective).",
+  "article_label_rules": {
+    "kenya": "true if Kenya/East Africa context, data or actors are substantive to the article's value; false if it is a generic concept explainer using Kenya only as illustration",
+    "depth": "0=news brief, 1=practitioner explainer, 2=deep analysis with original data/comparison"
+  },
+  "articles": {
+    "ai-model-training-kenya-use-cases": { "kenya": true, "depth": 1 },
+    "kenya-data-sovereignty-localisation": { "kenya": true, "depth": 1 },
+    "data-centre-tier-ratings-explained": { "kenya": false, "depth": 1, "reason": "generic Uptime-style concept explainer" },
+    "data-centre-cooling-systems-explained": { "kenya": true, "depth": 1, "reason": "Kenyan climate/free-cooling angle per title" },
+    "data-centre-pue-power-usage-effectiveness": { "kenya": true, "depth": 1, "reason": "Kenyan tariff/efficiency context" },
+    "geothermal-energy-kenya-data-centres": { "kenya": true, "depth": 2, "reason": "data-rich Rift Valley analysis" },
+    "kenya-internet-speeds-data-centres": { "kenya": true, "depth": 1 },
+    "solar-power-data-centres-kenya": { "kenya": true, "depth": 2, "reason": "economics analysis" },
+    "ixafrica-data-centres-kenya": { "kenya": true, "depth": 1 },
+    "kenya-renewables-industrial-power-data-centres": { "kenya": true, "depth": 1 },
+    "digitalocean-ai-cloud-kenya-hosting": { "kenya": true, "depth": 1 },
+    "kenya-ca-standalone-data-centre-licence": { "kenya": true, "depth": 1 },
+    "berbera-northern-route-kenya-fibre-redundancy": { "kenya": true, "depth": 1 },
+    "disaster-recovery-business-continuity-kenya": { "kenya": true, "depth": 1 },
+    "raxio-vs-africa-data-centres-kenya-comparison": { "kenya": true, "depth": 2, "reason": "head-to-head data comparison" }
+  },
+  "facility_label_rules": {
+    "evidence": "true if description + cited sources adequately support stated status and capacity figures; false if single unspecific source or large announced capacity on announcement-level evidence only"
+  },
+  "facilities": {
+    "iXAfrica NBOX1": { "evidence": true, "reason": "High confidence, 3 sources" },
+    "iXAfrica NBOX2 (Tilisi)": { "evidence": false, "reason": "53 MW committed claim rests on a single source" },
+    "Africa Data Centres Nairobi 2 (planned expansion)": { "evidence": true },
+    "Safaricom Thika Data Centre": { "evidence": true, "reason": "PeeringDB registration is independently checkable" },
+    "Microsoft–G42 AI Data Centre": { "evidence": true, "reason": "status is Early Stage; announcement-level evidence matches the stated status" },
+    "Telkom Kenya: Telephone House (Nairobi)": { "evidence": true },
+    "iColo Nairobi One (NBO1)": { "evidence": true, "reason": "High confidence, 3 sources" },
+    "iColo Mombasa One (MBA1)": { "evidence": true },
+    "PAIX Nairobi (NBO-1)": { "evidence": true },
+    "Telkom Kenya: Telephone House (Mombasa)": { "evidence": true },
+    "SimbaNET Nairobi": { "evidence": true },
+    "Septris Data Centre": { "evidence": false, "reason": "Low confidence, one unspecific source, capacity figures thin" },
+    "Wananchi Group Data Centre": { "evidence": false, "reason": "Low confidence, single source" },
+    "Nxtra by Airtel Tatu City": { "evidence": true, "reason": "widely reported $150M announcement, 3 sources" },
+    "Uganda National Data Centre (NDC1)": { "evidence": true }
+  }
+}
