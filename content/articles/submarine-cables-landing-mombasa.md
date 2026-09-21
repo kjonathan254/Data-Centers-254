@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-09-16"
+updated_date: "2026-09-22"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/mombasa-cable-landing-4.webp"
@@ -102,7 +102,7 @@ The cables currently landing in Mombasa include:
 
 The cumulative design capacity of the live systems approaches 300 Tbps, an almost incomprehensible amount of bandwidth that positions Mombasa as one of the most connected coastal cities on the African continent.
 
-One more system is on the way. Daraja, a Meta-backed cable hosted by Safaricom, was announced in October 2025 to run from Salalah in Oman to Mombasa with 24 fibre pairs. It is in development and does not change the live count yet.
+One more system is on the way. Daraja, a Meta-backed cable hosted by Safaricom, was announced in October 2025 to run from Salalah in Oman to Mombasa with 24 fibre pairs. It is in development and does not change the live count yet. Meta's subsea ambitions extend beyond African landings: its [Petal system](/articles/meta-petal-petabit-subsea-cable-kenya), announced in September 2026, will be the first petabit-class transoceanic cable, a signal of where the trunk capacity above Mombasa's routes is heading, even though Petal itself does not land in Africa.
 
 One development changes the geography without changing that count. At ITW Africa 2026 (September 2026), a consortium led by INDOI Ltd. (IOX) and Blue Trade Investments announced **LuLu**, a planned ~500km coastal cable system running from Mombasa to Lamu with landing points at Vipingo Special Economic Zone, Kilifi and Malindi in between. LuLu is not a tenth international system, it is Kenya's first dedicated coastal diversity route, pairing a subsea span (144 fibre pairs, up to 60 Tbps per pair) with a protected terrestrial path along the whole corridor. Its readiness-for-service target is Q2 2028, subject to contract execution; as of the announcement, no supplier was named and construction had not started. Full status check: [the LuLu coastal cable system](/articles/kenya-lulu-coastal-cable-system).
 
