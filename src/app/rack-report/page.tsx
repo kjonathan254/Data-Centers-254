@@ -27,6 +27,21 @@ export const metadata: Metadata = {
     description:
       "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
     type: "website",
+    images: [
+      {
+        url: "/images/rack-report-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "The Rack Report — Data Centre 254 monthly intelligence briefing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Rack Report: Kenya's Data Centre Monthly",
+    description:
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
+    images: ["/images/rack-report-cover.png"],
   },
 };
 
