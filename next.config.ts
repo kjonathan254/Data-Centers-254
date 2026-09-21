@@ -127,6 +127,16 @@ const nextConfig: NextConfig = {
         destination: "/articles/kenya-data-centre-licensing-framework",
         permanent: true,
       },
+      // Recovery redirects for the submarine-cables explainer. Bing indexed
+      // /articles/submarine-cables-kenya-explained (404, crawled 14 Sep 2026)
+      // and production logs show visitors guessing more variants of the
+      // canonical /articles/submarine-cables-landing-mombasa. 308s heal the
+      // dead crawl equity and stop the 404s seen in Vercel logs.
+      { source: "/articles/submarine-cables-kenya-explained", destination: "/articles/submarine-cables-landing-mombasa", permanent: true },
+      { source: "/articles/submarine-cables-kenya", destination: "/articles/submarine-cables-landing-mombasa", permanent: true },
+      { source: "/articles/kenya-submarine-cables", destination: "/articles/submarine-cables-landing-mombasa", permanent: true },
+      { source: "/articles/submarine-cables-landing", destination: "/articles/submarine-cables-landing-mombasa", permanent: true },
+      { source: "/articles/submarine-cables", destination: "/articles/submarine-cables-landing-mombasa", permanent: true },
       // Auto-heal guessed article URLs: /<slug> -> /articles/<slug>
       ...articleSlugRedirects(),
     ];

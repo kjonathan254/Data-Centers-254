@@ -22,6 +22,7 @@ import {
   ARTICLE_QUESTIONS,
   FACILITY_QUESTIONS,
   FACILITY_TYPE_MAP,
+  EVIDENCE_COMPOSITE,
 } from "../src/lib/typesafe/config";
 
 const ROOT = path.resolve(__dirname, "..");
@@ -52,7 +53,7 @@ function sampleArticles() {
   const files = fs.readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".md"));
   const rows = files.map((file) => {
     const raw = fs.readFileSync(path.join(ARTICLES_DIR, file), "utf-8");
-    const fmMatch = raw.match(/^---\n(.*?)\n---\n/s);
+    const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n/);
     let date = "";
     if (fmMatch) {
       const line = fmMatch[1]
@@ -198,18 +199,33 @@ async function main() {
   const facTypeHit = facTypeRows.filter((r) => r.pred === r.truth);
   const facTypeReview = facTypeRows.filter((r) => (r.conf ?? 0) < CONFIDENCE_MIN_AUTO);
 
-  // evidence support (agent labels + noul bands)
+  // evidence v3: two atomic judgments, combined in CODE (not by the model).
+  // Pre-registered labels answer "do sources adequately support the claims"
+  // — that is the TRACEABILITY dimension, so run-over-run agreement is
+  // computed on traceability. Independence and the min-composite are
+  // reported as new distributions.
   const evRows = facOk.map((r) => {
     const lab = LABELS.facilities[r.name]?.evidence;
-    const p = r.r.answers?.evidence_support?.noul as number | undefined;
-    const band = p === undefined ? undefined : p >= NOUL_VERIFIED_MIN ? "verified" : p < NOUL_UNSUPPORTED_MAX ? "unsupported" : "review";
-    return { name: r.name, label: lab, noul: p, band };
+    const t = r.r.answers?.evidence_traceability?.noul as number | undefined;
+    const i = r.r.answers?.evidence_independence?.noul as number | undefined;
+    const comp =
+      t === undefined || i === undefined
+        ? undefined
+        : EVIDENCE_COMPOSITE === "min"
+          ? Math.min(t, i)
+          : (t + i) / 2;
+    const bandOf = (p: number) =>
+      p >= NOUL_VERIFIED_MIN ? "verified" : p < NOUL_UNSUPPORTED_MAX ? "unsupported" : "review";
+    return { name: r.name, label: lab, traceability: t, independence: i, composite: comp, band: comp === undefined ? undefined : bandOf(comp) };
   });
-  const evCovered = evRows.filter((r) => r.label !== undefined && r.noul !== undefined);
-  const evAgree = evCovered.filter((r) => (r.noul >= 0.5) === r.label);
-  const evTrueNeg = evCovered.filter((r) => !r.label && r.band === "unsupported");   // model agrees it's weak
-  const evFalsePos = evCovered.filter((r) => !r.label && r.band === "verified");     // labeled weak but called supported
-  const evFalseNeg = evCovered.filter((r) => r.label && r.band === "unsupported");   // labeled supported but called weak
+  const evCovered = evRows.filter((r) => r.label !== undefined && r.traceability !== undefined);
+  const evAgree = evCovered.filter((r) => (r.traceability ?? 0) >= 0.5 === r.label);
+  const evCompRows = evRows.filter((r) => r.composite !== undefined);
+  const evVerified = evCompRows.filter((r) => r.band === "verified");
+  const evReview = evCompRows.filter((r) => r.band === "review");
+  const evFalsePos = evCovered.filter((r) => !r.label && (r.traceability ?? 0) >= NOUL_VERIFIED_MIN); // labeled weak but called traceable-high
+  const evFalseNeg = evCovered.filter((r) => r.label && (r.traceability ?? 0) < NOUL_UNSUPPORTED_MAX); // labeled supported but called weak
+  const evTrueNeg = evCovered.filter((r) => !r.label && (r.traceability ?? 1) < NOUL_UNSUPPORTED_MAX);   // model agrees it's weak
 
   const mean = (a: number[]) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : 0);
   const p95 = (a: number[]) => (a.length ? a.slice().sort((x, y) => x - y)[Math.min(a.length - 1, Math.floor(a.length * 0.95))] : 0);
@@ -225,7 +241,21 @@ async function main() {
       kenyaRelevance: { covered: kenyaCovered, TP: kenyaTP, TN: kenyaTN, FP: kenyaFP, FN: kenyaFN, detail: kenyaDetail },
       depth: { covered: depthCovered, exactPct: pct(depthExact, depthCovered), within1Pct: pct(depthWithin1, depthCovered), detail: depthDetail },
       facilityType: { n: facTypeRows.length, accuracyPct: pct(facTypeHit.length, facTypeRows.length), reviewRatePct: pct(facTypeReview.length, facTypeRows.length), rows: facTypeRows },
-      evidenceSupport: { covered: evCovered.length, agreementPct: pct(evAgree.length, evCovered.length), trueNegatives: evTrueNeg.map((r) => r.name), falsePositives: evFalsePos.map((r) => r.name), falseNegatives: evFalseNeg.map((r) => r.name), rows: evRows },
+      evidenceSupport: {
+        covered: evCovered.length,
+        agreementPct: pct(evAgree.length, evCovered.length),
+        trueNegatives: evTrueNeg.map((r) => r.name),
+        falsePositives: evFalsePos.map((r) => r.name),
+        falseNegatives: evFalseNeg.map((r) => r.name),
+        rows: evRows,
+      },
+      evidenceComposite: {
+        rule: EVIDENCE_COMPOSITE,
+        covered: evCompRows.length,
+        verifiedPct: pct(evVerified.length, evCompRows.length),
+        reviewPct: pct(evReview.length, evCompRows.length),
+        reviewList: evReview.map((r) => r.name),
+      },
       performance: { latencyMeanMs: Math.round(mean(lat)), latencyP95Ms: Math.round(p95(lat)), inputTokens: tokIn, costUsd: Math.round(((tokIn / 1e6) * PRICE_PER_MTOK_INPUT) * 1e4) / 1e4 },
     },
     raw: { articles: artResults, facilities: facResults },
@@ -244,9 +274,10 @@ async function main() {
   console.log("\n== FACILITY TYPE (truth = record field via map) ==");
   console.log(`accuracy ${report.metrics.facilityType.accuracyPct}%  review-rate ${report.metrics.facilityType.reviewRatePct}%`);
   for (const r of facTypeRows) if (r.pred !== r.truth) console.log(`  miss: ${r.name}  truth=${r.truth} pred=${r.pred} conf=${r.conf}`);
-  console.log("\n== EVIDENCE SUPPORT (agent labels, noul bands) ==");
-  console.log(`agreement ${report.metrics.evidenceSupport.agreementPct}% (covered ${evCovered.length})`);
-  for (const r of evRows) console.log(`  ${r.name}: label=${r.label} noul=${r.noul} band=${r.band}`);
+  console.log("\n== EVIDENCE (v3: traceability vs pre-registered labels; independence + min-composite as distributions) ==");
+  console.log(`traceability agreement ${report.metrics.evidenceSupport.agreementPct}% (covered ${evCovered.length})`);
+  console.log(`composite: verified ${report.metrics.evidenceComposite.verifiedPct}%  review ${report.metrics.evidenceComposite.reviewPct}%`);
+  for (const r of evRows) console.log(`  ${r.name}: label=${r.label} trace=${r.traceability} indep=${r.independence} composite=${r.composite} band=${r.band}`);
   console.log("\n== PERFORMANCE ==");
   console.log(`latency mean ${report.metrics.performance.latencyMeanMs}ms / p95 ${report.metrics.performance.latencyP95Ms}ms`);
   console.log(`input tokens ${tokIn}  cost $${report.metrics.performance.costUsd}`);

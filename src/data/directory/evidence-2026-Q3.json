@@ -1,0 +1,230 @@
+{
+  "version": "2026-Q3",
+  "generatedAt": "2026-09-21T15:00:55.790Z",
+  "model": "jev-latest",
+  "compositeRule": "min",
+  "thresholds": {
+    "NOUL_VERIFIED_MIN": 0.75,
+    "NOUL_UNSUPPORTED_MAX": 0.5
+  },
+  "note": "Model-graded strength of the evidence each facility record cites. AI grades evidence, never establishes facts; editorial authority is the DC254 editor. Bands: verified >= 0.75, unsupported < 0.5, review in between. Regenerate with scripts/evidence_engine.ts when the directory version changes.",
+  "records": {
+    "iXAfrica NBOX1": {
+      "traceability": 0.46,
+      "independence": 0.66,
+      "evidence": 0.46,
+      "band": "unsupported",
+      "review": false
+    },
+    "iXAfrica NBOX1.2": {
+      "traceability": 0.48,
+      "independence": 0.61,
+      "evidence": 0.48,
+      "band": "unsupported",
+      "review": false
+    },
+    "iXAfrica NBOX2 (Tilisi)": {
+      "traceability": 0.37,
+      "independence": 0.45,
+      "evidence": 0.37,
+      "band": "unsupported",
+      "review": false
+    },
+    "Africa Data Centres Nairobi 1 (NBO1)": {
+      "traceability": 0.62,
+      "independence": 0.69,
+      "evidence": 0.62,
+      "band": "review",
+      "review": true
+    },
+    "Africa Data Centres Nairobi 2 (planned expansion)": {
+      "traceability": 0.43,
+      "independence": 0.47,
+      "evidence": 0.43,
+      "band": "unsupported",
+      "review": false
+    },
+    "Safaricom Data Centre (Waiyaki Way)": {
+      "traceability": 0.31,
+      "independence": 0.39,
+      "evidence": 0.31,
+      "band": "unsupported",
+      "review": false
+    },
+    "Safaricom Thika Data Centre": {
+      "traceability": 0.25,
+      "independence": 0.71,
+      "evidence": 0.25,
+      "band": "unsupported",
+      "review": false
+    },
+    "Safaricom Red Hill (Limuru) Campus": {
+      "traceability": 0.22,
+      "independence": 0.67,
+      "evidence": 0.22,
+      "band": "unsupported",
+      "review": false
+    },
+    "Microsoft–G42 AI Data Centre": {
+      "traceability": 0.29,
+      "independence": 0.72,
+      "evidence": 0.29,
+      "band": "unsupported",
+      "review": false
+    },
+    "Telkom Kenya: Milimani Exchange": {
+      "traceability": 0.39,
+      "independence": 0.73,
+      "evidence": 0.39,
+      "band": "unsupported",
+      "review": false
+    },
+    "Telkom Kenya: Telephone House (Nairobi)": {
+      "traceability": 0.23,
+      "independence": 0.67,
+      "evidence": 0.23,
+      "band": "unsupported",
+      "review": false
+    },
+    "Liquid Nairobi Data Centre": {
+      "traceability": 0.26,
+      "independence": 0.05,
+      "evidence": 0.05,
+      "band": "unsupported",
+      "review": false
+    },
+    "iColo Nairobi One (NBO1)": {
+      "traceability": 0.31,
+      "independence": 0.71,
+      "evidence": 0.31,
+      "band": "unsupported",
+      "review": false
+    },
+    "iColo Nairobi Two (NBO2)": {
+      "traceability": 0.61,
+      "independence": 0.76,
+      "evidence": 0.61,
+      "band": "review",
+      "review": true
+    },
+    "iColo Mombasa One (MBA1)": {
+      "traceability": 0.55,
+      "independence": 0.85,
+      "evidence": 0.55,
+      "band": "review",
+      "review": true
+    },
+    "iColo Mombasa Two (MBA2)": {
+      "traceability": 0.41,
+      "independence": 0.72,
+      "evidence": 0.41,
+      "band": "unsupported",
+      "review": false
+    },
+    "PAIX Nairobi (NBO-1)": {
+      "traceability": 0.66,
+      "independence": 0.74,
+      "evidence": 0.66,
+      "band": "review",
+      "review": true
+    },
+    "Konza National Data Centre": {
+      "traceability": 0.22,
+      "independence": 0.59,
+      "evidence": 0.22,
+      "band": "unsupported",
+      "review": false
+    },
+    "Telkom Kenya: Telephone House (Mombasa)": {
+      "traceability": 0.22,
+      "independence": 0.68,
+      "evidence": 0.22,
+      "band": "unsupported",
+      "review": false
+    },
+    "SEACOM Mombasa Cable Landing Station": {
+      "traceability": 0.23,
+      "independence": 0.72,
+      "evidence": 0.23,
+      "band": "unsupported",
+      "review": false
+    },
+    "SimbaNET Nairobi": {
+      "traceability": 0.21,
+      "independence": 0.71,
+      "evidence": 0.21,
+      "band": "unsupported",
+      "review": false
+    },
+    "Raxio Nairobi (unverified)": {
+      "traceability": 0.15,
+      "independence": 0.09,
+      "evidence": 0.09,
+      "band": "unsupported",
+      "review": false
+    },
+    "Septris Data Centre": {
+      "traceability": 0.28,
+      "independence": 0.04,
+      "evidence": 0.04,
+      "band": "unsupported",
+      "review": false
+    },
+    "Global TS Data Centre": {
+      "traceability": 0.27,
+      "independence": 0.04,
+      "evidence": 0.04,
+      "band": "unsupported",
+      "review": false
+    },
+    "Wananchi Group Data Centre": {
+      "traceability": 0.22,
+      "independence": 0.04,
+      "evidence": 0.04,
+      "band": "unsupported",
+      "review": false
+    },
+    "Kenya Data Centres SME Facility": {
+      "traceability": 0.14,
+      "independence": 0.25,
+      "evidence": 0.14,
+      "band": "unsupported",
+      "review": false
+    },
+    "Nxtra by Airtel Tatu City": {
+      "traceability": 0.64,
+      "independence": 0.85,
+      "evidence": 0.64,
+      "band": "review",
+      "review": true
+    },
+    "Raxio Kampala UG1": {
+      "traceability": 0.46,
+      "independence": 0.9,
+      "evidence": 0.46,
+      "band": "unsupported",
+      "review": false
+    },
+    "Uganda National Data Centre (NDC1)": {
+      "traceability": 0.24,
+      "independence": 0.68,
+      "evidence": 0.24,
+      "band": "unsupported",
+      "review": false
+    },
+    "Raxio Dar es Salaam TZ1": {
+      "traceability": 0.25,
+      "independence": 0.86,
+      "evidence": 0.25,
+      "band": "unsupported",
+      "review": false
+    },
+    "Africa Data Centres Kigali KGL1": {
+      "traceability": 0.58,
+      "independence": 0.86,
+      "evidence": 0.58,
+      "band": "review",
+      "review": true
+    }
+  }
+}
