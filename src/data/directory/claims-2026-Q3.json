@@ -1,0 +1,1541 @@
+{
+  "schemaVersion": "0.2",
+  "datasetVersion": "2026-Q3",
+  "generatedAt": "2026-09-22",
+  "assessmentMethod": "rule-tier-v0.2",
+  "humanGate": "Public states reflect editorially approved claims only (humanReview = approved).",
+  "sources": {
+    "icolo-home": {
+      "label": "iColo (Digital Realty) official site",
+      "url": "https://www.icolo.io/",
+      "tier": 1,
+      "publisher": "icolo.io",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "iColo (now Digital Realty) - Carrier Neutral Data Centers in Africa"
+    },
+    "icolo-nbo1-page": {
+      "label": "iColo Nairobi One facility page",
+      "url": "https://www.icolo.io/location/nbo1/",
+      "tier": 1,
+      "publisher": "icolo.io",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "NBO1 launched in September 2019 as the first truly carrier-neutral data center in Nairobi. Strategically located in Karen"
+    },
+    "icolo-mba1-page": {
+      "label": "iColo Mombasa One facility page",
+      "url": "https://www.icolo.io/location/mba1/",
+      "tier": 1,
+      "publisher": "icolo.io",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "Mombasa One - iColo (now Digital Realty)"
+    },
+    "icolo-mba2-page": {
+      "label": "iColo Mombasa Two facility page",
+      "url": "https://www.icolo.io/location/mba2/",
+      "tier": 1,
+      "publisher": "icolo.io",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "launched in 2022. Hosting up to 600 customer racks, MBA2 is part of our expansion plans in East Africa"
+    },
+    "paix-kenya-page": {
+      "label": "PAIX Kenya (NBO-1) facility page",
+      "url": "https://www.paix.io/kenya",
+      "tier": 1,
+      "publisher": "paix.io",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "Data Centre Nairobi | PAIX NBO-1 Colocation in Upper Hill"
+    },
+    "ixafrica-home": {
+      "label": "iXAfrica official site",
+      "url": "https://ixafrica.co.ke/",
+      "tier": 1,
+      "publisher": "ixafrica.co.ke",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "NBOX1.1: 4.5MW IT Load MW Ready 40 kW available per rack NBOX1.2: 18MW IT Load"
+    },
+    "adc-nairobi-page": {
+      "label": "Africa Data Centres Nairobi page",
+      "url": "https://www.africadatacentres.com/nairobi/",
+      "tier": 1,
+      "publisher": "africadatacentres.com",
+      "sourceType": "Operator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "Pan-African Footprint JHB1 Midrand JHB2 Samrand CPT1 Cape Town NBO1 Nairobi LOS1 Lagos"
+    },
+    "pdb-1964": {
+      "label": "PeeringDB facility record #1964 (ADC NBO1)",
+      "url": "https://www.peeringdb.com/fac/1964",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2014-10-22",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"Africa Data Centres, Nairobi NBO1, Kenya\"; address1 \"Sameer Business Park\"; Nairobi, Kenya; 126 networks present; record created 2014-10-22; notes: \"Africa Data Centres own and operate carrier, cloud and exchange neutral data centers across the African continent\""
+    },
+    "pdb-6448": {
+      "label": "PeeringDB facility record #6448 (iColo NBO1)",
+      "url": "https://www.peeringdb.com/fac/6448",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2019-03-11",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"icolo.io Nairobi One (NBO1)\"; Karen, Kenya; 62 networks present; record created 2019-03-11"
+    },
+    "pdb-14166": {
+      "label": "PeeringDB facility record #14166 (iColo NBO2)",
+      "url": "https://www.peeringdb.com/fac/14166",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2023-10-15",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"icolo.io Nairobi Two (NBO2)\"; Karen, Kenya; 3 networks present; record created 2023-10-15"
+    },
+    "pdb-5019": {
+      "label": "PeeringDB facility record #5019 (iColo MBA1)",
+      "url": "https://www.peeringdb.com/fac/5019",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2018-03-05",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"icolo.io Mombasa One (MBA1)\"; Miritini, Kenya; 94 networks present; record created 2018-03-05"
+    },
+    "pdb-10232": {
+      "label": "PeeringDB facility record #10232 (iColo MBA2)",
+      "url": "https://www.peeringdb.com/fac/10232",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2021-03-04",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"icolo.io Mombasa Two (MBA2)\"; Nyali, Kenya; 40 networks present; record created 2021-03-04"
+    },
+    "pdb-7995": {
+      "label": "PeeringDB facility record #7995 (PAIX Nairobi)",
+      "url": "https://www.peeringdb.com/fac/7995",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2020-01-15",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"PAIX Nairobi\"; address1 \"Britam Tower\"; Nairobi, Kenya; 38 networks present; record created 2020-01-15"
+    },
+    "pdb-13572": {
+      "label": "PeeringDB facility record #13572 (iXAfrica NBOX1)",
+      "url": "https://www.peeringdb.com/fac/13572",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2023-04-14",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"iXAfrica NBOX1 (Nairobi X One)\"; address1 \"Cabanas, Mombasa Road.\"; Nairobi, Kenya; 43 networks present; record created 2023-04-14; notes: \"Award winning iXAfrica Data Centres in Nairobi, Kenya is East Africa's First and Largest Hyper-scale Carrier-neutral\""
+    },
+    "pdb-1648": {
+      "label": "PeeringDB facility record #1648 (SEACOM Mombasa CLS)",
+      "url": "https://www.peeringdb.com/fac/1648",
+      "tier": 2,
+      "publisher": "peeringdb.com",
+      "sourceType": "Industry registry (PeeringDB)",
+      "publishedDate": "2013-10-01",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "PeeringDB record: name \"SEACOM Mombasa CLS\"; org \"SEACOM Limited\"; address1 \"Swahili Cultural Centre\"; Mombasa, Kenya; 31 networks present; record created 2013-10-01"
+    },
+    "press-techafrica-nbo2": {
+      "label": "tech.africa: Digital Realty opens NBO2 and retires the iColo brand",
+      "url": "https://tech.africa/digital-realty-nbo2-nairobi/",
+      "tier": 3,
+      "publisher": "tech.africa",
+      "sourceType": "Specialist technology publication",
+      "publishedDate": "2026-09-07",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "The ribbon-cutting at NBO2 in Nairobi on 7 September 2026 ... Nairobi, Kenya, gained 6.4 megawatts (MW) of data centre capacity on 7 September 2026, and lost a brand on the same day. Digital Realty, the American data centre operator that trades o[n iColo]"
+    },
+    "press-techtrendske-nbo2": {
+      "label": "TechTrendsKE: NBO2 data centre launches in Nairobi",
+      "url": "https://techtrendske.co.ke/2026/09/07/nbo2-data-centre-nairobi/",
+      "tier": 3,
+      "publisher": "techtrendske.co.ke",
+      "sourceType": "Kenyan technology publication",
+      "publishedDate": "2026-09-07",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "NBO2 data centre launches in Nairobi ... NBO2 data centre launch deepens Kenya's push to become East Africa's digital gateway"
+    },
+    "press-allafrica-nbo2": {
+      "label": "allAfrica: NBO2 Data Centre Strengthens Kenya's Bid to Become East Africa's Digital Hub",
+      "url": "https://allafrica.com/stories/202609080028.html",
+      "tier": 3,
+      "publisher": "allafrica.com",
+      "sourceType": "News organisation (pan-African)",
+      "publishedDate": "2026-09-08",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "NBO2 data centre in Nairobi, expanding infrastructure needed to support artificial intelligence, cloud computing, financial technology and regional digital connectivity"
+    },
+    "press-itweb-nbo2": {
+      "label": "ITWeb Africa: Digital Realty opens 6.4MW Nairobi data centre",
+      "url": "https://itweb.africa/article/digital-realty-opens-64mw-nairobi-data-centre/KA3WwMdzPgLvrydZ",
+      "tier": 3,
+      "publisher": "itweb.africa",
+      "sourceType": "African technology publication",
+      "publishedDate": "2026-09-08",
+      "retrievedDate": "2026-09-22",
+      "excerpt": "Digital Realty opens 6.4MW Nairobi data centre ... Speaking at the facility's commissioning, John Tanui, Kenya's ICT and Digital Economy p[ermanent secretary]"
+    },
+    "press-telecompaper-nxtra": {
+      "label": "Telecompaper: Airtel Kenya pushes Nxtra data centre launch in Tatu City to July 2027",
+      "url": "https://www.telecompaper.com/news/airtel-kenya-pushes-nxtra-data-centre-launch-in-tatu-city-to-july-2027-from-q1--1579056",
+      "tier": 3,
+      "publisher": "telecompaper.com",
+      "sourceType": "Telecoms trade publication",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "Airtel Kenya has set a new completion target of July 2027 for its Nxtra data centre in Tatu City, revising its timeline from the initial first quarter 2027 goal announced when construction broke ground"
+    },
+    "press-independent-raxio": {
+      "label": "The Independent (Uganda): Raxio Data Centre primed for Uganda's cloud computing, digital needs",
+      "url": "https://www.independent.co.ug/raxio-data-centre-primed-for-all-ugandas-cloud-computing-digital-needs/",
+      "tier": 3,
+      "publisher": "independent.co.ug",
+      "sourceType": "Ugandan news organisation",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "excerpt": "The function was at the heart of Namanve Industrial Park, in Kampala, where Raxio Uganda is ideally located along key fibr[e] ... the recent decision by International Finance Corporation (IFC), a member of the World Bank Group, to back Raxio's record $100 million investment"
+    }
+  },
+  "facilities": {
+    "ixafrica-nbox1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "NBOX1-C1",
+          "type": "identity",
+          "statement": "iXAfrica operates the NBOX1 (Nairobi X One) data centre facility in Nairobi.",
+          "sourceIds": [
+            "ixafrica-home",
+            "pdb-13572"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (ixafrica.co.ke, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBOX1-C2",
+          "type": "operator",
+          "statement": "iXAfrica Data Centres is the operator of NBOX1.",
+          "sourceIds": [
+            "ixafrica-home",
+            "pdb-13572"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (ixafrica.co.ke, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBOX1-C3",
+          "type": "facility_type",
+          "statement": "NBOX1 is positioned as a hyperscale, carrier-neutral, AI-ready facility.",
+          "sourceIds": [
+            "ixafrica-home",
+            "pdb-13572"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (ixafrica.co.ke, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBOX1-C4",
+          "type": "location",
+          "statement": "NBOX1 is located at Cabanas, Mombasa Road, Nairobi.",
+          "sourceIds": [
+            "ixafrica-home",
+            "pdb-13572"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (ixafrica.co.ke, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBOX1-C5",
+          "type": "status",
+          "statement": "NBOX1 is operational.",
+          "sourceIds": [
+            "ixafrica-home",
+            "pdb-13572"
+          ],
+          "note": "Operator site live and registry shows 43 connected networks, but no explicit in-service statement was captured; treat as near-verified.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (ixafrica.co.ke, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBOX1-C6",
+          "type": "capacity",
+          "statement": "NBOX1.1 provides 4.5MW of IT load; the NBOX1.2 expansion adds 18MW.",
+          "sourceIds": [
+            "ixafrica-home"
+          ],
+          "note": "Operator-stated; no independent MW corroboration located. Directory tracks 5MW total / 4.5MW live IT load for phase 1.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T1 (ixafrica.co.ke); 1 distinct organisation(s); rule -> review."
+          }
+        }
+      ]
+    },
+    "africa-dc-nairobi-1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "ADCNBO1-C1",
+          "type": "identity",
+          "statement": "Africa Data Centres operates the NBO1 data centre facility in Nairobi.",
+          "sourceIds": [
+            "adc-nairobi-page",
+            "pdb-1964"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (africadatacentres.com, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "ADCNBO1-C2",
+          "type": "operator",
+          "statement": "Africa Data Centres is the operator of NBO1.",
+          "sourceIds": [
+            "adc-nairobi-page",
+            "pdb-1964"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (africadatacentres.com, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "ADCNBO1-C3",
+          "type": "facility_type",
+          "statement": "NBO1 is a carrier-neutral colocation facility.",
+          "sourceIds": [
+            "adc-nairobi-page",
+            "pdb-1964"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (africadatacentres.com, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "ADCNBO1-C4",
+          "type": "location",
+          "statement": "NBO1 is located at Sameer Business Park, Mombasa Road, Nairobi.",
+          "sourceIds": [
+            "pdb-1964"
+          ],
+          "note": "Registry confirms Sameer Business Park; the operator page fetched does not state the street address.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "ADCNBO1-C5",
+          "type": "status",
+          "statement": "NBO1 is operational.",
+          "sourceIds": [
+            "adc-nairobi-page",
+            "pdb-1964"
+          ],
+          "note": "Operator lists NBO1 in its live footprint and the registry record is active with 126 networks; no explicit in-service statement captured.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (africadatacentres.com, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "ADCNBO1-C6",
+          "type": "capacity",
+          "statement": "NBO1's 7.5MW total capacity is publicly documented.",
+          "sourceIds": [],
+          "note": "Directory states 7.5MW; no public source located in the sweep documents this figure. Claim-specific source needed.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        }
+      ]
+    },
+    "icolo-nbo1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "NBONBO1-C1",
+          "type": "identity",
+          "statement": "iColo operates the Nairobi One (NBO1) data centre in Nairobi.",
+          "sourceIds": [
+            "icolo-nbo1-page",
+            "pdb-6448"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO1-C2",
+          "type": "operator",
+          "statement": "NBO1 is operated by iColo, now part of Digital Realty.",
+          "sourceIds": [
+            "icolo-nbo1-page",
+            "pdb-6448"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO1-C3",
+          "type": "facility_type",
+          "statement": "NBO1 is a carrier-neutral colocation data centre.",
+          "sourceIds": [
+            "icolo-nbo1-page",
+            "pdb-6448"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO1-C4",
+          "type": "location",
+          "statement": "NBO1 is located in Karen, Nairobi.",
+          "sourceIds": [
+            "icolo-nbo1-page",
+            "pdb-6448"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO1-C5",
+          "type": "status",
+          "statement": "NBO1 launched in September 2019 and is operational.",
+          "sourceIds": [
+            "icolo-nbo1-page",
+            "pdb-6448"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        }
+      ]
+    },
+    "icolo-nbo2": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "NBONBO2-C1",
+          "type": "identity",
+          "statement": "Digital Realty (formerly iColo) opened the NBO2 data centre in Nairobi on 7 September 2026.",
+          "sourceIds": [
+            "pdb-14166",
+            "press-techafrica-nbo2",
+            "press-techtrendske-nbo2",
+            "press-itweb-nbo2"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.9,
+            "composite": 0.75,
+            "rationale": "Sources T2/T3/T3/T3 (itweb.africa, peeringdb.com, tech.africa, techtrendske.co.ke); 4 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO2-C2",
+          "type": "operator",
+          "statement": "NBO2 is operated by Digital Realty, which has retired the iColo brand.",
+          "sourceIds": [
+            "pdb-14166",
+            "press-techafrica-nbo2",
+            "press-itweb-nbo2"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.9,
+            "composite": 0.75,
+            "rationale": "Sources T2/T3/T3 (itweb.africa, peeringdb.com, tech.africa); 3 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO2-C3",
+          "type": "facility_type",
+          "statement": "NBO2 operates as a colocation facility.",
+          "sourceIds": [
+            "pdb-14166",
+            "press-techafrica-nbo2"
+          ],
+          "note": "Gathered sources describe it as a data centre but none states 'colocation' explicitly; registry listing implies it.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.9,
+            "composite": 0.75,
+            "rationale": "Sources T2/T3 (peeringdb.com, tech.africa); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO2-C4",
+          "type": "location",
+          "statement": "NBO2 is located in Karen (Bogani East Road), Nairobi.",
+          "sourceIds": [
+            "pdb-14166"
+          ],
+          "note": "Registry places NBO2 in Karen; the street address rests on the directory's earlier collection.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "NBONBO2-C5",
+          "type": "status",
+          "statement": "NBO2 opened on 7 September 2026 and is operational.",
+          "sourceIds": [
+            "pdb-14166",
+            "press-techafrica-nbo2",
+            "press-itweb-nbo2"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.9,
+            "composite": 0.75,
+            "rationale": "Sources T2/T3/T3 (itweb.africa, peeringdb.com, tech.africa); 3 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "NBONBO2-C6",
+          "type": "capacity",
+          "statement": "NBO2's capacity is 6.4MW.",
+          "sourceIds": [
+            "press-techafrica-nbo2",
+            "press-itweb-nbo2"
+          ],
+          "note": "DIVERGENCE: two press sources state 6.4MW; the directory record says 6.5MW. Review the directory figure against a Digital Realty primary source.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.9,
+            "composite": 0.6,
+            "rationale": "Sources T3/T3 (itweb.africa, tech.africa); 2 distinct organisation(s); rule -> review."
+          }
+        }
+      ]
+    },
+    "icolo-mba1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "MBAMBA1-C1",
+          "type": "identity",
+          "statement": "iColo operates the Mombasa One (MBA1) data centre in Mombasa.",
+          "sourceIds": [
+            "icolo-mba1-page",
+            "pdb-5019"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA1-C2",
+          "type": "operator",
+          "statement": "MBA1 is operated by iColo, now part of Digital Realty.",
+          "sourceIds": [
+            "icolo-mba1-page",
+            "pdb-5019"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA1-C3",
+          "type": "facility_type",
+          "statement": "MBA1 operates as a colocation facility.",
+          "sourceIds": [
+            "icolo-mba1-page",
+            "pdb-5019"
+          ],
+          "note": "Registry listing implies colocation; no gathered source states the type explicitly.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA1-C4",
+          "type": "location",
+          "statement": "MBA1 is located in Miritini, Mombasa.",
+          "sourceIds": [
+            "pdb-5019"
+          ],
+          "note": "Registry confirms Miritini; the operator page fetched does not state the area.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "MBAMBA1-C5",
+          "type": "status",
+          "statement": "MBA1 is operational.",
+          "sourceIds": [
+            "icolo-mba1-page",
+            "pdb-5019"
+          ],
+          "note": "Registry active with 94 networks and operator page live; no explicit in-service statement captured.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA1-C6",
+          "type": "capacity",
+          "statement": "MBA1's 13MW total capacity is publicly documented.",
+          "sourceIds": [],
+          "note": "DIVERGENCE RISK: directory states 13MW total / 0.9MW live IT load, but no public source located documents 13MW. Verify against an iColo/Digital Realty primary source.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        }
+      ]
+    },
+    "icolo-mba2": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "MBAMBA2-C1",
+          "type": "identity",
+          "statement": "iColo operates the Mombasa Two (MBA2) data centre in Mombasa.",
+          "sourceIds": [
+            "icolo-mba2-page",
+            "pdb-10232"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA2-C2",
+          "type": "operator",
+          "statement": "MBA2 is operated by iColo, now part of Digital Realty.",
+          "sourceIds": [
+            "icolo-mba2-page",
+            "pdb-10232"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA2-C3",
+          "type": "facility_type",
+          "statement": "MBA2 operates as a colocation facility.",
+          "sourceIds": [
+            "icolo-mba2-page",
+            "pdb-10232"
+          ],
+          "note": "Operator page cites hosting up to 600 customer racks; no source states 'colocation' verbatim.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA2-C4",
+          "type": "location",
+          "statement": "MBA2 is located in Nyali, Mombasa.",
+          "sourceIds": [
+            "pdb-10232"
+          ],
+          "note": "Registry confirms Nyali; the operator page fetched does not state the area.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "MBAMBA2-C5",
+          "type": "status",
+          "statement": "MBA2 launched in 2022 and is operational.",
+          "sourceIds": [
+            "icolo-mba2-page",
+            "pdb-10232"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (icolo.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "MBAMBA2-C6",
+          "type": "capacity",
+          "statement": "MBA2 hosts up to 600 customer racks.",
+          "sourceIds": [
+            "icolo-mba2-page"
+          ],
+          "note": "Operator-stated rack figure; directory tracks 1.75MW live IT load.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T1 (icolo.io); 1 distinct organisation(s); rule -> review."
+          }
+        }
+      ]
+    },
+    "paix-nairobi": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "PAIX-C1",
+          "type": "identity",
+          "statement": "PAIX Data Centres operates the NBO-1 data centre in Nairobi.",
+          "sourceIds": [
+            "paix-kenya-page",
+            "pdb-7995"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (paix.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "PAIX-C2",
+          "type": "operator",
+          "statement": "PAIX Data Centres is the operator of NBO-1.",
+          "sourceIds": [
+            "paix-kenya-page",
+            "pdb-7995"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (paix.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "PAIX-C3",
+          "type": "facility_type",
+          "statement": "NBO-1 operates as a colocation facility.",
+          "sourceIds": [
+            "paix-kenya-page",
+            "pdb-7995"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (paix.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "PAIX-C4",
+          "type": "location",
+          "statement": "NBO-1 is located in Britam Tower, Upper Hill, Nairobi.",
+          "sourceIds": [
+            "paix-kenya-page",
+            "pdb-7995"
+          ],
+          "note": null,
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (paix.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "PAIX-C5",
+          "type": "status",
+          "statement": "NBO-1 is operational.",
+          "sourceIds": [
+            "paix-kenya-page",
+            "pdb-7995"
+          ],
+          "note": "Registry active with 38 networks; no explicit in-service statement captured.",
+          "state": "verified",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.9,
+            "independence": 0.9,
+            "composite": 0.9,
+            "rationale": "Sources T1/T2 (paix.io, peeringdb.com); 2 distinct organisation(s); rule -> verified."
+          }
+        },
+        {
+          "id": "PAIX-C6",
+          "type": "capacity",
+          "statement": "NBO-1's 1.5MW total capacity is publicly documented.",
+          "sourceIds": [],
+          "note": "Directory states 1.5MW; no public source located documents this figure.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        }
+      ]
+    },
+    "nxtra-tatu-city": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "NXTRA-C1",
+          "type": "identity",
+          "statement": "Nxtra by Airtel is building a data centre at Tatu City, Kenya.",
+          "sourceIds": [
+            "press-telecompaper-nxtra"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (telecompaper.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "NXTRA-C2",
+          "type": "operator",
+          "statement": "The Tatu City facility is operated by Nxtra by Airtel (Airtel Kenya).",
+          "sourceIds": [
+            "press-telecompaper-nxtra"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (telecompaper.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "NXTRA-C3",
+          "type": "facility_type",
+          "statement": "The Tatu City facility is positioned as a large-scale (hyperscale) facility.",
+          "sourceIds": [],
+          "note": "Directory states Hyperscale with 44MW planned; no gathered source documents the positioning or figure.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "NXTRA-C4",
+          "type": "location",
+          "statement": "The facility is located at Tatu City, Eastern Bypass, Ruiru.",
+          "sourceIds": [
+            "press-telecompaper-nxtra"
+          ],
+          "note": "Press confirms Tatu City; the street-level detail rests on the directory's earlier collection.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (telecompaper.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "NXTRA-C5",
+          "type": "status",
+          "statement": "The facility is under construction with completion targeted for July 2027.",
+          "sourceIds": [
+            "press-telecompaper-nxtra"
+          ],
+          "note": "Consistent with the directory's Under Construction status.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (telecompaper.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "NXTRA-C6",
+          "type": "capacity",
+          "statement": "The facility's 44MW planned capacity is publicly documented.",
+          "sourceIds": [],
+          "note": "Directory states 44MW; not found in the sweep. Claim-specific source needed.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        }
+      ]
+    },
+    "seacom-mombasa-cls": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "SEACOM-C1",
+          "type": "identity",
+          "statement": "SEACOM operates the Mombasa cable landing station.",
+          "sourceIds": [
+            "pdb-1648"
+          ],
+          "note": "Operator site is a JS-rendered shell (no static content); registry is currently the only usable source.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "SEACOM-C2",
+          "type": "operator",
+          "statement": "The Mombasa CLS is operated by SEACOM Limited.",
+          "sourceIds": [
+            "pdb-1648"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "SEACOM-C3",
+          "type": "facility_type",
+          "statement": "The facility's primary role is submarine cable termination (cable landing station).",
+          "sourceIds": [
+            "pdb-1648"
+          ],
+          "note": "The registry record name states 'CLS'; no operator or press source gathered states it in prose.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "SEACOM-C4",
+          "type": "location",
+          "statement": "The CLS sits at the Swahili Cultural Centre site, Mombasa.",
+          "sourceIds": [
+            "pdb-1648"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "SEACOM-C5",
+          "type": "status",
+          "statement": "The CLS is operational.",
+          "sourceIds": [
+            "pdb-1648"
+          ],
+          "note": "Registry active since 2013 with 31 networks; no explicit in-service statement captured.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.75,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T2 (peeringdb.com); 1 distinct organisation(s); rule -> review."
+          }
+        }
+      ]
+    },
+    "raxio-kampala-ug1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "RAXIO-C1",
+          "type": "identity",
+          "statement": "Raxio operates the UG1 data centre at Namanve, Kampala, Uganda.",
+          "sourceIds": [
+            "press-independent-raxio"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (independent.co.ug); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "RAXIO-C2",
+          "type": "operator",
+          "statement": "UG1 is operated by Raxio Data Centres (Raxio Uganda).",
+          "sourceIds": [
+            "press-independent-raxio"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (independent.co.ug); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "RAXIO-C3",
+          "type": "facility_type",
+          "statement": "UG1 operates as a colocation facility.",
+          "sourceIds": [],
+          "note": "No gathered source states the type explicitly; directory says Colocation. Operator site blocked the sweep (HTTP 403).",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "RAXIO-C4",
+          "type": "location",
+          "statement": "UG1 is located in Namanve Industrial Park (Kampala Industrial and Business Park), Kampala.",
+          "sourceIds": [
+            "press-independent-raxio"
+          ],
+          "note": null,
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (independent.co.ug); 1 distinct organisation(s); rule -> review."
+          }
+        },
+        {
+          "id": "RAXIO-C5",
+          "type": "status",
+          "statement": "UG1 is operational.",
+          "sourceIds": [
+            "press-independent-raxio"
+          ],
+          "note": "Press describes recent functions hosted at the operating facility; no explicit in-service date captured.",
+          "state": "review",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.6,
+            "independence": 0.4,
+            "composite": 0.4,
+            "rationale": "Sources T3 (independent.co.ug); 1 distinct organisation(s); rule -> review."
+          }
+        }
+      ]
+    },
+    "africa-data-centres-kigali-kgl1": {
+      "investigatedAt": "2026-09-22",
+      "investigationNote": null,
+      "claims": [
+        {
+          "id": "KGL1-C1",
+          "type": "identity",
+          "statement": "Africa Data Centres operates the KGL1 data centre in Kigali, Rwanda.",
+          "sourceIds": [],
+          "note": "NEGATIVE SWEEP (2026-09-22): the ADC site carries no Kigali page (wp-json search returns only Lagos), no PeeringDB record exists, and no relevant press was located. Weakest record in the directory; editor to decide: claim-specific source or delist.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "KGL1-C2",
+          "type": "operator",
+          "statement": "KGL1 is operated by Africa Data Centres (Cassava Technologies).",
+          "sourceIds": [],
+          "note": "No public source located in the sweep.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "KGL1-C3",
+          "type": "facility_type",
+          "statement": "KGL1 operates as a colocation facility.",
+          "sourceIds": [],
+          "note": "No public source located in the sweep.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "KGL1-C4",
+          "type": "location",
+          "statement": "KGL1 is located in Kigali, Rwanda.",
+          "sourceIds": [],
+          "note": "No public source located in the sweep.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        },
+        {
+          "id": "KGL1-C5",
+          "type": "status",
+          "statement": "KGL1 is under construction with 2MW planned capacity.",
+          "sourceIds": [],
+          "note": "No public source located in the sweep documents the stage or the 2MW figure.",
+          "state": "unsupported",
+          "humanReview": "pending",
+          "reviewedBy": null,
+          "reviewedAt": null,
+          "assessment": {
+            "method": "rule-tier-v0.2",
+            "traceability": 0.0,
+            "independence": 0.0,
+            "composite": 0.0,
+            "rationale": "No usable evidence located in the 2026-09-22 sweep."
+          }
+        }
+      ]
+    }
+  }
+}

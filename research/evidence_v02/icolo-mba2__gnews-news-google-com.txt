@@ -1,0 +1,8 @@
+url: https://news.google.com/rss/articles/CBMiggFBVV95cUxPVFhtZTNic2tYd2o3RUducXNlckEtd2Z0UWxEU1hPUHdEcGFZdEluZ1ZUNXBQeHFPX1hkZVRpUnR6QWJqb082T2RpVG44Z21ZVE91WWR0amIzX1JoUzU2RjBjdzBfWVZjYlN0cmpmRjNoVUtrTk80TUpySFBXUVM2alRn?oc=5
+status: 200
+retrieved: 2026-09-22
+published: Fri, 19 Nov 2021 08:00:00 GMT
+bytes: 592492
+
+== head ==
+ Google News 

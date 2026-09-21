@@ -1,0 +1,28 @@
+url: https://www.seacom.mu/
+final: https://www.seacom.mu/
+status: 200
+retrieved: 2026-09-22
+bytes: 2213
+
+== head ==
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Click here 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

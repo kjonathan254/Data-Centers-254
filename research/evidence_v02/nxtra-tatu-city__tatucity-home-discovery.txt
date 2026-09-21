@@ -1,0 +1,8 @@
+url: https://tatucity.com/
+final: https://tatucity.com/
+status: 202
+retrieved: 2026-09-22
+bytes: 167
+
+== head ==
+ 

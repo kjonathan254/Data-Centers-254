@@ -1,0 +1,8 @@
+url: https://news.google.com/rss/articles/CBMifEFVX3lxTFBZa1B1cTdraWlJeWt3eXNUY3V0VGlrSjd1RkpxVnVkNVlDMklDNnd6LUx4NzBIdUVaNXhLXzFOWVFwMjA5ZENUQ2ZDMFFpX1o5ZE1NdEJlNmg5dHRsUFJRLWNBY0thWnhuLS1QQVVMcWM4N3NzSUt3VGpKQzc?oc=5
+status: 200
+retrieved: 2026-09-22
+published: Tue, 08 Sep 2026 07:00:00 GMT
+bytes: 592251
+
+== head ==
+ Google News 

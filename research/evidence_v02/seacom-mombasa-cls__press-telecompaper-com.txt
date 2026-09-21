@@ -1,0 +1,118 @@
+url: https://www.telecompaper.com/news/tata-communications-invests-in-seacom-cable--663038
+status: 200
+retrieved: 2026-09-22
+published: Tue, 17 Mar 2009 06:53:00 GMT
+bytes: 175183
+
+== window 1 ==
+ets
+ 
+ Mobile
+ 
+ Broadband
+ 
+ Satellite
+ 
+ Video
+ 
+ Semiconductor
+ 
+ IT
+ 
+ Enterprise Solutions
+ 
+ Network Equipment
+ 
+ Topics
+ 
+ Data Centre
+ 
+ Security
+ 
+ Artificial Intelligence
+ 
+ Consumer devices
+ 
+ Handsets
+ 
+ 5G
+ 
+ 6G
+ 
+ Spectrum
+ 
+ Fibre
+ 
+ Focus
+ 
+ Consumer
+ 
+ Enterprise
+ 
+ Wholesale
+ 
+ Merger & Acquisition
+ 
+ Finance
+ 
+ R&D
+ 
+ Pricing
+ 
+ Policy & Regulation
+ 
+ Market Research
+ 
+ Management / Staff
+ 
+ Regions
+ 
+ World
+ 
+ Europe
+ 
+ North America
+ 
+ Latin America
+ 
+ Asia
+
+== window 2 ==
+s has signed up as the Seacom undersea cable's anchor tenant and struck a deal to manage the cable, its billing systems and customer relations. Tata owns 56 percent of South African operator Neotel, which will benefit from the Seacom cable landing on the east coast of Africa. Neotel had already invested ZAR 20 million in the project and will manage the cable's landing station in Mtunzini. India-based Tata will also land the cable at Mumbai and connect to it in Marseilles when the 13
+
+== window 3 ==
+customer relations. Tata owns 56 percent of South African operator Neotel, which will benefit from the Seacom cable landing on the east coast of Africa. Neotel had already invested ZAR 20 million in the project and will manage the cable's landing station in Mtunzini. India-based Tata will also land the cable at Mumbai and connect to it in Marseilles when the 13,500km cable reaches India and France. The USD 600 million cable will deliver 1.28 Tbps of bandwidth, which is roughly 10 t
+
+== window 4 ==
+which will benefit from the Seacom cable landing on the east coast of Africa. Neotel had already invested ZAR 20 million in the project and will manage the cable's landing station in Mtunzini. India-based Tata will also land the cable at Mumbai and connect to it in Marseilles when the 13,500km cable reaches India and France. The USD 600 million cable will deliver 1.28 Tbps of bandwidth, which is roughly 10 times the capacity available on Africa's only existing undersea cable, Sa
+
+== window 5 ==
+in Mtunzini. India-based Tata will also land the cable at Mumbai and connect to it in Marseilles when the 13,500km cable reaches India and France. The USD 600 million cable will deliver 1.28 Tbps of bandwidth, which is roughly 10 times the capacity available on Africa's only existing undersea cable, Sat3. Tata Communications Transformation Services has been awarded the network administration, operations and maintenance contract for the Seacom cable system. The Seacom cable is expecte
+
+== window 6 ==
+nies: Tata Communications , 
+ NeoTel , 
+ Seacom 
+ Countries: South Africa 
+ Tags: Network Access ,
+ Network operations services ,
+ Wholesale ,
+ Financial funding ,
+ Contract & orders 
+ Top stories this week 
+ 14:14
+ 
+ Googlebook laptops to launch in early October starting at USD 899
+ 
+ 13:25
+ 
+ EU approves data centre energy labelling scheme
+ 
+ 11:52
+ 
+ Nscale sets co-ordinates for IPO in New York
+ 
+ 06:38
+ 
+ Du and Nokia deploy 6-carrier aggregation on commercial 5G-advanced netwo
+

@@ -173,6 +173,50 @@ export default function MethodologyPage() {
             ))}
           </div>
 
+          {/* Claim-level verification (Evidence Engine v0.2) */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Claim-level verification (v0.2 pilot)
+          </h2>
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-6">
+            A facility is not one fact, it is many. Since September 2026 we
+            have been moving the directory from facility-wide confidence
+            badges to claim-level evidence: each facility record is broken
+            into separate claims (identity, operator, facility type, location,
+            status, capacity, connectivity), and every claim carries its own
+            tiered sources with verbatim excerpts, retrieval dates and a
+            verification state.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="rounded-xl border border-border/50 bg-accent/30 p-5">
+              <h3 className="text-base font-semibold text-foreground mb-2">Source tiers</h3>
+              <ul className="text-sm leading-relaxed text-muted-foreground space-y-1.5">
+                <li><strong className="text-foreground/90">Tier 1, Primary:</strong> the operator, a government agency, a regulator, official filings and press releases.</li>
+                <li><strong className="text-foreground/90">Tier 2, Independent authoritative:</strong> government reports, regulators, research institutions, established industry registries such as PeeringDB.</li>
+                <li><strong className="text-foreground/90">Tier 3, Reputable secondary:</strong> established technology and business press.</li>
+                <li><strong className="text-foreground/90">Tier 4, Discovery only:</strong> aggregators, directories and snippets. They can help us find a source; they never establish a claim.</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border/50 bg-accent/30 p-5">
+              <h3 className="text-base font-semibold text-foreground mb-2">The four public states</h3>
+              <ul className="text-sm leading-relaxed text-muted-foreground space-y-1.5">
+                <li><strong className="text-foreground/90">Verified:</strong> enough strong evidence supports the claim, at least one primary or authoritative source plus one independent corroborating source.</li>
+                <li><strong className="text-foreground/90">Review:</strong> evidence exists but does not yet meet the threshold (for example, a single organisation).</li>
+                <li><strong className="text-foreground/90">Unsupported:</strong> the current evidence does not adequately support the claim.</li>
+                <li><strong className="text-foreground/90">Unverified:</strong> the claim has not yet been through the pipeline.</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-14">
+            One rule sits above the machinery: the AI research assistant
+            collects and scores evidence, but it never establishes facts. Every
+            verification decision is approved by the DataCentre254 editor, and
+            every status change is recorded in an append-only evidence ledger,
+            so the history of a record can be audited, not just its current
+            state. The v0.2 pilot covers eleven facilities; the panel on those
+            facility pages exposes the claim list, the source trail and each
+            approved state.
+          </p>
+
           {/* Counting rules */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Counting rules

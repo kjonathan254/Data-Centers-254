@@ -1,0 +1,18 @@
+url: https://www.bing.com/search?q=iColo%20NBO2%20Nairobi%20data%20centre%20Digital%20Realty
+final: https://www.bing.com/search?q=iColo%20NBO2%20Nairobi%20data%20centre%20Digital%20Realty
+status: 200
+retrieved: 2026-09-22
+bytes: 125513
+
+== result links ==
+https://www.bing.com/ck/a?!&amp;&amp;p=d86d8aaa7ce852c40db33a6e0e06ede1507fd0517094ddf3c70c3177d4fc9606JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly9xLmhhdGVuYS5uZS5qcC8xMjU5MjU4ODg3&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=7290f2779ac2b481d6bc4abc25b0bbb1f4fdd8db7b7360487e3495411099aec7JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3RvcGljLzE5NjUzNDUwL2hvdA&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=cd58b77008fb271a55d16a0d6148ef98fdd09bddd77e8130cfdcf53db40374b4JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzUxMDI2NjgxL2Fuc3dlcnMvdXBkYXRlZA&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=9ae79c637f238cb93e82a4818286c58f46ea7916d3251034fa208bccd8656c8aJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly9xLmhhdGVuYS5uZS5qcC8xMjc0NTE5MTk1&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=3215f331e1d88c363625b821a3ff488925282df96dabf26c52c6c2c54501b367JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIzNTk1NzA0&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=aeb2651d55b1185ee0450a41217bc4af47a2e3673e4da72ef83d98eafe5ebdf3JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL2NvbHVtbi9wLzM5ODU0NDIyNw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=344b6fd0c396493fe90c9e4c0d21eb410c1c19e18289f9cbb3bdbca1ecca420eJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzE5NjY0MDU1&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=16b1e2a91fde23a7ca41f1e4289eabd178d1034a5b38650a66a034e642292c30JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzQxMTA1NzYxP3NvcnQ9Y3JlYXRlZA&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=069428bb539b965279df37fab1fbcb891b890d44c18aa8ad6bc200069126aa2fJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI3MTc3MTIy&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=edd67c003e4faa705b1d56a62e5e2d8032779ea292e22e988f763841de5c54b9JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=22cd14a1-cc19-6efa-32a8-037acd636f2e&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI0ODQ5Njk5P3NvcnQ9Y3JlYXRlZA&amp;ntb=1
+

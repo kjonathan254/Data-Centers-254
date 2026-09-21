@@ -1,0 +1,18 @@
+url: https://www.bing.com/search?q=Raxio%20Kampala%20UG1%20data%20centre%20launch
+final: https://www.bing.com/search?q=Raxio%20Kampala%20UG1%20data%20centre%20launch
+status: 200
+retrieved: 2026-09-22
+bytes: 126663
+
+== result links ==
+https://www.bing.com/ck/a?!&amp;&amp;p=c01a030f0d338e7fe775832e55063fba3d6ad3da820735d5d7d43abd16f6f121JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yMDU1MzIxNDQyMDYyMDE2NTIy&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=179a7dc3700ad915ca9fe8ee840ab362a738bfacae415de1d016cb693d33faccJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80MTIwNjcxNTYz&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=b2e994ebb8cb176f7a3fab8e59f0b54230167c364fce681465273302eccadb1dJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzcwMDU2L2FydGljbGUvZGV0YWlscy8xMzEyODc0ODc&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=1f80b2275cb77c7600092d5959e9f838e31ff5081fc780e0e4b542014b762978JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3h3ejI5MC9hcnRpY2xlL2RldGFpbHMvMTUyNjAzNjQw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=e71da1010e019e6ad4a888face565e5b293baea156f320a24ee3ad8a3f233949JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly93d3cuNTJwb2ppZS5jbi90aHJlYWQtMjA5Njg0MC0xLTEuaHRtbA&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=dc7c16fd7d7e3c4c8f73a3170fba274d051f59cac6fd6ad071ef09a2aafa9d91JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly9tYW95YW5xaW5nLmNvbS9uZXdmaWxldGltZQ&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=f86546d81a862e908882a17b7f796a248a0697848e9c4451b1581ea83753cc87JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly9zb2Z0LjNkbWdhbWUuY29tL2Rvd24vMjAwNjI3Lmh0bWw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=7cc132e16cb27739344c887eb41933f677cd66c2bde897a3317cfd0eb9052a19JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veHp0aW1lL3AvMTk2Njc0NTA&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=3fd10ba010b350cbcc66a29cc85a46602496beff086075871a88efa430b1d0abJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly93d3cucGhwLmNuL2ZhcS8xODc5NTQ3Lmh0bWw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=028957cd33a3b425dc6f6e8e4e5094692d0f71b3620475a2b668f712b0212fa9JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=1917f5f6-0925-6416-284c-e22d08b465c2&amp;u=a1aHR0cHM6Ly93d3cuNTJwb2ppZS5jbi90aHJlYWQtMTg1MjU2OS0xLTEuaHRtbA&amp;ntb=1
+

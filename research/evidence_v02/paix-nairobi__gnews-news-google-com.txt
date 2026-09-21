@@ -1,0 +1,8 @@
+url: https://news.google.com/rss/articles/CBMihAFBVV95cUxNeUk0bGxoQTV6SlRzcVFtVDdDdU5nenJmRk1xTHRiVFdvTFVaemJ0RUtOOHktNXVlNjRVclpTRjRtVzRwLUFndTJjaWpaVmMwaDItTmFmUTlYZ1N3emYwRTR3bGVlLWEwTDYwSzRMRmZfVGVOUGJfaTJlV1RSOGo4blphVHg?oc=5
+status: 200
+retrieved: 2026-09-22
+published: Fri, 28 Aug 2020 07:00:00 GMT
+bytes: 592533
+
+== head ==
+ Google News 

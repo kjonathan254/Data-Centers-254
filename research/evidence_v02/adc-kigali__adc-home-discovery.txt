@@ -1,0 +1,269 @@
+url: https://www.africadatacentres.com/
+final: https://www.africadatacentres.com/
+status: 200
+retrieved: 2026-09-22
+bytes: 160057
+
+== candidate links ==
+https://www.africadatacentres.com/
+https://www.africadatacentres.com/feed/
+https://www.africadatacentres.com/comments/feed/
+https://www.africadatacentres.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.africadatacentres.com%2F
+https://www.africadatacentres.com/wp-json/
+https://www.africadatacentres.com/wp-json/wp/v2/pages/2299
+https://www.africadatacentres.com/xmlrpc.php?rsd
+https://www.africadatacentres.com/wp-content/uploads/2025/04/cropped-Site-Icon-1-32x32.jpg
+https://www.africadatacentres.com/wp-content/uploads/2025/04/cropped-Site-Icon-1-192x192.jpg
+https://www.africadatacentres.com/wp-content/uploads/2025/04/cropped-Site-Icon-1-180x180.jpg
+https://www.africadatacentres.com
+https://www.africadatacentres.com/about/
+https://www.africadatacentres.com/midrand/
+https://www.africadatacentres.com/samrand-2/
+https://www.africadatacentres.com/capetown/
+https://www.africadatacentres.com/nairobi/
+https://www.africadatacentres.com/lagos/
+https://www.africadatacentres.com/colocation/
+https://www.africadatacentres.com/cloud-services/
+https://www.africadatacentres.com/network-services/
+https://www.africadatacentres.com/facilities/
+https://www.africadatacentres.com/security/
+https://www.africadatacentres.com/remote-hands/
+https://www.africadatacentres.com/hardware/
+https://www.africadatacentres.com/innovation/
+
+== window 1 ==
+Skip to content 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 2 ==
+content 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ J
+
+== window 3 ==
+ies 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 4 ==
+Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 5 ==
+novation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Log In
+

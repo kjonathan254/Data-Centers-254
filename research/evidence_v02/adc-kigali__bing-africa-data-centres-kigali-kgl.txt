@@ -1,0 +1,18 @@
+url: https://www.bing.com/search?q=Africa%20Data%20Centres%20Kigali%20KGL1%20launch
+final: https://www.bing.com/search?q=Africa%20Data%20Centres%20Kigali%20KGL1%20launch
+status: 200
+retrieved: 2026-09-22
+bytes: 123764
+
+== result links ==
+https://www.bing.com/ck/a?!&amp;&amp;p=73836cfc3bb100996e3a2c0b7ac5d2ff5528665f7a4f6bc3ee309fdd8e480509JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIzNDk2NjY0&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=4a493158f1e14e8cac30a45e483b923307b10dbc05d9405807d483baa7f14bb4JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3RhcmRpcy9iZC9hcnQvNjc5MzcwNDY5&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=dc0bb782e508cb1e5be2e76cc113d220dba64d1f56d7c4e6b884434403fb789bJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIwNDY1NjYz&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=40d1b455a743ba57632b9928e440d5d16a53476962c287fd67571de8360d6869JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL2NvbHVtbi9wLzMwNzU2MTgx&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=97f23528c8e4d40c7ec74259f8b2680a90bbce3b866d135d7f3666e9e5bc4b53JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIxNDUzOTYy&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=c9261bf82f3d34bac48a7b8d4e077dc6bb93f032aa4562ea1d1c5d01ef041206JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzY0NDk0Njkx&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=c82a93adba2f522b7e05c6d08b522ee5696b33dc7ba08086a9c948ee97375f21JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIxOTAzOTYy&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=f0f2a28176a826cba195b9bde0e20ab42ce68f935383c2860b9c423d349a11d4JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI5NzU1MTc4MQ&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=b29890c3807414f1bf349423cf861cdedf15602303aa961ca5c7628fa75f0331JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzYyNTA5MDM0&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=64b7a7e3b861dcef33ac6a45631545d93bb9e51e74eaec770ec9cb0d505a1b1aJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=0ff98407-86d6-60a3-34eb-93dc87776177&amp;u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI5MTg1OTk5NQ&amp;ntb=1
+

@@ -1,0 +1,114 @@
+{
+ "adc-nbo1/adc-nairobi-page": {
+  "status": 200,
+  "bytes": 172603,
+  "file": "adc-nbo1__adc-nairobi-page.txt",
+  "ms": 3702
+ },
+ "adc-kigali/adc-kigali-page": {
+  "status": 200,
+  "bytes": 160057,
+  "file": "adc-kigali__adc-kigali-page.txt",
+  "ms": 5334
+ },
+ "adc-kigali/adc-home-discovery": {
+  "status": 200,
+  "bytes": 160057,
+  "file": "adc-kigali__adc-home-discovery.txt",
+  "ms": 3325
+ },
+ "adc-kigali/cassava-home-discovery": {
+  "status": 200,
+  "bytes": 334033,
+  "file": "adc-kigali__cassava-home-discovery.txt",
+  "ms": 4137
+ },
+ "icolo-nbo1/icolo-nairobi-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found"
+ },
+ "icolo-nbo1/icolo-home-discovery": {
+  "status": 200,
+  "bytes": 68739,
+  "file": "icolo-nbo1__icolo-home-discovery.txt",
+  "ms": 1052
+ },
+ "icolo-nbo2/icolo-nairobi-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found"
+ },
+ "icolo-nbo2/allafrica-nbo2-story": {
+  "status": 200,
+  "bytes": 119132,
+  "file": "icolo-nbo2__allafrica-nbo2-story.txt",
+  "ms": 1138
+ },
+ "icolo-mba1/icolo-mombasa-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found"
+ },
+ "icolo-mba2/icolo-mombasa-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found"
+ },
+ "paix-nairobi/paix-kenya-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found"
+ },
+ "nxtra-tatu-city/nxtra-home-discovery": {
+  "status": "error",
+  "error": "HTTP Error 525: <none>"
+ },
+ "nxtra-tatu-city/tatucity-home-discovery": {
+  "status": 202,
+  "bytes": 167,
+  "file": "nxtra-tatu-city__tatucity-home-discovery.txt",
+  "ms": 881
+ },
+ "nxtra-tatu-city/ddg-nxtra-tatu": {
+  "status": 202,
+  "bytes": 14267,
+  "file": "nxtra-tatu-city__ddg-nxtra-tatu.txt",
+  "ms": 146
+ },
+ "seacom-mombasa-cls/seacom-home-discovery": {
+  "status": 200,
+  "bytes": 2213,
+  "file": "seacom-mombasa-cls__seacom-home-discovery.txt",
+  "ms": 1782
+ },
+ "seacom-mombasa-cls/ddg-seacom-mombasa": {
+  "status": "error",
+  "error": "<urlopen error timed out>"
+ },
+ "raxio-kampala-ug1/raxio-home-discovery": {
+  "status": "error",
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "raxio-kampala-ug1/raxio-kampala-guess": {
+  "status": "error",
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "raxio-kampala-ug1/ddg-raxio-kampala": {
+  "status": 202,
+  "bytes": 14261,
+  "file": "raxio-kampala-ug1__ddg-raxio-kampala.txt",
+  "ms": 145
+ },
+ "ixafrica-nbox1/ixafrica-home-discovery": {
+  "status": 200,
+  "bytes": 197415,
+  "file": "ixafrica-nbox1__ixafrica-home-discovery.txt",
+  "ms": 1844
+ },
+ "ixafrica-nbox1/ddg-ixafrica-nbox1": {
+  "status": "error",
+  "error": "<urlopen error timed out>"
+ },
+ "peeringdb-registry/pdb-api-batch": {
+  "status": 200,
+  "bytes": 8747,
+  "file": "peeringdb-registry__pdb-api-batch.txt",
+  "ms": 656
+ }
+}

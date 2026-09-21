@@ -1,0 +1,18 @@
+url: https://www.bing.com/search?q=SEACOM%20Mombasa%20cable%20landing%20station%20data%20centre
+final: https://www.bing.com/search?q=SEACOM%20Mombasa%20cable%20landing%20station%20data%20centre
+status: 200
+retrieved: 2026-09-22
+bytes: 124242
+
+== result links ==
+https://www.bing.com/ck/a?!&amp;&amp;p=4a60909104a60904cb1d8da810e8ce1c3e70556da1e0b0891d86d592dde6a94eJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cudGhlZm9yay5pdC9uZWFyLW1lL3BpenplcmlhLXQ4OTY&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=1baec54402614695b473a8bec489665952e84037cbdf7c9f2de405096703234cJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cudGhlZm9yay5pdC9uZWFyLW1lL3BpenphLXQ2NTI&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=36c61ad75885bdc4f1d66e99a10ffc2aada84533b88bee1a33ccb86fbddd47b9JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly9hcGVydG92aWNpbm9hbWUyNC5jb20vdHJvdmFyZS9waXp6ZXJpYS12aWNpbm8tYS1tZS8&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=81bef283dc4292d08b298349498c8d24f8cdd3872a6011a3e55e5ff4bab01665JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cuanVzdGVhdC5pdC9kb21pY2lsaW8vdmljaW5vLWEtbWUvcGl6emE&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=4e14e08d30cf6243497d09d6dfc64fd7cb34eac37342818c630a8c852e5680d5JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cucGFnaW5lZ2lhbGxlLml0L3BpenplcmllLmh0bQ&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=583c045164278a22b0685b82d3d4b5968527fd8507e1c8808e101cf72cdbd5d7JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cucGFnaW5lYmlhbmNoZS5pdC9waXp6ZXJpYS5odG0&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=61fb3589d7fc95b38a906566532b2247ed5599c2bd63a82a60f82768782ad2ddJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly9jZXJjYXJldmljaW5vYW1lLml0L3Jpc3RvcmFudGktZS1waXp6ZXJpZS12aWNpbm8tYS1tZS8&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=467e71599e857d84a71252a48ec5801451394c3d12167fa47d2e57580f44a49bJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly9jZXJjYXJldmljaW5vYW1lLml0L3BpenplcmllLXZpY2luby1hLW1lLWNvbnNlZ25hLWEtZG9taWNpbGlvLw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=08b09fc8a31924e1e0c351f608c718d5fcf22f987c2fb861b0240779b1fbafabJmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly93d3cudHJpcGFkdmlzb3IuaXQvUmVzdGF1cmFudHMtYzMxLVBpenphLmh0bWw&amp;ntb=1
+https://www.bing.com/ck/a?!&amp;&amp;p=10caf98ec007fceebae2cf558879337a28695bb7cee9aff3ecc0873ef6762bb9JmltdHM9MTc4OTk0ODgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=28f54229-fe72-620b-327c-55f2ffd36396&amp;u=a1aHR0cHM6Ly9yZXN0YXVyYW50Z3VydS5pdC9waXp6YS1uZWFyLW1l&amp;ntb=1
+

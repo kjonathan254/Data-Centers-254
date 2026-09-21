@@ -1,0 +1,242 @@
+url: https://www.africadatacentres.com/kigali/
+final: https://www.africadatacentres.com/
+status: 200
+retrieved: 2026-09-22
+bytes: 160057
+
+== window 1 ==
+Skip to content 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 2 ==
+content 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ J
+
+== window 3 ==
+ies 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 4 ==
+Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact
+
+== window 5 ==
+novation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Log In
+

@@ -1,0 +1,8 @@
+url: https://news.google.com/rss/articles/CBMie0FVX3lxTE9wWjhfM1J5RFZaWWxjZVFDRFdaN2lVT3hIWUlscGI2MVJGVmZVV05kWU92ZUlFd3NqV01mWUZwUXRRZy1wNTdnSzBsWkIzNlJXeXUyM3UzOE5WSXlNM05wVXE5ekhMUS1GWDlTRnpRS1N0U3FmbUoyX0ZLWQ?oc=5
+status: 200
+retrieved: 2026-09-22
+published: Sun, 14 Dec 2025 08:00:00 GMT
+bytes: 592285
+
+== head ==
+ Google News 

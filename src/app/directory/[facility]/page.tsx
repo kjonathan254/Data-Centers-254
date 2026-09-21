@@ -5,13 +5,14 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft, ArrowRight, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
   Zap, Server, Shield, Building2, Globe, Wifi, FileText, Database,
-  GitCompareArrows, ExternalLink, Landmark,
+  GitCompareArrows, ExternalLink, Landmark, ShieldAlert, CircleDashed,
 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import {
   getFacilities, getFacilityBySlug,
 } from "@/lib/directory-data";
+import { getFacilityEvidence, getPublicVerification } from "@/lib/evidence";
 import { pickPeers } from "@/lib/compare";
 import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
@@ -44,6 +45,28 @@ const STAGE_ICON: Record<string, typeof CheckCircle> = {
   "Early Stage": Megaphone,
 };
 
+/** Verification chip styles, keyed by the public (human-gated) state. */
+const VERIFY_BADGE: Record<string, string> = {
+  verified: "border-neon/25 text-neon bg-neon/10",
+  review: "border-amber-500/25 text-amber-500 bg-amber-500/10",
+  unsupported: "border-red-500/25 text-red-400 bg-red-500/10",
+  unverified: "border-border text-muted-foreground bg-accent/50",
+};
+
+const TIER_BADGE: Record<number, string> = {
+  1: "border-neon/30 text-neon",
+  2: "border-cyan/30 text-cyan",
+  3: "border-border text-muted-foreground",
+  4: "border-border/50 text-muted-foreground/60",
+};
+
+const TIER_LABEL: Record<number, string> = {
+  1: "Primary",
+  2: "Independent",
+  3: "Press/Secondary",
+  4: "Discovery only",
+};
+
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function fmtVerified(v: string | null): string {
@@ -62,6 +85,13 @@ function stagePhrase(status: string): string {
     case "Early Stage": return "at an early, announced stage";
     default: return status.toLowerCase();
   }
+}
+
+function VerifyIcon({ state, className }: { state: string; className?: string }) {
+  if (state === "verified") return <ShieldCheck className={className} />;
+  if (state === "review") return <Clock className={className} />;
+  if (state === "unsupported") return <ShieldAlert className={className} />;
+  return <CircleDashed className={className} />;
 }
 
 export async function generateMetadata({
@@ -109,6 +139,8 @@ export default async function FacilityPage({
   const f = getFacilityBySlug(slug);
   if (!f) notFound();
   const peers = pickPeers(f, 2);
+  const evidence = getFacilityEvidence(f.slug);
+  const verify = getPublicVerification(f.slug);
 
   const all = [...getFacilities()].sort(
     (a, b) =>
@@ -198,6 +230,11 @@ export default async function FacilityPage({
                   AI-Ready
                 </span>
               )}
+              <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${VERIFY_BADGE[verify.state]}`}
+                title="Claim-level verification state, approved by the DataCentre254 editor">
+                <VerifyIcon state={verify.state} className="size-3.5" />
+                {verify.label}
+              </span>
             </div>
             <h1 className="h-display mt-4 text-foreground">{f.name}</h1>
             <p className="mt-3 text-base text-muted-foreground sm:text-lg">
@@ -440,6 +477,100 @@ export default async function FacilityPage({
               </div>
             </aside>
           </div>
+
+          {/* Verification: claim-level evidence, human-gated */}
+          {evidence && (
+            <section className="card-solid mt-10 rounded-xl p-5 sm:p-6" aria-label="Claim-level verification">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <h2 className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                  <ShieldCheck className="size-4 text-neon" /> Verification
+                </h2>
+                <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-medium ${VERIFY_BADGE[verify.state]}`}>
+                  <VerifyIcon state={verify.state} className="size-3.5" />
+                  {verify.label}
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  {verify.claimCount} claim{verify.claimCount === 1 ? "" : "s"} · {verify.sourceCount} source{verify.sourceCount === 1 ? "" : "s"}
+                  {verify.tierCounts[1] ? ` · Primary (${verify.tierCounts[1]})` : ""}
+                  {verify.tierCounts[2] ? ` · Independent (${verify.tierCounts[2]})` : ""}
+                  {verify.tierCounts[3] ? ` · Press (${verify.tierCounts[3]})` : ""}
+                </span>
+              </div>
+
+              {verify.editorialStatus !== "approved" ? (
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Claim-level evidence was collected on {evidence.investigatedAt} and is
+                  now in editorial review. Until the DataCentre254 editor approves each
+                  claim, the public verification state stays <strong>Unverified</strong>.
+                </p>
+              ) : (
+                verify.lastReviewed && (
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    Last editorial evidence review: {verify.lastReviewed}
+                  </p>
+                )
+              )}
+
+              <details className="group mt-4">
+                <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-cyan hover:underline">
+                  View evidence
+                  <ArrowRight className="size-3.5 transition-transform group-open:rotate-90" />
+                </summary>
+                <div className="mt-4 space-y-4">
+                  {evidence.claims.map((claim) => (
+                    <div key={claim.id} className="rounded-lg border border-border/50 p-4">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-sm font-medium text-foreground/90">{claim.statement}</p>
+                        <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wider ${VERIFY_BADGE[claim.humanReview === "approved" ? claim.state : "unverified"]}`}>
+                          <VerifyIcon state={claim.humanReview === "approved" ? claim.state : "unverified"} className="size-3" />
+                          {claim.humanReview === "approved" ? claim.state : "editorial review pending"}
+                        </span>
+                      </div>
+                      {claim.sourceIds.length > 0 && (
+                        <ul className="mt-3 space-y-2.5">
+                          {claim.sourceIds.map((sid) => {
+                            const s = evidence.sources[sid];
+                            if (!s) return null;
+                            return (
+                              <li key={sid} className="text-xs leading-relaxed text-muted-foreground">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <span className={`rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${TIER_BADGE[s.tier]}`}>
+                                    Tier {s.tier} · {TIER_LABEL[s.tier]}
+                                  </span>
+                                  <a href={s.url} target="_blank" rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-cyan hover:underline">
+                                    {s.label} <ExternalLink className="size-3 opacity-60" />
+                                  </a>
+                                  <span className="text-[10px] text-muted-foreground/70">
+                                    retrieved {s.retrievedDate}
+                                    {s.publishedDate ? ` · published ${s.publishedDate}` : ""}
+                                  </span>
+                                </div>
+                                {s.excerpt && (
+                                  <blockquote className="mt-1.5 border-l-2 border-border/60 pl-3 italic text-muted-foreground/90">
+                                    &ldquo;{s.excerpt}&rdquo;
+                                  </blockquote>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </details>
+
+              <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
+                Every claim is verified separately against tiered sources. The AI research
+                assistant collects and scores evidence; DataCentre254&apos;s editor approves
+                each verification decision and the full history is kept in an evidence ledger.
+              </p>
+              <Link href="/methodology" className="mt-2 inline-block text-xs text-cyan underline hover:underline">
+                How we verify claims →
+              </Link>
+            </section>
+          )}
 
           {/* Prev / next */}
           <nav aria-label="More facilities" className="mt-14 grid gap-3 border-t border-border/40 pt-8 sm:grid-cols-2">

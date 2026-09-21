@@ -1,0 +1,8 @@
+url: https://news.google.com/rss/articles/CBMiigFBVV95cUxOOWdhaHhyMDUyRXZRTVR4RUlrVEF3bGJLRFA5Y1Z0VXp1NUE4QVd4cFc2RGR4bG1JcGZPdlE0UUJxY1ZSQjl5cXlybUQ1dnVEWkFfblRmb2RhSjU0WUtyY2FHR05Ua2p3YmppSDMtbm5URHJoTGczRWxCWVdwVFZQcHpTTFFtbXo1Znc?oc=5
+status: 200
+retrieved: 2026-09-22
+published: Tue, 03 Feb 2026 08:00:00 GMT
+bytes: 592683
+
+== head ==
+ Google News 

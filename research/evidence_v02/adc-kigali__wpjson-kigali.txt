@@ -1,0 +1,24 @@
+url: https://www.africadatacentres.com/wp-json/wp/v2/pages?search=kigali
+final: https://www.africadatacentres.com/wp-json/wp/v2/pages?search=kigali
+status: 200
+retrieved: 2026-09-22
+bytes: 99892
+
+== window 1 ==
+57:26","date_gmt":"2022-04-08T06:57:26","guid":{"rendered":"https:\/\/www.africadatacentres.com\/?page_id=5460"},"modified":"2024-06-14T10:29:02","modified_gmt":"2024-06-14T08:29:02","slug":"lagos","status":"publish","type":"page","link":"https:\/\/www.africadatacentres.com\/lagos\/","title":{"rendered":"Lagos"},"content":{"rendered":"\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"5460\"
+
+== window 2 ==
+;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}\" data-widget_type=\"text-editor.default\">\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"color: #ffffff;\">Expand your digitisation solutions in West Africa with Lagos Data Centre by Africa Data Centres, the largest pan-African and interconnected data centre network. Strategically located in
+
+== window 3 ==
+e network. Strategically located in Lagos, Nigeria, LOS 1 Lagos Data Centre serves local and other African markets as the leader in data centre security, data infrastructure management and cloud- and carrier-neutrality.<\/span><\/p>\t\t\t\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t\t\t<\/div>\n\t\t<\/div>\n\t\t\t\t<div class=\"elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-ele
+
+== window 4 ==
+core priority, <\/span><span style=\"font-weight: 400;\">the Lagos Data Centre operation <\/span><span style=\"font-weight: 400;\">joins a pan-African network of data centres, including Johannesburg, Nairobi, Cape Town, Harare, and Kigali. Paving the way for hyperscale customers to deploy digitisation solutions to West Africa, <\/span><span style=\"font-weight: 400;\">this <\/span><span style=\"font-weig
+
+== window 5 ==
+le=\"font-weight: 400;\">the Lagos Data Centre operation <\/span><span style=\"font-weight: 400;\">joins a pan-African network of data centres, including Johannesburg, Nairobi, Cape Town, Harare, and Kigali. Paving the way for hyperscale customers to deploy digitisation solutions to West Africa, <\/span><span style=\"font-weight: 400;\">this <\/span><span style=\"font-weight: 400;\">data centre exists t
+
+== window 6 ==
+e Lagos Data Centre operation <\/span><span style=\"font-weight: 400;\">joins a pan-African network of data centres, including Johannesburg, Nairobi, Cape Town, Harare, and Kigali. Paving the way for hyperscale customers to deploy digitisation solutions to West Africa, <\/span><span style=\"font-weight: 400;\">this <\/span><span style=\"font-weight: 400;\">data centre exists to expand customers\u2019 digita
+
