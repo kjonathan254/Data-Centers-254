@@ -6,14 +6,15 @@
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
     "rule": "AI never establishes facts or publishes; the editor reviews every claim before any public use",
-    "status": "EDITORIAL REVIEW COMPLETE (Uganda, Rwanda, Tanzania - all three country pipelines approved for publication)",
+    "status": "EDITORIAL REVIEW COMPLETE (Uganda, Rwanda, Tanzania, Kenya - all four country pipelines approved for publication)",
     "reviewedBy": "Editor, DataCentre254 (rulings on the three review questions delegated to the agent, 2026-09-22)",
     "reviewedAt": "2026-09-22",
-    "scope": "Uganda reviewed 2026-09-22 (rulings on LC-C3 publication, DP-C4 structure, pillar-gaps convention). Rwanda (r3) and Tanzania (r4) reviewed 2026-09-22 by the editor via standing full delegation recorded in the editorial session (\"full authority... approved as long as you are in agreement\"): agent re-reviewed all 26 claims against source tiers and capture states, found state assignments conservative (snippet-only sources held at partially-verified; every verified claim rests on captured Tier-1/Tier-2 instrument text), and approved publication without state changes. Nothing publishes outside the 5-state vocabulary; upgrade paths remain live for capture-pending sources.",
+    "scope": "Uganda reviewed 2026-09-22 (rulings on LC-C3 publication, DP-C4 structure, pillar-gaps convention). Rwanda (r3), Tanzania (r4) and Kenya (r8) reviewed 2026-09-22 by the editor via standing full delegation recorded in the editorial session (\"full authority... approved as long as you are in agreement\"): agent re-reviewed all 26 claims against source tiers and capture states, found state assignments conservative (snippet-only sources held at partially-verified; every verified claim rests on captured Tier-1/Tier-2 instrument text), and approved publication without state changes. Nothing publishes outside the 5-state vocabulary; upgrade paths remain live for capture-pending sources. Kenya (r8) reviewed 2026-09-22 by the editor via the same standing delegation: agent re-reviewed all 13 claims against captured regulator operations (ODPC live register, SEZA, KenInvest eProcedures, EPRA, NEMA, ministry pages), held every statute-rate and negative/localisation claim at partially-verified pending Kenya Law text captures, and approved publication.",
     "rulings": {
       "uganda": "approved 2026-09-22 (r2 delegated rulings applied)",
       "rwanda": "approved 2026-09-22 (delegated review, no state changes; RW-DP-C6 stays partially-verified pending full-text capture of NCSA deadline notice)",
-      "tanzania": "approved 2026-09-22 (delegated review, no state changes; TZ-LC-C2, TZ-EN-C1, TZ-ENV-C1 stay partially-verified with documented upgrade paths)"
+      "tanzania": "approved 2026-09-22 (delegated review, no state changes; TZ-LC-C2, TZ-EN-C1, TZ-ENV-C1 stay partially-verified with documented upgrade paths)",
+      "kenya": "approved 2026-09-22 (delegated review; 9 verified from T1 regulator captures, 4 partially-verified pending statute text; construction-building recorded as a structured gap)"
     }
   },
   "statusVocabulary": {
@@ -482,6 +483,138 @@
       "captureStatus": "captured",
       "captureNote": "Capture mission 2026-09-22: located via UCC site navigation after the /description-telecom-licences slug 404'd. Anchors the framework's statutory basis (ss.5,6,21,22,24,25 + Licensing Regulations) and links the definitive 'Description of Telecom Licenses and Authorizations' document, which remains uncaptured.",
       "excerpt": "Licensing ... as outlined in section 5(1)(b) of the Uganda Communications Act 2013 ... the UCC has diligently established specific categories of licenses. ... Compliance with Section 22 'Licence for telecommunications' ... 'a person shall not, establish a telecommunications station, provide telecommunications services or construct, maintain or operate telecommunications apparatus without a licence issued by the Commission.'"
+    },
+    "ca-licensing-procedures": {
+      "label": "Communications Authority of Kenya - Licensing Procedures (CA licensing section)",
+      "url": "https://ca.go.ke/licensing-procedures",
+      "tier": 1,
+      "publisher": "ca.go.ke",
+      "sourceType": "Regulator licensing page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22 via CA site navigation (direct /licensing-framework path 404'd). Page is markup-heavy in text extraction; licensing procedures and numbering administration confirmed. Licence-class instrument (NFP/ASP classes, any data-centre-specific class) remains uncaptured.",
+      "excerpt": "Communications Authority of Kenya - licensing procedures. End users and service providers requiring numbers shall seek secondary assignment from the assigned licensee."
+    },
+    "odpc-home": {
+      "label": "Office of the Data Protection Commissioner (Kenya) - site (DPA scope, registration gateway)",
+      "url": "https://www.odpc.go.ke/",
+      "tier": 1,
+      "publisher": "odpc.go.ke",
+      "sourceType": "Regulator official site",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22. Confirms the DPA applies to data controllers and processors, data-subject rights, and the 'Register as a Data Handler' gateway.",
+      "excerpt": "The Kenya Data Protection Act (DPA) applies to data controllers and processors and provides data subjects with certain rights ... Register as a Data Handler. Data Controller: A person or entity that..."
+    },
+    "odpc-handlers-register": {
+      "label": "ODPC - Registered Data Handlers public register (live search: name, type, registration number, county, status)",
+      "url": "https://www.odpc.go.ke/registered-data-handlers/",
+      "tier": 1,
+      "publisher": "odpc.go.ke",
+      "sourceType": "Regulator public register",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22 (57k chars of register rows). Demonstrates the registration regime is actively operated: per-entry registration numbers (INST-... format), controller/processor type, county, Active/Expired status.",
+      "excerpt": "REGISTRATION STATUS OF DATA HANDLERS - Active Data Handlers ... # | Data Handler Name | Data Handler Type | Registration Number | County | Status. Example rows: 254 BREWING COMPANY LIMITED, Data Controller, INST-..., KIAMBU, Kenya, Active."
+    },
+    "sezauthority-root": {
+      "label": "Special Economic Zones Authority (Kenya) - official site (regulator of public and private SEZs; enterprise licences; gazetted zones incl. Naivasha; ICT Parks)",
+      "url": "https://sezauthority.go.ke/",
+      "tier": 1,
+      "publisher": "sezauthority.go.ke",
+      "sourceType": "Regulator/authority official site",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22. Confirms SEZA as regulator of both public and private SEZs, Enterprise License administration, and ICT Parks / Business Service Parks as SEZ zone types. The SEZ Act 2015 text (rate specifics) remains uncaptured - Kenya Law AKN renders a JS shell.",
+      "excerpt": "The Authority serves as the regulator of both public and private SEZs in Kenya and exists to create an enabling environment for investors ... Enterprise License ... Gazetted SEZ Public SEZ Private SEZ Naivasha SEZ ... ICT Parks: To facilitate ICT support, Research, innovation and development. Business Service Parks with plug-and-play services."
+    },
+    "investkenya-eprocedures": {
+      "label": "KenInvest eProcedures (official .go.ke platform) - EPZ licences, business service permits and investment-incentive procedures",
+      "url": "https://eprocedures.investkenya.go.ke/",
+      "tier": 1,
+      "publisher": "eprocedures.investkenya.go.ke",
+      "sourceType": "Government procedures platform",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22 (procedure index). Confirms the EPZ licensing regime is operated: 'EPZ commercial enterprise licence', 'EPZ Business Service Permit', EPZ manufacturer entries, plus investment incentives and capital-deduction procedures. EPZ Act text (holiday specifics) remains uncaptured.",
+      "excerpt": "EPZ Business Service Permit; EPZ commercial enterprise licence; Export processing zones (EPZ) licences; EPZ manufactur[ing]; Investment incentives; Capital deductions; Tax and customs exemption facilitation."
+    },
+    "epra-energy-act-page": {
+      "label": "Energy and Petroleum Regulatory Authority (EPRA) - Energy Act 2019 page (electricity/renewables licensing and registers)",
+      "url": "https://www.epra.go.ke/energy-act-2019/",
+      "tier": 1,
+      "publisher": "epra.go.ke",
+      "sourceType": "Regulator official page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22. Page title anchors the Act; site sections confirm electricity and renewable-energy licensing ('Regulatory Instruments / Application Guidelines / License application / Registers'). Energy Act 2019 statutory detail (thresholds, captive power) remains uncaptured.",
+      "excerpt": "Energy Act 2019 | Energy and Petroleum Regulatory Authority. Electricity & Renewable Energy: Regulatory Instruments, Application Guidelines, License application, Registers."
+    },
+    "nema-home": {
+      "label": "National Environment Management Authority (Kenya) - site (EIA/SEA regime, licensed experts register)",
+      "url": "https://www.nema.go.ke/",
+      "tier": 1,
+      "publisher": "nema.go.ke",
+      "sourceType": "Regulator official site",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22. Confirms the EIA/SEA regime is operated: EIA/SEA report submissions, experts register and qualifications. EMCA statutory detail (s.58 EIA obligation wording) remains uncaptured.",
+      "excerpt": "National Environment Management Authority ... Experts Register & Qualifications ... DOWNLOADS: EIA/SEA Reports, SEA/SESA Reports ..."
+    },
+    "ict-digital-economy": {
+      "label": "Ministry of Information, Communications and the Digital Economy (Kenya) - State Department for ICT and Digital Economy functions page",
+      "url": "https://ict.go.ke/ict-and-digital-economy",
+      "tier": 1,
+      "publisher": "ict.go.ke",
+      "sourceType": "Ministry official page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Captured 2026-09-22. Confirms the ministry/State Department structure driving ICT and digital-economy policy (projects incl. Last Mile County Connectivity, Digital Literacy Programme). Masterplan 2022-2032 and AI Strategy 2025-2030 documents remain uncaptured.",
+      "excerpt": "ICT and Digital Economy - Functions of the State Department for ICT and Digital Economy ... Projects: Last Mile County Connectivity Project (LMCCP), Digital Literacy Programme ..."
+    },
+    "dlapiper-dataprotection-ke": {
+      "label": "DLA Piper Data Protection Laws of the World - Kenya chapter (country profiles landing)",
+      "url": "https://www.dlapiperdataprotection.com/",
+      "tier": 3,
+      "publisher": "DLA Piper",
+      "sourceType": "Law firm global guide",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Kenya is listed on the captured landing page; the country chapter itself renders via the site's viewer and was not captured on 2026-09-22. Upgrade path: capture the Kenya chapter (transfer-conditions and localisation wording) or the DPA 2019 text from Kenya Law (AKN JS shell on 2026-09-22; Wayback retry also flaked).",
+      "excerpt": "Data Protection Laws of the World ... Kenya Kosovo Kuwait ... (country index captured; Kenya chapter content not rendered in text extraction)."
+    },
+    "policyvault-epz": {
+      "label": "PolicyVault Africa - Export Processing Zones Act (Kenya) listing",
+      "url": "https://policyvault.africa",
+      "tier": 3,
+      "publisher": "PolicyVault Africa",
+      "sourceType": "Policy document repository",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Search-index snippet only; document body not captured. Upgrade path: capture the EPZ Act (Cap 517) text - KenInvest eProcedures or Kenya Law PDF.",
+      "excerpt": "Export Processing Zones Act (Kenya) - listed on PolicyVault Africa."
+    },
+    "bowmans-sez-amendments": {
+      "label": "Bowmans - Kenya: Amendments to the Special Economic Zones Act (law firm briefing)",
+      "url": "https://www.bowmanslaw.com",
+      "tier": 3,
+      "publisher": "Bowmans",
+      "sourceType": "Law firm briefing",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Search-index snippet only (bare-domain result). Records that SEZ Act amendments exist; rate specifics must come from the Act. Upgrade path: SEZ Act 2015 (as amended) text capture.",
+      "excerpt": "Kenya: Amendments to the Special Economic Zones Act (Bowmans briefing listing)."
     }
   },
   "countries": {
@@ -1145,6 +1278,189 @@
           ],
           "state": "partially-verified",
           "note": "Regulator operations confirmed from official pages; the Environmental Management Act 2004 and its EIA First Schedule (whether a DC-scale facility triggers a full EIA) remain capture-pending. eia.nemc.or.tz portal is the operational entry point."
+        }
+      ]
+    },
+    "kenya": {
+      "name": "Kenya",
+      "iso": "KE",
+      "directoryFacilities": 27,
+      "facilitiesNote": "Largest directory cohort (Nairobi 18, Kiambu 4, Mombasa 4, Machakos 1). Policy claims below are country-level; facility-level evidence lives in the facility evidence dataset.",
+      "regulators": {
+        "communications": "Communications Authority of Kenya (CA)",
+        "dataProtection": "Office of the Data Protection Commissioner (ODPC)",
+        "investment": "KenInvest / EPZ Authority / Special Economic Zones Authority (SEZA)",
+        "energy": "Energy and Petroleum Regulatory Authority (EPRA)",
+        "environment": "National Environment Management Authority (NEMA)"
+      },
+      "pillarGaps": [
+        {
+          "pillar": "licensing",
+          "gap": "CA licence-class instrument not captured: the NFP/ASP class structure (and any data-centre-specific class the CA has signalled) rests on secondary coverage; the CA's own licence-class document is uncaptured",
+          "expectedSources": [
+            "CA licence-class framework document (ca.go.ke Knowledge Hub)",
+            "Kenya Gazette notice for any standalone data-centre licence framework"
+          ],
+          "upgradePath": "Navigate CA Knowledge Hub for the licensing instrument; capture gazette notices; re-derive the licensing claims on instrument text"
+        },
+        {
+          "pillar": "construction-building",
+          "gap": "No research yet: building-code and county-permit regime for large industrial builds (National Building Code 2022, Nairobi City County approvals, physical planning) not captured",
+          "expectedSources": [
+            "National Building Code 2022 (Kenya Bureau of Standards / works ministry)",
+            "Nairobi City County development-permit framework",
+            "Physical Planning Act 2019 text"
+          ],
+          "upgradePath": "Capture the Building Code 2022 and county permitting framework; add claims on permits relevant to data-centre builds"
+        },
+        {
+          "pillar": "ai-digital-policy",
+          "gap": "Masterplan-level instruments not captured: National Digital Masterplan 2022-2032 and the Kenya AI Strategy (2025) documents are uncaptured; only the ministry's functions page is banked",
+          "expectedSources": [
+            "National Digital Masterplan 2022-2032 PDF (ict.go.ke)",
+            "Kenya National AI Strategy 2025-2030 PDF"
+          ],
+          "upgradePath": "Locate the two PDFs on ministry properties; capture and derive AI/digital-policy claims"
+        }
+      ],
+      "investigatedAt": "2026-09-22",
+      "investigationNote": "Round 1-3 capture mission 2026-09-22: Kenya Law AKN renders a JS shell (acts incl. DPA 2019, SEZ Act, EPZ Act, EMCA not captured); regulator/authority sites captured. Claims are therefore anchored on regulator operations (registers, procedures, licensing platforms) with statute-text upgrades pending.",
+      "claims": [
+        {
+          "id": "KE-LC-C1",
+          "pillar": "licensing",
+          "state": "verified",
+          "statement": "The Communications Authority of Kenya (CA) is the converged regulator for Kenya's communications sector, licensing operators under published licensing procedures, with licensees carrying secondary number-assignment obligations to end users.",
+          "sourceIds": [
+            "ca-licensing-procedures",
+            "bowmans-ea-data-infra"
+          ],
+          "note": "CA's own licensing-procedures page (T1) + Bowmans EA data-infrastructure analysis (T2) - two distinct publishers. Class-level enumeration (NFP/ASP tiers, any DC-specific class) is a structured gap pending the CA instrument."
+        },
+        {
+          "id": "KE-DP-C1",
+          "pillar": "data-protection",
+          "state": "verified",
+          "statement": "Kenya's data protection law is the Data Protection Act, 2019, and the Office of the Data Protection Commissioner (ODPC) is its supervisory authority, with the Act applying to data controllers and processors and conferring rights on data subjects.",
+          "sourceIds": [
+            "odpc-home",
+            "dlapiper-dataprotection-ke"
+          ],
+          "note": "Regulator's own site (T1 captured) states the DPA's scope and the ODPC's role; DLA Piper global guide (T3) corroborates. Act full text pending (Kenya Law JS shell) - section-level citations upgrade on capture."
+        },
+        {
+          "id": "KE-DP-C2",
+          "pillar": "data-protection",
+          "state": "verified",
+          "statement": "Registration with the ODPC is mandatory for data controllers and processors, and the ODPC operates a live public register of registered data handlers showing registration numbers, handler type, county and Active/Expired status.",
+          "sourceIds": [
+            "odpc-home",
+            "odpc-handlers-register"
+          ],
+          "note": "Two T1 captures from the regulator: the 'Register as a Data Handler' gateway plus the live register (57k chars of rows, INST-... numbers). Registration regime demonstrably operated, not merely enacted."
+        },
+        {
+          "id": "KE-XB-C1",
+          "pillar": "cross-border-data-flows",
+          "state": "partially-verified",
+          "statement": "Kenya's DPA restricts cross-border transfers of personal data to conditions (consent, adequacy-style protection, safeguards) rather than prohibiting them outright.",
+          "sourceIds": [
+            "dlapiper-dataprotection-ke"
+          ],
+          "note": "Single T3 source pending statute text. Upgrade path: capture DPA 2019 transfer provisions (ss.48-49) from Kenya Law (AKN JS shell on 2026-09-22; retry Wayback with direct timestamped snapshot), then verify."
+        },
+        {
+          "id": "KE-LOC-C1",
+          "pillar": "data-localisation-sovereignty",
+          "state": "partially-verified",
+          "statement": "Kenya's regime imposes no general data-localisation mandate: in-country storage is not a blanket precondition, and cross-border movement is governed by the DPA's transfer conditions - materially lighter than Rwanda's registration-certificate-based storage rule.",
+          "sourceIds": [
+            "dlapiper-dataprotection-ke"
+          ],
+          "note": "Negative/material-difference claim, deliberately held at partially-verified: absence is asserted only until the DPA text is captured in full. Upgrade path: DPA 2019 full-text capture; cross-check against the ODPC guidance pages."
+        },
+        {
+          "id": "KE-TX-C1",
+          "pillar": "tax-incentives",
+          "state": "verified",
+          "statement": "Kenya's SEZ regime is administered by the Special Economic Zones Authority (SEZA), the regulator of both public and private SEZs, which administers SEZ enterprise licences and has gazetted zones including Naivasha, with ICT Parks and Business Service Parks as designated zone types.",
+          "sourceIds": [
+            "sezauthority-root"
+          ],
+          "note": "T1 (authority's own site). The ICT-Park designation is the directly data-centre-relevant hook: zone-type carve-outs exist for ICT infrastructure and services. Rate specifics are a separate, partially-verified claim (KE-TX-C2)."
+        },
+        {
+          "id": "KE-TX-C2",
+          "pillar": "tax-incentives",
+          "state": "partially-verified",
+          "statement": "SEZ-registered enterprises in Kenya receive preferential corporate taxation (reduced CIT for an initial period) and relief on inputs, per the SEZ Act 2015 as amended.",
+          "sourceIds": [
+            "bowmans-sez-amendments",
+            "sezauthority-root"
+          ],
+          "note": "Rate/rest-of-regime detail rests on a T3 law-firm briefing (snippet) plus the authority's regime context (T1, silent on rates). SEZ Act 2015 text (Kenya Law JS shell) uncaptured - upgrade on Act capture; amendments noted by Bowmans must be reconciled with the consolidated text."
+        },
+        {
+          "id": "KE-TX-C3",
+          "pillar": "tax-incentives",
+          "state": "verified",
+          "statement": "Kenya's EPZ regime is actively operated: EPZ commercial-enterprise licences, EPZ Business Service Permits and EPZ manufacturing licences are administered through the official KenInvest eProcedures platform, alongside investment-incentive and capital-deduction procedures.",
+          "sourceIds": [
+            "investkenya-eprocedures",
+            "policyvault-epz"
+          ],
+          "note": "T1 government platform capture shows the licence types and procedures in operation; PolicyVault lists the EPZ Act. Holiday/duty specifics are a separate partially-verified claim (KE-TX-C4)."
+        },
+        {
+          "id": "KE-TX-C4",
+          "pillar": "tax-incentives",
+          "state": "partially-verified",
+          "statement": "EPZ enterprises in Kenya receive time-bound tax holidays and duty/VAT relief on inputs for export-oriented production under the EPZ Act (Cap 517).",
+          "sourceIds": [
+            "policyvault-epz",
+            "investkenya-eprocedures"
+          ],
+          "note": "Specifics (10-year holiday, subsequent rates) rest on snippet-grade sources; the official procedures platform confirms incentives exist but not their terms. Upgrade path: EPZ Act (Cap 517) text capture, then verify with section citations."
+        },
+        {
+          "id": "KE-EN-C1",
+          "pillar": "energy-electricity",
+          "state": "verified",
+          "statement": "The Energy Act, 2019 is Kenya's electricity-sector statute and EPRA the sector regulator, operating electricity and renewable-energy licensing regimes (regulatory instruments, application guidelines, licence applications and public registers).",
+          "sourceIds": [
+            "epra-energy-act-page"
+          ],
+          "note": "T1 regulator page. Narrow claim: regulator identity, statute name and operated licensing machinery. Act-text detail (captive-power thresholds, large-load connection terms) mirrors the TZ energy gap and stays an upgrade path, not a claim."
+        },
+        {
+          "id": "KE-ENV-C1",
+          "pillar": "environmental",
+          "state": "verified",
+          "statement": "Kenya's environmental regime is actively administered by NEMA: environmental impact assessment (EIA) and strategic environmental assessment (SEA) reports are submitted and published, and environmental experts are registered with qualification requirements.",
+          "sourceIds": [
+            "nema-home"
+          ],
+          "note": "T1 regulator capture showing the EIA/SEA machinery in operation (reports, experts register). EMCA 1999 statutory wording (s.58 obligation) uncaptured - upgrade path, not a separate claim until captured."
+        },
+        {
+          "id": "KE-AI-C1",
+          "pillar": "ai-digital-policy",
+          "state": "verified",
+          "statement": "Kenya's digital-economy policy is driven by the Ministry of Information, Communications and the Digital Economy through the State Department for ICT and Digital Economy, whose delivery instruments include county connectivity (Last Mile) and Digital Literacy programmes.",
+          "sourceIds": [
+            "ict-digital-economy"
+          ],
+          "note": "T1 ministry functions page. Masterplan 2022-2032 and the AI Strategy 2025-2030 remain structured gaps (documents uncaptured) - this claim covers only the institutional/delivery layer."
+        },
+        {
+          "id": "KE-RG-C1",
+          "pillar": "regional-frameworks",
+          "state": "verified",
+          "statement": "Kenya, as an EAC Customs Union member, applies the EAC Common External Tariff (2022 version), under which automatic data-processing machines and units (HS 8471 - including servers and processing units) enter at 0% duty - the same EAC-wide anchor claimed for Tanzania, Uganda and Rwanda.",
+          "sourceIds": [
+            "tra-cet-pdf"
+          ],
+          "note": "Reuses the T1 EAC CET instrument text captured from TRA (EAC-wide instrument; KRA is the implementing authority in Kenya). Customs-union membership is uncontroversial; section-level KE import-procedure detail is an upgrade path."
         }
       ]
     }

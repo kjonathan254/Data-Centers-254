@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "Policy Intelligence — East Africa data-centre regulation, claim by claim",
   description:
-    "43 audited policy claims across Uganda, Rwanda and Tanzania with full evidence chains: licensing, data protection, localisation, tax and energy. Not a blog — an evidence layer with a 5-state publication vocabulary.",
+    "56 audited policy claims across Uganda, Rwanda, Tanzania and Kenya with full evidence chains: licensing, data protection, localisation, tax and energy. Not a blog — an evidence layer with a 5-state publication vocabulary.",
   alternates: { canonical: "/policy/intelligence" },
   openGraph: {
     title: "Policy Intelligence — East Africa data-centre regulation, claim by claim",
@@ -45,6 +45,7 @@ const COUNTRY_LABELS: Record<string, string> = {
   uganda: "Uganda",
   rwanda: "Rwanda",
   tanzania: "Tanzania",
+  kenya: "Kenya",
 };
 
 const REGULATOR_DOMAIN_LABELS: Record<string, string> = {
@@ -189,12 +190,15 @@ export default function PolicyIntelligencePage() {
 
           {/* ── Pillar × country matrix ──────────────────────────────── */}
           <section className="mt-12">
-            <h2 className="text-xl font-bold text-white">The matrix: 10 pillars × 3 countries</h2>
+            <h2 className="text-xl font-bold text-white">
+              The matrix: 10 pillars × {countries.length} countries
+            </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
               Cells count claims by state. A &ldquo;gap&rdquo; cell means the pillar is owned but
               not yet researched — expected sources and upgrade paths are listed in the country
-              dossier below. Kenya&rsquo;s pipeline lands after this trio; its frameworks are
-              currently covered in the{" "}
+              dossier below. Kenya&rsquo;s dossier is anchored on captured regulator operations
+              (registers, procedures, licensing platforms); its statute-text upgrades are pending
+              the Kenya Law full-text captures. The interpretation layer lives in our{" "}
               <Link href="/policy" className="underline decoration-slate-600 underline-offset-2 hover:decoration-slate-300">
                 policy explainers
               </Link>

@@ -90,7 +90,7 @@ export function getPolicyDataset(): PolicyDatasetJson {
 }
 
 /** Countries in research order (Uganda first — the pilot pipeline). */
-const COUNTRY_ORDER = ["uganda", "rwanda", "tanzania"] as const;
+const COUNTRY_ORDER = ["uganda", "rwanda", "tanzania", "kenya"] as const;
 
 export function getPolicyCountries(): Array<{ key: string } & PolicyCountry> {
   return COUNTRY_ORDER.filter((k) => data.countries[k]).map((key) => ({

@@ -56,8 +56,8 @@ export default function PolicyPage() {
               New · Policy Intelligence
             </p>
             <p className="mt-1 text-sm font-medium text-slate-200">
-              43 audited regulatory claims across Uganda, Rwanda and Tanzania — every claim with
-              its sources, tiers and a five-state verification vocabulary.
+              56 audited regulatory claims across Uganda, Rwanda, Tanzania and Kenya — every claim
+              with its sources, tiers and a five-state verification vocabulary.
             </p>
             <p className="mt-1 text-xs text-slate-500">
               Open the evidence layer →
