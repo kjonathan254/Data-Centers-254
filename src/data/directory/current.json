@@ -200,7 +200,8 @@
       "dataSource": "iXAfrica website and press releases; PeeringDB register",
       "dataConfidence": "High",
       "articleSlugs": [
-        "ixafrica-data-centres-kenya"
+        "ixafrica-data-centres-kenya",
+        "gpu-computing-kenya-ai-needs-data-centres"
       ],
       "operatorId": "ixafrica",
       "connectivityFacility": [
@@ -384,7 +385,8 @@
       "dataSource": "Africa Data Centres website; PeeringDB register",
       "dataConfidence": "High",
       "articleSlugs": [
-        "africa-data-centres-kenya-operations"
+        "africa-data-centres-kenya-operations",
+        "reduce-cloud-latency-kenya"
       ],
       "operatorId": "africa-dc",
       "connectivityFacility": [
@@ -693,7 +695,10 @@
       "dataSource": "Semafor, Tom's Hardware, Business Daily",
       "dataConfidence": "Medium",
       "articleSlugs": [
-        "ai-data-centres-east-africa"
+        "microsoft-g42-kenya-data-centre",
+        "ai-data-centres-east-africa",
+        "olkaria-geothermal-data-centre-corridor",
+        "what-is-hyperscale-data-centre"
       ],
       "operatorId": "safaricom",
       "connectivityFacility": [],
@@ -770,7 +775,12 @@
       "peeringdbIxs": 0,
       "carrierNeutral": false,
       "certNote": null,
-      "divergenceNote": "Operator-owned: tenants generally buy Telkom's transit rather than full carrier-neutrality, price it accordingly."
+      "divergenceNote": "Operator-owned: tenants generally buy Telkom's transit rather than full carrier-neutrality, price it accordingly.",
+      "articleSlugs": [
+        "fibre-optic-networks-kenya-data-centres",
+        "data-centre-interconnection-peering-kenya",
+        "kenya-data-centre-licensing-framework"
+      ]
     },
     {
       "id": "19",
@@ -816,7 +826,12 @@
       "peeringdbIxs": 0,
       "carrierNeutral": false,
       "certNote": null,
-      "divergenceNote": "Minimal public data, a single network registered on PeeringDB. Capacity and colocation terms are not published; approach Telkom directly."
+      "divergenceNote": "Minimal public data, a single network registered on PeeringDB. Capacity and colocation terms are not published; approach Telkom directly.",
+      "articleSlugs": [
+        "fibre-optic-networks-kenya-data-centres",
+        "why-data-centres-cluster-nairobi-mombasa",
+        "kenya-data-centre-licensing-framework"
+      ]
     },
     {
       "id": "11",
@@ -867,7 +882,11 @@
       ],
       "carrierNeutral": true,
       "certNote": null,
-      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026). Note the group relationship: Liquid's data centre arm was consolidated into Africa Data Centres (Sameer Business Park), confirm with Liquid which Nairobi building you are being quoted for, and do not double-count it against ADC NBO1."
+      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026). Note the group relationship: Liquid's data centre arm was consolidated into Africa Data Centres (Sameer Business Park), confirm with Liquid which Nairobi building you are being quoted for, and do not double-count it against ADC NBO1.",
+      "articleSlugs": [
+        "liquid-intelligent-technologies-kenya",
+        "data-centre-interconnection-peering-kenya"
+      ]
     },
     {
       "id": "20",
@@ -956,7 +975,12 @@
       "peeringdbIxs": 4,
       "carrierNeutral": true,
       "certNote": "ISO 27001 and PCI-DSS are claimed on the Digital Realty listing. No Uptime Institute Tier certification is published for this facility.",
-      "divergenceNote": "Neither iColo's page nor Digital Realty's listing publishes an IT load figure for NBO1, ask for committed and available capacity in kW before sizing a deployment."
+      "divergenceNote": "Neither iColo's page nor Digital Realty's listing publishes an IT load figure for NBO1, ask for committed and available capacity in kW before sizing a deployment.",
+      "articleSlugs": [
+        "colocation-data-centres-nairobi-buyers-guide",
+        "digital-realty-nbo2-launch-nairobi",
+        "raxio-vs-africa-data-centres-kenya-comparison"
+      ]
     },
     {
       "id": "21",
@@ -1020,7 +1044,13 @@
       "peeringdbIxs": 1,
       "carrierNeutral": true,
       "certNote": "ISO 27001 and PCI-DSS per the Digital Realty listing. No Uptime Institute Tier certification published.",
-      "divergenceNote": "A real, now formally launched, but still-ramping building: PeeringDB shows only two networks and a single exchange (record last updated September 2025), not yet a peer of NBO1 on connectivity. Commissioned (as opposed to design) IT load has not been published; ask for as-built capacity before sizing a deployment."
+      "divergenceNote": "A real, now formally launched, but still-ramping building: PeeringDB shows only two networks and a single exchange (record last updated September 2025), not yet a peer of NBO1 on connectivity. Commissioned (as opposed to design) IT load has not been published; ask for as-built capacity before sizing a deployment.",
+      "articleSlugs": [
+        "digital-realty-nbo2-launch-nairobi",
+        "colocation-data-centres-nairobi-buyers-guide",
+        "raxio-vs-africa-data-centres-kenya-comparison",
+        "kenya-data-centre-compute-hub-plan-explained"
+      ]
     },
     {
       "id": "22",
@@ -1091,7 +1121,12 @@
       "peeringdbIxs": 3,
       "carrierNeutral": true,
       "certNote": null,
-      "divergenceNote": "The 13 MW campus figure is the full master plan, not the current building, current IT power is 0.9 MW per the operator's own homepage."
+      "divergenceNote": "The 13 MW campus figure is the full master plan, not the current building, current IT power is 0.9 MW per the operator's own homepage.",
+      "articleSlugs": [
+        "why-data-centres-cluster-nairobi-mombasa",
+        "submarine-cables-landing-mombasa",
+        "kenya-data-centre-market-numbers"
+      ]
     },
     {
       "id": "23",
@@ -1150,7 +1185,12 @@
       "peeringdbIxs": 3,
       "carrierNeutral": true,
       "certNote": null,
-      "divergenceNote": null
+      "divergenceNote": null,
+      "articleSlugs": [
+        "why-data-centres-cluster-nairobi-mombasa",
+        "digital-realty-nbo2-launch-nairobi",
+        "submarine-cables-landing-mombasa"
+      ]
     },
     {
       "id": "24",
@@ -1221,7 +1261,11 @@
       "peeringdbIxs": 3,
       "carrierNeutral": true,
       "certNote": "PAIX's group site refers to \"ISO and PCI-DSS frameworks\" rather than naming ISO 27001, and makes no Uptime Tier claim.",
-      "divergenceNote": "The smallest of Nairobi's four carrier-neutral facilities by registered connectivity (37 networks vs 122 at ADC NBO1), its case is location, not interconnection density. The 1.5 MVA figure is VA capacity, not MW IT load."
+      "divergenceNote": "The smallest of Nairobi's four carrier-neutral facilities by registered connectivity (37 networks vs 122 at ADC NBO1), its case is location, not interconnection density. The 1.5 MVA figure is VA capacity, not MW IT load.",
+      "articleSlugs": [
+        "data-centre-interconnection-peering-kenya",
+        "kixp-internet-exchange-point-kenya"
+      ]
     },
     {
       "id": "25",
@@ -1277,7 +1321,12 @@
       ],
       "carrierNeutral": false,
       "certNote": "Uptime's directory shows Konza with a Tier III Certification of Constructed Facility awarded 23 August 2022 and a Tier III Design certification dated 13 February 2020.",
-      "divergenceNote": "The facility's own site (dc.konza.go.ke) did not resolve when checked (Sep 2026), so current capacity, cabinet availability and commercial terms are not verifiable from a primary source, approach KoTDA directly."
+      "divergenceNote": "The facility's own site (dc.konza.go.ke) did not resolve when checked (Sep 2026), so current capacity, cabinet availability and commercial terms are not verifiable from a primary source, approach KoTDA directly.",
+      "articleSlugs": [
+        "konza-technopolis-data-centres-kenya",
+        "kenya-ict-policy-framework-data-centres",
+        "kenya-data-centre-compute-hub-plan-explained"
+      ]
     },
     {
       "id": "26",
@@ -1342,7 +1391,12 @@
       "peeringdbIxs": 0,
       "carrierNeutral": false,
       "certNote": null,
-      "divergenceNote": null
+      "divergenceNote": null,
+      "articleSlugs": [
+        "why-data-centres-cluster-nairobi-mombasa",
+        "submarine-cables-landing-mombasa",
+        "kenya-data-centre-licensing-framework"
+      ]
     },
     {
       "id": "27",
@@ -1395,7 +1449,12 @@
       "peeringdbIxs": 0,
       "carrierNeutral": false,
       "certNote": null,
-      "divergenceNote": "A cable landing station, not commercial colocation, included because it appears on the PeeringDB register and matters for understanding Mombasa's connectivity role."
+      "divergenceNote": "A cable landing station, not commercial colocation, included because it appears on the PeeringDB register and matters for understanding Mombasa's connectivity role.",
+      "articleSlugs": [
+        "submarine-cables-landing-mombasa",
+        "why-data-centres-cluster-nairobi-mombasa",
+        "data-centre-interconnection-peering-kenya"
+      ]
     },
     {
       "id": "28",
@@ -1484,7 +1543,11 @@
       ],
       "carrierNeutral": true,
       "certNote": null,
-      "divergenceNote": "Previously listed here as operational since 2023 with capacity figures, those figures have been withdrawn pending verification: the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site. Treat as pipeline, not operating capacity."
+      "divergenceNote": "Previously listed here as operational since 2023 with capacity figures, those figures have been withdrawn pending verification: the facility does not appear on the PeeringDB register (checked 8 Sep 2026) and no operator page confirms an opened Nairobi site. Treat as pipeline, not operating capacity.",
+      "articleSlugs": [
+        "raxio-vs-africa-data-centres-kenya-comparison",
+        "east-africa-data-centres-compared"
+      ]
     },
     {
       "id": "14",
@@ -1596,7 +1659,12 @@
       ],
       "carrierNeutral": false,
       "certNote": null,
-      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026), primarily an internal operator facility."
+      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026), primarily an internal operator facility.",
+      "articleSlugs": [
+        "africa-fibre-commercial-operating-model",
+        "kixp-internet-exchange-point-kenya",
+        "colocation-data-centre-kenya"
+      ]
     },
     {
       "id": "29",
@@ -1735,7 +1803,12 @@
       "divergenceNote": "IT load and designed MW not published; rack capacity (400 at full build-out) is operator-stated. Live IT load deliberately left null rather than estimated.",
       "operatorId": "raxio",
       "connectivityFacility": [],
-      "certifications": []
+      "certifications": [],
+      "articleSlugs": [
+        "raxio-vs-africa-data-centres-kenya-comparison",
+        "east-africa-data-centres-compared",
+        "us-dfc-wiocc-155m-kenya-digital-infrastructure"
+      ]
     },
     {
       "id": "32",
@@ -1833,7 +1906,11 @@
       "divergenceNote": "Opening-date divergence: commissioning flagged for 2024 in early coverage vs July 2026 reporting that the facility is still expected to open 'this year'. Capacity figures were never published; treat the multi-megawatt framing as operator intent, not a tracked MW figure.",
       "operatorId": "raxio",
       "connectivityFacility": [],
-      "certifications": []
+      "certifications": [],
+      "articleSlugs": [
+        "east-africa-data-centres-compared",
+        "raxio-vs-africa-data-centres-kenya-comparison"
+      ]
     },
     {
       "id": "34",
@@ -1882,7 +1959,12 @@
       "divergenceNote": "Status divergence: announced with Q1 2023 groundbreaking and a 2 MW IT-load design, but no opening has been announced in the 3+ years since, and no independent confirmation of construction progress has been located. Staged as Under Construction on the strength of the operator announcement alone; revisit on any RFS news.",
       "operatorId": "africa-dc",
       "connectivityFacility": [],
-      "certifications": []
+      "certifications": [],
+      "articleSlugs": [
+        "africa-data-centres-kenya-operations",
+        "east-africa-data-centres-compared",
+        "raxio-vs-africa-data-centres-kenya-comparison"
+      ]
     }
   ]
 }
