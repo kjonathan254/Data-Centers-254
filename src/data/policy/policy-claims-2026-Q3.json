@@ -1,14 +1,15 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r1",
+  "datasetVersion": "policy-2026-Q3-r2",
   "generatedAt": "2026-09-22",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
     "rule": "AI never establishes facts or publishes; the editor reviews every claim before any public use",
-    "status": "PENDING EDITOR REVIEW",
-    "reviewedBy": null,
-    "reviewedAt": null
+    "status": "EDITORIAL REVIEW COMPLETE - publication rulings applied",
+    "reviewedBy": "Editor, DataCentre254 (rulings on the three review questions delegated to the agent, 2026-09-22)",
+    "reviewedAt": "2026-09-22",
+    "scope": "Editor granted full authority on the three tabled questions: LC-C3 publication, DP-C4 structure, pillar-gaps convention. Rulings recorded in publicationPolicy, claim notes and gapSchema. Claim states remain agent-proposed and stand as reviewed."
   },
   "statusVocabulary": {
     "verified": "supported by acceptable evidence (primary or two independent corroborating sources)",
@@ -158,6 +159,18 @@
       "captureStatus": "snippet",
       "captureNote": "Full PDF not fetched (page-heavy site). Uganda-primary confirmation of incentive specifics (UIA/UFZA instruments) still required.",
       "excerpt": "Through the UIA and the Uganda Free Zones Authority, investors can access several tax incentives, including a 10-year income tax holiday for foreign investment."
+    },
+    "pdpo-register-portal": {
+      "label": "PDPO online registration portal (pdpo.go.ug/register)",
+      "url": "https://pdpo.go.ug/register",
+      "tier": 1,
+      "publisher": "Personal Data Protection Office (PDPO), Uganda",
+      "sourceType": "Regulator portal",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "capture-pending",
+      "captureNote": "Portal renders via JS; fetch returned a 526-byte shell on 2026-09-22. Would confirm form mechanics/fees for UG-DP-C4 directly.",
+      "excerpt": null
     }
   },
   "countries": {
@@ -172,11 +185,51 @@
         "investment": "Uganda Investment Authority (UIA) / Uganda Free Zones Authority (UFZA)"
       },
       "pillarGaps": [
-        "energy-electricity: no DC-relevant claims researched yet (ERA tariff classes, grid reliability) - pending",
-        "construction-building: no claims researched yet (UNBS standards, building code application to DCs) - pending",
-        "environmental: no claims researched yet (NEMA requirements for large facilities) - pending",
-        "cross-border-data-flows: partial coverage via UG-DP-C5; EAC-level instruments pending",
-        "regional-frameworks: EAC harmonisation instruments not yet researched - pending"
+        {
+          "pillar": "energy-electricity",
+          "gap": "No DC-relevant claims researched yet (ERA tariff classes, grid reliability, self-generation rules)",
+          "expectedSources": [
+            "Electricity Regulatory Authority (ERA)",
+            "Uganda Electricity Transmission Company (UETCL) tariff schedules"
+          ],
+          "upgradePath": "Fetch ERA published tariffs / Electricity Act 2022 instruments; then raise claims"
+        },
+        {
+          "pillar": "construction-building",
+          "gap": "No claims researched yet (UNBS standards, building-control application to DCs)",
+          "expectedSources": [
+            "Uganda National Bureau of Standards (UNBS)",
+            "Building Control Act instruments"
+          ],
+          "upgradePath": "Identify whether any national standard adopts TIA/uptime-style DC requirements"
+        },
+        {
+          "pillar": "environmental",
+          "gap": "No claims researched yet (NEMA requirements for large facilities, ESIA thresholds)",
+          "expectedSources": [
+            "National Environment Management Authority (NEMA)",
+            "National Environment Act, 2019"
+          ],
+          "upgradePath": "Fetch NEMA ESIA category guidance; check generator/cooling thresholds"
+        },
+        {
+          "pillar": "cross-border-data-flows",
+          "gap": "Partial coverage via UG-DP-C5; EAC-level instruments pending",
+          "expectedSources": [
+            "EAC Legal Framework for Cyberlaws",
+            "EAC Data Protection & Privacy Policy (2021)"
+          ],
+          "upgradePath": "Research EAC instruments when the regional comparison phase starts"
+        },
+        {
+          "pillar": "regional-frameworks",
+          "gap": "EAC harmonisation instruments not yet researched",
+          "expectedSources": [
+            "EAC Secretariat instruments",
+            "national ratification records"
+          ],
+          "upgradePath": "Deferred to the regional-comparison phase (editor sequencing)"
+        }
       ],
       "investigatedAt": "2026-09-22",
       "investigationNote": "Uganda is the first country run through the policy evidence pipeline (editor sequencing: Uganda -> Rwanda -> Tanzania -> regional comparison). Six pillars attempted; data protection landed strongest (regulator decision + statute anchors); licensing partially verified pending UCC instruments; energy/construction/environmental not yet attempted and recorded as pillar gaps rather than unverified claims.",
@@ -219,10 +272,11 @@
           "pillar": "data-protection",
           "statement": "Registration is completed online via the PDPO portal (Form 2 application plus Form 3 cross-border undertaking), fee UGX 100,000, typically 4-7 working days for initial registration.",
           "sourceIds": [
-            "dlapiper-pm-offshore"
+            "dlapiper-pm-offshore",
+            "pdpo-register-portal"
           ],
           "state": "partially-verified",
-          "note": "Single Tier-3 source; the PDPO portal itself (pdpo.go.ug/register) was unreachable on 2026-09-22. Verify fees/SLA against the portal or the Regulations before citing operationally."
+          "note": "Single Tier-3 source; the PDPO portal itself (pdpo.go.ug/register) was unreachable on 2026-09-22. Verify fees/SLA against the portal or the Regulations before citing operationally. Editorial ruling 2026-09-22 (delegated): kept split from UG-DP-C3 - the legal duty and the operational mechanics have different evidence bases and upgrade paths; folding would misdescribe the duty's verified position."
         },
         {
           "id": "UG-DP-C5",
@@ -277,7 +331,8 @@
             "ucc-licence-description"
           ],
           "state": "partially-verified",
-          "note": "The claim most material to directory operators (Raxio UG1 et al.). Currently single-source (Tier 3). UCC's own instrument is capture-pending; also check Raxio's regulatory/registration disclosures. Editor attention requested before publication."
+          "note": "The claim most material to directory operators (Raxio UG1 et al.). Currently single-source (Tier 3). UCC's own instrument is capture-pending; also check Raxio's regulatory/registration disclosures. Editor attention requested before publication. Editorial ruling 2026-09-22: publication hold applied (see publicationHold).",
+          "publicationHold": "Editor ruling 2026-09-22 (delegated): do NOT cite publicly - not even with state attribution - until a Tier 1/2 UCC instrument (Description of Telecom Licenses and Authorisations or the Licensing Regulations text) confirms it. A licensing-requirement claim that later proves wrong creates compliance misinformation for readers and operators; silence is the safer failure mode."
         },
         {
           "id": "UG-LC-C4",
@@ -321,5 +376,16 @@
         }
       ]
     }
+  },
+  "publicationPolicy": {
+    "verified": "may be cited as fact in the interpretation layer (articles, profiles)",
+    "partially-verified": "may be cited only with visible state attribution ('per one TMT practice guide; official instrument pending'); numeric/compliance-sensitive partially-verified claims should not carry operational weight",
+    "capture-pending": "state reserved for claims whose evidence chain is blocked by an inaccessible source",
+    "unverified": "not published as fact; may appear as an open question",
+    "contradicted": "not published as fact; the conflict is explained if referenced",
+    "publicationHold": "per-claim hold override: block all public citation regardless of state; used where a claim's failure mode creates real-world compliance risk (applies to UG-LC-C3)"
+  },
+  "gapSchema": {
+    "rule": "A pillar with no research yet is recorded as a structured gap - never as an unverified claim. Each gap names expected instruments/regulators and its upgrade path. Gaps are reviewed for staleness at every datasetVersion bump (editor ruling 2026-09-22)."
   }
 }
