@@ -72,6 +72,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/kenya`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     // NOTE: /internet intentionally absent, 308-redirected to /infrastructure
     { url: `${baseUrl}/policy`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
+    // Policy Intelligence dashboard — dated from the policy dataset's editorial
+    // review date (humanGate rulings), not from deploy time.
+    { url: `${baseUrl}/policy/intelligence`, lastModified: new Date("2026-09-22T00:00:00Z"), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/energy`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/careers`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/ai`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.8 },
