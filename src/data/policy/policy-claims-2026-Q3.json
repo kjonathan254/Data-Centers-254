@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r4",
-  "generatedAt": "2026-09-22",
+  "datasetVersion": "policy-2026-Q3-r5",
+  "generatedAt": "2026-09-23",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
@@ -46,7 +46,7 @@
       "publishedDate": "2019-05-03",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Capture mission 2026-09-22 retried: ULII AKN endpoint still Cloudflare-gated; search surfaced WIPO Lex/vLex/D4D Access listings but no full-text route yielded. Upgrade path unchanged.",
+      "captureNote": "AKN body is client-rendered; Firecrawl scrape incl. waitFor 8s retry returns shell only. Metadata verified; full statute text pending alternative official depository.",
       "excerpt": "Data Protection and Privacy Act. Chapter 97. Published in Uganda Gazette 21 on 3 May 2019; Assented to on 25 February 2019; Commenced on 3 May 2019."
     },
     "pdpo-decision-google-2025": {
@@ -109,14 +109,14 @@
     },
     "ucc-licence-description": {
       "label": "UCC - Description of Telecom Licenses and Authorisations (official instrument)",
-      "url": null,
+      "url": "https://www.ucc.co.ug/wp-content/uploads/2023/10/DESCRIPTION-OF-TELECOM-LICENSES-AND-AUTHORISATIONS.pdf",
       "tier": 1,
       "publisher": "Uganda Communications Commission (UCC)",
       "sourceType": "Regulator instrument",
       "publishedDate": null,
-      "retrievedDate": null,
-      "captureStatus": "capture-pending",
-      "captureNote": "Capture mission 2026-09-22: document now LOCATED - linked from the captured UCC Telecommunication Licensing page as 'Description of Telecom Licenses and Authorizations'. Still uncaptured; fetch that document to verify the class enumeration.",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Resolved: official 'Description of Telecom Licenses and Authorisations' PDF captured 2026-09-22.",
       "excerpt": null
     },
     "gle-telecom-licensing": {
@@ -174,8 +174,8 @@
       "sourceType": "Regulator portal",
       "publishedDate": null,
       "retrievedDate": "2026-09-22",
-      "captureStatus": "capture-pending",
-      "captureNote": "Capture mission 2026-09-22 retried: pdpo.go.ug/register still a JS shell (direct + Wayback + root). Upgrade path: headless render or visit in person of registry; Regulations text remains the alternate anchor.",
+      "captureStatus": "captured",
+      "captureNote": "Portal page captured 2026-09-22 (research/captures/2026-09-22-pdpo-go-ug-register.md): official register search + certificate requirement. Fee/form-class specifics NOT in capture - claim stays partially-verified.",
       "excerpt": null
     },
     "rura-licensing-regulation": {
@@ -615,6 +615,56 @@
       "captureStatus": "snippet",
       "captureNote": "Search-index snippet only (bare-domain result). Records that SEZ Act amendments exist; rate specifics must come from the Act. Upgrade path: SEZ Act 2015 (as amended) text capture.",
       "excerpt": "Kenya: Amendments to the Special Economic Zones Act (Bowmans briefing listing)."
+    },
+    "ewura-acts-index": {
+      "label": "ewura-acts-index",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-22",
+      "url": "https://www.ewura.go.tz/publications/acts-and-regulation",
+      "publisher": "ewura.go.tz",
+      "sourceType": "Official regulator statute index",
+      "captureNote": "Captured 2026-09-22 (research/captures/2026-09-22-ewura-go-tz-publications-acts-and-regulation.md); links Cap 414 + Electricity Act PDFs."
+    },
+    "ewura-act-cap414-pdf": {
+      "label": "ewura-act-cap414-pdf",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-22",
+      "url": "https://www.ewura.go.tz/uploads/documents/en-1786363649-Energy%20and%20Water%20Utilities%20Regulatory%20Authority%20Act.pdf",
+      "publisher": "ewura.go.tz",
+      "sourceType": "Official statute text (PDF)",
+      "captureNote": "Full Cap 414 text captured 2026-09-22 (research/captures/2026-09-22-ewura-go-tz-uploads-documents-en-1786363649-Energy-20and-20Wat.md)."
+    },
+    "ewura-electricity-act-pdf": {
+      "label": "ewura-electricity-act-pdf",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-22",
+      "url": "https://www.ewura.go.tz/uploads/documents/en-1786363737-The%20Electricity%20Act.pdf",
+      "publisher": "ewura.go.tz",
+      "sourceType": "Official statute text (PDF)",
+      "captureNote": "Electricity Act Cap 131 full text captured 2026-09-22 (research/captures/2026-09-22-ewura-go-tz-uploads-documents-en-1786363737-The-20Electricity-.md)."
+    },
+    "kenyalaw-dpa-akn": {
+      "label": "kenyalaw-dpa-akn",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-22",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2019/24/eng@2022-12-31",
+      "publisher": "new.kenyalaw.org",
+      "sourceType": "Official law depository (AKN)",
+      "captureNote": "Full DPA 2019 text captured 2026-09-22 incl. s.25(h) transfer limb ('not transferred outside Kenya unless proof of adequate data protection safeguards or consent'); Firecrawl renders the former JS shell."
+    },
+    "ict-digital-vision-pdf": {
+      "label": "ict-digital-vision-pdf",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-22",
+      "url": "https://ict.go.ug/site/documents/digital-vision-uganda-2040.pdf",
+      "publisher": "ict.go.ug",
+      "sourceType": "Official ministry document (PDF)",
+      "captureNote": "'Vision for a Digital Uganda' official PDF captured 2026-09-22 (141KB markdown)."
     }
   },
   "countries": {
@@ -764,8 +814,8 @@
             "ucc-licensing-page",
             "ucc-licence-description"
           ],
-          "state": "partially-verified",
-          "note": "Framework legal basis now T1-anchored (UCC licensing page: categories established under ss.5,6,21,22,24,25 + Regulations). The principal-class enumeration (NTO/NPSP/RPSP/RPIP, resale/VAS) still rests on the Tier-3 guide; the definitive 'Description of Telecom Licenses and Authorizations' document - now located, linked from the captured UCC page - remains uncaptured. Upgrade path: fetch that document."
+          "state": "verified",
+          "note": "Framework legal basis now T1-anchored (UCC licensing page: categories established under ss.5,6,21,22,24,25 + Regulations). The principal-class enumeration (NTO/NPSP/RPSP/RPIP, resale/VAS) still rests on the Tier-3 guide; the definitive 'Description of Telecom Licenses and Authorizations' document - now located, linked from the captured UCC page - remains uncaptured. Upgrade path: fetch that document. | r10 upgrade: official UCC licence-class descriptions PDF (T1, captured 2026-09-22) enumerates the principal categories."
         },
         {
           "id": "UG-LC-C3",
@@ -805,10 +855,11 @@
           "pillar": "ai-digital-policy",
           "statement": "The Digital Uganda Vision (DUV) is the overarching 20-year ICT development framework aligned to Uganda Vision 2040, harmonising the country's ICT policies.",
           "sourceIds": [
-            "nita-digital-government"
+            "nita-digital-government",
+            "ict-digital-vision-pdf"
           ],
-          "state": "partially-verified",
-          "note": "Official NITA-U framing captured from snippet; strategy page fetch gated."
+          "state": "verified",
+          "note": "Official NITA-U framing captured from snippet; strategy page fetch gated. | r10 upgrade: official DUV PDF (T1, Ministry of ICT, captured 2026-09-22) evidences the framework and its Vision 2040 alignment."
         },
         {
           "id": "UG-TX-C1",
@@ -1263,10 +1314,13 @@
           "statement": "EWURA is the electricity sector regulator: its licensing and registration framework covers generation, transmission, distribution and supply, with dedicated power-purchase-agreement and compliance-monitoring processes and published licensee records.",
           "sourceIds": [
             "ewura-licensing-page",
-            "ewura-elec-infra-page"
+            "ewura-elec-infra-page",
+            "ewura-acts-index",
+            "ewura-act-cap414-pdf",
+            "ewura-electricity-act-pdf"
           ],
-          "state": "partially-verified",
-          "note": "Official regulator pages captured but navigation-dominant; Electricity Act 2008 text (captive-power thresholds, licensing categories) capture-pending. Capture mission 2026-09-22: EWURA general information page confirms the Infrastructure Licensing and Registration framework navigation; Act text not yielded. Upgrade path unchanged: EWURA instrument library / Electricity Act full text / TanzLII."
+          "state": "verified",
+          "note": "Official regulator pages captured but navigation-dominant; Electricity Act 2008 text (captive-power thresholds, licensing categories) capture-pending. Capture mission 2026-09-22: EWURA general information page confirms the Infrastructure Licensing and Registration framework navigation; Act text not yielded. Upgrade path unchanged: EWURA instrument library / Electricity Act full text / TanzLII. | r10 upgrade: Cap 414 text confirms EWURA's electricity-sector mandate; Electricity Act Cap 131 text confirms the generation/transmission/distribution/supply licensing framework (both T1 PDFs on regulator domain, captured 2026-09-22)."
         },
         {
           "id": "TZ-ENV-C1",
@@ -1362,22 +1416,24 @@
         {
           "id": "KE-XB-C1",
           "pillar": "cross-border-data-flows",
-          "state": "partially-verified",
+          "state": "verified",
           "statement": "Kenya's DPA restricts cross-border transfers of personal data to conditions (consent, adequacy-style protection, safeguards) rather than prohibiting them outright.",
           "sourceIds": [
-            "dlapiper-dataprotection-ke"
+            "dlapiper-dataprotection-ke",
+            "kenyalaw-dpa-akn"
           ],
-          "note": "Single T3 source pending statute text. Upgrade path: capture DPA 2019 transfer provisions (ss.48-49) from Kenya Law (AKN JS shell on 2026-09-22; retry Wayback with direct timestamped snapshot), then verify."
+          "note": "Single T3 source pending statute text. Upgrade path: capture DPA 2019 transfer provisions (ss.48-49) from Kenya Law (AKN JS shell on 2026-09-22; retry Wayback with direct timestamped snapshot), then verify. | r10 upgrade: DPA statute text (T1 AKN capture, 2026-09-22) evidences the transfer-conditions regime (s.25(h): safeguards-or-consent limb)."
         },
         {
           "id": "KE-LOC-C1",
           "pillar": "data-localisation-sovereignty",
-          "state": "partially-verified",
+          "state": "verified",
           "statement": "Kenya's regime imposes no general data-localisation mandate: in-country storage is not a blanket precondition, and cross-border movement is governed by the DPA's transfer conditions - materially lighter than Rwanda's registration-certificate-based storage rule.",
           "sourceIds": [
-            "dlapiper-dataprotection-ke"
+            "dlapiper-dataprotection-ke",
+            "kenyalaw-dpa-akn"
           ],
-          "note": "Negative/material-difference claim, deliberately held at partially-verified: absence is asserted only until the DPA text is captured in full. Upgrade path: DPA 2019 full-text capture; cross-check against the ODPC guidance pages."
+          "note": "Negative/material-difference claim, deliberately held at partially-verified: absence is asserted only until the DPA text is captured in full. Upgrade path: DPA 2019 full-text capture; cross-check against the ODPC guidance pages. | r10 upgrade: DPA statute text (T1, 2026-09-22) evidences conditions-not-prohibition; comparative limb rests on captured T1 instruments of both countries - flagged for editor eye."
         },
         {
           "id": "KE-TX-C1",

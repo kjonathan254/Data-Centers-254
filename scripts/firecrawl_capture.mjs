@@ -36,7 +36,7 @@ if (!KEY) {
 const args = process.argv.slice(2);
 const url = args.find((a) => !a.startsWith("--"));
 if (!url || !/^https?:\/\//i.test(url)) {
-  console.error("Usage: node scripts/firecrawl_capture.mjs <url> [--tier 1|2|3] [--claims id,id] [--note \"...\"]");
+  console.error("Usage: node scripts/firecrawl_capture.mjs <url> [--tier 1|2|3] [--claims id,id] [--note \"...\"] [--wait ms]");
   process.exit(1);
 }
 const opt = (flag, def = "") => {
@@ -44,6 +44,7 @@ const opt = (flag, def = "") => {
   return i >= 0 && args[i + 1] && !args[i + 1].startsWith("--") ? args[i + 1] : def;
 };
 const tier = opt("--tier", "2");
+const waitMs = parseInt(opt("--wait", "0"), 10) || 0;
 const claims = opt("--claims")
   .split(",")
   .map((s) => s.trim())
@@ -54,7 +55,13 @@ console.log(`Scraping: ${url}`);
 const res = await fetch("https://api.firecrawl.dev/v2/scrape", {
   method: "POST",
   headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
-  body: JSON.stringify({ url, formats: ["markdown"], onlyMainContent: true, timeout: 90000 }),
+  body: JSON.stringify({
+    url,
+    formats: ["markdown"],
+    onlyMainContent: true,
+    timeout: 90000,
+    ...(waitMs ? { waitFor: waitMs } : {}),
+  }),
 });
 
 if (!res.ok) {
@@ -84,7 +91,7 @@ const fm = [
   `source_url: ${url}`,
   `final_url: ${meta.sourceURL || url}`,
   `title: ${(meta.title || "(untitled)").replace(/"/g, "'")}`,
-  `tool: firecrawl-v2 POST /scrape (markdown, onlyMainContent)`,
+  `tool: firecrawl-v2 POST /scrape (markdown, onlyMainContent${waitMs ? `, waitFor ${waitMs}ms` : ""})`,
   `http_status: ${meta.statusCode || "n/a"}`,
   `tier: ${tier}`,
   `claims: [${claims.join(", ")}]`,
