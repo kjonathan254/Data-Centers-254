@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r2",
+  "datasetVersion": "policy-2026-Q3-r3",
   "generatedAt": "2026-09-22",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
@@ -171,6 +171,107 @@
       "captureStatus": "capture-pending",
       "captureNote": "Portal renders via JS; fetch returned a 526-byte shell on 2026-09-22. Would confirm form mechanics/fees for UG-DP-C4 directly.",
       "excerpt": null
+    },
+    "rura-licensing-regulation": {
+      "label": "RURA Regulation No 013/R/EC-ICT/RURA/2021 of 25/02/2021 Governing Licensing in Electronic Communication (official PDF, 59pp)",
+      "url": "https://www.rura.rw/fileadmin/user_upload/RURA/Documents/Sectors/ICT/Regulatory_Instruments/ICT_Regulations_and_Guidelines/Regulation_Governing_Licensing_in_Electronic_Communication_in_Rwanda.pdf",
+      "tier": 1,
+      "publisher": "Rwanda Utilities Regulatory Authority (RURA)",
+      "sourceType": "Regulator instrument (full text captured)",
+      "publishedDate": "2021-02-25",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "ANNEX ONE: APPLICATION AND LICENSE FEES ... CATEGORY 3: APPLICATION SERVICE PROVIDERS ... Data Centers (not having ISP License or NTO License: Tier One and Two) USD 100 / USD 2,000 Standard 5 years; Data Centers (not having ISP License or NTO License): Tier Three and Four and plus USD 1,000 / USD 10,000 Standard 15 Years"
+    },
+    "risa-law-058-2021": {
+      "label": "Law No 058/2021 of 13/10/2021 relating to the protection of personal data and privacy (official gazette text, bilingual PDF, 82pp, via RISA)",
+      "url": "https://www.risa.gov.rw/fileadmin/user_upload/RISA/Publications/2.Laws/Law_relating_to_the_protection_of_personal_data_and_privacy.pdf",
+      "tier": 1,
+      "publisher": "Republic of Rwanda (Official Gazette n° Special of 15/10/2021), hosted by RISA",
+      "sourceType": "Statute (full text captured)",
+      "publishedDate": "2021-10-15",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Article 48: ... share or transfer personal data to a third party outside Rwanda if: 1° he or she has obtained authorisation from the supervisory authority after providing proof of appropriate safeguards ... 2° the data subject has given his or her consent; 3° the transfer is necessary ... Article 50: The data controller or the data processor stores personal data in Rwanda. However, the storage of personal data outside Rwanda is only permitted if ... holds a valid registration certificate authorising him or her to store personal data outside Rwanda, which is issued by the supervisory authority."
+    },
+    "dpo-gov-rw": {
+      "label": "Data Protection & Privacy Office (DPO) - official services site",
+      "url": "https://dpo.gov.rw/",
+      "tier": 1,
+      "publisher": "Data Protection and Privacy Office (Rwanda)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Services: Apply as a Data Controller ... Apply as a Data Processor ... Authorization to Transfer Outside Rwanda ... Authorization to Store Outside Rwanda ... What to do after registering with NCSA"
+    },
+    "rdb-one-stop-centre": {
+      "label": "Rwanda Development Board - One Stop Centre (investment incentives)",
+      "url": "https://rdb.rw/services/one-stop-centre/",
+      "tier": 1,
+      "publisher": "Rwanda Development Board (RDB)",
+      "sourceType": "Government agency website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Corporate income tax holiday of up to seven (7) years: A registered investor investing an equivalent of at least fifty million United States Dollars (USD 50,000,000) and contributing at least thirty percent (30%) of this investment in form of equity in the sectors specified below ... Information and Communication Technology ... This incentive excludes ICT retail and wholesale trade as well as ICT repair industries and telecommunications"
+    },
+    "dataguidance-rwanda": {
+      "label": "DataGuidance - Rwanda jurisdiction chapter",
+      "url": "https://www.dataguidance.com/jurisdiction/rwanda",
+      "tier": 3,
+      "publisher": "DataGuidance (OneTrust)",
+      "sourceType": "Commercial legal research platform",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "The National Cyber Security Authority (NCSA), as the designated supervisory authority under the Data Protection Law, has been active in clarifying compliance ... published on October 15, 2021, in the Rwanda Official Gazette"
+    },
+    "cyber-gov-dpo": {
+      "label": "NCSA/DPO - Data Protection Office guidance page",
+      "url": "https://cyber.gov.rw/",
+      "tier": 1,
+      "publisher": "National Cyber Security Authority (Rwanda)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Page fetch returned shell content; registration-deadline framing captured from search index snippet. The DPO site (dpo.gov.rw) was fully captured and carries the operative registration guidance.",
+      "excerpt": "Put in place a register of data controllers and data processors. With the transitional period ending on 15th October 2023 ..."
+    },
+    "dlapiper-africa-rw-deadline": {
+      "label": "DLA Piper Africa - Deadline for mandatory registration as a data controller or processor in Rwanda",
+      "url": "https://www.dlapiperafrica.com/",
+      "tier": 3,
+      "publisher": "DLA Piper Africa",
+      "sourceType": "Law firm briefing",
+      "publishedDate": "2023-09-21",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "excerpt": "Deadline for mandatory registration as a data controller or processor to close on 15 October 2023"
+    },
+    "minict-ssp-2024-2029": {
+      "label": "ICT Sector Strategic Plan (2024-2029) - Ministry of ICT and Innovation",
+      "url": "https://www.minict.gov.rw/",
+      "tier": 1,
+      "publisher": "Ministry of ICT and Innovation (Rwanda)",
+      "sourceType": "Official government strategy",
+      "publishedDate": "2024-08-10",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Ministry site fetched (homepage shell only); SSP framing captured from search index snippets of minict.gov.rw/minecofin.gov.rw. Fetch the SSP PDF for full-text verification.",
+      "excerpt": "The SSP aligns with the Smart Rwanda Master Plan (SRMP II) which adopted three core pillars: Digital Business, Digital Citizen, and Digital ..."
+    },
+    "risa-dp-page": {
+      "label": "RISA - Data Protection and Privacy Law (official page with article summaries)",
+      "url": "https://www.risa.gov.rw/data-protection-and-privacy-law",
+      "tier": 1,
+      "publisher": "Rwanda Information Society Authority (RISA)",
+      "sourceType": "Government agency website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "On October 15th 2021, Law No 058/2021 of 13/10/2021 relating to the protection of personal data and privacy was officially gazetted. The law protects personal data and ensures privacy of individual users."
     }
   },
   "countries": {
@@ -373,6 +474,203 @@
           ],
           "state": "partially-verified",
           "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified."
+        }
+      ]
+    },
+    "rwanda": {
+      "name": "Rwanda",
+      "iso": "RW",
+      "directoryFacilities": 1,
+      "facilitiesNote": "ADC Kigali KGL1 (facility record under editorial hold in the facility evidence dataset - policy claims here are independent of that hold)",
+      "regulators": {
+        "communications": "Rwanda Utilities Regulatory Authority (RURA)",
+        "dataProtection": "National Cyber Security Authority (NCSA) / Data Protection and Privacy Office (DPO)",
+        "investment": "Rwanda Development Board (RDB)",
+        "ict": "Ministry of ICT and Innovation / RISA"
+      },
+      "pillarGaps": [
+        {
+          "pillar": "energy-electricity",
+          "gap": "No claims researched yet (REG/EUCL tariff classes, power-availability policy for large loads)",
+          "expectedSources": [
+            "REG/EUCL published tariffs",
+            "Ministry of Infrastructure instruments"
+          ],
+          "upgradePath": "Fetch tariff schedules in the energy increment"
+        },
+        {
+          "pillar": "construction-building",
+          "gap": "No claims researched yet (Rwanda Building Code application to DCs, Kigali City permitting)",
+          "expectedSources": [
+            "Rwanda Building Code",
+            "Kigali City One Stop Centre for construction"
+          ],
+          "upgradePath": "Deferred to a later increment"
+        },
+        {
+          "pillar": "environmental",
+          "gap": "No claims researched yet (REMA EIA requirements for large facilities)",
+          "expectedSources": [
+            "Rwanda Environment Management Authority (REMA)",
+            "Environment Law No 48/2018"
+          ],
+          "upgradePath": "Deferred to a later increment"
+        },
+        {
+          "pillar": "cross-border-data-flows",
+          "gap": "Strong national coverage (Art. 48/50); EAC-level instruments pending",
+          "expectedSources": [
+            "EAC Data Protection & Privacy Policy (2021)"
+          ],
+          "upgradePath": "Regional comparison phase"
+        },
+        {
+          "pillar": "regional-frameworks",
+          "gap": "EAC harmonisation instruments not yet researched",
+          "expectedSources": [
+            "EAC Secretariat instruments",
+            "national ratification records"
+          ],
+          "upgradePath": "Regional comparison phase (editor sequencing)"
+        }
+      ],
+      "investigatedAt": "2026-09-22",
+      "investigationNote": "Second country through the policy pipeline. Evidence quality higher than Uganda's round because the Tier-1 instruments were directly fetchable: RURA licensing regulation full text (59pp PDF), Law 058/2021 official gazette text (82pp PDF), DPO services site, RDB incentive page. 11 of 13 claims verified from verbatim instrument text; the two partially-verified claims rest on snippet-level official sources. Material differences vs Uganda now anchored at Tier 1: prior authorisation for cross-border transfer (Art. 48) and default in-country storage (Art. 50) vs Uganda's records-based s.19 regime; explicit DC licence class with tiered fees vs Uganda's unnamed-category ambiguity.",
+      "claims": [
+        {
+          "id": "RW-LC-C1",
+          "pillar": "licensing",
+          "statement": "RURA Regulation No 013/R/EC-ICT/RURA/2021 of 25/02/2021 governs licensing in Rwanda's electronic communications sector and came into force on the day of its publication in the Official Gazette.",
+          "sourceIds": [
+            "rura-licensing-regulation"
+          ],
+          "state": "verified",
+          "note": "Full official PDF captured (59pp): 'Article 48: Commencement - This regulation comes into force on the day of its publication in the official gazette'; signed Kigali 25/02/2021 (Dr Ignace Gatare, Chairperson of the Regulatory Board)."
+        },
+        {
+          "id": "RW-LC-C2",
+          "pillar": "licensing",
+          "statement": "The Regulation issues licences in three categories - network infrastructure, network services, and application services (Art. 9) - through three types: individual licences (issued by auction to a National Telecommunication Operator), standard licences, and general authorisations (Art. 6-8).",
+          "sourceIds": [
+            "rura-licensing-regulation"
+          ],
+          "state": "verified",
+          "note": "Verbatim from captured text: 'The Regulatory Authority issues the licenses to operators who provide the following services: 1. Network infrastructure; 2. Network services; and 3. Application services.'"
+        },
+        {
+          "id": "RW-LC-C3",
+          "pillar": "licensing",
+          "statement": "Data centres are an explicitly named licence class in Rwanda: under Annex One Category 3 (Application Service Providers), a data centre not holding an ISP or NTO licence pays USD 100 application / USD 2,000 licence fee on a standard 5-year licence (facility Tiers One and Two), or USD 1,000 / USD 10,000 on a standard 15-year licence (facility Tiers Three and Four and plus).",
+          "sourceIds": [
+            "rura-licensing-regulation"
+          ],
+          "state": "verified",
+          "note": "The claim Uganda's dataset could not yet verify at Tier 1 (cf. UG-LC-C3, on publication hold). Rwanda's regulator names data centres in the fee schedule with tier-differentiated pricing. Operator-material: ADC Kigali KGL1 and any future Rwanda records fall here. Fee amounts as printed in the captured PDF; re-verify against current RURA schedule before advising on costs."
+        },
+        {
+          "id": "RW-LC-C4",
+          "pillar": "licensing",
+          "statement": "Network Infrastructure Provider licensees must own, operate or provide any form of active or passive physical infrastructure used for carrying or providing services, applications and content (Art. 10).",
+          "sourceIds": [
+            "rura-licensing-regulation"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured. Context for colocation/interconnection analysis: passive infrastructure (ducts, dark fibre) sits inside the licensed scope."
+        },
+        {
+          "id": "RW-DP-C1",
+          "pillar": "data-protection",
+          "statement": "Rwanda's data protection law is Law No 058/2021 of 13/10/2021 relating to the protection of personal data and privacy, officially gazetted on 15 October 2021.",
+          "sourceIds": [
+            "risa-law-058-2021",
+            "risa-dp-page",
+            "dataguidance-rwanda"
+          ],
+          "state": "verified",
+          "note": "Official gazette PDF captured (82pp bilingual, header 'Official Gazette n° Special of 15/10/2021'); RISA page and DataGuidance corroborate."
+        },
+        {
+          "id": "RW-DP-C2",
+          "pillar": "data-protection",
+          "statement": "A person who intends to be a data controller or a data processor must register with the supervisory authority (Art. 29).",
+          "sourceIds": [
+            "risa-law-058-2021"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured. Practice detail: registration administered through the NCSA/DPO; transitional compliance window ended 15 October 2023 (RW-DP-C6)."
+        },
+        {
+          "id": "RW-DP-C3",
+          "pillar": "data-protection",
+          "statement": "Cross-border sharing or transfer of personal data outside Rwanda is permitted only if the controller/processor has (1) obtained authorisation from the supervisory authority after providing proof of appropriate safeguards, or (2) the data subject's consent, or (3) necessity grounds (contract performance, public interest, legal claims, vital interests) (Art. 48).",
+          "sourceIds": [
+            "risa-law-058-2021"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured from the official gazette text. MATERIAL DIFFERENCE vs Uganda: Uganda's PDPO confirmed no advance approval is required (records-based regime; UG-DP-C5). Rwanda requires prior authorisation as the first branch."
+        },
+        {
+          "id": "RW-DP-C4",
+          "pillar": "data-localisation-sovereignty",
+          "statement": "Personal data must be stored in Rwanda; storage outside Rwanda is only permitted if the controller/processor holds a valid registration certificate authorising storage outside Rwanda, issued by the supervisory authority (Art. 50).",
+          "sourceIds": [
+            "risa-law-058-2021",
+            "dpo-gov-rw"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured; the DPO's official services menu ('Authorization to Store Outside Rwanda') corroborates operationally. MATERIAL DIFFERENCE vs Uganda: no equivalent default-localisation provision captured in Uganda's Act. Direct colocation-demand driver for in-country Rwandan facilities."
+        },
+        {
+          "id": "RW-DP-C5",
+          "pillar": "data-protection",
+          "statement": "The National Cyber Security Authority (NCSA) is the designated supervisory authority under the Data Protection Law, and the Data Protection and Privacy Office (DPO) administers registration and authorisations under it.",
+          "sourceIds": [
+            "dataguidance-rwanda",
+            "dpo-gov-rw"
+          ],
+          "state": "verified",
+          "note": "DataGuidance names NCSA as designated supervisory authority; the official DPO site shows registration 'with NCSA' and the authorisation services. The law text itself uses the generic term 'supervisory authority'."
+        },
+        {
+          "id": "RW-DP-C6",
+          "pillar": "data-protection",
+          "statement": "The transitional period for data controller/processor registration ended on 15 October 2023, after which registration became mandatory without the transition window.",
+          "sourceIds": [
+            "cyber-gov-dpo",
+            "dlapiper-africa-rw-deadline"
+          ],
+          "state": "partially-verified",
+          "note": "Official NCSA page captured only as search snippet (shell on fetch); deadline corroborated by DLA Piper Africa briefing. Upgrade on full NCSA page capture."
+        },
+        {
+          "id": "RW-TX-C1",
+          "pillar": "tax-incentives",
+          "statement": "A registered investor investing at least USD 50,000,000 (with at least 30% equity) in qualifying sectors - including Information and Communication Technology (excluding ICT retail/wholesale trade, ICT repair, and telecommunications) - is entitled to a corporate income tax holiday of up to seven years.",
+          "sourceIds": [
+            "rdb-one-stop-centre"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured from RDB's official One Stop Centre page. A large data-centre campus could qualify under ICT, but 'telecommunications' exclusion needs care for operator-affiliated facilities - interpretation deferred to the article layer."
+        },
+        {
+          "id": "RW-TX-C2",
+          "pillar": "tax-incentives",
+          "statement": "An international company with its headquarters or regional office in Rwanda is entitled to a 0% preferential corporate income tax rate if it invests at least USD 10,000,000 in tangible and intangible assets and provides employment and training to Rwandans.",
+          "sourceIds": [
+            "rdb-one-stop-centre"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured. Regional-HQ path relevant to pan-African DC operators choosing Kigali."
+        },
+        {
+          "id": "RW-AI-C1",
+          "pillar": "ai-digital-policy",
+          "statement": "Rwanda's ICT Sector Strategic Plan (2024-2029) aligns with the Smart Rwanda Master Plan (SRMP II) and its core pillars (Digital Business, Digital Citizen), under the 30-year Vision 2050 agenda.",
+          "sourceIds": [
+            "minict-ssp-2024-2029"
+          ],
+          "state": "partially-verified",
+          "note": "Official-domain snippets only (minict.gov.rw / minecofin.gov.rw); SSP PDF capture pending. Any explicit 'data centre' language in the SSP awaits full-text capture."
         }
       ]
     }
