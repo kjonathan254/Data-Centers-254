@@ -134,6 +134,9 @@ function ArticleImageBlock({ image }: { image: ArticleImage }) {
   const isInfographic = image.position === "infographic";
   const isSectionBreak = image.position === "section-break";
   const isDiagram = image.position === "diagram";
+  // Animated diagrams delivered as muted looping H.264 (GIF of the same
+  // animation would be several MB heavier); poster shows the final frame.
+  const isVideo = image.src.endsWith(".mp4");
 
   if (!isDiagram && PORTRAIT_IMAGE_DIMS[image.src]) {
     return (
@@ -154,18 +157,32 @@ function ArticleImageBlock({ image }: { image: ArticleImage }) {
           : isSectionBreak || isInfographic
           ? "-mx-4 sm:-mx-6"
           : ""
-      } ${isInfographic || isDiagram ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
+      } ${isInfographic || isDiagram || isVideo ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
     >
-      {isDiagram ? (
+      {isDiagram || isVideo ? (
         <div className="bg-surface/60">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={736}
-            height={920}
-            className="w-full h-auto"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
+          {isVideo ? (
+            <video
+              src={image.src}
+              poster={image.src.replace(/\.mp4$/, "-poster.webp")}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full h-auto"
+              aria-label={image.alt}
+            />
+          ) : (
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={736}
+              height={920}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          )}
         </div>
       ) : (
         <div

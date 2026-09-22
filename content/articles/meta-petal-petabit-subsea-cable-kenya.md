@@ -22,13 +22,17 @@ images:
     alt: "Meta's announcement artwork for Petal, a first-of-its-kind transoceanic subsea cable"
     caption: "Meta's announcement artwork for Petal, the first subsea cable built to deliver petabit capacity across an ocean. Image: Meta Newsroom"
     position: "hero"
-  - src: "/images/submarine-cables-map.webp"
-    alt: "World map of submarine cable routes linking Africa, Europe and the Americas"
-    caption: "Petal adds a petabit-class link on the Europe-to-United States leg, the far end of the routes that carry East African traffic to the Americas"
+  - src: "/images/meta-petal-transatlantic-step-changes.gif"
+    alt: "Animated chart of Meta's transatlantic cable capacity step-changes, from Marea to Petal"
+    caption: "Meta's transatlantic step-changes, one block = Marea's 192 Tbps: Marea 192 Tbps (2018), Amitié 384 Tbps (2023), Anjana 557 Tbps (2025), Petal 1,056 Tbps (2029). Courtesy of Meta"
     position: "diagram"
-  - src: "/images/submarine-cable-diagram.webp"
-    alt: "Diagram of subsea cable architecture from landing station to POP"
-    caption: "Petal's leap comes from two-core fibre: two transmission cores inside one cable, doubling capacity without doubling the physical plant"
+  - src: "/images/meta-petal-two-core-fibre.mp4"
+    alt: "Meta animation of the transition from single-core to two-core submarine fibre, showing two transmission cores inside one fibre strand"
+    caption: "The technology behind Petal's leap: two transmission cores inside the same fibre, doubling capacity without doubling the physical plant. Courtesy of Meta"
+    position: "diagram"
+  - src: "/images/meta-petal-route-map.gif"
+    alt: "Animated map of Meta's transatlantic cable routes between the United States and France"
+    caption: "Meta's transatlantic systems on one map: Marea (2018, 8 fibre pairs), Amitié (2023, 16), Anjana (2025, 24) and Petal (2029), whose 24 two-core pairs carry the equivalent of 48. Courtesy of Meta"
     position: "diagram"
   - src: "/images/submarine-cable-diver.webp"
     alt: "Diver inspecting a submarine cable on the seabed"
@@ -80,19 +84,21 @@ So let's deal with the obvious question first, because credibility depends on it
 
 The headline number is capacity. Where traditional transoceanic cables carry terabits per second, Petal is designed to deliver 1 petabit per second, by Meta's own illustration, roughly the network capacity required for 75% of the world's population to stream music at the same time. That is not an incremental upgrade; it is the largest generational increase in transoceanic capacity of any system, ever, according to Meta. For context, 2Africa, the Meta-led consortium system that has been live at Mombasa and Mtwapa since June 2024, carries a design capacity of 180 Tbps. Petal is more than five times that on a single span a fraction of the length.
 
-![World map of submarine cable routes linking Africa, Europe and the Americas](/images/submarine-cables-map.webp)
+![Animated chart of Meta's transatlantic cable capacity step-changes](/images/meta-petal-transatlantic-step-changes.gif)
 
 The engineering story behind the number matters just as much. Petal will be the first cable to deploy multi-core fibre technology at transoceanic distances, carrying traffic in two separate cores inside the same cable. The practical consequence: twice the data without a proportional increase in fibre, physical materials, or power. Meta points to its engineering blog for the technical deep-dive, but the headline is simple: the industry has found a way to multiply capacity per cable rather than laying more of them. It is also worth reading Petal as what it really is: a story about the stack that carries AI, cloud and digital services, where compute demand fills data centres, data centres fill networks, and networks ride subsea cables between continents. Petal is the bottom of that stack getting a generational upgrade.
 
-![Diagram of subsea cable architecture from landing station to POP](/images/submarine-cable-diagram.webp)
+![Meta animation of the transition from single-core to two-core fibre](/images/meta-petal-two-core-fibre.mp4)
 
 ## Petal does not land in Africa: here's why it still matters to Kenya
 
 **First, the transit path.** Nearly all Kenyan traffic headed for the Americas already rides a two-part journey: north from Mombasa across one of the [seven live cable systems](/articles/submarine-cables-landing-mombasa) to Europe, then west across the Atlantic to the United States. Petal upgrades the second half of that journey. The far end of Kenya's route to the Americas is being rebuilt a full capacity generation ahead of demand, which is what keeps end-to-end performance stable as video, cloud and AI workloads grow. Petal is not capacity Kenyan operators can buy (hyperscaler cables largely serve their own internal traffic), but its arrival is the clearest signal of where the trunk layer above East Africa is heading.
 
-![Diver inspecting a submarine cable on the seabed](/images/submarine-cable-diver.webp)
+![Animated map of Meta's transatlantic cable routes between the United States and France](/images/meta-petal-route-map.gif)
 
 **Second, the capital pattern.** Petal is Meta's 20th-plus subsea investment, following Project Waterworth, a planned 50,000 km system announced in 2025 to connect the US, India, Brazil and South Africa. Google made the same transatlantic move in July 2025 with Sol, linking the US, Bermuda, the Azores and Spain. The pattern is consistent: hyperscalers fund cable generations where their compute demand sits. Meta has already applied that logic to Kenya once, by leading the 2Africa consortium to Mombasa. Every announcement like Petal makes the next hyperscaler decision about African routes more likely, not less.
+
+![Diver inspecting a submarine cable on the seabed](/images/submarine-cable-diver.webp)
 
 **Third, the technology benchmark.** The two-core fibre that makes Petal possible is the same technology direction that will eventually reach regional systems. Today Kenya's aggregate international bandwidth exceeds 20 Tbps of lit capacity, served by seven live systems at Mombasa. When multi-core designs mature into commercially deployable regional systems, the arithmetic changes: operators could multiply capacity on existing routes without new beach landings, new permits, or new marine surveys. That is a future-looking consequence, not a present fact, but it is exactly the kind of shift that determines whether Mombasa's infrastructure keeps pace with [Kenya's data centre build-out](/directory).
 
