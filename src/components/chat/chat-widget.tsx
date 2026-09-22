@@ -23,6 +23,12 @@ export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [trayVisible, setTrayVisible] = useState(false);
   const [seen, setSeen] = useState(true);
+  // Research surfaces (policy intelligence) keep the assistant fully collapsed:
+  // one quiet button, no auto-popping welcome card competing with the data.
+  const suppressWelcome = pathname.startsWith("/policy");
+  const bubbleLabel = suppressWelcome
+    ? `Ask ${BOT_IDENTITY.name} about this dataset`
+    : `Chat with ${BOT_IDENTITY.name}, the DC254 answer engine`;
 
   useEffect(() => {
     // Mount-time hydration from sessionStorage (SSR-safe pulse state).
@@ -67,7 +73,7 @@ export default function ChatWidget() {
 
   return (
     <>
-      {!open && <JibuWelcome trayVisible={trayVisible} onAsk={() => toggle()} />}
+      {!open && !suppressWelcome && <JibuWelcome trayVisible={trayVisible} onAsk={() => toggle()} />}
 
       <div className={`fixed right-4 z-[55] sm:right-6 ${bottomOffset}`}>
       {open && (
@@ -99,7 +105,8 @@ export default function ChatWidget() {
         <button
           type="button"
           onClick={toggle}
-          aria-label={`Chat with ${BOT_IDENTITY.name}, the DC254 answer engine`}
+          title={bubbleLabel}
+          aria-label={bubbleLabel}
           className="group relative flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-cyan/70 text-background shadow-xl shadow-cyan/25 transition-transform hover:scale-105 active:scale-95"
         >
           <MessageCircle className="size-6" aria-hidden="true" />

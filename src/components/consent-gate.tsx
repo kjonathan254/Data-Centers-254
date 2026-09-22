@@ -79,29 +79,28 @@ export default function ConsentGate() {
         <div
           role="dialog"
           aria-label="Analytics consent"
-          className="fixed bottom-4 left-4 right-4 z-[100] mx-auto max-w-xl rounded-xl border border-white/10 bg-[#0b1e3c]/95 p-4 shadow-2xl backdrop-blur sm:bottom-6 sm:left-6 sm:right-auto"
+          className="fixed bottom-3 left-3 right-3 z-[100] mx-auto flex max-w-2xl flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-white/10 bg-[#0b1e3c]/95 px-4 py-3 shadow-2xl backdrop-blur sm:bottom-4 sm:left-4 sm:right-auto"
         >
-          <p className="text-sm leading-relaxed text-white/80">
-            We use privacy-first analytics - Google Analytics 4 and cookieless
-            Microsoft Clarity - to learn which research is useful. Nothing
-            analytical loads until you agree.{" "}
+          <p className="min-w-0 flex-1 text-xs leading-relaxed text-white/75">
+            Privacy-first analytics — GA4 and cookieless Clarity. Nothing analytical
+            loads until you agree.{" "}
             <a href="/privacy" className="text-sky-300 underline underline-offset-2">
-              Privacy policy
+              Privacy details
             </a>
             .
           </p>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="flex shrink-0 gap-2">
             <button
               type="button"
               onClick={() => decide("1")}
-              className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
+              className="rounded-lg bg-sky-500 px-3 py-1.5 text-xs font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
             >
-              Accept analytics
+              Accept
             </button>
             <button
               type="button"
               onClick={() => decide("0")}
-              className="rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/5"
+              className="rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 transition-colors hover:bg-white/5"
             >
               Decline
             </button>
