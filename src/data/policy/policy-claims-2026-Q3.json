@@ -45,7 +45,7 @@
       "publishedDate": "2019-05-03",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Full text behind Cloudflare bot gate on 2026-09-22; gazette/assent/commencement metadata captured from search index snippet. Self-upgrades to full-text capture on a later fetch.",
+      "captureNote": "Capture mission 2026-09-22 retried: ULII AKN endpoint still Cloudflare-gated; search surfaced WIPO Lex/vLex/D4D Access listings but no full-text route yielded. Upgrade path unchanged.",
       "excerpt": "Data Protection and Privacy Act. Chapter 97. Published in Uganda Gazette 21 on 3 May 2019; Assented to on 25 February 2019; Commenced on 3 May 2019."
     },
     "pdpo-decision-google-2025": {
@@ -115,7 +115,7 @@
       "publishedDate": null,
       "retrievedDate": null,
       "captureStatus": "capture-pending",
-      "captureNote": "Identified via Global Law Experts' licensing guide as the definitive licence-class document; not yet located/fetched. Governs whether data-centre assets require a UCC licence - the claim most material to directory operators.",
+      "captureNote": "Capture mission 2026-09-22: document now LOCATED - linked from the captured UCC Telecommunication Licensing page as 'Description of Telecom Licenses and Authorizations'. Still uncaptured; fetch that document to verify the class enumeration.",
       "excerpt": null
     },
     "gle-telecom-licensing": {
@@ -138,7 +138,7 @@
       "publishedDate": "2023-04-01",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Full document page fetch gated (404 shell); roadmap text captured from search index snippet of ict.go.ug. Fetch the PDF for full-text verification.",
+      "captureNote": "Capture mission 2026-09-22 retried: ict.go.ug roadmap path 404-shell; Wayback homepage is nav-only. Upgrade path unchanged: locate the roadmap PDF directly.",
       "excerpt": "Development of reliable digital infrastructure, including high-speed broadband networks, data centres, and cloud computing capabilities."
     },
     "nita-digital-government": {
@@ -150,7 +150,7 @@
       "publishedDate": null,
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Strategy page fetch gated; DUV framing captured from search index snippet of nita.go.ug.",
+      "captureNote": "Capture mission 2026-09-22 retried: NITA-U Wayback homepage lacks DUV content; no DUV page in site nav. Upgrade path: Digital Uganda Vision PDF via ICT ministry publications.",
       "excerpt": "DUV is an overarching 20-year ICT development framework that is aligned to the Uganda Vision 2040."
     },
     "us-state-ics-2025": {
@@ -162,7 +162,7 @@
       "publishedDate": "2025-01-01",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Full PDF not fetched (page-heavy site). Uganda-primary confirmation of incentive specifics (UIA/UFZA instruments) still required.",
+      "captureNote": "Capture mission 2026-09-22 retried: ugandainvest.go.ug JS-empty (direct + Wayback nav-only). Upgrade path: UIA investment-code PDF or UFZA incentives page.",
       "excerpt": "Through the UIA and the Uganda Free Zones Authority, investors can access several tax incentives, including a 10-year income tax holiday for foreign investment."
     },
     "pdpo-register-portal": {
@@ -174,7 +174,7 @@
       "publishedDate": null,
       "retrievedDate": "2026-09-22",
       "captureStatus": "capture-pending",
-      "captureNote": "Portal renders via JS; fetch returned a 526-byte shell on 2026-09-22. Would confirm form mechanics/fees for UG-DP-C4 directly.",
+      "captureNote": "Capture mission 2026-09-22 retried: pdpo.go.ug/register still a JS shell (direct + Wayback + root). Upgrade path: headless render or visit in person of registry; Regulations text remains the alternate anchor.",
       "excerpt": null
     },
     "rura-licensing-regulation": {
@@ -265,7 +265,7 @@
       "publishedDate": "2024-08-10",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Ministry site fetched (homepage shell only); SSP framing captured from search index snippets of minict.gov.rw/minecofin.gov.rw. Fetch the SSP PDF for full-text verification.",
+      "captureNote": "Capture mission 2026-09-22 retried: SSP hosted on minecofin.gov.rw per search, deep link stripped by the search tool; MINICT site path shell. Upgrade path: locate the SSP PDF on minecofin.gov.rw document library.",
       "excerpt": "The SSP aligns with the Smart Rwanda Master Plan (SRMP II) which adopted three core pillars: Digital Business, Digital Citizen, and Digital ..."
     },
     "risa-dp-page": {
@@ -433,7 +433,7 @@
       "publishedDate": "2026-08-31",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "captureNote": "Announcement pages identified on NEMC root capture; full list capture pending. Demonstrates the EIA-certificate regime is actively operated.",
+      "captureNote": "Capture mission 2026-09-22 retried: NEMC announcements listing is JS-loaded (Swahili nav captured, list absent). Upgrade path: NEMC announcements API/page-render or gazette notices.",
       "excerpt": "Announcements: Environmental certificates issued in August 2026 / List of environmental certificates of July 2026."
     },
     "state-ics-tz": {
@@ -446,6 +446,42 @@
       "retrievedDate": "2026-09-22",
       "captureStatus": "captured",
       "excerpt": "Tanzania investment climate chapter (94k chars captured) - power reliability, investment regime, ICT sector context."
+    },
+    "epoca-act-text-cipit": {
+      "label": "The Electronic and Postal Communications Act, 2010 (Tanzania) - full-text reproduction, ICT Policy Africa (CIPIT, Strathmore University) legal document repository",
+      "url": "https://ictpolicyafrica.org/fr/document/a75omimq6wr?page=17",
+      "tier": 2,
+      "publisher": "ICT Policy Africa / CIPIT",
+      "sourceType": "Full-text statute reproduction by a university research centre (non-official depository)",
+      "publishedDate": "2010-04-24",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Statute text captured from the CIPIT document viewer (125-page reproduction; opening pages incl. Arrangement of Sections and Part II(a) Licensing, ss.4-12 headings). Official mirrors (oagmis.oag.go.tz, tanzlii.org) remain Cloudflare-gated - noted for provenance; a later official-mirror capture would re-tier this source to T1.",
+      "excerpt": "THE ELECTRONIC AND POSTAL COMMUNICATIONS ACT, 2010 - ARRANGEMENT OF SECTIONS - PART II ELECTRONIC COMMUNICATIONS (a) Licensing: 4. Power to issue licence and regulate electronic communication systems. 5. Types and duration of licences. 6. Application for licence. ... 11. Network facilities licence."
+    },
+    "dpo-rw-registration-page": {
+      "label": "Rwanda Data Protection and Privacy Office - Registration services page (apply as controller/processor; transfer and storage authorisations)",
+      "url": "https://dpo.gov.rw/registration",
+      "tier": 1,
+      "publisher": "dpo.gov.rw",
+      "sourceType": "Regulator service page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Capture mission 2026-09-22: direct capture succeeded where the 2026-09-22 first pass got a shell. Confirms the operative registration regime (controller/processor certificates, authorisation to transfer/store outside Rwanda). Does not restate the 15-Oct-2023 transition date - that fact stays snippet-sourced.",
+      "excerpt": "Rwanda Data Protection and Privacy Office - Services: Apply as a Data Controller; Apply as a Data Processor; Authorization to Transfer Outside Rwanda; Authorization to Store Outside Rwanda. What to do after registering with NCSA."
+    },
+    "ucc-licensing-page": {
+      "label": "Uganda Communications Commission - Telecommunication Licensing page (statutory basis, licence/authorisation categories, s.22 licence requirement)",
+      "url": "https://www.ucc.co.ug/telecommunication-licensing/",
+      "tier": 1,
+      "publisher": "ucc.co.ug",
+      "sourceType": "Regulator licensing framework page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Capture mission 2026-09-22: located via UCC site navigation after the /description-telecom-licences slug 404'd. Anchors the framework's statutory basis (ss.5,6,21,22,24,25 + Licensing Regulations) and links the definitive 'Description of Telecom Licenses and Authorizations' document, which remains uncaptured.",
+      "excerpt": "Licensing ... as outlined in section 5(1)(b) of the Uganda Communications Act 2013 ... the UCC has diligently established specific categories of licenses. ... Compliance with Section 22 'Licence for telecommunications' ... 'a person shall not, establish a telecommunications station, provide telecommunications services or construct, maintain or operate telecommunications apparatus without a licence issued by the Commission.'"
     }
   },
   "countries": {
@@ -592,10 +628,11 @@
           "statement": "Uganda's technology-neutral licensing framework (introduced 2019/2020 under the Uganda Communications (Licensing) Regulations, 2019) replaced the earlier PIP/PSP classes with principal categories including National Telecom Operator (NTO), National Public Service Provider (NPSP), Regional Public Service Provider (RPSP) and Regional Public Infrastructure Provider (RPIP), plus authorisations for capacity resale and value-added services.",
           "sourceIds": [
             "gle-telecom-licensing",
+            "ucc-licensing-page",
             "ucc-licence-description"
           ],
           "state": "partially-verified",
-          "note": "Licence classes rest on one Tier-3 guide; the definitive UCC instrument (Description of Telecom Licenses and Authorisations) is capture-pending. Upgrade path: fetch the instrument or the Regulations text."
+          "note": "Framework legal basis now T1-anchored (UCC licensing page: categories established under ss.5,6,21,22,24,25 + Regulations). The principal-class enumeration (NTO/NPSP/RPSP/RPIP, resale/VAS) still rests on the Tier-3 guide; the definitive 'Description of Telecom Licenses and Authorizations' document - now located, linked from the captured UCC page - remains uncaptured. Upgrade path: fetch that document."
         },
         {
           "id": "UG-LC-C3",
@@ -603,10 +640,11 @@
           "statement": "Infrastructure companies building data-centre assets for use by licensed operators fall within UCC's licensing regime and must apply for the matching licence class.",
           "sourceIds": [
             "gle-telecom-licensing",
+            "ucc-licensing-page",
             "ucc-licence-description"
           ],
           "state": "partially-verified",
-          "note": "The claim most material to directory operators (Raxio UG1 et al.). Currently single-source (Tier 3). UCC's own instrument is capture-pending; also check Raxio's regulatory/registration disclosures. Editor attention requested before publication. Editorial ruling 2026-09-22: publication hold applied (see publicationHold).",
+          "note": "Statutory anchor improved: s.22 verbatim via the regulator's own page ('a person shall not ... construct, maintain or operate telecommunications apparatus without a licence'); UCC mandate explicitly covers data communication and infrastructure. The 'matching licence class' mapping for data-centre assets remains Tier-3-interpreted pending the Description document. Upgrade path: fetch that document; also check Raxio's regulatory disclosures.",
           "publicationHold": "Editor ruling 2026-09-22 (delegated): do NOT cite publicly - not even with state attribution - until a Tier 1/2 UCC instrument (Description of Telecom Licenses and Authorisations or the Licensing Regulations text) confirms it. A licensing-requirement claim that later proves wrong creates compliance misinformation for readers and operators; silence is the safer failure mode."
         },
         {
@@ -811,10 +849,11 @@
           "statement": "The transitional period for data controller/processor registration ended on 15 October 2023, after which registration became mandatory without the transition window.",
           "sourceIds": [
             "cyber-gov-dpo",
+            "dpo-rw-registration-page",
             "dlapiper-africa-rw-deadline"
           ],
           "state": "partially-verified",
-          "note": "Official NCSA page captured only as search snippet (shell on fetch); deadline corroborated by DLA Piper Africa briefing. Upgrade on full NCSA page capture."
+          "note": "Transition-deadline fact (15 Oct 2023) remains snippet-sourced (NCSA T1 snippet + DLA Piper T3). Capture mission 2026-09-22 added the operative T1: DPO registration services page confirms mandatory controller/processor registration is actively operated. Upgrade path: capture an NCSA/DPO announcement or gazette notice restating the transition-end date."
         },
         {
           "id": "RW-TX-C1",
@@ -864,9 +903,9 @@
       "pillarGaps": [
         {
           "pillar": "licensing",
-          "gap": "No data-centre-named licence category captured in Tanzania's convergence framework (vs Rwanda's explicit Annex One Cat. 3); EPOCA 2010 text pending",
+          "gap": "No data-centre-named licence category captured in Tanzania's convergence framework (vs Rwanda's explicit Annex One Cat. 3); EPOCA 2010 text now captured via CIPIT reproduction (arrangement of sections; s.5 licence-type detail not yet page-walked)",
           "expectedSources": [
-            "EPOCA 2010 full text (oagmis.oag.go.tz / tanzlii - Cloudflare gated)",
+            "EPOCA 2010 s.5 licence-type detail (CIPIT viewer page-walk or official mirror)",
             "TCRA register CSV export"
           ],
           "upgradePath": "Register CSV pull to enumerate licence types; statute text via alternate mirrors"
@@ -946,10 +985,11 @@
           "pillar": "licensing",
           "statement": "The Electronic and Postal Communications Act of 2010 (EPOCA) provides the comprehensive regulatory regime for electronic communications service providers and postal communications service providers in Tanzania.",
           "sourceIds": [
-            "bowmans-ea-data-infra"
+            "bowmans-ea-data-infra",
+            "epoca-act-text-cipit"
           ],
-          "state": "partially-verified",
-          "note": "Single T2 source (Bowmans). EPOCA full text capture-pending (oagmis/tanzlii gated behind Cloudflare). Upgrade on statute text capture."
+          "state": "verified",
+          "note": "Statute text now captured: CIPIT full-text reproduction (T2, incl. Arrangement of Sections and Part II(a) Licensing headings) alongside Bowmans EA data-infrastructure analysis (T2) - two independent publishers covering the comprehensive-regime structure. Editorial review (delegated, 2026-09-22): verified. Official-mirror capture (oagmis/tanzlii) would re-tier the statute source to T1."
         },
         {
           "id": "TZ-LC-C3",
@@ -1093,7 +1133,7 @@
             "ewura-elec-infra-page"
           ],
           "state": "partially-verified",
-          "note": "Official regulator pages captured but navigation-dominant; Electricity Act 2008 text (captive-power thresholds, licensing categories) capture-pending. Upgrade path: EWURA instrument library / Electricity Act full text."
+          "note": "Official regulator pages captured but navigation-dominant; Electricity Act 2008 text (captive-power thresholds, licensing categories) capture-pending. Capture mission 2026-09-22: EWURA general information page confirms the Infrastructure Licensing and Registration framework navigation; Act text not yielded. Upgrade path unchanged: EWURA instrument library / Electricity Act full text / TanzLII."
         },
         {
           "id": "TZ-ENV-C1",
