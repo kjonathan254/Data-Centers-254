@@ -1,15 +1,15 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r3",
+  "datasetVersion": "policy-2026-Q3-r4",
   "generatedAt": "2026-09-22",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
     "rule": "AI never establishes facts or publishes; the editor reviews every claim before any public use",
-    "status": "EDITORIAL REVIEW COMPLETE - publication rulings applied",
+    "status": "EDITORIAL REVIEW COMPLETE (Uganda, via delegated rulings) - Rwanda and Tanzania submissions PENDING editor review",
     "reviewedBy": "Editor, DataCentre254 (rulings on the three review questions delegated to the agent, 2026-09-22)",
     "reviewedAt": "2026-09-22",
-    "scope": "Editor granted full authority on the three tabled questions: LC-C3 publication, DP-C4 structure, pillar-gaps convention. Rulings recorded in publicationPolicy, claim notes and gapSchema. Claim states remain agent-proposed and stand as reviewed."
+    "scope": "Uganda reviewed 2026-09-22 (rulings on LC-C3 publication, DP-C4 structure, pillar-gaps convention). Rwanda (r3) and Tanzania (r4) claims are agent-proposed and stand PENDING editor review; nothing publishes until approved."
   },
   "statusVocabulary": {
     "verified": "supported by acceptable evidence (primary or two independent corroborating sources)",
@@ -272,6 +272,174 @@
       "retrievedDate": "2026-09-22",
       "captureStatus": "captured",
       "excerpt": "On October 15th 2021, Law No 058/2021 of 13/10/2021 relating to the protection of personal data and privacy was officially gazetted. The law protects personal data and ensures privacy of individual users."
+    },
+    "pdpc-act-pdf": {
+      "label": "Personal Data Protection Act, 2022 (Act No 11 of 2022, GN No 395B) - official PDF, 42pp",
+      "url": "https://pdpc.go.tz/documents/3/PERSONAL_DATA_PROTECTION_ACT_2022.pdf",
+      "tier": 1,
+      "publisher": "Personal Data Protection Commission (Tanzania)",
+      "sourceType": "Statute (full text captured)",
+      "publishedDate": "2022-05-31",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "14.-(1) A person shall not collect or process personal data without being registered as a data controller or a data processor under this Act. ... 31.-(1) The Commission may, subject to the provisions of this Act, prohibit the transfer of personal data to a place outside the country. ... 32: transfer of personal data to countries outside the United Republic is not authorised (exceptions enumerated)."
+    },
+    "pdpc-regs-pdf": {
+      "label": "Personal Data Protection (Personal Data Collection and Processing) Regulations, 2023 (GN No 449C) - official PDF, 38pp",
+      "url": "https://pdpc.go.tz/documents/4/THE_PERSONAL_DATA_PROTECTION_PERSONAL_DATA_COLLECTION_AND_PROCESSING_REGULATIONS_2023.pdf",
+      "tier": 1,
+      "publisher": "Personal Data Protection Commission (Tanzania)",
+      "sourceType": "Regulations (full text captured)",
+      "publishedDate": "2023-09-01",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Reg. 4: application for registration using Form No. 1 ... pay the fees specified in the Second Schedule. Reg. 5: verify within seven days. Reg. 6: rejection reasons within fourteen days. Reg. 7: registration valid for five years. Reg. 8: renewal Form No. 3, three months before expiry. Second Schedule: Large-scale (100+ employees, turnover above TZS 500,000,000) registration fee TZS 1,000,000.00; renewal TZS 500,000.00."
+    },
+    "pdpc-act-page": {
+      "label": "PDPC - The Personal Data Protection Act, 2022 (official instrument page)",
+      "url": "https://pdpc.go.tz/the-personal-data-protection-act-2022/",
+      "tier": 1,
+      "publisher": "Personal Data Protection Commission (Tanzania)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "THE PERSONAL DATA PROTECTION ACT, 2022 ... (page hosting the official Act PDF, CHAPTER 44 references on regulator service pages)."
+    },
+    "pdpc-permit-page": {
+      "label": "PDPC - Cross-Border Data Transfer Permit (official service page)",
+      "url": "https://pdpc.go.tz/services/cross-border-data-transfer-permit/",
+      "tier": 1,
+      "publisher": "Personal Data Protection Commission (Tanzania)",
+      "sourceType": "Regulator service page",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "According to the Personal Data Protection Act, Chapter 44, the Personal Data Protection Commission (PDPC) is mandated to regulate and oversee the transfer of Personal Data outside the country... In discharging this mandate, the Commission: Issues permits to entities intending to transfer personal data outside the country; Assesses the level of Personal Data protection in the destination country...; Ensures that appropriate legal, technical, and organizational safeguards are in place prior to any Personal Data transfer; Establishes conditions and compliance requirements...; Monitors and audits adherence to the set conditions."
+    },
+    "tcra-licenses-page": {
+      "label": "TCRA - List of Licensed Providers & Certificates (official searchable register)",
+      "url": "https://www.tcra.go.tz/services/licenses",
+      "tier": 1,
+      "publisher": "Tanzania Communication Regulatory Authority (TCRA)",
+      "sourceType": "Regulator register",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Complete list of licensed service providers and certificates issued by TCRA. Choose section: All Sectors / Broadcasting / Postal & Courier / Telecommunications & Internet / Other / Security. Columns: Provider Name, License Categorization, License Type/No., Validity. Sample entry: Class Licence TCRA/CSRBFACL/01/2026 Issued 2026-09-10 Expiry 2029-09-09."
+    },
+    "bowmans-ea-data-infra": {
+      "label": "Bowmans - Tanzania: Overview of Data Infrastructure in East Africa",
+      "url": "https://www.bowmanslaw.com/insights/overview-of-data-infrastructure-in-east-africa/",
+      "tier": 2,
+      "publisher": "Bowmans (law firm)",
+      "sourceType": "Law firm analysis",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "The Tanzania Communication Regulatory Authority Act of 2003 (TCRA Act) ... introduced a convergence licensing framework, mandated the TCRA to promote competition ... and take responsibility for licensing matters. The Electronic and Postal Communications Act of 2010 (EPOCA) provides a comprehensive regulatory regime for electronic communications service providers and postal communications service providers."
+    },
+    "tiseza-act-pdf": {
+      "label": "The Investment and Special Economic Zones Act (Cap. 38 R.E.) - official PDF, 38pp (published on TISEZA site 2025)",
+      "url": "https://www.tiseza.go.tz/uploads/documents/en-1775024006-THE%20INVESTMENT%20AND%20SPECIAL%20ECONOMIC%20ZONES%20ACT%202025.pdf",
+      "tier": 1,
+      "publisher": "Tanzania Investment and Special Economic Zones Authority (TISEZA)",
+      "sourceType": "Statute (full text captured)",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "20. List of investment incentives. 21. Strategic investor. ... (b) exemption from corporate income tax for the first ten years; (c) exemption from withholding tax on rent, dividends and interest for the first ten years; (d) exemption from withholding tax on interest from foreign loans; (e) exemption from taxes, fees and charges imposed by local government authorities ... for the first ten years; (a) exemption from customs duties, value-added tax, and any other tax imposed on raw materials and capital goods used in production."
+    },
+    "tiseza-incentives-page": {
+      "label": "TISEZA - Certificate of Incentives (official facilitation page)",
+      "url": "https://www.tiseza.go.tz/pages/certificate-of-incentives",
+      "tier": 1,
+      "publisher": "Tanzania Investment and Special Economic Zones Authority (TISEZA)",
+      "sourceType": "Government agency website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Tanzania Investment and Special Economic Zones Authority grants Certificates of Incentives and Licence under authority conferred upon it by Part III, Section 19 (1-5) of Tanzania Investment and Special Economic Zones Act, 2025. Holders of certificate of incentives are entitled to various investment incentives as stipulated in the ... Act."
+    },
+    "tra-dst-page": {
+      "label": "TRA - Digital Service Tax (official explainer)",
+      "url": "https://www.tra.go.tz/page/digital-service-tax",
+      "tier": 1,
+      "publisher": "Tanzania Revenue Authority (TRA)",
+      "sourceType": "Government agency website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Section 90A of the Income Tax Act requires non-resident persons to pay income tax at a rate of 3% on payments received from individuals not conducting business, for services rendered through a digital marketplace. Section 116(1) ... expand[s] the scope of services to include all electronic services. Section 68(5) of the Value Added Tax Act, Cap. 148 allows non-resident persons to register for VAT without the need for a tax representative."
+    },
+    "tra-cet-pdf": {
+      "label": "EAC Customs Union Common External Tariff, 2022 Version (updated June 2025) - hosted by TRA, 577pp",
+      "url": "https://www.tra.go.tz/images/uploads/pages/CET_2022_VERSION_Updated_June_2025.pdf",
+      "tier": 1,
+      "publisher": "East African Community (hosted by Tanzania Revenue Authority)",
+      "sourceType": "Regional tariff instrument (full text captured)",
+      "publishedDate": "2025-06-01",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "84.71 Automatic data processing machines and units thereof: 8471.41.00 ... 8471.49.00 Other, presented in the form of systems u 0%; 8471.50.00 Processing units ... 0%; 8471.60.00 Input or output units ... 0%; 8471.70.00 Storage units u 0%; 85.04 Electrical transformers, static converters: 8504.21.00/8504.22.00/8504.23.00 u 0%."
+    },
+    "ewura-licensing-page": {
+      "label": "EWURA - Electricity Licensing and Registration (official page)",
+      "url": "https://www.ewura.go.tz/pages/licensing-and-registration",
+      "tier": 1,
+      "publisher": "Energy and Water Utilities Regulatory Authority (EWURA)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Page captured but body is navigation-dominant; licensing detail (Electricity Act 2008 thresholds, captive-power exemptions) awaits instrument-text capture.",
+      "excerpt": "Electricity ... Licensing and Registration ... Power Purchase Agreement ... Complaints and dispute resolution ... Compliance Monitoring ... Electricity Licensees."
+    },
+    "ewura-elec-infra-page": {
+      "label": "EWURA - Electricity Infrastructure (official page)",
+      "url": "https://www.ewura.go.tz/pages/electricity-infrastructure",
+      "tier": 1,
+      "publisher": "Energy and Water Utilities Regulatory Authority (EWURA)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Navigation-dominant capture; same upgrade path as ewura-licensing-page.",
+      "excerpt": "Electricity Infrastructure ... Licensing and Registration ... Power Purchase Agreement."
+    },
+    "nemc-regs-page": {
+      "label": "NEMC - Regulations (official publications page)",
+      "url": "https://www.nemc.or.tz/publications/regulations",
+      "tier": 1,
+      "publisher": "National Environment Management Council (NEMC)",
+      "sourceType": "Government agency website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Kanuni | NEMC (Regulations): hosts Environmental Management instruments incl. Registration and Practice of Environmental Experts Regulations 2021 (50pp PDF captured)."
+    },
+    "nemc-certificates-2026": {
+      "label": "NEMC - Environmental certificates issued (monthly announcements, July/August 2026)",
+      "url": "https://www.nemc.or.tz/announcements/environmental-certificates-issued-in-august-2026",
+      "tier": 1,
+      "publisher": "National Environment Management Council (NEMC)",
+      "sourceType": "Regulator operational record",
+      "publishedDate": "2026-08-31",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Announcement pages identified on NEMC root capture; full list capture pending. Demonstrates the EIA-certificate regime is actively operated.",
+      "excerpt": "Announcements: Environmental certificates issued in August 2026 / List of environmental certificates of July 2026."
+    },
+    "state-ics-tz": {
+      "label": "US State Department - 2024 Investment Climate Statements: Tanzania",
+      "url": "https://www.state.gov/reports/2024-investment-climate-statements/tanzania",
+      "tier": 3,
+      "publisher": "US Department of State",
+      "sourceType": "Government investment-climate report",
+      "publishedDate": "2024-07-01",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Tanzania investment climate chapter (94k chars captured) - power reliability, investment regime, ICT sector context."
     }
   },
   "countries": {
@@ -671,6 +839,266 @@
           ],
           "state": "partially-verified",
           "note": "Official-domain snippets only (minict.gov.rw / minecofin.gov.rw); SSP PDF capture pending. Any explicit 'data centre' language in the SSP awaits full-text capture."
+        }
+      ]
+    },
+    "tanzania": {
+      "name": "Tanzania",
+      "iso": "TZ",
+      "directoryFacilities": 1,
+      "facilitiesNote": "Raxio Dar es Salaam TZ1 (raxio-dar-es-salaam-tz1)",
+      "regulators": {
+        "communications": "Tanzania Communication Regulatory Authority (TCRA)",
+        "dataProtection": "Personal Data Protection Commission (PDPC)",
+        "investment": "Tanzania Investment and Special Economic Zones Authority (TISEZA)",
+        "energy": "Energy and Water Utilities Regulatory Authority (EWURA)",
+        "environment": "National Environment Management Council (NEMC)",
+        "tax": "Tanzania Revenue Authority (TRA)"
+      },
+      "pillarGaps": [
+        {
+          "pillar": "licensing",
+          "gap": "No data-centre-named licence category captured in Tanzania's convergence framework (vs Rwanda's explicit Annex One Cat. 3); EPOCA 2010 text pending",
+          "expectedSources": [
+            "EPOCA 2010 full text (oagmis.oag.go.tz / tanzlii - Cloudflare gated)",
+            "TCRA register CSV export"
+          ],
+          "upgradePath": "Register CSV pull to enumerate licence types; statute text via alternate mirrors"
+        },
+        {
+          "pillar": "energy-electricity",
+          "gap": "Electricity Act 2008 thresholds (generation/captive-power licence exemptions, large-load connection) not yet captured",
+          "expectedSources": [
+            "Electricity Act 2008 full text",
+            "EWURA licence application guidelines",
+            "TANESCO tariff schedule for large power users"
+          ],
+          "upgradePath": "Energy increment: fetch Act text + TANESCO tariff books"
+        },
+        {
+          "pillar": "construction-building",
+          "gap": "Not researched (building permits, Contractors Registration Board rules for DC construction)",
+          "expectedSources": [
+            "Local Government (Urban Authorities) permit rules",
+            "CRB registration requirements"
+          ],
+          "upgradePath": "Deferred to a later increment"
+        },
+        {
+          "pillar": "environmental",
+          "gap": "EMA 2004 First Schedule (EIA trigger list) text pending - whether DC-scale load requires full EIA unconfirmed",
+          "expectedSources": [
+            "Environmental Management Act 2004 full text",
+            "EIA Regulations 2005",
+            "eia.nemc.or.tz portal"
+          ],
+          "upgradePath": "Fetch EMA 2004 + EIA Regs (nemc.or.tz uploads, faolex mirrors)"
+        },
+        {
+          "pillar": "ai-digital-policy",
+          "gap": "Digital Tanzania programme texts not researched; null finding: National Development Vision 2050 (captured, 78pp) contains no explicit data-centre mention",
+          "expectedSources": [
+            "Digital Tanzania Strategic Framework",
+            "National ICT Policy"
+          ],
+          "upgradePath": "Policy-document sweep in the AI/digital increment"
+        },
+        {
+          "pillar": "cross-border-data-flows",
+          "gap": "Strong national coverage (s.31/32 + permit machinery); EAC-level instruments pending",
+          "expectedSources": [
+            "EAC Data Protection & Privacy Policy (2021)"
+          ],
+          "upgradePath": "Regional comparison phase"
+        },
+        {
+          "pillar": "regional-frameworks",
+          "gap": "EAC harmonisation instruments not yet researched; EAC CET 2022 (captured, T1) is the first shared regional instrument in the dataset",
+          "expectedSources": [
+            "EAC Secretariat instruments",
+            "EAC Data Protection & Privacy Policy"
+          ],
+          "upgradePath": "Regional comparison phase (editor sequencing)"
+        }
+      ],
+      "investigatedAt": "2026-09-22",
+      "investigationNote": "Third country through the policy pipeline and the strongest capture round: the regulator itself hosts the PDPA 2022 full text (42pp), the 2023 Registration Regulations (38pp with the tiered fee schedule), and the live Cross-Border Data Transfer Permit service page; TISEZA hosts the consolidated Investment and SEZ Act (Cap. 38); TRA hosts the EAC CET 2022. 14 of 17 claims verified from Tier-1 instrument text. Tanzania/Rwanda both operate pre-approval cross-border models (PDPC permits; RURA/NCSA authorisations) vs Uganda's records-based regime - the clearest three-way material difference so far. Null finding recorded: Vision 2050 names no data centres. TCRA's convergence framework shows no DC-named licence category (gap, not negative claim).",
+      "claims": [
+        {
+          "id": "TZ-LC-C1",
+          "pillar": "licensing",
+          "statement": "The Tanzania Communication Regulatory Authority Act of 2003 established TCRA as the converged independent regulator for the postal, broadcast and communications sectors, with a convergence licensing framework and responsibility for licensing operators.",
+          "sourceIds": [
+            "bowmans-ea-data-infra",
+            "tcra-licenses-page"
+          ],
+          "state": "verified",
+          "note": "Bowmans analysis (T2) + TCRA's own live register (T1, two distinct publishers). Convergence-licensing model: one regulator, category-based licences."
+        },
+        {
+          "id": "TZ-LC-C2",
+          "pillar": "licensing",
+          "statement": "The Electronic and Postal Communications Act of 2010 (EPOCA) provides the comprehensive regulatory regime for electronic communications service providers and postal communications service providers in Tanzania.",
+          "sourceIds": [
+            "bowmans-ea-data-infra"
+          ],
+          "state": "partially-verified",
+          "note": "Single T2 source (Bowmans). EPOCA full text capture-pending (oagmis/tanzlii gated behind Cloudflare). Upgrade on statute text capture."
+        },
+        {
+          "id": "TZ-LC-C3",
+          "pillar": "licensing",
+          "statement": "TCRA maintains a public, searchable register of licensed providers and certificates, organised by sector (Broadcasting / Postal & Courier / Telecommunications & Internet / Other / Security), with each entry carrying a licence categorisation and a typed licence number (e.g. class licence TCRA/CSRBFACL/01/2026, issued 2026-09-10).",
+          "sourceIds": [
+            "tcra-licenses-page"
+          ],
+          "state": "verified",
+          "note": "T1 register captured (T1 source suffices under the validator rule). No data-centre-named licence category was found in the framework descriptions captured - unlike Rwanda's RURA Annex One Cat. 3. Recorded as an explicit gap below, NOT claimed as a definitive negative; TCRA register CSV download is the upgrade path."
+        },
+        {
+          "id": "TZ-DP-C1",
+          "pillar": "data-protection",
+          "statement": "Tanzania's data protection law is the Personal Data Protection Act, 2022 (Act No 11 of 2022, GN No 395B), which establishes the Personal Data Protection Commission as a body corporate; regulator service pages now cite it as Chapter 44 (revised laws).",
+          "sourceIds": [
+            "pdpc-act-pdf",
+            "pdpc-act-page"
+          ],
+          "state": "verified",
+          "note": "Full official Act PDF captured from the regulator itself (42pp): '6.-(1) There is established a Commission to be known as the Personal Data Protection Commission.'"
+        },
+        {
+          "id": "TZ-DP-C2",
+          "pillar": "data-protection",
+          "statement": "Registration is a strict precondition for processing: 'A person shall not collect or process personal data without being registered as a data controller or a data processor under this Act' (s.14(1)).",
+          "sourceIds": [
+            "pdpc-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim from the captured official PDF. Directly operator-material: a Tanzanian data centre's processing activities fall inside this duty."
+        },
+        {
+          "id": "TZ-DP-C3",
+          "pillar": "data-protection",
+          "statement": "Registration mechanics (Regulations GN 449C): application on Form No. 1 with fees per the Second Schedule; the Commission verifies within seven days; rejection must be notified with reasons within fourteen days; registration is valid for five years; renewal is on Form No. 3, submitted within three months before expiry.",
+          "sourceIds": [
+            "pdpc-regs-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured (Regs 4-8)."
+        },
+        {
+          "id": "TZ-DP-C4",
+          "pillar": "data-protection",
+          "statement": "Registration fees are tiered by scale (Second Schedule, TZS): small-scale (1-49 employees, turnover below TZS 100M) TZS 100,000 once / 50,000 renewal; medium (50-99 employees, TZS 100-500M) 200,000 / 150,000; large-scale (100+ employees, turnover above TZS 500M) 1,000,000 / 500,000 - renewal after every 5 years.",
+          "sourceIds": [
+            "pdpc-regs-pdf"
+          ],
+          "state": "verified",
+          "note": "Fee table verbatim captured. A typical commercial DC operator registers at the large-scale band."
+        },
+        {
+          "id": "TZ-DP-C5",
+          "pillar": "data-protection",
+          "statement": "Transfers to states with adequate protection (s.31): the Commission may prohibit transfer of personal data to a place outside the country; transfers to an adequate legal framework require necessity, the recipient to ensure safeguards, and a provisional evaluation of necessity by the controller.",
+          "sourceIds": [
+            "pdpc-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured."
+        },
+        {
+          "id": "TZ-DP-C6",
+          "pillar": "data-localisation-sovereignty",
+          "statement": "The default rule for non-adequate destinations is restrictive (s.32): 'transfer of personal data to countries outside the United Republic is not authorised' except in enumerated cases (consent, necessity and others); operationally the PDPC 'Issues permits to entities intending to transfer personal data outside the country', assesses destination-country adequacy, requires safeguards prior to transfer, sets conditions and monitors/audits adherence.",
+          "sourceIds": [
+            "pdpc-act-pdf",
+            "pdpc-permit-page"
+          ],
+          "state": "verified",
+          "note": "MATERIAL DIFFERENCE, both T1: Tanzania operates a pre-approval PERMIT regime (like Rwanda's Art. 48/50 authorisation model), vs Uganda's records-based regime with no advance approval (UG-DP-C5). Direct colocation-demand driver for in-country facilities."
+        },
+        {
+          "id": "TZ-DP-C7",
+          "pillar": "data-protection",
+          "statement": "Penalty scale (Part VII): for offence classes such as unlawful disclosure, destruction, deletion, concealment or alteration of personal data, an individual is liable to a fine of TZS 100,000 to 20,000,000 or imprisonment up to ten years, and a company or corporation to a fine of TZS 1,000,000 to 5,000,000,000; registration-related false information carries TZS 100,000 to 5,000,000 or up to two years.",
+          "sourceIds": [
+            "pdpc-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured (ss.60-61 and s.19/s.63 cross-reference). The TZS 5 billion corporate ceiling is among the region's sharpest exposure figures."
+        },
+        {
+          "id": "TZ-TX-C1",
+          "pillar": "tax-incentives",
+          "statement": "TISEZA grants Certificates of Incentives and licences under Part III, Section 19(1-5) of the Investment and Special Economic Zones Act (Cap. 38); holders are entitled to the incentives stipulated in the Act.",
+          "sourceIds": [
+            "tiseza-incentives-page",
+            "tiseza-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Official TISEZA facilitation page + full statute PDF captured (two publisher expressions of the same authority)."
+        },
+        {
+          "id": "TZ-TX-C2",
+          "pillar": "tax-incentives",
+          "statement": "Enterprises in special economic zones receive: exemption from customs duties, VAT and other taxes on raw materials and capital goods used in production; exemption from corporate income tax for the first ten years; exemption from withholding tax on rent, dividends and interest for the first ten years; exemption from withholding tax on interest from foreign loans; and exemption from local-government taxes, fees and charges on goods produced in SEZs for the first ten years.",
+          "sourceIds": [
+            "tiseza-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured from the Act's incentive list (s.20 area). No Tanzania-specific data-centre tax incentive was found in any captured instrument - recorded as an explicit gap; SEZ siting is the generic path."
+        },
+        {
+          "id": "TZ-TX-C3",
+          "pillar": "tax-incentives",
+          "statement": "The Act provides a strategic investor regime (s.21): the National Investment Development Committee recommends investment incentives for strategic investors and supervises major projects with significant national impact based on size, capital, technological benefits and employment.",
+          "sourceIds": [
+            "tiseza-act-pdf"
+          ],
+          "state": "verified",
+          "note": "Verbatim captured. The path a hyperscale AI campus would negotiate; criteria map cleanly onto data-centre investment profiles (interpretation deferred to article layer)."
+        },
+        {
+          "id": "TZ-TX-C4",
+          "pillar": "tax-incentives",
+          "statement": "Under the EAC Customs Union Common External Tariff (2022 version, updated June 2025), automatic data processing machines and units (HS 8471 - systems, processing units, input/output units, storage units) and electrical transformers/static converters (HS 8504) attract 0% import duty.",
+          "sourceIds": [
+            "tra-cet-pdf"
+          ],
+          "state": "verified",
+          "note": "T1 tariff schedule captured (577pp; ICT headings extracted). EAC-WIDE anchor: applies identically to Kenya, Uganda, Rwanda - a shared input-cost baseline for the regional comparison. Server/IT hardware enters duty-free across all four countries."
+        },
+        {
+          "id": "TZ-TX-C5",
+          "pillar": "tax-incentives",
+          "statement": "Non-resident digital services: Section 90A of the Income Tax Act taxes non-residents at 3% on payments received from individuals (not conducting business) for services through a digital marketplace, with Section 116(1) extending scope to all electronic services; Section 68(5) of the VAT Act lets non-residents register for VAT without a tax representative, operationalised by the Non-resident Electronic Service Providers Regulations 2022.",
+          "sourceIds": [
+            "tra-dst-page"
+          ],
+          "state": "verified",
+          "note": "T1 official TRA explainer, section-cited. Contextual for offshore-delivered cloud/colocation services vs in-country supply."
+        },
+        {
+          "id": "TZ-EN-C1",
+          "pillar": "energy-electricity",
+          "statement": "EWURA is the electricity sector regulator: its licensing and registration framework covers generation, transmission, distribution and supply, with dedicated power-purchase-agreement and compliance-monitoring processes and published licensee records.",
+          "sourceIds": [
+            "ewura-licensing-page",
+            "ewura-elec-infra-page"
+          ],
+          "state": "partially-verified",
+          "note": "Official regulator pages captured but navigation-dominant; Electricity Act 2008 text (captive-power thresholds, licensing categories) capture-pending. Upgrade path: EWURA instrument library / Electricity Act full text."
+        },
+        {
+          "id": "TZ-ENV-C1",
+          "pillar": "environmental",
+          "statement": "NEMC operates an active environmental-compliance regime: it publishes regulations (including the Registration and Practice of Environmental Experts Regulations 2021) and announces environmental certificates issued monthly (lists for July and August 2026 are live on its site).",
+          "sourceIds": [
+            "nemc-regs-page",
+            "nemc-certificates-2026"
+          ],
+          "state": "partially-verified",
+          "note": "Regulator operations confirmed from official pages; the Environmental Management Act 2004 and its EIA First Schedule (whether a DC-scale facility triggers a full EIA) remain capture-pending. eia.nemc.or.tz portal is the operational entry point."
         }
       ]
     }
