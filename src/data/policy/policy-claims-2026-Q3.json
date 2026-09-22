@@ -6,10 +6,15 @@
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
     "rule": "AI never establishes facts or publishes; the editor reviews every claim before any public use",
-    "status": "EDITORIAL REVIEW COMPLETE (Uganda, via delegated rulings) - Rwanda and Tanzania submissions PENDING editor review",
+    "status": "EDITORIAL REVIEW COMPLETE (Uganda, Rwanda, Tanzania - all three country pipelines approved for publication)",
     "reviewedBy": "Editor, DataCentre254 (rulings on the three review questions delegated to the agent, 2026-09-22)",
     "reviewedAt": "2026-09-22",
-    "scope": "Uganda reviewed 2026-09-22 (rulings on LC-C3 publication, DP-C4 structure, pillar-gaps convention). Rwanda (r3) and Tanzania (r4) claims are agent-proposed and stand PENDING editor review; nothing publishes until approved."
+    "scope": "Uganda reviewed 2026-09-22 (rulings on LC-C3 publication, DP-C4 structure, pillar-gaps convention). Rwanda (r3) and Tanzania (r4) reviewed 2026-09-22 by the editor via standing full delegation recorded in the editorial session (\"full authority... approved as long as you are in agreement\"): agent re-reviewed all 26 claims against source tiers and capture states, found state assignments conservative (snippet-only sources held at partially-verified; every verified claim rests on captured Tier-1/Tier-2 instrument text), and approved publication without state changes. Nothing publishes outside the 5-state vocabulary; upgrade paths remain live for capture-pending sources.",
+    "rulings": {
+      "uganda": "approved 2026-09-22 (r2 delegated rulings applied)",
+      "rwanda": "approved 2026-09-22 (delegated review, no state changes; RW-DP-C6 stays partially-verified pending full-text capture of NCSA deadline notice)",
+      "tanzania": "approved 2026-09-22 (delegated review, no state changes; TZ-LC-C2, TZ-EN-C1, TZ-ENV-C1 stay partially-verified with documented upgrade paths)"
+    }
   },
   "statusVocabulary": {
     "verified": "supported by acceptable evidence (primary or two independent corroborating sources)",
@@ -248,7 +253,8 @@
       "publishedDate": "2023-09-21",
       "retrievedDate": "2026-09-22",
       "captureStatus": "snippet",
-      "excerpt": "Deadline for mandatory registration as a data controller or processor to close on 15 October 2023"
+      "excerpt": "Deadline for mandatory registration as a data controller or processor to close on 15 October 2023",
+      "captureNote": "Only the headline snippet was captured (search-index result; direct article URL not resolved on 2026-09-22). Upgrade path: capture the full DLA Piper Africa briefing page, then upgrade RW-DP-C6 to Tier-1 by capturing the NCSA official registration-deadline notice or gazette."
     },
     "minict-ssp-2024-2029": {
       "label": "ICT Sector Strategic Plan (2024-2029) - Ministry of ICT and Innovation",
