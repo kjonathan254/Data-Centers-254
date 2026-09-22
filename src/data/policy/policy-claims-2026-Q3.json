@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "0.2-policy",
+  "datasetVersion": "policy-2026-Q3-r1",
+  "generatedAt": "2026-09-22",
+  "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
+  "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
+  "humanGate": {
+    "rule": "AI never establishes facts or publishes; the editor reviews every claim before any public use",
+    "status": "PENDING EDITOR REVIEW",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "statusVocabulary": {
+    "verified": "supported by acceptable evidence (primary or two independent corroborating sources)",
+    "partially-verified": "some elements supported, others unresolved (single source, or instrument text pending)",
+    "capture-pending": "relevant source identified but inaccessible/unretrieved; state self-upgrades when captured",
+    "unverified": "claim exists but evidence has not met the publication threshold",
+    "contradicted": "credible sources conflict; the conflict is explained, not silently resolved"
+  },
+  "pillars": [
+    "licensing",
+    "data-protection",
+    "data-localisation-sovereignty",
+    "tax-incentives",
+    "energy-electricity",
+    "construction-building",
+    "environmental",
+    "ai-digital-policy",
+    "cross-border-data-flows",
+    "regional-frameworks"
+  ],
+  "sources": {
+    "ulii-dppa-metadata": {
+      "label": "Uganda Legal Information Institute - Data Protection and Privacy Act, Cap. 97 (official depository metadata)",
+      "url": "https://ulii.org/akn/ug/act/2019/9/eng@2019-05-03",
+      "tier": 1,
+      "publisher": "ulii.org",
+      "sourceType": "Official law depository",
+      "publishedDate": "2019-05-03",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Full text behind Cloudflare bot gate on 2026-09-22; gazette/assent/commencement metadata captured from search index snippet. Self-upgrades to full-text capture on a later fetch.",
+      "excerpt": "Data Protection and Privacy Act. Chapter 97. Published in Uganda Gazette 21 on 3 May 2019; Assented to on 25 February 2019; Commenced on 3 May 2019."
+    },
+    "pdpo-decision-google-2025": {
+      "label": "PDPO decision, Ssekamwa Frank & 3 Others v Google LLC, Complaint No. 08/11/24/6683 (18 July 2025)",
+      "url": null,
+      "tier": 1,
+      "publisher": "Personal Data Protection Office (PDPO), Uganda",
+      "sourceType": "Regulator decision",
+      "publishedDate": "2025-07-18",
+      "retrievedDate": null,
+      "captureStatus": "capture-pending",
+      "captureNote": "Primary instrument not published on pdpo.go.ug as of 2026-09-22 (site unreachable); decision content known through CIPESA (T2) and DLA Piper Privacy Matters (T3) reports, which quote the findings and the complaint number.",
+      "excerpt": null
+    },
+    "cipesa-google-decision": {
+      "label": "CIPESA: Ugandan Regulator Finds Google in Breach of Country's Data Protection Law, Orders Local Registration",
+      "url": "https://cipesa.org/2025/07/ugandan-regulator-finds-google-in-breach-of-countrys-data-protection-law-orders-local-registration/",
+      "tier": 2,
+      "publisher": "Collaboration on International ICT Policy for East and Southern Africa (CIPESA)",
+      "sourceType": "Civil-society policy analysis (quotes statute and decision)",
+      "publishedDate": "2025-07-21",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "In a July 18, 2025 decision, Uganda's Personal Data Protection Office (PDPO) found Google LLC in breach of the country's data protection law and ordered the global tech giant to register with the local data protection office within 30 days... contravened section 29 of the Data Protection and Privacy Act... in breach of section 19 of the Act."
+    },
+    "dlapiper-pm-offshore": {
+      "label": "DLA Piper Privacy Matters: Uganda - Data protection Regulator Clarifies Compliance Requirements for Offshore Entities",
+      "url": "https://privacymatters.dlapiper.com/2025/08/uganda-data-protection-regulator-clarifies-compliance-requirements-for-offshore-entities/",
+      "tier": 3,
+      "publisher": "DLA Piper",
+      "sourceType": "International law firm analysis (quotes decision and registration process)",
+      "publishedDate": "2025-08-06",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "The PDPO confirmed that the obligations under Uganda's data protection law \"attach not only to entities physically present in Uganda but to any entity handling personal data of Ugandan citizens, including those established abroad\"... Every data collector, processor or controller is legally required to register with the PDPO and renew its registration every year."
+    },
+    "dlapiper-handbook-uganda": {
+      "label": "DLA Piper Global Data Protection Laws of the World - Uganda chapter",
+      "url": "https://www.dlapiperdataprotection.com/uganda.html",
+      "tier": 3,
+      "publisher": "DLA Piper",
+      "sourceType": "International law firm handbook",
+      "publishedDate": "2026-02-13",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Chapter page renders via JS; page fetch returned a shell. Search snippet corroborates commencement (3 May 2019) and Regulations commencement (12 March 2021).",
+      "excerpt": "The Data Protection and Privacy Act commenced on 3 May 2019 while the Regulations took effect on 12 March 2021."
+    },
+    "ucc-telecom-licensing-page": {
+      "label": "UCC - Telecommunication Licensing (official page)",
+      "url": "https://www.ucc.co.ug/telecommunication-licensing/",
+      "tier": 1,
+      "publisher": "Uganda Communications Commission (UCC)",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "captureNote": "Page body renders via JS; statutory-mandate footer text captured. Licence-class detail awaited from the official instruments (see ucc-licence-description).",
+      "excerpt": "The primary mandate of UCC is to regulate the Communications sector, which includes Telecommunications, Broadcasting, radio communication, postal communications, data communication and infrastructure."
+    },
+    "ucc-licence-description": {
+      "label": "UCC - Description of Telecom Licenses and Authorisations (official instrument)",
+      "url": null,
+      "tier": 1,
+      "publisher": "Uganda Communications Commission (UCC)",
+      "sourceType": "Regulator instrument",
+      "publishedDate": null,
+      "retrievedDate": null,
+      "captureStatus": "capture-pending",
+      "captureNote": "Identified via Global Law Experts' licensing guide as the definitive licence-class document; not yet located/fetched. Governs whether data-centre assets require a UCC licence - the claim most material to directory operators.",
+      "excerpt": null
+    },
+    "gle-telecom-licensing": {
+      "label": "Global Law Experts: How To Get A Telecom License In Uganda",
+      "url": "https://globallawexperts.com/how-to-get-a-telecom-license-in-uganda/",
+      "tier": 3,
+      "publisher": "Global Law Experts (Ugandan TMT counsel)",
+      "sourceType": "Law firm practice guide",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "captured",
+      "excerpt": "Infrastructure companies building shared-tower, fibre or data-centre assets for use by licensed operators [must apply]... The UCC's Description of Telecom Licenses and Authorisations sets out the principal categories."
+    },
+    "ict-roadmap": {
+      "label": "Ministry of ICT & National Guidance - Digital Transformation Roadmap FY2023/24-2027/28",
+      "url": "https://ict.go.ug/",
+      "tier": 1,
+      "publisher": "Government of Uganda, Ministry of ICT & National Guidance",
+      "sourceType": "Official government strategy",
+      "publishedDate": "2023-04-01",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Full document page fetch gated (404 shell); roadmap text captured from search index snippet of ict.go.ug. Fetch the PDF for full-text verification.",
+      "excerpt": "Development of reliable digital infrastructure, including high-speed broadband networks, data centres, and cloud computing capabilities."
+    },
+    "nita-digital-government": {
+      "label": "NITA-U - Digital Government Strategy (anchored in Vision 2040 and the Digital Uganda Vision)",
+      "url": "https://www.nita.go.ug/",
+      "tier": 1,
+      "publisher": "National Information Technology Authority Uganda (NITA-U)",
+      "sourceType": "Official government strategy",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Strategy page fetch gated; DUV framing captured from search index snippet of nita.go.ug.",
+      "excerpt": "DUV is an overarching 20-year ICT development framework that is aligned to the Uganda Vision 2040."
+    },
+    "us-state-ics-2025": {
+      "label": "US Department of State - 2025 Investment Climate Statement: Uganda",
+      "url": "https://www.state.gov/",
+      "tier": 3,
+      "publisher": "US Department of State",
+      "sourceType": "Foreign-government investment assessment (not a Ugandan primary source)",
+      "publishedDate": "2025-01-01",
+      "retrievedDate": "2026-09-22",
+      "captureStatus": "snippet",
+      "captureNote": "Full PDF not fetched (page-heavy site). Uganda-primary confirmation of incentive specifics (UIA/UFZA instruments) still required.",
+      "excerpt": "Through the UIA and the Uganda Free Zones Authority, investors can access several tax incentives, including a 10-year income tax holiday for foreign investment."
+    }
+  },
+  "countries": {
+    "uganda": {
+      "name": "Uganda",
+      "iso": "UG",
+      "directoryFacilities": 2,
+      "facilitiesNote": "Raxio Kampala UG1 (verified in the facility evidence pilot) plus one Kampala record",
+      "regulators": {
+        "communications": "Uganda Communications Commission (UCC)",
+        "dataProtection": "Personal Data Protection Office (PDPO)",
+        "investment": "Uganda Investment Authority (UIA) / Uganda Free Zones Authority (UFZA)"
+      },
+      "pillarGaps": [
+        "energy-electricity: no DC-relevant claims researched yet (ERA tariff classes, grid reliability) - pending",
+        "construction-building: no claims researched yet (UNBS standards, building code application to DCs) - pending",
+        "environmental: no claims researched yet (NEMA requirements for large facilities) - pending",
+        "cross-border-data-flows: partial coverage via UG-DP-C5; EAC-level instruments pending",
+        "regional-frameworks: EAC harmonisation instruments not yet researched - pending"
+      ],
+      "investigatedAt": "2026-09-22",
+      "investigationNote": "Uganda is the first country run through the policy evidence pipeline (editor sequencing: Uganda -> Rwanda -> Tanzania -> regional comparison). Six pillars attempted; data protection landed strongest (regulator decision + statute anchors); licensing partially verified pending UCC instruments; energy/construction/environmental not yet attempted and recorded as pillar gaps rather than unverified claims.",
+      "claims": [
+        {
+          "id": "UG-DP-C1",
+          "pillar": "data-protection",
+          "statement": "Uganda's Data Protection and Privacy Act, 2019 (now revised as Cap. 97) was assented to on 25 February 2019 and commenced on 3 May 2019, with its implementing Regulations effective 12 March 2021.",
+          "sourceIds": [
+            "ulii-dppa-metadata",
+            "dlapiper-handbook-uganda"
+          ],
+          "state": "verified",
+          "note": "Official depository metadata (ULII) and DLA Piper handbook agree. Conflict resolved: Legal500 states commencement 1 March 2019 - rejected as a secondary-source error; the gazette date 3 May 2019 controls."
+        },
+        {
+          "id": "UG-DP-C2",
+          "pillar": "data-protection",
+          "statement": "The Act applies extraterritorially: it covers a person, institution or public body outside Uganda who collects, processes, holds or uses personal data relating to Ugandan citizens (s.1).",
+          "sourceIds": [
+            "cipesa-google-decision",
+            "dlapiper-pm-offshore"
+          ],
+          "state": "verified",
+          "note": "CIPESA quotes the statutory text; DLA Piper reports the PDPO's own confirmation. Statute text capture-pending (ULII gate) - state self-upgrades on full-text capture."
+        },
+        {
+          "id": "UG-DP-C3",
+          "pillar": "data-protection",
+          "statement": "Every data collector, processor or controller must register with the Personal Data Protection Office (s.29) and renew registration annually; the duty applies to foreign entities handling Ugandans' personal data until an exemption is gazetted.",
+          "sourceIds": [
+            "cipesa-google-decision",
+            "dlapiper-pm-offshore"
+          ],
+          "state": "verified",
+          "note": "Duty-level claim verified by two independent reports of the PDPO decision and the statute. Fee/portal mechanics deliberately split into UG-DP-C4 (weaker evidence)."
+        },
+        {
+          "id": "UG-DP-C4",
+          "pillar": "data-protection",
+          "statement": "Registration is completed online via the PDPO portal (Form 2 application plus Form 3 cross-border undertaking), fee UGX 100,000, typically 4-7 working days for initial registration.",
+          "sourceIds": [
+            "dlapiper-pm-offshore"
+          ],
+          "state": "partially-verified",
+          "note": "Single Tier-3 source; the PDPO portal itself (pdpo.go.ug/register) was unreachable on 2026-09-22. Verify fees/SLA against the portal or the Regulations before citing operationally."
+        },
+        {
+          "id": "UG-DP-C5",
+          "pillar": "data-protection",
+          "statement": "Cross-border transfer or storage of personal data outside Uganda requires either data-subject consent or adequate protection in the recipient country at least equivalent to the Act (s.19); no advance approval per transfer is required, but records of the legal basis and safeguards must be maintained and produced on audit.",
+          "sourceIds": [
+            "cipesa-google-decision",
+            "dlapiper-pm-offshore"
+          ],
+          "state": "verified",
+          "note": "s.19 text quoted by CIPESA; the no-pre-approval clarification is the PDPO's own position reported by DLA Piper. Material to colocation operators serving cross-border workloads (e.g. Kampala-Nairobi replication paths)."
+        },
+        {
+          "id": "UG-DP-C6",
+          "pillar": "data-protection",
+          "statement": "In a decision of 18 July 2025 (Ssekamwa Frank & 3 Others v Google LLC, Complaint No. 08/11/24/6683), the PDPO found Google LLC in breach of ss.29 and 19 and ordered registration, designation of a data protection officer, and production of a cross-border transfer compliance framework within 30 days - confirming the Act reaches foreign entities with no physical presence in Uganda.",
+          "sourceIds": [
+            "pdpo-decision-google-2025",
+            "cipesa-google-decision",
+            "dlapiper-pm-offshore"
+          ],
+          "state": "verified",
+          "note": "Primary instrument (the decision itself) is capture-pending - not published on the regulator site; two independent reports agree on the findings and the complaint number. If either report is later contradicted, this claim degrades."
+        },
+        {
+          "id": "UG-LC-C1",
+          "pillar": "licensing",
+          "statement": "The Uganda Communications Commission's statutory mandate covers telecommunications, broadcasting, radio communication, postal communications, data communication and infrastructure.",
+          "sourceIds": [
+            "ucc-telecom-licensing-page"
+          ],
+          "state": "verified",
+          "note": "Captured from the official UCC page itself."
+        },
+        {
+          "id": "UG-LC-C2",
+          "pillar": "licensing",
+          "statement": "Uganda's technology-neutral licensing framework (introduced 2019/2020 under the Uganda Communications (Licensing) Regulations, 2019) replaced the earlier PIP/PSP classes with principal categories including National Telecom Operator (NTO), National Public Service Provider (NPSP), Regional Public Service Provider (RPSP) and Regional Public Infrastructure Provider (RPIP), plus authorisations for capacity resale and value-added services.",
+          "sourceIds": [
+            "gle-telecom-licensing",
+            "ucc-licence-description"
+          ],
+          "state": "partially-verified",
+          "note": "Licence classes rest on one Tier-3 guide; the definitive UCC instrument (Description of Telecom Licenses and Authorisations) is capture-pending. Upgrade path: fetch the instrument or the Regulations text."
+        },
+        {
+          "id": "UG-LC-C3",
+          "pillar": "licensing",
+          "statement": "Infrastructure companies building data-centre assets for use by licensed operators fall within UCC's licensing regime and must apply for the matching licence class.",
+          "sourceIds": [
+            "gle-telecom-licensing",
+            "ucc-licence-description"
+          ],
+          "state": "partially-verified",
+          "note": "The claim most material to directory operators (Raxio UG1 et al.). Currently single-source (Tier 3). UCC's own instrument is capture-pending; also check Raxio's regulatory/registration disclosures. Editor attention requested before publication."
+        },
+        {
+          "id": "UG-LC-C4",
+          "pillar": "licensing",
+          "statement": "UCC licence applications require Ugandan legal personality, a physical business address, a Tax Identification Number with tax clearance, and demonstrated financial and technical capacity (business/technical plans, audited financials or capitalisation proof).",
+          "sourceIds": [
+            "gle-telecom-licensing"
+          ],
+          "state": "partially-verified",
+          "note": "Single Tier-3 guide referencing the official UCC requirements document; instrument capture-pending."
+        },
+        {
+          "id": "UG-AI-C1",
+          "pillar": "ai-digital-policy",
+          "statement": "Uganda's Digital Transformation Roadmap (FY2023/24-2027/28) lists development of reliable digital infrastructure - including high-speed broadband networks, data centres and cloud computing capabilities - as a priority.",
+          "sourceIds": [
+            "ict-roadmap"
+          ],
+          "state": "partially-verified",
+          "note": "Official government domain snippet explicitly names data centres; full document fetch gated. Direct official mention of data-centre infrastructure - upgrade on PDF capture."
+        },
+        {
+          "id": "UG-AI-C2",
+          "pillar": "ai-digital-policy",
+          "statement": "The Digital Uganda Vision (DUV) is the overarching 20-year ICT development framework aligned to Uganda Vision 2040, harmonising the country's ICT policies.",
+          "sourceIds": [
+            "nita-digital-government"
+          ],
+          "state": "partially-verified",
+          "note": "Official NITA-U framing captured from snippet; strategy page fetch gated."
+        },
+        {
+          "id": "UG-TX-C1",
+          "pillar": "tax-incentives",
+          "statement": "Investors in Uganda can access tax incentives through the Uganda Investment Authority and the Uganda Free Zones Authority, including a 10-year income tax holiday for qualifying foreign investment.",
+          "sourceIds": [
+            "us-state-ics-2025"
+          ],
+          "state": "partially-verified",
+          "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified."
+        }
+      ]
+    }
+  }
+}
