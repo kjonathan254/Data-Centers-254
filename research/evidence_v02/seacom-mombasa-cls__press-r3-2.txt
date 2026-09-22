@@ -1,0 +1,27 @@
+url: https://it-online.co.za/2025/11/11/seacom-unveils-new-branding-as-it-plans-for-africas-future/
+final: https://it-online.co.za/2025/11/11/seacom-unveils-new-branding-as-it-plans-for-africas-future/
+status: 200
+retrieved: 2026-09-22
+bytes: 151370
+
+== window 1 ==
+pulation of 10-billion by 2050, with the Indian Ocean Basin projected to house half of humanity. ​ 
+ The Seacom 2.0 cable will be the first use of a 48-fibre-pair architecture designed to handle high-capacity, low-latency AI workloads. Cable landing stations will transform into AI communication nodes, linking African nations’ sovereign AI infrastructure to global data hubs. ​ 
+ Richard Schumacher, MD: dig
+
+== window 2 ==
+ndian Ocean Basin projected to house half of humanity. ​ 
+ The Seacom 2.0 cable will be the first use of a 48-fibre-pair architecture designed to handle high-capacity, low-latency AI workloads. Cable landing stations will transform into AI communication nodes, linking African nations’ sovereign AI infrastructure to global data hubs. ​ 
+ Richard Schumacher, MD: digital infrastructure at Seacom, points out
+
+== window 3 ==
+sovereign AI infrastructure to global data hubs. ​ 
+ Richard Schumacher, MD: digital infrastructure at Seacom, points out that the existing cable was laid 16 years ago and upgraded last year. The new capacity has already been sold out. 
+ “We are thinking about what is coming next and starting the cycle early,” he says. 
+ Schumacher explains that subsea cables are the backbone of the Internet. “What we cal
+
+== window 4 ==
+e new cable will hug the African coast in order to avoid the Yemen coast where issues are most likely to occur – and are difficult to remediate. 
+ The first phase of the project will connect Egypt to Mombasa, with the second phase continuing the line to South Africa. 
+ “Africa is one of the developing continents in terms of digital transformation and we are future-proofing its digital economy,” Schumache
+

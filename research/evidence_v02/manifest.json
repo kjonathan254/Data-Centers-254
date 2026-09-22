@@ -110,5 +110,353 @@
   "bytes": 8747,
   "file": "peeringdb-registry__pdb-api-batch.txt",
   "ms": 656
+ },
+ "icolo-nbo2/dr-globenewswire-release": {
+  "status": "error",
+  "error": "The read operation timed out",
+  "round": "editorial-review"
+ },
+ "icolo-nbo2/dr-globenewswire-search": {
+  "status": "error",
+  "error": "The read operation timed out",
+  "round": "editorial-review"
+ },
+ "icolo-nbo2/bing-dr-nbo2-release": {
+  "status": 200,
+  "bytes": 10042,
+  "file": "icolo-nbo2__bing-dr-nbo2-release.txt",
+  "ms": 364,
+  "round": "editorial-review"
+ },
+ "icolo-nbo2/dr-nbo2-listing": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review"
+ },
+ "icolo-nbo2/dr-africa-listing": {
+  "status": 200,
+  "bytes": 1373218,
+  "file": "icolo-nbo2__dr-africa-listing.txt",
+  "ms": 2889,
+  "round": "editorial-review"
+ },
+ "raxio-kampala-ug1/raxio-uganda-page": {
+  "status": "error",
+  "error": "HTTP Error 403: Forbidden",
+  "round": "editorial-review"
+ },
+ "raxio-kampala-ug1/raxio-uganda-page2": {
+  "status": 200,
+  "bytes": 313928,
+  "file": "raxio-kampala-ug1__raxio-uganda-page2.txt",
+  "ms": 1530,
+  "round": "editorial-review"
+ },
+ "nxtra-tatu-city/tatucity-news-search": {
+  "status": 202,
+  "bytes": 179,
+  "file": "nxtra-tatu-city__tatucity-news-search.txt",
+  "ms": 840,
+  "round": "editorial-review"
+ },
+ "nxtra-tatu-city/bing-nxtra-tatu": {
+  "status": 200,
+  "bytes": 4807,
+  "file": "nxtra-tatu-city__bing-nxtra-tatu.txt",
+  "ms": 275,
+  "round": "editorial-review"
+ },
+ "nxtra-tatu-city/airtel-africa-news": {
+  "status": "error",
+  "error": "<urlopen error [Errno -2] Name or service not known>",
+  "round": "editorial-review"
+ },
+ "seacom-mombasa-cls/telegeography-seacom": {
+  "status": 200,
+  "bytes": 1483,
+  "file": "seacom-mombasa-cls__telegeography-seacom.txt",
+  "ms": 1176,
+  "round": "editorial-review"
+ },
+ "seacom-mombasa-cls/telegeography-seacom-page": {
+  "status": 200,
+  "bytes": 1483,
+  "file": "seacom-mombasa-cls__telegeography-seacom-page.txt",
+  "ms": 2373,
+  "round": "editorial-review"
+ },
+ "seacom-mombasa-cls/seacom-network-page": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review"
+ },
+ "ixafrica-nbox1/bing-nbox1-launch": {
+  "status": 200,
+  "bytes": 1262,
+  "file": "ixafrica-nbox1__bing-nbox1-launch.txt",
+  "ms": 274,
+  "round": "editorial-review"
+ },
+ "adc-nbo1/adc-nairobi-2026-check": {
+  "status": 200,
+  "bytes": 172580,
+  "file": "adc-nbo1__adc-nairobi-2026-check.txt",
+  "ms": 4699,
+  "round": "editorial-review"
+ },
+ "icolo-nbo2/press-bing1": {
+  "status": 200,
+  "bytes": 208361,
+  "file": "icolo-nbo2__press-bing1.txt",
+  "ms": 373,
+  "round": "editorial-review",
+  "title": "Digital Realty Opens 6.4MW Nairobi Two Data Centre",
+  "pubDate": "Thu, 10 Sep 2026 10:33:00 GMT"
+ },
+ "icolo-nbo2/press-bing2": {
+  "status": 200,
+  "bytes": 208329,
+  "file": "icolo-nbo2__press-bing2.txt",
+  "ms": 2046,
+  "round": "editorial-review",
+  "title": "Digital Realty launches NBO2 data center in Kenya",
+  "pubDate": "Tue, 08 Sep 2026 05:57:00 GMT"
+ },
+ "icolo-nbo2/press-bing3": {
+  "status": 200,
+  "bytes": 208363,
+  "file": "icolo-nbo2__press-bing3.txt",
+  "ms": 551,
+  "round": "editorial-review",
+  "title": "Digital Realty opens 6.4 MW Nairobi data center",
+  "pubDate": "Sat, 08 Aug 2026 16:59:00 GMT"
+ },
+ "nxtra-tatu-city/press-bing1": {
+  "status": 200,
+  "bytes": 208866,
+  "file": "nxtra-tatu-city__press-bing1.txt",
+  "ms": 401,
+  "round": "editorial-review",
+  "title": "Airtel Kenya pushes Nxtra data centre launch in Tatu City to July 2027 from Q1",
+  "pubDate": "Wed, 05 Aug 2026 01:59:00 GMT"
+ },
+ "nxtra-tatu-city/press-bing2": {
+  "status": 200,
+  "bytes": 207720,
+  "file": "nxtra-tatu-city__press-bing2.txt",
+  "ms": 770,
+  "round": "editorial-review",
+  "title": "Airtel\u2019s Nxtra steps up data centre push with two stake deals",
+  "pubDate": "Thu, 06 Aug 2026 19:24:00 GMT"
+ },
+ "nxtra-tatu-city/press-bing3": {
+  "status": 200,
+  "bytes": 208469,
+  "file": "nxtra-tatu-city__press-bing3.txt",
+  "ms": 342,
+  "round": "editorial-review",
+  "title": "Airtel\u2019s Nxtra to quadruple data centre capacity to 1GW as AI demand drives growth: CLSA",
+  "pubDate": "Mon, 20 Jul 2026 01:25:00 GMT"
+ },
+ "icolo-nbo2/press-etcio-nbo2": {
+  "status": 200,
+  "bytes": 84760,
+  "file": "icolo-nbo2__press-etcio-nbo2.txt",
+  "ms": 914,
+  "round": "editorial-review-2"
+ },
+ "icolo-nbo2/press-dcd-nbo2": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review-2"
+ },
+ "seacom-mombasa-cls/press-itweb-seacom-live": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review-2"
+ },
+ "seacom-mombasa-cls/ddg-seacom-landing": {
+  "status": 202,
+  "bytes": 14297,
+  "file": "seacom-mombasa-cls__ddg-seacom-landing.txt",
+  "ms": 138,
+  "round": "editorial-review-2"
+ },
+ "nxtra-tatu-city/ddg-tatu-city-nxtra": {
+  "status": 202,
+  "bytes": 14293,
+  "file": "nxtra-tatu-city__ddg-tatu-city-nxtra.txt",
+  "ms": 146,
+  "round": "editorial-review-2"
+ },
+ "nxtra-tatu-city/press-kna-nxtra": {
+  "status": "error",
+  "error": "<urlopen error timed out>",
+  "round": "editorial-review-2"
+ },
+ "ixafrica-nbox1/ddg-nbox1-4mw": {
+  "status": 202,
+  "bytes": 14301,
+  "file": "ixafrica-nbox1__ddg-nbox1-4mw.txt",
+  "ms": 188,
+  "round": "editorial-review-2"
+ },
+ "ixafrica-nbox1/press-dcd-nbox1": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review-2"
+ },
+ "icolo-nbo2/ddg-globenewswire-nbo2": {
+  "status": 202,
+  "bytes": 14301,
+  "file": "icolo-nbo2__ddg-globenewswire-nbo2.txt",
+  "ms": 177,
+  "round": "editorial-review-2"
+ },
+ "icolo-nbo2/dr-newsroom": {
+  "status": 200,
+  "bytes": 322391,
+  "file": "icolo-nbo2__dr-newsroom.txt",
+  "ms": 2381,
+  "round": "editorial-review-3"
+ },
+ "icolo-nbo2/dr-globenewswire-release-retry": {
+  "status": "error",
+  "error": "The read operation timed out",
+  "round": "editorial-review-3"
+ },
+ "nxtra-tatu-city/press-r3-1": {
+  "status": 200,
+  "bytes": 166217,
+  "file": "nxtra-tatu-city__press-r3-1.txt",
+  "ms": 1596,
+  "round": "editorial-review-3",
+  "url": "https://www.telecompaper.com/news/airtel-kenya-pushes-nxtra-data-centre-launch-in-tatu-city-to-july-2027-from-q1--1579056",
+  "title": "Airtel Kenya pushes Nxtra data centre launch in Tatu City to July 2027 from Q1",
+  "pubDate": "Wed, 05 Aug 2026 01:59:00 GMT"
+ },
+ "nxtra-tatu-city/press-r3-2": {
+  "status": 200,
+  "bytes": 670322,
+  "file": "nxtra-tatu-city__press-r3-2.txt",
+  "ms": 408,
+  "round": "editorial-review-3",
+  "url": "https://www.moneycontrol.com/news/telecom/airtel-s-nxtra-to-quadruple-data-centre-capacity-to-1gw-as-ai-demand-drives-growth-clsa-13978439.html",
+  "title": "Airtel\u2019s Nxtra to quadruple data centre capacity to 1GW as AI demand drives growth: CLSA",
+  "pubDate": "Mon, 20 Jul 2026 01:25:00 GMT"
+ },
+ "seacom-mombasa-cls/press-r3-1": {
+  "status": "error",
+  "error": "HTTP Error 405: Not Allowed",
+  "round": "editorial-review-3",
+  "url": "https://www.arabianbusiness.com/business/seacom-cable-goes-live-15534"
+ },
+ "seacom-mombasa-cls/press-r3-2": {
+  "status": 200,
+  "bytes": 151370,
+  "file": "seacom-mombasa-cls__press-r3-2.txt",
+  "ms": 1965,
+  "round": "editorial-review-3",
+  "url": "https://it-online.co.za/2025/11/11/seacom-unveils-new-branding-as-it-plans-for-africas-future/",
+  "title": "Seacom unveils new branding as it plans for Africa\u2019s future",
+  "pubDate": "Tue, 11 Nov 2025 13:17:00 GMT"
+ },
+ "ixafrica-nbox1/press-r3-1": {
+  "status": 200,
+  "bytes": 12354,
+  "file": "ixafrica-nbox1__press-r3-1.txt",
+  "ms": 839,
+  "round": "editorial-review-3",
+  "url": "https://iafrica.com/qhala-amini-ai-angani-and-ixafrica-partner-to-host-african-ai-research-lab-qubit-hub-in-nairobi/",
+  "title": "Qhala, Amini AI, Angani and iXAfrica Partner to Host African AI Research Lab Qubit Hub in Nairobi",
+  "pubDate": "Mon, 25 May 2026 09:52:00 GMT"
+ },
+ "icolo-nbo2/icolo-nbo2-page": {
+  "status": "error",
+  "error": "<urlopen error [Errno 101] Network is unreachable>",
+  "round": "editorial-review-4"
+ },
+ "icolo-nbo2/icolo-nbo2-page-alt": {
+  "status": "error",
+  "error": "<urlopen error [Errno 101] Network is unreachable>",
+  "round": "editorial-review-4"
+ },
+ "seacom-mombasa-cls/press-bbc-2009": {
+  "status": 200,
+  "bytes": 55925,
+  "file": "seacom-mombasa-cls__press-bbc-2009.txt",
+  "ms": 1027,
+  "round": "editorial-review-4"
+ },
+ "nxtra-tatu-city/kna-nxtra-retry": {
+  "status": "error",
+  "error": "<urlopen error timed out>",
+  "round": "editorial-review-4"
+ },
+ "nxtra-tatu-city/press-r4-1": {
+  "status": "error",
+  "error": "HTTP Error 404: Not Found",
+  "round": "editorial-review-4",
+  "url": "https://answers.microsoft.com/pt-br/msoffice/forum/all/excel-contar-c%C3%A9lulas-destinhas-preenchidas/e9bd41a6-7605-465e-9406-9a0f3d7f9e8a"
+ },
+ "nxtra-tatu-city/press-r4-2": {
+  "status": 200,
+  "bytes": 42973,
+  "file": "nxtra-tatu-city__press-r4-2.txt",
+  "ms": 212,
+  "round": "editorial-review-4",
+  "url": "https://answers.microsoft.com/ru-ru/skype/forum/all/%D0%BD%D0%BE%D0%BC%D0%B5%D1%80/5d15bae7-b8b9-4556-b229-685df0d327bc",
+  "title": "\u041d\u043e\u043c\u0435\u0440 \u043c\u043e\u0435\u0433\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u043e\u0433\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d Skype ..."
+ },
+ "nxtra-tatu-city/press-r4-3": {
+  "status": 200,
+  "bytes": 40899,
+  "file": "nxtra-tatu-city__press-r4-3.txt",
+  "ms": 466,
+  "round": "editorial-review-4",
+  "url": "https://answers.microsoft.com/en-us/outlook_com/forum/all/outlook-hasnt-installed-on-my-office-pro-2021/739cc5d5-3b4c-4ed3-bc0b-790a4f4ae91e",
+  "title": "Microsoft Community"
+ },
+ "seacom-mombasa-cls/press-r4-1": {
+  "status": 200,
+  "bytes": 99492,
+  "file": "seacom-mombasa-cls__press-r4-1.txt",
+  "ms": 1576,
+  "round": "editorial-review-4",
+  "url": "https://www.eurochem.ru/",
+  "title": "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u0415\u0432\u0440\u043e\u0425\u0438\u043c"
+ },
+ "seacom-mombasa-cls/press-r4-2": {
+  "status": 200,
+  "bytes": 9415,
+  "file": "seacom-mombasa-cls__press-r4-2.txt",
+  "ms": 805,
+  "round": "editorial-review-4",
+  "url": "http://www.euro-chem.ru/",
+  "title": "\u0415\u0432\u0440\u043e\u0445\u0438\u043c | \u0413\u043b\u0430\u0432\u043d\u0430\u044f"
+ },
+ "seacom-mombasa-cls/press-r4-3": {
+  "status": "error",
+  "error": "HTTP Error 403: Too Many Reqs (1862a4b)",
+  "round": "editorial-review-4",
+  "url": "https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%BE%D1%85%D0%B8%D0%BC"
+ },
+ "ixafrica-nbox1/press-r4-1": {
+  "status": "error",
+  "error": "HTTP Error 403: Forbidden",
+  "round": "editorial-review-4",
+  "url": "https://www.mytyres.co.uk/"
+ },
+ "ixafrica-nbox1/press-r4-2": {
+  "status": "error",
+  "error": "HTTP Error 403: Forbidden",
+  "round": "editorial-review-4",
+  "url": "https://www.mytyres.co.uk/Winter-Tyres.html"
+ },
+ "ixafrica-nbox1/press-r4-3": {
+  "status": "error",
+  "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>",
+  "round": "editorial-review-4",
+  "url": "https://akurateco.mytyres.co.uk/"
  }
 }

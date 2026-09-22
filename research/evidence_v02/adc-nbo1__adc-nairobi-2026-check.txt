@@ -1,0 +1,468 @@
+url: https://www.africadatacentres.com/nairobi/
+final: https://www.africadatacentres.com/nairobi/
+status: 200
+retrieved: 2026-09-22
+bytes: 172580
+
+== window 1 ==
+Skip to content 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 S
+
+== window 2 ==
+ands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ Home 
+ About 
+ Pan-African Footprint 
+ 
+ JHB1 Midrand 
+ JHB2 Samrand 
+ CPT1 Cape Town 
+ NBO1 Nairobi 
+ LOS1 Lagos 
+ 
+ 
+ Services 
+ 
+ Colocation 
+ Cloud Services 
+ Network Services 
+ Facilities 
+ Security 
+ Remote Hands 
+ Hardware 
+ Innovation 
+ 
+ 
+ Marketplace 
+ Contact 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Log In
+
+== window 3 ==
+4 Data halls certified Uptime Institute Tier 3 facility which is unique in East Africa Data Centre Nairobi, Kenya
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Available site capacity 7.5 MW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Access to Africa Data Centres’ Pan African footprint 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Hot aisle and cold aisle containment done to maintain cooling e
+
+== window 4 ==
+4 Data halls certified Uptime Institute Tier 3 facility which is unique in East Africa Data Centre Nairobi, Kenya
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Available site capacity 7.5 MW 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Access to Africa Data Centres’ Pan African footprint 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Hot aisle and cold aisle containment done to maintain cooling efficien
+
+== window 5 ==
+nd Service Control Centre 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Low pressure gas system installed in data halls triggered by double knock detection of fire alarm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Colocation: Private cage, secured racks, cross connects and power metering 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ All critical infrastructure and security systems are managed and monitored 24/7
+
+== window 6 ==
+Low pressure gas system installed in data halls triggered by double knock detection of fire alarm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Colocation: Private cage, secured racks, cross connects and power metering 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ All critical infrastructure and security systems are managed and monitored 24/7
+
+== window 7 ==
+ameer Industrial Park, Nairobi, our data centre facility is the most connected in East Africa, and houses 2,000 square metres of secured space for data servers over four floors. 
+ It offers access to carrier networks across Kenya and long distance fibre routes to Uganda, Tanzania, Rwanda, Burundi, Ethiopia and Somalia, as well as diverse fibre routes to cable landing stations in Mombasa. 
+ Our Nairobi fa
+
+== window 8 ==
+er four floors. 
+ It offers access to carrier networks across Kenya and long distance fibre routes to Uganda, Tanzania, Rwanda, Burundi, Ethiopia and Somalia, as well as diverse fibre routes to cable landing stations in Mombasa. 
+ Our Nairobi facility initially was the first data centre in East Africa to hold a Tier III certification from the prestigious Uptime Institute and first in the region to be PCI
+
+== window 9 ==
+offers access to carrier networks across Kenya and long distance fibre routes to Uganda, Tanzania, Rwanda, Burundi, Ethiopia and Somalia, as well as diverse fibre routes to cable landing stations in Mombasa. 
+ Our Nairobi facility initially was the first data centre in East Africa to hold a Tier III certification from the prestigious Uptime Institute and first in the region to be PCI DSS Certified by th
+
+== window 10 ==
+zania, Rwanda, Burundi, Ethiopia and Somalia, as well as diverse fibre routes to cable landing stations in Mombasa. 
+ Our Nairobi facility initially was the first data centre in East Africa to hold a Tier III certification from the prestigious Uptime Institute and first in the region to be PCI DSS Certified by the Security Standards Council. 
+ As a key player in the Easter Africa Region, Africa Data Centr
+
+== window 11 ==
+ing stations in Mombasa. 
+ Our Nairobi facility initially was the first data centre in East Africa to hold a Tier III certification from the prestigious Uptime Institute and first in the region to be PCI DSS Certified by the Security Standards Council. 
+ As a key player in the Easter Africa Region, Africa Data Centres takes very seriously the economic uplift of Kenya and its neighbours through digiti
+
+== window 12 ==
+Contact Information 
+ 
+ 
+ 
+ Contact us with the info below or fill in the form and our team will get back to you. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ Sameer Business Park, Block A, Mombasa Road, Nairobi, Kenya 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ enquiries@africadatacentres.com​ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Facebook-White 
+ 
+ 
+ 
+ 
+ Twitter-White
+

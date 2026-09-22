@@ -1,0 +1,60 @@
+url: https://www.digitalrealty.com/data-centers/africa
+final: https://www.digitalrealty.com/data-centers/emea
+status: 200
+retrieved: 2026-09-22
+bytes: 1373218
+
+== window 1 ==
+Europe, Middle East & Africa Data Centers & Colocation | EMEA Data Center Locations | Digital Realty Data Centers Locations Locations Americas EMEA APAC Data Center Design Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL®
+
+== window 2 ==
+| EMEA Data Center Locations | Digital Realty Data Centers Locations Locations Americas EMEA APAC Data Center Design Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Int
+
+== window 3 ==
+Center Locations | Digital Realty Data Centers Locations Locations Americas EMEA APAC Data Center Design Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Internet Excha
+
+== window 4 ==
+ign Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Internet Exchange IP Bandwidth Metro Connect Partners Find a Partner Partner Solutions AWS Google Cloud IBM Cloud Or
+
+== window 5 ==
+Google ✕ Oracle ✕ IBM ✕ Include Tethered (T) On-ramps: Tethered On-ramps offer direct, secure, performant, and cost-effective data transfer between our facilities and cloud platforms. Certifications PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tie
+
+== window 6 ==
+thered (T) On-ramps: Tethered On-ramps offer direct, secure, performant, and cost-effective data transfer between our facilities and cloud platforms. Certifications PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tier III ✕ TISAX ✕ FINMA RS-18/3 ✕ Tie
+
+== window 7 ==
+: Tethered On-ramps offer direct, secure, performant, and cost-effective data transfer between our facilities and cloud platforms. Certifications PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tier III ✕ TISAX ✕ FINMA RS-18/3 ✕ Tier IV ✕ See More Cancel Ap
+
+== window 8 ==
+cure, performant, and cost-effective data transfer between our facilities and cloud platforms. Certifications PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tier III ✕ TISAX ✕ FINMA RS-18/3 ✕ Tier IV ✕ See More Cancel Apply filter 27 Metropolitan Areas Acc
+
+== window 9 ==
+data transfer between our facilities and cloud platforms. Certifications PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tier III ✕ TISAX ✕ FINMA RS-18/3 ✕ Tier IV ✕ See More Cancel Apply filter 27 Metropolitan Areas Accra The gateway to West Africa
+
+== window 10 ==
+PCI-DSS ✕ HDS ✕ SOC2 ✕ SOC3 ✕ ISO 14001 ✕ ISO 22301 ✕ ISO 27001 ✕ ISO 45001 ✕ ISO 50001 ✕ ISO 27001 ✕ ISO 50001 ✕ SOC1 ✕ ISO 14001 ✕ ISO 9001 ✕ EN 50600 ✕ ISO 20000-1 ✕ ISO 27701 ✕ ENS ✕ EU EPC - A ✕ Tier III ✕ TISAX ✕ FINMA RS-18/3 ✕ Tier IV ✕ See More Cancel Apply filter 27 Metropolitan Areas Accra The gateway to West Africa - fast, secure and globally connected 1 24,000 ft 2 2,250 m 2 Amsterdam High co
+
+== window 11 ==
+e region 3 147,500 ft 2 13,700 m 2 70 + Providers 135 + Customers Barcelona Where Europe, Africa, and the Middle East connect. 1 161,500 ft 2 15,000 m 2 Brussels A gateway to Europe 3 337,500 ft 2 31,400 m 2 145 + Providers 225 + Customers Cape Town Access all major subsea cables, Cloud Providers & Africa's largest IX, NAPAfrica 2 382,500 ft 2 35,550 m 2 210 + Providers 245 + Customers Copenhagen Int
+
+== window 12 ==
+s Cape Town Access all major subsea cables, Cloud Providers & Africa's largest IX, NAPAfrica 2 382,500 ft 2 35,550 m 2 210 + Providers 245 + Customers Copenhagen Interconnected hub for innovation and colocation 4 225,000 ft 2 20,900 m 2 95 + Providers 155 + Customers Dublin State of the art power, cooling, connectivity and system redundancy 9 554,500 ft 2 51,550 m 2 80 + Providers 120 + Customers Durban Acc
+
+== window 13 ==
+495 + Customers Lagos Directly access 79 networks, 1 Internet Exchange & all West African subsea cables 4 38,000 ft 2 3,500 m 2 45 + Providers 55 + Customers Lisbon Build near the cables, clouds, and carriers shaping the future of Europe's connectivity. 1 18,500 ft 2 1,700 m 2 London Uniquely positioned for all US, European & Asian business trading time zones. 13 1,344,000 ft 2 124,950 m 2 230 + Provider
+
+== window 14 ==
+d near the cables, clouds, and carriers shaping the future of Europe's connectivity. 1 18,500 ft 2 1,700 m 2 London Uniquely positioned for all US, European & Asian business trading time zones. 13 1,344,000 ft 2 124,950 m 2 230 + Providers 435 + Customers Madrid Gateway to Latin America and North Africa 4 449,000 ft 2 41,750 m 2 245 + Providers 320 + Customers Maputo The backbone of the internet eco
+
+== window 15 ==
+2 London Uniquely positioned for all US, European & Asian business trading time zones. 13 1,344,000 ft 2 124,950 m 2 230 + Providers 435 + Customers Madrid Gateway to Latin America and North Africa 4 449,000 ft 2 41,750 m 2 245 + Providers 320 + Customers Maputo The backbone of the internet ecosystem in Mozambique 1 3,000 ft 2 300 m 2 15 + Providers 15 + Customers Marseille Gateway to emerging marke
+
+== window 16 ==
+in Mozambique 1 3,000 ft 2 300 m 2 15 + Providers 15 + Customers Marseille Gateway to emerging markets with access to 14 major subsea cables 5 676,500 ft 2 62,850 m 2 155 + Providers 200 + Customers Mombasa 74 networks, 2 Internet Exchanges & 7 subsea cables - the gateway to East Africa 2 37,500 ft 2 3,500 m 2 50 + Providers 55 + Customers Nairobi Leading connectivity hub in East and Central Africa 2 27
+
+== window 17 ==
+Providers 55 + Customers Nairobi Leading connectivity hub in East and Central Africa 2 27,500 ft 2 2,550 m 2 60 + Providers 70 + Customers Paris Award-winning network-neutral data centre campus 13 1,441,500 ft 2 134,100 m 2 170 + Providers 265 + Customers Rome A key Mediterranean hub with diverse routes to Europe, Africa, and the Middle East 1 21,500 ft 2 2,000 m 2 Stockholm The prime spot of the N
+
+== window 18 ==
+65 + Customers Rome A key Mediterranean hub with diverse routes to Europe, Africa, and the Middle East 1 21,500 ft 2 2,000 m 2 Stockholm The prime spot of the Nordics' for international businesses 6 244,500 ft 2 22,750 m 2 115 + Providers 160 + Customers Vienna One of Europe's best connected cities 3 528,500 ft 2 49,150 m 2 135 + Providers 185 + Customers Zagreb Gateway to southeast Europe 1 33,500
+

@@ -1,0 +1,60 @@
+url: https://www.raxiogroup.com/data-centres/uganda
+final: https://www.raxiogroup.com/data-centres/uganda/
+status: 200
+retrieved: 2026-09-22
+bytes: 313928
+
+== window 1 ==
+data centre: UG1 Uganda’s future of digital transformation is here. Start yours today at Raxio UG1. Get in touch Get in touch Download UG1 Tech Specs Download UG1 Tech Specs Strategically located in Namanve Industrial Park, our state-of-the-art facility is designed to meet the growing needs of businesses and organisations across East Africa. Get in touch Get in touch Download UG1 Tech Specs Download UG1
+
+== window 2 ==
+t in the MoICT Data Strategy. Technical Specifications Raxio UG1 Data Centre Download UG1 Site Tech Specs Download UG1 Site Tech Specs Building amenities Location The data centre is located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway Situated in Namanve Industrial Park which is purpose-built for industry Along major fibre routes Approximately 1hr away from Ent
+
+== window 3 ==
+ategy. Technical Specifications Raxio UG1 Data Centre Download UG1 Site Tech Specs Download UG1 Site Tech Specs Building amenities Location The data centre is located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway Situated in Namanve Industrial Park which is purpose-built for industry Along major fibre routes Approximately 1hr away from Entebbe International Airp
+
+== window 4 ==
+xio UG1 Data Centre Download UG1 Site Tech Specs Download UG1 Site Tech Specs Building amenities Location The data centre is located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway Situated in Namanve Industrial Park which is purpose-built for industry Along major fibre routes Approximately 1hr away from Entebbe International Airport Main Structural Overview Admin
+
+== window 5 ==
+ite Tech Specs Download UG1 Site Tech Specs Building amenities Location The data centre is located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway Situated in Namanve Industrial Park which is purpose-built for industry Along major fibre routes Approximately 1hr away from Entebbe International Airport Main Structural Overview Administration block and ancillary buil
+
+== window 6 ==
+and MEP rooms is steel frame with concrete floors with vertical steel plate wall 5.6m slab to slab height Floor loading 15kN/m 2 Building Overview Purpose build facility from ground up 54U 600x1200mm racks Single floor 1,000 m 2 of white space Flexible IT space with ability to create bespoke environments as required Power Power Supply 33kV utility supply directly fed from the nearest Substation Fuel B
+
+== window 7 ==
+ability to create bespoke environments as required Power Power Supply 33kV utility supply directly fed from the nearest Substation Fuel Backup Storage On-site fuel storage to support 48 hours at full capacity with 24x7x365 fuel delivery 7 min UPS autonomy Redundancy 2N power redundancy from MV Transformer, Generator, UPS, Busbar to Rack PDU Fully diverse power distribution to technical areas Cooling Cooli
+
+== window 8 ==
+ly 33kV utility supply directly fed from the nearest Substation Fuel Backup Storage On-site fuel storage to support 48 hours at full capacity with 24x7x365 fuel delivery 7 min UPS autonomy Redundancy 2N power redundancy from MV Transformer, Generator, UPS, Busbar to Rack PDU Fully diverse power distribution to technical areas Cooling Cooling System 2 MW of  cooling provision Minimum N+1 resilience o
+
+== window 9 ==
+l Backup Storage On-site fuel storage to support 48 hours at full capacity with 24x7x365 fuel delivery 7 min UPS autonomy Redundancy 2N power redundancy from MV Transformer, Generator, UPS, Busbar to Rack PDU Fully diverse power distribution to technical areas Cooling Cooling System 2 MW of  cooling provision Minimum N+1 resilience on all systems Energy Efficiency Energy efficient indirect adiabatic c
+
+== window 10 ==
+65 fuel delivery 7 min UPS autonomy Redundancy 2N power redundancy from MV Transformer, Generator, UPS, Busbar to Rack PDU Fully diverse power distribution to technical areas Cooling Cooling System 2 MW of  cooling provision Minimum N+1 resilience on all systems Energy Efficiency Energy efficient indirect adiabatic cooling Humidity Control Humidity in technical space is controlled within the recomme
+
+== window 11 ==
+ience on all systems Energy Efficiency Energy efficient indirect adiabatic cooling Humidity Control Humidity in technical space is controlled within the recommended range of ASHRAE TC9.9 Connectivity Carrier Neutral Carrier neutral with 15 connectivity providers terminating fibre to the facility Cloud Services Access to multiple cloud services through leading public, private and hybrid cloud solution pro
+
+== window 12 ==
+tems Energy Efficiency Energy efficient indirect adiabatic cooling Humidity Control Humidity in technical space is controlled within the recommended range of ASHRAE TC9.9 Connectivity Carrier Neutral Carrier neutral with 15 connectivity providers terminating fibre to the facility Cloud Services Access to multiple cloud services through leading public, private and hybrid cloud solution providers Network D
+
+== window 13 ==
+ng fibre to the facility Cloud Services Access to multiple cloud services through leading public, private and hybrid cloud solution providers Network Dense With access to multiple global and regional carriers and Internet service providers offering Dark Fibre, IP Transit, Peering, CDN, Storage, Virtualised Services (SDN), Voice and Mobile Services Diversity 2 dedicated Meet Me Rooms 2 diverse fibre intak
+
+== window 14 ==
+hensive intruder detection and alarms in all areas 2.4m boundary wall with razor wire Road blocker at the site entrance Access control using proximity card readers and biometric readers UG1 Key Facts Tier III Certified 400 Racks 1,000 m 2 1.5 MW IT Power 7 Security Layers Colocation Cross Connect 24/7 Support Fibre Solutions Why Raxio Uganda Colocation Cut IT expenses with cost-efficient colocation servic
+
+== window 15 ==
+tection and alarms in all areas 2.4m boundary wall with razor wire Road blocker at the site entrance Access control using proximity card readers and biometric readers UG1 Key Facts Tier III Certified 400 Racks 1,000 m 2 1.5 MW IT Power 7 Security Layers Colocation Cross Connect 24/7 Support Fibre Solutions Why Raxio Uganda Colocation Cut IT expenses with cost-efficient colocation services. Carrier ne
+
+== window 16 ==
+ion and alarms in all areas 2.4m boundary wall with razor wire Road blocker at the site entrance Access control using proximity card readers and biometric readers UG1 Key Facts Tier III Certified 400 Racks 1,000 m 2 1.5 MW IT Power 7 Security Layers Colocation Cross Connect 24/7 Support Fibre Solutions Why Raxio Uganda Colocation Cut IT expenses with cost-efficient colocation services. Carrier neutral
+
+== window 17 ==
+n all areas 2.4m boundary wall with razor wire Road blocker at the site entrance Access control using proximity card readers and biometric readers UG1 Key Facts Tier III Certified 400 Racks 1,000 m 2 1.5 MW IT Power 7 Security Layers Colocation Cross Connect 24/7 Support Fibre Solutions Why Raxio Uganda Colocation Cut IT expenses with cost-efficient colocation services. Carrier neutral Enable custome
+
+== window 18 ==
+l areas 2.4m boundary wall with razor wire Road blocker at the site entrance Access control using proximity card readers and biometric readers UG1 Key Facts Tier III Certified 400 Racks 1,000 m 2 1.5 MW IT Power 7 Security Layers Colocation Cross Connect 24/7 Support Fibre Solutions Why Raxio Uganda Colocation Cut IT expenses with cost-efficient colocation services. Carrier neutral Enable customers
+

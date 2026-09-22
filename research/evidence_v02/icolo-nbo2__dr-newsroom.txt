@@ -1,0 +1,23 @@
+url: https://www.digitalrealty.com/about/newsroom
+final: https://www.digitalrealty.com/about/newsroom
+status: 200
+retrieved: 2026-09-22
+bytes: 322391
+
+== window 1 ==
+Newsroom | Digital Realty Data Centers Locations Locations Americas EMEA APAC Data Center Design Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Int
+
+== window 2 ==
+Newsroom | Digital Realty Data Centers Locations Locations Americas EMEA APAC Data Center Design Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Internet Excha
+
+== window 3 ==
+ign Data Center Design Security & Compliance Sustainable Data Centers PlatformDIGITAL® Colocation Colocation Data Center Services Powered Base Buildings® Data Center Suites Build-to-Suit High-Density Colocation Connectivity Featured solution ServiceFabric® Connect Campus Connect Cross Connect Internet Exchange IP Bandwidth Metro Connect Partners Find a Partner Partner Solutions AWS Google Cloud IBM Cloud Or
+
+== window 4 ==
+ht leadership, and resources. Featured News 
+ Digital Realty Global Data Insights Survey Reveals Enterprise Shift from AI Strategy to Execution as Infrastructure Emerges as Top Barrier Digital Realty Launches ServiceFabric® MCP, Bringing AI-Native Programmable Control to 800+ Data Centers Digital Realty Enters Türkiye Through Formation of New Joint Venture Digital Realty Strengthens Nairobi as East Afri
+
+== window 5 ==
+puting Reports AI Infrastructure IT infrastructure Interconnection Videos Americas Connectivity Cloud Regions Americas EMEA APAC View Metros Company About Us Impact Investors Careers PlatformDIGITAL® Colocation Connectivity Data Insights Hub Pervasive Datacenter Architecture The meeting place, for companies, technologies, and data.
+ Sales +1 877 378 3282 sales@digitalrealty.com Customer Care customercare@di
+

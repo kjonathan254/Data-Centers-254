@@ -1,0 +1,465 @@
+url: https://answers.microsoft.com/en-us/outlook_com/forum/all/outlook-hasnt-installed-on-my-office-pro-2021/739cc5d5-3b4c-4ed3-bc0b-790a4f4ae91e
+final: https://learn.microsoft.com/en-us/answers/questions/4648478/outlook-hasnt-installed-on-my-office-pro-2021-down?forum=outlook_com-all&referrer=answers
+status: 200
+retrieved: 2026-09-22
+bytes: 40899
+
+== head ==
+ 
+ 
+ 
+ 
+ Outlook hasn't installed on my Office Pro 2021 download - Microsoft Q&A 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Skip to main content
+ 
+ 
+
+ 
+ 
+ 
+ 
+ This browser is no longer supported. 
+ 
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+ 
+ 
+ 
+ Download Microsoft Edge
+ 
+ 
+ More info about Internet Explorer and Microsoft Edge
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Outlook hasn't installed on my Office Pro 2021 download 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Anonymous
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2024-04-28T13:54:08+00:00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ i have just bought and downloaded Microsoft Office Professional 2021 onto a clean computer (no other office product on it other than windows 11) 
+ I have no icons for word, excel, access but i can open files in these formats what i don' t have is Outlook, when i search my computer for Outlook nothing comes up. 
+ I've tried to download a separate Outlook for Windows, from the windows store but this will not install with the error OwalnvalidUserLanguageException. Please can you advise. I'm new to Pc's (always been a MAC ios person) so struggling to find a solution. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Outlook | Windows | New Outlook for Windows | For home 
+ 
+ 
+ 
+ 
+ 
+ Outlook | Windows | New Outlook for Windows | For home
+ 
+ 
+ Using New Outlook on Windows for personal email, calendar, and contact management
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Sign in to follow
+ 
+ 
+ 
+ 
+ 
+ Follow
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Locked Question. 
+ This question was migrated from the Microsoft Support Community. You can vote on whether it's helpful, but you can't add comments or replies or follow the question. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0 comments 
+ No comments 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Same question
+ 
+ (0)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Follow 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Report 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1 answer 
+ 
+ 
+ 
+ 
+ 
+ Sort by: 
+ 
+ Most helpful
+ 
+ 
+ 
+ 
+ 
+ 
+ Most helpful Newest Oldest 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Anonymous
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2024-04-28T15:19:33+00:00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Dear todd, 
+ Good day! 
+ Thank you for posting to Microsoft Community. We are glad to assist. 
+ As per your mentioned description about "Outlook hasn't installed on my Office Pro 2021 download" To understand the situation and be able to offer you relevant suggestions, we would need a little more information from you. Kindly help us in providing the following information. 
+ 
+ May I please confirm that you get same situation in both outlook for Desktop and Outlook on Web ( https://outlook.office.com )? 
+ May I double confirm that you installed the correct office? Download and install or reinstall Microsoft 365 or Office 2021 on a PC or Mac - Microsoft Support 
+ May I double confirm the language of your operating system and Office ? Is it English for both? 
+ May I please know the name of your subscription? 
+ Would you mind to kindly provide the screenshot of the Office version you are using? About Office: What version of Office am I using? - Microsoft Support 
+ Would you mind providing the screenshot of error you are encountering via private message for the privacy of your data? For data security reasons, please provide some above requested information in private message. Here is the steps for private message: Click on Account manager-->my profile-->View private message. (See below screenshot) 
+ 
+ We look forward to your response. Kindly note that the above requested information is required for further analysis and troubleshooting of your situation. Your patience and cooperation are much appreciated. Have a nice day! 
+ Best regards, 
+ Inema |Community Moderator 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Was this answer helpful? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Yes 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ No 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 0 

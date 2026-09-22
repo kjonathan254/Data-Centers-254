@@ -1,0 +1,8 @@
+url: https://tatucity.com/?s=Nxtra
+final: https://tatucity.com/?s=Nxtra
+status: 202
+retrieved: 2026-09-22
+bytes: 179
+
+== head ==
+ 

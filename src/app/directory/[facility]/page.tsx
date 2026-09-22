@@ -12,7 +12,7 @@ import Footer from "@/components/footer";
 import {
   getFacilities, getFacilityBySlug,
 } from "@/lib/directory-data";
-import { getFacilityEvidence, getPublicVerification } from "@/lib/evidence";
+import { getFacilityEvidence, getPublicVerification, publicClaimState } from "@/lib/evidence";
 import { pickPeers } from "@/lib/compare";
 import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
@@ -510,6 +510,11 @@ export default async function FacilityPage({
                   </p>
                 )
               )}
+              {evidence.investigationNote && verify.editorialStatus === "approved" && (
+                <p className="mt-3 rounded-lg border border-border/50 bg-accent/30 p-3 text-xs leading-relaxed text-muted-foreground">
+                  {evidence.investigationNote}
+                </p>
+              )}
 
               <details className="group mt-4">
                 <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-cyan hover:underline">
@@ -521,11 +526,14 @@ export default async function FacilityPage({
                     <div key={claim.id} className="rounded-lg border border-border/50 p-4">
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <p className="text-sm font-medium text-foreground/90">{claim.statement}</p>
-                        <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wider ${VERIFY_BADGE[claim.humanReview === "approved" ? claim.state : "unverified"]}`}>
-                          <VerifyIcon state={claim.humanReview === "approved" ? claim.state : "unverified"} className="size-3" />
-                          {claim.humanReview === "approved" ? claim.state : "editorial review pending"}
+                        <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wider ${VERIFY_BADGE[publicClaimState(claim)]}`}>
+                          <VerifyIcon state={publicClaimState(claim)} className="size-3" />
+                          {publicClaimState(claim)}
                         </span>
                       </div>
+                      {claim.note && (
+                        <p className="mt-2 text-xs leading-relaxed text-muted-foreground/90">{claim.note}</p>
+                      )}
                       {claim.sourceIds.length > 0 && (
                         <ul className="mt-3 space-y-2.5">
                           {claim.sourceIds.map((sid) => {

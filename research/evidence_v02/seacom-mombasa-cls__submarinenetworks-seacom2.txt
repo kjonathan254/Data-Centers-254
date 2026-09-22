@@ -1,0 +1,8 @@
+url: https://www.submarinenetworks.com/en/systems/africa-europe/seacom/landing-points
+final: https://www.submarinenetworks.com/en/systems/africa-europe/seacom/landing-points
+status: 202
+retrieved: 2026-09-22
+bytes: 222
+
+== head ==
+ 

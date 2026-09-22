@@ -8,6 +8,10 @@
  *    "approved" never expose their proposed state publicly.
  *  - While a facility sits in editorial review, the public sees
  *    "Unverified" plus an honest "editorial review in progress" note.
+ *  - Where the editor's own primary-source review settles a claim at a
+ *    different state than the rule derivation, `editorState` carries the
+ *    editor's decision (with the rationale in the claim note and the
+ *    ledger). The rule-derived `state` stays untouched as the audit signal.
  *
  * Constants and the written state rules live in ./config (single source of
  * truth). This module stays a thin, typed loader so the directory pages,
@@ -39,6 +43,12 @@ export interface EvidenceClaim {
   note?: string | null;
   /** AI-proposed state — internal signal, gated by humanReview for public display. */
   state: VerificationState;
+  /**
+   * Editor's determination where their primary-source review diverges from
+   * the rule derivation. Public views use editorState ?? state (for approved
+   * claims); the rule-derived state stays for audit.
+   */
+  editorState?: VerificationState | null;
   humanReview: "pending" | "approved" | "rejected";
   reviewedBy: string | null;
   reviewedAt: string | null;
@@ -49,6 +59,12 @@ export interface EvidenceClaim {
     composite: number;
     rationale: string;
   };
+}
+
+/** The state a claim shows publicly once approved: editor decision first, rule derivation second. */
+export function publicClaimState(c: Pick<EvidenceClaim, "state" | "editorState" | "humanReview">): VerificationState {
+  if (c.humanReview !== "approved") return "unverified";
+  return c.editorState ?? c.state;
 }
 
 interface FacilityEvidence {
@@ -129,7 +145,7 @@ export function getPublicVerification(slug: string): PublicVerification {
   const approved = claims.filter((c) => c.humanReview === "approved");
   const approvedCore = core.filter((c) => c.humanReview === "approved");
 
-  // Proposed (internal) facility state from ALL core claims
+  // Proposed (internal) facility state from ALL core claims, rule-derived only.
   let proposed: VerificationState = "unverified";
   if (core.length > 0) {
     if (core.some((c) => c.state === "unsupported")) proposed = "unsupported";
@@ -137,11 +153,12 @@ export function getPublicVerification(slug: string): PublicVerification {
     else proposed = "review";
   }
 
-  // Public state: only approved claims count. Nothing approved yet -> unverified.
+  // Public state: only approved claims count, editor determination first.
+  const approvedCoreStates = approvedCore.map((c) => c.editorState ?? c.state);
   let state: VerificationState = "unverified";
-  if (approvedCore.length > 0) {
-    if (approvedCore.some((c) => c.state === "unsupported")) state = "unsupported";
-    else if (approvedCore.every((c) => c.state === "verified")) state = "verified";
+  if (approvedCoreStates.length > 0) {
+    if (approvedCoreStates.some((s) => s === "unsupported")) state = "unsupported";
+    else if (approvedCoreStates.every((s) => s === "verified")) state = "verified";
     else state = "review";
   }
 

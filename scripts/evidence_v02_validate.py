@@ -109,6 +109,16 @@ def main():
                 errors.append(f"{cid}: bad humanReview {c['humanReview']}")
             if c["humanReview"] == "approved" and not (c.get("reviewedBy") and c.get("reviewedAt")):
                 errors.append(f"{cid}: approved without reviewer/reviewedAt (human gate)")
+            if "editorState" in c and c.get("editorState") is not None:
+                es = c["editorState"]
+                if es not in STATES:
+                    errors.append(f"{cid}: bad editorState {es}")
+                if c["humanReview"] != "approved":
+                    errors.append(f"{cid}: editorState set without editorial approval")
+                if es != c["state"] and not (c.get("note") or "").strip():
+                    errors.append(
+                        f"{cid}: editorState {es} diverges from rule state "
+                        f"{c['state']} without a rationale note")
             state_changes[c["state"]] += 1
         facility_states[slug] = facility_state(fac["claims"])
 
@@ -142,17 +152,23 @@ def main():
     for slug, st in facility_states.items():
         print(f"  {st:12} {names[slug]}")
 
-    print("\n=== EDITORIAL REVIEW WORKLIST (human gate) ===")
-    print("All 62 claims await your approve/reject. Highest-attention claims:")
+    print("\n=== EDITORIAL REVIEW STATUS (human gate) ===")
+    pending = 0
     for slug, fac in doc["facilities"].items():
-        flagged = [c for c in fac["claims"] if c["state"] == "unsupported" or c.get("note")]
-        if not flagged:
-            continue
-        for c in flagged:
-            tag = "UNSUPPORTED" if c["state"] == "unsupported" else "NOTE"
-            print(f"  [{tag}] {names[slug]} :: {c['statement']}")
-            if c.get("note"):
-                print(f"            {c['note']}")
+        for c in fac["claims"]:
+            if c["humanReview"] != "approved":
+                pending += 1
+                print(f"  [PENDING] {names[slug]} :: {c['statement']}")
+    if pending == 0:
+        review = doc.get("editorialReview") or {}
+        print(f"All claims editorially approved "
+              f"({review.get('reviewedBy', 'editor')}, {review.get('reviewedAt', 'date not recorded')}).")
+        print("Claims where the editor's determination diverges from the rule derivation:")
+        for slug, fac in doc["facilities"].items():
+            for c in fac["claims"]:
+                if c.get("editorState") and c["editorState"] != c["state"]:
+                    print(f"  [OVERRIDE] {names[slug]} :: {c['id']}: "
+                          f"rule {c['state']} -> editor {c['editorState']}")
     return 0
 
 

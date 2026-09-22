@@ -1,0 +1,8 @@
+url: http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;aid=&amp;tid=6ab21a654af0476d9e19c35365215e9e&amp;url=https%3a%2f%2fwww.telecompaper.com%2fnews%2fairtel-kenya-pushes-nxtra-data-centre-launch-in-tatu-city-to-july-2027-from-q1--1579056&amp;c=10215787985214750417&amp;mkt=en-ww
+final: http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;aid=&amp;tid=6ab21a654af0476d9e19c35365215e9e&amp;url=https%3a%2f%2fwww.telecompaper.com%2fnews%2fairtel-kenya-pushes-nxtra-data-centre-launch-in-tatu-city-to-july-2027-from-q1--1579056&amp;c=10215787985214750417&amp;mkt=en-ww
+status: 200
+retrieved: 2026-09-22
+bytes: 208866
+
+== head ==
+ 搜尋 News English 全部 Web 搜尋 圖片 影片 地圖 新聞 更多 Copilot 航班 筆記本 重新導向警示 這個 URL 可能不是由 Bing 產生。 如果您不想前往，可以瀏覽 Bing 新聞 或關閉頁面。 意見反應 隱私權 條款 

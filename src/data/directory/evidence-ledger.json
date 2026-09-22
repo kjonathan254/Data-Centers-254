@@ -905,6 +905,880 @@
       ],
       "reviewedBy": "Evidence Engine v0.2 (AI-assisted, rule-tier-v0.2) - awaiting editorial approval",
       "reason": "No usable evidence located in the 2026-09-22 sweep."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C1",
+      "claim": "iXAfrica operates the NBOX1 (Nairobi X One) data centre facility in Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed against the official iXAfrica campus specs and site."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C2",
+      "claim": "iXAfrica Data Centres is the operator of NBOX1.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed against the official iXAfrica campus specs and site."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C3",
+      "claim": "NBOX1 is positioned as a hyperscale, carrier-neutral, AI-ready facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: hyperscale, carrier-neutral, AI-ready positioning confirmed against the official site. Superlatives (first and largest) remain marketing language, not verified fact."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C4",
+      "claim": "NBOX1 is located at Cabanas, Mombasa Road, Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: Mombasa Road / Cabanas location confirmed against the official site and registry."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C5",
+      "claim": "NBOX1 is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: NBOX1.1 live at 4.5 MW per the official campus specs; operational status consistent with independent 2025 launch reports."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iXAfrica NBOX1",
+      "facilitySlug": "ixafrica-nbox1",
+      "claimId": "NBOX1-C6",
+      "claim": "NBOX1.1 is live at 4.5 MW of IT load with 780 racks; the NBOX1.2 expansion adds 18 MW and 3,744 racks.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator-stated figures, verbatim on the official campus specs (NBOX1.1: 4.5MW IT Load, 780 Racks; NBOX1.2: 18MW IT Load, 3,744 Racks). The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C1",
+      "claim": "Africa Data Centres operates the NBO1 data centre facility in Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: identity supported; facility solidly verified."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C2",
+      "claim": "Africa Data Centres is the operator of NBO1.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: operator supported."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C3",
+      "claim": "NBO1 is a carrier-neutral colocation facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: carrier-neutral colocation classification supported."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C4",
+      "claim": "NBO1 is located at Sameer Industrial/Business Park, Mombasa Road, Nairobi.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Africa Data Centres Nairobi page (location section)"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator's current page says 'Located at Sameer Industrial Park'; the registry says 'Sameer Business Park'. Same complex; both wordings recorded."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C5",
+      "claim": "NBO1 is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: operational status supported (operator lists NBO1 in its live footprint; active registry record with 126 networks)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Nairobi 1 (NBO1)",
+      "facilitySlug": "africa-dc-nairobi-1",
+      "claimId": "ADCNBO1-C6",
+      "claim": "Operator states NBO1 has available site capacity of 7.5 MW.",
+      "previousStatus": "unsupported",
+      "newStatus": "review",
+      "evidenceAdded": [
+        "Africa Data Centres Nairobi page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator's own current wording on africadatacentres.com ('Available site capacity 7.5 MW'). An older 2021 operator data sheet cited lower client IT load (about 2.7 MW plus planned expansion), showing the figures evolved. Exact current sold/available IT load, precise hall counts and any expansion beyond the 7.5 MW site figure stay under individual review, per the editor's action."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi One (NBO1)",
+      "facilitySlug": "icolo-nbo1",
+      "claimId": "NBONBO1-C1",
+      "claim": "iColo operates the Nairobi One (NBO1) data centre in Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: icolo.io/location/nbo1/ states NBO1 launched September 2019 in Karen; clean primary source."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi One (NBO1)",
+      "facilitySlug": "icolo-nbo1",
+      "claimId": "NBONBO1-C2",
+      "claim": "NBO1 is operated by iColo, now part of Digital Realty.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed on the operator facility page (iColo, now Digital Realty)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi One (NBO1)",
+      "facilitySlug": "icolo-nbo1",
+      "claimId": "NBONBO1-C3",
+      "claim": "NBO1 is a carrier-neutral colocation data centre.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: carrier-neutral colocation plus teleport, per the operator page; tech-spec PDF and connectivity lists align."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi One (NBO1)",
+      "facilitySlug": "icolo-nbo1",
+      "claimId": "NBONBO1-C4",
+      "claim": "NBO1 is located in Karen, Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: Karen location stated verbatim on the operator facility page."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi One (NBO1)",
+      "facilitySlug": "icolo-nbo1",
+      "claimId": "NBONBO1-C5",
+      "claim": "NBO1 launched in September 2019 and is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: launched September 2019 per the operator page; 280 racks and 624 sqm of customer space stated on the same page."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C1",
+      "claim": "Digital Realty (formerly iColo) opened the NBO2 data centre in Nairobi on 7 September 2026.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: opened 7 September 2026; multiple independent launch reports corroborate."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C2",
+      "claim": "NBO2 is operated by Digital Realty, which has retired the iColo brand.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: Digital Realty rebranding confirmed in the launch coverage and operator material."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C3",
+      "claim": "NBO2 operates as a colocation facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Digital Realty's site listing describes carrier-neutral colocation (editor review, 2026-09-22); the fetched press and registry documents describe the facility without the word 'colocation'. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C4",
+      "claim": "NBO2 is located in Karen, Nairobi, on the Digital Realty campus about 300 m from NBO1.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "ETCIO Data Centers: Digital Realty opens 6.4MW Nairobi Two Data Centre"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Launch coverage places NBO2 in Karen; the Digital Realty listing gives the Langata South Road & LRC Road junction (editor review). The directory's earlier street detail (Bogani East Road) is retained on the record but rests on earlier collection."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C5",
+      "claim": "NBO2 opened on 7 September 2026 and is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: operational (opened 7 September 2026); corroborated by launch coverage and the live operator listing."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Nairobi Two (NBO2)",
+      "facilitySlug": "icolo-nbo2",
+      "claimId": "NBONBO2-C6",
+      "claim": "NBO2 has a capacity of 6.4 MW (Digital Realty launch announcement, 7 September 2026); earlier operator material cited 6.5 MW.",
+      "previousStatus": "review",
+      "newStatus": "review",
+      "evidenceAdded": [
+        "ETCIO Data Centers: Digital Realty opens 6.4MW Nairobi Two Data Centre"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "All launch coverage states 6.4 MW; the editor verified Digital Realty's official GlobeNewswire release (7 Sep 2026) stating the 6.4-megawatt Nairobi Two Data Center. The earlier iColo X post (January 2026, pre-launch) cited 6.5 MW IT load; recorded as a pre-launch discrepancy rather than silently overwritten, per the editor's action. The directory record now carries 6.4 MW."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C1",
+      "claim": "iColo operates the Mombasa One (MBA1) data centre in Mombasa.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: operator page states 'Miritini is currently home to MBA1'."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C2",
+      "claim": "MBA1 is operated by iColo, now part of Digital Realty.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed on the operator page (iColo, now Digital Realty)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C3",
+      "claim": "MBA1 operates as a colocation facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page: 'Colocate your business-critical equipment in MBA1'. Editor review 2026-09-22 confirms colocation classification."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C4",
+      "claim": "MBA1 is located in Miritini, Mombasa.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "iColo Mombasa One facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page states 'Miritini is currently home to MBA1' (the earlier note that the operator page does not state the area was wrong; the verbatim text is in the store)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C5",
+      "claim": "MBA1 is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page: 'operational since 2017'. Editor review 2026-09-22 confirms."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa One (MBA1)",
+      "facilitySlug": "icolo-mba1",
+      "claimId": "MBAMBA1-C6",
+      "claim": "The Miritini campus is planned to reach 13 MW of total IT load and 1,800 racks across three data centres; MBA1 itself is documented at 250 racks and 580 sqm of customer space.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page wording is explicit: 13 MW is the planned campus total (3 data centres), not an MBA1-only figure. Per the editor's action, the 'MBA1 = 13 MW' attribution is removed; the qualified campus claim is what the directory now carries. MBA1's own live IT load (0.9 MW per the iColo homepage, earlier collection) was not re-confirmed in this sweep."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C1",
+      "claim": "iColo operates the Mombasa Two (MBA2) data centre in Mombasa.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed on the operator page."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C2",
+      "claim": "MBA2 is operated by iColo, now part of Digital Realty.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed (iColo, now Digital Realty)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C3",
+      "claim": "MBA2 operates as a colocation facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page: 'Colocate your business-critical equipment in MBA2'. Editor review 2026-09-22 confirms colocation classification."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C4",
+      "claim": "MBA2 is located in Nyali, Mombasa.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "iColo Mombasa Two facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page states 'Situated in Nyali' (the earlier note that the operator page does not state the area was wrong; the verbatim text is in the store)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C5",
+      "claim": "MBA2 launched in 2022 and is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator page: 'launched in 2022'. Editor review 2026-09-22 confirms."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "iColo Mombasa Two (MBA2)",
+      "facilitySlug": "icolo-mba2",
+      "claimId": "MBAMBA2-C6",
+      "claim": "MBA2 hosts up to 600 customer racks.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Operator-stated ('Hosting up to 600 customer racks'; '600 Racks' key facts), verbatim on the operator page. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C1",
+      "claim": "PAIX Data Centres operates the NBO-1 data centre in Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: paix.io/kenya confirms NBO-1 in Britam Tower, Upper Hill."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C2",
+      "claim": "PAIX Data Centres is the operator of NBO-1.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: confirmed on the operator Kenya page."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C3",
+      "claim": "NBO-1 operates as a colocation facility.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: carrier/cloud-neutral colocation per the operator page; PeeringDB consistent."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C4",
+      "claim": "NBO-1 is located in Britam Tower, Upper Hill, Nairobi.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: Britam Tower, Upper Hill confirmed on the operator page and registry."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C5",
+      "claim": "NBO-1 is operational.",
+      "previousStatus": "verified",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: operational per the live operator page and active registry record (38 networks)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "PAIX Nairobi (NBO-1)",
+      "facilitySlug": "paix-nairobi",
+      "claimId": "PAIX-C6",
+      "claim": "NBO-1's 1.5MW total capacity is publicly documented.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Directory tracks 1.5 MW (launch-era specification). No public source in the 2026-09-22 sweep documents the figure; retained as an operator-stated launch spec, not a verified number. Editor review did not overturn this."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C1",
+      "claim": "Nxtra by Airtel is building a data centre at Tatu City, Kenya.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: Airtel/Nxtra and Tatu City announcements, the September 2025 groundbreaking and government participation confirm the project. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C2",
+      "claim": "The Tatu City facility is operated by Nxtra by Airtel (Airtel Kenya).",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: the announcements name Nxtra by Airtel (Airtel Kenya) as the developer-operator. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C3",
+      "claim": "The Tatu City facility is planned as a large-scale (hyperscale) campus of 44 MW across two 22 MW phases.",
+      "previousStatus": "unsupported",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: 44 MW in two 22 MW phases is the figure in the Airtel/Nxtra and Tatu City announcements, corroborated by multiple independent reports. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C4",
+      "claim": "The facility is located at Tatu City, near Ruiru, Kiambu County.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Tatu City location confirmed by the editor against the announcements; street-level detail (Eastern Bypass) rests on the directory's earlier collection. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C5",
+      "claim": "The facility is under construction with completion targeted for July 2027.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: under construction, groundbreaking September 2025, revised completion target July 2027, corroborated by multiple independent reports. Explicitly not operational. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Nxtra by Airtel Tatu City",
+      "facilitySlug": "nxtra-tatu-city",
+      "claimId": "NXTRA-C6",
+      "claim": "The facility's planned capacity is 44 MW across two 22 MW phases.",
+      "previousStatus": "unsupported",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: the 44 MW planned figure is in the developer announcements and is corroborated by independent reporting; recorded as planned capacity for a project, not an operational figure. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "SEACOM Mombasa Cable Landing Station",
+      "facilitySlug": "seacom-mombasa-cls",
+      "claimId": "SEACOM-C1",
+      "claim": "SEACOM operates the Mombasa cable landing station.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: SEACOM documentation, landing-point lists and independent cable maps confirm the Mombasa CLS. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "SEACOM Mombasa Cable Landing Station",
+      "facilitySlug": "seacom-mombasa-cls",
+      "claimId": "SEACOM-C2",
+      "claim": "The Mombasa CLS is operated by SEACOM Limited.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: the registry names the operator as SEACOM Limited; SEACOM documentation confirms. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "SEACOM Mombasa Cable Landing Station",
+      "facilitySlug": "seacom-mombasa-cls",
+      "claimId": "SEACOM-C3",
+      "claim": "The facility's primary role is submarine cable termination (cable landing station).",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: cable landing station role confirmed via SEACOM documentation and independent cable maps. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "SEACOM Mombasa Cable Landing Station",
+      "facilitySlug": "seacom-mombasa-cls",
+      "claimId": "SEACOM-C4",
+      "claim": "The SEACOM Mombasa cable landing station is located in Mombasa, Kenya.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "City-level location is part of the editor-verified existence finding (landing-point lists and cable maps). The street-level address (Swahili Cultural Centre, per the registry) remains a separate, not-yet-corroborated claim, per the editor: exact address and full ancillary specs are separate claims. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "SEACOM Mombasa Cable Landing Station",
+      "facilitySlug": "seacom-mombasa-cls",
+      "claimId": "SEACOM-C5",
+      "claim": "The CLS is operational.",
+      "previousStatus": "review",
+      "newStatus": "review",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "The editor's verification covers existence and type of the landing station; an explicit in-service statement has not been captured, so operational status stays at Review. The registry record has been active since 2013 with 31 networks."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Raxio Kampala UG1",
+      "facilitySlug": "raxio-kampala-ug1",
+      "claimId": "RAXIO-C1",
+      "claim": "Raxio operates the UG1 data centre at Namanve, Kampala, Uganda.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Raxio Group official Raxio Uganda (UG1) facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: official facility page live at raxiogroup.com/data-centres/uganda (the earlier sweep hit a block; the page fetches fine)."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Raxio Kampala UG1",
+      "facilitySlug": "raxio-kampala-ug1",
+      "claimId": "RAXIO-C2",
+      "claim": "UG1 is operated by Raxio Data Centres (Raxio Uganda).",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Raxio Group official Raxio Uganda (UG1) facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: the official page is Raxio Uganda's own facility page with downloadable tech specs."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Raxio Kampala UG1",
+      "facilitySlug": "raxio-kampala-ug1",
+      "claimId": "RAXIO-C3",
+      "claim": "UG1 operates as a colocation facility.",
+      "previousStatus": "unsupported",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Raxio Uganda (UG1) official key facts and specs",
+        "The Independent (Uganda): Raxio Data Centre primed for Uganda's cloud computing, digital needs"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Official key facts state 'Colocation'; the independent press coverage says 'carrier and cloud-neutral data centre'. Editor review 2026-09-22 confirms."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Raxio Kampala UG1",
+      "facilitySlug": "raxio-kampala-ug1",
+      "claimId": "RAXIO-C4",
+      "claim": "UG1 is located in Namanve Industrial Park (Kampala Industrial and Business Park), Kampala.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Raxio Group official Raxio Uganda (UG1) facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Official page: 'located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway'."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Raxio Kampala UG1",
+      "facilitySlug": "raxio-kampala-ug1",
+      "claimId": "RAXIO-C5",
+      "claim": "UG1 is operational.",
+      "previousStatus": "review",
+      "newStatus": "verified",
+      "evidenceAdded": [
+        "Raxio Group official Raxio Uganda (UG1) facility page"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Official page presents the live facility (key facts, security, connectivity); press describes functions hosted at the operating facility. Editor review 2026-09-22 confirms operational status."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Kigali KGL1",
+      "facilitySlug": "africa-data-centres-kigali-kgl1",
+      "claimId": "KGL1-C1",
+      "claim": "Africa Data Centres operates the KGL1 data centre in Kigali, Rwanda.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: no material change. The 2026-09-22 negative sweep stands: no dedicated current ADC facility page, no completion or go-live announcement in primary or secondary sweeps."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Kigali KGL1",
+      "facilitySlug": "africa-data-centres-kigali-kgl1",
+      "claimId": "KGL1-C2",
+      "claim": "KGL1 is operated by Africa Data Centres (Cassava Technologies).",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: no material change."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Kigali KGL1",
+      "facilitySlug": "africa-data-centres-kigali-kgl1",
+      "claimId": "KGL1-C3",
+      "claim": "KGL1 operates as a colocation facility.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: no material change."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Kigali KGL1",
+      "facilitySlug": "africa-data-centres-kigali-kgl1",
+      "claimId": "KGL1-C4",
+      "claim": "KGL1 is located in Kigali, Rwanda.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: no material change."
+    },
+    {
+      "date": "2026-09-22",
+      "facility": "Africa Data Centres Kigali KGL1",
+      "facilitySlug": "africa-data-centres-kigali-kgl1",
+      "claimId": "KGL1-C5",
+      "claim": "KGL1 is under construction with 2MW planned capacity.",
+      "previousStatus": "unsupported",
+      "newStatus": "unsupported",
+      "evidenceAdded": [
+        "no new sources; editorial confirmation"
+      ],
+      "reviewedBy": "Editor, DataCentre254 (human primary-source review)",
+      "reason": "Editor review 2026-09-22: no material change. The 2022 plan (2 MW, groundbreaking Q1 2023) and aggregator listings are not sufficient to publish any stage claim as verified."
     }
-  ]
+  ],
+  "lastReview": {
+    "date": "2026-09-22",
+    "reviewedBy": "Editor, DataCentre254",
+    "entriesAppended": 62
+  }
 }

@@ -11,6 +11,10 @@
  *    facts. DataCentre254 (the editor) is the sole verification authority.
  *  - Public verification states are human-gated: a claim shows its state
  *    publicly only after editorial approval (humanReview === "approved").
+ *  - The editor may settle a claim at a different state than the rule
+ *    derivation (editorState) when their own primary-source review justifies
+ *    it. Every editorState must carry a rationale (claim note) and a ledger
+ *    entry; the rule-derived state is preserved for audit.
  *  - Tier 4 sources are for DISCOVERY of Tier 1-3 documents; they never
  *    support a claim on their own.
  *

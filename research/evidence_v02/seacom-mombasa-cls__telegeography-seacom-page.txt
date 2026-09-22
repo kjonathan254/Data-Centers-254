@@ -1,0 +1,33 @@
+url: https://www.submarinecablemap.com/submarine-cable/seacom
+final: https://www.submarinecablemap.com/submarine-cable/seacom
+status: 200
+retrieved: 2026-09-22
+bytes: 1483
+
+== head ==
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Submarine Cable Map 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+

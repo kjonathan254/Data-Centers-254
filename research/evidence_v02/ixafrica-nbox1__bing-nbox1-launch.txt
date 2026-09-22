@@ -1,0 +1,8 @@
+url: https://www.bing.com/news/search?q=iXAfrica%20NBOX1%20hyperscale%20Nairobi%20launch%204.5MW&format=rss&setmkt=en-KE&setlang=en
+final: https://www.bing.com/news/search?q=iXAfrica%20NBOX1%20hyperscale%20Nairobi%20launch%204.5MW&format=rss&setmkt=en-KE&setlang=en
+status: 200
+retrieved: 2026-09-22
+bytes: 1262
+
+== head ==
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:News="https://www.bing.com/news/search?q=iXAfrica%20NBOX1%20hyperscale%20Nairobi%20launch%204.5MW&amp;format=rss&amp;setmkt=en-KE&amp;setlang=en"><channel><title>iXAfrica NBOX1 hyperscale Nairobi launch 4.5MW - BingNews</title><link>https://www.bing.com/news/search?q=iXAfrica%20NBOX1%20hyperscale%20Nairobi%20launch%204.5MW&amp;format=rss&amp;setmkt=en-KE&amp;setlang=en</link><description>Search results</description><image><url>http://www.bing.com/rsslogo.gif</url><title>iXAfrica NBOX1 hyperscale Nairobi launch 4.5MW</title><link>https://www.bing.com/news/search?q=iXAfrica%20NBOX1%20hyperscale%20Nairobi%20launch%204.5MW&amp;format=rss&amp;setmkt=en-KE&amp;setlang=en</link></image><copyright>Copyright \xc2\xa9 2026 Microsoft. All rights reserved. These XML results may not be used, reproduced or transmitted in any manner or for any purpose other than rendering Bing results within an RSS aggregator for your personal, non-commercial use. Any other use of these results requires express written permission from Microsoft Corporation. By accessing this web page or using these results in any manner whatsoever, you agree to be bound by the foregoing restrictions.</copyright></channel></rss>
