@@ -8,6 +8,7 @@
  *   [since last review — slim strip]
  *   [evidence health anchor]  [country comparison]
  *   [coverage matrix — dominant, sticky toolbar, drawer]
+ *   [source quality & provenance — tier mix, capture health, explorer]
  *   [research queue alerts]   [gaps by pillar]
  *   [selected country control room — tabs]
  *   [legend]
@@ -20,10 +21,12 @@
 
 import { useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
 import { countLabel } from "@/lib/policy";
 import MatrixConsole from "./matrix-console";
+import SourceQuality from "./source-quality";
 import { CountUp, useInView, useWipe } from "./motion";
 import type { OpsData, OpsGap, OpsSource } from "./dashboard-types";
 
@@ -104,7 +107,7 @@ function EvidenceHealth({ data }: { data: OpsData }) {
   const m = data.meta;
   const total = m.claims || 1;
   const other = Math.max(total - m.verified - m.partial, 0);
-  const wipe = useWipe<HTMLDivElement>();
+  const [wipeRef, wipeCls] = useWipe<HTMLDivElement>();
   return (
     <div className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]">
       <PanelLabel right={<CoverageTooltip />}>Regional evidence health</PanelLabel>
@@ -118,8 +121,8 @@ function EvidenceHealth({ data }: { data: OpsData }) {
         </p>
       </div>
       <div className="mt-5" aria-hidden="true">
-        <div ref={wipe.ref} className="flex h-3 w-full gap-px overflow-hidden rounded-full bg-[#0B1627]">
-          <div className={`flex h-full w-full gap-px overflow-hidden rounded-full ${wipe.cls}`} style={{ animationDelay: "120ms" }}>
+        <div ref={wipeRef} className="flex h-3 w-full gap-px overflow-hidden rounded-full bg-[#0B1627]">
+          <div className={`flex h-full w-full gap-px overflow-hidden rounded-full ${wipeCls}`} style={{ animationDelay: "120ms" }}>
             <span className="bg-emerald-500" style={{ width: `${(m.verified / total) * 100}%` }} />
             <span className="bg-amber-500" style={{ width: `${(m.partial / total) * 100}%` }} />
             {other > 0 && <span className="bg-slate-600" style={{ width: `${(other / total) * 100}%` }} />}
@@ -180,13 +183,13 @@ function CountryComparison({
   const ranked = [...data.countries].sort(
     (a, b) => b.coveragePct - a.coveragePct || b.claims - a.claims
   );
-  const wipe = useWipe<HTMLUListElement>();
+  const [wipeRef, wipeCls] = useWipe<HTMLUListElement>();
   return (
     <div className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]" id="countries">
       <PanelLabel right={<span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">click to focus</span>}>
         Country comparison
       </PanelLabel>
-      <ul ref={wipe.ref} className="mt-4 flex-1 space-y-4">
+      <ul ref={wipeRef} className="mt-4 flex-1 space-y-4">
         {ranked.map((c, i) => {
           const isFocus = focus === c.key;
           return (
@@ -207,7 +210,7 @@ function CountryComparison({
                 </span>
                 <span className="mt-1.5 block h-2.5 w-full overflow-hidden rounded-full bg-[#0B1627]">
                   <span
-                    className={`block h-full rounded-full transition-all ${wipe.cls} ${
+                    className={`block h-full rounded-full transition-all ${wipeCls} ${
                       isFocus ? "bg-cyan-400" : "bg-emerald-500/80 group-hover:bg-cyan-400/80"
                     }`}
                     style={{ width: `${c.coveragePct}%`, animationDelay: `${i * 110}ms` }}
@@ -308,22 +311,28 @@ function GapsByPillar({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel: (id:
   for (const g of gaps) counts.set(g.pillar, (counts.get(g.pillar) ?? 0) + 1);
   const rows = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   const max = rows[0]?.[1] ?? 1;
-  const wipe = useWipe<HTMLUListElement>();
+  const [wipeRef, wipeCls] = useWipe<HTMLUListElement>();
   return (
     <div className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]">
       <PanelLabel right={<span className={`font-mono text-[10px] uppercase tracking-wider ${POLICY_GAP_STYLE.text}`}>structured gaps</span>}>
         Open gaps by pillar
       </PanelLabel>
-      <ul ref={wipe.ref} className="mt-4 flex-1 space-y-3">
+      <ul ref={wipeRef} className="mt-4 flex-1 space-y-3">
         {rows.map(([pid, n], i) => (
           <li key={pid}>
             <div className="flex items-baseline justify-between gap-2">
-              <span className="text-xs text-slate-300">{pillarLabel(pid)}</span>
+              <Link
+                href={`/policy/intelligence/pillars/${pid}`}
+                title={`Open the ${pillarLabel(pid)} deep dive`}
+                className="text-xs text-slate-300 underline decoration-transparent underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/50"
+              >
+                {pillarLabel(pid)}
+              </Link>
               <span className="font-mono text-xs font-bold text-slate-200">{n}</span>
             </div>
             <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-[#0B1627]">
               <div
-                className={`h-full rounded-full bg-violet-400/70 ${wipe.cls}`}
+                className={`h-full rounded-full bg-violet-400/70 ${wipeCls}`}
                 style={{ width: `${(n / max) * 100}%`, animationDelay: `${i * 90}ms` }}
               />
             </div>
@@ -549,7 +558,13 @@ function CountryRoom({
             return (
               <div key={p.id}>
                 <h4 className="font-mono text-xs uppercase tracking-widest text-slate-400">
-                  {p.label}
+                  <Link
+                    href={`/policy/intelligence/pillars/${p.id}`}
+                    title={`Open the ${p.label} deep dive`}
+                    className="underline decoration-transparent underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/50"
+                  >
+                    {p.label}
+                  </Link>
                   {pClaims.length > 0 && (
                     <span className="ml-2 text-slate-600">{countLabel(pClaims.length, "claim")}</span>
                   )}
@@ -713,10 +728,10 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
 
       {/* Row 1: evidence health + country comparison */}
       <div id="health" className="grid scroll-mt-28 gap-4 lg:grid-cols-12">
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <EvidenceHealth data={data} />
         </div>
-        <div className="lg:col-span-5">
+        <div className="min-w-0 lg:col-span-5">
           <CountryComparison data={data} focus={focus} onSelect={selectCountry} />
         </div>
       </div>
@@ -741,12 +756,17 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
         </div>
       </section>
 
+      {/* Row 2.5: source quality & provenance (Phase 2) */}
+      <section aria-label="Source quality and provenance">
+        <SourceQuality data={data} />
+      </section>
+
       {/* Row 3: queue + gaps by pillar */}
       <div id="queue" className="grid scroll-mt-28 gap-4 lg:grid-cols-12">
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <ResearchQueueAlert gaps={data.gaps} pillarLabel={pillarLabel} />
         </div>
-        <div className="lg:col-span-5">
+        <div className="min-w-0 lg:col-span-5">
           <GapsByPillar gaps={data.gaps} pillarLabel={pillarLabel} />
         </div>
       </div>

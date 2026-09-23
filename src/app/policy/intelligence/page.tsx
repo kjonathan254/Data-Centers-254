@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Download } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { POLICY_PILLARS, POLICY_SOURCE_TIERS, POLICY_CAPTURE_LABELS, SINCE_LAST_REVIEW, CONTROL_ROOM_SURFACES } from "@/lib/policy/config";
@@ -81,6 +82,7 @@ function buildOpsData(): OpsData {
             tier: src.tier,
             publisher: src.publisher,
             captureStatus: src.captureStatus,
+            sourceType: src.sourceType,
             excerpt: src.excerpt ?? "",
           };
         });
@@ -137,12 +139,30 @@ function buildOpsData(): OpsData {
   );
 
   const verified = stats.byState["verified"] ?? 0;
+
+  // Full source registry for the source-quality panel — sorted tier asc
+  // (the T1 backbone first), then publisher. Computed here so every number
+  // on the panel is derived from the dataset, never hardcoded.
+  const opsSources: OpsSource[] = Object.entries(ds.sources)
+    .map(([id, s]) => ({
+      id,
+      label: s.label,
+      url: s.url,
+      tier: s.tier,
+      publisher: s.publisher,
+      captureStatus: s.captureStatus,
+      sourceType: s.sourceType,
+      excerpt: s.excerpt ?? "",
+    }))
+    .sort((a, b) => a.tier - b.tier || a.publisher.localeCompare(b.publisher) || a.id.localeCompare(b.id));
+
   return {
     countries: opsCountries,
     pillars: pillarIds.map((id) => ({ id, label: POLICY_PILLARS[id].label, blurb: POLICY_PILLARS[id].blurb })),
     claims: opsClaims,
     gaps: opsGaps,
     cells: opsCells,
+    sources: opsSources,
     sinceReview: { ...SINCE_LAST_REVIEW },
     meta: {
       gateShort: stats.humanGateStatus.split(" (")[0],
@@ -217,6 +237,14 @@ export default function PolicyIntelligencePage() {
                 className="rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-900/60"
               >
                 Methodology
+              </a>
+              <a
+                href="/policy/intelligence/dataset"
+                title={`Download the full policy dataset as JSON (${ops.meta.datasetVersion})`}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-cyan-500/50 hover:text-cyan-300"
+              >
+                <Download className="size-4" aria-hidden="true" />
+                Dataset
               </a>
             </div>
           </header>
@@ -304,7 +332,13 @@ export default function PolicyIntelligencePage() {
 
           <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
             {ops.meta.datasetVersion} · {countLabel(ops.meta.claims, "claim")} · {countLabel(ops.meta.sources, "source")} ·{" "}
-            {ops.meta.gaps} structured gaps
+            {ops.meta.gaps} structured gaps ·{" "}
+            <a
+              href="/policy/intelligence/dataset"
+              className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-400 hover:decoration-cyan-500/50"
+            >
+              download the dataset (JSON)
+            </a>
           </p>
         </div>
       </main>

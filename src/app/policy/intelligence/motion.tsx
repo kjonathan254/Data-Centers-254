@@ -19,8 +19,10 @@ export function useInView<T extends HTMLElement>(rootMargin = "0px 0px -8% 0px")
     const el = ref.current;
     if (!el) return;
     if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return;
+      // No IO support (ancient browsers): show the final state without
+      // observing. Deferred so the effect body stays setState-free.
+      const id = requestAnimationFrame(() => setInView(true));
+      return () => cancelAnimationFrame(id);
     }
     const io = new IntersectionObserver(
       (entries) => {
@@ -84,5 +86,7 @@ export function CountUp({
 export function useWipe<T extends HTMLElement>() {
   const { ref, inView } = useInView<T>();
   const cls = inView ? "dc-wipe origin-left" : "";
-  return { ref, cls };
+  // Tuple (not an object wrapping the ref) so ref-value lint rules can tell
+  // the state-derived class string apart from the ref.
+  return [ref, cls] as const;
 }

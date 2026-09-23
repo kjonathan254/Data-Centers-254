@@ -12,12 +12,14 @@
  */
 
 import { useEffect, useState } from "react";
+import { Download } from "lucide-react";
 
 const SECTIONS = [
   { id: "health", label: "Overview" },
   { id: "matrix", label: "Coverage matrix" },
+  { id: "sources", label: "Sources" },
   { id: "queue", label: "Research queue" },
-  { id: "rooms", label: "Country rooms" },
+  { id: "control-room", label: "Country rooms" },
   { id: "legend", label: "Evidence states" },
 ] as const;
 
@@ -83,16 +85,26 @@ export default function SectionNav({
           );
         })}
       </div>
-      <span
-        className="hidden shrink-0 items-center gap-2 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400 md:flex"
-        title="The dataset version powering every number on this page"
-      >
-        <span className="relative flex size-2" aria-hidden="true">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-          <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+      <div className="flex shrink-0 items-center gap-1.5">
+        <a
+          href="/policy/intelligence/dataset"
+          aria-label="Download the policy dataset as JSON"
+          title="Download the policy dataset (JSON)"
+          className="hidden rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-2 text-slate-400 transition-colors hover:border-cyan-500/40 hover:text-cyan-300 md:block"
+        >
+          <Download className="size-3.5" aria-hidden="true" />
+        </a>
+        <span
+          className="hidden shrink-0 items-center gap-2 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400 md:flex"
+          title="The dataset version powering every number on this page"
+        >
+          <span className="relative flex size-2" aria-hidden="true">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+            <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+          </span>
+          dataset {datasetVersion.replace("policy-", "")}
         </span>
-        dataset {datasetVersion.replace("policy-", "")}
-      </span>
+      </div>
     </nav>
   );
 }

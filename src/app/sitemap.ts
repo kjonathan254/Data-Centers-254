@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
 import { latestCorrectionDate } from "@/lib/corrections-data";
+import { POLICY_PILLARS } from "@/lib/policy/config";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -121,5 +122,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...articleRoutes, ...facilityRoutes];
+  // Policy Intelligence per-pillar deep dives — dated from the same editorial
+  // review date as the dashboard (they render the same dataset revision).
+  const policyPillarRoutes: MetadataRoute.Sitemap = Object.keys(POLICY_PILLARS).map((pillar) => ({
+    url: `${baseUrl}/policy/intelligence/pillars/${pillar}`,
+    lastModified: new Date("2026-09-23T00:00:00Z"),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...articleRoutes, ...facilityRoutes, ...policyPillarRoutes];
 }

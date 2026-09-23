@@ -81,9 +81,13 @@
    `vercel_inventory.mjs`, `recompress_images.mjs` — incident tools; commit to a
    `tools/` dir if reuse is expected.
 8. **Control-room roadmap (from user-approved audit)**: Phase 1 shipped
-   (dashboard canvas + interactions, commit ef02b95). Phase 2 candidates:
-   source-quality mix charts, per-pillar deep pages, dataset download link.
-   User mockup + audit text live in chat history (2026-09-23).
+   (dashboard canvas + interactions, commit ef02b95). Phase 2 shipped
+   (2026-09-23): source-quality & provenance panel, per-pillar deep pages
+   (/policy/intelligence/pillars/[pillar], all 10 static), dataset download
+   route (/policy/intelligence/dataset), SectionNav rooms-id fix, mobile
+   overflow fixes (grid min-w-0). Phase 3 candidates remaining: claim-record
+   deep links from matrix drawer to pillar anchors, compare-view exports,
+   quarterly delta views. User mockup + audit text live in chat history.
 
 ## Tooling quick reference
 
@@ -128,3 +132,37 @@
 - Lessons: (a) sticky elements must sit directly inside a tall parent — a wrapper
   div kills stickiness; (b) verify sticky behaviour by scrolling, not just loading.
 - Validator PASS (r11 unchanged); Vercel will auto-deploy from main.
+
+### 2026-09-23 — Control Room Phase 2 (source quality, pillar deep dives, dataset download) (Task 46)
+- Session started with a 4th workspace rollback (32 commits behind); preflight
+  ff-only to 5f1963b healed it. Phase 2 scope taken from open thread 8.
+- Source quality & provenance panel (source-quality.tsx, new): tier-mix +
+  capture-health segmented bars with clickable filter chips that drive an
+  interactive source explorer (60 sources, tier/capture filters, show-all).
+  All numbers derived from the dataset registry — nothing hardcoded.
+- Per-pillar deep pages (pillars/[pillar]/page.tsx, new): generateStaticParams
+  over 10 pillars, dynamicParams=false (404 on unknown), generateMetadata with
+  live stats, per-country coverage cards, claims + evidence trails, distinct
+  sources, structured gaps with upgrade paths, prev/next pillar nav. All
+  statically prerendered; added to sitemap.ts (priority 0.7, review-dated).
+- Dataset download route (dataset/route.ts, new): GET serves the full r11 JSON
+  (~111 KB) via the same loader the dashboard reads — page and file can never
+  diverge. Download affordances: header CTA, command-bar icon, footer link.
+- Cross-links: matrix row headers + gaps-by-pillar rows + country-room claims
+  headings now link to pillar deep dives; cell drawer footer gains a
+  "[Pillar] deep dive" link beside the country control room link.
+- Fixed Phase-1 bug: SectionNav pointed at id "rooms" but the section is
+  "control-room" (pill never activated). Added a Sources nav section.
+- Fixed mobile horizontal overflow (docW 1328→390 at 390px viewport):
+  truncate rows inside grid items without min-w-0 inflated the grid track
+  (source-quality panel new, research-queue pre-existing). min-w-0 on grid
+  children everywhere it matters.
+- Pluralisation fix: countLabel(n, "match") → "2 matchs"; now uses explicit
+  plural "matches".
+- Refactored useWipe to return a [ref, cls] tuple so eslint react-hooks/refs
+  stops false-flagging state-derived cls as a ref read (7→0 errors in the
+  policy/intelligence tree); useInView no-IO fallback defers setState via rAF.
+- Verified end-to-end: tsc clean, eslint clean, prod build (10 pillar SSG
+  routes), validator PASS (r11 untouched), browser smoke (filters, drawer,
+  pillar pages, dataset headers, mobile viewport, console clean).
+- Vercel auto-deploys from main.

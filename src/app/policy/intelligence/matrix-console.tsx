@@ -17,6 +17,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronRight, Search, X } from "lucide-react";
+import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
 import { countLabel } from "@/lib/policy";
@@ -275,7 +276,7 @@ export default function MatrixConsole({
                         <button
                           type="button"
                           onClick={() => openCell(c.key, p.id)}
-                          className="flex w-full items-center justify-between gap-3 py-2.5 text-left"
+                          className="flex w-full items-center justify-between gap-3 py-2.5 text-left transition-colors hover:text-cyan-300"
                         >
                           <span className="text-sm text-slate-200">{p.label}</span>
                           <span className="flex items-center gap-1.5">
@@ -346,7 +347,16 @@ export default function MatrixConsole({
                   return (
                     <tr key={pid} className="border-b border-[rgba(135,180,220,0.08)] last:border-0">
                       <td className="max-w-[240px] px-4 py-2 align-middle" title={p.blurb}>
-                        <span className="text-sm font-medium text-slate-200">{p.label}</span>
+                        <Link
+                          href={`/policy/intelligence/pillars/${pid}`}
+                          title={`${p.label} — open the pillar deep dive`}
+                          className="text-sm font-medium text-slate-200 underline decoration-transparent underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/50"
+                        >
+                          {p.label}
+                        </Link>
+                        <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+                          deep dive ↗
+                        </span>
                       </td>
                       {data.countries.map((c) => {
                         const cell = cells.get(`${c.key}|${pid}`);
@@ -558,7 +568,7 @@ export default function MatrixConsole({
             </div>
 
             {activeCountry && (
-              <div className="border-t border-[rgba(135,180,220,0.16)] p-4">
+              <div className="grid gap-2 border-t border-[rgba(135,180,220,0.16)] p-4 sm:grid-cols-2">
                 <a
                   href="#control-room"
                   onClick={() => {
@@ -567,9 +577,17 @@ export default function MatrixConsole({
                   }}
                   className="flex items-center justify-between rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-3 py-2.5 text-sm font-medium text-cyan-300 transition-colors hover:bg-cyan-500/15"
                 >
-                  Open the {activeCountry.name} control room
+                  {activeCountry.name} control room
                   <ChevronRight className="size-4" aria-hidden="true" />
                 </a>
+                <Link
+                  href={`/policy/intelligence/pillars/${active.pillar}`}
+                  onClick={() => setActive(null)}
+                  className="flex items-center justify-between rounded-lg border border-slate-700 px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-cyan-500/40 hover:text-cyan-300"
+                >
+                  {activePillar?.label ?? "Pillar"} deep dive
+                  <ChevronRight className="size-4" aria-hidden="true" />
+                </Link>
               </div>
             )}
           </aside>

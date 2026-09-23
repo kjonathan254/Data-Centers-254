@@ -11,6 +11,8 @@ export interface OpsSource {
   tier: number;
   publisher: string;
   captureStatus: string;
+  /** e.g. "statute", "regulator", "policy-document", "press" — from the dataset. */
+  sourceType: string;
   excerpt: string;
 }
 
@@ -73,6 +75,8 @@ export interface OpsData {
   claims: OpsClaim[];
   gaps: OpsGap[];
   cells: OpsCell[];
+  /** Full source registry (60 entries at r11) — powers the source-quality panel. */
+  sources: OpsSource[];
   sinceReview: SinceReview;
   meta: {
     gateShort: string;
