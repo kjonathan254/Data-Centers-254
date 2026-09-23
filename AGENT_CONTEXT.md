@@ -166,3 +166,49 @@
   routes), validator PASS (r11 untouched), browser smoke (filters, drawer,
   pillar pages, dataset headers, mobile viewport, console clean).
 - Vercel auto-deploys from main.
+
+### 2026-09-23 — Console layout round 2 (mockup-matched desktop layout) (Task 47)
+- User feedback: design approved, but desktop layout must match their uploaded
+  mockup (console shell) — "if the page looked like the image, an investor
+  would be like 'this is not just a page, it's a system'". Also reported a
+  GitHub "Lint Error / exit 1"; lint+tsc+validator+build all PASS locally with
+  the exact CI commands (node 24 local vs 22 CI is the only diff) — treated as
+  transient/older-run; watch the run triggered by a33567f.
+- console-chrome.tsx (new): fixed left icon rail 76px (xl+, below h-14 navbar)
+  + sticky console header (top-14): POLICY INTELLIGENCE title block, centre
+  scrollspy pill nav (Overview/Pillars/Jurisdictions/Library/Alerts), right
+  chips (live "Dataset refreshed Q3-R11", review date, ED avatar = humanGate).
+  One useConsoleScrollSpy hook; resolves ties to the EARLIEST section in
+  console order (hero+KPI cards share row 1, so Jurisdictions used to win).
+- control-room.tsx restructured: row1 = evidence-coverage hero (col-5: giant
+  CountUp %, segmented bar + 0/25/50/75/100 axis, verified/partial/gaps
+  legend, claims/sources/gaps indicators) + 4 country KPI cards (col-7:
+  flag emoji, big % amber<75 else emerald, rating Very strong≥90/Strong≥75/
+  Moderate≥60/Early, N claims, click→focus matrix column); row3 = research
+  queue (priority/pillar sort select, violet pulse dots, top-5 collapsed) +
+  evidence-states panel (5 claim states live + structured gaps + totals);
+  legend now pairs with gaps-by-pillar (7/5 cols).
+- matrix-console.tsx: mockup-style card header with legend row; cells are
+  PILLS now (emerald "✓ N" all-verified, amber mixed "✓ a ◯ b", dashed violet
+  "○ GAP", gray "—" no-data) — icons+counts keep colour-from-only-signal rule;
+  pillar icons (BadgeCheck/Lock/Database/Percent/Zap/HardHat/Leaf/Cpu/Globe/
+  Network); selected cell gets cyan ring; drawer restyled = mockup panel
+  (title "Country · Pillar", state summary, PILLAR OVERVIEW tiles, responsible
+  regulator, KEY FINDINGS, LAST UPDATED, View claims/View sources actions).
+- page.tsx: marketing header/CTAs/publication strip REMOVED from top — console
+  frame opens the page (h1 moved into hero card); publication status lives in
+  Method & governance; section-nav.tsx DELETED; countries sorted ascending by
+  coverage in buildOpsData so KPI cards, matrix columns and room switcher
+  share one jurisdiction order (mockup: Uganda→Kenya); container pt-[72px]
+  (fixed navbar is h-14; without it the sticky header visually ate the hero).
+- KEY BUG PATTERN: overflow-hidden on the matrix card made the card the sticky
+  scrollport — the sticky toolbar was CLAMPED to top:105 of the CARD and
+  overlapped the thead at scroll 0. Fix: no overflow-hidden on card root;
+  rounding moved to rounded-t-xl header + rounded-b-xl table/cards wrappers;
+  toolbar sticky top-[118px] (below console header bottom ≈115).
+- Verification: tsc/eslint/validator/prod build PASS; headless browser
+  screenshots at 1536px (top, matrix, drawer, queue, rooms) + 390px mobile —
+  layout matches the mockup; drawer opens with pillar tiles + actions.
+- Also confirmed: evidence-monitor.yml is workflow_dispatch-only (cron
+  commented); FIRECRAWL_API_KEY GitHub secret still NOT set (no gh CLI/token
+  in workspace) — user must add it in repo Settings→Secrets→Actions.
