@@ -47,11 +47,22 @@
   `research/captures/<date>-<slug>.md`, front matter locks capture-pending) →
   editor review → `scripts/policy_upgrade_rNN.py` (programmatic, byte-stable JSON
   dump indent=2 ensure_ascii=False + trailing newline) → validator → push.
-- **Monitoring**: `scripts/firecrawl_monitor.mjs` + weekly GitHub Actions cron
-  (`.github/workflows/evidence-monitor.yml`, Mon 06:00 UTC). Job fails on content
-  drift. Requires repo secret `FIRECRAWL_API_KEY` (owner must add; see Open threads).
-- **Firecrawl credits**: free tier was exhausted 2026-09-23 by the capture session
-  (~60 calls; HTTP 402 at end of day). Weekly monitor needs refills or a paid plan.
+- **Monitoring**: `scripts/firecrawl_monitor.mjs` + GitHub Actions workflow
+  (`.github/workflows/evidence-monitor.yml`, workflow_dispatch-only; weekly cron
+  commented out until credits return). Job fails on content drift. Requires repo
+  secret `FIRECRAWL_API_KEY` — still NOT set (blocked on token perms; see Open threads 1).
+- **Firecrawl credits**: EXHAUSTED — original key (fc-e14ca…) 402'd after the
+  2026-09-23 capture session; user supplied a ROTATED key (fc-7726…) on
+  2026-09-23 which ALSO returns HTTP 402 on both /v2/search and /v2/scrape
+  (zero credits). Freeze continues: no search/scrape/monitor calls until refills.
+- **Auth/tooling**: fine-grained PAT (owner kjonathan254) wired into origin
+  remote URL — push + CI-run reads verified working; Actions-secrets WRITE is
+  MISSING (`x-accepted-github-permissions: secrets=read`). gh CLI 2.101.0 at
+  /home/z/bin/gh (auth via GH_TOKEN env). CI status verified GREEN 2026-09-23:
+  the user-reported lint failure was run 5f1963b ("Lint" step); fixed from
+  2900c04 onward — 2900c04 / a33567f / c12a017 all success.
+- **.env.local**: recreated 2026-09-23 after 5th workspace rollback (gitignored,
+  holds rotated Firecrawl key). Rollbacks wipe this file — check it every session.
 - **Vercel storage**: resolved (retention policy + image diet 13.6→6.5MB per
   snapshot). User should have revoked the Vercel token shared in chat (vcp_1Bve…).
 - **Next.js env**: `TYPESAFE_API_KEY` exists in Vercel production (inert — no code
@@ -59,10 +70,15 @@
 
 ## Open threads
 
-1. **Repo secret**: user adds `FIRECRAWL_API_KEY` at Settings → Secrets and
-   variables → Actions so the weekly drift monitor can run. Note: the weekly
-   cron is COMMENTED OUT until the 2026-10-23 credit refill (workflow_dispatch
-   still works); re-enable both `schedule` lines when credits return.
+1. **Repo secret (BLOCKED on token permission)**: setting `FIRECRAWL_API_KEY`
+   via API failed 2026-09-23 — the fine-grained PAT has `secrets=read` only.
+   Unblock EITHER by (a) editing the token: github.com → Settings → Developer
+   settings → Fine-grained tokens → this token → Repository permissions →
+   **Secrets: Read and write**, then agent runs `gh secret set`; OR (b) user
+   adds it manually: repo Settings → Secrets and variables → Actions →
+   New repository secret → name `FIRECRAWL_API_KEY`, value = rotated Firecrawl
+   key held in `.env.local`. Weekly cron stays COMMENTED OUT until credits
+   return (workflow_dispatch works); re-enable both `schedule` lines then.
 2. **UG-TX-C1** (only weakened remaining tax claim): 10-year income tax holiday
    awaits Uganda Income Tax Act (Cap 340, as amended) capture — Free Zones Act
    2014 + Investment Code 2019 already captured (T1).
@@ -212,3 +228,27 @@
 - Also confirmed: evidence-monitor.yml is workflow_dispatch-only (cron
   commented); FIRECRAWL_API_KEY GitHub secret still NOT set (no gh CLI/token
   in workspace) — user must add it in repo Settings→Secrets→Actions.
+
+### 2026-09-23 — Credentials wiring + CI verification (Task 48)
+- 5th workspace rollback: preflight found main 35 commits behind → ff-only to
+  c12a017 healed it; .env.local was wiped again and recreated (rule 3/4).
+- User supplied a GitHub fine-grained PAT + a ROTATED Firecrawl key in chat.
+  PAT wired into origin remote URL (push verified via --dry-run); .env.local
+  holds the new Firecrawl key (git check-ignore OK). No key values written to
+  any committed file; both keys transited chat → remind user to rotate later.
+- CI investigation (the "Lint Error / exit 1" report): it was run 5f1963b
+  (first Control Room push), failing job "Lint and build" at step "Lint";
+  "Content validation" job passed. The Phase 2 push (2900c04) already fixed
+  it — runs 2900c04 / a33567f / c12a017 are ALL success. No action needed;
+  CI green on latest.
+- Firecrawl: rotated key tested with exactly 1 search + 1 scrape → HTTP 402
+  on both (zero credits on the new key too). Freeze continues (rule: no
+  search/scrape/monitor calls). evidence-monitor.yml stays
+  workflow_dispatch-only (cron already commented out).
+- Repo secret: gh CLI 2.101.0 installed at /home/z/bin/gh; `gh secret set` →
+  HTTP 403 "Resource not accessible by personal access token"; header shows
+  `x-accepted-github-permissions: secrets=read`. Unblock paths recorded in
+  Open thread 1 (token edit to Secrets: Read-and-write, or manual secret add).
+- Sanity: validator PASS (r11 untouched, 49/56 verified); live
+  /policy/intelligence returns 200 with console-chrome strings present —
+  mockup-matched layout confirmed live on production.
