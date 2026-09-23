@@ -60,7 +60,9 @@
 ## Open threads
 
 1. **Repo secret**: user adds `FIRECRAWL_API_KEY` at Settings → Secrets and
-   variables → Actions so the weekly drift monitor can run.
+   variables → Actions so the weekly drift monitor can run. Note: the weekly
+   cron is COMMENTED OUT until the 2026-10-23 credit refill (workflow_dispatch
+   still works); re-enable both `schedule` lines when credits return.
 2. **UG-TX-C1** (only weakened remaining tax claim): 10-year income tax holiday
    awaits Uganda Income Tax Act (Cap 340, as amended) capture — Free Zones Act
    2014 + Investment Code 2019 already captured (T1).
@@ -78,6 +80,10 @@
    `/home/z/my-project/scripts/vercel_purge_deployments.mjs`,
    `vercel_inventory.mjs`, `recompress_images.mjs` — incident tools; commit to a
    `tools/` dir if reuse is expected.
+8. **Control-room roadmap (from user-approved audit)**: Phase 1 shipped
+   (dashboard canvas + interactions, commit ef02b95). Phase 2 candidates:
+   source-quality mix charts, per-pillar deep pages, dataset download link.
+   User mockup + audit text live in chat history (2026-09-23).
 
 ## Tooling quick reference
 
@@ -102,3 +108,23 @@
 - Monitor built + committed (63a70e7): baseline 10 checked clean; 20 no-capture-ref
   (legacy); Firecrawl credits hit 402 end-of-day.
 - This file created (durable memory).
+
+### 2026-09-23 — Control Room redesign shipped + Firecrawl freeze encoded (Task 45)
+- User sent a design mockup for /policy/intelligence + "make it better, engaging,
+  interactive". A rolled-back session had left a full redesign uncommitted; verified
+  it end-to-end (tsc, dev screenshots, prod build), then enhanced beyond the mockup.
+- Commits: fd54609 (monitor freeze handling: weekly cron commented out until
+  2026-10-23 refill, monitor treats 402 as pause-never-drift, Free Zones Act 2014
+  capture filed); ef02b95 (Control Room redesign, 10 files, +1453/-816).
+- New UI: since-last-review strip, evidence health (count-ups), country comparison
+  (wipe-in bars, click-to-focus), dominant coverage matrix (sticky toolbar at
+  top-[104px], search + filters, cell drawer with slide-in, "/" shortcut, column
+  focus underline), research queue (high-priority ping), gaps-by-pillar, country
+  control-room tabs (Overview/Claims/Regulators/Sources/Gaps), legend with live
+  counts, sticky scrollspy command bar with dataset chip, grid+glow canvas texture.
+- Motion primitives in motion.tsx (zero deps, IntersectionObserver-armed, SSR/
+  no-JS render final state, prefers-reduced-motion honored). Ops-console.tsx and
+  policy-sections.tsx deleted (superseded).
+- Lessons: (a) sticky elements must sit directly inside a tall parent — a wrapper
+  div kills stickiness; (b) verify sticky behaviour by scrolling, not just loading.
+- Validator PASS (r11 unchanged); Vercel will auto-deploy from main.
