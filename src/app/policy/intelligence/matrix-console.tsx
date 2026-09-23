@@ -3,20 +3,42 @@
 /**
  * Matrix Console — the dominant central panel of the Policy Control Room.
  *
- * 10-pillar × 4-country coverage heatmap:
- *  - cells tinted by evidence condition (emerald = fully verified, amber =
- *    mixed, violet dashed chip = structured gap — never red, red is reserved
- *    for contradicted claims);
- *  - colour is never the only signal: every cell carries counts + labels;
- *  - sticky filter bar (search + country/pillar/state), non-matching cells
+ * Mockup round 2 (2026-09-23): pill-cell heatmap.
+ *  - one pill per pillar×country: emerald "✓ N" when every claim is verified,
+ *    amber mixed pill when states differ, dashed violet "○ GAP" for a
+ *    structured gap, gray "—" when the pillar is unresearched;
+ *  - colour is never the only signal: every pill carries icons + counts and a
+ *    full aria-label; the selected cell gets the cyan console ring;
+ *  - slim filter toolbar (search + country/pillar/state), non-matching cells
  *    dim, they never disappear;
- *  - country `focus` (from the comparison bars) highlights a column softly;
- *  - click a cell → right-side evidence drawer (claims, sources, gap, upgrade
- *    path). Escape closes; body scroll is locked while open.
+ *  - click a cell → right-side evidence drawer restyled as the mockup console
+ *    panel (pillar overview tiles, key findings, last updated, actions).
+ *    Escape closes; body scroll is locked while open.
  */
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronRight, Search, X } from "lucide-react";
+import {
+  BadgeCheck,
+  CalendarDays,
+  CheckCircle2,
+  ChevronRight,
+  CircleDot,
+  Cpu,
+  Database,
+  FileText,
+  Globe,
+  HardHat,
+  Info,
+  Layers,
+  Library,
+  Lock,
+  Network,
+  Percent,
+  Search,
+  X,
+  Zap,
+  Leaf,
+} from "lucide-react";
 import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
@@ -44,16 +66,22 @@ const PILLAR_DOMAIN: Record<string, string> = {
   environmental: "environment",
 };
 
-type Filters = { country: string; pillar: string; state: string };
+const PILLAR_ICONS: Record<string, typeof Lock> = {
+  licensing: BadgeCheck,
+  "data-protection": Lock,
+  "data-localisation-sovereignty": Database,
+  "tax-incentives": Percent,
+  "energy-electricity": Zap,
+  "construction-building": HardHat,
+  environmental: Leaf,
+  "ai-digital-policy": Cpu,
+  "cross-border-data-flows": Globe,
+  "regional-frameworks": Network,
+};
 
-/** Evidence tint for a cell: emerald = all claims verified, amber = mixed, slate = none. */
-function cellTint(cell: OpsCell): string {
-  const v = cell.states["verified"] ?? 0;
-  const total = cell.total;
-  if (total > 0 && v === total) return "border-emerald-500/25 bg-emerald-500/[0.06]";
-  if (total > 0) return "border-amber-500/20 bg-amber-500/[0.045]";
-  return "border-slate-800 bg-slate-900/40";
-}
+const FLAGS: Record<string, string> = { KE: "🇰🇪", UG: "🇺🇬", RW: "🇷🇼", TZ: "🇹🇿" };
+
+type Filters = { country: string; pillar: string; state: string };
 
 export default function MatrixConsole({
   data,
@@ -152,11 +180,43 @@ export default function MatrixConsole({
     : [];
   const activeCountry = active ? data.countries.find((c) => c.key === active.country) : undefined;
   const activePillar = active ? data.pillars.find((p) => p.id === active.pillar) : undefined;
+  const activeVerified = activeClaims.filter((cl) => cl.state === "verified").length;
 
   return (
-    <div>
-      {/* ── Sticky toolbar ───────────────────────────────────────────── */}
-      <div className="sticky top-[104px] z-30 -mx-2 rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0B1627]/95 px-2 py-2 backdrop-blur">
+    <div className="rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31]">
+      {/* ── Card header: title + legend ─────────────────────────────── */}
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-t-xl border-b border-[rgba(135,180,220,0.12)] px-4 py-3.5 sm:px-5">
+        <div>
+          <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-slate-100">Policy coverage matrix</h3>
+          <p className="mt-0.5 text-xs text-slate-500">
+            {data.pillars.length} pillars × {data.countries.length} countries ·{" "}
+            {countLabel(data.meta.claims, "claim")} · every tile opens its evidence
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-slate-400">
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="size-3.5 text-emerald-400" aria-hidden="true" /> Verified
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CircleDot className="size-3.5 text-amber-400" aria-hidden="true" /> Partial
+          </span>
+          <span className={`flex items-center gap-1.5 ${POLICY_GAP_STYLE.text}`}>
+            <span className="inline-block size-3 rounded-full border border-dashed border-violet-400" aria-hidden="true" /> Gap
+          </span>
+          <span className="flex items-center gap-1.5 text-slate-500">
+            <span className="inline-block h-px w-3.5 bg-slate-600" aria-hidden="true" /> No data
+          </span>
+          <span
+            title="A tile counts claims by verification state; a dashed violet tile marks a structured gap — an unresearched pillar, never a finding. Click any tile for the claims, sources and upgrade path behind it."
+            className="cursor-help text-slate-500 transition-colors hover:text-slate-300"
+          >
+            <Info className="size-4" aria-hidden="true" />
+          </span>
+        </div>
+      </div>
+
+      {/* ── Toolbar ─────────────────────────────────────────────────── */}
+      <div className="sticky top-[118px] z-30 -mt-px rounded-t-lg border-b border-[rgba(135,180,220,0.10)] bg-[#0E1D31]/95 px-3 py-2 backdrop-blur sm:px-4">
         <div className="flex flex-wrap items-center gap-2">
           <div className="relative min-w-[200px] flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
@@ -220,9 +280,9 @@ export default function MatrixConsole({
         </div>
       </div>
 
-      {/* ── Search results ───────────────────────────────────────────── */}
+      {/* ── Search results ──────────────────────────────────────────── */}
       {results ? (
-        <div className="mt-4 rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31]">
+        <div>
           <p className="border-b border-[rgba(135,180,220,0.10)] px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-slate-500">
             {countLabel(results.length, "claim")} match &ldquo;{query.trim()}&rdquo;
           </p>
@@ -256,11 +316,12 @@ export default function MatrixConsole({
       ) : (
         <>
           {/* ── Mobile / tablet: per-country cards ─────────────────────── */}
-          <div className={`mt-4 space-y-4 ${view === "cards" ? "lg:hidden" : "hidden"}`}>
+          <div className={`space-y-4 rounded-b-xl p-3 sm:p-4 ${view === "cards" ? "lg:hidden" : "hidden"}`}>
             {visibleCountries.map((c) => (
-              <div key={c.key} className="rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-4">
+              <div key={c.key} className="rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#101D30] p-4">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold text-white">
+                    <span aria-hidden="true" className="mr-1.5">{FLAGS[c.iso] ?? ""}</span>
                     {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
                   </p>
                   <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
@@ -305,12 +366,12 @@ export default function MatrixConsole({
           </div>
 
           {/* ── Desktop: the full heatmap matrix ───────────────────────── */}
-          <div className={`mt-4 overflow-x-auto rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] ${view === "matrix" ? "" : "hidden lg:block"}`}>
+          <div className={`overflow-x-auto rounded-b-xl ${view === "matrix" ? "" : "hidden lg:block"}`}>
             <table className="w-full min-w-[880px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[rgba(135,180,220,0.16)]">
-                  <th className="px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-widest text-slate-500">
-                    Policy pillar
+                <tr className="border-b border-[rgba(135,180,220,0.12)]">
+                  <th className="px-4 py-3 text-left font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500 sm:px-5">
+                    Pillar
                   </th>
                   {data.countries.map((c) => (
                     <th
@@ -322,10 +383,11 @@ export default function MatrixConsole({
                       <button
                         type="button"
                         onClick={() => onFocus(focus === c.key ? null : c.key)}
-                        className={`rounded px-1 pb-1 transition-colors ${focus === c.key ? "text-cyan-300" : "hover:text-cyan-300"}`}
+                        className={`rounded px-2 pb-1 transition-colors ${focus === c.key ? "text-cyan-300" : "hover:text-cyan-300"}`}
                         aria-pressed={focus === c.key}
                       >
-                        {c.name}
+                        <span aria-hidden="true" className="mr-1.5 text-sm">{FLAGS[c.iso] ?? ""}</span>
+                        <span className="text-xs font-semibold uppercase tracking-[0.14em]">{c.name}</span>
                         <span className="block font-mono text-[10px] font-normal text-slate-500">
                           {countLabel(c.claims, "claim")} · {c.coveragePct}%
                         </span>
@@ -343,25 +405,34 @@ export default function MatrixConsole({
               <tbody>
                 {pillarIds.map((pid) => {
                   const p = data.pillars.find((x) => x.id === pid);
+                  const PillarIcon = PILLAR_ICONS[pid] ?? Layers;
                   if (!p) return null;
                   return (
                     <tr key={pid} className="border-b border-[rgba(135,180,220,0.08)] last:border-0">
-                      <td className="max-w-[240px] px-4 py-2 align-middle" title={p.blurb}>
+                      <td className="max-w-[240px] px-4 py-2 align-middle sm:px-5" title={p.blurb}>
                         <Link
                           href={`/policy/intelligence/pillars/${pid}`}
                           title={`${p.label} — open the pillar deep dive`}
-                          className="text-sm font-medium text-slate-200 underline decoration-transparent underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/50"
+                          className="group flex items-center gap-2.5"
                         >
-                          {p.label}
+                          <span className="flex size-7 shrink-0 items-center justify-center rounded-lg border border-[rgba(135,180,220,0.12)] bg-[#101D30] text-slate-400 transition-colors group-hover:border-cyan-500/40 group-hover:text-cyan-300">
+                            <PillarIcon className="size-3.5" aria-hidden="true" />
+                          </span>
+                          <span>
+                            <span className="block text-sm font-medium text-slate-200 underline decoration-transparent underline-offset-2 transition-colors group-hover:text-cyan-300 group-hover:decoration-cyan-500/50">
+                              {p.label}
+                            </span>
+                            <span className="block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+                              deep dive ↗
+                            </span>
+                          </span>
                         </Link>
-                        <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
-                          deep dive ↗
-                        </span>
                       </td>
                       {data.countries.map((c) => {
                         const cell = cells.get(`${c.key}|${pid}`);
                         const dim = cellDimmed(cell);
                         const unfocused = focus !== null && focus !== c.key;
+                        const selected = active?.country === c.key && active?.pillar === pid;
                         if (!cell) {
                           return (
                             <td key={c.key} className={`px-3 py-2 text-center ${unfocused ? "opacity-35" : ""}`}>
@@ -370,47 +441,16 @@ export default function MatrixConsole({
                           );
                         }
                         return (
-                          <td key={c.key} className={`px-1.5 py-1.5 transition-opacity ${unfocused ? "opacity-35" : ""}`}>
+                          <td key={c.key} className={`px-2.5 py-1.5 transition-opacity sm:px-3 ${unfocused ? "opacity-35" : ""}`}>
                             <button
                               type="button"
                               onClick={() => openCell(c.key, pid)}
                               aria-label={`${c.name} · ${p.label}: ${countLabel(cell.total, "claim")}${cell.gap ? " plus a structured gap" : ""}`}
-                              className={`h-full min-h-[56px] w-full rounded-lg border p-2.5 text-left transition-all duration-200 ${cellTint(cell)} ${
+                              className={`flex h-10 w-full items-center justify-center gap-1.5 rounded-full border text-xs font-semibold transition-all duration-200 ${cellPillStyle(cell)} ${
                                 dim ? "opacity-25" : ""
-                              } hover:-translate-y-0.5 hover:border-cyan-500/50 hover:bg-[#13253A]/70 hover:shadow-lg hover:shadow-cyan-500/10 focus:border-cyan-400 focus:outline-none active:translate-y-0`}
+                              } ${selected ? "ring-2 ring-cyan-400/80 ring-offset-1 ring-offset-[#0E1D31]" : ""} hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/10 focus:outline-none active:translate-y-0`}
                             >
-                              {cell.total > 0 ? (
-                                <>
-                                  <span className="flex h-1.5 w-full overflow-hidden rounded-full bg-slate-800" aria-hidden="true">
-                                    {STATE_ORDER.map((s) =>
-                                      cell.states[s] ? (
-                                        <span
-                                          key={s}
-                                          className={STATE_META[s].seg}
-                                          style={{ width: `${(cell.states[s] / cell.total) * 100}%` }}
-                                        />
-                                      ) : null
-                                    )}
-                                  </span>
-                                  <span className="mt-2 flex flex-wrap gap-x-2.5 gap-y-1">
-                                    {STATE_ORDER.map((s) =>
-                                      cell.states[s] ? (
-                                        <span key={s} className={`font-mono text-[11px] leading-none ${STATE_META[s].text}`}>
-                                          {cell.states[s]}
-                                          <span className={`ml-1 inline-block size-1.5 rounded-full align-middle ${STATE_META[s].dot}`} />
-                                        </span>
-                                      ) : null
-                                    )}
-                                  </span>
-                                </>
-                              ) : (
-                                <span className="font-mono text-[11px] leading-none text-slate-600">no claims</span>
-                              )}
-                              {cell.gap && (
-                                <span className={`mt-2 inline-block rounded-full border px-1.5 py-px font-mono text-[10px] leading-none ${POLICY_GAP_STYLE.chip}`}>
-                                  gap
-                                </span>
-                              )}
+                              <CellPillContent cell={cell} />
                             </button>
                           </td>
                         );
@@ -424,7 +464,7 @@ export default function MatrixConsole({
         </>
       )}
 
-      {/* ── Cell drawer ──────────────────────────────────────────────── */}
+      {/* ── Cell drawer (mockup console panel) ───────────────────────── */}
       {active && (
         <div className="fixed inset-0 z-[110]">
           <button
@@ -439,49 +479,80 @@ export default function MatrixConsole({
             aria-label={`${activeCountry?.name ?? ""} · ${activePillar?.label ?? ""} evidence`}
             className="dc-drawer absolute inset-y-0 right-0 flex w-full max-w-md flex-col border-l border-[rgba(135,180,220,0.16)] bg-[#07111F] shadow-2xl sm:max-w-lg"
           >
-            <div className="flex items-start justify-between gap-3 border-b border-[rgba(135,180,220,0.16)] p-4">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
-                  {activeCountry?.name} · {activePillar?.label}
-                </p>
-                <p className="mt-1.5 text-sm text-slate-300">
-                  {activeClaims.length > 0 && (
-                    <>
-                      {[...new Set(activeClaims.map((cl) => cl.state))].map((s, i, arr) => (
-                        <span key={s}>
-                          {i > 0 && " · "}
-                          <span className={STATE_META[s]?.text}>
-                            {activeClaims.filter((x) => x.state === s).length}
-                          </span>{" "}
-                          {STATE_META[s]?.label.toLowerCase()}
-                          {i === arr.length - 1 && ""}
-                        </span>
-                      ))}
-                    </>
-                  )}
-                  {activeGap && (
-                    <span className={activeClaims.length > 0 ? "text-slate-500" : POLICY_GAP_STYLE.text}>
-                      {activeClaims.length > 0 ? " · " : ""}1 structured gap
-                    </span>
-                  )}
-                  {!activeGap && activeClaims.length === 0 && "No researched coverage"}
-                </p>
+            {/* Drawer header — mockup: title, state summary, close */}
+            <div className="border-b border-[rgba(135,180,220,0.14)] p-5">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="text-xl font-bold text-white">
+                    {activeCountry?.name} · {activePillar?.label}
+                  </h3>
+                  <p className="mt-1 text-sm">
+                    {activeClaims.length > 0 ? (
+                      <>
+                        {[...new Set(activeClaims.map((cl) => cl.state))].map((s, i, arr) => (
+                          <span key={s}>
+                            {i > 0 && <span className="text-slate-600"> · </span>}
+                            <span className={STATE_META[s]?.text}>
+                              {activeClaims.filter((x) => x.state === s).length}{" "}
+                              {STATE_META[s]?.label.toLowerCase()}
+                            </span>
+                          </span>
+                        ))}
+                        {activeGap && <span className={`text-slate-500`}> · </span>}
+                      </>
+                    ) : null}
+                    {activeGap && <span className={POLICY_GAP_STYLE.text}>1 gap</span>}
+                    {!activeGap && activeClaims.length === 0 && (
+                      <span className="text-slate-500">No researched coverage</span>
+                    )}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setActive(null)}
+                  aria-label="Close panel"
+                  className="rounded-lg p-2 text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
+                >
+                  <X className="size-4" aria-hidden="true" />
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() => setActive(null)}
-                aria-label="Close panel"
-                className="rounded-lg p-2 text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
-              >
-                <X className="size-4" aria-hidden="true" />
-              </button>
+              {activePillar && <p className="mt-2 text-xs leading-relaxed text-slate-500">{activePillar.blurb}</p>}
             </div>
 
-            <div className="min-h-0 flex-1 overflow-y-auto p-4">
-              {activePillar && <p className="mb-4 text-xs leading-relaxed text-slate-500">{activePillar.blurb}</p>}
+            <div className="min-h-0 flex-1 overflow-y-auto p-5">
+              {/* Pillar overview tiles */}
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Pillar overview</p>
+              <div className="mt-2.5 grid grid-cols-2 gap-3">
+                <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.07] p-3.5">
+                  <CheckCircle2 className="size-5 text-emerald-400" aria-hidden="true" />
+                  <p className="mt-2 font-mono text-2xl font-bold text-white">{activeVerified}</p>
+                  <p className="text-[11px] text-emerald-300/90">
+                    {activeVerified === 1 ? "Verified claim" : "Verified claims"}
+                  </p>
+                </div>
+                <div
+                  className={`rounded-xl border p-3.5 ${
+                    activeGap
+                      ? `border-dashed border-violet-400/50 bg-violet-400/[0.06] ${POLICY_GAP_STYLE.text}`
+                      : "border-[rgba(135,180,220,0.10)] bg-[#101D30]"
+                  }`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`inline-block size-5 rounded-full border border-dashed ${
+                      activeGap ? "border-violet-400" : "border-slate-700"
+                    }`}
+                  />
+                  <p className="mt-2 font-mono text-2xl font-bold text-white">{activeGap ? 1 : 0}</p>
+                  <p className={`text-[11px] ${activeGap ? POLICY_GAP_STYLE.text : "text-slate-500"}`}>
+                    {activeGap ? "Gap" : "No open gap"}
+                  </p>
+                </div>
+              </div>
 
+              {/* Responsible regulator */}
               {activeCountry && (
-                <p className="mb-4 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-3 text-xs leading-relaxed text-slate-400">
+                <p className="mt-4 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-3 text-xs leading-relaxed text-slate-400">
                   <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
                     {PILLAR_DOMAIN[active.pillar] && activeCountry.regulators.some((r) => r.domain === PILLAR_DOMAIN[active.pillar])
                       ? "Responsible regulator"
@@ -499,8 +570,9 @@ export default function MatrixConsole({
                 </p>
               )}
 
+              {/* Structured gap */}
               {activeGap && (
-                <div className={`mb-4 rounded-lg border bg-violet-400/[0.04] p-3 ${POLICY_GAP_STYLE.chip}`}>
+                <div className={`mt-4 rounded-lg border bg-violet-400/[0.04] p-3 ${POLICY_GAP_STYLE.chip}`}>
                   <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
                     Structured gap — not a finding
                   </p>
@@ -514,79 +586,92 @@ export default function MatrixConsole({
                 </div>
               )}
 
-              <ul className="space-y-3">
-                {activeClaims.map((cl) => (
-                  <li key={cl.id} className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] p-3">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span
-                        className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${STATE_META[cl.state]?.text}`}
-                      >
-                        <span className={`size-1.5 rounded-full ${STATE_META[cl.state]?.dot}`} aria-hidden="true" />
-                        {STATE_META[cl.state]?.label}
-                      </span>
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{cl.id}</span>
-                      <CopyButton value={cl.id} className="ml-auto" />
-                    </div>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
-                    {cl.note && <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{cl.note}</p>}
-                    <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                      Evidence strength: {cl.strength} · {cl.captureSummary}
-                    </p>
-                    {cl.sources.length > 0 && (
-                      <details className="group mt-2">
-                        <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
-                          View evidence trail · {countLabel(cl.sources.length, "source")} ▾
-                        </summary>
-                        <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
-                          {cl.sources.map((s, i) => (
-                            <li key={`${s.id}-${i}`} className="text-xs leading-relaxed text-slate-400">
-                              <a
-                                href={s.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-slate-300 underline decoration-slate-600 underline-offset-2 hover:decoration-slate-300"
-                              >
-                                {i + 1}. {s.publisher}
-                              </a>{" "}
-                              — {s.label}
-                              <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                                T{s.tier} · {s.captureStatus}
-                              </span>
-                              {s.excerpt && (
-                                <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
-                                  {s.excerpt}
-                                </span>
-                              )}
-                            </li>
-                          ))}
-                        </ol>
-                      </details>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              {/* Key findings */}
+              {activeClaims.length > 0 && (
+                <>
+                  <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Key findings</p>
+                  <ul className="mt-2.5 space-y-3">
+                    {activeClaims.map((cl) => (
+                      <li key={cl.id} className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] p-3.5">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span
+                            className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${STATE_META[cl.state]?.text}`}
+                          >
+                            <span className={`size-1.5 rounded-full ${STATE_META[cl.state]?.dot}`} aria-hidden="true" />
+                            {STATE_META[cl.state]?.label}
+                          </span>
+                          <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{cl.id}</span>
+                          <CopyButton value={cl.id} className="ml-auto" />
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
+                        {cl.note && <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{cl.note}</p>}
+                        <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                          Evidence strength: {cl.strength} · {cl.captureSummary}
+                        </p>
+                        {cl.sources.length > 0 && (
+                          <details className="group mt-2">
+                            <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
+                              View evidence trail · {countLabel(cl.sources.length, "source")} ▾
+                            </summary>
+                            <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
+                              {cl.sources.map((s, i) => (
+                                <li key={`${s.id}-${i}`} className="text-xs leading-relaxed text-slate-400">
+                                  <a
+                                    href={s.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-slate-300 underline decoration-slate-600 underline-offset-2 hover:decoration-slate-300"
+                                  >
+                                    {i + 1}. {s.publisher}
+                                  </a>{" "}
+                                  — {s.label}
+                                  <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                                    T{s.tier} · {s.captureStatus}
+                                  </span>
+                                  {s.excerpt && (
+                                    <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+                                      {s.excerpt}
+                                    </span>
+                                  )}
+                                </li>
+                              ))}
+                            </ol>
+                          </details>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              {/* Last updated */}
+              <p className="mt-5 flex items-center gap-2 border-t border-[rgba(135,180,220,0.10)] pt-4 text-xs text-slate-500">
+                <CalendarDays className="size-3.5 text-slate-600" aria-hidden="true" />
+                Last updated {data.meta.reviewedLong} · {data.meta.datasetVersion.replace("policy-", "")}
+              </p>
             </div>
 
-            {activeCountry && (
-              <div className="grid gap-2 border-t border-[rgba(135,180,220,0.16)] p-4 sm:grid-cols-2">
+            {/* Drawer actions — mockup: View claims / View sources */}
+            {activeCountry && activePillar && (
+              <div className="grid gap-2 border-t border-[rgba(135,180,220,0.14)] p-4 sm:grid-cols-2">
                 <a
                   href="#control-room"
                   onClick={() => {
                     setActive(null);
                     onFocus(activeCountry.key);
                   }}
-                  className="flex items-center justify-between rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-3 py-2.5 text-sm font-medium text-cyan-300 transition-colors hover:bg-cyan-500/15"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-transparent px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-cyan-500/40 hover:text-cyan-300"
                 >
-                  {activeCountry.name} control room
-                  <ChevronRight className="size-4" aria-hidden="true" />
+                  <FileText className="size-4" aria-hidden="true" />
+                  View claims
                 </a>
                 <Link
                   href={`/policy/intelligence/pillars/${active.pillar}`}
                   onClick={() => setActive(null)}
-                  className="flex items-center justify-between rounded-lg border border-slate-700 px-3 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-cyan-500/40 hover:text-cyan-300"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-cyan-400/40 bg-cyan-500/15 px-3 py-2.5 text-sm font-semibold text-cyan-200 transition-colors hover:bg-cyan-500/25"
                 >
-                  {activePillar?.label ?? "Pillar"} deep dive
-                  <ChevronRight className="size-4" aria-hidden="true" />
+                  <Library className="size-4" aria-hidden="true" />
+                  View sources
                 </Link>
               </div>
             )}
@@ -594,6 +679,53 @@ export default function MatrixConsole({
         </div>
       )}
     </div>
+  );
+}
+
+// ─── Pill-cell rendering helpers ─────────────────────────────────────────────
+
+function cellPillStyle(cell: OpsCell): string {
+  if (cell.total === 0) {
+    return cell.gap
+      ? `border-dashed border-violet-400/45 bg-violet-400/[0.05] hover:border-violet-400/70 ${POLICY_GAP_STYLE.chip}`
+      : "border-slate-800 bg-slate-900/40 text-slate-600 hover:border-slate-600";
+  }
+  const v = cell.states["verified"] ?? 0;
+  if (v === cell.total) {
+    return "border-emerald-500/30 bg-emerald-500/[0.08] text-emerald-300 hover:border-emerald-400/60";
+  }
+  return "border-amber-500/30 bg-amber-500/[0.06] text-amber-200 hover:border-amber-400/60";
+}
+
+function CellPillContent({ cell }: { cell: OpsCell }) {
+  if (cell.total === 0) {
+    return cell.gap ? (
+      <>
+        <span className="inline-block size-3 rounded-full border border-dashed border-violet-400" aria-hidden="true" />
+        <span>GAP</span>
+      </>
+    ) : (
+      <span className="font-mono text-[11px] font-normal text-slate-600" aria-hidden="true">—</span>
+    );
+  }
+  return (
+    <>
+      {STATE_ORDER.map((s) =>
+        cell.states[s] ? (
+          <span key={s} className="flex items-center gap-1">
+            {s === "verified" ? (
+              <CheckCircle2 className="size-3.5 text-emerald-400" aria-hidden="true" />
+            ) : (
+              <CircleDot
+                className={`size-3.5 ${s === "partially-verified" ? "text-amber-400" : "text-slate-400"}`}
+                aria-hidden="true"
+              />
+            )}
+            <span>{cell.states[s]}</span>
+          </span>
+        ) : null
+      )}
+    </>
   );
 }
 

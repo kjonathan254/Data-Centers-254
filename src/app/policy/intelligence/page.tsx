@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Download } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { POLICY_PILLARS, POLICY_SOURCE_TIERS, POLICY_CAPTURE_LABELS, SINCE_LAST_REVIEW, CONTROL_ROOM_SURFACES } from "@/lib/policy/config";
@@ -14,7 +13,7 @@ import {
   type PolicySource,
 } from "@/lib/policy";
 import ControlRoomDashboard from "./control-room";
-import SectionNav from "./section-nav";
+import { ConsoleRail, ConsoleHeader } from "./console-chrome";
 import type { OpsClaim, OpsCountry, OpsData, OpsGap, OpsSource } from "./dashboard-types";
 
 export const metadata: Metadata = {
@@ -67,6 +66,10 @@ function buildOpsData(): OpsData {
       investigationNote: c.investigationNote,
     };
   });
+  // Console order (mockup): ascending coverage — the story runs from
+  // "needs attention" to "most established", and every panel (KPI cards,
+  // matrix columns, room switcher) shares one consistent jurisdiction order.
+  opsCountries.sort((a, b) => a.coveragePct - b.coveragePct || a.name.localeCompare(b.name));
 
   const opsClaims: OpsClaim[] = countries.flatMap((c) =>
     c.claims.map((cl) => {
@@ -198,148 +201,97 @@ export default function PolicyIntelligencePage() {
           backgroundSize: "auto, 44px 44px, 44px 44px",
         }}
       >
-        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:py-14">
-          {/* ── Header ─────────────────────────────────────────────────── */}
-          <header>
-            <p className="font-mono text-xs uppercase tracking-widest text-slate-500">
-              Policy Intelligence · East Africa regulatory evidence engine ·{" "}
-              <span className="text-slate-400">
-                v{ops.meta.schemaVersion} · dataset {ops.meta.datasetVersion}
-              </span>
-            </p>
-            <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-[40px] sm:leading-[1.15]">
-              Who governs the region&rsquo;s data centres?
-            </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              Compare the policies, regulators and evidence behind data-centre development in Kenya,
-              Uganda, Rwanda and Tanzania.
-            </p>
-            <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-wider text-slate-500">
-              <span>Reviewed {ops.meta.reviewedLong}</span>
-              <span aria-hidden="true" className="hidden sm:inline text-slate-700">|</span>
-              <span>Editorial gate: {ops.meta.gateShort}</span>
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#matrix"
-                className="rounded-lg bg-cyan px-4 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
-              >
-                Explore evidence
-              </a>
-              <a
-                href="#countries"
-                className="rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-900/60"
-              >
-                Compare countries
-              </a>
-              <a
-                href="#method"
-                className="rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-900/60"
-              >
-                Methodology
-              </a>
+        {/* Console frame: fixed icon rail (xl+) + sticky console header */}
+        <ConsoleRail />
+        <div className="xl:pl-[76px]">
+          <div className="mx-auto w-full max-w-[1440px] px-3 pb-10 pt-[72px] sm:px-5 lg:pb-14">
+            <ConsoleHeader datasetVersion={ops.meta.datasetVersion} reviewedLong={ops.meta.reviewedLong} />
+
+            {/* ── The control-room canvas ────────────────────────────── */}
+            <ControlRoomDashboard data={ops} />
+
+            {/* ── Method & governance ────────────────────────────────── */}
+            <section className="mt-12 scroll-mt-32" id="method" aria-label="Method and governance">
+              <h2 className="text-2xl font-bold text-white">Method &amp; governance</h2>
+
+              {/* Publication status (governance language, kept prominent) */}
+              <div className="mt-4 rounded-xl border border-lime-500/25 bg-lime-500/[0.06] p-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="relative flex size-2.5" aria-hidden="true">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-60" />
+                    <span className="relative inline-flex size-2.5 rounded-full bg-lime-400" />
+                  </span>
+                  <p className="font-mono text-xs uppercase tracking-widest text-lime-300 sm:text-sm">
+                    Publication status: {ops.meta.gateShort}
+                  </p>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  All {stats.countries} country pipelines approved for publication. Reviewed{" "}
+                  {ops.meta.reviewedLong} · AI proposes, the editor approves. Editorial approval is a
+                  publication decision — it is not a statement that every claim is fully verified.
+                </p>
+              </div>
+
+              <blockquote className="mt-4 max-w-3xl border-l-2 border-slate-700 pl-4 text-sm leading-relaxed text-slate-400">
+                {ds.researchQuestion}
+              </blockquote>
+              <div className="mt-4 grid gap-3 lg:grid-cols-2">
+                <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
+                  <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">How claims are built</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{ds.method}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-400">{ds.gapSchema.rule}</p>
+                </div>
+                <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
+                  <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Source tiers &amp; capture states</h3>
+                  <dl className="mt-2 space-y-1.5">
+                    {Object.entries(POLICY_SOURCE_TIERS).map(([tier, label]) => (
+                      <div key={tier} className="flex gap-2 text-sm">
+                        <dt className="w-8 shrink-0 font-mono text-xs uppercase leading-relaxed text-slate-500">T{tier}</dt>
+                        <dd className="text-slate-400">{label.replace(/^T\d+ · /, "")}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <dl className="mt-3 space-y-1 border-t border-[rgba(135,180,220,0.10)] pt-3">
+                    {Object.entries(POLICY_CAPTURE_LABELS).map(([key, label]) => (
+                      <div key={key} className="flex gap-2 text-xs">
+                        <dt className="w-28 shrink-0 font-mono text-[10px] uppercase leading-relaxed text-slate-500">{key}</dt>
+                        <dd className="text-slate-500">{label}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+              <p className="mt-4 max-w-3xl text-xs leading-relaxed text-slate-500">
+                This is not a blog category. It is the auditable evidence layer behind our policy
+                coverage: every statement above is a dataset claim with named sources, tiers and
+                capture states, published under a five-state vocabulary. Where a pillar has not been
+                researched yet it appears as a structured gap. The interpretation lives in our{" "}
+                <Link href="/policy" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
+                  policy explainers
+                </Link>
+                ; the claims live here. Full editorial gate: {ops.meta.gateFull}. Our{" "}
+                <Link href="/methodology" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
+                  methodology
+                </Link>{" "}
+                and{" "}
+                <Link href="/editorial-policy" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
+                  editorial policy
+                </Link>{" "}
+                govern this page. This is regulatory intelligence, not legal advice.
+              </p>
+            </section>
+
+            <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+              {ops.meta.datasetVersion} · {countLabel(ops.meta.claims, "claim")} · {countLabel(ops.meta.sources, "source")} ·{" "}
+              {ops.meta.gaps} structured gaps ·{" "}
               <a
                 href="/policy/intelligence/dataset"
-                title={`Download the full policy dataset as JSON (${ops.meta.datasetVersion})`}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-cyan-500/50 hover:text-cyan-300"
+                className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-400 hover:decoration-cyan-500/50"
               >
-                <Download className="size-4" aria-hidden="true" />
-                Dataset
+                download the dataset (JSON)
               </a>
-            </div>
-          </header>
-
-          {/* ── Control-room command bar (sticky, scrollspy) ───────────── */}
-          <SectionNav datasetVersion={ops.meta.datasetVersion} queueCount={ops.gaps.length} />
-
-          {/* ── Publication status (kept prominent — governance language) ─ */}
-          <section
-            aria-label="Publication status"
-            className="mt-10 rounded-xl border border-lime-500/25 bg-lime-500/[0.06] p-4 sm:p-5"
-          >
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="relative flex size-2.5" aria-hidden="true">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-60" />
-                <span className="relative inline-flex size-2.5 rounded-full bg-lime-400" />
-              </span>
-              <p className="font-mono text-xs uppercase tracking-widest text-lime-300 sm:text-sm">
-                Publication status: {ops.meta.gateShort}
-              </p>
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-slate-300">
-              All {stats.countries} country pipelines approved for publication. Reviewed{" "}
-              {ops.meta.reviewedLong} · AI proposes, the editor approves. Editorial approval is a
-              publication decision — it is not a statement that every claim is fully verified.
             </p>
-          </section>
-
-          {/* ── The control-room canvas ────────────────────────────────── */}
-          <div className="mt-10">
-            <ControlRoomDashboard data={ops} />
           </div>
-
-          {/* ── Method & governance ────────────────────────────────────── */}
-          <section className="mt-14 scroll-mt-20" id="method" aria-label="Method and governance">
-            <h2 className="text-2xl font-bold text-white">Method &amp; governance</h2>
-            <blockquote className="mt-4 max-w-3xl border-l-2 border-slate-700 pl-4 text-sm leading-relaxed text-slate-400">
-              {ds.researchQuestion}
-            </blockquote>
-            <div className="mt-4 grid gap-3 lg:grid-cols-2">
-              <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
-                <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">How claims are built</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">{ds.method}</p>
-                <p className="mt-3 text-sm leading-relaxed text-slate-400">{ds.gapSchema.rule}</p>
-              </div>
-              <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
-                <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Source tiers &amp; capture states</h3>
-                <dl className="mt-2 space-y-1.5">
-                  {Object.entries(POLICY_SOURCE_TIERS).map(([tier, label]) => (
-                    <div key={tier} className="flex gap-2 text-sm">
-                      <dt className="w-8 shrink-0 font-mono text-xs uppercase leading-relaxed text-slate-500">T{tier}</dt>
-                      <dd className="text-slate-400">{label.replace(/^T\d+ · /, "")}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <dl className="mt-3 space-y-1 border-t border-[rgba(135,180,220,0.10)] pt-3">
-                  {Object.entries(POLICY_CAPTURE_LABELS).map(([key, label]) => (
-                    <div key={key} className="flex gap-2 text-xs">
-                      <dt className="w-28 shrink-0 font-mono text-[10px] uppercase leading-relaxed text-slate-500">{key}</dt>
-                      <dd className="text-slate-500">{label}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </div>
-            <p className="mt-4 max-w-3xl text-xs leading-relaxed text-slate-500">
-              This is not a blog category. It is the auditable evidence layer behind our policy
-              coverage: every statement above is a dataset claim with named sources, tiers and
-              capture states, published under a five-state vocabulary. Where a pillar has not been
-              researched yet it appears as a structured gap. The interpretation lives in our{" "}
-              <Link href="/policy" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
-                policy explainers
-              </Link>
-              ; the claims live here. Full editorial gate: {ops.meta.gateFull}. Our{" "}
-              <Link href="/methodology" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
-                methodology
-              </Link>{" "}
-              and{" "}
-              <Link href="/editorial-policy" className="text-cyan-400 underline decoration-cyan-500/40 underline-offset-2 hover:decoration-cyan-400">
-                editorial policy
-              </Link>{" "}
-              govern this page. This is regulatory intelligence, not legal advice.
-            </p>
-          </section>
-
-          <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
-            {ops.meta.datasetVersion} · {countLabel(ops.meta.claims, "claim")} · {countLabel(ops.meta.sources, "source")} ·{" "}
-            {ops.meta.gaps} structured gaps ·{" "}
-            <a
-              href="/policy/intelligence/dataset"
-              className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-400 hover:decoration-cyan-500/50"
-            >
-              download the dataset (JSON)
-            </a>
-          </p>
         </div>
       </main>
       <Footer />
