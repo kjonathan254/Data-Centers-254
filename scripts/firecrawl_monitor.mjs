@@ -104,6 +104,7 @@ async function scrape(key, url) {
       await sleep(8000 * (attempt + 1)); // rate limited - back off and retry
       continue;
     }
+    if (res.status === 402) return { error: "credits-exhausted", http: 402 };
     if (!res.ok) return { error: `HTTP ${res.status}` };
     const j = await res.json();
     const md = j?.data?.markdown;
@@ -153,10 +154,23 @@ mkdirSync(MONITOR_DIR, { recursive: true });
 
 const results = [];
 let drift = 0;
+let creditStop = false;
 for (const t of runList.slice(0, MAX)) {
   let verdict = "no-capture-ref", sim = null;
+  if (creditStop) {
+    results.push({ ...t, verdict: "skipped-credits", detail: "Firecrawl credits exhausted earlier in this run" });
+    continue;
+  }
   const r = await scrape(key, t.url);
   if (r.error) {
+    if (r.error === "credits-exhausted") {
+      // 402: stop the run, never count as drift (the freeze is an operator
+      // decision - see AGENT_CONTEXT.md, Firecrawl paused until 2026-10-23).
+      creditStop = true;
+      results.push({ ...t, verdict: "credits-exhausted", detail: "Firecrawl returned 402 - run paused, NOT a drift signal" });
+      console.log(`  [credits-exhausted] ${t.id}: Firecrawl 402 - pausing run (not drift)`);
+      continue;
+    }
     verdict = "fetch-failed";
     results.push({ ...t, verdict, detail: r.error });
     console.log(`  [${verdict}] ${t.id}: ${r.error}`);
@@ -179,7 +193,7 @@ const date = new Date().toISOString().slice(0, 10);
 const lines = [
   `# Evidence drift report - ${date} (UTC)`,
   "",
-  `Watchlist: ${runList.length} | ok: ${results.filter(r=>r.verdict==="ok").length} | minor-diff: ${results.filter(r=>r.verdict==="minor-diff").length} | CONTENT DRIFT: ${results.filter(r=>r.verdict==="CONTENT DRIFT").length} | fetch-failed: ${results.filter(r=>r.verdict==="fetch-failed").length}`,
+  `Watchlist: ${runList.length} | ok: ${results.filter(r=>r.verdict==="ok").length} | minor-diff: ${results.filter(r=>r.verdict==="minor-diff").length} | CONTENT DRIFT: ${results.filter(r=>r.verdict==="CONTENT DRIFT").length} | fetch-failed: ${results.filter(r=>r.verdict==="fetch-failed").length}${creditStop ? " | PAUSED: Firecrawl credits exhausted (402) - not a drift signal" : ""}`,
   "",
   "| source | verdict | overlap | capture |",
   "|---|---|---|---|",

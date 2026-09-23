@@ -11,8 +11,11 @@
 name: Evidence drift monitor
 
 on:
-  schedule:
-    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  # SCHEDULE PAUSED - Firecrawl free credits exhausted 2026-09-23; the owner
+  # froze Firecrawl use until the 2026-10-23 credit refill.
+  # Re-enable by uncommenting the two schedule lines below.
+  # schedule:
+  #   - cron: "0 6 * * 1" # Mondays 06:00 UTC
   workflow_dispatch:
 
 permissions:
