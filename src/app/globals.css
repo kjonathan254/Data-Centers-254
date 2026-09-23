@@ -468,3 +468,48 @@ li.dc-speaking {
     animation: none;
   }
 }
+
+/* ── Policy Control Room motion (audit redesign 2026-09-23) ─────────────── */
+/* SSR/no-JS safe: elements render in their final state; these animations    */
+/* only arm client-side when scrolled into view (see motion.tsx).            */
+@keyframes dc-wipe-in {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.dc-wipe {
+  animation: dc-wipe-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes dc-wipe-x-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+.dc-wipe-x {
+  animation: dc-wipe-x-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes dc-drawer-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+.dc-drawer {
+  animation: dc-drawer-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes dc-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.dc-fade {
+  animation: dc-fade-in 0.3s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dc-wipe,
+  .dc-wipe-x,
+  .dc-drawer,
+  .dc-fade {
+    animation: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

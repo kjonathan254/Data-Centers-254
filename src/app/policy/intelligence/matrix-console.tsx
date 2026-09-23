@@ -1,119 +1,35 @@
 "use client";
 
 /**
- * Policy Ops Console — the interactive core of /policy/intelligence.
+ * Matrix Console — the dominant central panel of the Policy Control Room.
  *
- * Renders the 10-pillar × 4-country coverage matrix as an operations panel:
- *  - every cell with claims or a gap is a clickable tile that opens a side
- *    drawer listing the underlying evidence records (claims + sources) and
- *    the structured gap / upgrade path;
- *  - filters by country, pillar and verification state (non-matching cells
- *    dim, they never disappear — the shape of coverage stays visible);
- *  - full-text search across claim text, IDs, pillars, regulators and sources;
- *  - mobile defaults to per-country cards, full matrix behind a toggle.
- *
- * Server component passes a fully serializable OpsData payload; all colours
- * are literal Tailwind classes so they survive content scanning.
+ * 10-pillar × 4-country coverage heatmap:
+ *  - cells tinted by evidence condition (emerald = fully verified, amber =
+ *    mixed, violet dashed chip = structured gap — never red, red is reserved
+ *    for contradicted claims);
+ *  - colour is never the only signal: every cell carries counts + labels;
+ *  - sticky filter bar (search + country/pillar/state), non-matching cells
+ *    dim, they never disappear;
+ *  - country `focus` (from the comparison bars) highlights a column softly;
+ *  - click a cell → right-side evidence drawer (claims, sources, gap, upgrade
+ *    path). Escape closes; body scroll is locked while open.
  */
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronRight, Search, X } from "lucide-react";
 import CopyButton from "@/components/copy-button";
+import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
+import { countLabel } from "@/lib/policy";
+import type { OpsCell, OpsData } from "./dashboard-types";
 
-// ─── Serializable payload types (built on the server) ──────────────────────
+const STATE_ORDER = ["verified", "partially-verified", "capture-pending", "unverified", "contradicted"] as const;
 
-export interface OpsSource {
-  id: string;
-  label: string;
-  url: string;
-  tier: number;
-  publisher: string;
-  captureStatus: string;
-  excerpt: string;
-}
-
-export interface OpsClaim {
-  id: string;
-  country: string;
-  countryName: string;
-  pillar: string;
-  statement: string;
-  note: string;
-  state: string;
-  strength: string;
-  captureSummary: string;
-  sources: OpsSource[];
-}
-
-export interface OpsGap {
-  country: string;
-  countryName: string;
-  pillar: string;
-  gap: string;
-  expectedSources: string[];
-  upgradePath: string;
-  priority: "high" | "medium";
-}
-
-export interface OpsCountry {
-  key: string;
-  name: string;
-  iso: string;
-  facilities: number;
-  claims: number;
-  verified: number;
-  partial: number;
-  coveragePct: number;
-  investigatedShort: string;
-  regulators: { domain: string; name: string }[];
-}
-
-export interface OpsCell {
-  country: string;
-  pillar: string;
-  states: Record<string, number>;
-  total: number;
-  gap: boolean;
-}
-
-export interface OpsData {
-  countries: OpsCountry[];
-  pillars: { id: string; label: string; blurb: string }[];
-  claims: OpsClaim[];
-  gaps: OpsGap[];
-  cells: OpsCell[];
-  meta: {
-    gateShort: string;
-    gateFull: string;
-    reviewedLong: string;
-    schemaVersion: string;
-    datasetVersion: string;
-    claims: number;
-    sources: number;
-    gaps: number;
-    verified: number;
-    partial: number;
-    coveragePct: number;
-  };
-}
-
-// ─── Local style system (literal classes — safe for Tailwind scanning) ─────
-
-const STATE_ORDER = [
-  "verified",
-  "partially-verified",
-  "capture-pending",
-  "unverified",
-  "contradicted",
-] as const;
-
-const STATE_META: Record<string, { label: string; dot: string; text: string; seg: string }> = {
-  verified: { label: "Verified", dot: "bg-emerald-500", text: "text-emerald-400", seg: "bg-emerald-500" },
-  "partially-verified": { label: "Partial", dot: "bg-amber-500", text: "text-amber-400", seg: "bg-amber-500" },
-  "capture-pending": { label: "Pending", dot: "bg-sky-500", text: "text-sky-400", seg: "bg-sky-500" },
-  unverified: { label: "Unverified", dot: "bg-slate-400", text: "text-slate-400", seg: "bg-slate-500" },
-  contradicted: { label: "Contradicted", dot: "bg-red-500", text: "text-red-400", seg: "bg-red-500" },
-};
+const STATE_META: Record<string, { label: string; dot: string; text: string; seg: string }> = Object.fromEntries(
+  Object.entries(POLICY_STATES).map(([k, v]) => [
+    k,
+    { label: v.label, dot: v.dot, text: v.chip.match(/text-[\w-]+/)?.[0] ?? "text-slate-300", seg: v.dot },
+  ])
+);
 
 /** Pillar → regulator domain, used to surface the responsible institution in the drawer. */
 const PILLAR_DOMAIN: Record<string, string> = {
@@ -127,25 +43,46 @@ const PILLAR_DOMAIN: Record<string, string> = {
   environmental: "environment",
 };
 
-const DOMAIN_LABELS: Record<string, string> = {
-  communications: "Communications",
-  dataProtection: "Data protection",
-  investment: "Investment & zones",
-  energy: "Energy",
-  environment: "Environment",
-  ict: "ICT & digital",
-  tax: "Tax",
-};
-
 type Filters = { country: string; pillar: string; state: string };
 
-// ─── Component ─────────────────────────────────────────────────────────────
+/** Evidence tint for a cell: emerald = all claims verified, amber = mixed, slate = none. */
+function cellTint(cell: OpsCell): string {
+  const v = cell.states["verified"] ?? 0;
+  const total = cell.total;
+  if (total > 0 && v === total) return "border-emerald-500/25 bg-emerald-500/[0.06]";
+  if (total > 0) return "border-amber-500/20 bg-amber-500/[0.045]";
+  return "border-slate-800 bg-slate-900/40";
+}
 
-export default function OpsConsole({ data }: { data: OpsData }) {
+export default function MatrixConsole({
+  data,
+  focus,
+  onFocus,
+}: {
+  data: OpsData;
+  focus: string | null;
+  onFocus: (key: string | null) => void;
+}) {
   const [f, setF] = useState<Filters>({ country: "all", pillar: "all", state: "all" });
   const [query, setQuery] = useState("");
   const [view, setView] = useState<"cards" | "matrix">("cards");
   const [active, setActive] = useState<{ country: string; pillar: string } | null>(null);
+  const searchRef = useRef<HTMLInputElement | null>(null);
+
+  // Press "/" anywhere to jump to claim search (control-room habit).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      const typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable);
+      if (e.key === "/" && !typing) {
+        e.preventDefault();
+        searchRef.current?.focus();
+        searchRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const cells = useMemo(() => {
     const m = new Map<string, OpsCell>();
@@ -217,72 +154,84 @@ export default function OpsConsole({ data }: { data: OpsData }) {
 
   return (
     <div>
-      {/* ── Toolbar ─────────────────────────────────────────────────── */}
-      <div className="mt-4 flex flex-wrap items-center gap-2">
-        <div className="relative min-w-[220px] flex-1">
-          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search claims, sources, regulators…"
-            aria-label="Search claims, sources and regulators"
-            className="h-9 w-full rounded-lg border border-slate-700 bg-slate-900/70 pl-9 pr-3 text-sm text-slate-200 placeholder:text-slate-500 focus:border-cyan-500/60 focus:outline-none"
+      {/* ── Sticky toolbar ───────────────────────────────────────────── */}
+      <div className="sticky top-[104px] z-30 -mx-2 rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0B1627]/95 px-2 py-2 backdrop-blur">
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="relative min-w-[200px] flex-1">
+            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+            <input
+              ref={searchRef}
+              id="policy-claim-search"
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search claims, sources, regulators…"
+              aria-label="Search claims, sources and regulators"
+              className="h-9 w-full rounded-lg border border-slate-700/70 bg-[#101D30] pl-9 pr-10 text-sm text-slate-200 placeholder:text-slate-500 focus:border-cyan-500/60 focus:outline-none"
+            />
+            {query === "" && (
+              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-slate-700 bg-[#0B1627] px-1.5 py-0.5 font-mono text-[10px] leading-none text-slate-500 sm:block" aria-hidden="true">
+                /
+              </kbd>
+            )}
+          </div>
+          <Select
+            label="Country"
+            value={f.country}
+            onChange={(v) => {
+              setF({ ...f, country: v });
+              onFocus(v === "all" ? null : v);
+            }}
+            options={[{ v: "all", l: "All countries" }, ...data.countries.map((c) => ({ v: c.key, l: c.name }))]}
           />
-        </div>
-        <Select
-          label="Country"
-          value={f.country}
-          onChange={(v) => setF({ ...f, country: v })}
-          options={[{ v: "all", l: "All countries" }, ...data.countries.map((c) => ({ v: c.key, l: c.name }))]}
-        />
-        <Select
-          label="Pillar"
-          value={f.pillar}
-          onChange={(v) => setF({ ...f, pillar: v })}
-          options={[{ v: "all", l: "All pillars" }, ...data.pillars.map((p) => ({ v: p.id, l: p.label }))]}
-        />
-        <Select
-          label="State"
-          value={f.state}
-          onChange={(v) => setF({ ...f, state: v })}
-          options={[
-            { v: "all", l: "All states" },
-            ...STATE_ORDER.map((s) => ({ v: s, l: STATE_META[s].label })),
-            { v: "gap", l: "Gap" },
-          ]}
-        />
-        <div className="flex items-center gap-1 rounded-lg border border-slate-700 p-0.5 lg:hidden" role="group" aria-label="Matrix view toggle">
-          <button
-            type="button"
-            onClick={() => setView("cards")}
-            className={`rounded-md px-2.5 py-1.5 text-xs font-medium ${view === "cards" ? "bg-slate-700/70 text-white" : "text-slate-400"}`}
-          >
-            Country view
-          </button>
-          <button
-            type="button"
-            onClick={() => setView("matrix")}
-            className={`rounded-md px-2.5 py-1.5 text-xs font-medium ${view === "matrix" ? "bg-slate-700/70 text-white" : "text-slate-400"}`}
-          >
-            Compare
-          </button>
+          <Select
+            label="Pillar"
+            value={f.pillar}
+            onChange={(v) => setF({ ...f, pillar: v })}
+            options={[{ v: "all", l: "All pillars" }, ...data.pillars.map((p) => ({ v: p.id, l: p.label }))]}
+          />
+          <Select
+            label="State"
+            value={f.state}
+            onChange={(v) => setF({ ...f, state: v })}
+            options={[
+              { v: "all", l: "All states" },
+              ...STATE_ORDER.map((s) => ({ v: s, l: STATE_META[s].label })),
+              { v: "gap", l: "Structured gap" },
+            ]}
+          />
+          <div className="flex items-center gap-1 rounded-lg border border-slate-700/70 p-0.5 lg:hidden" role="group" aria-label="Matrix view toggle">
+            <button
+              type="button"
+              onClick={() => setView("cards")}
+              className={`rounded-md px-2.5 py-1.5 text-xs font-medium ${view === "cards" ? "bg-slate-700/70 text-white" : "text-slate-400"}`}
+            >
+              Country view
+            </button>
+            <button
+              type="button"
+              onClick={() => setView("matrix")}
+              className={`rounded-md px-2.5 py-1.5 text-xs font-medium ${view === "matrix" ? "bg-slate-700/70 text-white" : "text-slate-400"}`}
+            >
+              Compare
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* ── Search results ──────────────────────────────────────────── */}
+      {/* ── Search results ───────────────────────────────────────────── */}
       {results ? (
-        <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/30">
-          <p className="border-b border-slate-800 px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-slate-500">
-            {results.length} claim{results.length === 1 ? "" : "s"} match &ldquo;{query.trim()}&rdquo;
+        <div className="mt-4 rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31]">
+          <p className="border-b border-[rgba(135,180,220,0.10)] px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-slate-500">
+            {countLabel(results.length, "claim")} match &ldquo;{query.trim()}&rdquo;
           </p>
-          <ul className="divide-y divide-slate-800/70">
+          <ul className="divide-y divide-[rgba(135,180,220,0.10)]">
             {results.map((cl) => (
               <li key={cl.id}>
                 <button
                   type="button"
                   onClick={() => openCell(cl.country, cl.pillar)}
-                  className="flex w-full items-start gap-3 px-4 py-3 text-left transition-colors hover:bg-slate-800/40"
+                  className="flex w-full items-start gap-3 px-4 py-3 text-left transition-colors hover:bg-[#13253A]/60"
                 >
                   <span className={`mt-1.5 size-2 shrink-0 rounded-full ${STATE_META[cl.state]?.dot ?? "bg-slate-500"}`} aria-hidden="true" />
                   <span className="min-w-0">
@@ -305,10 +254,10 @@ export default function OpsConsole({ data }: { data: OpsData }) {
         </div>
       ) : (
         <>
-          {/* ── Mobile / tablet: per-country cards ─────────────────── */}
+          {/* ── Mobile / tablet: per-country cards ─────────────────────── */}
           <div className={`mt-4 space-y-4 ${view === "cards" ? "lg:hidden" : "hidden"}`}>
             {visibleCountries.map((c) => (
-              <div key={c.key} className="rounded-xl border border-slate-800 bg-slate-900/30 p-4">
+              <div key={c.key} className="rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-4">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold text-white">
                     {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
@@ -317,7 +266,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                     {c.verified}V · {c.partial}P · {c.coveragePct}%
                   </span>
                 </div>
-                <ul className="mt-3 divide-y divide-slate-800/70">
+                <ul className="mt-3 divide-y divide-[rgba(135,180,220,0.10)]">
                   {data.pillars.map((p) => {
                     const cell = cells.get(`${c.key}|${p.id}`);
                     if (!cell) return null;
@@ -339,7 +288,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                               ) : null
                             )}
                             {cell.gap && (
-                              <span className="rounded-full border border-dashed border-slate-600 px-1.5 py-px font-mono text-[10px] text-slate-400">
+                              <span className={`rounded-full border px-1.5 py-px font-mono text-[10px] ${POLICY_GAP_STYLE.chip}`}>
                                 gap
                               </span>
                             )}
@@ -354,11 +303,11 @@ export default function OpsConsole({ data }: { data: OpsData }) {
             ))}
           </div>
 
-          {/* ── Desktop: the full matrix ───────────────────────────── */}
-          <div className={`mt-4 overflow-x-auto rounded-xl border border-slate-800 ${view === "matrix" ? "" : "hidden lg:block"}`}>
+          {/* ── Desktop: the full heatmap matrix ───────────────────────── */}
+          <div className={`mt-4 overflow-x-auto rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] ${view === "matrix" ? "" : "hidden lg:block"}`}>
             <table className="w-full min-w-[880px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-slate-800 bg-slate-900/60">
+                <tr className="border-b border-[rgba(135,180,220,0.16)]">
                   <th className="px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-widest text-slate-500">
                     Policy pillar
                   </th>
@@ -366,13 +315,26 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                     <th
                       key={c.key}
                       className={`px-3 py-3 text-center font-medium transition-opacity ${
-                        f.country === "all" || f.country === c.key ? "text-slate-300" : "text-slate-600 opacity-40"
+                        focus && focus !== c.key ? "opacity-35" : "text-slate-200"
                       }`}
                     >
-                      {c.name}
-                      <span className="block font-mono text-[10px] font-normal text-slate-500">
-                        {c.claims} claims · {c.coveragePct}%
-                      </span>
+                      <button
+                        type="button"
+                        onClick={() => onFocus(focus === c.key ? null : c.key)}
+                        className={`rounded px-1 pb-1 transition-colors ${focus === c.key ? "text-cyan-300" : "hover:text-cyan-300"}`}
+                        aria-pressed={focus === c.key}
+                      >
+                        {c.name}
+                        <span className="block font-mono text-[10px] font-normal text-slate-500">
+                          {countLabel(c.claims, "claim")} · {c.coveragePct}%
+                        </span>
+                        <span
+                          aria-hidden="true"
+                          className={`mx-auto mt-1 block h-0.5 rounded-full transition-all ${
+                            focus === c.key ? "w-8 bg-cyan-400" : "w-0 bg-transparent"
+                          }`}
+                        />
+                      </button>
                     </th>
                   ))}
                 </tr>
@@ -382,30 +344,30 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                   const p = data.pillars.find((x) => x.id === pid);
                   if (!p) return null;
                   return (
-                    <tr key={pid} className="border-b border-slate-800/60 last:border-0">
+                    <tr key={pid} className="border-b border-[rgba(135,180,220,0.08)] last:border-0">
                       <td className="max-w-[240px] px-4 py-2 align-middle" title={p.blurb}>
                         <span className="text-sm font-medium text-slate-200">{p.label}</span>
                       </td>
                       {data.countries.map((c) => {
                         const cell = cells.get(`${c.key}|${pid}`);
                         const dim = cellDimmed(cell);
-                        const hiddenCol = f.country !== "all" && f.country !== c.key;
+                        const unfocused = focus !== null && focus !== c.key;
                         if (!cell) {
                           return (
-                            <td key={c.key} className={`px-3 py-2 text-center ${hiddenCol ? "opacity-40" : ""}`}>
+                            <td key={c.key} className={`px-3 py-2 text-center ${unfocused ? "opacity-35" : ""}`}>
                               <span className="text-xs text-slate-700">—</span>
                             </td>
                           );
                         }
                         return (
-                          <td key={c.key} className={`px-1.5 py-1.5 ${hiddenCol ? "opacity-40" : ""}`}>
+                          <td key={c.key} className={`px-1.5 py-1.5 transition-opacity ${unfocused ? "opacity-35" : ""}`}>
                             <button
                               type="button"
                               onClick={() => openCell(c.key, pid)}
-                              aria-label={`${c.name} · ${p.label}: ${cell.total} claims${cell.gap ? " plus a structured gap" : ""}`}
-                              className={`h-full min-h-[56px] w-full rounded-lg border p-2.5 text-left transition-all ${
+                              aria-label={`${c.name} · ${p.label}: ${countLabel(cell.total, "claim")}${cell.gap ? " plus a structured gap" : ""}`}
+                              className={`h-full min-h-[56px] w-full rounded-lg border p-2.5 text-left transition-all duration-200 ${cellTint(cell)} ${
                                 dim ? "opacity-25" : ""
-                              } border-slate-800 bg-slate-900/40 hover:border-cyan-500/50 hover:bg-slate-800/50 focus:border-cyan-400 focus:outline-none`}
+                              } hover:-translate-y-0.5 hover:border-cyan-500/50 hover:bg-[#13253A]/70 hover:shadow-lg hover:shadow-cyan-500/10 focus:border-cyan-400 focus:outline-none active:translate-y-0`}
                             >
                               {cell.total > 0 ? (
                                 <>
@@ -435,7 +397,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                                 <span className="font-mono text-[11px] leading-none text-slate-600">no claims</span>
                               )}
                               {cell.gap && (
-                                <span className="mt-2 inline-block rounded-full border border-dashed border-slate-600 px-1.5 py-px font-mono text-[10px] leading-none text-slate-400">
+                                <span className={`mt-2 inline-block rounded-full border px-1.5 py-px font-mono text-[10px] leading-none ${POLICY_GAP_STYLE.chip}`}>
                                   gap
                                 </span>
                               )}
@@ -452,22 +414,22 @@ export default function OpsConsole({ data }: { data: OpsData }) {
         </>
       )}
 
-      {/* ── Cell drawer ─────────────────────────────────────────────── */}
+      {/* ── Cell drawer ──────────────────────────────────────────────── */}
       {active && (
         <div className="fixed inset-0 z-[110]">
           <button
             type="button"
             aria-label="Close evidence panel"
             onClick={() => setActive(null)}
-            className="absolute inset-0 h-full w-full cursor-default bg-black/60 backdrop-blur-sm"
+            className="dc-fade absolute inset-0 h-full w-full cursor-default bg-black/60 backdrop-blur-sm"
           />
           <aside
             role="dialog"
             aria-modal="true"
             aria-label={`${activeCountry?.name ?? ""} · ${activePillar?.label ?? ""} evidence`}
-            className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col border-l border-slate-800 bg-background shadow-2xl"
+            className="dc-drawer absolute inset-y-0 right-0 flex w-full max-w-md flex-col border-l border-[rgba(135,180,220,0.16)] bg-[#07111F] shadow-2xl sm:max-w-lg"
           >
-            <div className="flex items-start justify-between gap-3 border-b border-slate-800 p-4">
+            <div className="flex items-start justify-between gap-3 border-b border-[rgba(135,180,220,0.16)] p-4">
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
                   {activeCountry?.name} · {activePillar?.label}
@@ -475,19 +437,21 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                 <p className="mt-1.5 text-sm text-slate-300">
                   {activeClaims.length > 0 && (
                     <>
-                      {activeClaims.map((cl, i) => (
-                        <span key={cl.id}>
+                      {[...new Set(activeClaims.map((cl) => cl.state))].map((s, i, arr) => (
+                        <span key={s}>
                           {i > 0 && " · "}
-                          <span className={STATE_META[cl.state]?.text}>{activeClaims.filter((x) => x.state === cl.state).length}</span>{" "}
-                          {STATE_META[cl.state]?.label.toLowerCase()}
+                          <span className={STATE_META[s]?.text}>
+                            {activeClaims.filter((x) => x.state === s).length}
+                          </span>{" "}
+                          {STATE_META[s]?.label.toLowerCase()}
+                          {i === arr.length - 1 && ""}
                         </span>
                       ))}
                     </>
                   )}
                   {activeGap && (
-                    <span className={activeClaims.length > 0 ? "text-slate-500" : ""}>
-                      {activeClaims.length > 0 ? " · " : ""}
-                      1 structured gap
+                    <span className={activeClaims.length > 0 ? "text-slate-500" : POLICY_GAP_STYLE.text}>
+                      {activeClaims.length > 0 ? " · " : ""}1 structured gap
                     </span>
                   )}
                   {!activeGap && activeClaims.length === 0 && "No researched coverage"}
@@ -507,7 +471,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
               {activePillar && <p className="mb-4 text-xs leading-relaxed text-slate-500">{activePillar.blurb}</p>}
 
               {activeCountry && (
-                <p className="mb-4 rounded-lg border border-slate-800 bg-slate-900/40 p-3 text-xs leading-relaxed text-slate-400">
+                <p className="mb-4 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-3 text-xs leading-relaxed text-slate-400">
                   <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
                     {PILLAR_DOMAIN[active.pillar] && activeCountry.regulators.some((r) => r.domain === PILLAR_DOMAIN[active.pillar])
                       ? "Responsible regulator"
@@ -526,7 +490,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
               )}
 
               {activeGap && (
-                <div className="mb-4 rounded-lg border border-dashed border-slate-600 bg-slate-900/20 p-3">
+                <div className={`mb-4 rounded-lg border bg-violet-400/[0.04] p-3 ${POLICY_GAP_STYLE.chip}`}>
                   <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
                     Structured gap — not a finding
                   </p>
@@ -542,7 +506,7 @@ export default function OpsConsole({ data }: { data: OpsData }) {
 
               <ul className="space-y-3">
                 {activeClaims.map((cl) => (
-                  <li key={cl.id} className="rounded-lg border border-slate-800 bg-slate-900/40 p-3">
+                  <li key={cl.id} className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] p-3">
                     <div className="flex flex-wrap items-center gap-2">
                       <span
                         className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${STATE_META[cl.state]?.text}`}
@@ -561,9 +525,9 @@ export default function OpsConsole({ data }: { data: OpsData }) {
                     {cl.sources.length > 0 && (
                       <details className="group mt-2">
                         <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
-                          Evidence trail · {cl.sources.length} source{cl.sources.length === 1 ? "" : "s"} ▾
+                          View evidence trail · {countLabel(cl.sources.length, "source")} ▾
                         </summary>
-                        <ol className="mt-2 space-y-2 border-t border-slate-800 pt-2">
+                        <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
                           {cl.sources.map((s, i) => (
                             <li key={`${s.id}-${i}`} className="text-xs leading-relaxed text-slate-400">
                               <a
@@ -594,10 +558,13 @@ export default function OpsConsole({ data }: { data: OpsData }) {
             </div>
 
             {activeCountry && (
-              <div className="border-t border-slate-800 p-4">
+              <div className="border-t border-[rgba(135,180,220,0.16)] p-4">
                 <a
-                  href={`#room-${activeCountry.key}`}
-                  onClick={() => setActive(null)}
+                  href="#control-room"
+                  onClick={() => {
+                    setActive(null);
+                    onFocus(activeCountry.key);
+                  }}
                   className="flex items-center justify-between rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-3 py-2.5 text-sm font-medium text-cyan-300 transition-colors hover:bg-cyan-500/15"
                 >
                   Open the {activeCountry.name} control room
@@ -630,7 +597,7 @@ function Select({
       aria-label={`Filter by ${label.toLowerCase()}`}
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="h-9 rounded-lg border border-slate-700 bg-slate-900/70 px-2 text-xs text-slate-300 focus:border-cyan-500/60 focus:outline-none"
+      className="h-9 rounded-lg border border-slate-700/70 bg-[#101D30] px-2 text-xs text-slate-300 focus:border-cyan-500/60 focus:outline-none"
     >
       {options.map((o) => (
         <option key={o.v} value={o.v} className="bg-slate-900">

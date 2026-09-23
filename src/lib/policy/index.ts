@@ -109,6 +109,27 @@ export function policyClaimSources(claim: PolicyClaim): PolicySource[] {
     .filter((s): s is PolicySource => Boolean(s));
 }
 
+// ─── Presentation helpers (audit §14: one terminology, one date format) ────
+
+/** "1 facility" / "3 facilities" — never "1 facilities". */
+export function countLabel(n: number, singular: string, plural?: string): string {
+  return `${n.toLocaleString("en-GB")} ${n === 1 ? singular : (plural ?? `${singular}s`)}`;
+}
+
+/** One date format across the whole dashboard: "22 September 2026". */
+export function formatPolicyDate(iso: string): string {
+  try {
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(new Date(iso));
+  } catch {
+    return iso;
+  }
+}
+
 // ─── Aggregates ────────────────────────────────────────────────────────────
 
 export interface PolicyStats {

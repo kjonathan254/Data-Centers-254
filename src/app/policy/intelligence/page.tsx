@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { POLICY_PILLARS, POLICY_STATES, POLICY_SOURCE_TIERS, POLICY_CAPTURE_LABELS } from "@/lib/policy/config";
+import { POLICY_PILLARS, POLICY_SOURCE_TIERS, POLICY_CAPTURE_LABELS, SINCE_LAST_REVIEW, CONTROL_ROOM_SURFACES } from "@/lib/policy/config";
 import {
   getPolicyDataset,
   getPolicyCountries,
   getPolicyStats,
   getPillarMatrix,
+  countLabel,
+  formatPolicyDate,
   type PolicySource,
 } from "@/lib/policy";
-import OpsConsole, { type OpsClaim, type OpsCountry, type OpsData, type OpsGap, type OpsSource } from "./ops-console";
-import { ClaimStrip, CountrySnapshot, ControlRooms, ResearchQueue, formatDate } from "./policy-sections";
+import ControlRoomDashboard from "./control-room";
+import SectionNav from "./section-nav";
+import type { OpsClaim, OpsCountry, OpsData, OpsGap, OpsSource } from "./dashboard-types";
 
 export const metadata: Metadata = {
   title: "Policy Intelligence — East Africa data-centre regulation, claim by claim",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── Serializable ops payload (client console input) ───────────────────────
+// ─── Serializable ops payload (control-room client input) ──────────────────
 
 function buildOpsData(): OpsData {
   const ds = getPolicyDataset();
@@ -57,12 +60,12 @@ function buildOpsData(): OpsData {
       verified,
       partial,
       coveragePct: Math.round((verified / Math.max(c.claims.length, 1)) * 100),
-      investigatedShort: formatDate(c.investigatedAt, { day: "2-digit", month: "short", year: "numeric" }),
+      investigatedLong: formatPolicyDate(c.investigatedAt),
       regulators: Object.entries(c.regulators).map(([domain, name]) => ({ domain, name })),
+      facilitiesNote: c.facilitiesNote,
+      investigationNote: c.investigationNote,
     };
   });
-
-  const countryName = new Map(opsCountries.map((c) => [c.key, c.name]));
 
   const opsClaims: OpsClaim[] = countries.flatMap((c) =>
     c.claims.map((cl) => {
@@ -140,10 +143,11 @@ function buildOpsData(): OpsData {
     claims: opsClaims,
     gaps: opsGaps,
     cells: opsCells,
+    sinceReview: { ...SINCE_LAST_REVIEW },
     meta: {
       gateShort: stats.humanGateStatus.split(" (")[0],
       gateFull: stats.humanGateStatus,
-      reviewedLong: formatDate(stats.reviewedAt, { day: "numeric", month: "long", year: "numeric" }),
+      reviewedLong: formatPolicyDate(stats.reviewedAt),
       schemaVersion: ds.schemaVersion,
       datasetVersion: ds.datasetVersion,
       claims: stats.claims,
@@ -156,67 +160,26 @@ function buildOpsData(): OpsData {
   };
 }
 
-// ─── Evidence-states legend ────────────────────────────────────────────────
-
-const STATE_SHORT: Record<string, string> = {
-  verified: "Strong evidence threshold met",
-  "partially-verified": "Evidence exists; some elements unresolved",
-  "capture-pending": "Source identified, not yet captured",
-  unverified: "Does not yet meet the publication threshold",
-  contradicted: "Credible evidence conflicts with the claim",
-};
-
-function Legend() {
-  return (
-    <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-      {Object.entries(POLICY_STATES).map(([key, cfg]) => (
-        <div
-          key={key}
-          title={cfg.blurb}
-          className="flex items-start gap-2.5 rounded-lg border border-slate-800 bg-slate-900/40 px-3 py-2.5"
-        >
-          <span className={`mt-1 size-2 shrink-0 rounded-full ${cfg.dot}`} aria-hidden="true" />
-          <span className="min-w-0">
-            <span className="text-sm font-medium text-slate-200">{cfg.label}</span>
-            <span className="block text-xs leading-relaxed text-slate-500">{STATE_SHORT[key] ?? cfg.blurb}</span>
-          </span>
-        </div>
-      ))}
-      <div
-        title="A gap is the condition of research coverage, not of a claim: the pillar is owned by the pipeline but has no researched statements yet."
-        className="flex items-start gap-2.5 rounded-lg border border-dashed border-slate-600 bg-transparent px-3 py-2.5"
-      >
-        <span className="mt-1 size-2 shrink-0 rounded-full border border-dashed border-slate-500" aria-hidden="true" />
-        <span className="min-w-0">
-          <span className="text-sm font-medium text-slate-300">Gap</span>
-          <span className="block text-xs leading-relaxed text-slate-500">Pillar owned but not yet researched</span>
-        </span>
-      </div>
-    </div>
-  );
-}
-
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function PolicyIntelligencePage() {
   const ds = getPolicyDataset();
   const stats = getPolicyStats();
   const ops = buildOpsData();
-  const pillarCount = ops.pillars.length;
-
-  const healthCards = [
-    { v: String(stats.countries), k: "Countries", meaning: "East African markets covered" },
-    { v: String(stats.claims), k: "Audited claims", meaning: "Individual regulatory statements" },
-    { v: String(stats.sources), k: "Registered sources", meaning: "Sources in the evidence base" },
-    { v: formatDate(stats.reviewedAt, { day: "2-digit", month: "short", year: "numeric" }), k: "Last review", meaning: "Most recent editorial review" },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
-        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:py-14">
-          {/* ── Page header ─────────────────────────────────────────── */}
+      <main
+        className={`flex-1 ${CONTROL_ROOM_SURFACES.canvas}`}
+        style={{
+          backgroundImage:
+            "radial-gradient(1100px 480px at 50% -120px, rgba(34,211,238,0.08), transparent 62%), linear-gradient(to right, rgba(135,180,220,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(135,180,220,0.04) 1px, transparent 1px)",
+          backgroundSize: "auto, 44px 44px, 44px 44px",
+        }}
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:py-14">
+          {/* ── Header ─────────────────────────────────────────────────── */}
           <header>
             <p className="font-mono text-xs uppercase tracking-widest text-slate-500">
               Policy Intelligence · East Africa regulatory evidence engine ·{" "}
@@ -232,27 +195,36 @@ export default function PolicyIntelligencePage() {
               Uganda, Rwanda and Tanzania.
             </p>
             <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-wider text-slate-500">
-              <span>Last reviewed: {ops.meta.reviewedLong}</span>
+              <span>Reviewed {ops.meta.reviewedLong}</span>
               <span aria-hidden="true" className="hidden sm:inline text-slate-700">|</span>
-              <span>Editorial gate: complete</span>
+              <span>Editorial gate: {ops.meta.gateShort}</span>
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="#matrix"
                 className="rounded-lg bg-cyan px-4 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
               >
-                Explore the matrix
+                Explore evidence
+              </a>
+              <a
+                href="#countries"
+                className="rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-900/60"
+              >
+                Compare countries
               </a>
               <a
                 href="#method"
                 className="rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-900/60"
               >
-                Read the methodology
+                Methodology
               </a>
             </div>
           </header>
 
-          {/* ── Publication status bar ──────────────────────────────── */}
+          {/* ── Control-room command bar (sticky, scrollspy) ───────────── */}
+          <SectionNav datasetVersion={ops.meta.datasetVersion} queueCount={ops.gaps.length} />
+
+          {/* ── Publication status (kept prominent — governance language) ─ */}
           <section
             aria-label="Publication status"
             className="mt-10 rounded-xl border border-lime-500/25 bg-lime-500/[0.06] p-4 sm:p-5"
@@ -271,127 +243,26 @@ export default function PolicyIntelligencePage() {
               {ops.meta.reviewedLong} · AI proposes, the editor approves. Editorial approval is a
               publication decision — it is not a statement that every claim is fully verified.
             </p>
-            <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-slate-500">
-              Dataset: {ops.meta.schemaVersion} · {ops.meta.claims} claims · {ops.meta.sources} sources ·{" "}
-              {ops.meta.gaps} open gaps
-            </p>
           </section>
 
-          {/* ── Regional evidence health ────────────────────────────── */}
-          <section className="mt-12" aria-label="Regional evidence health">
-            <h2 className="font-mono text-xs uppercase tracking-widest text-slate-500">Regional evidence health</h2>
-            <div className="mt-4 grid gap-3 lg:grid-cols-[1.4fr_1fr]">
-              <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="text-sm font-medium text-slate-300">Evidence coverage</p>
-                  <p className="font-mono text-3xl font-bold text-white">{ops.meta.coveragePct}%</p>
-                </div>
-                <div className="mt-4">
-                  <ClaimStrip counts={stats.byState} showGaps gaps={stats.gaps} />
-                </div>
-                <p className="mt-3 font-mono text-[11px] uppercase tracking-wider">
-                  <span className="text-emerald-400">{ops.meta.verified} verified</span>
-                  <span className="text-slate-600"> · </span>
-                  <span className="text-amber-400">{ops.meta.partial} partially verified</span>
-                  <span className="text-slate-600"> · </span>
-                  <span className="text-slate-400">{ops.meta.gaps} structured gaps</span>
-                </p>
-                <p className="mt-3 text-xs leading-relaxed text-slate-500">
-                  Coverage = share of published claims whose evidence has met the verification
-                  threshold. Structured gaps sit outside the claim set: they are pillars owned by
-                  the pipeline but not yet researched, never dressed up as findings.
-                </p>
-              </div>
-              <dl className="grid grid-cols-2 gap-3">
-                {healthCards.map((s) => (
-                  <div key={s.k} className="rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-                    <dd className="text-2xl font-bold text-white">{s.v}</dd>
-                    <dt className="mt-0.5 text-xs font-medium uppercase tracking-wider text-slate-400">{s.k}</dt>
-                    <p className="mt-1 text-[11px] leading-relaxed text-slate-500">{s.meaning}</p>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </section>
+          {/* ── The control-room canvas ────────────────────────────────── */}
+          <div className="mt-10">
+            <ControlRoomDashboard data={ops} />
+          </div>
 
-          {/* ── Country snapshot ────────────────────────────────────── */}
-          <section className="mt-12" aria-label="Country snapshot">
-            <h2 className="font-mono text-xs uppercase tracking-widest text-slate-500">Country snapshot</h2>
-            <div className="mt-4">
-              <CountrySnapshot />
-            </div>
-          </section>
-
-          {/* ── Open research queue ─────────────────────────────────── */}
-          <section className="mt-12 scroll-mt-20" id="queue" aria-label="Open research queue">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h2 className="font-mono text-xs uppercase tracking-widest text-slate-500">Open research queue</h2>
-              <p className="text-xs text-slate-500">
-                {stats.gaps} structured gaps requiring evidence capture · priority is derived, not
-                editorial
-              </p>
-            </div>
-            <div className="mt-4">
-              <ResearchQueue />
-            </div>
-          </section>
-
-          {/* ── Interactive policy matrix ───────────────────────────── */}
-          <section className="mt-12 scroll-mt-20" id="matrix" aria-label="Policy coverage matrix">
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h2 className="text-2xl font-bold text-white">Policy coverage matrix</h2>
-              <p className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
-                {pillarCount} pillars · {stats.countries} countries · {stats.claims} audited claims
-              </p>
-            </div>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
-              Every tile counts claims by verification state; dashed tags mark structured gaps.
-              Select a tile to inspect the underlying claims, sources and upgrade paths.
-            </p>
-            <div className="mt-2">
-              <OpsConsole data={ops} />
-            </div>
-          </section>
-
-          {/* ── Evidence states legend ──────────────────────────────── */}
-          <section className="mt-12" aria-label="Evidence states">
-            <h2 className="font-mono text-xs uppercase tracking-widest text-slate-500">Evidence states</h2>
-            <div className="mt-4">
-              <Legend />
-            </div>
-            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
-              Evidence states describe the condition of a <span className="text-slate-400">claim</span>.
-              A gap describes the condition of <span className="text-slate-400">research coverage</span> —
-              it is never a claim, and it never borrows a claim&rsquo;s status. Hover any state for the
-              full definition.
-            </p>
-          </section>
-
-          {/* ── Country control rooms ───────────────────────────────── */}
-          <section className="mt-12 scroll-mt-20" id="rooms" aria-label="Country control rooms">
-            <h2 className="text-2xl font-bold text-white">Country control rooms</h2>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
-              Expand a market for its regulator map, evidence health and the full claim set — every
-              claim is an evidence record with its source trail one click away.
-            </p>
-            <div className="mt-4">
-              <ControlRooms />
-            </div>
-          </section>
-
-          {/* ── Method & governance ─────────────────────────────────── */}
+          {/* ── Method & governance ────────────────────────────────────── */}
           <section className="mt-14 scroll-mt-20" id="method" aria-label="Method and governance">
             <h2 className="text-2xl font-bold text-white">Method &amp; governance</h2>
             <blockquote className="mt-4 max-w-3xl border-l-2 border-slate-700 pl-4 text-sm leading-relaxed text-slate-400">
               {ds.researchQuestion}
             </blockquote>
             <div className="mt-4 grid gap-3 lg:grid-cols-2">
-              <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
+              <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
                 <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">How claims are built</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">{ds.method}</p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-400">{ds.gapSchema.rule}</p>
               </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
+              <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
                 <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Source tiers &amp; capture states</h3>
                 <dl className="mt-2 space-y-1.5">
                   {Object.entries(POLICY_SOURCE_TIERS).map(([tier, label]) => (
@@ -401,7 +272,7 @@ export default function PolicyIntelligencePage() {
                     </div>
                   ))}
                 </dl>
-                <dl className="mt-3 space-y-1 border-t border-slate-800 pt-3">
+                <dl className="mt-3 space-y-1 border-t border-[rgba(135,180,220,0.10)] pt-3">
                   {Object.entries(POLICY_CAPTURE_LABELS).map(([key, label]) => (
                     <div key={key} className="flex gap-2 text-xs">
                       <dt className="w-28 shrink-0 font-mono text-[10px] uppercase leading-relaxed text-slate-500">{key}</dt>
@@ -430,6 +301,11 @@ export default function PolicyIntelligencePage() {
               govern this page. This is regulatory intelligence, not legal advice.
             </p>
           </section>
+
+          <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+            {ops.meta.datasetVersion} · {countLabel(ops.meta.claims, "claim")} · {countLabel(ops.meta.sources, "source")} ·{" "}
+            {ops.meta.gaps} structured gaps
+          </p>
         </div>
       </main>
       <Footer />

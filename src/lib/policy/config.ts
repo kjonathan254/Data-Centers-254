@@ -79,13 +79,13 @@ export const POLICY_STATES = {
     dot: "bg-emerald-500",
   },
   "partially-verified": {
-    label: "Partially verified",
+    label: "Partial",
     blurb: "Some elements supported, others unresolved — single source, or instrument text pending.",
     chip: "border-amber-500/25 text-amber-500 bg-amber-500/10",
     dot: "bg-amber-500",
   },
   "capture-pending": {
-    label: "Capture pending",
+    label: "Pending capture",
     blurb: "The relevant source is identified but not yet retrieved; the state self-upgrades when it is captured.",
     chip: "border-sky-500/25 text-sky-500 bg-sky-500/10",
     dot: "bg-sky-500",
@@ -106,6 +106,15 @@ export const POLICY_STATES = {
 
 export type PolicyState = keyof typeof POLICY_STATES;
 
+/**
+ * Display vocabulary (audit 2026-09-23, §14): one label per internal state.
+ * Verified · Partial · Pending capture · Unverified · Contradicted · Structured gap.
+ */
+export const POLICY_GAP_STYLE = {
+  chip: "border-dashed border-violet-400/40 bg-violet-400/5 text-violet-300",
+  text: "text-violet-300",
+} as const;
+
 /** Source tiers as used by the policy layer (Tier 4 discovery sources are never registered). */
 export const POLICY_SOURCE_TIERS: Record<number, string> = {
   1: "T1 · Primary instrument / regulator",
@@ -118,3 +127,48 @@ export const POLICY_CAPTURE_LABELS: Record<string, string> = {
   snippet: "snippet capture",
   "capture-pending": "capture pending",
 };
+
+// ─── "Since last review" deltas (dashboard panel) ────────────────────────
+//
+// Hand-refreshed on every dataset bump: diff the previous published dataset
+// against the new one (git show <prev>:src/data/policy/policy-claims-2026-Q3.json)
+// and rewrite the items below. Kept static on purpose — the page must never
+// run git at request time.
+
+export const SINCE_LAST_REVIEW: {
+  fromVersion: string;
+  toVersion: string;
+  date: string;
+  items: { label: string; detail: string; tone: "up" | "flat" | "note" }[];
+} = {
+  fromVersion: "policy-2026-Q3-r10",
+  toVersion: "policy-2026-Q3-r11",
+  date: "2026-09-23",
+  items: [
+    {
+      label: "+3 claims verified",
+      detail: "KE-TX-C2 SEZ tax relief · KE-TX-C4 EPZ holidays · RW-AI-C1 digital policy",
+      tone: "up",
+    },
+    {
+      label: "+5 Tier-1 sources registered",
+      detail: "SEZ Act 2015 · EPZ Act Cap 517 · Investment Code 2019 · Free Zones Act 2014 · ICT SSP 2024-2029",
+      tone: "up",
+    },
+    { label: "20 structured gaps (unchanged)", detail: "Next capture frontier: energy, construction and environmental pillars", tone: "flat" },
+    { label: "1 validator restored", detail: "Capture-linkage checks now run on every dataset edit", tone: "note" },
+  ],
+} as const;
+
+/**
+ * Control Room surface palette (audit 2026-09-23, §15) — scoped to
+ * /policy/intelligence so the rest of the site keeps its brand background.
+ */
+export const CONTROL_ROOM_SURFACES = {
+  canvas: "bg-[#07111F]",
+  panel: "bg-[#0E1D31]",
+  card: "bg-[#101D30]",
+  deep: "bg-[#0B1627]",
+  border: "border-[rgba(135,180,220,0.16)]",
+  borderSoft: "border-[rgba(135,180,220,0.10)]",
+} as const;
