@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r5",
+  "datasetVersion": "policy-2026-Q3-r11",
   "generatedAt": "2026-09-23",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
@@ -665,6 +665,56 @@
       "publisher": "ict.go.ug",
       "sourceType": "Official ministry document (PDF)",
       "captureNote": "'Vision for a Digital Uganda' official PDF captured 2026-09-22 (141KB markdown)."
+    },
+    "kenyalaw-sez-act-2015": {
+      "label": "Special Economic Zones Act (No. 16 of 2015), consolidated text eng@2024-12-27 (Kenya Law)",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://new.kenyalaw.org/akn/ke/act/2015/16/eng@2024-12-27",
+      "publisher": "new.kenyalaw.org (National Council for Law Reporting)",
+      "sourceType": "Official statute text (consolidated)",
+      "captureNote": "Full consolidated text captured 2026-09-23 (research/captures/2026-09-23-new-kenyalaw-org-akn-ke-act-2015-16-eng-2024-12-27.md). Part VI s.35 incentives; amendment history cited inline."
+    },
+    "kenyalaw-epz-act-cap517": {
+      "label": "Export Processing Zones Act (No. 12 of 1990; Cap 517), consolidated text eng@2023-07-01 (Kenya Law)",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://new.kenyalaw.org/akn/ke/act/1990/12/eng@2023-07-01",
+      "publisher": "new.kenyalaw.org (National Council for Law Reporting)",
+      "sourceType": "Official statute text (consolidated)",
+      "captureNote": "Full consolidated text captured 2026-09-23 (research/captures/2026-09-23-new-kenyalaw-org-akn-ke-act-1990-12-eng-2023-07-01.md). Part VIII benefits incl. 10-year income tax exemption (s.32(c))."
+    },
+    "ulii-investment-code-2019": {
+      "label": "Investment Code Act, 2019 (Act 6 of 2019; Chapter 74) (ULII)",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://ulii.org/akn/ug/act/2019/6/eng@2019-03-29/source",
+      "publisher": "ulii.org (Uganda Legal Information Institute)",
+      "sourceType": "Official statute text (PDF)",
+      "captureNote": "Full Act text captured 2026-09-23 (research/captures/2026-09-23-ulii-org-akn-ug-act-2019-6-eng-2019-03-29-source.md). s.12 incentive qualification incl. 80 percent export criterion; s.13 certificate of incentives. HTML page is a JS shell - PDF source used."
+    },
+    "ulii-free-zones-act-2014": {
+      "label": "Free Zones Act, 2014 (Act 5 of 2014) (ULII)",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://ulii.org/akn/ug/act/2014/5/eng@2014-04-25/source",
+      "publisher": "ulii.org (Uganda Legal Information Institute)",
+      "sourceType": "Official statute text (PDF)",
+      "captureNote": "Full Act text (as at 25 Apr 2014) captured 2026-09-23 (research/captures/2026-09-23-ulii-org-akn-ug-act-2014-5-eng-2014-04-25-source.md). s.48 exemptions on EPZ imported inputs. No 10-year income tax holiday in this instrument."
+    },
+    "minict-ssp-2024-2029-pdf": {
+      "label": "ICT Sector Strategic Plan 2024-2029 (MINICT, Rwanda)",
+      "tier": 1,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://www.minict.gov.rw/index.php?eID=dumpFile&t=f&f=130180&token=5eaf01e5021aa23cb56ae6c37abcad7729534c7b",
+      "publisher": "minict.gov.rw (Ministry of ICT and Innovation, Rwanda)",
+      "sourceType": "Official strategy document (PDF)",
+      "captureNote": "Full SSP text captured 2026-09-23 (research/captures/2026-09-23-minict-gov-rw-index-php.md). SRMP II pillar alignment verbatim; data-centre actions incl. EUCL industrial-tariff categorisation."
     }
   },
   "countries": {
@@ -866,10 +916,12 @@
           "pillar": "tax-incentives",
           "statement": "Investors in Uganda can access tax incentives through the Uganda Investment Authority and the Uganda Free Zones Authority, including a 10-year income tax holiday for qualifying foreign investment.",
           "sourceIds": [
-            "us-state-ics-2025"
+            "us-state-ics-2025",
+            "ulii-investment-code-2019",
+            "ulii-free-zones-act-2014"
           ],
           "state": "partially-verified",
-          "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified."
+          "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified. | r11 upgrade (editor-delegated 2026-09-23): Investment Code Act 2019 (T1, ULII) captured: s.12 sets incentive qualification (minimum capital, Schedule 2 priority areas, 80% export criterion, 60% citizen employment), s.13 provides the Authority's certificate of incentives, and the Uganda Free Zones Authority is named in s.4 definitions. Free Zones Act 2014 s.48 (T1) confirms exemptions from taxes and duties on EPZ imported inputs. However, neither captured instrument contains the 10-year income tax holiday: the Code defers to 'qualifications for incentives set out in any other law' and the captured Free Zones Act is the 2014 original. The holiday (T3: PwC tax summaries confirm availability to 80%+ exporters) lives in the Income Tax Act as amended - claim remains partially-verified pending that instrument's capture."
         }
       ]
     },
@@ -1064,10 +1116,11 @@
           "pillar": "ai-digital-policy",
           "statement": "Rwanda's ICT Sector Strategic Plan (2024-2029) aligns with the Smart Rwanda Master Plan (SRMP II) and its core pillars (Digital Business, Digital Citizen), under the 30-year Vision 2050 agenda.",
           "sourceIds": [
-            "minict-ssp-2024-2029"
+            "minict-ssp-2024-2029",
+            "minict-ssp-2024-2029-pdf"
           ],
-          "state": "partially-verified",
-          "note": "Official-domain snippets only (minict.gov.rw / minecofin.gov.rw); SSP PDF capture pending. Any explicit 'data centre' language in the SSP awaits full-text capture."
+          "state": "verified",
+          "note": "Official-domain snippets only (minict.gov.rw / minecofin.gov.rw); SSP PDF capture pending. Any explicit 'data centre' language in the SSP awaits full-text capture. | r11 upgrade (editor-delegated 2026-09-23): SSP 2024-2029 full text (T1 PDF, minict.gov.rw) captured: 'The SSP is based on three foundational pillars from SRMP II: Digital Business, Digital Citizen, and Digital Government'; alignment passage names NST2 (2024/25-2028/29), SRMP II (2024-2028), DTS (2020-2030), Vision 2050, AU Agenda 2063 and SDGs. SSP additionally evidences data-centre-specific policy content: planned EUCL framework to categorise data centres under industrial tariffs (electricity-cost halving rationale), 50% hosting-price reduction at the National Data Center, 2023 data-centre and cloud service directives, and an explicit action to 'Invest in building and upgrading secure data centers'."
         }
       ]
     },
@@ -1448,13 +1501,14 @@
         {
           "id": "KE-TX-C2",
           "pillar": "tax-incentives",
-          "state": "partially-verified",
+          "state": "verified",
           "statement": "SEZ-registered enterprises in Kenya receive preferential corporate taxation (reduced CIT for an initial period) and relief on inputs, per the SEZ Act 2015 as amended.",
           "sourceIds": [
             "bowmans-sez-amendments",
-            "sezauthority-root"
+            "sezauthority-root",
+            "kenyalaw-sez-act-2015"
           ],
-          "note": "Rate/rest-of-regime detail rests on a T3 law-firm briefing (snippet) plus the authority's regime context (T1, silent on rates). SEZ Act 2015 text (Kenya Law JS shell) uncaptured - upgrade on Act capture; amendments noted by Bowmans must be reconciled with the consolidated text."
+          "note": "Rate/rest-of-regime detail rests on a T3 law-firm briefing (snippet) plus the authority's regime context (T1, silent on rates). SEZ Act 2015 text (Kenya Law JS shell) uncaptured - upgrade on Act capture; amendments noted by Bowmans must be reconciled with the consolidated text. | r11 upgrade (editor-delegated 2026-09-23): SEZ Act 2015 consolidated text (T1, Kenya Law) captured: s.35(1) grants licensed SEZ enterprises/developers/operators tax incentives as specified in the respective tax laws; s.35(2) enumerates exemptions (stamp duty, county advertisement/business-service fees, specified licences); s.35(5) limits incentives and tax benefits to ten years from licence issuance. Amendment history (Acts 38/2016 s.67, 4/2023 s.101, 20/2024 s.33) is cited inline in the consolidated text, reconciling the Bowmans amendment notes. Specific CIT rate rests in the Income Tax Act (rate-level capture optional; regime claim now T1-anchored)."
         },
         {
           "id": "KE-TX-C3",
@@ -1470,13 +1524,14 @@
         {
           "id": "KE-TX-C4",
           "pillar": "tax-incentives",
-          "state": "partially-verified",
+          "state": "verified",
           "statement": "EPZ enterprises in Kenya receive time-bound tax holidays and duty/VAT relief on inputs for export-oriented production under the EPZ Act (Cap 517).",
           "sourceIds": [
             "policyvault-epz",
-            "investkenya-eprocedures"
+            "investkenya-eprocedures",
+            "kenyalaw-epz-act-cap517"
           ],
-          "note": "Specifics (10-year holiday, subsequent rates) rest on snippet-grade sources; the official procedures platform confirms incentives exist but not their terms. Upgrade path: EPZ Act (Cap 517) text capture, then verify with section citations."
+          "note": "Specifics (10-year holiday, subsequent rates) rest on snippet-grade sources; the official procedures platform confirms incentives exist but not their terms. Upgrade path: EPZ Act (Cap 517) text capture, then verify with section citations. | r11 upgrade (editor-delegated 2026-09-23): EPZ Act (Cap 517; No. 12 of 1990) consolidated text (T1) captured: Part VIII s.32 - exemption from income tax for the first ten years from date of first sale as an EPZ enterprise, with the rate limited to 25% for the ten years following; duty and VAT exemptions on EPZ imports (machinery, spare parts, raw materials, intermediate goods, construction materials); withholding tax exemption on non-resident payments during the holiday; licence grant conditioned on producing goods or services for export. Snippet-grade specifics (10-year holiday, duty/VAT relief) now confirmed verbatim in the statute."
         },
         {
           "id": "KE-EN-C1",
