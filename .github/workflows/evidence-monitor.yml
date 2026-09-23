@@ -1,0 +1,47 @@
+# Evidence drift monitor - DataCentre254 Policy Intelligence
+#
+# Weekly re-scrape of every Tier-1 captured source backing policy claims.
+# If any source's live text materially diverges from its stored capture
+# (research/captures/), the job FAILS -> GitHub sends the owner a notification.
+#
+# One-time setup (owner): add repo secret FIRECRAWL_API_KEY
+#   Settings -> Secrets and variables -> Actions -> New repository secret
+#
+# Manual run: Actions tab -> "Evidence drift monitor" -> Run workflow
+name: Evidence drift monitor
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run drift monitor
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: node scripts/firecrawl_monitor.mjs
+
+      - name: Upload drift report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-report
+          path: research/monitor/
+
+      - name: Explain failure
+        if: failure()
+        run: |
+          echo "::error::CONTENT DRIFT in Tier-1 evidence sources (or fetch failures persisted). Download the drift-report artifact, re-capture changed sources with scripts/firecrawl_capture.mjs, and review affected claim notes for staleness."
