@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r11",
+  "datasetVersion": "policy-2026-Q3-r12",
   "generatedAt": "2026-09-23",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
@@ -715,6 +715,26 @@
       "publisher": "minict.gov.rw (Ministry of ICT and Innovation, Rwanda)",
       "sourceType": "Official strategy document (PDF)",
       "captureNote": "Full SSP text captured 2026-09-23 (research/captures/2026-09-23-minict-gov-rw-index-php.md). SRMP II pillar alignment verbatim; data-centre actions incl. EUCL industrial-tariff categorisation."
+    },
+    "gt-ug-ita-cap340": {
+      "label": "Income Tax Act, Cap 340 (Domestic Tax Laws Uganda handbook reproduction)",
+      "tier": 2,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-23",
+      "url": "https://s3.amazonaws.com/rgi-documents/0216350e05e4b5dd46a9abc9d5ce2ffe7cda0610.pdf",
+      "publisher": "Grant Thornton Uganda consultant handbook (former-URA author; ULRC reprint-based)",
+      "sourceType": "Full-text statute reproduction (non-official; ULRC authentic reprint as at 19 Oct 2012)",
+      "captureNote": "Full ITA portion captured 2026-09-23 (research/captures/2026-09-23-s3-amazonaws-com-rgi-documents-0216350e05e4b5dd46a9abc9d5ce2ffe7cda0.md). s.21(1)(y) (inserted by IT (Am) Act 2008): 10-year income tax exemption for income derived from the exportation of finished consumer and capital goods; 80% export condition (para (aa)); prescribed-conditions and certificate regime ((ab),(ac)). Operationalised by the Income Tax (Tax Incentives for Exporters of Finished Consumer and Capital Goods) Regulations 2009 (Reg 5(1) ten-year certificate validity; Reg 6(b) 80% export condition), included in the same capture. Official ULII consolidation (ulii.org/akn/ug/act/1997/11/eng@2024-12-23/source) fetch-blocked 2026-09-23 (curl 403; Context.dev scrape extraction failed) - captured via this reproduction; handbook disclaimer: private work, not a government publication."
+    },
+    "pwc-uganda-tax-summaries": {
+      "label": "PwC Tax Summaries - Uganda corporate tax credits and incentives",
+      "tier": 3,
+      "captureStatus": "snippet",
+      "retrievedDate": "2026-09-23",
+      "url": "https://taxsummaries.pwc.com/uganda/corporate/tax-credits-and-incentives",
+      "publisher": "taxsummaries.pwc.com (PwC)",
+      "sourceType": "Reputable secondary (current-edition tax guide)",
+      "captureNote": "Snippet capture 2026-09-23 via Context.dev search result: 'A tax holiday of ten years is available to exporters who export at least 80% of their produce of finished goods, subject to certain conditions.' Current-edition corroboration of ITA Cap 340 s.21(1)(y)."
     }
   },
   "countries": {
@@ -918,10 +938,12 @@
           "sourceIds": [
             "us-state-ics-2025",
             "ulii-investment-code-2019",
-            "ulii-free-zones-act-2014"
+            "ulii-free-zones-act-2014",
+            "gt-ug-ita-cap340",
+            "pwc-uganda-tax-summaries"
           ],
-          "state": "partially-verified",
-          "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified. | r11 upgrade (editor-delegated 2026-09-23): Investment Code Act 2019 (T1, ULII) captured: s.12 sets incentive qualification (minimum capital, Schedule 2 priority areas, 80% export criterion, 60% citizen employment), s.13 provides the Authority's certificate of incentives, and the Uganda Free Zones Authority is named in s.4 definitions. Free Zones Act 2014 s.48 (T1) confirms exemptions from taxes and duties on EPZ imported inputs. However, neither captured instrument contains the 10-year income tax holiday: the Code defers to 'qualifications for incentives set out in any other law' and the captured Free Zones Act is the 2014 original. The holiday (T3: PwC tax summaries confirm availability to 80%+ exporters) lives in the Income Tax Act as amended - claim remains partially-verified pending that instrument's capture."
+          "state": "verified",
+          "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified. | r11 upgrade (editor-delegated 2026-09-23): Investment Code Act 2019 (T1, ULII) captured: s.12 sets incentive qualification (minimum capital, Schedule 2 priority areas, 80% export criterion, 60% citizen employment), s.13 provides the Authority's certificate of incentives, and the Uganda Free Zones Authority is named in s.4 definitions. Free Zones Act 2014 s.48 (T1) confirms exemptions from taxes and duties on EPZ imported inputs. However, neither captured instrument contains the 10-year income tax holiday: the Code defers to 'qualifications for incentives set out in any other law' and the captured Free Zones Act is the 2014 original. The holiday (T3: PwC tax summaries confirm availability to 80%+ exporters) lives in the Income Tax Act as amended - claim remains partially-verified pending that instrument's capture. | r12 upgrade (editor-approved conditional on verification, 2026-09-23): Income Tax Act Cap 340 s.21(1)(y) - 'the income of a person derived from the exportation of finished consumer and capital goods for a period of ten years', with the 80% export condition (para (aa)) and the prescribed-conditions/certificate regime ((ab),(ac); inserted by IT (Am) Act 2008) - captured via a Grant Thornton/ULRC-based full-text reproduction (T2); the operationalising 2009 Regulations are in the same capture; PwC current edition (T3) corroborates the ten-year/80% terms. Verified under 'two independent corroborating sources'; the official ULII consolidation remains the confirmation target (fetch-blocked 2026-09-23). The holiday is sector-agnostic statute text - any data-centre-specific treatment remains unverified."
         }
       ]
     },

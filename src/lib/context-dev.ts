@@ -123,7 +123,9 @@ export async function contextSearch(
   return json.results ?? [];
 }
 
-/** POST /web/scrape — one URL as Markdown (1 credit; 2 with browser actions). */
+/** POST /web/scrape — one URL as Markdown (1 credit; 2 with browser actions).
+ *  Response outputs use an envelope: { requested, success, data } — the
+ *  markdown text is at `markdown.data`; a failed output does not fail the call. */
 export async function contextScrape(
   url: string,
   opts: ContextScrapeOptions = {},
@@ -131,6 +133,8 @@ export async function contextScrape(
   const body: Record<string, unknown> = { url, formats: { markdown: true } };
   if (typeof opts.maxAgeMs === "number") body.maxAgeMs = opts.maxAgeMs;
   if (typeof opts.waitForMs === "number") body.waitForMs = opts.waitForMs;
-  const json = await call<{ markdown?: string }>("/web/scrape", body);
-  return json.markdown ?? "";
+  const json = await call<{
+    markdown?: { requested?: boolean | null; success?: boolean | null; data?: string | null };
+  }>("/web/scrape", body);
+  return json.markdown?.data ?? "";
 }

@@ -141,22 +141,26 @@ export const SINCE_LAST_REVIEW: {
   date: string;
   items: { label: string; detail: string; tone: "up" | "flat" | "note" }[];
 } = {
-  fromVersion: "policy-2026-Q3-r10",
-  toVersion: "policy-2026-Q3-r11",
+  fromVersion: "policy-2026-Q3-r11",
+  toVersion: "policy-2026-Q3-r12",
   date: "2026-09-23",
   items: [
     {
-      label: "+3 claims verified",
-      detail: "KE-TX-C2 SEZ tax relief · KE-TX-C4 EPZ holidays · RW-AI-C1 digital policy",
+      label: "+1 claim verified",
+      detail: "UG-TX-C1 10-year income tax holiday (ITA Cap 340 s.21(1)(y)) - the last weakened tax claim",
       tone: "up",
     },
     {
-      label: "+5 Tier-1 sources registered",
-      detail: "SEZ Act 2015 · EPZ Act Cap 517 · Investment Code 2019 · Free Zones Act 2014 · ICT SSP 2024-2029",
+      label: "+2 sources registered",
+      detail: "Grant Thornton ITA Cap 340 full-text reproduction (T2) · PwC Uganda tax summaries (T3)",
       tone: "up",
     },
     { label: "20 structured gaps (unchanged)", detail: "Next capture frontier: energy, construction and environmental pillars", tone: "flat" },
-    { label: "1 validator restored", detail: "Capture-linkage checks now run on every dataset edit", tone: "note" },
+    {
+      label: "Official consolidation fetch-blocked",
+      detail: "ULII ITA Cap 340 (403 + scrape extraction failed); captured via ULRC-based reproduction instead - confirmation target stands",
+      tone: "note",
+    },
   ],
 } as const;
 
