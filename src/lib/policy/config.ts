@@ -141,26 +141,29 @@ export const SINCE_LAST_REVIEW: {
   date: string;
   items: { label: string; detail: string; tone: "up" | "flat" | "note" }[];
 } = {
-  fromVersion: "policy-2026-Q3-r11",
-  toVersion: "policy-2026-Q3-r12",
-  date: "2026-09-23",
+  fromVersion: "policy-2026-Q3-r12",
+  toVersion: "policy-2026-Q3-r13",
+  date: "2026-09-24",
   items: [
     {
-      label: "+1 claim verified",
-      detail: "UG-TX-C1 10-year income tax holiday (ITA Cap 340 s.21(1)(y)) - the last weakened tax claim",
+      label: "KE licensing pillar 1 -> 4 claims",
+      detail:
+        "KE-LC-C2 verified (data centres licensed under NFP-Tier 2, no DC-specific class) + KE-LC-C3 verified (8 Sep 2026 CA notice proposing a standalone data centre licence, 30-day window)",
       tone: "up",
     },
     {
-      label: "+2 sources registered",
-      detail: "Grant Thornton ITA Cap 340 full-text reproduction (T2) · PwC Uganda tax summaries (T3)",
+      label: "+3 sources registered",
+      detail:
+        "CDH TMT licensing alert (T2) · Techafricanews (T3) · w.media quoting the CA notice (T3); all captured free via curl, zero API credits",
       tone: "up",
     },
-    { label: "20 structured gaps (unchanged)", detail: "Next capture frontier: energy, construction and environmental pillars", tone: "flat" },
     {
-      label: "Official consolidation fetch-blocked",
-      detail: "ULII ITA Cap 340 (403 + scrape extraction failed); captured via ULRC-based reproduction instead - confirmation target stands",
+      label: "+1 claim registered partially-verified",
+      detail:
+        "KE-LC-C4 proposed fee schedule (KSh 5,000 / 100,000 / 80,000 or 0.4% turnover) - single source; CA notice capture is the upgrade path",
       tone: "note",
     },
+    { label: "20 structured gaps (unchanged)", detail: "CA licence-class instrument still uncaptured; proposal-stage claims may change during consultation", tone: "flat" },
   ],
 } as const;
 

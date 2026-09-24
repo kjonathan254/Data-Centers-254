@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r12",
-  "generatedAt": "2026-09-23",
+  "datasetVersion": "policy-2026-Q3-r13",
+  "generatedAt": "2026-09-24",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
@@ -735,6 +735,39 @@
       "publisher": "taxsummaries.pwc.com (PwC)",
       "sourceType": "Reputable secondary (current-edition tax guide)",
       "captureNote": "Snippet capture 2026-09-23 via Context.dev search result: 'A tax holiday of ten years is available to exporters who export at least 80% of their produce of finished goods, subject to certain conditions.' Current-edition corroboration of ITA Cap 340 s.21(1)(y)."
+    },
+    "cdh-ke-tmt-alert-2026": {
+      "label": "CDH Technology & Communications Alert: Licensing, structuring and financing considerations for telecommunications businesses (Kenya)",
+      "tier": 2,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-24",
+      "publishedDate": "2026-09-23",
+      "url": "https://www.cliffedekkerhofmeyr.com/en/news/publications/2026/Kenya/Technology-Communications/technology-and-communications-alert-23-september-Licensing-structuring-and-financing-considerations-for-telecommunications-businesses",
+      "publisher": "Cliffe Dekker Hofmeyr (CDH)",
+      "sourceType": "Law-firm client alert (Kenya Technology & Communications; authors Njeri Wagacha, Brian Macharia)",
+      "captureNote": "Full alert body captured 2026-09-24 via manual curl, zero API credits (research/captures/2026-09-24-cdh-ke-tmt-alert-licensing-structuring-financing.md). Confirms: Revised Telecommunications Market Structure gazetted 6 March 2026; ULF Annex III names NFP-Tier 2 as the data centre licensing category; NFP-Tier 1 holders may rely on that licence to operate a commercial data centre; CA public notice of 8 September 2026 opened a 30-day comment window on a standalone data centre licence for co-location operators (hosting, power, cooling and storage infrastructure rather than telecommunications services); market context from Airtel Nxtra (Tatu City), iXAfrica Nairobi One and Cassava/Africa Data Centres. Legal basis: KIC Act Cap 411A s.24(1); ULF dates to 2008."
+    },
+    "techafricanews-ke-dc-licence": {
+      "label": "TechAfrica News: Kenya proposes standalone licence framework for data centres",
+      "tier": 3,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-24",
+      "publishedDate": "2026-09-08",
+      "url": "https://techafricanews.com/2026/09/08/kenya-proposes-standalone-licence-framework-data-centres/",
+      "publisher": "techafricanews.com",
+      "sourceType": "Trade press report",
+      "captureNote": "Full article captured 2026-09-24 via manual curl (research/captures/2026-09-24-techafricanews-ke-standalone-dc-licence.md). Independently corroborates the NFP-Tier 2 baseline ('instead of regulating co-location data centres under the existing Network Facilities Provider-Tier 2 licence category'), the 8 Sep 2026 public notice and the 30-day written-comment window (post/hand delivery to the Director General, CA)."
+    },
+    "wmedia-ke-dc-licence": {
+      "label": "w.media: Kenya's standalone data center license aims to lure investment",
+      "tier": 3,
+      "captureStatus": "captured",
+      "retrievedDate": "2026-09-24",
+      "publishedDate": "2026-09-11",
+      "url": "https://w.media/kenyas-standalone-data-center-license-aims-to-lure-investment/",
+      "publisher": "w.media (Brendyn Lotz)",
+      "sourceType": "Trade press report quoting the CA public notice",
+      "captureNote": "Full article captured 2026-09-24 via manual curl (research/captures/2026-09-24-wmedia-ke-standalone-dc-licence.md). Corroborates the NFP-Tier 2 baseline; reproduces the CA notice verbatim (rationale + coverage of 'entities that provide colocation data centre services, including the attendant supporting services'); sole source for the proposed fee schedule (KSh 5,000 application / KSh 100,000 initial / KSh 80,000 or 0.4% of gross annual turnover p.a. whichever higher) and for the 2027/2028 FY implementation timing. CA notice itself JS-blocked - upgrade path."
     }
   },
   "countries": {
@@ -1594,6 +1627,41 @@
             "tra-cet-pdf"
           ],
           "note": "Reuses the T1 EAC CET instrument text captured from TRA (EAC-wide instrument; KRA is the implementing authority in Kenya). Customs-union membership is uncontroversial; section-level KE import-procedure detail is an upgrade path."
+        },
+        {
+          "id": "KE-LC-C2",
+          "pillar": "licensing",
+          "statement": "Kenya's Unified Licensing Framework contains no data-centre-specific licence category: co-location data centres are licensed under the Network Facilities Provider - Tier 2 category of the Revised Telecommunications Market Structure (gazetted 6 March 2026).",
+          "sourceIds": [
+            "ca-licensing-procedures",
+            "cdh-ke-tmt-alert-2026",
+            "techafricanews-ke-dc-licence",
+            "wmedia-ke-dc-licence"
+          ],
+          "state": "verified",
+          "note": "r13 registration (editor instruction 'Work on the data set', 2026-09-24; humanGate delegation conditional on verification, r11/r12 precedent). Verified under 'two independent corroborating sources': CDH law-firm alert (T2) - 'the ULF Annex III licence table names Network Facilities Provider - Tier 2 as the category under which data centres are licensed'; Techafricanews (T3) - 'instead of regulating co-location data centres under the existing Network Facilities Provider-Tier 2 licence category'; w.media (T3) - 'As it stands, these operators are licensed under the Network Facilities Provider-Tier 2 (NFP-T2) category'. Single-source detail (CDH T2, upgrade path = capture the Annex III instrument): NFP-Tier 1 holders may rely on that nationwide infrastructure licence to operate a commercial data centre without an additional licence."
+        },
+        {
+          "id": "KE-LC-C3",
+          "pillar": "licensing",
+          "statement": "On 8 September 2026 the Communications Authority of Kenya published a public notice opening a 30-day comment window on a proposal to introduce a standalone data centre licence category for co-location data centre operators, replacing the Network Facilities Provider - Tier 2 treatment.",
+          "sourceIds": [
+            "cdh-ke-tmt-alert-2026",
+            "techafricanews-ke-dc-licence",
+            "wmedia-ke-dc-licence"
+          ],
+          "state": "verified",
+          "note": "r13 registration (same delegation). Verified under 'two independent corroborating sources' (T2 + two T3s). CA notice rationale quoted via w.media: 'provide regulatory clarity, enhance visibility over data centre operations, support investment in digital infrastructure, and align Kenya's framework with proportionate approaches adopted in comparable jurisdictions'. Coverage per the notice: 'entities that provide colocation data centre services, including the attendant supporting services'. Basis per CDH: co-location operators provide hosting, power, cooling and storage infrastructure rather than telecommunications services. Single-source detail (w.media): implementation planned for the 2027/2028 financial year. Upgrade path: capture the CA public notice itself (ca.go.ke open-consultations JS-blocked 2026-09-24). Proposal-stage claim: may change or lapse during/after consultation."
+        },
+        {
+          "id": "KE-LC-C4",
+          "pillar": "licensing",
+          "statement": "The CA's proposed standalone data centre licence carries a proposed fee schedule: KSh 5,000 application fee, KSh 100,000 initial fee, and an annual operating fee of KSh 80,000 or 0.4 percent of gross annual turnover, whichever is higher.",
+          "sourceIds": [
+            "wmedia-ke-dc-licence"
+          ],
+          "state": "partially-verified",
+          "note": "r13 registration (same delegation). Single source (w.media T3, quoting the CA notice; US$ conversions at that article's rates). Remains partially-verified until the CA notice or gazette instrument is captured (ca.go.ke JS-blocked 2026-09-24); proposal-stage figures may change during consultation."
         }
       ]
     }
