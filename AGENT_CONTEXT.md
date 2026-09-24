@@ -109,6 +109,29 @@
    overflow fixes (grid min-w-0). Phase 3 candidates remaining: claim-record
    deep links from matrix drawer to pillar anchors, compare-view exports,
    quarterly delta views. User mockup + audit text live in chat history.
+9. **Google Alerts leads (editor's digest 2026-09-24, triaged — none captured
+   yet, humanGate applies)**: (a) Cliffe Dekker Hofmeyr "Licensing, structuring
+   and financing considerations for telecommunications businesses" (Kenya,
+   2026-09-23, law-firm alert; mentions Airtel Nxtra + Africa Data Centres
+   pan-African delivery) → candidate source for KE licensing pillar/tracker;
+   (b) Yahoo Finance/ResearchAndMarkets "Kenya Data Center Market Trends and
+   Investment Analysis 2026-2031" — snippet claims Kenya connects to SEVEN
+   operational submarine cable systems (2Africa, DARE1, EASSy, …) → cross-check
+   against tracker/cables data; (c) Daily Nation op-ed cites IMF: ~160 data
+   centres in Africa ≈ 5.5% of global total → find the underlying IMF primary
+   before using anywhere; (d) IBTC Data Centre Academy expands into Kenya
+   (Schneider Electric; ADCA named) → talent/skills ecosystem news candidate.
+   Not leads: Uztelecom (Uzbekistan), Intel–Submer MEA (vendor news),
+   Vodacom/mybroadband (noise), TelcoTitans infrawatch (borderline).
+10. **Upstash Redis (rate limiter)**: DB "exact-mongoose-92996" EXISTS and
+   credentials VALID (PING PONG, tested 2026-09-24), but the vars were never
+   added to Vercel → src/lib/rate-limit.ts runs MEMORY MODE in production
+   (per-instance limits, reset on cold start; prod log warns once per
+   instance). User decision pending: add UPSTASH_REDIS_REST_URL +
+   UPSTASH_REDIS_REST_TOKEN to Vercel Production env + redeploy (persistent
+   global limits; stops Upstash's inactive-DB notices), OR delete the Upstash
+   DB (site unaffected; accept per-instance limiting). Token transited chat —
+   rotate in Upstash console after wiring if keeping.
 
 ## Tooling quick reference
 
