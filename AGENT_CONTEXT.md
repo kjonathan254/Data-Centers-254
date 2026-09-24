@@ -495,3 +495,37 @@
   articles (africa-power-hero x2 IMF; datacloud x2 + power-technicians x1
   IBTC). CI green on 9bcbcf4 via GitHub REST API (gh CLI still flaky).
 - npm ci re-run after workspace rollback (node_modules wiped; 533 pkgs, 16s).
+
+### 2026-09-24 — Arizton Kenya market report minted + "Edited by" tagline (Task 54)
+- Editor instruction: mine the ResearchAndMarkets/Arizton "Kenya Data Center
+  Market - Investment Analysis & Growth Opportunities 2026-2031" (report ID
+  5692396, March 2026 edition, data snapshot September 2025); tagline to read
+  "Edited by Kevin Jonathan Otieno"; supply sitemap URL for GSC.
+- SOURCE (zero API credits): R&M page curl-open (HTTP 200, 302 KB) - full
+  press-release text extracted from HTML. Publisher Arizton. Capture filed
+  (T3, capture-pending, claims: [] - market estimates stay attributed, no
+  policy-claim upgrades proposed). Verbatim extracts: 266M 2025 -> 805M 2031
+  @ 20.27% CAGR; 7 operational cables (2Africa, DARE 1, EASSy, LION2, PEACE,
+  SEACOM/Tata TGN-Eurasia, TEAMS) + 2 incoming (Africa-1, Daraja, 2026-27);
+  13 operational colocation DCs (Nairobi 8 existing/7 upcoming); KenGen BESS
+  Jul 2025; vendors ADC/iColo/iXAfrica/Safaricom/Telkom; Nxtra KSh 19B
+  ($147M) Q1 2027; iXAfrica RMB financing + Helios $50M; G42 EcoCloud MoU
+  100MW->1GW (stale: our coverage has suspension May 2026 - correction baked
+  into article).
+- Cross-checks: directory Kenya count is 23 facilities / 14 operators
+  (vs Arizton 13 colocation-only); earlier outlook piece had $180-220M ->
+  $400-500M by 2030 (definitions differ - both presented, never blended).
+- ARTICLE: content/articles/kenya-data-centre-market-266m-to-805m-arizton-
+  outlook.md (Market Analysis / Kenya cluster, ~1,250 words, 9 internal
+  links, 3 images - hero africa-data-centres-nairobi-exterior.webp was
+  unused site-wide so no hero duplication; 1 external source only: the
+  actually-read R&M page; 4-question FAQ). Built HTML: title 54 (+8=62),
+  desc 156 raw (166 built = &#x27; escaping false alarm), 1 h1, canonical.
+- TAGLINE: ArticlePageClient.tsx "Written and edited by" -> "Edited by"
+  (site-wide, all 102 articles; JSON-LD keeps clean person name; verified
+  in 3 built HTML files).
+- README 101->102; validator ALL OK (102); tsc/lint/build PASS (203 pages);
+  commit dbb1407, CI green via REST API.
+- GSC: sitemap live at https://data-centers-254.vercel.app/sitemap.xml
+  (HTTP 200, 178 URLs incl. 101 article URLs at check time); robots-friendly;
+  feed.xml also live for RSS.
