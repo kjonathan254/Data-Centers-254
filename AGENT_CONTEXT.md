@@ -32,12 +32,12 @@
 8. Delegations: the editor grants task-specific authority in chat (e.g. r11
    claim upgrades, 2026-09-23). Record the delegation in commit messages.
 
-## Current state (updated 2026-09-23, r11)
+## Current state (updated 2026-09-23, r12)
 
 - **Site**: data-centers-254.vercel.app (Vercel free team, project
   `prj_Tigqxa5amDHpQcDT34kdIqSEnAMt`), repo kjonathan254/Data-Centers-254, branch main.
-- **Policy Intelligence**: dataset `policy-2026-Q3-r11` — **49/56 claims verified,
-  7 partially-verified, 0 unverified**; 60 sources (47 T1); 20 pillar gaps
+- **Policy Intelligence**: dataset `policy-2026-Q3-r12` — **50/56 claims verified,
+  6 partially-verified, 0 unverified**; 62 sources (47 T1); 20 pillar gaps
   (energy/construction/environment mostly unresearched in UG/RW; EAC regional
   frameworks untouched across all four).
 - **Validator**: `python3 scripts/validate_policy.py` → PASS (schema, referential
@@ -79,9 +79,14 @@
    New repository secret → name `FIRECRAWL_API_KEY`, value = rotated Firecrawl
    key held in `.env.local`. Weekly cron stays COMMENTED OUT until credits
    return (workflow_dispatch works); re-enable both `schedule` lines then.
-2. **UG-TX-C1** (only weakened remaining tax claim): 10-year income tax holiday
-   awaits Uganda Income Tax Act (Cap 340, as amended) capture — Free Zones Act
-   2014 + Investment Code 2019 already captured (T1).
+2. **RESOLVED r12 (2026-09-23)** — UG-TX-C1 (10-year income tax holiday) UPGRADED
+   TO VERIFIED (editor-approved conditional on verification): ITA Cap 340
+   s.21(1)(y) confirmed in a Grant Thornton/ULRC-based full-text reproduction
+   (T2, capture filed) + the operationalising 2009 Regulations (same capture) +
+   PwC current edition (T3). Official ULII consolidation (eng@2024-12-23/source)
+   remains the confirmation target: fetch-blocked (curl 403; Context.dev scrape
+   extraction failed — 1 credit). If ULII access opens, capture it and note; no
+   further state change expected unless the provision is repealed/amended.
 3. **Hard captures** (need authenticated/JS portals — out of pipeline reach):
    UG-DP-C4 (PDPO portal form mechanics), RW-DP-C6 (transition-end confirmation),
    UG-LC-C3/C4 (UCC instrument detail). Editor/manual path.
@@ -305,3 +310,40 @@
 - Use sparingly (user directive). Firecrawl stays frozen (both keys 402);
   Context.dev is the discovery path until Firecrawl credits return.
 - Key rotation reminder applies to the Context.dev key too (transited chat).
+
+### 2026-09-23 — r12: UG-TX-C1 verified via Context.dev-era capture (Task 50)
+- Editor gave conditional approval: "Approved if you can confirm its good
+  information". Verification performed on the actual statute text, not snippets.
+- The hunt for ITA Cap 340 "as amended": ULII /source PDF → curl 403
+  (Cloudflare, UA-spoof also blocked); Context.dev scrape of ULII → extraction
+  failed (1 credit, markdown envelope success:false). Fallback (free):
+  S3-hosted "Domestic Tax Laws Uganda" handbook PDF (406 pp, rgi-documents) +
+  a-mla.org Act PDF (133 pp — OLDER expression, lacks s.21(1)(y); rejected).
+- Handbook verified: s.21(1)(y) "income ... derived from the exportation of
+  finished consumer and capital goods for a period of ten years", 80% export
+  condition, certificate regime; inserted by IT (Am) Act 2008; operationalising
+  Income Tax (Tax Incentives for Exporters of Finished Consumer and Capital
+  Goods) Regulations 2009 (Reg 5(1) ten-year validity, Reg 6(b) 80%). Handbook
+  = private reproduction (Grant Thornton consultant, ex-URA; ULRC authentic
+  reprint as at 19 Oct 2012) → registered T2 with transparent sourceType;
+  a-mla rejected; PwC current edition registered T3 as independent corroboration.
+- Upgrade rationale under statusVocabulary "verified" = "primary OR two
+  independent corroborating sources": instrument text (via reproduction) + PwC.
+  humanGate: user's conditional approval recorded in capture note + commit.
+- r12 changes (commit 3dec566): UG-TX-C1 → verified (50/56, 6 partial; coverage
+  89%); +2 sources (gt-ug-ita-cap340 T2 captured, pwc-uganda-tax-summaries T3
+  snippet); capture filed research/captures/2026-09-23-s3-amazonaws-com-rgi-
+  documents-0216350e05e4b5dd46a9abc9d5ce2ffe7cda0.md (576 KB, full ITA portion
+  + verification extract); SINCE_LAST_REVIEW r11→r12; validator PASS (10
+  capture links); tsc/lint/build PASS; built HTML shows "50/56" description.
+- BUG FIXED in upgrade script first run: countries is a DICT (not a list) —
+  iterating keys silently skipped the claim (validator's 49/56 caught it).
+  policy_upgrade_r12.py now handles both shapes. Check state counters on every
+  upgrade run before committing.
+- New tool: scripts/contextdev_capture.mjs (capture CLI, mirrors
+  firecrawl_capture.mjs front matter; context.dev /v1/web/scrape, maxAgeMs=0).
+  src/lib/context-dev.ts contextScrape fixed: markdown output is an envelope
+  ({requested, success, data}) — text at markdown.data.
+- 6th workspace rollback hit mid-task (HEAD fell back to e7a41a3); ff-only heal
+  restored Task 49 work; .env.local lost the Context.dev key line again —
+  re-added. Expect node_modules wipes on every rollback: npm ci after healing.
