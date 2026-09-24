@@ -537,3 +537,38 @@
   /home/z/my-project/download/posters/). LinkedIn 1200x627 split-panel layout,
   WhatsApp 1080x1080 image-top layout, CTA pill + "Edited by Kevin Jonathan
   Otieno" byline + site URL on all. Repo untouched.
+
+### 2026-09-24 — Policy Intelligence editorial revision per editor review (Task 56)
+- Editor reviewed the live /policy/intelligence page and issued a priority order; items 1-5
+  implemented in commit 603c69d; items 6-7 (source tiers/capture states, downloadable JSON)
+  deliberately untouched; item 8 already shipped (see discovery below).
+- Item 1: hero "88% Evidence coverage" relabelled "Claim verification rate"; visible note under
+  the stat - "Share of entered claims meeting the evidence threshold. {gaps} research gaps remain
+  across the {pillars} policy pillars" (both dataset-derived, zero hardcoding). Info tooltip
+  reworded to "Verification rate = verified claims / claims entered in the dataset..." via
+  scripts/pi_editorial_edits.py (old_str contains division sign + em dash; tool edits write
+  \uXXXX escapes literally, so python owns all non-ASCII replacements).
+- Item 2: coverageRating() ("Very strong/Strong/Moderate/Early") deleted; KPI cards now show the
+  neutral underlying evidence state: "N verified / N partial" + "N claims". Matrix cells were
+  already neutral (N V / N P / N%).
+- Item 3: why-this-matters lede above the console canvas, editor's exact sentence (licences, data,
+  power, taxation, construction, cross-border transfers).
+- Item 4: "Open research queue" retitled "Research queue" + "What we're investigating next"
+  subtitle (high/medium priority chips were already live and dataset-derived).
+- Item 5: evidence-first principle ("Evidence-first. One claim. One evidence trail. Every source
+  classified. Every gap visible.") placed immediately beneath the hero H1.
+- Bonus: editor asked to bold "editorial approval is not factual certainty" - sentence wrapped in
+  <strong> in Method & governance. Country room header "{pct}% coverage" -> "{pct}% verified";
+  aria-labels updated; caption under KPI grid explains the rate and the gap/claim distinction.
+- DISCOVERY for editor: r12->r13 change history ALREADY EXISTS - the "Since last dataset review"
+  strip (SINCE_LAST_REVIEW in src/lib/policy/config.ts) lists KE licensing 1->4 claims, +3
+  sources, +1 partial claim, 20 gaps unchanged. Flagged in reply; candidate for promotion later.
+- House lesson reinforced: MultiEdit here is SEQUENTIAL, not atomic - run 1 applied edits #1-8,
+  stopped at failed #9 while the tool reported failure; run 2 then failed on already-applied #1.
+  Always git diff after any MultiEdit failure to inspect partial state.
+- Validation: tsc clean, lint clean, build PASS; built HTML greps: "Claim verification rate",
+  "Research queue", "investigating next", lede, strong tag, ">88<" all present;
+  "Very strong|Evidence coverage|Open research queue" = 0 occurrences. CI green run #64 on
+  603c69d via REST API.
+- Posters (Task 55, prior continuation) remain deliverables outside the repo:
+  /home/z/my-project/download/posters/ (IMF + IBTC x LinkedIn 1200x627 + WhatsApp 1080x1080).
