@@ -684,3 +684,29 @@
   Source of truth: scripts/posters/ (HTML + shoot_posters.js renderer).
 - NOTE: session-2 LinkedIn post text files (post 1 + post 2) were lost in the same workspace
   reset; numbers for post 1 remain documented in the session-2 log above (61/67/49/55).
+
+### 2026-09-24 (session 4) — Site audit pass 2: residual scoping + snapshot drift (Task 61, commit eccf879)
+- Picked up the external site audit ("check what's real and what's not"). Pass 1 (d6772e7,
+  earlier same day) had already fixed homepage band + FAQ scoping and re-verified 5 findings
+  FALSE (sitemap 200/179 URLs, /infrastructure/map 200, /api/directory 200, unique policy
+  titles, directory arithmetic). This pass re-verified all five live (200s confirmed again).
+- REAL residual finding 1: the annual review page (research/state-of-kenyan-data-centres-2026)
+  computed its KPIs from the unscoped register - "31 tracked / 22 operational" under a
+  Kenya-titled review, carrier-neutral footnote "N of 22", and 2 regional UC records (Raxio
+  Dar, ADC Kigali) rendered as Kenyan pipeline. Now Kenya-scoped end to end: 27 tracked /
+  20 operational in Kenya / "8 of 20 operating Kenyan facilities" / Kenya-only pipeline grid;
+  hero states the 27 + 4 split explicitly; dead vars (certed, publishedMw) removed.
+- REAL residual finding 2 (audit finding 7 root cause): the 26 facilities / 186 MW the audit
+  saw came from the Brief/01 PDF (minted 21 Sep from a pre-EA snapshot, no date marker) and
+  the research hub card hardcoding the same snapshot. Card refreshed to 27 / 230 MW (122
+  networks + 8/20 neutral re-verified unchanged); PDF cover stamped: "Data snapshot: Sept
+  2026 (26 facilities) - the live review now reports 27 facilities and 230 MW announced".
+  Full Brief/01 re-mint queued. The three headline MW figures are different labelled metrics,
+  not contradictions: 10.5 published IT load / 42.9 built / 230 pipeline / 272.9 total supply
+  (site-stats canonical-label comments refreshed to 42.9/272.9).
+- Directory intro sentence reordered (body + meta description) so the city split (19 Nairobi,
+  4 Mombasa) attaches to the 27 Kenya total, not the 20 operational. Numbers unchanged.
+- Corrections log entry 2026-09-25 records all of the above + the advisory (vercel.app
+  domain, gmail contact, centers/centres brand split) as owner-decision items.
+- Gates: tsc/lint/build PASS (node_modules restored after workspace rollback, 533 pkgs).
+  Rendered output verified in built HTML before push. Live deploy follows via Vercel.
