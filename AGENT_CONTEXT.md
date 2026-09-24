@@ -107,7 +107,29 @@
 
 ## Tooling quick reference
 
-- Search: `node scripts/firecrawl_search.mjs "<query>"` (prints numbered candidates)
+- **Context.dev** (web-data layer, replaces Firecrawl while it is 402; use
+  sparingly — user directive):
+  - Env: `CONTEXT_DEV_API_KEY` (gitignored `.env.local`; NOT yet in Vercel env —
+    add there when a runtime feature needs it).
+  - Wrapper (single choke point, zero-dep native fetch, server-only):
+    `src/lib/context-dev.ts` — `contextSearch()` (POST /web/search, 1 credit
+    per 10 results) and `contextScrape()` (POST /web/scrape, 1 credit). Built-in:
+    Retry-After honored on 429, bounded backoff on 408/5xx, no retry on other
+    4xx, `maxAgeMs` cache passthrough. Docs:
+    https://docs.context.dev/api-reference/web-scraping/search ·
+    https://docs.context.dev/api-reference/web-scraping/scrape
+  - Pipeline CLI: `node scripts/contextdev_search.mjs "query" [--limit 10]
+    [--freshness last_year]` — prints numbered candidates, humanGate applies.
+    First real call 2026-09-23 (1 credit): "Uganda Income Tax Act Cap 340
+    income tax holiday" → 10 candidates incl. parliament.ug bill page
+    (Income Tax Amendment Bill 2022 / Bujagali holiday), a-mla.org Cap 340 PDF,
+    ULII /akn/ Act link — candidates for UG-TX-C1 capture (open thread 2).
+  - Future endpoints of interest: /parse (PDFs → Markdown, 1 credit + OCR/page)
+    for Tier-1 act PDFs; /monitors (scheduled change checks) as drift-monitor
+    alternative; /batch/submit only past a few hundred URLs.
+  - NEVER install the context.dev npm SDK: standing rule 5 (zero new runtime
+    deps) — the REST wrapper above is the sanctioned path.
+- Search (legacy, frozen): `node scripts/firecrawl_search.mjs "<query>"` (prints numbered candidates)
 - Capture: `node scripts/firecrawl_capture.mjs "<url>" --tier 1 --claims ID1,ID2`
 - Monitor: `node scripts/firecrawl_monitor.mjs [--max N] [--url U] [--threshold 90]`
 - Validate: `python3 scripts/validate_policy.py`
@@ -252,3 +274,34 @@
 - Sanity: validator PASS (r11 untouched, 49/56 verified); live
   /policy/intelligence returns 200 with console-chrome strings present —
   mockup-matched layout confirmed live on production.
+
+### 2026-09-23 — Bing SEO fixes on /policy/intelligence + Context.dev integration (Task 49)
+- User pasted a Bing URL-inspection report for /policy/intelligence: title
+  >70 chars, meta description >160 chars, missing h1. All three confirmed in
+  live HTML: title 80 (74 + " | DC254" template), description 221, H1 COUNT 0
+  (Task 47 redesign demoted the heading — hero used h2, console header a <p>).
+- Fixes (commit 2ee977b): page.tsx static metadata → generateMetadata() —
+  title "Policy Intelligence — East Africa Data Centre Regulation" (57+8=64
+  rendered), description computed LIVE from dataset ("49/56 audited claims…",
+  149 chars; removed the hardcoded "56" that violated the live-stats rule);
+  control-room.tsx hero h2 → h1 "Who governs East Africa's data centres?"
+  (39 chars, SSR-rendered, visuals unchanged). Audited every page title:
+  only this page violated; pillar pages ≤61 rendered; corrections/page strings
+  are body-card headings, not <title>.
+- Verified in the BUILT html (.next/server/app/policy/intelligence.html):
+  TITLE 64, DESC 149, H1 COUNT 1. tsc/eslint/build PASS; validator PASS.
+- Context.dev integrated as the web-data layer (user supplied key in chat;
+  stored in gitignored .env.local only; docs read first: quickstart + search
+  + scrape .md pages). ZERO new npm deps by design (rule 5): server-only
+  wrapper src/lib/context-dev.ts (contextSearch/contextScrape, Retry-After
+  on 429, bounded backoff 408/5xx, no retry on other 4xx, maxAgeMs) +
+  pipeline CLI scripts/contextdev_search.mjs (firecrawl_search.mjs output
+  conventions, humanGate wording). SDK install explicitly rejected.
+- Proof call (1 credit): POST /v1/web/search "Uganda Income Tax Act Cap 340
+  income tax holiday" → HTTP 200, 10 ranked results; top candidates feed
+  UG-TX-C1 (open thread 2): parliament.ug Income Tax (Amendment) Bill 2022
+  (Bujagali holiday), a-mla.org Cap 340 PDF, ULII /akn/ Act page. NOT yet
+  captured — editor picks first (humanGate).
+- Use sparingly (user directive). Firecrawl stays frozen (both keys 402);
+  Context.dev is the discovery path until Firecrawl credits return.
+- Key rotation reminder applies to the Context.dev key too (transited chat).
