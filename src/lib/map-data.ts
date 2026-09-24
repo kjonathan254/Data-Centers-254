@@ -68,7 +68,7 @@ export const KENYA_FACILITIES: KenyaFacility[] = [
 // difference vs the directory: this sum counts only operational facilities
 // with a published MW figure (landing stations and unpublished sites add 0),
 // so it is labelled "mapped live capacity" (28.2 MW), not the directory's
-// 38.5 MW "live designed capacity". See site-stats.ts for canonical labels.
+// 42.9 MW "live designed capacity". See site-stats.ts for canonical labels.
 const r1 = (n: number) => Math.round(n * 10) / 10;
 const operationalMw = KENYA_FACILITIES
   .filter((f) => f.status === "Operational")
