@@ -138,14 +138,18 @@
    global limits; stops Upstash's inactive-DB notices), OR delete the Upstash
    DB (site unaffected; accept per-instance limiting). Token transited chat —
    rotate in Upstash console after wiring if keeping.
-11. **User-supplied images NOT delivered (pending, 2026-09-24)**: editor sent
-   three files in chat (Africa Powe Hero.jpg, master-power-1-750x375.jpg,
-   IMG_9828.jpeg.webp) but none reached /home/z/my-project/upload/. Intended
-   wiring: IMF article hero → Africa Powe Hero.jpg (currently africa-dc-map),
-   master-power as IMF section-break, IBTC article hero → IMG_9828.jpeg.webp
-   (temporarily classroom-ict-training-kenya.webp). Ask editor to re-attach;
-   copy to public/images with lowercase-hyphen names, swap 3 front-matter
-   lines + 1 body ref, rebuild.
+11. **RESOLVED Task 53b (2026-09-24)** — editor uploaded the three images
+   directly to the repo ROOT (commit 27326bf "Add files via upload").
+   Wired: IMF article hero -> africa-power-hero.webp (from Africa Powe
+   Hero.jpg); IBTC article hero -> datacloud-africa-nairobi-2026.webp (from
+   IMG_9828.jpeg.webp, ITW & Datacloud Africa backdrop photo);
+   dc-power-technicians-training.webp (from master-power-1-750x375.jpg)
+   went to the IBTC article as an INLINE image (DCCA I power/cooling
+   placement angle) instead of the provisionally planned IMF section-break;
+   editorial fit is stronger in the careers piece; editor can veto, a
+   1-minute move. Converter persisted at scripts/convert_uploaded_images.py
+   (Pillow, webp q88); root uploads git-rm'd; og:image verified in built
+   HTML; CI green (9bcbcf4).
 
 ## Tooling quick reference
 
@@ -463,3 +467,31 @@
   70); README count auto-checked (now 101); article_validator ALL OK
   (101), tsc/lint/build PASS, built HTML: policy page renders 52/59 + r13
   live from dataset.
+
+### 2026-09-24 — editor's hero images delivered via repo upload + wired (Task 53b)
+- Editor uploaded the three pending images to the repo ROOT (commit 27326bf
+  "Add files via upload"): Africa Powe Hero.jpg, IMG_9828.jpeg.webp,
+  master-power-1-750x375.jpg. Pulled ff-only; viewed all three (map-and-
+  server-rack illustration; Datacloud Africa stage-backdrop photo, Nairobi;
+  three technicians on power distribution gear in a data hall) BEFORE writing
+  alt/caption text - no guessed image content.
+- scripts/convert_uploaded_images.py (Pillow, persisted, idempotent):
+  africa-power-hero.webp 736x552 q88 (48 KB), datacloud-africa-nairobi-2026
+  .webp 1280x960 straight copy (125 KB), dc-power-technicians-training.webp
+  750x375 q88 (57 KB) - all into public/images/. Root uploads git-rm'd
+  (git detected IMG_9828 -> public/images as a rename).
+- Front matter wiring: IMF article og_image + images[0] -> africa-power-hero
+  .webp (alt updated to describe the illustration, 160/5.5% caption kept);
+  IBTC article og_image + images[0] -> datacloud-africa-nairobi-2026.webp
+  (alt describes the backdrop photo honestly - no identity claims); NEW
+  images[] entry dc-power-technicians-training.webp position inline with a
+  DCCA I power/cooling/IMEX caption. Old refs (africa-dc-map, classroom-ict)
+  now zero in both files and built HTML.
+- Deviation from thread 11's provisional plan recorded: master-power went to
+  IBTC inline instead of IMF section-break (editorial fit - the careers piece
+  narrates hands-on placement); vetoable by editor, 1-minute move.
+- Verified: article_validator ALL OK (101), tsc clean, lint clean, build PASS
+  (202 static pages), built HTML og:image + img tags confirmed for both
+  articles (africa-power-hero x2 IMF; datacloud x2 + power-technicians x1
+  IBTC). CI green on 9bcbcf4 via GitHub REST API (gh CLI still flaky).
+- npm ci re-run after workspace rollback (node_modules wiped; 533 pkgs, 16s).
