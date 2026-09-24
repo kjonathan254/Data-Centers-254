@@ -14,10 +14,10 @@ import { SUBSEA_CABLES } from "./market-trackers";
  *   27      -> Verified facilities in Kenya
  *   31      -> Tracked facilities & projects (27 Kenya + 4 EA reference records)
  *   10.5 MW -> Published in-service IT load (verified, operational Kenya)
- *   38.5 MW -> Live designed capacity (built, operational Kenya)
+ *   42.9 MW -> Live designed capacity (built, operational Kenya)
  *   28.2 MW -> Mapped live capacity (map-layer subset with published MW)
  *   230 MW  -> Announced pipeline (under construction + committed + early stage)
- *   268.5 MW-> Total tracked supply, all stages
+ *   272.9 MW-> Total tracked supply, all stages
  *   7 / 10  -> Subsea cables in service / systems tracked
  */
 
@@ -44,11 +44,11 @@ export interface PlatformStats {
   operators: number;
   /** 10.5 MW: verified in-service IT load, operational Kenya facilities. */
   publishedItLoadMw: number;
-  /** 38.5 MW: designed capacity of operational Kenya facilities. */
+  /** 42.9 MW: designed capacity of operational Kenya facilities. */
   designedLiveMw: number;
   /** 230 MW: UC + committed + early stage, developer-announced. */
   pipelineMw: number;
-  /** 268.5 MW: designed live + announced pipeline. */
+  /** 272.9 MW: designed live + announced pipeline. */
   totalSupplyMw: number;
   cables: CableStats;
   lastVerified: string;

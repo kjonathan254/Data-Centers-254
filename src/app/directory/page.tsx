@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   // Canonical labels, per the audit: 31 = tracked incl. regional records,
   // 27 = verified facilities in Kenya. Never blended in one number.
   const title = `Kenya Data Centre Directory: ${facilities.length} Tracked, ${kenyaCount} in Kenya`;
-  const description = `How many data centres are in Kenya? ${kenyaCount} verified Kenyan facilities, ${kenyaOp} operational (${nairobi} in Nairobi, ${mombasa} in Mombasa), plus ${regional.length} East Africa reference records. Search, filter, and compare, fully sourced.`;
+  const description = `How many data centres are in Kenya? ${kenyaCount} verified Kenyan facilities (${nairobi} in Nairobi, ${mombasa} in Mombasa), ${kenyaOp} of them operational, plus ${regional.length} East Africa reference records. Search, filter, and compare, fully sourced.`;
   return {
     title,
     description,
@@ -132,9 +132,9 @@ export default async function DirectoryPage({
         <div className="container-site mt-6">
           <h2 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h2>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mb-2">
-            DC254 currently tracks <strong className="text-foreground">{snap.kenyaFacilities} data centre facilities in Kenya</strong>,
-            of which {operationalCount - regional.filter((f) => f.status === "Operational").length} are operational ({nairobiCount} in
-            Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza), plus {snap.regionalFacilities} verified
+            DC254 currently tracks <strong className="text-foreground">{snap.kenyaFacilities} data centre facilities in Kenya</strong>{" "}
+            ({nairobiCount} in Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza), of which{" "}
+            {operationalCount - regional.filter((f) => f.status === "Operational").length} are operational, plus {snap.regionalFacilities} verified
             East Africa records: {regional.map((f) => `${f.name} (${f.country || "Kenya"})`).join(", ")}. The
             remaining {facilities.length - operationalCount} tracked sites are under construction, committed, or at an early
             stage. Every row is verified against a published source and dated, and the

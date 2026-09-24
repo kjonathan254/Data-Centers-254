@@ -38,16 +38,18 @@ const STAGE_META: Record<string, { icon: typeof CheckCircle2; blurb: string }> =
 export default function StateOfKenyanDataCentres2026() {
   const snapshot = getMarketSnapshot();
   const facilities = getFacilities();
-  const operational = facilities.filter((f) => f.status === "Operational");
+  // Kenya scope: this review is titled "State of Kenyan Data Centres", so every
+  // figure below counts facilities physically in Kenya only. The 4 East African
+  // reference records in the directory are regional context, never counted here.
+  const operational = facilities
+    .filter((f) => f.country === "Kenya" && f.status === "Operational");
   const ranked = [...operational]
     .filter((f) => (f.peeringdbNetworks ?? 0) > 0)
     .sort((a, b) => (b.peeringdbNetworks ?? 0) - (a.peeringdbNetworks ?? 0))
     .slice(0, 8);
   const pipeline = STATUS_ORDER.filter((s) => s !== "Operational")
-    .flatMap((s) => facilities.filter((f) => f.status === s).map((f) => ({ f, s })));
-  const certed = operational.filter((f) => f.certNote && (f.certifications.length > 0 || f.certNote.includes("Uptime")));
+    .flatMap((s) => facilities.filter((f) => f.country === "Kenya" && f.status === s).map((f) => ({ f, s })));
   const neutralCount = operational.filter((f) => f.carrierNeutral === true).length;
-  const publishedMw = operational.reduce((s, f) => s + (f.itLoadMw || 0), 0);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -58,10 +60,12 @@ export default function StateOfKenyanDataCentres2026() {
           <h1 className="text-display-sm text-foreground mb-5">State of Kenyan Data Centres 2026</h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-4">
             The first edition of our annual review, every figure below is drawn
-            live from the {facilities.length}-entry{" "}
+            live from our{" "}
             <Link href="/directory" className="text-cyan underline hover:underline">DC Directory</Link>{" "}
-            dataset on the day you read this page, which is why this review never
-            goes stale. Scope, sources and confidence tiers are documented in our{" "}
+            — {snapshot.kenyaFacilities} Kenyan facilities plus {snapshot.regionalFacilities} East
+            African reference records — on the day you read this page, which is
+            why this review never goes stale. Scope, sources and confidence tiers
+            are documented in our{" "}
             <Link href="/methodology" className="text-cyan underline hover:underline">data methodology</Link>.
           </p>
           <p className="text-xs text-muted-foreground mb-6">
@@ -108,7 +112,7 @@ export default function StateOfKenyanDataCentres2026() {
           {/* Headline stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-14">
             {[
-              { label: "Facilities tracked", value: String(snapshot.facilities), sub: `${operational.length} operational` },
+              { label: "Facilities tracked", value: String(snapshot.kenyaFacilities), sub: `${operational.length} operational in Kenya` },
               { label: "Live IT load (published)", value: `${snapshot.liveItLoadMw.toFixed(1)} MW`, sub: "sum of operator-published IT load" },
               { label: "Built capacity (published)", value: `${snapshot.stages[0]?.mw.toFixed(1) ?? "0"} MW`, sub: "designed capacity of live sites" },
               { label: "Announced pipeline", value: `${(snapshot.totalSupplyMw - snapshot.stages[0]?.mw).toFixed(0)} MW`, sub: "UC + committed + early stage" },
@@ -185,7 +189,7 @@ export default function StateOfKenyanDataCentres2026() {
               </tbody>
             </table>
             <p className="px-4 py-3 text-xs text-muted-foreground border-t border-border/30 bg-accent/20">
-              {neutralCount} of {operational.length} operating facilities are genuinely carrier-neutral. Register fetched 8 Sep 2026, community-maintained, so treat as a floor, not a ceiling.
+              {neutralCount} of {operational.length} operating Kenyan facilities are genuinely carrier-neutral. Register fetched 8 Sep 2026, community-maintained, so treat as a floor, not a ceiling.
             </p>
           </div>
 

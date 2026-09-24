@@ -26,6 +26,18 @@ export const CORRECTIONS_SLA = {
 
 export const correctionsLog: CorrectionEntry[] = [
   {
+    date: "2026-09-25",
+    summary: "Second audit pass: Kenya scoping on the annual review and research hub cards; the Brief/01 PDF snapshot stamped; directory sentence order clarified.",
+    changes: [
+      "Annual review (research/state-of-kenyan-data-centres-2026): the headline KPI counted all 31 directory records (22 operational) under a review titled \u201cState of Kenyan Data Centres\u201d. It now reads 27 facilities tracked, 20 operational in Kenya. The carrier-neutral footnote and the pipeline-to-watch grid are Kenya-scoped too, so the 2 regional under-construction reference records no longer appear as Kenyan pipeline, and the intro states the 27 + 4 split explicitly.",
+      "Research hub: the Brief/01 card carried the 21 September snapshot figures (26 facilities, 186 MW pipeline); it now shows the current dataset (27 facilities, 230 MW pipeline). \u201c122 top networks\u201d and \u201c8/20 carrier-neutral\u201d were re-verified against the dataset and are unchanged.",
+      "Brief/01 PDF: the downloadable edition was minted 21 September from an earlier snapshot (26 facilities, 186 MW announced) with no marker separating it from the live page it is an edition of. The cover now carries a visible data-snapshot stamp pointing to the live figures; a full re-mint of the brief is queued.",
+      "Directory intro: reordered the sentence so the city split (Nairobi, Mombasa, the rest) attaches to the 27 Kenyan facilities rather than reading as a split of the 20 operational \u2014 in both the meta description and the body copy. The numbers themselves were already correct.",
+      "Megawatt figures cross-checked and confirmed as three different labelled metrics, not contradictions: 10.5 MW published in-service IT load, 42.9 MW built (designed) capacity of live sites, 230 MW announced pipeline, 272.9 MW total tracked supply. Also re-verified live: sitemap.xml (HTTP 200, 179 URLs), /infrastructure/map (200), /api/directory (200), unique titles on methodology/corrections/editorial-policy.",
+      "Advisory, owner decision pending (not a factual error): the site runs on a vercel.app subdomain, the contact address is a gmail inbox, and the brand mixes \u201ccenters\u201d (domain) with \u201ccentres\u201d (editorial style).",
+    ],
+  },
+  {
     date: "2026-09-24",
     summary: "Scope reconciliation on the homepage directory band and FAQ; stale snapshot count removed from the annual review metadata.",
     changes: [

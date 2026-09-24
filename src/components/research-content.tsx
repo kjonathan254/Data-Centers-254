@@ -22,8 +22,8 @@ const reports = [
     description:
       "The verified annual review of Kenya's data centre market: the honestly staged supply pipeline, the PeeringDB interconnection league table, certification records read precisely, and the four events that will decide 2027. The web edition re-computes from the live dataset on every visit; the PDF is the dated deep-dive edition.",
     stats: [
-      { icon: Layers, value: "26", label: "facilities" },
-      { icon: Gauge, value: "186 MW", label: "pipeline" },
+      { icon: Layers, value: "27", label: "facilities" },
+      { icon: Gauge, value: "230 MW", label: "pipeline" },
       { icon: Network, value: "122", label: "top networks" },
       { icon: ShieldCheck, value: "8/20", label: "carrier-neutral" },
     ],
