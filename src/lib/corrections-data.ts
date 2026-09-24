@@ -26,6 +26,16 @@ export const CORRECTIONS_SLA = {
 
 export const correctionsLog: CorrectionEntry[] = [
   {
+    date: "2026-09-24",
+    summary: "Scope reconciliation on the homepage directory band and FAQ; stale snapshot count removed from the annual review metadata.",
+    changes: [
+      "Homepage \u201cThe DC Directory\u201d band: the status line under \u201cEvery known data-centre facility in Kenya\u201d was counting all 31 tracked records (22 operational \u00b7 5 under construction \u00b7 1 committed \u00b7 3 early stage), which includes 4 East African reference records. It is now scoped to Kenya as the heading promises: 20 operational \u00b7 3 under construction \u00b7 1 committed \u00b7 3 early stage (27 facilities).",
+      "FAQ \u201cHow many data centres does Kenya have?\u201d: the answer said \u201c31 facilities across Kenya, of which 22 operational\u201d \u2014 both figures are region-wide (31 records and 22 operational include 2 operational records in Kampala). It now reads: 31 records = 27 Kenyan facilities + 4 East African reference facilities, 20 of them operational in Kenya.",
+      "Annual review metadata description dropped its hardcoded \u201c26 tracked facilities\u201d (a superseded snapshot count); the page body already states it draws live from the full register.",
+      "Audited and confirmed correct, no change needed: sitemap.xml (live HTTP 200, 179 URLs), /infrastructure/map (live HTTP 200), /api/directory (live HTTP 200), unique metadata titles on methodology/corrections/editorial-policy, and the directory page's internally consistent 27/20/19/4 arithmetic.",
+    ],
+  },
+  {
     date: "2026-09-18",
     summary: "Homepage stat strip made fully data-driven; research page listing.",
     changes: [

@@ -40,10 +40,14 @@ export default function FeaturedFacilities() {
   if (featured.length === 0) return null;
 
   // Status breakdown, derived, never hardcoded, so the line moves with the
-  // dataset. Same stage language as the directory's pipeline tab.
+  // dataset. Same stage language as the directory's pipeline tab. Scoped to
+  // KENYAN records to match the heading above ("Every known data-centre
+  // facility in Kenya") - the 4 East African reference records are excluded
+  // so the strip never mixes two scopes (31-region vs 27-Kenya).
+  const kenyaFacilities = facilities.filter((f) => (f.country || "Kenya") === "Kenya");
   const stageOrder = ["Operational", "Under Construction", "Committed", "Early Stage", "Announced"];
   const counts = new Map<string, number>();
-  for (const f of facilities) counts.set(f.status, (counts.get(f.status) ?? 0) + 1);
+  for (const f of kenyaFacilities) counts.set(f.status, (counts.get(f.status) ?? 0) + 1);
   const breakdown = stageOrder
     .filter((s) => counts.has(s))
     .map((s) => `${counts.get(s)} ${s.toLowerCase()}`)

@@ -48,7 +48,7 @@ export default function FaqPage() {
   const qa = [
     {
       q: "How many data centres does Kenya have?",
-      a: `DC254 currently tracks ${facilities.length} data centre facilities across Kenya, of which ${stats.operationalCount} are operational. The rest are under construction or announced, including some of the largest projects in the region. The count covers commercial colocation campuses, telecom-owned facilities and government installations in Nairobi, Mombasa and secondary cities.`,
+      a: `DC254 currently tracks ${facilities.length} records: ${facilities.filter((f) => (f.country || "Kenya") === "Kenya").length} data centre facilities across Kenya plus ${facilities.filter((f) => (f.country || "Kenya") !== "Kenya").length} East African reference facilities. Of the Kenyan facilities, ${facilities.filter((f) => (f.country || "Kenya") === "Kenya" && f.status === "Operational").length} are operational; the rest are under construction or announced, including some of the largest projects in the region. The count covers commercial colocation campuses, telecom-owned facilities and government installations in Nairobi, Mombasa and secondary cities.`,
       links: [{ label: "browse the full directory", href: "/directory" }],
     },
     {
