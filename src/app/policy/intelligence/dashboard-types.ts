@@ -69,6 +69,30 @@ export interface SinceReview {
   items: { label: string; detail: string; tone: "up" | "flat" | "note" }[];
 }
 
+/** Claim-level changelog row: claim -> sources -> previous version -> editorial decision. */
+export interface OpsChangelogClaim {
+  id: string;
+  country: string;
+  pillar: string;
+  action: string;
+  previousState: string | null;
+  state: string;
+  previousVersionNote: string;
+  statement: string;
+  editorialDecision: string;
+  sources: OpsSource[];
+}
+
+export interface OpsChangelogEntry {
+  version: string;
+  previousVersion: string;
+  date: string;
+  summary: string;
+  claims: OpsChangelogClaim[];
+  sourcesAdded: OpsSource[];
+  editorialDecisionSummary: string;
+}
+
 export interface OpsData {
   countries: OpsCountry[];
   pillars: { id: string; label: string; blurb: string }[];
@@ -78,6 +102,7 @@ export interface OpsData {
   /** Full source registry (60 entries at r11) — powers the source-quality panel. */
   sources: OpsSource[];
   sinceReview: SinceReview;
+  changelog: OpsChangelogEntry[];
   meta: {
     gateShort: string;
     gateFull: string;

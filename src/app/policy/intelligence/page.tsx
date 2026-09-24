@@ -8,6 +8,7 @@ import {
   getPolicyCountries,
   getPolicyStats,
   getPillarMatrix,
+  getPolicyChangelog,
   countLabel,
   formatPolicyDate,
   type PolicySource,
@@ -150,6 +151,43 @@ function buildOpsData(): OpsData {
 
   const verified = stats.byState["verified"] ?? 0;
 
+  // Claim-level changelog: sources resolve from the registry by id so the
+  // changelog file never duplicates registry data (edit once, everywhere).
+  const toOpsSource = (id: string, s: PolicySource): OpsSource => ({
+    id,
+    label: s.label,
+    url: s.url,
+    tier: s.tier,
+    publisher: s.publisher,
+    captureStatus: s.captureStatus,
+    sourceType: s.sourceType,
+    excerpt: s.excerpt ?? "",
+  });
+  const changelog = getPolicyChangelog().map((e) => ({
+    version: e.version,
+    previousVersion: e.previousVersion,
+    date: e.date,
+    summary: e.summary,
+    editorialDecisionSummary: e.editorialDecisionSummary,
+    claims: e.claims.map((cl) => ({
+      id: cl.id,
+      country: cl.country,
+      pillar: cl.pillar,
+      action: cl.action,
+      previousState: cl.previousState,
+      state: cl.state as string,
+      previousVersionNote: cl.previousVersionNote,
+      statement: cl.statement,
+      editorialDecision: cl.editorialDecision,
+      sources: cl.sourceIds
+        .map((id) => (ds.sources[id] ? toOpsSource(id, ds.sources[id]) : null))
+        .filter((s): s is OpsSource => Boolean(s)),
+    })),
+    sourcesAdded: e.sourcesAdded
+      .map((id) => (ds.sources[id] ? toOpsSource(id, ds.sources[id]) : null))
+      .filter((s): s is OpsSource => Boolean(s)),
+  }));
+
   // Full source registry for the source-quality panel — sorted tier asc
   // (the T1 backbone first), then publisher. Computed here so every number
   // on the panel is derived from the dataset, never hardcoded.
@@ -174,6 +212,7 @@ function buildOpsData(): OpsData {
     cells: opsCells,
     sources: opsSources,
     sinceReview: { ...SINCE_LAST_REVIEW },
+    changelog,
     meta: {
       gateShort: stats.humanGateStatus.split(" (")[0],
       gateFull: stats.humanGateStatus,

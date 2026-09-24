@@ -288,7 +288,15 @@ function EvidenceStatesPanel({ data }: { data: OpsData }) {
 
 // ─── Since last review ─────────────────────────────────────────────────────
 
-function SinceLastReview({ since }: { since: OpsData["sinceReview"] }) {
+function SinceLastReview({
+  since,
+  changelog,
+  pillarLabel,
+}: {
+  since: OpsData["sinceReview"];
+  changelog: OpsData["changelog"];
+  pillarLabel: (id: string) => string;
+}) {
   const toneCls: Record<string, string> = {
     up: "text-emerald-400",
     flat: "text-slate-300",
@@ -317,6 +325,86 @@ function SinceLastReview({ since }: { since: OpsData["sinceReview"] }) {
           </li>
         ))}
       </ul>
+
+      {/* Claim-level changelog: claim -> sources -> previous version -> editorial decision.
+          Zero-JS <details> so the audit trail stays server-rendered and crawlable. */}
+      {changelog.map((entry) => (
+        <details key={entry.version} className="group mt-3 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30]">
+          <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 px-3.5 py-2.5 text-xs font-medium text-slate-300 transition-colors hover:text-cyan-300 [&::-webkit-details-marker]:hidden">
+            <ChevronRight className="size-3.5 shrink-0 text-slate-600 transition-transform group-open:rotate-90" aria-hidden="true" />
+            Claim-level changes
+            <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+              {entry.previousVersion.replace("policy-", "")} <span aria-hidden="true">&rarr;</span>{" "}
+              {entry.version.replace("policy-", "")}
+            </span>
+            <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] text-slate-500">
+              <span>{entry.claims.length} claims</span>
+              <span className="text-slate-700">/</span>
+              <span>{entry.sourcesAdded.length} sources</span>
+            </span>
+          </summary>
+          <div className="border-t border-[rgba(135,180,220,0.10)] px-3.5 py-3">
+            <p className="text-xs leading-relaxed text-slate-400">{entry.summary}</p>
+            <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+              {entry.editorialDecisionSummary}
+            </p>
+            <ol className="mt-3 space-y-3 divide-y divide-[rgba(135,180,220,0.08)]">
+              {entry.claims.map((cl) => {
+                const cfg = STATE_META[cl.state];
+                return (
+                  <li key={cl.id} className="pt-3 first:pt-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-mono text-[11px] uppercase tracking-wider text-slate-400">{cl.id}</span>
+                      <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-cyan-300">
+                        {cl.action}
+                      </span>
+                      {cfg && (
+                        <span
+                          className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${cfg.text}`}
+                        >
+                          <span className={`size-1.5 rounded-full ${cfg.dot}`} aria-hidden="true" />
+                          {cfg.label}
+                        </span>
+                      )}
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                        {cl.country} &middot; {pillarLabel(cl.pillar)}
+                      </span>
+                    </div>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
+                    <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">{cl.previousVersionNote}</p>
+                    {cl.sources.length > 0 && (
+                      <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] leading-relaxed text-slate-500">
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Evidence &middot; </span>
+                        {cl.sources.map((s, i) => (
+                          <span key={`${s.id}-${i}`} className="inline-flex items-center gap-1">
+                            <a
+                              href={s.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-slate-300 underline decoration-slate-600 underline-offset-2 hover:decoration-slate-300"
+                            >
+                              {s.publisher}
+                            </a>
+                            <span className="font-mono text-[10px] uppercase text-slate-500">
+                              T{s.tier} &middot; {s.captureStatus}
+                            </span>
+                            {i < cl.sources.length - 1 && <span className="text-slate-700">/</span>}
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                    <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+                      {cl.editorialDecision}
+                    </p>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </details>
+      ))}
     </section>
   );
 }
@@ -862,8 +950,8 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
         </div>
       </div>
 
-      {/* Row 4: since last review */}
-      <SinceLastReview since={data.sinceReview} />
+      {/* Row 4: since last review + claim-level changelog */}
+      <SinceLastReview since={data.sinceReview} changelog={data.changelog} pillarLabel={pillarLabel} />
 
       {/* Row 5: source quality & provenance */}
       <section id="sources" className="scroll-mt-32" aria-label="Source quality and provenance">

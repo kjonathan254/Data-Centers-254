@@ -13,6 +13,7 @@
  * do not render proposed states publicly before the editor approves.
  */
 import policyJson from "@/data/policy/policy-claims-2026-Q3.json";
+import changelogJson from "@/data/policy/policy-changelog.json";
 import type { PolicyState } from "./config";
 
 // ─── Dataset shapes (typed once, here) ─────────────────────────────────────
@@ -189,4 +190,46 @@ export function getPillarMatrix(): Record<string, Record<string, PillarCell>> {
     }
   }
   return matrix;
+}
+
+// ─── Claim-level changelog (hand-refreshed per dataset bump) ────────────────
+
+export interface ChangelogClaim {
+  id: string;
+  country: string;
+  pillar: string;
+  action: string;
+  previousState: string | null;
+  state: PolicyState;
+  previousVersionNote: string;
+  statement: string;
+  sourceIds: string[];
+  editorialDecision: string;
+}
+
+export interface ChangelogEntry {
+  version: string;
+  previousVersion: string;
+  date: string;
+  summary: string;
+  claims: ChangelogClaim[];
+  sourcesAdded: string[];
+  editorialDecisionSummary: string;
+}
+
+interface PolicyChangelogJson {
+  schemaVersion: string;
+  datasetVersion: string;
+  note: string;
+  entries: ChangelogEntry[];
+}
+
+/**
+ * Claim-level dataset history (claim -> sources -> previous version ->
+ * editorial decision). Entries are hand-refreshed on every dataset bump by
+ * diffing the previous published dataset against the new one - the page must
+ * never run git at request time. Sources resolve from the registry by id.
+ */
+export function getPolicyChangelog(): ChangelogEntry[] {
+  return (changelogJson as unknown as PolicyChangelogJson).entries;
 }
