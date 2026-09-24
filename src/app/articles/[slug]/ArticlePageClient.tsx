@@ -522,7 +522,7 @@ export default function ArticlePageClient({ article, related }: Props) {
           <div className="mb-4">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <span className="font-medium text-foreground/80">
-                Written and edited by{" "}
+                Edited by{" "}
                 <Link href={frontmatter.author_bio_link} className="hover:text-cyan transition-colors">
                   {frontmatter.author}
                 </Link>
