@@ -109,18 +109,20 @@
    overflow fixes (grid min-w-0). Phase 3 candidates remaining: claim-record
    deep links from matrix drawer to pillar anchors, compare-view exports,
    quarterly delta views. User mockup + audit text live in chat history.
-9. **Google Alerts leads (editor's digest 2026-09-24, triaged — none captured
-   yet, humanGate applies)**: (a) Cliffe Dekker Hofmeyr "Licensing, structuring
-   and financing considerations for telecommunications businesses" (Kenya,
-   2026-09-23, law-firm alert; mentions Airtel Nxtra + Africa Data Centres
-   pan-African delivery) → candidate source for KE licensing pillar/tracker;
+9. **Google Alerts leads (editor's digest 2026-09-24, triaged — humanGate
+   applies)**: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
+   considerations for telecommunications businesses" (Kenya, 2026-09-23,
+   law-firm alert; mentions Airtel Nxtra + Africa Data Centres pan-African
+   delivery) → STILL OPEN candidate source for KE licensing pillar/tracker;
    (b) Yahoo Finance/ResearchAndMarkets "Kenya Data Center Market Trends and
    Investment Analysis 2026-2031" — snippet claims Kenya connects to SEVEN
-   operational submarine cable systems (2Africa, DARE1, EASSy, …) → cross-check
-   against tracker/cables data; (c) Daily Nation op-ed cites IMF: ~160 data
-   centres in Africa ≈ 5.5% of global total → find the underlying IMF primary
-   before using anywhere; (d) IBTC Data Centre Academy expands into Kenya
-   (Schneider Electric; ADCA named) → talent/skills ecosystem news candidate.
+   operational submarine cable systems (2Africa, DARE1, EASSy, …) → matches
+   tracker; cross-checked, no action; (c) RESOLVED Task 52 — IMF "~160 data
+   centres in Africa ≈ 5.5% of global" traced to PRIMARY (IMF DP 2026/013,
+   citing Kakindé 2025) and used in article africa-160-data-centres-imf-
+   power-constraint (2026-09-24); (d) IBTC Data Centre Academy expands into
+   Kenya (Schneider Electric; ADCA named) → talent/skills ecosystem news
+   candidate, still open.
    Not leads: Uztelecom (Uzbekistan), Intel–Submer MEA (vendor news),
    Vodacom/mybroadband (noise), TelcoTitans infrawatch (borderline).
 10. **Upstash Redis (rate limiter)**: DB "exact-mongoose-92996" EXISTS and
@@ -370,3 +372,36 @@
 - 6th workspace rollback hit mid-task (HEAD fell back to e7a41a3); ff-only heal
   restored Task 49 work; .env.local lost the Context.dev key line again —
   re-added. Expect node_modules wipes on every rollback: npm ci after healing.
+
+### 2026-09-24 — Claims run + new article: IMF 160/5.5% power-constraint piece (Task 52)
+- Editor instruction: "Run the claims and update once confirmed, then pick a
+  new angle and draft the articles or article."
+- Claims run: validator PASS untouched (r12, 50/56 verified, 62 sources, 10
+  capture links) — no dataset change needed or made (humanGate intact).
+- Angle picked from Google Alerts lead (c): IMF "~160 data centres in Africa
+  ≈ 5.5% of global". Stat VERIFIED against primary before drafting: IMF
+  Departmental Paper 2026/013 "Unlocking the Potential: AI in Sub-Saharan
+  Africa" (2026), citing Kakindé 2025 for the count; nearly half of SSA's DCs
+  in South Africa/Nigeria/Kenya. imf.org PDF + eLibrary blocked to curl
+  (Akamai 403, ULII pattern) → spent 1 Context.dev credit on eLibrary full
+  text (HTTP 200, 220 KB; credit total now 3 of 252). All quotes/numbers in
+  the article read from that primary text (0.2→2.1% productivity, 0.4→4.0%
+  GDP, 78% outages/8.4% sales, generators 86/65/63, DCs 1.5%→3% global
+  electricity, anchor-tenant thesis, VC $2.2B/84% four markets).
+- Cross-checks that sharpen the piece: IMF cites Microsoft/G42 $1B campus as
+  live, but our own coverage shows suspension May 2026 → framed as the
+  anchor-tenant thesis "stated negatively" (structure, not resource, binds).
+  Directory stat used: 31 facilities / 18 operators. Reuters cited in body
+  text only (URL unverifiable through bot-block — never publish guessed URLs).
+- Article: content/articles/africa-160-data-centres-imf-power-constraint.md
+  (cluster Infrastructure, category AI & Infrastructure, 1,600+ words, 10
+  internal links verified, 4 existing images, 4-question FAQ, 3 external
+  sources). Built HTML: title 59 (+8 template), desc 152, 1 h1, SSG route.
+- Pipeline lessons: (a) article_validator.py bans em dash (\u2014) — house
+  style, existing articles have zero; fixed via persisted
+  scripts/fix_emdash_imf_article.py (21 contextual replacements, one IMF
+  quote restructured to stay verbatim without the dash); (b) validator also
+  cross-checks README article counts — updated 99→100; (c) sitemap.ts and
+  feed.xml pick up new articles automatically (getAllArticles) — no
+  registration step.
+- Verified: article_validator ALL OK (100 articles), tsc/lint/build PASS.
