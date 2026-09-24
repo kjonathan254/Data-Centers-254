@@ -572,3 +572,46 @@
   603c69d via REST API.
 - Posters (Task 55, prior continuation) remain deliverables outside the repo:
   /home/z/my-project/download/posters/ (IMF + IBTC x LinkedIn 1200x627 + WhatsApp 1080x1080).
+
+### 2026-09-24 — Claim-level dataset changelog shipped + CA consultation T1 hunt (Tasks 57-58)
+- Editor order: promote the r12->r13 strip into a full claim-level changelog (claim -> source
+  -> previous version -> editorial decision); then "use this brainstorm and forge forward" on
+  the advisor's CA-consultation plan (research-led LinkedIn post, T1 capture, evidence record,
+  explainer, tracker).
+- Task 57 SHIPPED (commit c406344, CI green run #65-ish): new typed
+  src/data/policy/policy-changelog.json (schema 0.1-changelog) - r13 entry built from the
+  ACTUAL git diff 3dec566..a7e3522 (verified: +3 claims KE-LC-C2 verified / KE-LC-C3 verified
+  / KE-LC-C4 partial, +3 sources cdh T2 + techafricanews T3 + wmedia T3, no other changes);
+  statements verbatim from dataset, editorial decisions condensed from claim notes (r13
+  registration under standing humanGate delegation, conditional on verification). Loader
+  getPolicyChangelog() in lib/policy; OpsChangelogEntry types; sources resolve from the
+  registry by sourceIds at render (no duplication). UI: expandable zero-JS <details> beneath
+  the since-review strip - per-claim rows show ID + action badge + state chip + country/pillar,
+  statement, previousVersionNote ("Not present in r12 - the Kenya licensing pillar held only
+  KE-LC-C1"), clickable evidence trail (publisher links + tier + capture state), editorial
+  decision. Server-rendered/crawlable. Future bumps: add an entry when diffing for
+  SINCE_LAST_REVIEW. tsc/lint/build PASS, HTML greps verified (KE-LC-C2/C3/C4 x5 each,
+  Editorial decision x4, 0 old labels).
+- Task 58 CA T1 hunt - BLOCKED, capture registered:
+  research/captures/2026-09-24-ca-ke-dc-licensing-t1-source-hunt.md (capture-pending, no
+  claims proposed). Findings: www.ca.go.ke live but interstitial-bot-walled ("One moment,
+  please..." reload loop, ~12KB shell - upgrades the r13 "JS-blocked" note to a diagnosis);
+  web.archive.org unreachable from workspace (HTTP 000); DDG HTML + Bing organic bot-walled;
+  z-ai web search confirms the consultation + corroboration (digitalpolicyalert 8 Sep record,
+  itweb/dig.watch/connectingafrica/eastleighvoice 8-10 Sep) but returns HOST-ONLY URLs, so
+  leads recorded without unverifiable URLs (rule 11). CONTEXT_DEV_API_KEY MISSING from
+  .env.local post-rollback (only FIRECRAWL_API_KEY present) and the old key transited chat
+  (rotation list) - editor must supply a fresh rotated key, then
+  node scripts/contextdev_capture.mjs "<consultation URL>" --tier 1. Alternate T1 routes:
+  the editor's planned letter to CA (datacentres@ca.go.ke channel) requests the framework
+  documentation; Revised Market Structure legal notice via kenyalaw.org (curl-open).
+  TIMING: window closes on or about 8 Oct 2026 (30 days from 8 Sep notice).
+- LinkedIn post fact-check: draft's 59 claims / 65 sources / 4 markets / 10 pillars /
+  20 gaps all EXACT vs dataset (per-country 13/13/17/16). Post cleared to publish; the new
+  claim-level changelog directly supports its transparency claim.
+- Next-stage queue (proposed, not built): CA Data Centre Licensing Tracker page
+  (Proposed -> Consultation -> Comments -> Revised -> Gazette -> Effective -> Implementation,
+  each stage dated + sourced + evidence-stamped); explainer "Kenya's Proposed Data Centre
+  Licence: What the CA Framework Could Change" structured per advisor (8 sections incl.
+  what-is-not-clear-yet + evidence record backlink) - fills after T1 capture; follow-up CA
+  LinkedIn post separate from the methodology post.
