@@ -32,16 +32,17 @@
 8. Delegations: the editor grants task-specific authority in chat (e.g. r11
    claim upgrades, 2026-09-23). Record the delegation in commit messages.
 
-## Current state (updated 2026-09-24, r13)
+## Current state (updated 2026-09-24, r14)
 
 - **Site**: data-centers-254.vercel.app (Vercel free team, project
   `prj_Tigqxa5amDHpQcDT34kdIqSEnAMt`), repo kjonathan254/Data-Centers-254, branch main.
-- **Policy Intelligence**: dataset `policy-2026-Q3-r13` — **52/59 claims verified,
-  7 partially-verified, 0 unverified**; 65 sources (47 T1, 5 T2, 13 T3); 20
+- **Policy Intelligence**: dataset `policy-2026-Q3-r14` — **55/61 claims verified,
+  6 partially-verified, 0 unverified**; 67 sources (49 T1, 5 T2, 13 T3); 20
   pillar gaps (energy/construction/environment mostly unresearched in UG/RW; EAC
-  regional frameworks untouched across all four). KE licensing pillar now has 4
-  claims (was 1): KE-LC-C2/C3 verified, KE-LC-C4 (proposed DC licence fees)
-  partially-verified pending CA notice capture.
+  regional frameworks untouched across all four). KE licensing pillar now has 6
+  claims: C2/C3 T1-backed (April-vs-March discrepancy flagged open), C4 fee
+  schedule verified on the CA instrument text, C5 (NFP/ASP exemption) and C6
+  (roadmap) verified on instrument capture 2026-09-24.
 - **Validator**: `python3 scripts/validate_policy.py` → PASS (schema, referential
   integrity, capture-linkage on disk, pillar checks, verified ratio).
 - **Evidence pipeline**: `scripts/firecrawl_search.mjs` (discovery) →
@@ -615,3 +616,57 @@
   Licence: What the CA Framework Could Change" structured per advisor (8 sections incl.
   what-is-not-clear-yet + evidence record backlink) - fills after T1 capture; follow-up CA
   LinkedIn post separate from the methodology post.
+
+### 2026-09-24 (session 2) — T1 ANCHOR CAPTURED: CA DC licensing framework; dataset r14; both LinkedIn posts finalized (Task 59)
+- Editor supplied fresh rotated CONTEXT_DEV_API_KEY (in .env.local, gitignored, never
+  printed/committed). Key authenticates; Context.dev is the active scrape path while
+  Firecrawl stays 402.
+- **CA challenge defeated by diagnosis, not force**: the interstitial (obfuscated JS,
+  cookie pattern qxqokdru2jku) is ROUTE-SPECIFIC. Walled: /index.php/ pages AND
+  /sites/default/files/ asset URLs (curl returns the ~12KB shell; Context.dev renderer
+  also returned empty on the /index.php/ form - 2 empty scrapes then STOPPED). Open:
+  the clean route https://www.ca.go.ke/open-consultations (no /index.php/) renders fully
+  via Context.dev. A search call located the clean-URL form.
+- **Two T1 captures (Context.dev browser render)**: (1) Open Consultations page -
+  DC entry verbatim incl. submission channels (datacentres@ca.go.ke; MS Forms; post) +
+  PDF link; (2) THE ANCHOR: "Proposed Licensing Framework for Data Centres, September
+  2026 (Consultation Version)", full 7 pages. Fee schedule (KSh 5,000 / 100,000 /
+  80,000-or-0.4%-turnover), 15-year term, NFP/ASP exemption (para 17), USF 0.5%
+  (s.84J(3) KICA), roadmap Table 1 - all read in full before registration.
+- **NEW DISCREPANCY FLAGGED (open)**: instrument para 6 dates the market structure
+  "revised in April 2026" vs CDH T2 "gazetted 6 March 2026" (Gazette Notice No. 3335).
+  KE-LC-C2 statement NOT re-dated; Kenya Law route is the resolver - BUT kenyalaw.org
+  classic routes now also 403 (2026-09-24 probe), contradicting the 2026-09-23
+  curl-open note. New.kenyalaw.org 403s too. Parked; needs browser-render or the
+  editor's CA letter.
+- **Dataset bump r13 -> r14** (scripts/bump_r14.py, idempotent): +2 T1 sources
+  (ca-dc-licensing-framework-2026, ca-open-consultations-2026); C4 partially-verified ->
+  verified (r13's upgrade condition met on instrument text); C2/C3 T1-backed with states
+  unchanged; +C5 (NFP/ASP exemption, verified on T1 primary per status vocabulary) and
+  +C6 (roadmap: finalisation + CONSEQUENTIAL MARKET-STRUCTURE REVISION in FY2026/27,
+  implementation FY2027/28); licensing gap refreshed. Changelog r14 entry appended.
+  Validator PASS: 61 claims (55/6/0), 67 sources (49 T1). Credit spend: ~5 credits
+  (2 empty scrapes, 1 search, 2 captures - PDF flat 1 credit).
+- **T1 capture CORRECTED press-derived sequencing** (both in our own pages): the
+  consequential market-structure revision sits in FY2026/27 (Table 1 row 4), NOT
+  FY2027/28 as earlier reports (and our first-pass pages) had it. Fixed in the tracker
+  timeline + explainer roadmap section, with the correction attributed.
+- **Tracker updated** (src/lib/market-trackers.ts + tracker/licensing/page.tsx):
+  instrument PDF added as first primary source; FY rows corrected; "verified against
+  the CA's own document" strips.
+- **Explainer updated** (content/articles/kenya-ca-standalone-data-centre-licence.md):
+  updated_date 2026-09-24; instrument added to external_sources; roadmap section
+  rewritten with the correction + attribution; NEW section "What Is Not Clear Yet"
+  (attendant-supporting-services boundary, migration mechanics, USF restatement,
+  April-vs-March dating); sources paragraph records the 24 Sep instrument verification.
+  article_validator: 102 articles ALL OK. tsc/lint/build PASS.
+- **Both LinkedIn posts FINAL** (deliverables outside repo,
+  /home/z/my-project/download/linkedin/): post 1 methodology (r14 numbers: 61 claims /
+  67 sources / 49 T1 / 55 verified; changelog + discrepancy-catch as the proof points)
+  and post 2 CA consultation (facts-only from the captured instrument, window closes
+  ~8 Oct 2026). Tag strategy applied: 3 broad + 4-5 niche, end-placed, no @-mentions;
+  internal fact-check blocks included - strip before posting. NOTE: post 1's numbers
+  supersede the r13-checked draft; do not publish the old 59/65 figures.
+- Next-stage queue remaining: CA submission letter (editor-owned, datacentres@ca.go.ke);
+  Kenya Law gazette capture for target #2 when a route opens; gazette date resolution
+  closes the C2 discrepancy.

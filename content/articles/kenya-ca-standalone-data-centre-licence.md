@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-10"
-updated_date: "2026-09-16"
+updated_date: "2026-09-24"
 category: "Policy"
 cluster: "Policy"
 og_image: "/images/national-assembly-chamber-session.webp"
@@ -42,6 +42,8 @@ internal_links:
   - text: "Kenya data sovereignty and localisation requirements"
     href: "/articles/kenya-data-sovereignty-localisation"
 external_sources:
+  - title: "Communications Authority of Kenya, Proposed Licensing Framework for Data Centres, September 2026 (Consultation Version, PDF) - the regulator's own consultation document, captured in full text"
+    url: "https://www.ca.go.ke/sites/default/files/2026-09/Public%20Consultation%20on%20Data%20Centres%20September%202026.pdf"
   - title: "Developing Telecoms, Kenya regulator proposes standalone licence for data centres (9 Sep 2026)"
     url: "https://developingtelecoms.com/telecom-technology/data-centres-networks/20797-kenya-regulator-proposes-standalone-licence-for-data-centres.html"
   - title: "Business Daily, CA to issue standalone permits for data centres in revised framework (8 Sep 2026)"
@@ -94,9 +96,11 @@ Two carve-outs matter for the broader market. Entities already holding NFP licen
 
 ## The Roadmap: Consultation Now, Implementation Later
 
-The CA is not promising a quick flip. The proposed data centre regime is scheduled to be finalised and implemented across two financial years. During FY2026/27, the roadmap calls for the consultation and finalisation of the framework, the 30-day window that opened on 8 September is the start of that process, followed by drafting and final rule-making. During FY2027/28, the consequential changes to the telecommunications market structure would be made and the new regime would be implemented, with facilities migrating to the new category.
+The CA is not promising a quick flip. The proposed data centre regime is scheduled to be finalised and implemented across two financial years. During FY2026/27, the roadmap calls for the consultation and finalisation of the framework (the 30-day window that opened on 8 September is the start of that process) and, in the same financial year, the consequential revision of the telecommunications market structure itself. During FY2027/28, the new regime would be implemented, with facilities migrating to the new category.
 
-For operators, the practical reading is that NFP-T2 remains the licence of record through at least FY2026/27, and anyone entering the market now should still plan around the March 2026 framework while tracking the consultation's outcome. The two-step roadmap also means there is a second window (between finalisation and implementation) where the market structure documents themselves get amended. That is where transition mechanics (existing licence holders, renewal dates, fee harmonisation) will be settled.
+That sequencing is worth pausing on, because press coverage at the time got it wrong. Early reports placed the consequential market-structure changes in FY2027/28 alongside implementation; the consultation document's own roadmap table puts them in FY2026/27, the same year as finalisation, with only the go-live in FY2027/28. This correction came out of capturing the regulator's full document on 24 September 2026 - the table reads: framework (FY2026/2027), public consultation (FY2026/2027), finalisation (FY2026/2027), consequential revision of the market structure (FY2026/2027), implementation (FY2027/2028).
+
+For operators, the practical reading is that NFP-T2 remains the licence of record through at least FY2026/27, and anyone entering the market now should still plan around the March 2026 framework while tracking the consultation's outcome. The two-step roadmap also means the market structure documents themselves get amended between finalisation and implementation. That is where transition mechanics (existing licence holders, renewal dates, fee harmonisation) will be settled.
 
 ## Where the ODPC Fits In
 
@@ -110,8 +114,14 @@ The direction of travel is regulatory clarity, and clarity is what investors hav
 
 The risks in the transition are real but manageable. Facilities licensed under NFP-T2 since March will face a migration process whose mechanics are not yet public. Operators with mixed businesses (connectivity plus colocation) will need advice on whether the NFP exemption already covers them or whether a separate application is cleaner. And the turnover-based annual fee introduces a revenue-visibility obligation that some private operators may push back on during comments. None of these are reasons against the reform; they are exactly the kind of detail the 30-day consultation exists to settle.
 
+## What Is Not Clear Yet
+
+Reading the full consultation document sharpens some questions and exposes others that the seven pages simply do not answer. The scope phrase "attendant supporting services" is the biggest: it pulls power, cooling and physical security into the licence's core definition, but nothing in the document says where the boundary sits. A facility offering managed services, private cloud, or disaster-recovery seats could read itself in or out of that phrase, and the answer changes who must hold the licence.
+
+Migration mechanics are likewise unstated. Facilities that took an NFP-T2 licence after March 2026 face a transition whose shape (mid-term migration, fee credit for licence already paid, renewal alignment) is nowhere in the document. The Universal Service Fund treatment is cited to statute but not restated for the new category. And there is a dating discrepancy worth flagging in comments: the document describes the current market structure as "revised in April 2026", while the gazette record we hold dates the Revised Telecommunications Market Structure to 6 March 2026 - either a drafting slip or a reference to a later effective revision, and worth asking the Authority to clarify in writing. None of these gaps argue against the reform; they are the questions a serious submission would put on the record while the window is open.
+
 ## How to Participate
 
 The consultation is open through the CA's consultations portal at ca.go.ke, with comments due within 30 days of 8 September 2026. Operators, industry bodies, tenants, and investors with Kenyan data centre exposure all have standing to comment. For context on the framework being revised, see our full explainer on [Kenya's data centre licensing framework](/articles/kenya-data-centre-licensing-framework), and for the facilities this licence will cover, browse the [Kenya data centre directory](/directory).
 
-Sources: Communications Authority of Kenya open consultations; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026); w.media (September 2026). Facts verified against multiple independent outlets on 10 September 2026; fee comparison and Universal Service Fund detail verified against w.media on 12 September 2026. ODPC intersection section added 16 September 2026, verified against our Data Protection Act explainer (Section 48, 72-hour notification) first published with dated sources.
+Sources: Communications Authority of Kenya open consultations; CA Proposed Licensing Framework for Data Centres (September 2026, Consultation Version) captured in full text on 24 September 2026; Developing Telecoms (9 September 2026); Business Daily (8 September 2026); TechAfrica News (8 September 2026); The Star (8 September 2026); w.media (September 2026). Facts verified against multiple independent outlets on 10 September 2026; fee comparison and Universal Service Fund detail verified against w.media on 12 September 2026; ODPC intersection section added 16 September 2026. On 24 September 2026 the regulator's consultation document was captured in full and every fee figure, the 15-year term, the NFP/ASP exemption and the roadmap were verified exact against it; the roadmap sequencing above was corrected on the same date (consequential market-structure revision sits in FY2026/27, not FY2027/28), and the document's "April 2026" dating of the current market structure was flagged as an open discrepancy against the 6 March 2026 gazette record.

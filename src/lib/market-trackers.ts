@@ -324,6 +324,7 @@ export const LICENSING_REGIMES: LicensingRegime[] = [
 ];
 
 export const LICENSING_SOURCES: TrackerSource[] = [
+  { label: "Communications Authority of Kenya, Proposed Licensing Framework for Data Centres (September 2026, Consultation Version) - full text captured, figures verified exact", url: "https://www.ca.go.ke/sites/default/files/2026-09/Public%20Consultation%20on%20Data%20Centres%20September%202026.pdf", kind: "gov" },
   { label: "Communications Authority of Kenya, open consultations", url: "https://www.ca.go.ke/open-consultations", kind: "gov" },
   { label: "Business Daily, CA to issue standalone permits for data centres (8 Sep 2026)", url: "https://www.businessdailyafrica.com/bd/economy/ca-to-issue-standalone-permits-for-data-centres-5588294", kind: "press" },
   { label: "Developing Telecoms, Kenya regulator proposes standalone licence for data centres (9 Sep 2026)", url: "https://developingtelecoms.com/telecom-technology/data-centres-networks/20797-kenya-regulator-proposes-standalone-licence-for-data-centres.html", kind: "press" },

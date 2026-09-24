@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r13",
+  "datasetVersion": "policy-2026-Q3-r14",
   "generatedAt": "2026-09-24",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
@@ -768,6 +768,28 @@
       "publisher": "w.media (Brendyn Lotz)",
       "sourceType": "Trade press report quoting the CA public notice",
       "captureNote": "Full article captured 2026-09-24 via manual curl (research/captures/2026-09-24-wmedia-ke-standalone-dc-licence.md). Corroborates the NFP-Tier 2 baseline; reproduces the CA notice verbatim (rationale + coverage of 'entities that provide colocation data centre services, including the attendant supporting services'); sole source for the proposed fee schedule (KSh 5,000 application / KSh 100,000 initial / KSh 80,000 or 0.4% of gross annual turnover p.a. whichever higher) and for the 2027/2028 FY implementation timing. CA notice itself JS-blocked - upgrade path."
+    },
+    "ca-dc-licensing-framework-2026": {
+      "label": "Communications Authority of Kenya - Proposed Licensing Framework for Data Centres, September 2026 (Consultation Version) - official consultation document",
+      "url": "https://www.ca.go.ke/sites/default/files/2026-09/Public%20Consultation%20on%20Data%20Centres%20September%202026.pdf",
+      "tier": 1,
+      "publisher": "Communications Authority of Kenya",
+      "sourceType": "Regulator instrument (consultation document)",
+      "publishedDate": "2026-09",
+      "retrievedDate": "2026-09-24",
+      "captureStatus": "captured",
+      "captureNote": "Full 7-page consultation text captured via Context.dev browser render after direct curl returned the site's obfuscated JS challenge shell (the challenge walls /index.php/ pages AND /sites/default/files/ assets; the clean /open-consultations route is open). Capture file: research/captures/2026-09-24-ca-go-ke-sites-default-files-2026-09-Public-20Consultation-.md. Confirms verbatim: standalone DC licence proposal and NFP-T2 baseline; fee schedule (application KSh 5,000; initial KSh 100,000; annual operating KSh 80,000 or 0.4 percent of Annual Gross turnover, whichever is higher); 15-year licence term; NFP/ASP exemption; USF at 0.5 percent of Annual Gross Revenue per section 84J(3) KICA Cap 411A; roadmap FY2026/2027 finalisation, FY2027/2028 implementation. Cost: 1 Context.dev credit (born-digital PDF flat rate)."
+    },
+    "ca-open-consultations-2026": {
+      "label": "Communications Authority of Kenya - Open Consultations page (regulator publication channel, data centres entry)",
+      "url": "https://www.ca.go.ke/open-consultations",
+      "tier": 1,
+      "publisher": "Communications Authority of Kenya",
+      "sourceType": "Regulator website",
+      "publishedDate": null,
+      "retrievedDate": "2026-09-24",
+      "captureStatus": "captured",
+      "captureNote": "Full page captured via Context.dev (clean-URL route bypasses the JS challenge that walls /index.php/ paths - diagnosis recorded 2026-09-24, upgrading the r13 'JS-blocked' note). Carries the data-centres consultation entry verbatim: 30-day comment window from publication; submission channels - post/hand delivery to the Director General (P.O. Box 14448-00800, Nairobi), electronic form (forms.cloud.microsoft/r/uB4Z5GktUB), email datacentres@ca.go.ke; links the framework PDF. Capture file: research/captures/2026-09-24-ca-go-ke-open-consultations.md."
     }
   },
   "countries": {
@@ -1458,12 +1480,13 @@
       "pillarGaps": [
         {
           "pillar": "licensing",
-          "gap": "CA licence-class instrument not captured: the NFP/ASP class structure (and any data-centre-specific class the CA has signalled) rests on secondary coverage; the CA's own licence-class document is uncaptured",
+          "gap": "CA licensing instruments: the consultation-stage framework document is now CAPTURED (T1, 2026-09-24) but the final instrument is not yet issued - the roadmap targets framework finalisation and the consequential market-structure revision in FY2026/2027 with implementation FY2027/2028. The gazette/legal-notice text of the Revised Telecommunications Market Structure (KE-LC-C2's basis) remains uncaptured; the consultation document dates the revision 'April 2026' vs the CDH alert's 'gazetted 6 March 2026' - unresolved discrepancy.",
           "expectedSources": [
-            "CA licence-class framework document (ca.go.ke Knowledge Hub)",
-            "Kenya Gazette notice for any standalone data-centre licence framework"
+            "Final CA data centre licensing framework (post-consultation instrument, FY2026/2027)",
+            "Kenya Gazette / Kenya Law legal notice for the Revised Telecommunications Market Structure (March/April 2026)",
+            "CA Knowledge Hub licence-class document (NFP/ASP class definitions)"
           ],
-          "upgradePath": "Navigate CA Knowledge Hub for the licensing instrument; capture gazette notices; re-derive the licensing claims on instrument text"
+          "upgradePath": "Kenya Law route (kenyalaw.org curl-open; new.kenyalaw.org returned 403 2026-09-24) for the gazette notice to resolve the March/April discrepancy; request the final instrument via datacentres@ca.go.ke once issued; re-derive KE-LC-C2 on gazette text."
         },
         {
           "pillar": "construction-building",
@@ -1636,10 +1659,12 @@
             "ca-licensing-procedures",
             "cdh-ke-tmt-alert-2026",
             "techafricanews-ke-dc-licence",
-            "wmedia-ke-dc-licence"
+            "wmedia-ke-dc-licence",
+            "ca-dc-licensing-framework-2026",
+            "ca-open-consultations-2026"
           ],
           "state": "verified",
-          "note": "r13 registration (editor instruction 'Work on the data set', 2026-09-24; humanGate delegation conditional on verification, r11/r12 precedent). Verified under 'two independent corroborating sources': CDH law-firm alert (T2) - 'the ULF Annex III licence table names Network Facilities Provider - Tier 2 as the category under which data centres are licensed'; Techafricanews (T3) - 'instead of regulating co-location data centres under the existing Network Facilities Provider-Tier 2 licence category'; w.media (T3) - 'As it stands, these operators are licensed under the Network Facilities Provider-Tier 2 (NFP-T2) category'. Single-source detail (CDH T2, upgrade path = capture the Annex III instrument): NFP-Tier 1 holders may rely on that nationwide infrastructure licence to operate a commercial data centre without an additional licence."
+          "note": "r13 registration (editor instruction 'Work on the data set', 2026-09-24; humanGate delegation conditional on verification, r11/r12 precedent). Verified under 'two independent corroborating sources': CDH law-firm alert (T2) - 'the ULF Annex III licence table names Network Facilities Provider - Tier 2 as the category under which data centres are licensed'; Techafricanews (T3) - 'instead of regulating co-location data centres under the existing Network Facilities Provider-Tier 2 licence category'; w.media (T3) - 'As it stands, these operators are licensed under the Network Facilities Provider-Tier 2 (NFP-T2) category'. Single-source detail (CDH T2, upgrade path = capture the Annex III instrument): NFP-Tier 1 holders may rely on that nationwide infrastructure licence to operate a commercial data centre without an additional licence. r14 T1 upgrade (2026-09-24): primary instrument text now held and read in full (ca-dc-licensing-framework-2026, captured via Context.dev after the ca.go.ke JS challenge was diagnosed as route-specific). Standing humanGate delegation applies (r11-r13 precedent). Consultation document para 7 confirms verbatim: 'Under the current telecommunications market structure, co-location data centre operators are licensed under the Network Facilities Provider (NFP) - Tier 2 (NFP-T2) licence category.' DISCREPANCY FLAG (open, not reconciled): instrument para 6 dates the current market structure 'revised in April 2026' while the held T2 (CDH alert) says gazetted 6 March 2026 - possible gazette/revision date vs effective-date mismatch; Kenya Law gazette route open to resolve. Statement gazette date retained from T2 until the gazette text is captured."
         },
         {
           "id": "KE-LC-C3",
@@ -1648,20 +1673,44 @@
           "sourceIds": [
             "cdh-ke-tmt-alert-2026",
             "techafricanews-ke-dc-licence",
-            "wmedia-ke-dc-licence"
+            "wmedia-ke-dc-licence",
+            "ca-dc-licensing-framework-2026",
+            "ca-open-consultations-2026"
           ],
           "state": "verified",
-          "note": "r13 registration (same delegation). Verified under 'two independent corroborating sources' (T2 + two T3s). CA notice rationale quoted via w.media: 'provide regulatory clarity, enhance visibility over data centre operations, support investment in digital infrastructure, and align Kenya's framework with proportionate approaches adopted in comparable jurisdictions'. Coverage per the notice: 'entities that provide colocation data centre services, including the attendant supporting services'. Basis per CDH: co-location operators provide hosting, power, cooling and storage infrastructure rather than telecommunications services. Single-source detail (w.media): implementation planned for the 2027/2028 financial year. Upgrade path: capture the CA public notice itself (ca.go.ke open-consultations JS-blocked 2026-09-24). Proposal-stage claim: may change or lapse during/after consultation."
+          "note": "r13 registration (same delegation). Verified under 'two independent corroborating sources' (T2 + two T3s). CA notice rationale quoted via w.media: 'provide regulatory clarity, enhance visibility over data centre operations, support investment in digital infrastructure, and align Kenya's framework with proportionate approaches adopted in comparable jurisdictions'. Coverage per the notice: 'entities that provide colocation data centre services, including the attendant supporting services'. Basis per CDH: co-location operators provide hosting, power, cooling and storage infrastructure rather than telecommunications services. Single-source detail (w.media): implementation planned for the 2027/2028 financial year. Upgrade path: capture the CA public notice itself (ca.go.ke open-consultations JS-blocked 2026-09-24). Proposal-stage claim: may change or lapse during/after consultation. r14 T1 upgrade (2026-09-24): primary instrument text now held and read in full (ca-dc-licensing-framework-2026, captured via Context.dev after the ca.go.ke JS challenge was diagnosed as route-specific). Standing humanGate delegation applies (r11-r13 precedent). Instrument executive summary confirms verbatim: 'This consultation document proposes a standalone licence category for co-location data centre operators rather than placing co-location data centres under the Network Facilities Provider -Tier 2 licence category.' Scope confirmed: entities providing co-location data centre services 'including the attendant supporting services'. Rationale confirmed: regulatory visibility over critical digital infrastructure while avoiding over-application of NFP licensing requirements; competitive edge and investment attraction (paras 12-13). The regulator's own Open Consultations page (captured same day) carries the notice with submission channels and links the instrument."
         },
         {
           "id": "KE-LC-C4",
           "pillar": "licensing",
           "statement": "The CA's proposed standalone data centre licence carries a proposed fee schedule: KSh 5,000 application fee, KSh 100,000 initial fee, and an annual operating fee of KSh 80,000 or 0.4 percent of gross annual turnover, whichever is higher.",
           "sourceIds": [
-            "wmedia-ke-dc-licence"
+            "wmedia-ke-dc-licence",
+            "ca-dc-licensing-framework-2026",
+            "ca-open-consultations-2026"
           ],
-          "state": "partially-verified",
-          "note": "r13 registration (same delegation). Single source (w.media T3, quoting the CA notice; US$ conversions at that article's rates). Remains partially-verified until the CA notice or gazette instrument is captured (ca.go.ke JS-blocked 2026-09-24); proposal-stage figures may change during consultation."
+          "state": "verified",
+          "note": "r13 registration (editor instruction 'Work on the data set', 2026-09-24). r14 upgrade (2026-09-24): primary instrument text now held and read in full (ca-dc-licensing-framework-2026, captured via Context.dev after the ca.go.ke JS challenge was diagnosed as route-specific). Standing humanGate delegation applies (r11-r13 precedent). Instrument para 16 confirms the schedule verbatim: 'Application fees - KShs.5,000; Initial fees - KShs.100,000; Annual Operating License fees - KShs. 80,000 or 0.4 per cent of the Annual Gross turnover, whichever is higher'; w.media T3 figures confirmed exact. Instrument additionally specifies licence term of 15 years (para 16(d)) and USF contribution at 0.5 percent of Annual Gross Revenue per section 84J(3) KICA Cap 411A (para 18) - held in note, not added to the statement scope. PROPOSAL-STAGE CAVEAT RETAINED: these are proposed fees tabled for consultation and may change before the framework is finalised (roadmap targets FY2026/2027 finalisation)."
+        },
+        {
+          "id": "KE-LC-C5",
+          "pillar": "licensing",
+          "state": "verified",
+          "statement": "The CA's proposal permits entities that already hold Network Facilities Provider (NFP) or Application Service Provider (ASP) licences to establish and operate data centres without obtaining the proposed standalone data centre licence.",
+          "sourceIds": [
+            "ca-dc-licensing-framework-2026"
+          ],
+          "note": "r14 registration (2026-09-24, standing humanGate delegation, T1 read in full). Verified on the primary instrument alone per the status vocabulary ('primary or two independent corroborating sources'): para 17 verbatim - 'Entities that have Network Facility Provider (NFP) or Application Service Provider (ASP) licences shall be permitted to establish and operate data centres without the need for a data centre licence.' Scope note: the exemption is part of the consultation proposal, not yet enacted; it materially narrows who the standalone licence would bind (incumbent NFP/ASP holders establishing their own facilities)."
+        },
+        {
+          "id": "KE-LC-C6",
+          "pillar": "licensing",
+          "state": "verified",
+          "statement": "The CA's proposed roadmap targets finalisation of the data centre licensing framework and a consequential revision of the telecommunications market structure in FY2026/2027, with implementation of the licensing framework in FY2027/2028.",
+          "sourceIds": [
+            "ca-dc-licensing-framework-2026"
+          ],
+          "note": "r14 registration (2026-09-24, standing humanGate delegation, T1 read in full). Verified on the primary instrument: para 19 + Table 1 rows 1-5 (framework FY2026/2027; public consultation FY2026/2027; finalisation FY2026/2027; consequential revision of the telecommunications market structure FY2026/2027; implementation FY2027/2028). Confirms the FY2027/2028 implementation timing previously held on w.media alone (T3, KE-LC-C4 note). The 'consequential revision' row corroborates that the market-structure change stripping NFP-T2 of data centres follows framework finalisation, not the consultation itself."
         }
       ]
     }
