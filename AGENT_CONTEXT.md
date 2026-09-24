@@ -32,14 +32,16 @@
 8. Delegations: the editor grants task-specific authority in chat (e.g. r11
    claim upgrades, 2026-09-23). Record the delegation in commit messages.
 
-## Current state (updated 2026-09-23, r12)
+## Current state (updated 2026-09-24, r13)
 
 - **Site**: data-centers-254.vercel.app (Vercel free team, project
   `prj_Tigqxa5amDHpQcDT34kdIqSEnAMt`), repo kjonathan254/Data-Centers-254, branch main.
-- **Policy Intelligence**: dataset `policy-2026-Q3-r12` — **50/56 claims verified,
-  6 partially-verified, 0 unverified**; 62 sources (47 T1); 20 pillar gaps
-  (energy/construction/environment mostly unresearched in UG/RW; EAC regional
-  frameworks untouched across all four).
+- **Policy Intelligence**: dataset `policy-2026-Q3-r13` — **52/59 claims verified,
+  7 partially-verified, 0 unverified**; 65 sources (47 T1, 5 T2, 13 T3); 20
+  pillar gaps (energy/construction/environment mostly unresearched in UG/RW; EAC
+  regional frameworks untouched across all four). KE licensing pillar now has 4
+  claims (was 1): KE-LC-C2/C3 verified, KE-LC-C4 (proposed DC licence fees)
+  partially-verified pending CA notice capture.
 - **Validator**: `python3 scripts/validate_policy.py` → PASS (schema, referential
   integrity, capture-linkage on disk, pillar checks, verified ratio).
 - **Evidence pipeline**: `scripts/firecrawl_search.mjs` (discovery) →
@@ -113,7 +115,9 @@
    applies)**: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
    considerations for telecommunications businesses" (Kenya, 2026-09-23,
    law-firm alert; mentions Airtel Nxtra + Africa Data Centres pan-African
-   delivery) → STILL OPEN candidate source for KE licensing pillar/tracker;
+   delivery) → RESOLVED Task 53 — alert located via CDH sitemap (curl-open),
+   full text captured, registered T2 (cdh-ke-tmt-alert-2026); underpinned
+   KE-LC-C2/C3 verified + KE-LC-C4 partial;
    (b) Yahoo Finance/ResearchAndMarkets "Kenya Data Center Market Trends and
    Investment Analysis 2026-2031" — snippet claims Kenya connects to SEVEN
    operational submarine cable systems (2Africa, DARE1, EASSy, …) → matches
@@ -134,6 +138,14 @@
    global limits; stops Upstash's inactive-DB notices), OR delete the Upstash
    DB (site unaffected; accept per-instance limiting). Token transited chat —
    rotate in Upstash console after wiring if keeping.
+11. **User-supplied images NOT delivered (pending, 2026-09-24)**: editor sent
+   three files in chat (Africa Powe Hero.jpg, master-power-1-750x375.jpg,
+   IMG_9828.jpeg.webp) but none reached /home/z/my-project/upload/. Intended
+   wiring: IMF article hero → Africa Powe Hero.jpg (currently africa-dc-map),
+   master-power as IMF section-break, IBTC article hero → IMG_9828.jpeg.webp
+   (temporarily classroom-ict-training-kenya.webp). Ask editor to re-attach;
+   copy to public/images with lowercase-hyphen names, swap 3 front-matter
+   lines + 1 body ref, rebuild.
 
 ## Tooling quick reference
 
@@ -405,3 +417,49 @@
   feed.xml pick up new articles automatically (getAllArticles) — no
   registration step.
 - Verified: article_validator ALL OK (100 articles), tsc/lint/build PASS.
+
+### 2026-09-24 — r13: KE licensing pillar expansion + IBTC careers article + breathing pass (Task 53)
+- Editor instruction: "Work on the data set and the IBTC skills angle its a
+  good piece for the career section the webp image should be the hero image,
+  the new article hero should be the Africa Power and also check on the
+  paragraphs ensure you give room for breathing".
+- DATASET (r13, validator PASS 52/59): worked Google Alerts lead (a) — CDH
+  Kenya telecom-licensing alert — into the KE licensing pillar. Chain: env
+  web-search found the alert; CDH deep pages 403 to curl BUT /sitemap.xml is
+  open (7,400 URLs) → exact URL extracted free. Alert + Techafricanews +
+  w.media all curl-open → FULL-TEXT captures, zero Context.dev credits
+  (envelope waste avoided; total credits still 3). CA open-consultations +
+  Developing Telecoms serve JS-challenge shells (HTTP 200, empty) — recorded
+  as upgrade paths, not captured.
+- policy_upgrade_r13.py: 3 captures filed (capture-pending) with
+  VERIFICATION EXTRACTS; +3 sources (cdh-ke-tmt-alert-2026 T2,
+  techafricanews-ke-dc-licence T3, wmedia-ke-dc-licence T3); +3 claims:
+  KE-LC-C2 verified (data centres licensed under NFP-Tier 2 per ULF Annex
+  III / Revised Structure gazetted 6 Mar 2026; T2+T3+T3), KE-LC-C3 verified
+  (CA 8 Sep 2026 public notice proposing standalone DC licence for
+  co-location operators, 30-day window; same evidence set, CA notice quoted
+  via w.media), KE-LC-C4 partially-verified (proposed fees KSh 5,000 /
+  100,000 / 80,000 or 0.4% turnover — w.media only). NFP-Tier 1 reliance
+  detail kept in C2 note (CDH single-source) — upgrade path: capture Annex
+  III instrument. Editor delegation "Work on the data set" recorded in
+  captures + commit (standing rule 8; r11/r12 conditional-approval
+  precedent).
+- ARTICLES: (a) NEW content/articles/ibtc-data-centre-academy-kenya-
+  talent-pipeline.md (Careers cluster, 1,065+ words, breathing-room
+  paragraphs, 7 internal links, 4 existing images, 3 external sources all
+  read in full: ADCA 14 Apr launch + ADCA 9 Sep Kenya signing + MSME Africa
+  23 Sep). Facts: DCCA I→II (Schneider Electric University → EPI/EXIN
+  CDCA), iXAfrica cohort of five + 3-week live placement, IMEX OEM access,
+  ADCA governance, DC Elite placement, EU Digital Investment Facility,
+  Rack Centre pilot, 30-engineer SA inaugural cohort. Validator flagged
+  title 65 > 56 house limit → trimmed to 52.
+  (b) IMF article paragraph pass: every long paragraph split to 2-4
+  sentences (user breathing request); stale stat 50/56 → 52/59.
+- IMAGES NOT DELIVERED: the 3 files the editor attached in chat (Africa
+  Powe Hero.jpg, master-power-1-750x375.jpg, IMG_9828.jpeg.webp) never
+  reached /home/z/my-project/upload/ — open thread 11 records the intended
+  hero wiring; IBTC hero temporarily classroom-ict-training-kenya.webp.
+- House rules learned: article_validator title limit is 56 raw chars (not
+  70); README count auto-checked (now 101); article_validator ALL OK
+  (101), tsc/lint/build PASS, built HTML: policy page renders 52/59 + r13
+  live from dataset.
