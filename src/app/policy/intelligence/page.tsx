@@ -214,6 +214,15 @@ export default function PolicyIntelligencePage() {
           <div className="mx-auto w-full max-w-[1440px] px-3 pb-10 pt-[72px] sm:px-5 lg:pb-14">
             <ConsoleHeader datasetVersion={ops.meta.datasetVersion} reviewedLong={ops.meta.reviewedLong} />
 
+            {/* ── Lede: why policy intelligence matters (editor review 2026-09-24) ── */}
+            <div className="mb-5 max-w-3xl">
+              <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+                Data-centre investment increasingly depends on understanding the rules governing
+                licences, data, power, taxation, construction and cross-border transfers. DC254
+                tracks the underlying regulatory evidence across East Africa.
+              </p>
+            </div>
+
             {/* ── The control-room canvas ────────────────────────────── */}
             <ControlRoomDashboard data={ops} />
 
@@ -234,8 +243,9 @@ export default function PolicyIntelligencePage() {
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-slate-300">
                   All {stats.countries} country pipelines approved for publication. Reviewed{" "}
-                  {ops.meta.reviewedLong} · AI proposes, the editor approves. Editorial approval is a
-                  publication decision — it is not a statement that every claim is fully verified.
+                  {ops.meta.reviewedLong} · AI proposes, the editor approves. <strong className="font-semibold text-slate-100">Editorial approval is a
+                  publication decision — it is not a statement that every claim is fully
+                  verified.</strong>
                 </p>
               </div>
 

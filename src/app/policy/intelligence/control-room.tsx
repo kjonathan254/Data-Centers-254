@@ -21,7 +21,7 @@
  */
 
 import { useMemo, useState } from "react";
-import { ChevronRight, Info, ShieldCheck } from "lucide-react";
+import { ChevronRight, Info } from "lucide-react";
 import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
@@ -78,7 +78,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
   const [wipeRef, wipeCls] = useWipe<HTMLDivElement>();
   return (
     <section
-      aria-label="Regional evidence coverage"
+      aria-label="Regional claim verification"
       className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-gradient-to-br from-[#101D30] to-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]"
     >
       <div className="flex items-start justify-between gap-3">
@@ -86,7 +86,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
           Who governs East Africa&rsquo;s data centres?
         </h1>
         <span
-          title="Coverage = verified claims ÷ audited claims. Structured gaps are unresearched pillars — excluded from the denominator, never counted as findings."
+          title="Verification rate = verified claims / claims entered in the dataset. Structured gaps are unresearched pillars: excluded from the denominator, never counted as findings."
           className="mt-1 cursor-help text-slate-500 transition-colors hover:text-slate-300"
         >
           <Info className="size-4" aria-hidden="true" />
@@ -98,7 +98,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
           <CountUp value={m.coveragePct} />
           <span className="text-2xl text-slate-500">%</span>
           <span className="mt-1.5 block text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">
-            Evidence coverage
+            Claim verification rate
           </span>
         </p>
         <ul className="flex flex-col gap-1.5 text-xs">
@@ -116,6 +116,11 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
           </li>
         </ul>
       </div>
+
+      <p className="mt-3 max-w-[42ch] text-[11px] leading-relaxed text-slate-500">
+        Share of entered claims meeting the evidence threshold. {m.gaps} research gaps remain across
+        the {data.pillars.length} policy pillars.
+      </p>
 
       <div className="mt-5" aria-hidden="true">
         <div ref={wipeRef} className="flex h-3 w-full gap-px overflow-hidden rounded-full bg-[#0B1627]">
@@ -154,13 +159,6 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
 
 // ─── Row 1 right: country KPI cards (mockup jurisdiction strip) ─────────────
 
-function coverageRating(pct: number): { label: string; cls: string } {
-  if (pct >= 90) return { label: "Very strong", cls: "text-emerald-400" };
-  if (pct >= 75) return { label: "Strong", cls: "text-emerald-400" };
-  if (pct >= 60) return { label: "Moderate", cls: "text-amber-400" };
-  return { label: "Early", cls: "text-slate-400" };
-}
-
 function CountryKpiCards({
   data,
   focus,
@@ -176,11 +174,10 @@ function CountryKpiCards({
   return (
     <div
       id="countries"
-      aria-label="Jurisdiction evidence coverage"
+      aria-label="Jurisdiction verification rates"
       className="grid h-full scroll-mt-32 grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4"
     >
       {ranked.map((c) => {
-        const rating = coverageRating(c.coveragePct);
         const isFocus = focus === c.key;
         const toneCls = c.coveragePct >= 75 ? "text-emerald-400" : "text-amber-400";
         const barCls = c.coveragePct >= 75 ? "bg-emerald-500" : "bg-amber-500";
@@ -209,9 +206,10 @@ function CountryKpiCards({
               <span className={`block h-full rounded-full ${barCls}`} style={{ width: `${c.coveragePct}%` }} />
             </span>
             <span className="mt-auto flex items-center justify-between gap-1 pt-3 text-[11px]">
-              <span className={`flex items-center gap-1 font-medium ${rating.cls}`}>
-                <ShieldCheck className="size-3.5" aria-hidden="true" />
-                {rating.label}
+              <span className="font-medium">
+                <span className="text-emerald-400">{c.verified} verified</span>
+                <span className="text-slate-600"> / </span>
+                <span className="text-amber-400">{c.partial} partial</span>
               </span>
               <span className="font-mono text-[10px] text-slate-500">{c.claims} claims</span>
             </span>
@@ -354,7 +352,10 @@ function ResearchQueueAlert({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel
             </span>
           }
         >
-          Open research queue <span className="ml-1 text-slate-300">{gaps.length}</span>
+          Research queue <span className="ml-1 text-slate-300">{gaps.length}</span>
+          <span className="ml-2 hidden font-sans normal-case tracking-normal text-slate-500 sm:inline">
+            What we&apos;re investigating next
+          </span>
         </PanelLabel>
         <select
           aria-label="Sort research queue"
@@ -568,7 +569,7 @@ function CountryRoom({
               {c.name} <span className="ml-1 font-mono text-xs text-slate-500">{c.iso}</span>
             </h3>
             <span className="font-mono text-[11px] text-slate-500">
-              {c.coveragePct}% coverage · {countLabel(claims.length, "claim")} · {c.facilities}{" "}
+              {c.coveragePct}% verified · {countLabel(claims.length, "claim")} · {c.facilities}{" "}
               {c.facilities === 1 ? "facility" : "facilities"} · {countLabel(gaps.length, "open gap")}
             </span>
           </div>
@@ -839,6 +840,10 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
         </div>
         <div className="min-w-0 lg:col-span-7">
           <CountryKpiCards data={data} focus={focus} onSelect={selectCountry} />
+          <p className="mt-2.5 max-w-3xl text-[11px] leading-relaxed text-slate-500">
+            Verification rate = verified claims / claims entered for that country. A pillar not yet
+            researched is a structured gap, never a failed claim.
+          </p>
         </div>
       </div>
 
