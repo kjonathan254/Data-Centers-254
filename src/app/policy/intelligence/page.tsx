@@ -16,28 +16,35 @@ import ControlRoomDashboard from "./control-room";
 import { ConsoleRail, ConsoleHeader } from "./console-chrome";
 import type { OpsClaim, OpsCountry, OpsData, OpsGap, OpsSource } from "./dashboard-types";
 
-export const metadata: Metadata = {
-  title: "Policy Intelligence — East Africa data-centre regulation, claim by claim",
-  description:
-    "56 audited policy claims across Uganda, Rwanda, Tanzania and Kenya with full evidence chains: licensing, data protection, localisation, tax and energy. Not a blog — an evidence layer with a 5-state publication vocabulary.",
-  alternates: { canonical: "/policy/intelligence" },
-  openGraph: {
-    title: "Policy Intelligence — East Africa data-centre regulation, claim by claim",
-    description:
-      "What policy and regulatory frameworks govern data-centre development across Uganda, Rwanda, Tanzania and Kenya, and where are the material differences? Every claim carries its source, tier and capture state.",
-    siteName: "Data Centre 254",
-    type: "website",
-    locale: "en_KE",
-    images: [
-      {
-        url: "/images/dc-policy-regulation.webp",
-        width: 1200,
-        height: 675,
-        alt: "Policy Intelligence on Data Centre 254",
-      },
-    ],
-  },
-};
+// Metadata is computed from the live dataset (never hardcoded stats) and kept
+// inside search-engine limits: title ≤70 chars incl. the "%s | DC254" root
+// template; description 25–160 chars (Bing/Google truncate beyond that).
+export function generateMetadata(): Metadata {
+  const stats = getPolicyStats();
+  const verified = stats.byState["verified"] ?? 0;
+  const title = "Policy Intelligence — East Africa Data Centre Regulation"; // 57 + 8 template = 65
+  const description = `${verified}/${stats.claims} audited claims on East African data-centre policy: licensing, data protection, tax and energy. Every claim sourced, tiered and capture-stamped.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: "/policy/intelligence" },
+    openGraph: {
+      title,
+      description,
+      siteName: "Data Centre 254",
+      type: "website",
+      locale: "en_KE",
+      images: [
+        {
+          url: "/images/dc-policy-regulation.webp",
+          width: 1200,
+          height: 675,
+          alt: "Policy Intelligence on Data Centre 254",
+        },
+      ],
+    },
+  };
+}
 
 // ─── Serializable ops payload (control-room client input) ──────────────────
 

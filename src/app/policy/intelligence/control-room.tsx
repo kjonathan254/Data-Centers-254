@@ -82,9 +82,9 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
       className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-gradient-to-br from-[#101D30] to-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]"
     >
       <div className="flex items-start justify-between gap-3">
-        <h2 className="max-w-[24ch] text-lg font-bold leading-snug text-white sm:text-xl">
-          Who governs the region&rsquo;s data centres?
-        </h2>
+        <h1 className="max-w-[24ch] text-lg font-bold leading-snug text-white sm:text-xl">
+          Who governs East Africa&rsquo;s data centres?
+        </h1>
         <span
           title="Coverage = verified claims ÷ audited claims. Structured gaps are unresearched pillars — excluded from the denominator, never counted as findings."
           className="mt-1 cursor-help text-slate-500 transition-colors hover:text-slate-300"
