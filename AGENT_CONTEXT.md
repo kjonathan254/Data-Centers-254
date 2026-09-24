@@ -670,3 +670,17 @@
 - Next-stage queue remaining: CA submission letter (editor-owned, datacentres@ca.go.ke);
   Kenya Law gazette capture for target #2 when a route opens; gazette date resolution
   closes the C2 discrepancy.
+
+### 2026-09-24 (session 3) — Post 2 share posters built (Task 60, deliverables outside repo)
+- Editor asked for a poster to accompany post 2 (CA consultation) on LinkedIn + X, with the
+  DC254 logo. Rebuilt post-2 facts from the in-repo T1 captures (no post text file needed):
+  para 16 fee schedule verbatim, para 17 NFP/ASP exemption, Table 1 roadmap (FY2026/27
+  correction preserved), para 12 pull quote, 30-day window closing on or about 8 Oct 2026.
+- Brand: campaign_lib palette (navy gradient + #38C7F0 cyan) + site fonts Geist/Geist Mono +
+  logo.webp chip; constellation motif reused. pdf-skill poster pipeline (poster.md +
+  creative-fixed-canvas bypass rules), poster_validate PASS, pdf_qa clean after metadata set.
+- Deliverables (download/linkedin/): post2-ca-consultation-linkedin-4x5.png (2160x2700),
+  post2-ca-consultation-x-16x9.png (3200x1800), matching vector PDFs + editable HTML sources.
+  Source of truth: scripts/posters/ (HTML + shoot_posters.js renderer).
+- NOTE: session-2 LinkedIn post text files (post 1 + post 2) were lost in the same workspace
+  reset; numbers for post 1 remain documented in the session-2 log above (61/67/49/55).
