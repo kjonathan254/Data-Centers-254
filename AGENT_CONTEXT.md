@@ -529,3 +529,11 @@
 - GSC: sitemap live at https://data-centers-254.vercel.app/sitemap.xml
   (HTTP 200, 178 URLs incl. 101 article URLs at check time); robots-friendly;
   feed.xml also live for RSS.
+
+### 2026-09-24 — LinkedIn/WhatsApp share posters (Task 55, no repo changes)
+- Editor asked for share posters for the IMF + IBTC articles using his uploaded
+  hero images. Built 4 pixel-exact PNGs via HTML/Playwright (Geist + site brand
+  tokens; source of truth: /home/z/my-project/scripts/posters/, deliverables:
+  /home/z/my-project/download/posters/). LinkedIn 1200x627 split-panel layout,
+  WhatsApp 1080x1080 image-top layout, CTA pill + "Edited by Kevin Jonathan
+  Otieno" byline + site URL on all. Repo untouched.
