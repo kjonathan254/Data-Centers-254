@@ -3,6 +3,7 @@ import { glossaryTerms } from "@/lib/glossary-data";
 import {
   KENYA_FACILITIES, SUBSEA_CABLES, REGION_ITEMS, KIXP, LIVE_MW, PIPELINE_MW,
 } from "@/lib/map-data";
+import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
 import { SearchIndex, type IndexedChunk } from "@/lib/chatbot/retrieve";
 
 /**
@@ -97,7 +98,7 @@ function buildRawChunks(): RawChunk[] {
       kind: "fact",
       title: "Microsoft–G42 AI data centre Kenya",
       href: "/ai",
-      text: `The Microsoft–G42 AI data centre is a US$1 billion project announced for Nairobi, with around 100 MW of planned capacity, operated by ${g42.operator}. It is at an early stage: site to be confirmed and pending grid capacity. It is the single largest project in Kenya's data centre pipeline.`,
+      text: `The Microsoft–G42 AI data centre is a US$1 billion project announced for Nairobi, with around 100 MW of planned capacity, operated by ${g42.operator}. No site has been confirmed, and reporting indicates the project has stalled on grid power constraints: Kenya Power cannot currently deliver the required 100+ MW at a single site. Treat the 100 MW as an announcement, not bankable pipeline. It remains the single largest announced data centre project in Kenya.`,
       boost: 1.4,
     });
   }
@@ -151,16 +152,25 @@ export interface FaqPair {
 }
 
 export function getFaqPairs(): FaqPair[] {
+  // Dataset-derived so the chatbot can never drift from the directory:
+  // the same live source the FAQ page and site-stats read.
+  const facilities = getFacilities();
+  const kenya = facilities.filter((f) => (f.country || "Kenya") === "Kenya");
+  const kenyaOp = kenya.filter((f) => f.status === "Operational").length;
+  const regional = facilities.length - kenya.length;
+  const aiReadyKenya = kenya.filter((f) => f.aiReady).length;
+  const snap = getMarketSnapshot();
+
   return [
     {
       q: "How many data centres does Kenya have?",
-      a: "Kenya has 16 tracked data centre facilities, of which 12 are operational. The rest are under construction or announced, including some of the largest projects in the region. The count covers commercial colocation campuses, telecom-owned facilities and government installations in Nairobi, Mombasa and secondary cities.",
+      a: `Kenya has ${kenya.length} verified data centre facilities, of which ${kenyaOp} are operational, plus ${regional} East African reference records kept for regional context (${facilities.length} tracked records). The rest are under construction or announced, including some of the largest projects in the region. The count covers commercial colocation campuses, telecom-owned facilities and government installations in Nairobi, Mombasa and secondary cities.`,
       keywords: ["how many data centres", "how many dc", "number of facilities", "how many facilities"],
       links: [{ label: "Browse the full directory", href: "/directory" }],
     },
     {
       q: "What is the largest data centre in Kenya or East Africa?",
-      a: "By live capacity, iXAfrica NBOX1 in Nairobi leads the market with 4.5 MW of live IT load, East Africa's first hyperscale, AI-ready facility. The biggest number on the horizon is the Microsoft–G42 AI data centre project, a $1 billion commitment with around 100 MW of planned capacity announced for Nairobi.",
+      a: `By live capacity, iXAfrica NBOX1 in Nairobi leads the market with 4.5 MW of live IT load, East Africa's first hyperscale, AI-ready facility. The biggest announced number on the horizon remains the Microsoft–G42 AI data centre project, a $1 billion commitment with around 100 MW of planned capacity for Nairobi, although reporting indicates the project has stalled on grid power constraints.`,
       keywords: ["largest", "biggest", "largest data centre", "biggest facility"],
       links: [
         { label: "See the facility record", href: "/directory/ixafrica-nbox1" },
@@ -169,13 +179,13 @@ export function getFaqPairs(): FaqPair[] {
     },
     {
       q: "How much new data centre capacity is coming to Kenya?",
-      a: "Projects that are announced or under construction (outside today's operational fleet) represent roughly 171 MW of planned capacity. That includes iXAfrica's NBOX2 expansion, the Microsoft–G42 campus and other operator build-outs. Pipeline figures are developer-announced, not independently measured.",
+      a: `Developer-announced pipeline (under construction, committed and early-stage projects) totals roughly ${PIPELINE_MW} MW. That includes 77 MW under construction across iXAfrica's NBOX1.2 expansion, Africa Data Centres' Nairobi 2 and Nxtra by Airtel's Tatu City campus, plus the Microsoft–G42 announcement, which reporting links to grid power constraints. Pipeline figures are developer-announced, not independently measured.`,
       keywords: ["how much new capacity", "coming online", "new capacity", "pipeline capacity"],
       links: [{ label: "How we count capacity", href: "/methodology" }],
     },
     {
       q: "How many submarine cables connect Kenya to the global internet?",
-      a: "Seven international submarine cable systems are live in Kenya (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa), landing on the Kenyan coast at Mombasa and Mtwapa. Africa-1 landed at Mombasa in 2024 and awaits full service, and Meta's Daraja is in development. This concentration is both Kenya's strength and its single point of failure.",
+      a: `Seven international submarine cable systems are in service in Kenya (SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa), landing on the Kenyan coast at Mombasa and Mtwapa, with 10 systems tracked in total. Africa-1 landed at Mombasa in 2024 and awaits ready-for-service, and Meta's Daraja and the LuLu system are in development. This concentration is both Kenya's strength and its single point of failure.`,
       keywords: ["submarine cables", "undersea cables", "internet cables", "cables connect"],
       links: [{ label: "The infrastructure map", href: "/infrastructure/map" }],
     },
@@ -208,21 +218,24 @@ export function getFaqPairs(): FaqPair[] {
     },
     {
       q: "Which Kenyan data centres are AI-ready?",
-      a: "12 of the 16 tracked facilities are flagged AI-ready on DC254, meaning they offer high-density racks, liquid-cooling readiness or GPU-capable power envelopes. AI workloads demand far more power per rack than conventional cloud hosting, not every existing facility can retrofit to meet them.",
+      a: `${aiReadyKenya} of the ${kenya.length} tracked Kenyan facilities are flagged AI-ready on DC254, meaning they offer high-density racks, liquid-cooling readiness or GPU-capable power envelopes. AI workloads demand far more power per rack than conventional cloud hosting, not every existing facility can retrofit to meet them.`,
       keywords: ["ai ready", "ai-ready", "artificial intelligence facilities", "gpu"],
       links: [{ label: "Filter AI-ready facilities", href: "/directory" }],
     },
     {
       q: "Who operates Kenya's data centres?",
-      a: "The market runs on 12 tracked operators, spanning regional specialists (iXAfrica, Wingu Africa, Raxio), pan-African platforms (Africa Data Centres, Liquid Intelligent Technologies), national telecoms (Safaricom, Telkom Kenya) and government-backed players (Kenya Data Centres under the ICT Authority). No single operator controls the majority of live capacity.",
+      a: `The market runs on ${snap.operators} tracked operators, spanning regional specialists (iXAfrica, Wingu Africa, Raxio), pan-African platforms (Africa Data Centres, Liquid Intelligent Technologies), national telecoms (Safaricom, Telkom Kenya) and government-backed players (Kenya Data Centres under the ICT Authority). No single operator controls the majority of live capacity.`,
       keywords: ["who operates", "operators", "who owns", "companies running"],
       links: [{ label: "See all operators", href: "/directory" }],
     },
     {
       q: "Do you need a licence to run a data centre in Kenya?",
-      a: "Kenya's data centre market is liberalised, and the regulatory picture has been moving quickly, from licensing frameworks under the Communications Authority to county-level approvals and the national digital economy agenda. DC254 maintains a dedicated explainer on the licensing and regulatory framework as it stands.",
+      a: `Kenya's data centre market is liberalised, and the rules are being rewritten in real time. In September 2026 the Communications Authority opened a public consultation on a standalone data centre licence, with tiered annual fees up to KSh 100,000 or 0.4 percent of turnover, whichever is higher, and submissions due on or about 8 October 2026 to datacentres@ca.go.ke. DC254 maintains a dedicated explainer and a verified policy-intelligence dataset tracking the framework claim by claim.`,
       keywords: ["licence", "license", "regulation", "regulatory", "caa approval"],
-      links: [{ label: "The licensing framework explainer", href: "/articles/kenya-data-centre-licensing-framework" }],
+      links: [
+        { label: "The licensing framework explainer", href: "/articles/kenya-data-centre-licensing-framework" },
+        { label: "Policy Intelligence: the claims record", href: "/policy/intelligence" },
+      ],
     },
     {
       q: "How does DC254 verify its numbers?",

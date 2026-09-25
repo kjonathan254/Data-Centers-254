@@ -27,6 +27,21 @@ export const CORRECTIONS_SLA = {
 export const correctionsLog: CorrectionEntry[] = [
   {
     date: "2026-09-25",
+    summary: "Third audit pass: the chatbot's curated answers were still quoting superseded numbers, and the directory meta description still showed a city split that did not sum.",
+    changes: [
+      "Chatbot FAQ \u201cHow many data centres does Kenya have?\u201d: said \u201c16 tracked data centre facilities, of which 12 are operational\u201d, a superseded snapshot from an earlier register. It now derives the answer from the live directory like the FAQ page does: 27 verified Kenyan facilities, 20 operational, plus 4 East African reference records (31 tracked).",
+      "Chatbot FAQ \u201cWhich Kenyan data centres are AI-ready?\u201d: said \u201c12 of the 16 tracked facilities\u201d. The AI-ready flag is held by 5 of the 27 tracked Kenyan facilities; the answer is now dataset-derived.",
+      "Chatbot FAQ \u201cWho operates Kenya's data centres?\u201d: said \u201c12 tracked operators\u201d. The directory tracks 18; the answer is now dataset-derived.",
+      "Chatbot FAQ \u201cHow much new data centre capacity is coming to Kenya?\u201d: said \u201croughly 171 MW\u201d and named the Microsoft\u2013G42 campus as part of it. The announced pipeline is 230 MW (77 MW of it under construction across iXAfrica NBOX1.2, Africa Data Centres Nairobi 2 and Nxtra by Airtel Tatu City), and G42's own directory record warns the project has stalled on grid power constraints, so the answer now separates the two and derives the total from the dataset constant.",
+      "Chatbot Microsoft\u2013G42 fact chunk: described the project as \u201cpending grid capacity\u201d and \u201cthe single largest project in Kenya's data centre pipeline\u201d. It now carries the same caveat as the directory record: no site confirmed, stalled on grid power, treat the 100 MW as an announcement, not bankable pipeline.",
+      "Chatbot FAQ \u201cHow many submarine cables\u201d: kept 7 in service (re-verified against the dataset) but now states 10 systems tracked and names Daraja and LuLu as in development; \u201cawaits full service\u201d tightened to \u201cawaits ready-for-service\u201d.",
+      "Chatbot FAQ \u201cDo you need a licence...\u201d: refreshed with the September 2026 CA standalone-licence consultation (tiered annual fees to KSh 100,000 or 0.4 percent of turnover, whichever is higher, submissions due on or about 8 October 2026 to datacentres@ca.go.ke) and now links Policy Intelligence alongside the explainer.",
+      "Directory meta description: the 25 Sep pass log said the city split was fixed \u201cin both the meta description and the body copy\u201d, but only the body was reordered; the meta description still read 27 facilities with a 19 + 4 city split that does not sum. It now reads the full split (19 Nairobi, 4 Mombasa, and the remaining 4 named by city), computed from the dataset alongside the body copy so the two can never drift or fail to sum again.",
+      "Also re-verified live: every internal link on /infrastructure/map resolves HTTP 200 (the crawler's ten guessed routes never existed), robots.txt \u201cDisallow: /api/\u201d affects only search indexing while the /directory CSV link keeps working for users, and /api/directory/csv serves HTTP 200.",
+    ],
+  },
+  {
+    date: "2026-09-25",
     summary: "Second audit pass: Kenya scoping on the annual review and research hub cards; the Brief/01 PDF re-minted to the current dataset; directory sentence order clarified.",
     changes: [
       "Annual review (research/state-of-kenyan-data-centres-2026): the headline KPI counted all 31 directory records (22 operational) under a review titled \u201cState of Kenyan Data Centres\u201d. It now reads 27 facilities tracked, 20 operational in Kenya. The carrier-neutral footnote and the pipeline-to-watch grid are Kenya-scoped too, so the 2 regional under-construction reference records no longer appear as Kenyan pipeline, and the intro states the 27 + 4 split explicitly.",

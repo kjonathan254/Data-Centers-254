@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Directory from "@/components/sections/directory";
 import MarketSnapshot from "@/components/sections/market-snapshot";
-import { getFacilities, getMarketSnapshot } from "@/lib/directory-data";
+import { getFacilities, getMarketSnapshot, getKenyaCitySplit } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,10 +14,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const kenyaOp = facilities.filter((f) => f.status === "Operational" && (f.country || "Kenya") === "Kenya").length;
   const nairobi = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasa = facilities.filter((f) => f.city === "Mombasa").length;
+  // The city split must sum to kenyaCount or the description re-introduces the
+  // old "19 + 4 of 27" contradiction. Shared dataset-derived helper, sorted,
+  // so a future bump updates body copy and metadata together. Rendered string
+  // stays <= 156 chars (149 today).
+  const citySplit = getKenyaCitySplit();
+  const restPart = citySplit.count > 0 ? `, ${citySplit.count} in ${citySplit.list}` : "";
   // Canonical labels, per the audit: 31 = tracked incl. regional records,
   // 27 = verified facilities in Kenya. Never blended in one number.
   const title = `Kenya Data Centre Directory: ${facilities.length} Tracked, ${kenyaCount} in Kenya`;
-  const description = `How many data centres are in Kenya? ${kenyaCount} verified Kenyan facilities (${nairobi} in Nairobi, ${mombasa} in Mombasa), ${kenyaOp} of them operational, plus ${regional.length} East Africa reference records. Search, filter, and compare, fully sourced.`;
+  const description = `How many data centres are in Kenya? ${kenyaCount} verified facilities: ${nairobi} Nairobi, ${mombasa} Mombasa${restPart}; ${kenyaOp} operational. Fully sourced.`;
   return {
     title,
     description,
@@ -52,6 +58,7 @@ export default async function DirectoryPage({
   const operationalCount = facilities.filter((f) => f.status === "Operational").length;
   const nairobiCount = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasaCount = facilities.filter((f) => f.city === "Mombasa").length;
+  const citySplitBody = getKenyaCitySplit();
   // Tab counts for the directory's four views (server-computed, passed down).
   const kenyaCount = facilities.length - regional.length;
   const pipelineCount = facilities.filter(
@@ -133,7 +140,7 @@ export default async function DirectoryPage({
           <h2 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h2>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mb-2">
             DC254 currently tracks <strong className="text-foreground">{snap.kenyaFacilities} data centre facilities in Kenya</strong>{" "}
-            ({nairobiCount} in Nairobi, {mombasaCount} in Mombasa, the rest in Limuru, Ruiru, Thika and Konza), of which{" "}
+            ({nairobiCount} in Nairobi, {mombasaCount} in Mombasa, the rest in {citySplitBody.list}), of which{" "}
             {operationalCount - regional.filter((f) => f.status === "Operational").length} are operational, plus {snap.regionalFacilities} verified
             East Africa records: {regional.map((f) => `${f.name} (${f.country || "Kenya"})`).join(", ")}. The
             remaining {facilities.length - operationalCount} tracked sites are under construction, committed, or at an early

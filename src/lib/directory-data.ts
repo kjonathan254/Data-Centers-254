@@ -144,6 +144,26 @@ export function getFacilities() {
   return facilities;
 }
 
+/**
+ * Kenya city split for the intro sentence and the meta description:
+ * counts for Nairobi and Mombasa plus the alphabetised list of the
+ * remaining Kenyan cities. Dataset-derived so body copy and metadata
+ * always sum to the Kenya total and can never drift apart.
+ */
+export function getKenyaCitySplit() {
+  const ke = facilities.filter((f) => facilityCountry(f) === "Kenya");
+  const nairobi = ke.filter((f) => f.city === "Nairobi").length;
+  const mombasa = ke.filter((f) => f.city === "Mombasa").length;
+  const others = Array.from(
+    new Set(ke.map((f) => f.city).filter((c) => c !== "Nairobi" && c !== "Mombasa"))
+  ).sort();
+  const list =
+    others.length > 1
+      ? `${others.slice(0, -1).join(", ")} and ${others[others.length - 1]}`
+      : others.join(", ");
+  return { nairobi, mombasa, others, count: ke.length - nairobi - mombasa, list };
+}
+
 export function getFacilityBySlug(slug: string) {
   return facilities.find((f) => f.slug === slug) || null;
 }
