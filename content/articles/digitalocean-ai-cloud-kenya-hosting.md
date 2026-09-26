@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-08"
+updated_date: "2026-09-26"
 category: "AI & Infrastructure"
 cluster: "AI"
 og_image: "/images/ai-gpu-servers.webp"
@@ -71,7 +71,7 @@ That is why the megawatt commitments matter. DigitalOcean is contracting 155 MW 
 
 **For Kenyan hosting businesses**, the harder truth: none of DigitalOcean's 155 MW is coming to Nairobi on current evidence. Its capacity hunt plays out in US and European markets with proven grid supply. Kenya's cloud-on-ramp story is being written by others, iXAfrica with OCI, the PAIX and ADC interconnection layers, Digital Realty's NBO2 launch. The local opportunity is not to out-cloud DigitalOcean; it is to be the **inference edge** the global clouds need: cache the models, serve the users, keep latency local and shillings-denominated. That is a colocation and interconnection business, which is why our [directory](/directory) tracks carrier neutrality and network counts more closely than marketing claims.
 
-**For policymakers**, the uncomfortable arithmetic. A single mid-size AI cloud commits more megawatts in one quarter (20 MW) than Kenya's entire verified operating data centre capacity ([~28 MW across 26 facilities](/articles/kenya-data-centre-market-numbers)). The global AI build-out is a power-allocation contest, and the Microsoft–G42 project's well-documented stall on grid delivery shows what happens when a 100 MW-class request meets a 3,192 MW grid serving a 2,316 MW peak. If Kenya wants a seat in the inference economy, the binding policy question is not "how do we attract AI companies", it is how fast dispatchable generation and transmission can be built behind the geothermal belt.
+**For policymakers**, the uncomfortable arithmetic. A single mid-size AI cloud commits more megawatts in one quarter (20 MW) than Kenya's entire verified operating data centre capacity ([~28 MW across 27 verified facilities](/articles/kenya-data-centre-market-numbers)). The global AI build-out is a power-allocation contest, and the Microsoft–G42 project's well-documented stall on grid delivery shows what happens when a 100 MW-class request meets a 3,192 MW grid serving a 2,316 MW peak. If Kenya wants a seat in the inference economy, the binding policy question is not "how do we attract AI companies", it is how fast dispatchable generation and transmission can be built behind the geothermal belt.
 
 ![Power infrastructure behind cloud capacity](/images/dc-power-systems.webp)
 

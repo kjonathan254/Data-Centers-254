@@ -152,7 +152,7 @@ export default async function DirectoryPage({
         <div className="container-site mt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
             Analysts and journalists: the full directory is free to download and
-            cite , {" "}
+            cite, {" "}
             <a
               href="/api/directory/csv"
               download

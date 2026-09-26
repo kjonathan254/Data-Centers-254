@@ -26,6 +26,16 @@ export const CORRECTIONS_SLA = {
 
 export const correctionsLog: CorrectionEntry[] = [
   {
+    date: "2026-09-26",
+    summary: "Fourth audit pass: FAQ page answers re-scoped to Kenya where the question is Kenya-scoped, plus copy fixes.",
+    changes: [
+      "FAQ \u201cHow much new data centre capacity is coming to Kenya?\u201d: the 232 MW figure summed announced pipeline across all tracked records including the East African reference builds; the question asks about Kenya, so the answer is now the Kenya-scoped 230 MW.",
+      "FAQ \u201cWhich Kenyan data centres are AI-ready?\u201d: read \u201c5 of the 31 tracked facilities\u201d, using the full register as denominator for a Kenya-scoped question; now \u201c5 of the 27 Kenyan facilities in the directory\u201d.",
+      "Directory page: fixed a stray space before the comma in \u201cfree to download and cite\u201d.",
+      "DigitalOcean analysis article: cross-reference to the market-numbers explainer updated from \u201c26 facilities\u201d to \u201c27 verified facilities\u201d following the 19 September directory update, and the article's updated_date moved accordingly.",
+    ],
+  },
+  {
     date: "2026-09-25",
     summary: "Third audit pass: the chatbot's curated answers were still quoting superseded numbers, and the directory meta description still showed a city split that did not sum.",
     changes: [

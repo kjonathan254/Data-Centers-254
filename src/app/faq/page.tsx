@@ -40,8 +40,10 @@ export default function FaqPage() {
   const largest = facilities
     .filter((f) => f.itLoadMw)
     .sort((a, b) => (b.itLoadMw ?? 0) - (a.itLoadMw ?? 0))[0];
+  // Kenya-scoped: the question asks about Kenya, so the four East African
+  // reference records stay out of the numerator and the denominator.
   const pipelineMw = facilities
-    .filter((f) => f.status !== "Operational")
+    .filter((f) => (f.country || "Kenya") === "Kenya" && f.status !== "Operational")
     .reduce((s, f) => s + (f.totalCapacityMw || 0), 0);
   const aiReady = facilities.filter((f) => f.aiReady);
 
@@ -79,7 +81,7 @@ export default function FaqPage() {
     },
     {
       q: "Which Kenyan data centres are AI-ready?",
-      a: `${stats.aiReadyCount} of the ${facilities.length} tracked facilities are flagged AI-ready on DC254, meaning they offer high-density racks, liquid-cooling readiness or GPU-capable power envelopes. AI workloads demand far more power per rack than conventional cloud hosting, and not every existing facility can retrofit to meet them. Each facility page lists what the operator has publicly committed to.`,
+      a: `${stats.aiReadyCount} of the ${facilities.filter((f) => (f.country || "Kenya") === "Kenya").length} Kenyan facilities in the directory are flagged AI-ready on DC254, meaning they offer high-density racks, liquid-cooling readiness or GPU-capable power envelopes. AI workloads demand far more power per rack than conventional cloud hosting, and not every existing facility can retrofit to meet them. Each facility page lists what the operator has publicly committed to.`,
       links: [{ label: "filter AI-ready facilities", href: "/directory" }],
     },
     {
