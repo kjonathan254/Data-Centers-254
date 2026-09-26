@@ -15,17 +15,25 @@ published_date: "2026-09-26"
 updated_date: "2026-09-26"
 category: "Energy"
 cluster: "Energy"
-og_image: "/images/lamu-lng-power-complex.webp"
+og_image: "/images/dangote-ruto-lekki-refinery-walk.webp"
 reading_time: "9 min"
 images:
-  - src: "/images/lamu-lng-power-complex.webp"
-    alt: "Illustrative aerial view of a coastal refinery and power plant complex beside a Swahili island bay"
-    caption: "An illustrative view of the kind of coastal refinery and power complex proposed for Lamu: storage tanks, distillation columns and generation units on the Indian Ocean. No such complex exists there today; every figure in this article is an announcement, not infrastructure."
+  - src: "/images/dangote-ruto-lekki-refinery-walk.webp"
+    alt: "President William Ruto and Aliko Dangote walking with a delegation past refinery structures at the Dangote Petroleum Refinery in Lekki, Nigeria"
+    caption: "President William Ruto and Aliko Dangote walk the Dangote Petroleum Refinery in Lekki, Nigeria, during the late-September 2026 visit where the Lamu power figures were announced. What Kenya is being offered is a version of what works here, half a world of industrial scale away from an unbuilt site on the Swahili coast."
     position: "hero"
-  - src: "/images/hv-power-transformer-bay.webp"
-    alt: "High-voltage transformer bays and switchgear at a power substation"
-    caption: "Between an announcement and a data centre sit substations, switchgear and transmission lines. A 500 MW grid injection is only useful to digital infrastructure once it is contracted, transmitted and dispatched."
+  - src: "/images/dangote-ruto-lekki-refinery-talk.webp"
+    alt: "President Ruto listening as Aliko Dangote gestures during a walkthrough of his Lekki refinery"
+    caption: "The pitch in person: Dangote described the refinery as 'the gate' for further investment, with electricity generation built in from the start."
     position: "section-break"
+  - src: "/images/lamu-refinery-layout-illustration.webp"
+    alt: "Labelled artistic impression of the proposed Lamu refinery complex layout, with port, storage and processing zones"
+    caption: "A labelled artistic impression of the proposed Lamu complex circulated with the announcement, marking LAPSSET integration, a regional supply network and the proximity of Lamu Old Town, a UNESCO World Heritage site. The material is promotional: its 700,000 barrels-per-day figure sits at the top of a published range, and no engineering plan or financing close is public."
+    position: "inline"
+  - src: "/images/dangote-lekki-tank-farm-aerial.webp"
+    alt: "Aerial view of storage tanks and pipelines at the working Dangote refinery complex in Lekki, Nigeria"
+    caption: "What exists today: the tank farm at Lekki. The Lamu project asks investors and government to underwrite a similar complex plus a 1,000 MW power plant at a site where no such infrastructure currently stands."
+    position: "inline"
   - src: "/images/kenya-geothermal-plant-2.webp"
     alt: "Geothermal steam wells and plant on the Kenyan Rift Valley floor"
     caption: "Kenya's grid is one of the world's greenest, anchored by Rift Valley geothermal. A large LNG-fired plant would add fossil baseload to a renewable-heavy mix, with implications for the green-power pitch behind Kenya's data centre market."
@@ -68,13 +76,15 @@ canonical_url: "https://data-centers-254.vercel.app/articles/dangote-lamu-refine
 
 Africa's richest man has offered Kenya half of a very large power plant. Announcing details during President William Ruto's late-September 2026 visit to his Lekki refinery in Nigeria, Aliko Dangote said the proposed Lamu refinery complex would generate about 1,000 megawatts of electricity and sell roughly 500 megawatts to the Kenyan government, as reported by Kenyans.co.ke on 26 September 2026. "We are going to produce about 1,000 megawatts in Lamu and have 500 megawatts to sell to the Kenyan government," Dangote said. For a country whose largest announced data centre project stalled largely on grid constraints, half a gigawatt of new generation is the kind of number that demands attention, and scrutiny.
 
-![High-voltage transformer bays and switchgear at a power substation](/images/hv-power-transformer-bay.webp)
+![President William Ruto and Aliko Dangote walking past refinery structures at the Dangote Petroleum Refinery in Lekki, Nigeria](/images/dangote-ruto-lekki-refinery-walk.webp)
 
 This article was published on 26 September 2026, days after the announcement. It is a developing story: the refinery has not broken ground, financing is not closed, and no power purchase agreement is public. Every figure below is staged the way DC254 stages everything, as an announcement with a named source, not as infrastructure that exists.
 
 ## What Was Actually Announced
 
 The facts as reported are straightforward. Dangote framed electricity generation as part of the refinery investment, an "entry point" for further businesses. "What this investment will do to Kenya's economy is not only the refinery. The refinery is actually the gate. Once you open the refinery, you will be shocked at how many people will come to invest in Kenya," he said during the visit. President Ruto backed the project, said his administration had already secured land for its development, and described it as an industrial-scale-up opportunity rather than a refinery alone.
+
+![Aerial view of storage tanks and pipelines at the working Dangote refinery complex in Lekki, Nigeria](/images/dangote-lekki-tank-farm-aerial.webp)
 
 The project's reported shape, assembled from coverage across Kenyans.co.ke, The Star and international outlets, includes a refinery complex backed by the Africa Finance Corporation, an investment value reported in the range of Ksh 1.94 trillion to Ksh 2.20 trillion (roughly $15 billion to $17 billion), and processing capacity reported between about 220,000 and 700,000 barrels per day depending on the outlet, a discrepancy worth flagging rather than smoothing over. The project was initially earmarked for Tanga in Tanzania before shifting to Lamu, citing infrastructure, logistics and market considerations. Reports in late September suggested a launch or groundbreaking window at the end of September 2026, which, if it happens, will be the first hard evidence that the project is moving.
 
@@ -107,6 +117,8 @@ The third angle is competitive. Ethiopia is exporting regional hydro power to Ke
 ## The Deal Structure and the Open Questions
 
 The commercial architecture around the project is still forming. Reporting in August 2026 indicated Dangote offered Kenya a 10 percent stake worth about $500 million, with a combined 30 percent offered to East African countries, and that Kenya was considering financing its contribution through a local facility. Dangote has said the project would be financed through debt and shareholder funds, with support from the Africa Finance Corporation. Whether any government stake, offtake agreement or power purchase arrangement is concluded, and on what terms, will say more about the project's credibility than any announcement event.
+
+![Labelled artistic impression of the proposed Lamu refinery complex layout](/images/lamu-refinery-layout-illustration.webp)
 
 The environmental and heritage questions are equally part of the record. Lamu is a UNESCO World Heritage site, and the area carries the history of the 1,050 MW Amu Power coal plant, cancelled after the National Environment Tribunal revoked its licence in 2019. LNG is a different proposition from coal on emissions, but the permitting history means any large thermal plant at Lamu should be expected to face organised opposition and litigation. Investors, including data centre operators who might one day contract that power, price that risk.
 
