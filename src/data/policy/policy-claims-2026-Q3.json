@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r14",
-  "generatedAt": "2026-09-24",
+  "datasetVersion": "policy-2026-Q3-r15",
+  "generatedAt": "2026-09-26",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
@@ -37,6 +37,18 @@
     "regional-frameworks"
   ],
   "sources": {
+    "itnewsafrica-mtn-africa-data-hub": {
+      "label": "IT News Africa - MTN Group advances Africa's AI-ready digital infrastructure ecosystem through strategic partnership",
+      "url": "https://www.itnewsafrica.com/enterprise/digital-transformation/mtn-group-advances-africas-ai-ready-digital-infrastructure-ecosystem-through-strategic-partnership/",
+      "tier": 2,
+      "publisher": "IT News Africa",
+      "sourceType": "Trade press announcement",
+      "publishedDate": "2026-08-31",
+      "retrievedDate": "2026-09-26",
+      "captureStatus": "full",
+      "captureNote": "Full article text captured via page reader. Reference record for the MTN Digital Infrastructure / Africa Data Hub Holding Limited partnership (UAE investor Tarek Al Ashram; initial focus South Africa and Nigeria; Bayobab a shareholder; framed under MTN's Ambition 2030). Commercial market development, not tied to a claim in this dataset; candidate background evidence for the ai-digital-policy and regional-frameworks pillars.",
+      "excerpt": "MTN Group today announced that MTN Digital Infrastructure has entered into a strategic partnership with UAE-based data centre investment platform to accelerate the development of AI-ready digital infrastructure platforms across Africa... The partners will pursue this strategic partnership through Africa Data Hub Holding Limited, which will serve as the platform through which future digital infrastructure opportunities will be developed and scaled across key African markets, with an initial focus on South Africa and Nigeria."
+    },
     "ulii-dppa-metadata": {
       "label": "Uganda Legal Information Institute - Data Protection and Privacy Act, Cap. 97 (official depository metadata)",
       "url": "https://ulii.org/akn/ug/act/2019/9/eng@2019-05-03",

@@ -27,6 +27,17 @@ export const CORRECTIONS_SLA = {
 export const correctionsLog: CorrectionEntry[] = [
   {
     date: "2026-09-26",
+    summary:
+      "Fifth audit pass: MTN/Africa Data Hub announcement added to the policy intelligence source registry (dataset bumped to r15) and the article's IT News Africa citation canonicalised; crawler-report triage confirmed closed.",
+    changes: [
+      "Policy intelligence source registry: added the IT News Africa report of the MTN Digital Infrastructure / Africa Data Hub Holding Limited partnership (31 Aug 2026, full text captured 26 Sep) as a tier-2 reference record. It is a commercial market development, not a policy claim, so it is registered with an explicit note that it supports no claim yet and is candidate background evidence for the ai-digital-policy and regional-frameworks pillars. Dataset bumped from r14 to r15.",
+      "MTN analysis article (mtn-africa-data-hub-ai-data-centres): the IT News Africa citation used the publisher's older /2026/08/ path, which only resolves via redirect; updated to the canonical /enterprise/digital-transformation/ path and verified live (HTTP 200).",
+      "Re-verified the article against the captured source text: every material fact (Africa Data Hub Holding Limited vehicle, Bayobab's shareholder role, the Mrou\u00e9 and Al Ashram quotes, the South Africa and Nigeria initial focus, Ambition 2030 framing) was already present and accurate; no content change was needed.",
+      "Re-checked the external crawler report's remaining items against the live site and the four earlier audit passes: the two genuine number-consistency findings were already fixed in passes 2-4, and the rest were crawler artefacts (guessed routes, XML rendering failures) confirmed with live HTTP checks recorded on 25 September.",
+    ],
+  },
+  {
+    date: "2026-09-26",
     summary: "Fourth audit pass: FAQ page answers re-scoped to Kenya where the question is Kenya-scoped, plus copy fixes.",
     changes: [
       "FAQ \u201cHow much new data centre capacity is coming to Kenya?\u201d: the 232 MW figure summed announced pipeline across all tracked records including the East African reference builds; the question asks about Kenya, so the answer is now the Kenya-scoped 230 MW.",

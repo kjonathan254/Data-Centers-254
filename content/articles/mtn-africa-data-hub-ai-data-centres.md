@@ -42,7 +42,7 @@ internal_links:
     href: "/directory"
 external_sources:
   - title: "IT News Africa: MTN Group advances Africa's AI-ready digital infrastructure ecosystem through strategic partnership (31 Aug 2026)"
-    url: "https://www.itnewsafrica.com/2026/08/mtn-group-advances-africas-ai-ready-digital-infrastructure-ecosystem-through-strategic-partnership/"
+    url: "https://www.itnewsafrica.com/enterprise/digital-transformation/mtn-group-advances-africas-ai-ready-digital-infrastructure-ecosystem-through-strategic-partnership/"
   - title: "Bloomberg: UAE tycoon Al Ashram, MTN agree to build Africa AI data centres"
     url: "https://www.moneyweb.co.za/news/companies-and-deals/uae-tycoon-al-ashram-mtn-agree-to-build-africa-ai-data-centres/"
   - title: "Business Insider Africa: UAE business giant Al Ashram joins forces with Africa's largest network provider"
