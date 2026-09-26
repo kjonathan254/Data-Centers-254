@@ -28,6 +28,16 @@ export const correctionsLog: CorrectionEntry[] = [
   {
     date: "2026-09-26",
     summary:
+      "Published the Dangote Lamu power-plant analysis (Energy cluster) with staged-announcement sourcing; registered two reference records in the policy dataset (bumped to r16).",
+    changes: [
+      "New article /articles/dangote-lamu-refinery-power-plant-data-centres: covers the 26 September 2026 announcement of a 1,000 MW power plant at the proposed Lamu refinery with ~500 MW offered to the Kenyan government. The article stages every figure as an announcement, flags the refinery-capacity discrepancy across outlets (roughly 220,000 to 700,000 barrels per day as reported), establishes from The Africa Report that the plant is LNG-fired rather than renewable, sets the scale against the directory's live figures (42.9 MW built capacity, 10.5 MW published IT load, 230 MW pipeline, ~3,000 MW installed grid capacity), and records the Lamu coal-plant precedent (1,050 MW Amu Power licence revoked 2019) as part of the project's risk profile.",
+      "Policy intelligence source registry: added the Kenyans.co.ke report (full text captured) and The Africa Report LNG reporting (snippet capture, paywalled) as tier-2 reference records with explicit no-claim-yet notes; candidate background evidence for the energy-electricity pillar. Dataset bumped from r15 to r16.",
+      "Reader-supplied photographs of the announcement were intended as article images but did not reach the publishing system; the article ships with an explicitly labelled illustrative hero and existing verified infrastructure photography instead. The images can be swapped in if supplied.",
+    ],
+  },
+  {
+    date: "2026-09-26",
+    summary:
       "Fifth audit pass: MTN/Africa Data Hub announcement added to the policy intelligence source registry (dataset bumped to r15) and the article's IT News Africa citation canonicalised; crawler-report triage confirmed closed.",
     changes: [
       "Policy intelligence source registry: added the IT News Africa report of the MTN Digital Infrastructure / Africa Data Hub Holding Limited partnership (31 Aug 2026, full text captured 26 Sep) as a tier-2 reference record. It is a commercial market development, not a policy claim, so it is registered with an explicit note that it supports no claim yet and is candidate background evidence for the ai-digital-policy and regional-frameworks pillars. Dataset bumped from r14 to r15.",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r15",
+  "datasetVersion": "policy-2026-Q3-r16",
   "generatedAt": "2026-09-26",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
@@ -37,6 +37,30 @@
     "regional-frameworks"
   ],
   "sources": {
+    "kenyans-dangote-lamu-power": {
+      "label": "Kenyans.co.ke - Dangote Eyes Electricity Sales to Kenya From Lamu Refinery Power Plant",
+      "url": "https://www.kenyans.co.ke/news/127366-dangote-eyes-electricity-sales-kenya-lamu-refinery-power-plant",
+      "tier": 2,
+      "publisher": "Kenyans.co.ke",
+      "sourceType": "National news report",
+      "publishedDate": "2026-09-26",
+      "retrievedDate": "2026-09-26",
+      "captureStatus": "full",
+      "captureNote": "Full article text captured via page reader. Reference record for the Dangote Lamu announcement: 1,000 MW power plant at the proposed Lamu refinery, ~500 MW offered to the Kenyan government, made during President Ruto's late-September 2026 visit to the Lekki refinery; Ksh 1.94-2.20 trillion investment estimate with Africa Finance Corporation support; Ruto states land secured. Commercial/energy market development, not tied to a claim in this dataset; candidate background evidence for the energy-electricity pillar (grid capacity expansion).",
+      "excerpt": "Nigerian billionaire Aliko Dangote has announced plans to generate electricity at the Lamu refinery and sell part of the power to the Kenyan government once the refinery begins operating. Dangote on Friday, September 26, said the planned Lamu facility would have a 1,000-megawatt power plant, with half of the electricity potentially supplied to the Kenyan market."
+    },
+    "theafricareport-lamu-lng": {
+      "label": "The Africa Report - Kenya, Dangote eye LNG power deal at Lamu refinery, target Tanzania gas",
+      "url": "https://www.theafricareport.com/429709/kenya-dangote-eye-lng-power-deal-at-lamu-refinery-target-tanzania-gas",
+      "tier": 2,
+      "publisher": "The Africa Report",
+      "sourceType": "Pan-African business publication",
+      "publishedDate": "2026-09-03",
+      "retrievedDate": "2026-09-26",
+      "captureStatus": "snippet",
+      "captureNote": "Article is paywalled/cookie-walled; headline and search snippet verified only. Key fact from headline/snippet: Dangote Industries to double the planned capacity of an LNG power plant at its proposed Lamu refinery to 1,000 MW, targeting Tanzanian gas. Establishes the plant's fuel type (LNG, not renewable) - material to the green-grid narrative.",
+      "excerpt": "Dangote Industries to double the planned capacity of an LNG power plant at its proposed Lamu refinery to 1,000MW, aiming to bridge domestic ..."
+    },
     "itnewsafrica-mtn-africa-data-hub": {
       "label": "IT News Africa - MTN Group advances Africa's AI-ready digital infrastructure ecosystem through strategic partnership",
       "url": "https://www.itnewsafrica.com/enterprise/digital-transformation/mtn-group-advances-africas-ai-ready-digital-infrastructure-ecosystem-through-strategic-partnership/",
