@@ -112,7 +112,7 @@ There is also a geographic angle. Lamu sits on Kenya's coast, near but not adjac
 
 ![High-voltage transmission pylons on Kenya's backbone grid](/images/kenya-transmission-pylons.webp)
 
-The third angle is competitive. Ethiopia is exporting regional hydro power to Kenya across a 2,000 MW interconnector and plans to double those exports, a story we track in [our Ethiopia power exports analysis](/articles/ethiopia-power-exports-kenya-data-centres). Olkaria's geothermal corridor idea pulls compute to the steam fields instead of stretching the grid. Dangote's LNG plant adds a third model: big coastal fossil baseload beside an industrial anchor tenant. Kenya's data centre power future may end up being all three, and the mix will shape both cost and carbon claims.
+The third angle is competitive. Ethiopia is exporting regional hydro power to Kenya across a 2,000 MW interconnector and plans to double those exports, a story we track in [our Ethiopia power exports analysis](/articles/ethiopia-power-exports-kenya-data-centres). Olkaria's [geothermal corridor](/articles/olkaria-geothermal-data-centre-corridor) idea pulls compute to the steam fields instead of stretching the grid. Dangote's LNG plant adds a third model: big coastal fossil baseload beside an industrial anchor tenant. Kenya's data centre power future may end up being all three, and the mix will shape both cost and carbon claims.
 
 ## The Deal Structure and the Open Questions
 

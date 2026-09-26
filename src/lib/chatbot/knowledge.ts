@@ -103,6 +103,14 @@ function buildRawChunks(): RawChunk[] {
     });
   }
   chunks.push({
+    id: "fact:dangote-lamu",
+    kind: "fact",
+    title: "Dangote Lamu refinery power plant",
+    href: "/articles/dangote-lamu-refinery-power-plant-data-centres",
+    text: `On 26 September 2026, Aliko Dangote announced that the proposed Lamu refinery complex would include an LNG-fired power plant of about 1,000 MW, with roughly 500 MW potentially sold to the Kenyan government. The refinery has not broken ground, financing is not closed and no power purchase agreement is public. Treat the 500 MW as an announcement, the same status as the Microsoft\u2013G42 100 MW, not bankable pipeline. It is the third of three competing power models for Kenya's compute build-out, alongside Olkaria's geothermal corridor and Ethiopian hydro imports.`,
+    boost: 1.4,
+  });
+  chunks.push({
     id: "fact:kixp",
     kind: "fact",
     title: "KIXP Kenya Internet Exchange Point",

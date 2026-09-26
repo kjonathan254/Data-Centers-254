@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-21"
-updated_date: "2026-09-21"
+updated_date: "2026-09-26"
 category: "Energy"
 cluster: "Energy"
 og_image: "/images/kenya-transmission-pylons-5.webp"
@@ -32,7 +32,7 @@ images:
     position: "diagram"
   - src: "/images/atlancis-nairobi-datacentre-hall.webp"
     alt: "Server racks inside a Nairobi data centre hall"
-    caption: "Inside a Nairobi data centre hall. The demand side of this story lives in buildings like it: DC254 tracks 27 verified Kenyan facilities with 38.5 MW of live designed capacity and a 230 MW announced pipeline, all of it drawing on the same grid that regional imports feed."
+    caption: "Inside a Nairobi data centre hall. The demand side of this story lives in buildings like it: DC254 tracks 27 verified Kenyan facilities with 42.9 MW of live designed capacity and a 230 MW announced pipeline, all of it drawing on the same grid that regional imports feed."
     position: "inline"
   - src: "/images/diagram-grid-connection-anatomy.webp"
     alt: "Schematic of a grid connection from a high-voltage substation through switchgear and transformers to a data centre"
@@ -71,6 +71,10 @@ internal_links:
     href: "/articles/geothermal-energy-kenya-data-centres"
   - text: "how data-centre UPS backup power works"
     href: "/articles/ups-backup-power-kenyan-data-centres"
+  - text: "Inside Olkaria's geothermal data centre corridor"
+    href: "/articles/olkaria-geothermal-data-centre-corridor"
+  - text: "Dangote's Lamu power plant and Kenya data centres"
+    href: "/articles/dangote-lamu-refinery-power-plant-data-centres"
 external_sources:
   - title: "Ethiopian Electric Power, announcement on planned Kenya export increase (16 September 2026; 200 MW to 400 MW, subject to technical preparation and testing)"
     url: "https://www.eep.com.et/"
@@ -187,6 +191,12 @@ Ethiopia has also been testing exports to Tanzania. Reporting on 19 September 20
 The World Bank approved a $1.6 billion, 10-year programme in June 2026 to support electricity transmission, regional trading and system resilience in Eastern Africa. The programme includes support for the Eastern Africa Power Pool and a planned day-ahead electricity market (World Bank, June 2026).
 
 This is the larger development to watch. East Africa is gradually creating the infrastructure and market rules for electricity to become more regional. For digital infrastructure, that could widen the pool of available supply and strengthen resilience over time. It could also make power planning more complex because facility operators will need to understand cross-border supply exposure as well as local grid conditions.
+
+## Where This Sits Among Kenya's Power Options
+
+Imports are one of three supply models now converging on Kenya's data centre conversation, and they are best understood side by side rather than added together. Domestic geothermal near the wells is the Olkaria corridor model, covered in [our Olkaria analysis](/articles/olkaria-geothermal-data-centre-corridor): putting compute where the baseload is generated instead of stretching the grid to it. Regional hydro imports are this article's model: energy generated in Ethiopia entering Kenya's bulk grid through the interconnector. The newest arrival is announced coastal fossil baseload: on 26 September 2026, Aliko Dangote said his proposed Lamu refinery would include an LNG-fired power plant of about 1,000 megawatts, with roughly 500 megawatts potentially sold to the Kenyan government, covered in [our Dangote Lamu analysis](/articles/dangote-lamu-refinery-power-plant-data-centres).
+
+The status labels differ, and the difference matters more than the headline sizes. The 400 megawatts planned from Ethiopia is a trade volume awaiting technical testing and operational arrangements. The Dangote plant is an announcement attached to an unbuilt refinery, with no power purchase agreement or financing close public, which is the same distinction this site applies to the stalled Microsoft and G42 campus announcement. Neither figure is reserved for data centres, and none of the three models' numbers should be summed into a single national total, because they describe different grid positions at different stages of certainty. If a PPA or financing close lands at Lamu, that is the trigger to re-grade the third model; until then, the December 2026 test of the higher export volumes is the milestone this article watches.
 
 ## What investors, operators and policymakers should watch
 

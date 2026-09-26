@@ -523,10 +523,11 @@ const INTENTS: Intent[] = [
     run: () => {
       const withClaims = operational.filter((f) => f.renewableClaim).slice(0, 3);
       return ok({
-        reply: `Kenya's grid is one of the greenest on Earth, roughly 90% renewable, anchored by Rift Valley geothermal with hydro and wind behind it. That means data centres here run genuinely low-carbon power without certificate accounting. ${withClaims.length ? `Operators lean into it: ${withClaims.map((f) => f.name).join(", ")} all cite the renewable grid on record.` : ""} It's quietly Kenya's strongest pitch for AI and cloud investment.`,
+        reply: `Kenya's grid is one of the greenest on Earth, roughly 90% renewable, anchored by Rift Valley geothermal with hydro and wind behind it. That means data centres here run genuinely low-carbon power without certificate accounting. ${withClaims.length ? `Operators lean into it: ${withClaims.map((f) => f.name).join(", ")} all cite the renewable grid on record.` : ""} It's quietly Kenya's strongest pitch for AI and cloud investment. Three power models now compete for the compute load: Olkaria's geothermal corridor, Ethiopian hydro imports, and Dangote's announced Lamu LNG plant, which remains exactly that, an announcement.`,
         citations: [
           { label: "The energy cluster", href: "/energy" },
           { label: "Kenya's green data centre edge", href: "/articles/kenya-renewables-industrial-power-data-centres" },
+          { label: "Dangote's Lamu power play", href: "/articles/dangote-lamu-refinery-power-plant-data-centres" },
         ],
         suggestions: ["Which data centres are AI-ready?", "How much capacity does Kenya have in total?"],
         intent: "greenPower",

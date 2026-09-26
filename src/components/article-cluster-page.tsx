@@ -35,7 +35,7 @@ const clusterConfig: Record<
     title: "Energy & Power",
     subtitle: "ENERGY",
     description:
-      "Data centres are massive electricity consumers. Kenya\u2019s geothermal advantage could make it Africa\u2019s green data centre hub, but the grid has limits.",
+      "Data centres are massive electricity consumers, and Kenya\u2019s grid has limits. Three competing power models now shape the story, geothermal compute-to-the-wells at Olkaria, hydro imports from Ethiopia, and an announced coastal LNG plant at Lamu, tracked here without blending their numbers.",
   },
   Careers: {
     title: "Careers & Business",

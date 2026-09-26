@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
-updated_date: "2026-09-16"
+updated_date: "2026-09-26"
 category: "Renewable Energy"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant-3.webp"
@@ -39,6 +39,10 @@ internal_links:
     href: "/articles/kenya-data-centre-compute-hub-plan-explained"
   - text: "Tax incentives for data centre investment in Kenya"
     href: "/articles/tax-incentives-data-centre-investment-kenya"
+  - text: "Ethiopia power exports and Kenya data centres"
+    href: "/articles/ethiopia-power-exports-kenya-data-centres"
+  - text: "Dangote's Lamu power plant and Kenya data centres"
+    href: "/articles/dangote-lamu-refinery-power-plant-data-centres"
 external_sources:
   - title: "Semafor, Energy shortfall 'problem' scuppers Kenya's $1B Microsoft data center (6 May 2026)"
     url: "https://www.semafor.com/article/05/06/2026/energy-shortfall-problem-scuppers-kenyas-1b-microsoft-data-center"
@@ -94,6 +98,12 @@ Three things have to line up. First, generation: more wells and plants at Olkari
 
 The prize explains the persistence. Kenya is projected to account for more than three-quarters of fresh data centre capacity across East African markets by 2030, according to an African Union report cited by Semafor, and the Kenya market is projected to roughly triple to $805 million by 2031 (a 2026 market report cited by Semafor; market estimates vary, [as we explain here](/articles/why-kenya-data-centre-market-estimates-disagree)). A country that solves the power-at-scale question first will collect a disproportionate share of that build-out. The [compute hub plan](/articles/kenya-data-centre-compute-hub-plan-explained) the ICT ministry published in September 2026 makes exactly this argument: cables are done, compute is next, and power is the gate.
 
+## Three Models Now Compete for the Same Load
+
+The corridor does not develop in a vacuum. As of late September 2026, three competing power models are on the table for Kenya's compute build-out, and each needs to be read on its own terms. The first is this article's model: compute-to-the-wells, siting campuses at or near geothermal generation so the load lives where the baseload is. The second is regional hydro imports: Ethiopian Electric Power plans to raise exports to Kenya from 200 to 400 megawatts from December 2026, subject to grid testing, which we track in [our Ethiopia power exports analysis](/articles/ethiopia-power-exports-kenya-data-centres). The third arrived on 26 September 2026, when Aliko Dangote announced that his proposed Lamu refinery would include an LNG-fired power plant of about 1,000 megawatts, with roughly 500 megawatts potentially offered to the Kenyan government, covered in [our Dangote Lamu analysis](/articles/dangote-lamu-refinery-power-plant-data-centres). That announcement is attached to a refinery that has not broken ground, with no power purchase agreement public.
+
+The discipline in reading all three is keeping their numbers apart. Olkaria's roughly 950 megawatts of installed geothermal is operating capacity on today's grid. Ethiopia's 400 megawatts is a planned trade volume entering the bulk system, not a private feed. Dangote's 500 megawatts is an announcement, the same status our directory gives the Microsoft and G42 campus's 100 megawatts. None of the three is reserved for data centres, and adding them together produces a number that describes nothing, because the figures sit at different stages of certainty and different points on the grid. What decides Kenya's compute future is which model turns its promise into contracted, transmitted, dispatchable supply first, and for the corridor that means wells, plants and a direct-integration framework, not a headline.
+
 ## What to Watch
 
 - Treasury action on energy infrastructure: the $38 billion funding push is the single biggest variable between the 3,000 MW grid of 2026 and the 10,000 MW ambition of 2030.
@@ -101,4 +111,4 @@ The prize explains the persistence. Kenya is projected to account for more than 
 - Whether the Microsoft and G42 concept returns in any form: the directory entry stays early stage, and the lesson from the stall (match the load to the generation plan first) is now shaping every new proposal.
 - Direct-integration policy: how the government lets large campuses contract power at or near generation, which decides whether the corridor is a metaphor or an engineering programme.
 
-Sources: Semafor (6 May 2026, Ruto statements, Treasury concept note, market projections); The Star (14 September 2026, ITW and Datacloud Africa 2026, Olkaria and Konza construction); Business Daily (15 September 2026, regional connectivity context). Grid and geothermal figures (950 MW installed geothermal, Olkaria complex roughly 800 MW, 45 percent generation share, 120 km distance, 30 to 40 percent cost advantage, 7,000 to 10,000 MW potential) verified against our geothermal explainer, first published with dated sources. Facts verified 16 September 2026.
+Sources: Semafor (6 May 2026, Ruto statements, Treasury concept note, market projections); The Star (14 September 2026, ITW and Datacloud Africa 2026, Olkaria and Konza construction); Business Daily (15 September 2026, regional connectivity context). Grid and geothermal figures (950 MW installed geothermal, Olkaria complex roughly 800 MW, 45 percent generation share, 120 km distance, 30 to 40 percent cost advantage, 7,000 to 10,000 MW potential) verified against our geothermal explainer, first published with dated sources. Facts verified 16 September 2026; updated 26 September 2026 to add the three-model competitive framing (Olkaria compute-to-the-wells, Ethiopian hydro imports, announced Lamu coastal LNG) following the Dangote announcement, with figures for each model kept separate.

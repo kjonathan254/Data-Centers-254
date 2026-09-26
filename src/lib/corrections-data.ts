@@ -28,6 +28,17 @@ export const correctionsLog: CorrectionEntry[] = [
   {
     date: "2026-09-26",
     summary:
+      "Three-model energy framing wired across the Energy cluster: the Olkaria corridor and Ethiopia exports articles now cross-link the Dangote Lamu analysis in both directions, and the /energy hub, chatbot fact base and green-power answer name the three competing models with figures kept separate.",
+    changes: [
+      "Olkaria corridor article: added a 'Three Models Now Compete for the Same Load' section framing compute-to-the-wells against Ethiopian hydro imports (200 to 400 MW planned, subject to grid testing) and the announced Lamu LNG plant (about 1,000 MW, roughly 500 MW offered, no PPA public). The section states the figure discipline explicitly: operating capacity, planned trade volume and announcement are different stages of certainty and are not summed. Internal links and the sources footer updated.",
+      "Ethiopia exports article: added a 'Where This Sits Among Kenya's Power Options' section placing imports alongside the Olkaria corridor and the announced Lamu plant, restating the status labels (planned trade volume vs announcement attached to an unbuilt refinery) and naming the update trigger (a Lamu PPA or financing close). Image caption figure refreshed 38.5 to 42.9 MW to match the site-stats canonical 'live designed capacity' label. Internal links updated.",
+      "Dangote Lamu article: the Olkaria geothermal corridor mention in the three-model paragraph is now an inline link; both sibling articles were already linked.",
+      "/energy hub and chatbot: the Energy cluster page description now names the three models; a Dangote Lamu fact chunk was added to the chatbot knowledge base carrying announcement-status language identical to the Microsoft-G42 chunk (treat 500 MW as an announcement, not bankable pipeline), and the green-power answer names the three models with a link to the Lamu analysis.",
+    ],
+  },
+  {
+    date: "2026-09-26",
+    summary:
       "Published the Dangote Lamu power-plant analysis (Energy cluster) with staged-announcement sourcing; registered two reference records in the policy dataset (bumped to r16).",
     changes: [
       "New article /articles/dangote-lamu-refinery-power-plant-data-centres: covers the 26 September 2026 announcement of a 1,000 MW power plant at the proposed Lamu refinery with ~500 MW offered to the Kenyan government. The article stages every figure as an announcement, flags the refinery-capacity discrepancy across outlets (roughly 220,000 to 700,000 barrels per day as reported), establishes from The Africa Report that the plant is LNG-fired rather than renewable, sets the scale against the directory's live figures (42.9 MW built capacity, 10.5 MW published IT load, 230 MW pipeline, ~3,000 MW installed grid capacity), and records the Lamu coal-plant precedent (1,050 MW Amu Power licence revoked 2019) as part of the project's risk profile.",
