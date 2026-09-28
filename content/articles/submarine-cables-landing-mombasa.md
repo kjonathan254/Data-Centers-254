@@ -1,5 +1,5 @@
 ---
-title: "Which Submarine Cables Land at Mombasa? The 7 Live Systems"
+title: "Which Submarine Cables Land at Mombasa? 7 Live Systems"
 slug: "submarine-cables-landing-mombasa"
 meta_description: "TEAMS, SEACOM, EASSy, LION2, DARE1, 2Africa and PEACE land at Mombasa. Landing stations, capacities, and why Africa-1 is not counted as live yet."
 primary_keyword: "submarine cables Mombasa"

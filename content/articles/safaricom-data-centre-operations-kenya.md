@@ -1,7 +1,7 @@
 ---
 title: "Safaricom Data Centres: Red Hill, Waiyaki Way and M-Pesa"
 slug: "safaricom-data-centre-operations-kenya"
-meta_description: "Where does M-Pesa actually run? Inside Safaricom's Waiyaki Way hub and the Red Hill campus in Limuru — and how they differ from carrier-neutral Kenya."
+meta_description: "Where does M-Pesa actually run? Inside Safaricom's Waiyaki Way hub and the Red Hill campus in Limuru, and how they differ from carrier-neutral Kenya."
 primary_keyword: "Safaricom data centre"
 secondary_keywords:
   - "Safaricom M-Pesa infrastructure"
