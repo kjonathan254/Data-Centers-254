@@ -34,12 +34,18 @@ images:
     hub in East Africa
   position: inline
 internal_links:
-- text: Kenya Data Protection Act Data Centres
-  href: /articles/kenya-data-protection-act-data-centres
-- text: Africa Data Centre Regulation Compared
-  href: /articles/africa-data-centre-regulation-compared
-- text: Kenya Data Centre Market Outlook 2025 2030
-  href: /articles/kenya-data-centre-market-outlook-2025-2030
+  - text: "the Kenya Data Protection Act and data centres"
+    href: "/articles/kenya-data-protection-act-data-centres"
+  - text: "Kenya's data centre licensing framework"
+    href: "/articles/kenya-data-centre-licensing-framework"
+  - text: "large language models in Kenya"
+    href: "/articles/large-language-models-kenya"
+  - text: "Policy & Regulation"
+    href: "/policy"
+  - text: "Africa Data Centre Regulation Compared"
+    href: "/articles/africa-data-centre-regulation-compared"
+  - text: "Kenya Data Centre Market Outlook 2025 2030"
+    href: "/articles/kenya-data-centre-market-outlook-2025-2030"
 external_sources:
 - title: Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)
   url: https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf

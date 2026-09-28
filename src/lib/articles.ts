@@ -234,13 +234,18 @@ export function getRelatedArticles(
   cluster: string,
   limit = 5
 ): Article[] {
-  return getAllArticles()
-    .filter(
-      (a) =>
-        a.frontmatter.slug !== currentSlug &&
-        a.frontmatter.cluster.toLowerCase() === cluster.toLowerCase()
-    )
-    .slice(0, limit);
+  // Audit fix: related was same-cluster only, which orphaned pages whose
+  // topic family spans clusters (e.g. security pages split Beginner/Kenya).
+  // Cluster members still come first, freshest first; remaining slots fill
+  // with the freshest site-wide so no page renders a short related list.
+  const all = getAllArticles().filter((a) => a.frontmatter.slug !== currentSlug);
+  const inCluster = all.filter(
+    (a) => a.frontmatter.cluster.toLowerCase() === cluster.toLowerCase()
+  );
+  const rest = all.filter(
+    (a) => a.frontmatter.cluster.toLowerCase() !== cluster.toLowerCase()
+  );
+  return [...inCluster, ...rest].slice(0, limit);
 }
 
 // ─── Helpers: cluster summary ────────────────────────────────────────────────

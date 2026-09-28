@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Search, Map, ArrowRight, Zap } from "lucide-react";
-import { getFacilities } from "@/lib/directory-data";
+import { getPlatformStats } from "@/lib/site-stats";
 
 /**
  * Directory search band, sits directly under the hero so the platform's
@@ -8,11 +8,11 @@ import { getFacilities } from "@/lib/directory-data";
  * Native GET form to /directory, zero client JS.
  */
 export default function DirectorySearchBand() {
-  const facilities = getFacilities();
-  const totalMw =
-    facilities.reduce((sum, f) => sum + (f.itLoadMw ?? 0), 0) ||
-    facilities.reduce((sum, f) => sum + (f.totalCapacityMw ?? 0), 0);
-  const mwLabel = totalMw > 0 ? `${Math.round(totalMw)} MW tracked` : "Verified data";
+  // Canonical figure + label from site-stats (audit fix: the old inline sum of
+  // published IT load rendered as "10 MW tracked", conflating in-service IT
+  // load with tracked supply — three distinct labelled metrics in the dataset).
+  const stats = getPlatformStats();
+  const mwLabel = `${stats.totalSupplyMw} MW tracked supply`;
 
   return (
     <section className="border-y border-border/40 bg-card">

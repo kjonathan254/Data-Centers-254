@@ -1,5 +1,5 @@
 ---
-title: "Data Centre Design and Build in Kenya: A Guide"
+title: "Data Centre Design and Build in Kenya: Site to Handover"
 slug: data-centre-design-build-kenya
 meta_description: "The full data centre design and build process in Kenya: site selection, feasibility, MEP design, commissioning, Kenya Power connection, and NEMA EIA."
 primary_keyword: data centre design and build Kenya
@@ -12,7 +12,7 @@ secondary_keywords:
 author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
-updated_date: '2026-08-28'
+updated_date: "2026-09-28"
 category: Infrastructure
 cluster: Infrastructure
 og_image: /images/dc-gpu-cluster-5.webp

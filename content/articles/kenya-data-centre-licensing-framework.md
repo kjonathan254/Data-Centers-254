@@ -45,6 +45,10 @@ internal_links:
     href: "/directory"
   - text: "data centre power and energy challenges"
     href: "/energy"
+  - text: "how African countries regulate data centres compared"
+    href: "/articles/africa-data-centre-regulation-compared"
+  - text: "Policy & Regulation"
+    href: "/policy"
 external_sources:
   - title: "Communications Authority of Kenya"
     url: "https://www.ca.go.ke/"

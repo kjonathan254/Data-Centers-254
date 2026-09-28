@@ -38,6 +38,8 @@ internal_links:
     href: "/articles/data-centre-sla-uptime-guarantees"
   - text: "VPS hosting paid by M-Pesa as the small end of the market"
     href: "/articles/vps-hosting-kenya-mpesa-payment"
+  - text: "colocation in Kenya: why companies rent, not build"
+    href: "/articles/colocation-data-centre-kenya"
 external_sources:
   - title: "ServerMania, 2026 colocation costs and pricing overview (6 Jan 2026; full rack 3 to 5 kW at roughly USD 300 to 1,000 per month base)"
     url: "https://www.servermania.com/kb/articles/colocation-costs.htm"

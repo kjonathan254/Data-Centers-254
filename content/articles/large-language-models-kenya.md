@@ -1,7 +1,7 @@
 ---
-title: "Large Language Models in Kenya: Adoption and Compute"
+title: "Large Language Models in Kenya: Compute and Sovereignty"
 slug: "large-language-models-kenya"
-meta_description: "LLMs are transforming Kenyan businesses from banking to agriculture. The adoption trends, infrastructure gap, and sovereignty concerns explained."
+meta_description: "Which Kenyan organisations are adopting LLMs, the compute they need, and why data-sovereignty rules under Kenyan law decide where models can run."
 primary_keyword: "large language models Kenya"
 secondary_keywords:
   - "generative AI Kenya"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-28"
 category: "AI & Machine Learning"
 cluster: "AI"
 og_image: "/images/dc-gpu-cluster-4.webp"

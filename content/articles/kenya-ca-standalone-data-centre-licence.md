@@ -41,6 +41,8 @@ internal_links:
     href: "/articles/kenya-data-protection-act-data-centres"
   - text: "Kenya data sovereignty and localisation requirements"
     href: "/articles/kenya-data-sovereignty-localisation"
+  - text: "Policy & Regulation"
+    href: "/policy"
 external_sources:
   - title: "Communications Authority of Kenya, Proposed Licensing Framework for Data Centres, September 2026 (Consultation Version, PDF) - the regulator's own consultation document, captured in full text"
     url: "https://www.ca.go.ke/sites/default/files/2026-09/Public%20Consultation%20on%20Data%20Centres%20September%202026.pdf"

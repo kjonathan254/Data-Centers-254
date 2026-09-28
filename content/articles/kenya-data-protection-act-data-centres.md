@@ -41,6 +41,8 @@ internal_links:
     href: "/articles/data-centre-security-explained"
   - text: "data centre directory"
     href: "/directory"
+  - text: "Policy & Regulation"
+    href: "/policy"
 external_sources:
   - title: "Office of the Data Protection Commissioner (ODPC)"
     url: "https://www.odpc.go.ke/"

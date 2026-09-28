@@ -50,6 +50,8 @@ internal_links:
     href: "/articles/kenya-power-infrastructure-data-centres"
   - text: "data centre tier ratings"
     href: "/articles/data-centre-tier-ratings-explained"
+  - text: "data centre PUE explained"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
 external_sources:
   - title: "ASHRAE Data Centre Cooling Guidelines"
     url: "https://www.ashrae.org/"

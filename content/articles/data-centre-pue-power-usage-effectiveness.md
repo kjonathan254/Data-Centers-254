@@ -41,6 +41,10 @@ internal_links:
     href: "/articles/solar-power-data-centres-kenya"
   - text: "geothermal energy powering Kenya's data centres"
     href: "/articles/geothermal-energy-kenya-data-centres"
+  - text: "Kenya Power reliability and data centres"
+    href: "/articles/kenya-power-reliability-data-centres"
+  - text: "Energy"
+    href: "/energy"
 external_sources:
   - title: "The Green Grid - PUE"
     url: "https://www.thegreengrid.org/en/resources/library-and-references/white-papers/wp49-pue-a-comprehensive-examination-of-the-metric"

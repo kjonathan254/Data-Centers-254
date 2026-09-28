@@ -1,7 +1,7 @@
 ---
 title: "Colocation in Kenya: Why Companies Rent, Not Build"
 slug: "colocation-data-centre-kenya"
-meta_description: "Colocation lets companies house servers in a professional facility without building their own. How to choose among Kenya's providers."
+meta_description: "Colocation lets Kenyan banks, telcos and fintechs house critical systems without building. How Nairobi's carrier-neutral market works and how to choose."
 primary_keyword: "colocation data centre Kenya"
 secondary_keywords:
   - "data centre colocation Nairobi"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-27"
-updated_date: "2026-08-27"
+updated_date: "2026-09-28"
 category: "Data Centres"
 cluster: "Kenya"
 og_image: "/images/server-rack-patch-cabling.webp"

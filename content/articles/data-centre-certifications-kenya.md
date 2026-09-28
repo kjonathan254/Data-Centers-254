@@ -37,12 +37,18 @@ images:
     densities rise, UPS and switchgear lines like these are where that work happens
   position: inline
 internal_links:
-- text: Career Progression African Data Centres
-  href: /articles/career-progression-african-data-centres
-- text: How To Get Job Kenyan Data Centre
-  href: /articles/how-to-get-job-kenyan-data-centre
-- text: Data Centre Careers Kenya
-  href: /articles/data-centre-careers-kenya
+  - text: "data centre security explained"
+    href: "/articles/data-centre-security-explained"
+  - text: "data centre tier ratings explained"
+    href: "/articles/data-centre-tier-ratings-explained"
+  - text: "SLA uptime guarantees"
+    href: "/articles/data-centre-sla-uptime-guarantees"
+  - text: "Career Progression African Data Centres"
+    href: "/articles/career-progression-african-data-centres"
+  - text: "How To Get Job Kenyan Data Centre"
+    href: "/articles/how-to-get-job-kenyan-data-centre"
+  - text: "Data Centre Careers Kenya"
+    href: "/articles/data-centre-careers-kenya"
 external_sources:
 - title: EPI Data Centre Training and Certification Programs
   url: https://www.epi-ap.com/

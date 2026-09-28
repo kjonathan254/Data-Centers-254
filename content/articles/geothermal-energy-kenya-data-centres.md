@@ -41,6 +41,10 @@ internal_links:
     href: "/articles/kenya-power-tariffs-data-centres"
   - text: "energy challenges overview"
     href: "/articles/data-centre-cooling-systems-explained"
+  - text: "data centre PUE explained"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
+  - text: "Olkaria geothermal corridor"
+    href: "/articles/olkaria-geothermal-data-centre-corridor"
 external_sources:
   - title: "Eng. John Kipchumba Tanui (PS, ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub, LinkedIn (15 Sep 2026; fetched 16 Sep 2026)"
     url: "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf"

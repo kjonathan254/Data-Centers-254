@@ -1,7 +1,7 @@
 ---
-title: "Safaricom Data Centres: M-Pesa, 5G, Digital Economy"
+title: "Safaricom Data Centres: Red Hill, Waiyaki Way and M-Pesa"
 slug: "safaricom-data-centre-operations-kenya"
-meta_description: "Safaricom runs Kenya's most critical data centre, supporting M-Pesa and enterprise cloud. Now partnering with Microsoft and G42 on a $1bn AI facility."
+meta_description: "Where does M-Pesa actually run? Inside Safaricom's Waiyaki Way hub and the Red Hill campus in Limuru — and how they differ from carrier-neutral Kenya."
 primary_keyword: "Safaricom data centre"
 secondary_keywords:
   - "Safaricom M-Pesa infrastructure"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
-updated_date: "2026-09-14"
+updated_date: "2026-09-28"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/dc-networking.webp"

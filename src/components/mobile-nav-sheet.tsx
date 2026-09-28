@@ -12,6 +12,7 @@ const topicLinks = [
   { label: "Map", href: "/infrastructure/map" },
   { label: "AI", href: "/ai" },
   { label: "Energy", href: "/energy" },
+  { label: "Policy", href: "/policy" },
   { label: "Careers", href: "/careers" },
   { label: "Research", href: "/research" },
 ];

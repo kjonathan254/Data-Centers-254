@@ -37,12 +37,18 @@ images:
   position: section-break
 
 internal_links:
-- text: Fibre Optic Networks Kenya Data Centres
-  href: /articles/fibre-optic-networks-kenya-data-centres
-- text: Colocation Data Centre Kenya
-  href: /articles/colocation-data-centre-kenya
-- text: Nairobi Vs Mombasa Data Centre Locations
-  href: /articles/nairobi-vs-mombasa-data-centre-locations
+  - text: "the KIXP, Kenya's internet exchange point"
+    href: "/articles/kixp-internet-exchange-point-kenya"
+  - text: "submarine cables landing at Mombasa"
+    href: "/articles/submarine-cables-landing-mombasa"
+  - text: "Digital Realty's NBO2 launch in Nairobi"
+    href: "/articles/digital-realty-nbo2-launch-nairobi"
+  - text: "Fibre Optic Networks Kenya Data Centres"
+    href: "/articles/fibre-optic-networks-kenya-data-centres"
+  - text: "Colocation Data Centre Kenya"
+    href: "/articles/colocation-data-centre-kenya"
+  - text: "Nairobi Vs Mombasa Data Centre Locations"
+    href: "/articles/nairobi-vs-mombasa-data-centre-locations"
 external_sources:
 - title: KIXP, Kenya Internet Exchange Point Official Statistics
   url: https://www.kixp.or.ke

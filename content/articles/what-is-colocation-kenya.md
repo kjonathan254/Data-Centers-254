@@ -41,6 +41,8 @@ internal_links:
     href: "/articles/data-centre-tier-ratings-explained"
   - text: "Kenya data centre directory"
     href: "/directory"
+  - text: "colocation in Kenya: why companies rent, not build"
+    href: "/articles/colocation-data-centre-kenya"
 external_sources:
   - title: "iXAfrica"
     url: "https://www.ixafrica.com/"

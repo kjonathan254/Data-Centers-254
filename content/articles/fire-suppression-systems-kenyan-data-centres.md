@@ -37,6 +37,8 @@ internal_links:
     href: "/articles/data-centre-design-build-kenya"
   - text: "building codes for data centres in Kenya"
     href: "/articles/building-codes-data-centres-kenya"
+  - text: "data centre attack scenarios in Kenya"
+    href: "/articles/data-centre-attack-scenarios-kenya"
 external_sources:
   - title: "NFPA 75: Standard for the Fire Protection of Information Technology Equipment"
     url: "https://www.nfpa.org/75"

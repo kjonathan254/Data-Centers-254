@@ -76,6 +76,8 @@ internal_links:
     href: "/articles/what-is-a-data-centre"
   - text: "submarine cables landing in Mombasa"
     href: "/articles/submarine-cables-landing-mombasa"
+  - text: "why Kenya's data centres cluster in Nairobi and Mombasa"
+    href: "/articles/why-data-centres-cluster-nairobi-mombasa"
 external_sources:
   - title: "Kenya Power and Lighting Company"
     url: "https://www.kplc.co.ke/"

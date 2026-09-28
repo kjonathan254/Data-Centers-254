@@ -1,7 +1,7 @@
 ---
-title: "Submarine Cables in Mombasa: East Africa's Gateway"
+title: "Which Submarine Cables Land at Mombasa? The 7 Live Systems"
 slug: "submarine-cables-landing-mombasa"
-meta_description: "Mombasa is East Africa's submarine cable hub: seven live undersea cable systems land here, connecting Kenya to Europe, Asia, and Africa."
+meta_description: "TEAMS, SEACOM, EASSy, LION2, DARE1, 2Africa and PEACE land at Mombasa. Landing stations, capacities, and why Africa-1 is not counted as live yet."
 primary_keyword: "submarine cables Mombasa"
 secondary_keywords:
   - "subsea cables Kenya"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-09-22"
+updated_date: "2026-09-28"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/mombasa-cable-landing-4.webp"
@@ -47,6 +47,8 @@ internal_links:
     href: "/articles/what-is-a-data-centre"
   - text: "Kenya data centre directory"
     href: "/directory"
+  - text: "why Kenya's data centres cluster in Nairobi and Mombasa"
+    href: "/articles/why-data-centres-cluster-nairobi-mombasa"
 external_sources:
   - title: "Africa-1 Submarine Cable System"
     url: "https://www.africa-1.africa/"

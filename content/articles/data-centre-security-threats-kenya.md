@@ -40,6 +40,8 @@ internal_links:
     href: "/articles/data-centre-attack-scenarios-kenya"
   - text: "the Data Protection Act duties after an incident"
     href: "/articles/kenya-data-protection-act-data-centres"
+  - text: "fire suppression systems in Kenyan data centres"
+    href: "/articles/fire-suppression-systems-kenyan-data-centres"
 external_sources:
   - title: "BBC News, Kenya cyber-attack: Why is eCitizen down? (28 Jul 2023; confirmed DDoS on the 5,000-service government portal)"
     url: "https://www.bbc.com/news/world-africa-66332346"

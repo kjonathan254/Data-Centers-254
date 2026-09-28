@@ -40,6 +40,8 @@ internal_links:
     href: "/articles/data-centre-security-explained"
   - text: "your notification duties after a breach"
     href: "/articles/kenya-data-protection-act-data-centres"
+  - text: "disaster recovery and business continuity in Kenya"
+    href: "/articles/disaster-recovery-business-continuity-kenya"
 external_sources:
   - title: "BBC News, Kenya cyber-attack: Why is eCitizen down? (28 Jul 2023; national DDoS example, services restored after government confirmation)"
     url: "https://www.bbc.com/news/world-africa-66332346"

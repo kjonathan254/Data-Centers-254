@@ -42,6 +42,8 @@ internal_links:
     href: "/articles/nairobi-vs-mombasa-data-centre-locations"
   - text: "the Data Protection Act duties when systems fail"
     href: "/articles/kenya-data-protection-act-data-centres"
+  - text: "data centre security explained"
+    href: "/articles/data-centre-security-explained"
 external_sources:
   - title: "Internet Society, 2024 East Africa Submarine Cable Outage Report (23 Jul 2024)"
     url: "https://www.internetsociety.org/resources/doc/2024/2024-east-africa-submarine-cable-outage-report/"

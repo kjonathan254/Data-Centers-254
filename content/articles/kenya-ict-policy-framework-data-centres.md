@@ -37,6 +37,8 @@ internal_links:
     href: "/articles/kenya-data-sovereignty-localisation"
   - text: "Africa data centre regulation compared"
     href: "/articles/africa-data-centre-regulation-compared"
+  - text: "Policy & Regulation"
+    href: "/policy"
 external_sources:
   - title: "Kenya Digital Masterplan 2022-2032"
     url: "https://www.icta.go.ke/kenya-digital-masterplan/"
