@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-17"
-updated_date: "2026-09-18"
+updated_date: "2026-09-28"
 category: "Power & Energy"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant.webp"
@@ -49,6 +49,8 @@ internal_links:
     href: "/articles/colocation-data-centres-nairobi-buyers-guide"
   - text: "how Kenya's renewables power its data centres"
     href: "/articles/kenya-renewables-industrial-power-data-centres"
+  - text: "data centre PUE guide"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
 external_sources:
   - title: "Engineering News, Africa Does Not Have an Electricity Problem. It Has a Reliability Problem (16 September 2026; about 53% of sub-Saharan Africa has access to electricity, more than 560 million people without)"
     url: "https://m.engineeringnews.co.za/article/africa-does-not-have-an-electricity-problem-it-has-a-reliability-problem-2026-09-16"
@@ -130,7 +132,7 @@ None of this makes Kenya's grid a liability to apologise for. It makes the grid 
 
 When you evaluate a Kenyan facility, power deserves its own hour of the tour. Start with the contracted power SLA: how many kilowatts per rack are guaranteed, and how is downtime compensated? Then walk the path: how many independent power routes reach your hall, and are they truly separate from the utility feed to the last cable? Ask for UPS autonomy at your actual load, generator runtime on site tanks, and the depth of the refuelling contract behind them. Ask when the transfer from UPS to generator was last tested under real load, because untested redundancy is a rumour, not a design.
 
-Close with the supply mix and the meter: what share of the facility's supply is geothermal baseload versus seasonal hydro, what PUE (power usage effectiveness) the operator targets, and how it is actually metered. Operators with good answers volunteer these numbers; our [Nairobi colocation buyer's guide](/articles/colocation-data-centres-nairobi-buyers-guide) collects the full question set. An hour of dated, specific questions buys you years of fewer surprises, which is the entire trade a data centre asks you to make.
+Close with the supply mix and the meter: what share of the facility's supply is geothermal baseload versus seasonal hydro, what PUE (power usage effectiveness) the operator targets, and how it is actually metered. [Our data centre PUE guide](/articles/data-centre-pue-power-usage-effectiveness) explains what typical values mean and how operators improve them. Operators with good answers volunteer these numbers; our [Nairobi colocation buyer's guide](/articles/colocation-data-centres-nairobi-buyers-guide) collects the full question set. An hour of dated, specific questions buys you years of fewer surprises, which is the entire trade a data centre asks you to make.
 
 ## Frequently asked questions
 

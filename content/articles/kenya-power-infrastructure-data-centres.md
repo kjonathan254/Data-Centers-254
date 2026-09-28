@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-08-27"
+updated_date: "2026-09-28"
 category: "Energy"
 cluster: "Energy"
 og_image: "/images/kenya-transmission-pylons.webp"
@@ -78,6 +78,8 @@ internal_links:
     href: "/articles/submarine-cables-landing-mombasa"
   - text: "why Kenya's data centres cluster in Nairobi and Mombasa"
     href: "/articles/why-data-centres-cluster-nairobi-mombasa"
+  - text: "data centre PUE explainer"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
 external_sources:
   - title: "Kenya Power and Lighting Company"
     url: "https://www.kplc.co.ke/"
@@ -126,7 +128,7 @@ Data centres are extraordinary electricity consumers. To understand why power is
 - An AI training cluster can draw 50-100 megawatts in a single building
 - The largest planned facilities globally exceed 1 gigawatt (1,000 megawatts)
 
-But IT load is only part of the story. Data centres need additional power for cooling (removing the heat servers generate), lighting, security systems, and office space. The total facility power is measured by **PUE (Power Usage Effectiveness)**, defined as the ratio of total facility power to IT power. A PUE of 1.5 means for every 1 watt consumed by servers, 0.5 watts go to everything else. So a 5-megawatt IT load with a PUE of 1.5 requires 7.5 megawatts from the grid.
+But IT load is only part of the story. Data centres need additional power for cooling (removing the heat servers generate), lighting, security systems, and office space. The total facility power is measured by **PUE (Power Usage Effectiveness)**, defined as the ratio of total facility power to IT power. A PUE of 1.5 means for every 1 watt consumed by servers, 0.5 watts go to everything else. So a 5-megawatt IT load with a PUE of 1.5 requires 7.5 megawatts from the grid. How PUE is calculated, what Kenyan facilities typically achieve, and which improvements pay back fastest are covered in [our data centre PUE explainer](/articles/data-centre-pue-power-usage-effectiveness).
 
 ![Power hall inside a Kenyan data centre during a working site visit](/images/site-visit-power-hall-kenya.webp)
 

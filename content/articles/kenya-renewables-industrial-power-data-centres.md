@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-31"
-updated_date: "2026-08-31"
+updated_date: "2026-09-28"
 category: "Market Analysis"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant-olkaria.webp"
@@ -48,6 +48,8 @@ internal_links:
     href: "/articles/why-data-centres-cluster-nairobi-mombasa"
   - text: "the DC254 facility directory"
     href: "/directory"
+  - text: "data centre PUE"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
 external_sources:
   - title: "The Standard: Kenya must turn renewable energy advantage into industrial power (opinion, 31 Aug 2026)"
     url: "https://www.standardmedia.co.ke/business/opinion/article/2001556549/kenya-must-turn-renewable-energy-advantage-into-industrial-power"
@@ -101,7 +103,7 @@ What remains unproven is the thesis itself, that these threads will weave into i
 
 Zoom out and a pattern emerges: Kenya's green electrons are starting to attract industrial tenants, not just residential meters. The Sleeping Warrior zone near Elementaita is the clearest example, a special economic zone designed around renewable power from the ground up, courting tenants from agro-processing to clean manufacturing. The Aquilastor plant at Olkaria goes further, siting manufacturing directly inside a geothermal park, essentially co-locating a factory with its power plant. The Mombasa Industrial Park pairs cheap coastal land with port logistics and, though the column does not say it, with the submarine cables that land on the coast, a detail that matters enormously for any digital tenant.
 
-For data centres, this pipeline is both opportunity and competition. Opportunity, because green industrial parks normalise the idea that power-hungry facilities should locate where clean energy is cheapest, and because each successful tenant proves the delivery model (land, power agreements, incentives, workforce) that a data centre development would follow. Competition, because every megawatt committed to an EV assembly line or a processing plant is a megawatt the grid does not have headroom to hand to a compute campus, and because industrial policy prioritises export jobs when allocating scarce infrastructure. The 200-megawatt scale of the AMEA Power project is instructive: it is roughly the size of a mid-sized data centre campus, and exactly the kind of generation addition that compute-hungry projects wait for.
+For data centres, this pipeline is both opportunity and competition. Opportunity, because green industrial parks normalise the idea that power-hungry facilities should locate where clean energy is cheapest, and because each successful tenant proves the delivery model (land, power agreements, incentives, workforce) that a data centre development would follow. Competition, because every megawatt committed to an EV assembly line or a processing plant is a megawatt the grid does not have headroom to hand to a compute campus, and because industrial policy prioritises export jobs when allocating scarce infrastructure. Efficiency sharpens that competition: a facility that improves its [data centre PUE](/articles/data-centre-pue-power-usage-effectiveness) converts more of its allocation into billable compute instead of overhead. The 200-megawatt scale of the AMEA Power project is instructive: it is roughly the size of a mid-sized data centre campus, and exactly the kind of generation addition that compute-hungry projects wait for.
 
 ## Where Data Centres Fit in Kenya's Green Industrial Push
 

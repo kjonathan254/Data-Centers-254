@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-28"
 category: "Power & Energy"
 cluster: "Energy"
 og_image: "/images/kenya-transmission-pylons-3.webp"
@@ -49,6 +49,8 @@ internal_links:
     href: "/articles/solar-power-data-centres-kenya"
   - text: "energy challenges overview"
     href: "/energy"
+  - text: "data centre PUE explained"
+    href: "/articles/data-centre-pue-power-usage-effectiveness"
 external_sources:
   - title: "Kenya Power - Tariff Schedule"
     url: "https://www.kplc.co.ke/category/view/45/tariffs"
@@ -104,7 +106,7 @@ Kenyan data centres typically achieve PUE values of 1.4–1.7, depending on the 
 
 ![CRAC cooling units behind server racks](/images/dc-cooling-crac.webp)
 
-The PUE directly affects the electricity bill. A 1MW IT load at a PUE of 1.5 requires 1.5MW of total facility power, meaning 500kW is consumed by cooling and overhead. At a blended rate of KES 15/kWh, the monthly energy cost for the IT load alone is KES 10.8 million, while the cooling and overhead adds KES 5.4 million, a 50% increase. Improving PUE from 1.5 to 1.3 would save KES 2.16 million per month for a 1MW IT load, KES 26 million per year.
+The PUE directly affects the electricity bill. A 1MW IT load at a PUE of 1.5 requires 1.5MW of total facility power, meaning 500kW is consumed by cooling and overhead. At a blended rate of KES 15/kWh, the monthly energy cost for the IT load alone is KES 10.8 million, while the cooling and overhead adds KES 5.4 million, a 50% increase. Improving PUE from 1.5 to 1.3 would save KES 2.16 million per month for a 1MW IT load, KES 26 million per year. How that ratio is measured, what typical Kenyan facilities achieve, and which improvements pay back fastest are covered in [our data centre PUE guide](/articles/data-centre-pue-power-usage-effectiveness).
 
 ## Negotiation Strategies
 
