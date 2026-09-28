@@ -80,7 +80,7 @@ A data centre operator's obligations as a processor are defined by its contract 
 
 ### Security Measures
 
-The Act requires data processors to implement "appropriate technical and organisational measures" to protect personal data. For a data centre, this translates directly into the security infrastructure discussed in [our security guide](/articles/data-centre-security-explained): physical access controls (biometrics, mantraps, CCTV), network security (firewalls, intrusion detection, encryption), and environmental controls (fire suppression, climate control). A data centre that cannot demonstrate these measures is not just a security risk, it is a compliance risk.
+The Act requires data processors to implement "appropriate technical and organisational measures" to protect personal data. For a data centre, this translates directly into the security infrastructure discussed in [our security guide](/articles/data-centre-security-explained): physical access controls (biometrics, mantraps, CCTV), network security (firewalls, intrusion detection, encryption), and environmental controls (fire suppression, climate control). A data centre that cannot demonstrate these measures is not just a security risk, it is a compliance risk. ISO 27001 certification, covered in our [ISO 27001 for Kenyan data centres](/articles/iso-27001-data-centre-kenya) guide, is the most widely accepted way to demonstrate exactly this.
 
 ### Processing Only as Instructed
 

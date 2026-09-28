@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-08"
-updated_date: "2026-09-15"
+updated_date: "2026-09-28"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/nbo2-launch-ribbon-cutting.webp"
@@ -43,6 +43,8 @@ internal_links:
     href: "/articles/colocation-data-centre-kenya"
   - text: "Kenya's data centre market in numbers"
     href: "/articles/kenya-data-centre-market-numbers"
+  - text: "interconnection and peering in Kenya"
+    href: "/articles/data-centre-interconnection-peering-kenya"
 external_sources:
   - title: "Capital FM (via allAfrica), New NBO2 Data Centre Strengthens Kenya's Bid to Become East Africa's Digital Hub (7 Sep 2026)"
     url: "https://allafrica.com/stories/202609080028.html"
@@ -91,7 +93,7 @@ Days after the ribbon-cutting, follow-on coverage filled in the government's sid
 
 For the gateway claim to cash out, three things have to happen, and each is observable:
 
-1. **Networks move in.** NBO1 took years to accumulate its density. Watch whether NBO2's registered count climbs from two toward double digits within its first year, and whether the exchanges on site grow beyond one.
+1. **Networks move in.** NBO1 took years to accumulate its density, and it is [interconnection and peering](/articles/data-centre-interconnection-peering-kenya), not floor space, that turns a building into a gateway. Watch whether NBO2's registered count climbs from two toward double digits within its first year, and whether the exchanges on site grow beyond one.
 2. **Content and cloud land.** The 27 January 2026 announcement that iXAfrica will host Oracle Cloud Infrastructure's Nairobi region shows what a gateway transaction looks like: a hyperscaler committing to local capacity. If Digital Realty lands a comparable cloud on-ramp at NBO2, the claim strengthens materially.
 3. **Cable economics show up in pricing.** A gateway is supposed to lower the cost of reaching the world. If cross-connect and IP transit pricing at Karen converges toward (or beats) the Mombasa Road corridor, that is the market voting.
 

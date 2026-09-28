@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-08-28"
+updated_date: "2026-09-28"
 category: "Renewable Energy"
 cluster: "Energy"
 og_image: "/images/kenya-solar-farm-2.webp"
@@ -41,6 +41,10 @@ internal_links:
     href: "/articles/data-centre-cooling-systems-explained"
   - text: "energy challenges overview"
     href: "/energy"
+  - text: "geothermal energy for Kenyan data centres"
+    href: "/articles/geothermal-energy-kenya-data-centres"
+  - text: "Olkaria geothermal corridor"
+    href: "/articles/olkaria-geothermal-data-centre-corridor"
 external_sources:
   - title: "Kenya Power - Renewable Energy"
     url: "https://www.kplc.co.ke/"
@@ -61,6 +65,8 @@ canonical_url: "https://data-centers-254.vercel.app/articles/solar-power-data-ce
 ---
 
 Kenya sits on the equator, receives more direct sunlight than most countries on Earth, and generates over 90% of its electricity from renewable sources. For an industry that consumes as much power as a small town, this should be a dream combination. Yet the question of whether Kenya's data centres can meaningfully harness solar power is more nuanced than simply pointing photovoltaic panels at the sky. The answer involves grid economics, battery storage costs, land availability, and the practical reality that data centres cannot afford even a second of downtime.
+
+The short answer: solar alone cannot power a Kenyan data centre, but grid-tied solar is already cheaper than grid power for operators who can install it, and it is becoming a meaningful layer of Kenya's data centre energy stack rather than its foundation.
 
 ![Workers at a large solar farm in Kenya](/images/kenya-solar-farm.webp)
 
@@ -100,7 +106,7 @@ A secondary case for batteries is as a short-term backup during grid outages. Wh
 
 ## The Geothermal vs. Solar Question
 
-Kenya's unique position in the global renewable energy landscape raises a question that does not arise in most data centre markets: if the grid is already 90% renewable (primarily geothermal), does on-site solar provide meaningful additional environmental benefit?
+Kenya's unique position in the global renewable energy landscape raises a question that does not arise in most data centre markets: if the grid is already 90% renewable (primarily geothermal), does on-site solar provide meaningful additional environmental benefit? The baseload that anchors this question comes from [Kenya's geothermal energy](/articles/geothermal-energy-kenya-data-centres), with the [Olkaria corridor](/articles/olkaria-geothermal-data-centre-corridor) its clearest expression.
 
 The answer depends on the data centre operator's goals. From a pure carbon perspective, a Kenyan data centre running on grid power already has an exceptionally low carbon intensity. Kenya Power's generation mix produces approximately 50–100 grams of CO2 per kilowatt-hour, compared to 400–500 g/kWh for the European grid average and 800+ g/kWh for coal-heavy grids in South Africa and India. Adding solar panels on-site might reduce this to 20–50 g/kWh for the portion of consumption offset by solar, which is a meaningful improvement but not a transformative one.
 

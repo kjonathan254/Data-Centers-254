@@ -12,7 +12,7 @@ secondary_keywords:
 author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
-updated_date: '2026-08-28'
+updated_date: '2026-09-28'
 category: Careers
 cluster: Careers
 og_image: "/images/classroom-ict-training-kenya.webp"
@@ -266,7 +266,7 @@ Eaton provides certifications for UPS systems, power distribution units, and ele
 
 ## Security Certifications
 
-With the Kenya Data Protection Act 2019, increasing cybersecurity threats, and the physical security requirements of [data centre facilities](/articles/data-centre-security-explained), security certifications are increasingly important.
+With the Kenya Data Protection Act 2019, increasing cybersecurity threats, and the physical security requirements of [data centre facilities](/articles/data-centre-security-explained), security certifications are increasingly important. Note that facility-level ISO 27001 certification, which our [ISO 27001 guide](/articles/iso-27001-data-centre-kenya) covers, is earned by the operator and is a different track from the personal certifications below.
 
 ### CISSP, Certified Information Systems Security Professional
 

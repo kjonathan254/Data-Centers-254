@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
-updated_date: "2026-09-16"
+updated_date: "2026-09-28"
 category: "Security"
 cluster: "Kenya"
 og_image: "/images/dc-biometric-access-3.webp"
@@ -113,7 +113,7 @@ The 2025 Business Registration Service breach, which exposed records connected t
 
 Everything above can be undone by one person with a screwdriver and a bad plan. Kenyan facilities built to international standards defend in depth: perimeter fencing and vehicle controls, guards, biometric readers, mantrap doors that admit one person at a time, CCTV coverage with retention, rack-level locks, and disposal rules for decommissioned drives. Kenya's threat environment, including its history of sophisticated social engineering, makes the physical layer a real control rather than a checkbox.
 
-**The defence.** Layers, again, because the goal is not one perfect wall but multiple delays and records: delay at the perimeter, detect at the doors, record everywhere, and audit the logs. Physical security done well also produces evidence, which matters under the Computer Misuse and Cybercrimes Act 2018, where a prosecution needs proof of unauthorised access.
+**The defence.** Layers, again, because the goal is not one perfect wall but multiple delays and records: delay at the perimeter, detect at the doors, record everywhere, and audit the logs. Physical security done well also produces evidence, which matters under the Computer Misuse and Cybercrimes Act 2018, where a prosecution needs proof of unauthorised access. The full layer-by-layer breakdown lives in our [physical security in Kenyan data centres](/articles/data-centre-physical-security-kenya) guide.
 
 ![Diagram comparing encrypted remote access paths including VPN and SSH](/images/diagram-ssh-tcp-vpn.webp)
 

@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-27"
-updated_date: "2026-09-16"
+updated_date: "2026-09-28"
 category: "AI & Cloud"
 cluster: "AI"
 og_image: "/images/dc-gpu-cluster.webp"
@@ -45,6 +45,10 @@ internal_links:
     href: "/articles/submarine-cables-landing-mombasa"
   - text: "Kenya data centre licensing"
     href: "/articles/kenya-data-centre-licensing-framework"
+  - text: "GPU cloud infrastructure in Kenya"
+    href: "/articles/gpu-cloud-infrastructure-kenya"
+  - text: "Microsoft and G42 Kenya analysis"
+    href: "/articles/microsoft-g42-kenya-data-centre"
 external_sources:
   - title: "Microsoft and G42 Kenya AI Partnership"
     url: "https://www.microsoft.com/en-us/ai"
@@ -69,6 +73,8 @@ canonical_url: "https://data-centers-254.vercel.app/articles/ai-data-centres-eas
 ## Why AI Needs a New Class of Data Centre in Africa
 
 Generative AI has fundamentally changed what data centres must deliver. The shift from serving web pages and databases to running large language models, computer vision pipelines, and inference workloads has created demand for a completely different tier of infrastructure. Standard enterprise data centres built for colocation and cloud hosting cannot meet the power density, cooling requirements, or network fabric that AI workloads demand.
+
+The short answer: Kenya is today East Africa's most credible location for that new tier of infrastructure. It combines the region's densest submarine cable landings, a grid that is roughly 90% renewable and anchored by baseload geothermal, and the region's largest digital economy. The constraint is equally clear: power delivery at hyperscale, as the stalled Microsoft and G42 build shows. For how that compute demand is being served today, see our [GPU cloud infrastructure in Kenya](/articles/gpu-cloud-infrastructure-kenya) analysis.
 
 A typical GPU server housing eight NVIDIA H100 or equivalent accelerators draws between 10 and 15 kilowatts under load. Rack densities in AI facilities routinely exceed 40-80 kW per rack, compared to 5-10 kW in a conventional data centre. This is not an incremental upgrade. It is a generational shift in facility design, power delivery, and thermal management.
 
@@ -142,7 +148,7 @@ Kenya occupies a middle ground that is increasingly favourable for AI-specific i
 
 ## The Microsoft-G42 Lesson: Power Is the Constraint
 
-In May 2024, Microsoft and UAE-based AI company G42 announced a USD 1 billion investment to build a state-of-the-art AI data centre in Kenya, as part of a broader partnership that included [Microsoft and G42's Kenya AI initiative](https://www.microsoft.com/en-us/ai). The announcement was widely celebrated as a landmark moment for African technology infrastructure.
+In May 2024, Microsoft and UAE-based AI company G42 announced a USD 1 billion investment to build a state-of-the-art AI data centre in Kenya, as part of a broader partnership that included [Microsoft and G42's Kenya AI initiative](https://www.microsoft.com/en-us/ai). The announcement was widely celebrated as a landmark moment for African technology infrastructure. We track the partnership's Kenya data centre plans, and what stalled them, in a separate [Microsoft and G42 analysis](/articles/microsoft-g42-kenya-data-centre).
 
 By May 2026, the project had stalled. Reporting from multiple sources indicated that Kenya's national grid, operated by Kenya Power and Lighting Company (KPLC), could not reliably deliver the several hundred megawatts the facility required. The [Kenya power and data centres](/articles/kenya-power-infrastructure-data-centres) dynamic is the single most important factor determining whether large-scale AI infrastructure can be deployed in the country.
 

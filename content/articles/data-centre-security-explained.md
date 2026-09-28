@@ -54,6 +54,12 @@ internal_links:
     href: "/articles/data-centre-certifications-kenya"
   - text: "Kenya's data breach timeline"
     href: "/articles/kenya-data-breach-timeline"
+  - text: "physical security in Kenyan data centres"
+    href: "/articles/data-centre-physical-security-kenya"
+  - text: "ISO 27001 for Kenyan data centres"
+    href: "/articles/iso-27001-data-centre-kenya"
+  - text: "Kenya Data Protection Act"
+    href: "/articles/kenya-data-protection-act-data-centres"
 external_sources:
   - title: "ISO/IEC 27001"
     url: "https://www.iso.org/isoiec-27001-information-security.html"
@@ -99,7 +105,7 @@ The most critical access control mechanism in a data centre is the **mantrap**. 
 
 Inside the server room, security becomes more granular. Access to individual rows or aisles of racks may be further restricted, with some areas accessible only to specific customers (in a colocation facility) or to specific roles (network engineers vs. facility engineers). Individual racks are locked with physical keys or electronic locks, and in carrier-neutral facilities, customers cannot physically access other customers' equipment.
 
-Every access event (every door opened, every badge scanned, every biometric authentication) is logged in an access control system. These logs are retained for extended periods (typically 90 days to 1 year) and are used for audit purposes, incident investigation, and compliance verification. In a well-run facility, it should be possible to reconstruct exactly who accessed which area at what time, for any given date within the retention period.
+Every access event (every door opened, every badge scanned, every biometric authentication) is logged in an access control system. These logs are retained for extended periods (typically 90 days to 1 year) and are used for audit purposes, incident investigation, and compliance verification. In a well-run facility, it should be possible to reconstruct exactly who accessed which area at what time, for any given date within the retention period. For the Kenyan picture of this layer in depth, perimeter standards, mantraps, and what to verify on a site tour, see [physical security in Kenyan data centres](/articles/data-centre-physical-security-kenya).
 
 ## Layer 2: Network Security
 
@@ -147,7 +153,7 @@ Security is not just about technology, it is about demonstrating to customers, r
 
 ISO 27001 is the international standard for information security management systems (ISMS). It specifies a framework of policies and procedures that an organisation must implement to manage information security risks. For data centres, ISO 27001 certification demonstrates that the facility has a systematic approach to identifying, assessing, and treating information security risks, and that this approach is regularly audited by an independent certification body.
 
-In Kenya, the leading data centre operators are either ISO 27001 certified or in the process of obtaining certification. For international customers (banks, cloud providers, multinational corporations) ISO 27001 is often a non-negotiable requirement for choosing a colocation facility. Without it, a data centre is effectively excluded from competing for the most valuable customers.
+In Kenya, the leading data centre operators are either ISO 27001 certified or in the process of obtaining certification. For international customers (banks, cloud providers, multinational corporations) ISO 27001 is often a non-negotiable requirement for choosing a colocation facility. Without it, a data centre is effectively excluded from competing for the most valuable customers. Our [ISO 27001 for Kenyan data centres](/articles/iso-27001-data-centre-kenya) guide covers the audit cycle in full, and how certification maps onto the [Data Protection Act](/articles/kenya-data-protection-act-data-centres), the law that makes demonstrable security measures a legal duty.
 
 ![Secured server racks with locking cabinets](/images/dc-gpu-cluster-2-wide.webp)
 

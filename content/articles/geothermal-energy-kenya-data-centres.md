@@ -1,8 +1,8 @@
 ---
-title: "Geothermal for Kenya's Data Centres: Rift Advantage"
+title: "Geothermal Energy in Kenya: Power for Data Centres"
 slug: "geothermal-energy-kenya-data-centres"
-meta_description: "Kenya draws about 45% of its electricity from geothermal, giving data centres some of the world's lowest-carbon power. How the Rift Valley does it."
-primary_keyword: "geothermal energy Kenya data centres"
+meta_description: "Kenya draws about 45% of its electricity from geothermal energy, giving data centres some of the world's lowest-carbon power. How the Rift Valley does it."
+primary_keyword: "geothermal energy Kenya"
 secondary_keywords:
   - "Kenya geothermal power"
   - "renewable energy data centres"
@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-28"
-updated_date: "2026-09-16"
+updated_date: "2026-09-28"
 category: "Renewable Energy"
 cluster: "Energy"
 og_image: "/images/kenya-geothermal-plant.webp"
