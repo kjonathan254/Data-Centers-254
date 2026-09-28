@@ -779,3 +779,11 @@ dead-CSS/component cleanup pass, /api/chat budget cap.
 
 **Gates**: tsc PASS, lint PASS, build PASS, article_validator 105/105 ALL OK,
 validate_policy PASS (55/61). Preflight done (was up to date with origin).
+
+**Push note (2026-09-28)**: shipped as fff39e0. The ONE-LINE ci.yml change
+(least-privilege `permissions: contents: read`) is LEFT UNCOMMITTED in the
+working tree — the PAT in the origin remote lacks `workflow` scope and
+GitHub rejects any push touching workflow files. Do NOT commit it into main
+until the token gains workflow scope (it would block ALL future pushes);
+either add scope (Settings → Developer settings → PAT → workflow: read/write)
+then commit+push, or apply the 4-line edit manually in the GitHub UI.
