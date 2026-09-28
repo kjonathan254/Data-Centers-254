@@ -31,8 +31,8 @@ export const CLUSTER_IMAGES: Record<string, ClusterImage> = {
     alt: "High-density GPU compute racks with green status LEDs",
   },
   Policy: {
-    src: "/images/dc-policy-regulation.webp",
-    alt: "Government building at dusk, regulators shape Kenya's digital infrastructure",
+    src: "/images/policy-intelligence-hero.webp",
+    alt: "Editorial illustration of Kenya's data centre regulation: licensing fees, compliance and uncertainty weighed against innovation and growth",
   },
   Infrastructure: {
     src: "/images/dc-cooling-crac.webp",

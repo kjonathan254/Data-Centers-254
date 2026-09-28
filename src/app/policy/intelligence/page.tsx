@@ -37,9 +37,9 @@ export function generateMetadata(): Metadata {
       locale: "en_KE",
       images: [
         {
-          url: "/images/dc-policy-regulation.webp",
-          width: 1200,
-          height: 675,
+          url: "/images/policy-intelligence-hero.webp",
+          width: 1080,
+          height: 669,
           alt: "Policy Intelligence on Data Centre 254",
         },
       ],
