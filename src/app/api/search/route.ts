@@ -1,6 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getAllArticles } from "@/lib/articles";
-import { getFacilities } from "@/lib/directory-data";
+import { NextRequest, NextResponse } from 'next/server';
+import { getAllArticles } from '@/lib/articles';
+import { getFacilities } from '@/lib/directory-data';
+
+// Content changes only with a deploy; let the CDN serve repeat queries.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+} as const;
 
 export async function GET(req: NextRequest) {
   // Cap the query: search scans every article's full text in memory, so an
@@ -8,7 +13,7 @@ export async function GET(req: NextRequest) {
   const raw = req.nextUrl.searchParams.get("q")?.trim()?.toLowerCase() ?? "";
   const q = raw.slice(0, 100);
   if (!q || q.length < 2) {
-    return NextResponse.json({ articles: [], facilities: [] });
+    return NextResponse.json({ articles: [], facilities: [] }, { headers: CACHE_HEADERS });
   }
 
   // Search articles
@@ -59,5 +64,5 @@ export async function GET(req: NextRequest) {
       connectivityProviders: f.connectivityFacility.map((cf) => ({ provider: { name: cf.provider.name } })),
     }));
 
-  return NextResponse.json({ articles, facilities });
+  return NextResponse.json({ articles, facilities }, { headers: CACHE_HEADERS });
 }

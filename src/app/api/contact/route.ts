@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import {
+  isSameOriginRequest,
+  originRejectedResponse,
+  withTimeout,
+} from "@/lib/api-guards";
 
 const CONTACT_EMAIL = "elmaccommunicationslimited@gmail.com";
 const FROM_NAME = "Data Centre 254";
@@ -37,6 +42,9 @@ function sanitize(str: string, maxLen: number): string {
 }
 
 export async function POST(req: NextRequest) {
+  // CSRF guard: reject cross-site form posts before any limiter/vendor spend.
+  if (!isSameOriginRequest(req)) return originRejectedResponse();
+
   const ip = clientIp(req);
   if ((await rateLimit("contact", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
@@ -91,7 +99,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const { error } = await resend.emails.send({
+    // 10s wall-clock ceiling so a hung vendor call can never stall the function.
+    const { error } = await withTimeout(
+      resend.emails.send({
       from: `${FROM_NAME} <${getFromAddress()}>`,
       to: CONTACT_EMAIL,
       replyTo: email,
@@ -112,7 +122,10 @@ export async function POST(req: NextRequest) {
           </div>
         </div>
       `,
-    });
+      }),
+      10_000,
+      "resend contact send"
+    );
 
     if (error) {
       console.error("Resend error:", error);

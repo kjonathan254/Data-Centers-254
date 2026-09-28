@@ -1,8 +1,6 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import Link from "next/link";
 import BrandLogo from "@/components/brand-logo";
 
@@ -36,13 +34,10 @@ interface MobileNavSheetProps {
 export default function MobileNavSheet({ open, onOpenChange }: MobileNavSheetProps) {
   const closeMobile = () => onOpenChange(false);
 
+  // Trigger lives in the navbar (server-rendered hamburger, perf audit H2);
+  // this component is the controlled panel only, lazy-mounted on first open.
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="lg:hidden h-8 w-8" aria-label="Open menu">
-          <Menu className="h-5 w-5" />
-        </Button>
-      </SheetTrigger>
       <SheetContent side="right" className="w-72 bg-background/95 backdrop-blur-xl border-border p-0">
         <SheetTitle className="sr-only">Navigation</SheetTitle>
         <div className="flex flex-col h-full">

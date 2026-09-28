@@ -28,7 +28,7 @@ export default function KenyaPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1"><ArticleClusterPage cluster="Kenya" /></main>
+      <main id="main-content" className="flex-1"><ArticleClusterPage cluster="Kenya" /></main>
       <Footer />
     </div>
   );

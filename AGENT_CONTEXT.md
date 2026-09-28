@@ -710,3 +710,72 @@
   domain, gmail contact, centers/centres brand split) as owner-decision items.
 - Gates: tsc/lint/build PASS (node_modules restored after workspace rollback, 533 pkgs).
   Rendered output verified in built HTML before push. Live deploy follows via Vercel.
+
+### 2026-09-28 — senior-engineer audit: security + perf batch implemented (Task 62)
+
+**Scope**: full-stack audit (3 parallel reviews: API/security, frontend/perf,
+SEO/infra) then implementation of the highest-priority findings. Zero new
+runtime dependencies (standing rule 5). No content/claims touched (humanGate
+respected).
+
+**Security fixes**:
+- NEW `src/lib/api-guards.ts`: same-origin enforcement (`isSameOriginRequest`)
+  + `withTimeout` helper. Applied to POST routes: contact, subscribe,
+  export-interest, chat, chat/tts, csp-report (webhook exempt: server-to-server).
+  Kills cross-site form-post spam paths (mail-bombing, quota burn).
+- error.tsx no longer renders raw `error.message` (debug leak); digest only.
+- subscribe: store-failure now fails CLOSED (503) instead of answering
+  "Already subscribed" with nothing stored (the silent black hole the
+  fail-closed email path already prevented).
+- resend webhook: rate-limit result actually checked now (429); was decorative.
+- Timeouts: Resend SDK calls wrapped (10s via withTimeout) in contact,
+  subscribe, resend-audience; Upstash newsletter-store fetch 5s AbortSignal.
+- csp-report: control chars stripped from directive/blocked before console
+  (log-forging).
+- .env.example: documented SUBSCRIBE_SECRET, RESEND_WEBHOOK_SECRET,
+  HEALTH_TOKEN, SPONSOR_ALLOWED_HOSTS (all prod-relevant, were undocumented).
+- CI: least-privilege `permissions: contents: read`.
+
+**Performance fixes (verified in build output)**:
+- C1: 148KB policy claims JSON no longer shipped to client — countLabel/
+  formatPolicyDate moved to leaf `lib/policy/config.ts`; matrix-console,
+  control-room, source-quality import from config. 0 client chunks contain
+  claim data (grep-verified).
+- H1: article body SERVER-rendered via new `ArticleBody.tsx` (react-markdown
+  + remark-gfm run at build, passed to client shell as RSC slot).
+  ArticlePageClient slimmed: react-markdown, framer-motion, PortraitFigure/
+  ArticleImageBlock (→ shared `article-media.tsx`) removed from client bundle.
+  Article pages load 11 chunks, none contains framer (112K chunk only on
+  search/contact/map/foundations). SSR HTML contains full body text.
+- H2: mobile hamburger now server-rendered in navbar (was ssr:false dynamic →
+  absent until hydration); sheet panel lazy-mounted on first open instead.
+- H3: /infrastructure/map dropped force-dynamic → ○ Static (prerendered).
+- M8: getAllArticles() module-level memoization keyed on dir signature
+  (file count + newest mtime); /api/search, /api/articles, /api/directory got
+  CDN Cache-Control (s-maxage 300/600/3600 + SWR).
+- M7: brand logo navigates via next/link (was window.location.href full reload);
+  homepage scroll-to-top preserved.
+- M2: hydration-safe dates — T00:00:00 appended to date-only ISO in
+  ArticlePageClient + article-cluster-page; featured-facilities normalises
+  month-precision "2026-09" → "-01T00:00:00" (formats differ per field!).
+- M1: JibuChat code-split (loads on first open); chat dialog gains Escape-
+  close, focus-into-panel, focus-restore-to-FAB, aria-haspopup.
+- M4: skip-to-content link in layout; id="main-content" added to all 42
+  <main> elements; focus-visible rings on chat FAB + hamburger.
+- L: RSS autodiscovery <link rel=alternate> in layout metadata; glow-neon-sm
+  class defined (new-badge silently no-op'd before); CLUSTER_META single
+  source (lib/cluster-meta) with re-export compat.
+
+**Repo hygiene**:
+- git rm'd root upload strays: "Policy .jpg", "EA Broadband.jpg",
+  file_0000000034b08211ad4859b340b7e4a8.png (2.3MB, zero code references).
+
+**Deferred (documented, not dropped)**: OG image pipeline (104/105 og_images
+are webp non-1200x630 — WhatsApp/LinkedIn preview risk; needs build-time
+sharp derivatives, watch repo weight per storage incident), Upstash env
+wiring in Vercel (user decision, open thread 10), eslint rule re-enable
+(lint is near-no-op), git history slim (221MB), 1.5MB GIF → mp4 conversion,
+dead-CSS/component cleanup pass, /api/chat budget cap.
+
+**Gates**: tsc PASS, lint PASS, build PASS, article_validator 105/105 ALL OK,
+validate_policy PASS (55/61). Preflight done (was up to date with origin).

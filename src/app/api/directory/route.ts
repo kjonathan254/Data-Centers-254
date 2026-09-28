@@ -6,6 +6,19 @@ import {
 
 const r1 = (n: number) => Math.round(n * 10) / 10;
 
+// Dataset is versioned and changes quarterly (next: with the deploy that
+// ships the new snapshot), so an hour of CDN caching is always safe.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+} as const;
+
+// Sort keys the client may use — whitelisted (security audit L13) so an
+// arbitrary query string can never index into facility objects.
+const SORT_KEYS = new Set([
+  'name', 'itLoadMw', 'totalCapacityMw', 'city', 'status', 'tierRating',
+  'commissionedYear', 'lastVerified', 'facilityType',
+]);
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const search = (searchParams.get('search') || '').slice(0, 100);
@@ -18,6 +31,7 @@ export async function GET(request: NextRequest) {
   const tab = searchParams.get('tab') || 'all';
   const sortBy = searchParams.get('sortBy') || 'itLoadMw';
   const sortOrder = searchParams.get('sortOrder') || 'desc';
+  const sortKey = SORT_KEYS.has(sortBy) ? sortBy : 'itLoadMw';
 
   let results = getFacilities();
 
@@ -80,17 +94,20 @@ export async function GET(request: NextRequest) {
       return (b.totalCapacityMw || 0) - (a.totalCapacityMw || 0);
     }
     const dir = sortOrder === 'asc' ? 1 : -1;
-    if (sortBy === 'name') return dir * a.name.localeCompare(b.name);
-    const aVal = a[sortBy as keyof typeof a] as number | null;
-    const bVal = b[sortBy as keyof typeof b] as number | null;
+    if (sortKey === 'name') return dir * a.name.localeCompare(b.name);
+    const aVal = a[sortKey as keyof typeof a] as number | null;
+    const bVal = b[sortKey as keyof typeof b] as number | null;
     return dir * ((aVal || 0) - (bVal || 0));
   });
 
-  return NextResponse.json({
+  return NextResponse.json(
+    {
     facilities: results,
     filters: getFilterMeta(),
     stats: getDirectoryStats(),
     scopeStats,
     tab,
-  });
+    },
+    { headers: CACHE_HEADERS }
+  );
 }

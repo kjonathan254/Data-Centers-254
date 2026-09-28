@@ -179,3 +179,29 @@ export const CONTROL_ROOM_SURFACES = {
   border: "border-[rgba(135,180,220,0.16)]",
   borderSoft: "border-[rgba(135,180,220,0.10)]",
 } as const;
+
+// ─── Presentation helpers (audit §14: one terminology, one date format) ────
+//
+// NOTE: these live in this leaf module (NOT index.ts) so client components
+// can import them without pulling the 148KB claims dataset into the client
+// JS bundle — index.ts statically imports the JSON. Server pages may keep
+// importing them via index.ts (re-exported there for compatibility).
+
+/** "1 facility" / "3 facilities" — never "1 facilities". */
+export function countLabel(n: number, singular: string, plural?: string): string {
+  return `${n.toLocaleString("en-GB")} ${n === 1 ? singular : (plural ?? `${singular}s`)}`;
+}
+
+/** One date format across the whole dashboard: "22 September 2026". */
+export function formatPolicyDate(iso: string): string {
+  try {
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(new Date(iso));
+  } catch {
+    return iso;
+  }
+}

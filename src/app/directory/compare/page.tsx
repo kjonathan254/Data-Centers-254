@@ -53,7 +53,7 @@ export default async function ComparePage({
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 py-10 lg:py-16">
+      <main id="main-content" className="flex-1 py-10 lg:py-16">
         <div className="container-site">
           {/* Header */}
           <div className="max-w-2xl">

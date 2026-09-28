@@ -17,6 +17,13 @@
  */
 
 import { Resend } from "resend";
+import { withTimeout } from "@/lib/api-guards";
+
+/**
+ * Vendor call ceiling: a hung Resend request must never stall the route that
+ * awaited it. All calls here are non-fatal, so a timeout just logs.
+ */
+const RESEND_TIMEOUT_MS = 10_000;
 
 /** Never log a full subscriber address, PII belongs out of logs. */
 export function maskEmail(email: string): string {
@@ -38,11 +45,15 @@ export async function addContactToAudience(email: string): Promise<void> {
   try {
     const segmentId =
       process.env.RESEND_SEGMENT_ID || process.env.RESEND_AUDIENCE_ID;
-    const { error } = await resend.contacts.create({
-      email,
-      unsubscribed: false,
-      ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
-    });
+    const { error } = await withTimeout(
+      resend.contacts.create({
+        email,
+        unsubscribed: false,
+        ...(segmentId ? { segments: [{ id: segmentId }] } : {}),
+      }),
+      RESEND_TIMEOUT_MS,
+      "resend contact create"
+    );
     if (error) {
       const message = (error.message || "").toLowerCase();
       if (!message.includes("already exists") && !message.includes("duplicate")) {
@@ -66,7 +77,11 @@ export async function removeContactFromAudience(email: string): Promise<void> {
   const resend = getResendClient();
   if (!resend) return;
   try {
-    const { error } = await resend.contacts.remove({ email });
+    const { error } = await withTimeout(
+      resend.contacts.remove({ email }),
+      RESEND_TIMEOUT_MS,
+      "resend contact remove"
+    );
     if (error) {
       console.error(
         "[resend-audience] contact removal failed:",

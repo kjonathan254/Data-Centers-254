@@ -68,7 +68,7 @@ export default function DataExportsPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto section-y">
           <p className="text-section-label mb-4">Premium data export</p>
           <h1 className="text-display-sm text-foreground mb-5">

@@ -157,7 +157,7 @@ export default async function PillarDeepDivePage({
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main
+      <main id="main-content"
         className={`flex-1 ${CONTROL_ROOM_SURFACES.canvas}`}
         style={{
           backgroundImage:

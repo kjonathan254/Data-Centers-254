@@ -61,51 +61,9 @@ export interface Article {
 
 const ARTICLES_DIR = path.join(process.cwd(), "content", "articles");
 
-const CLUSTER_META: Record<
-  string,
-  { label: string; href: string; color: string }
-> = {
-  Beginner: {
-    label: "Beginner Guides",
-    href: "/beginners",
-    color: "text-cyan bg-cyan/10 border-cyan/25",
-  },
-  Kenya: {
-    label: "Kenya",
-    href: "/kenya",
-    color: "text-neon bg-neon/10 border-neon/25",
-  },
-  Internet: {
-    label: "Internet & Connectivity",
-    href: "/infrastructure",
-    color: "text-blue-400 bg-blue-400/10 border-blue-400/25",
-  },
-  Energy: {
-    label: "Energy & Power",
-    href: "/energy",
-    color: "text-amber-400 bg-amber-400/10 border-amber-400/25",
-  },
-  Careers: {
-    label: "Careers & Business",
-    href: "/careers",
-    color: "text-purple-400 bg-purple-400/10 border-purple-400/25",
-  },
-  AI: {
-    label: "AI & Cloud",
-    href: "/ai",
-    color: "text-neon bg-neon/10 border-neon/25",
-  },
-  Infrastructure: {
-    label: "Infrastructure",
-    href: "/data-centres",
-    color: "text-blue-400 bg-blue-400/10 border-blue-400/25",
-  },
-  Policy: {
-    label: "Policy & Regulation",
-    href: "/policy",
-    color: "text-amber-400 bg-amber-400/10 border-amber-400/25",
-  },
-};
+// CLUSTER_META (SEO audit: duplicate-definition drift risk) — single source
+// of truth now lives in ./cluster-meta; re-exported below so existing
+// importers of @/lib/articles keep working.
 
 // ─── Heading extraction ─────────────────────────────────────────────────────
 
@@ -199,22 +157,50 @@ export function getArticleBySlug(slug: string): Article | null {
   };
 }
 
-// ─── Core: list all articles ─────────────────────────────────────────────────
+// ─── Core: list all articles ─────────────────────────────────────────────
+
+/**
+ * Module-level parse cache (perf audit M8): getAllArticles() used to re-read
+ * AND gray-matter-parse all 105 markdown files on every call — /api/search,
+ * /api/articles and /api/chat (via chatbot knowledge) paid that cost per
+ * request. The cache is keyed on a cheap directory signature (file count +
+ * newest mtime), so dev-time edits still invalidate while production's
+ * immutable filesystem hits the cache ~always.
+ */
+let articlesCache: { sig: string; articles: Article[] } | null = null;
+
+function articlesDirSignature(): string {
+  let latestMtime = 0;
+  const files = fs
+    .readdirSync(ARTICLES_DIR)
+    .filter((f) => f.endsWith(".md"));
+  for (const f of files) {
+    const m = fs.statSync(path.join(ARTICLES_DIR, f)).mtimeMs;
+    if (m > latestMtime) latestMtime = m;
+  }
+  return `${files.length}:${latestMtime}`;
+}
 
 export function getAllArticles(): Article[] {
   if (!fs.existsSync(ARTICLES_DIR)) return [];
+
+  const sig = articlesDirSignature();
+  if (articlesCache && articlesCache.sig === sig) return articlesCache.articles;
 
   const files = fs
     .readdirSync(ARTICLES_DIR)
     .filter((f) => f.endsWith(".md"));
 
-  return files
+  const articles = files
     .map((file) => {
       const slug = file.replace(/\.md$/, "");
       return getArticleBySlug(slug);
     })
     .filter((a): a is Article => a !== null)
     .sort(byFreshness);
+
+  articlesCache = { sig, articles };
+  return articles;
 }
 
 // ─── Helpers: filtered views ─────────────────────────────────────────────────
@@ -306,4 +292,4 @@ export function getAllSlugs(): string[] {
 
 // ─── Export cluster meta for use in components ───────────────────────────────
 
-export { CLUSTER_META };
+export { CLUSTER_META } from "./cluster-meta";

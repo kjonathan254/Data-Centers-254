@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const config = {
@@ -25,16 +26,20 @@ export default function BrandLogo({
   const pathname = usePathname();
   const { width, height, src } = config[variant];
 
-  const handleClick = () => {
+  // Perf audit M7: the logo now navigates through next/link (soft, prefetched
+  // client-side navigation) instead of window.location.href, which forced a
+  // full page reload on the most-clicked element in the chrome.
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === "/") {
+      // Already home: soft-push to "/" is a no-op visually, so scroll instead.
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      window.location.href = "/";
     }
   };
 
   return (
-    <button
+    <Link
+      href="/"
       onClick={handleClick}
       className={`relative flex items-center shrink-0 group ${className}`}
       aria-label="Data Centre 254: Home"
@@ -52,6 +57,6 @@ export default function BrandLogo({
         {/* Subtle glow on hover, matches the original Server icon effect */}
         <div className="absolute inset-0 bg-cyan/20 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       </div>
-    </button>
+    </Link>
   );
 }

@@ -83,7 +83,11 @@ function signatureIsValid(
 
 export async function POST(req: NextRequest) {
   const ip = clientIp(req);
-  await rateLimit('resend-webhook', ip, 30, 60_000);
+  // 429 on the limited path: Resend retries with backoff, which is exactly
+  // what we want during a flood instead of silently swallowing the events.
+  if ((await rateLimit('resend-webhook', ip, 30, 60_000)).limited) {
+    return NextResponse.json({ error: 'Too many webhook calls' }, { status: 429 });
+  }
 
   const body = await req.text();
 

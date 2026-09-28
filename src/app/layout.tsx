@@ -53,6 +53,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Kevin Jonathan Otieno", url: siteUrl("/about") }],
   creator: "Kevin Jonathan Otieno",
   publisher: "Data Centre 254",
+  // RSS autodiscovery (SEO audit M4): /feed.xml existed but browsers and
+  // feed readers could never discover it without this <link rel="alternate">.
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
@@ -175,6 +182,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
+        {/* Skip link (a11y audit M4): first focusable element on every page. */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-cyan focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-background"
+        >
+          Skip to content
+        </a>
         {children}
         <ChatWidget />
         {/* GA4 + Clarity load only after the visitor consents via this gate;

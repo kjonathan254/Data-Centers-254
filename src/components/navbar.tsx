@@ -5,12 +5,12 @@ import { Menu, Search, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import BrandLogo from "@/components/brand-logo";
 
-// Load the Sheet-based mobile nav only on the client to avoid
-// Radix UI aria-controls ID hydration mismatch
+// The sheet PANEL is client-loaded on first open (perf audit H2), but the
+// hamburger button itself lives here in the navbar so it exists in the
+// server HTML — on a slow connection the menu button is visible, focusable
+// and clickable before any JS loads (it opens once hydration completes).
 import dynamic from "next/dynamic";
-const MobileNavSheet = dynamic(() => import("@/components/mobile-nav-sheet"), {
-  ssr: false,
-});
+const MobileNavSheet = dynamic(() => import("@/components/mobile-nav-sheet"));
 
 const topicLinks = [
   { label: "Data Centres", href: "/data-centres" },
@@ -43,7 +43,13 @@ const exploreLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [sheetMounted, setSheetMounted] = useState(false);
   const [exploreOpen, setExploreOpen] = useState(false);
+
+  const openMobile = () => {
+    setMobileOpen(true);
+    setSheetMounted(true); // lazy-mount the panel on first open
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -127,7 +133,20 @@ export default function Navbar() {
             >
               <Search className="h-4 w-4" />
             </Link>
-            <MobileNavSheet open={mobileOpen} onOpenChange={setMobileOpen} />
+            {/* Hamburger: always server-rendered (perf audit H2). */}
+            <button
+              type="button"
+              onClick={openMobile}
+              aria-label="Open menu"
+              aria-expanded={mobileOpen}
+              aria-haspopup="dialog"
+              className="lg:hidden h-8 w-8 inline-flex items-center justify-center rounded-lg text-muted-foreground hover:text-cyan hover:bg-cyan/10 transition-colors focus-visible:ring-2 focus-visible:ring-cyan/60 outline-none"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+            {sheetMounted && (
+              <MobileNavSheet open={mobileOpen} onOpenChange={setMobileOpen} />
+            )}
           </div>
         </div>
       </nav>

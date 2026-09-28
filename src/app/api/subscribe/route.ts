@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
 import {
+  isSameOriginRequest,
+  originRejectedResponse,
+  withTimeout,
+} from '@/lib/api-guards';
+import {
   upsertSubscriber,
   type SubscriberRole,
   type SubscriberRecord,
@@ -124,15 +129,19 @@ async function sendConfirmationEmail(
   }
 
   try {
-    const { error } = await resend.emails.send({
-      from,
-      to: email,
-      subject: 'Confirm your subscription to The Rack Report',
-      html: confirmationEmailHtml(
-        `${origin}/api/subscribe/verify?token=${verifyToken}`,
-        `${origin}/api/subscribe/unsubscribe?token=${unsubToken}`
-      ),
-    });
+    const { error } = await withTimeout(
+      resend.emails.send({
+        from,
+        to: email,
+        subject: 'Confirm your subscription to The Rack Report',
+        html: confirmationEmailHtml(
+          `${origin}/api/subscribe/verify?token=${verifyToken}`,
+          `${origin}/api/subscribe/unsubscribe?token=${unsubToken}`
+        ),
+      }),
+      10_000,
+      'resend confirmation send'
+    );
     if (error) {
       console.error('[subscribe] confirmation email rejected:', error.message ?? error);
       return 'failed';
@@ -148,6 +157,9 @@ async function sendConfirmationEmail(
 }
 
 export async function POST(req: NextRequest) {
+  // CSRF guard: reject cross-site form posts before any limiter/store spend.
+  if (!isSameOriginRequest(req)) return originRejectedResponse();
+
   const ip = clientIp(req);
   if ((await rateLimit('subscribe', ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
@@ -195,6 +207,16 @@ export async function POST(req: NextRequest) {
       record = result.record;
     } catch (storeErr) {
       console.error('[subscribe] store failed:', storeErr);
+      // Fail closed: with no stored record the verification link could never
+      // complete, so replying "check your inbox" would be a silent black
+      // hole. Mirrors the email-failure path below.
+      return NextResponse.json(
+        {
+          error:
+            'Subscription storage is temporarily unavailable. Please try again in a few minutes.',
+        },
+        { status: 503 }
+      );
     }
 
     // 2. Double opt-in: unverified (new or retrying) addresses get a

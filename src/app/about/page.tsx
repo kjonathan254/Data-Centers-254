@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="relative">
           {/* Photographic header band */}
           <header className="relative overflow-hidden border-b border-border/40">

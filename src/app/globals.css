@@ -121,6 +121,11 @@
   .glow-neon {
     box-shadow: 0 0 20px oklch(0.75 0.18 155 / 20%), 0 0 40px oklch(0.75 0.18 155 / 10%);
   }
+  /* new-badge.tsx references glow-neon-sm; it was silently no-op'ing (only
+     glow-cyan-sm / glow-neon existed). Defined to match glow-cyan-sm scale. */
+  .glow-neon-sm {
+    box-shadow: 0 0 10px oklch(0.75 0.18 155 / 15%);
+  }
   .glass-card {
     background: oklch(0.12 0.008 260 / 60%);
     backdrop-filter: blur(12px);

@@ -6,6 +6,11 @@ import {
   getClusterSummaries,
 } from '@/lib/articles';
 
+// Article data changes only with a deploy; CDN-cacheable per full URL.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1800',
+} as const;
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const cluster = searchParams.get('cluster');
@@ -27,7 +32,7 @@ export async function GET(request: NextRequest) {
           lastVerified: a.frontmatter.updated_date,
           createdAt: a.frontmatter.published_date,
         }));
-      return NextResponse.json(articles);
+      return NextResponse.json(articles, { headers: CACHE_HEADERS });
     }
 
     // All articles
@@ -49,7 +54,7 @@ export async function GET(request: NextRequest) {
       _count: { cluster: c.count },
     }));
 
-    return NextResponse.json({ articles, clusters });
+    return NextResponse.json({ articles, clusters }, { headers: CACHE_HEADERS });
   } catch (error) {
     console.error('Articles API error:', error);
     return NextResponse.json(

@@ -13,7 +13,7 @@ export default function SubscribeVerifiedPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 flex items-center justify-center px-4 py-24">
+      <main id="main-content" className="flex-1 flex items-center justify-center px-4 py-24">
         <div className="max-w-lg text-center">
           <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-sky-500/15 text-3xl" aria-hidden>
             ✓

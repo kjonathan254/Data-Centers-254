@@ -25,7 +25,7 @@ import { ChevronRight, Info } from "lucide-react";
 import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
-import { countLabel } from "@/lib/policy";
+import { countLabel } from "@/lib/policy/config";
 import MatrixConsole from "./matrix-console";
 import SourceQuality from "./source-quality";
 import { CountUp, useWipe } from "./motion";

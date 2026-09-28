@@ -104,7 +104,7 @@ export default function ArticlesIndexPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Photographic page header */}
         <header className="relative overflow-hidden border-b border-border/40">
           <div className="absolute inset-0">

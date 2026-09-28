@@ -3,9 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import ReactMarkdown, { type Components } from "react-markdown";
-import remarkGfm from "remark-gfm";
 import {
   ArrowLeft, Clock, Calendar, ChevronRight, BookOpen,
   Share2, LinkIcon, CheckCircle2, ChevronUp,
@@ -15,13 +12,17 @@ import { Separator } from "@/components/ui/separator";
 import SubscribeCompact from "@/components/sections/subscribe-compact";
 import ListenBar from "@/components/ListenBar";
 
+import { ArticleImageBlock } from "./article-media";
+
+// NOTE (perf audit H1): the markdown body is rendered server-side by
+// ArticleBody.tsx and passed in as the `body` prop, so react-markdown,
+// remark-gfm and framer-motion no longer ship to article pages.
+
 import type {
-  Article, ArticleFaq, ArticleImage,
+  Article, ArticleFaq,
 } from "@/lib/articles";
 import { CLUSTER_META } from "@/lib/cluster-meta";
 import { getClusterImage } from "@/lib/imagery";
-import { PORTRAIT_IMAGE_DIMS } from "@/lib/portrait-images";
-import { IMAGE_FOCUS } from "@/lib/image-focus";
 
 // ─── Types ────────────────────────────────────────────────────────────────
 
@@ -34,6 +35,8 @@ interface RelatedArticle {
 interface Props {
   article: Article;
   related: RelatedArticle[];
+  /** Server-rendered markdown body (see ArticleBody.tsx). */
+  body: React.ReactNode;
 }
 
 // ─── Heading ToC Item ─────────────────────────────────────────────────────
@@ -97,138 +100,10 @@ function TableOfContents({ headings }: { headings: HeadingItem[] }) {
   );
 }
 
-// ─── Article Image ────────────────────────────────────────────────────────
-
-// Portrait photos (taller than wide) lose heads and feet to the fixed-height
-// object-cover bands below, so they render at their natural aspect ratio,
-// centred, at a readable column width instead of being cropped.
-function PortraitFigure({
-  src, alt, caption, priority,
-}: { src: string; alt: string; caption?: string; priority?: boolean }) {
-  const dims = PORTRAIT_IMAGE_DIMS[src];
-  if (!dims) return null;
-  return (
-    <figure className="my-8">
-      <div className="flex justify-center">
-        <Image
-          src={src}
-          alt={alt}
-          width={dims.width}
-          height={dims.height}
-          priority={priority}
-          sizes="(max-width: 768px) 100vw, 448px"
-          className="w-full max-w-md rounded-xl h-auto"
-        />
-      </div>
-      {caption && (
-        <figcaption className="text-xs text-muted-foreground mt-2 leading-relaxed max-w-md mx-auto">
-          {caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
-
-function ArticleImageBlock({ image }: { image: ArticleImage }) {
-  const isHero = image.position === "hero";
-  const isInfographic = image.position === "infographic";
-  const isSectionBreak = image.position === "section-break";
-  const isDiagram = image.position === "diagram";
-  // Animated diagrams delivered as muted looping H.264 (GIF of the same
-  // animation would be several MB heavier); poster shows the final frame.
-  const isVideo = image.src.endsWith(".mp4");
-
-  if (!isDiagram && PORTRAIT_IMAGE_DIMS[image.src]) {
-    return (
-      <PortraitFigure
-        src={image.src}
-        alt={image.alt}
-        caption={image.caption}
-        priority={isHero}
-      />
-    );
-  }
-
-  return (
-    <figure
-      className={`my-8 ${
-        isHero
-          ? "-mx-4 sm:-mx-6 lg:-mx-8"
-          : isSectionBreak || isInfographic
-          ? "-mx-4 sm:-mx-6"
-          : ""
-      } ${isInfographic || isDiagram || isVideo ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
-    >
-      {isDiagram || isVideo ? (
-        <div className="bg-surface/60">
-          {isVideo ? (
-            <video
-              src={image.src}
-              poster={image.src.replace(/\.mp4$/, "-poster.webp")}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              className="w-full h-auto"
-              aria-label={image.alt}
-            />
-          ) : (
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={736}
-              height={920}
-              className="w-full h-auto"
-              sizes="(max-width: 768px) 100vw, 768px"
-            />
-          )}
-        </div>
-      ) : (
-        <div
-          className={`relative overflow-hidden ${
-            isHero
-              ? "rounded-xl h-48 sm:h-64 lg:h-80"
-              : isSectionBreak
-              ? "rounded-xl h-48 sm:h-56"
-              : isInfographic
-              ? "h-48 sm:h-64"
-              : "rounded-xl h-40 sm:h-48"
-          }`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-cover"
-            style={
-              IMAGE_FOCUS[image.src]
-                ? { objectPosition: IMAGE_FOCUS[image.src] }
-                : undefined
-            }
-            sizes={
-              isHero
-                ? "(max-width: 1024px) 100vw, 896px"
-                : "(max-width: 768px) 100vw, 768px"
-            }
-            priority={isHero}
-          />
-        </div>
-      )}
-      {image.caption && (
-        <figcaption
-          className={`text-xs text-muted-foreground mt-2 leading-relaxed ${
-            isHero ? "px-4 sm:px-6 lg:px-8" : isSectionBreak ? "px-4 sm:px-6" : ""
-          }`}
-        >
-          {image.caption}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
-
 // ─── FAQ Section ──────────────────────────────────────────────────────────
+// (PortraitFigure / ArticleImageBlock moved to article-media.tsx; the answer
+// reveal below is a plain conditional render now — the framer-motion height
+// animation cost an entire animation library on every article page)
 
 function FaqSection({ faq }: { faq: ArticleFaq[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -260,15 +135,11 @@ function FaqSection({ faq }: { faq: ArticleFaq[] }) {
               />
             </button>
             {openIndex === i && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                className="px-4 sm:px-5 pb-4 sm:pb-5"
-              >
+              <div className="px-4 sm:px-5 pb-4 sm:pb-5">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.answer}
                 </p>
-              </motion.div>
+              </div>
             )}
           </div>
         ))}
@@ -332,159 +203,15 @@ function ShareButtons({ title, slug }: { title: string; slug: string }) {
   );
 }
 
-// ─── Markdown Components ──────────────────────────────────────────────────
-
-function getMarkdownComponents(images: ArticleImage[], heroSrc?: string) {
-  // Build a map of image src -> caption for rendering inline images from markdown
-  const imageMap = new Map<string, ArticleImage>();
-  for (const img of images) {
-    if (img.position === "inline" || img.position === "section-break" || img.position === "infographic" || img.position === "diagram") {
-      imageMap.set(img.src, img);
-    }
-  }
-
-  return {
-    h2: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => {
-      const text = String(children).replace(/\*\*/g, "").trim();
-      const id = text.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
-      return (
-        <h2 id={id} className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight mt-14 mb-4 scroll-mt-24">
-          {children}
-        </h2>
-      );
-    },
-    h3: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <h3 className="text-xl font-semibold text-foreground mt-10 mb-3 scroll-mt-24">
-        {children}
-      </h3>
-    ),
-    p: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <p className="mb-6 leading-relaxed">{children}</p>
-    ),
-    blockquote: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <div className="my-8 border-l-2 border-cyan/50 pl-6 py-2">
-        <p className="text-lg sm:text-xl font-medium text-foreground/90 italic leading-relaxed">
-          {children}
-        </p>
-      </div>
-    ),
-    strong: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <strong className="text-foreground font-semibold">{children}</strong>
-    ),
-    em: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <em className="text-foreground/90">{children}</em>
-    ),
-    ul: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <ul className="my-6 space-y-2">{children}</ul>
-    ),
-    ol: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <ol className="my-6 space-y-2 list-decimal list-inside">{children}</ol>
-    ),
-    li: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <li className="flex items-start gap-2">
-        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan" />
-        <span className="flex-1">{children}</span>
-      </li>
-    ),
-    a: ({ href, children, ..._rest }: { href?: string; children?: React.ReactNode; [key: string]: unknown }) => {
-      if (href && href.startsWith("/")) {
-        return (
-          <Link href={href} className="text-cyan underline hover:underline underline-offset-4">
-            {children}
-          </Link>
-        );
-      }
-      return (
-        <a href={href} className="text-cyan underline hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
-          {children}
-        </a>
-      );
-    },
-    code: ({ className, children, ..._rest }: { className?: string; children?: React.ReactNode; [key: string]: unknown }) => {
-      const isInline = !className;
-      if (isInline) {
-        return (
-          <code className="text-cyan bg-cyan/10 px-1.5 py-0.5 rounded text-sm font-mono">
-            {children}
-          </code>
-        );
-      }
-      return (
-        <code className={`${className} block my-4 p-4 rounded-lg bg-surface overflow-x-auto text-sm`}>
-          {children}
-        </code>
-      );
-    },
-    table: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <div className="my-8 overflow-x-auto rounded-xl border border-border/50 bg-card/30" role="region" aria-label="Data table" tabIndex={0}>
-        <table className="w-full min-w-[560px] border-collapse text-sm">{children}</table>
-      </div>
-    ),
-    thead: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <thead className="bg-surface">{children}</thead>
-    ),
-    tr: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <tr className="odd:bg-surface/40 transition-colors hover:bg-surface/70">{children}</tr>
-    ),
-    th: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <th className="whitespace-nowrap px-4 py-3 text-left font-semibold text-foreground text-xs uppercase tracking-wider">{children}</th>
-    ),
-    td: ({ children, ..._rest }: { children?: React.ReactNode; [key: string]: unknown }) => (
-      <td className="px-4 py-3 align-top text-muted-foreground border-t border-border/30">{children}</td>
-    ),
-    // Render images from markdown as styled figure blocks
-    img: ({ src, alt, ..._rest }: { src?: string; alt?: string; [key: string]: unknown }) => {
-      if (!src) return null;
-      // The hero image already renders at the top of the article, skip its
-      // mid-body markdown references to avoid showing the same photo twice.
-      if (heroSrc && src === heroSrc) return null;
-      const matched = imageMap.get(src);
-      if (matched) {
-        return <ArticleImageBlock image={matched} />;
-      }
-      // Generic image without frontmatter mapping
-      if (PORTRAIT_IMAGE_DIMS[src]) {
-        return <PortraitFigure src={src} alt={alt || ""} caption={alt || undefined} />;
-      }
-      return (
-        <figure className="my-8">
-          <div className="relative overflow-hidden rounded-xl h-48 sm:h-64">
-            <Image
-              src={src}
-              alt={alt || ""}
-              fill
-              className="object-cover"
-              style={
-                IMAGE_FOCUS[src]
-                  ? { objectPosition: IMAGE_FOCUS[src] }
-                  : undefined
-              }
-              sizes="(max-width: 768px) 100vw, 768px"
-            />
-          </div>
-          {alt && <figcaption className="text-xs text-muted-foreground mt-2">{alt}</figcaption>}
-        </figure>
-      );
-    },
-  };
-}
-
 // ─── Main Component ───────────────────────────────────────────────────────
 
-export default function ArticlePageClient({ article, related }: Props) {
-  const { frontmatter, content, headings } = article;
+export default function ArticlePageClient({ article, related, body }: Props) {
+  const { frontmatter, headings } = article;
   const meta = CLUSTER_META[frontmatter.cluster] || CLUSTER_META.Beginner;
 
-  // Separate hero image from body images
+  // Hero image for the article header slot (body images live in ArticleBody)
   const heroImage = frontmatter.images.find((i) => i.position === "hero");
-  const bodyImages = frontmatter.images.filter((i) => i.position !== "hero");
   const clusterImg = getClusterImage(frontmatter.cluster);
-
-  // We need to strip markdown image references from the content since
-  // ReactMarkdown will render them via the img component
-  // The images are rendered by the frontmatter-driven positions
-
-  const mdComponents = getMarkdownComponents(bodyImages, heroImage?.src);
 
   return (
     <div className="relative">
@@ -492,24 +219,15 @@ export default function ArticlePageClient({ article, related }: Props) {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         {/* Breadcrumb */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-8 flex items-center gap-2 text-sm text-muted-foreground"
-        >
+        <div className="mb-8 flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
           <ChevronRight className="size-3.5" />
           <Link href={meta.href} className="hover:text-foreground transition-colors">{meta.label}</Link>
           <ChevronRight className="size-3.5" />
           <span className="text-foreground/60 truncate max-w-[200px]">{frontmatter.title}</span>
-        </motion.div>
+        </div>
 
-        <motion.article
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+        <article>
           {/* Cluster badge */}
           <span className="text-section-label">{meta.label.toUpperCase()}</span>
 
@@ -529,7 +247,11 @@ export default function ArticlePageClient({ article, related }: Props) {
               </span>
               <span className="flex items-center gap-1.5">
                 <Calendar className="size-3.5" />
-                {new Date(frontmatter.published_date).toLocaleDateString("en-KE", {
+                {/* T00:00:00 forces local-time parsing on BOTH server and
+                    client (date-only ISO parses as UTC midnight otherwise),
+                    so negative-UTC-offset visitors no longer see a shifted
+                    day + hydration error. Same pattern as hero.tsx. */}
+                {new Date(`${frontmatter.published_date}T00:00:00`).toLocaleDateString("en-KE", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -576,12 +298,8 @@ export default function ArticlePageClient({ article, related }: Props) {
           {/* Listen (device-side text-to-speech) */}
           <ListenBar targetId="article-body" slug={frontmatter.slug} />
 
-          {/* Article Body */}
-          <div id="article-body" className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground prose-max">
-            <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents as Components}>
-              {content}
-            </ReactMarkdown>
-          </div>
+          {/* Article Body — server-rendered by ArticleBody (RSC slot) */}
+          {body}
 
           {/* Newsletter CTA, highest-intent moment: reader just finished */}
           <SubscribeCompact source={`article:${frontmatter.slug}`} />
@@ -668,7 +386,7 @@ export default function ArticlePageClient({ article, related }: Props) {
               </Link>
             </Button>
           </div>
-        </motion.article>
+        </article>
       </div>
     </div>
   );

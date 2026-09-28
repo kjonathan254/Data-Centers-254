@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import {
+  isSameOriginRequest,
+  originRejectedResponse,
+} from "@/lib/api-guards";
 import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
@@ -208,6 +212,9 @@ async function llmAnswer(
 // ─── Handler ─────────────────────────────────────────────────────────────────
 
 export async function POST(request: NextRequest) {
+  // CSRF guard: cross-site calls burn paid LLM quota under a victim's IP.
+  if (!isSameOriginRequest(request)) return originRejectedResponse();
+
   const ip = clientIp(request);
   if ((await rateLimit("chat", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(

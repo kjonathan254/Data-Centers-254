@@ -18,7 +18,7 @@
 
 import { useMemo, useState } from "react";
 import { ArrowUpRight, Database } from "lucide-react";
-import { countLabel } from "@/lib/policy";
+import { countLabel } from "@/lib/policy/config";
 import { useWipe } from "./motion";
 import type { OpsData, OpsSource } from "./dashboard-types";
 

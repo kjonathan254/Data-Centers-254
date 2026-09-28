@@ -206,7 +206,7 @@ export default async function FacilityPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <div className="container-site py-14 lg:py-20">
 
           {/* Breadcrumb */}

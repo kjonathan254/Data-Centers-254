@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import {
+  isSameOriginRequest,
+  originRejectedResponse,
+} from "@/lib/api-guards";
 
 /**
  * POST /api/csp-report, Content-Security-Policy violation collector.
@@ -25,6 +29,10 @@ import { rateLimit, clientIp } from "@/lib/rate-limit";
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
+  // Browsers always send CSP reports from the reporting page's origin; a
+  // mismatching Origin means a forged report (log-spam attempt).
+  if (!isSameOriginRequest(req)) return originRejectedResponse();
+
   const ip = clientIp(req);
   if ((await rateLimit("csp-report", ip, 10, 60_000)).limited) {
     return new NextResponse(null, { status: 429 });
@@ -55,11 +63,16 @@ export async function POST(req: NextRequest) {
         : typeof report["effectiveDirective"] === "string"
           ? report["effectiveDirective"]
           : "<unknown>";
-    const blocked =
-      typeof report["blocked-uri"] === "string" ? report["blocked-uri"].slice(0, 120) : "";
+    const blockedRaw =
+      typeof report["blocked-uri"] === "string" ? report["blocked-uri"] : "";
+    // Strip control characters so forged reports can't forge log lines.
+    const blocked = blockedRaw.replace(/[\x00-\x1f\x7f]/g, "").slice(0, 120);
+    const directiveClean = directive.replace(/[\x00-\x1f\x7f]/g, "");
 
     // Single line, bounded, no raw report echo.
-    console.log(`[csp-report] path=${docPath} directive=${directive} blocked=${blocked}`);
+    console.log(
+      `[csp-report] path=${docPath} directive=${directiveClean} blocked=${blocked}`
+    );
   } catch {
     // Malformed body, not worth a 400 round trip; browsers treat 2xx as delivered.
   }

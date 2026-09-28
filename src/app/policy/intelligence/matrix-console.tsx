@@ -42,7 +42,7 @@ import {
 import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
-import { countLabel } from "@/lib/policy";
+import { countLabel } from "@/lib/policy/config";
 import type { OpsCell, OpsData } from "./dashboard-types";
 
 const STATE_ORDER = ["verified", "partially-verified", "capture-pending", "unverified", "contradicted"] as const;

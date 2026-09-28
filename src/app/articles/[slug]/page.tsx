@@ -10,6 +10,7 @@ import { CLUSTER_META } from "@/lib/cluster-meta";
 import { siteUrl } from "@/lib/site";
 import { notFound } from "next/navigation";
 import ArticlePageClient from "./ArticlePageClient";
+import ArticleBody from "./ArticleBody";
 
 // ─── Static Generation ──────────────────────────────────────────────────
 
@@ -139,13 +140,19 @@ export default async function ArticlePage({ params }: PageProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
         {faqLd && (
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
         )}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-        <ArticlePageClient article={article} related={related} />
+        {/* Markdown body is rendered on the server (ArticleBody) and handed
+            to the client shell as an RSC slot — no client markdown parser. */}
+        <ArticlePageClient
+          article={article}
+          related={related}
+          body={<ArticleBody article={article} />}
+        />
       </main>
       <Footer />
     </div>

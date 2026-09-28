@@ -1,12 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 import { MessageCircle, X } from "lucide-react";
-import JibuChat from "@/components/chat/jibu-chat";
 import JibuWelcome from "@/components/chat/jibu-welcome";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import { JIBU_OPENED_KEY as PULSE_KEY } from "@/components/chat/jibu-storage-keys";
+
+// Perf audit M1: the chat engine used to ship in the initial bundle of every
+// page; code-split it so the chunk downloads on first open instead.
+const JibuChat = dynamic(() => import("@/components/chat/jibu-chat"), {
+  ssr: false,
+});
 
 /**
  * Site-wide floating chat: a quiet cyan button, bottom-right, that opens the
@@ -23,6 +29,9 @@ export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [trayVisible, setTrayVisible] = useState(false);
   const [seen, setSeen] = useState(true);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const fabRef = useRef<HTMLButtonElement>(null);
+  const wasOpen = useRef(false);
   // Research surfaces (policy intelligence) keep the assistant fully collapsed:
   // one quiet button, no auto-popping welcome card competing with the data.
   const suppressWelcome = pathname.startsWith("/policy");
@@ -55,6 +64,27 @@ export default function ChatWidget() {
     };
   }, []);
 
+  // Dialog semantics (perf audit M1): Escape closes, focus moves into the
+  // panel on open and returns to the launcher button on close.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) {
+      wasOpen.current = true;
+      panelRef.current?.focus();
+    } else if (wasOpen.current) {
+      wasOpen.current = false;
+      fabRef.current?.focus();
+    }
+  }, [open]);
+
   if (pathname === "/chat") return null;
 
   function toggle() {
@@ -78,9 +108,11 @@ export default function ChatWidget() {
       <div className={`fixed right-4 z-[55] sm:right-6 ${bottomOffset}`}>
       {open && (
         <div
+          ref={panelRef}
+          tabIndex={-1}
           role="dialog"
           aria-label={`${BOT_IDENTITY.name}, chat with the DC254 answer engine`}
-          className="card-solid mb-3 flex h-[min(620px,72dvh)] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border/70 shadow-2xl shadow-black/40"
+          className="card-solid mb-3 flex h-[min(620px,72dvh)] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border/70 shadow-2xl shadow-black/40 outline-none"
         >
           <div className="flex items-center justify-between border-b border-border/50 bg-accent/30 pr-2">
             <p className="px-4 pt-2 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
@@ -103,11 +135,13 @@ export default function ChatWidget() {
 
       {!open && (
         <button
+          ref={fabRef}
           type="button"
           onClick={toggle}
           title={bubbleLabel}
           aria-label={bubbleLabel}
-          className="group relative flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-cyan/70 text-background shadow-xl shadow-cyan/25 transition-transform hover:scale-105 active:scale-95"
+          aria-haspopup="dialog"
+          className="group relative flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-cyan/70 text-background shadow-xl shadow-cyan/25 transition-transform hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-cyan/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background outline-none"
         >
           <MessageCircle className="size-6" aria-hidden="true" />
           {!seen && (

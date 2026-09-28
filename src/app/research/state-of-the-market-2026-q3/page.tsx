@@ -83,7 +83,7 @@ export default function StateOfMarket2026Q3() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto section-y">
           <p className="text-section-label mb-4">Quarterly Report · {snap.snapshotOf} Edition</p>

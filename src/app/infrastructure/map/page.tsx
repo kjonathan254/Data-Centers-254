@@ -8,7 +8,9 @@ import { PIDA_PROJECTS, PIDA_SOURCE } from "@/lib/pida-data";
 import { getDirectoryStats } from "@/lib/directory-data";
 import { getPlatformStats } from "@/lib/site-stats";
 
-export const dynamic = 'force-dynamic';
+// Static prerender: every input below is static JSON, so the page ships from
+// the CDN cache. (Was force-dynamic — perf audit H3; that made every visit a
+// server render for no benefit.)
 
 // Derived from the verified facility dataset so metadata never goes stale.
 // Kenya-scoped count: the map plots the Kenya census; the 4 East Africa
@@ -50,7 +52,7 @@ export default function InfrastructureMapPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 py-8">
+      <main id="main-content" className="flex-1 py-8">
         <EastAfricaInfrastructureMap />
 
         {/* PIDA / African Infrastructure Database layer */}

@@ -48,7 +48,7 @@ export default function ChatPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 py-10 lg:py-14">
+      <main id="main-content" className="flex-1 py-10 lg:py-14">
         <div className="container-site">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-12">
             {/* Intro column */}

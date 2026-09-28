@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import {
+  isSameOriginRequest,
+  originRejectedResponse,
+} from "@/lib/api-guards";
 import { resolveGroqKey, LLM_BASE_URL, llmTtsVoice } from "@/lib/chatbot/llm";
 
 /**
@@ -25,6 +29,9 @@ const WINDOW_MS = 60_000;
 let downUntil = 0;
 
 export async function POST(request: NextRequest) {
+  // CSRF guard: cross-site calls burn paid TTS quota under a victim's IP.
+  if (!isSameOriginRequest(request)) return originRejectedResponse();
+
   const ip = clientIp(request);
   if ((await rateLimit("tts", ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json({ error: "Too fast, one moment." }, { status: 429 });

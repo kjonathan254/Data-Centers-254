@@ -91,6 +91,8 @@ async function upstash(
     headers: { Authorization: `Bearer ${cfg.token}` },
     // GET-style REST commands are cache-safe; still avoid Next fetch caching
     cache: "no-store",
+    // Bounded so a hung Upstash connection can never stall the route.
+    signal: AbortSignal.timeout(5_000),
   });
   if (!res.ok) throw new Error(`upstash ${command} failed: ${res.status}`);
   const json = (await res.json()) as { result?: unknown; error?: string };

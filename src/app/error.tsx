@@ -23,11 +23,13 @@ export default function Error({
         <h1 className="text-2xl font-bold text-foreground mb-3">
           We hit an unexpected error.
         </h1>
-        {/* DEBUG: show error message temporarily */}
-        <pre className="text-xs text-left text-red-400 bg-red-950/30 rounded-lg p-4 mb-6 overflow-auto max-h-40 border border-red-900/50">
-          {error.message}
-          {error.digest && `\n[digest: ${error.digest}]`}
-        </pre>
+        {/* Error details stay server-side; only the digest is surfaced so
+            support can correlate with logs without leaking internals. */}
+        {error.digest && (
+          <p className="text-xs font-mono text-muted-foreground/70 mb-6">
+            [digest: {error.digest}]
+          </p>
+        )}
         <p className="text-sm text-muted-foreground mb-8">
           This has been logged. You can try again or head back to the homepage.
         </p>

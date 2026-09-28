@@ -30,7 +30,7 @@ export default function AIPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <ArticleClusterPage cluster="AI" />
       </main>
       <Footer />

@@ -70,7 +70,10 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
 
   const lastUpdated = articles.reduce((max, a) => {
     const fm = a.frontmatter;
-    const d = new Date(fm.updated_date > fm.published_date ? fm.updated_date : fm.published_date);
+    // T00:00:00 = local-time parse on both sides (hydration-safe).
+    const d = new Date(
+      `${fm.updated_date > fm.published_date ? fm.updated_date : fm.published_date}T00:00:00`
+    );
     return d > max ? d : max;
   }, new Date(0));
   const showUpdated = lastUpdated.getTime() > 0;
@@ -152,7 +155,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
                         {a.frontmatter.reading_time}
                       </span>
                       <span className="font-mono">
-                        {new Date(a.frontmatter.published_date).toLocaleDateString("en-KE", {
+                        {new Date(`${a.frontmatter.published_date}T00:00:00`).toLocaleDateString("en-KE", {
                           year: "numeric",
                           month: "short",
                         })}

@@ -28,7 +28,7 @@ export default function EnergyPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1"><ArticleClusterPage cluster="Energy" /></main>
+      <main id="main-content" className="flex-1"><ArticleClusterPage cluster="Energy" /></main>
       <Footer />
     </div>
   );

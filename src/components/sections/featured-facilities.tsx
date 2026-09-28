@@ -23,7 +23,12 @@ const STATUS_META: Record<string, { label: string; cls: string; icon: typeof Che
 };
 
 function fmtVerified(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-KE", { month: "short", year: "numeric" });
+  // lastVerified is month-precision ("2026-09"); bare "YYYY-MM" parses as UTC
+  // midnight, which negative-offset clients roll back a month (hydration
+  // mismatch). Normalise to a local-time date string so month/year match on
+  // both server and client.
+  const local = /^\d{4}-\d{2}$/.test(iso) ? `${iso}-01T00:00:00` : iso;
+  return new Date(local).toLocaleDateString("en-KE", { month: "short", year: "numeric" });
 }
 
 function capacityLabel(f: Facility): { value: string; label: string } {

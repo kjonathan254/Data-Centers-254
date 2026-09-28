@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* 1-2, Fullscreen photographic opening: proposition, three primary
                actions, verified stat strip - the whole product in one screen */}
         <Hero />

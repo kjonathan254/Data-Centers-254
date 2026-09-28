@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { saveExportInterest } from '@/lib/newsletter-store';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
+import {
+  isSameOriginRequest,
+  originRejectedResponse,
+} from '@/lib/api-guards';
 
 /**
  * Pre-checkout capture for the Premium Market Data Export
@@ -21,6 +25,9 @@ const WINDOW_MS = 60_000;
 const MAX_BODY_BYTES = 10_000;
 
 export async function POST(req: NextRequest) {
+  // CSRF guard: reject cross-site form posts before any limiter/store spend.
+  if (!isSameOriginRequest(req)) return originRejectedResponse();
+
   const ip = clientIp(req);
   if ((await rateLimit('export-interest', ip, RATE_LIMIT, WINDOW_MS)).limited) {
     return NextResponse.json(
