@@ -66,8 +66,17 @@
   /home/z/bin/gh (auth via GH_TOKEN env). CI status verified GREEN 2026-09-23:
   the user-reported lint failure was run 5f1963b ("Lint" step); fixed from
   2900c04 onward — 2900c04 / a33567f / c12a017 all success.
-- **.env.local**: recreated 2026-09-23 after 5th workspace rollback (gitignored,
-  holds rotated Firecrawl key). Rollbacks wipe this file — check it every session.
+- **.env.local**: recreated 2026-09-29 (Task 65) after workspace wipe #6 — holds a
+  VALID Context.dev key (editor-supplied 2026-09-29, auth-proven via zero-credit
+  400-vs-401 probe against /v1/web/scrape). Firecrawl keys NOT present (frozen/
+  exhausted anyway). Rollbacks wipe this file — check it every session.
+- **OG image pipeline**: SHIPPED (Task 65, commit 5eb2dd8, 2026-09-29). Build-time
+  sharp 1200x630 JPEG derivatives for all 83 og:image sources -> gitignored
+  public/og/ (repo weight flat); metadata (openGraph/twitter/JSON-LD, 105 articles
+  + 26 pages + facility heroImage) points at /og/<stem>.jpg via src/lib/og-image.ts.
+  Built-HTML audit: 176 og:image tags, ZERO webp remain. WhatsApp/LinkedIn preview
+  risk closed. Vercel runs `npm run build` (proven: prod /sw.js carries fresh
+  pwa-prebuild stamp), so the build-chain hook fires on every deploy.
 - **Vercel storage**: resolved (retention policy + image diet 13.6→6.5MB per
   snapshot). User should have revoked the Vercel token shared in chat (vcp_1Bve…).
 - **Next.js env**: `TYPESAFE_API_KEY` exists in Vercel production (inert — no code
@@ -868,3 +877,39 @@ GitHub rejects any push touching workflow files. Do NOT commit it into main
 until the token gains workflow scope (it would block ALL future pushes);
 either add scope (Settings → Developer settings → PAT → workflow: read/write)
 then commit+push, or apply the 4-line edit manually in the GitHub UI.
+
+### 2026-09-29 (session 3) — OG image pipeline shipped + Context.dev key re-wired (Task 65)
+- Editor: "give the explanation above in simple terms and then handle the deferred
+  OG-image pipeline" + supplied a Context.dev key (ctxt_secret_...). Workspace had
+  been WIPED again (6th) — fresh clone at ede82bc; worklog.md mirror recreated.
+- Context.dev key: written to gitignored .env.local (rule 4, check-ignore verified).
+  Auth proven WITHOUT spending credits: malformed scrape body -> 400 with editor's
+  key vs 401 "API key not found" with a dummy key. Scrape/discovery pipeline is
+  UNBLOCKED for future capture work (1 credit per scrape; search 1 credit/10 results).
+- OG pipeline (Task 62 deferred item, now closed): 104/105 og_images were webp
+  non-1200x630 — WhatsApp/LinkedIn/X mis-render or drop webp previews. Fix per the
+  recorded spec "build-time sharp derivatives":
+  - scripts/generate_og_images.mjs: collects 83 sources (105-article frontmatter
+    og_image incl. quoted+unquoted YAML, directory heroImage from current.json,
+    16 page-level metadata images), sharp cover-crop 1200x630 -> public/og/<stem>.jpg
+    (quality 82 mozjpeg, mtime freshness, stem-collision guard, image-focus mirror
+    for top-biased crops, fail-open exit 0 if sharp missing). sharp = Next's own
+    optional dep (lockfile 0.35.4) — ZERO new dependencies (rule 5).
+  - src/lib/og-image.ts: ogImageFor() maps /images/<stem>.<ext> -> /og/<stem>.jpg
+    (build-time existsSync, falls back to source path, blank og_image -> compliant
+    og-default.png — previously those articles emitted NO og:image at all).
+  - 28 metadata surfaces rewired: article openGraph+twitter+JSON-LD (105), facility
+    heroImage, 26 page literals (webp/png, dims 675/653/800/1080x669 -> 1200x630).
+  - .gitignore /public/og/ (build artifact never committed; ~7.3MB generated per
+    build, repo weight flat per storage incident). Build chain: pwa-prebuild &&
+    generate_og_images && next build. Vercel hook proven: prod /sw.js carries a
+    fresh pwa-prebuild stamp, so `npm run build` runs on Vercel deploys.
+- Gates: tsc PASS, lint PASS, build PASS, article_validator 105/105 ALL OK,
+  validate_policy PASS (55/61). Built-HTML audit: 176 og:image tags -> 157 /og/*.jpg
+  + 19 compliant og-default.png, ZERO webp remain, all width=1200/height=630;
+  absolute URLs verified across og:image, twitter:image and JSON-LD.
+- Bug caught pre-push: collision-guard map keyed stem->path but read with path
+  (all outputs briefly "undefined.jpg" + freshness check self-poisoned) — fixed
+  to stemOf/stemOwners pair, verified 80/80 then 83/83.
+- Pushed 5eb2dd8 (29 files, +250/-54) after preflight; CI checked via REST API.
+  No content/claims touched (humanGate); zero API credits spent.
