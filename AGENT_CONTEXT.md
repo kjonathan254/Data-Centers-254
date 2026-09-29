@@ -32,14 +32,16 @@
 8. Delegations: the editor grants task-specific authority in chat (e.g. r11
    claim upgrades, 2026-09-23). Record the delegation in commit messages.
 
-## Current state (updated 2026-09-24, r14)
+## Current state (updated 2026-09-29, r16)
 
 - **Site**: data-centers-254.vercel.app (Vercel free team, project
   `prj_Tigqxa5amDHpQcDT34kdIqSEnAMt`), repo kjonathan254/Data-Centers-254, branch main.
-- **Policy Intelligence**: dataset `policy-2026-Q3-r14` — **55/61 claims verified,
-  6 partially-verified, 0 unverified**; 67 sources (49 T1, 5 T2, 13 T3); 20
-  pillar gaps (energy/construction/environment mostly unresearched in UG/RW; EAC
-  regional frameworks untouched across all four). KE licensing pillar now has 6
+- **Policy Intelligence**: dataset `policy-2026-Q3-r16` — **55/61 claims verified,
+  6 partially-verified, 0 unverified**; 70 sources (49 T1, 8 T2, 13 T3); 20
+  pillar gaps (r15/r16 added T2 source records: MTN/Africa Hub, Dangote Lamu;
+  validator PASS 2026-09-29). Gaps: energy/construction/environment mostly
+  unresearched in UG/RW; EAC
+  regional frameworks untouched across all four. KE licensing pillar now has 6
   claims: C2/C3 T1-backed (April-vs-March discrepancy flagged open), C4 fee
   schedule verified on the CA instrument text, C5 (NFP/ASP exemption) and C6
   (roadmap) verified on instrument capture 2026-09-24.
@@ -112,8 +114,24 @@
    overflow fixes (grid min-w-0). Phase 3 candidates remaining: claim-record
    deep links from matrix drawer to pillar anchors, compare-view exports,
    quarterly delta views. User mockup + audit text live in chat history.
-9. **Google Alerts leads (editor's digest 2026-09-24, triaged — humanGate
-   applies)**: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
+9. **Google Alerts leads (editor's digest 2026-09-29, triaged — humanGate
+   applies)**: (e) Nixon Kanali column "Africa can't build an AI economy on
+   rented servers" (africabusinesscommunities.com, 2026-09-28) → access-hunt
+   capture filed 2026-09-29 (Cloudflare challenge on ABC; page_reader gets
+   security-verification shell; archive.org unreachable; no syndication found).
+   Fragments only: thesis is sovereign-infrastructure, Kenya anchor is the
+   Microsoft/G42 $1B geothermal DC — already covered with a verified timeline in
+   microsoft-g42-kenya-data-centre.md. NO quotes/claims registered (snippet rule).
+   Editorial candidate IF full text arrives: DC254 response piece on rented
+   servers vs sovereign compute, grounded in OUR verified coverage. Unblock:
+   editor saves the page from a personal browser, or a TechTrends origin copy
+   surfaces. (f) Arizton "Global Data Center Market Insights Across 6,610
+   Facilities" (openPR, 2026-09-28) → T3 capture filed (claims: []). Africa
+   content = one qualitative bullet (Nigeria/Kenya/Egypt/SA top markets), NO
+   numbers; global scope 4,408 existing + 2,202 upcoming. NOT a lead; registered
+   as a future context stat. Definitional note: Arizton 4,408 global vs IMF
+   ~160-Africa-is-5.5%-of-global imply different counting bases — never blend
+   (Task 54 discipline). Prior 2026-09-24 digest triage: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
    considerations for telecommunications businesses" (Kenya, 2026-09-23,
    law-firm alert; mentions Airtel Nxtra + Africa Data Centres pan-African
    delivery) → RESOLVED Task 53 — alert located via CDH sitemap (curl-open),
@@ -710,6 +728,30 @@
   domain, gmail contact, centers/centres brand split) as owner-decision items.
 - Gates: tsc/lint/build PASS (node_modules restored after workspace rollback, 533 pkgs).
   Rendered output verified in built HTML before push. Live deploy follows via Vercel.
+
+### 2026-09-29 — Google Alerts digest triage: Kanali column + Arizton global PR (Task 63)
+- Editor forwarded the alerts feed (2 entries). Triage per open thread 9 protocol;
+  humanGate intact — no claims, no quotes, no dataset changes, no article published.
+- (f) Arizton global facilities PR (openPR 4645870, 2026-09-28): FULL body captured
+  free — workspace curl 403 (bunny.net), z-ai page_reader got the full release text.
+  Capture filed T3 claims:[] (2026-09-29-openpr-arizton-global-dc-facilities-database.md).
+  Africa = one qualitative bullet, no numbers. Global: 4,408 existing + 2,202 upcoming.
+  Definitional cross-ref vs IMF ~160/5.5% recorded (never blend). NOT a lead.
+- (e) Nixon Kanali column (ABC, 2026-09-28): ALL extraction routes blocked — curl
+  403 Cloudflare (incl. crawler UAs), page_reader security-verification shell,
+  web.archive.org HTTP 000 (workspace-level, matches Task 58), no syndication
+  indexed. Access-hunt capture filed (2026-09-29-abc-kanali-ai-economy-rented-
+  servers-access-hunt.md) with verbatim fragments (title, G42 feed snippet, gonga
+  fragment) and the rule: nothing quotable until full text is read. Kenya anchor
+  (Microsoft/G42 $1B geothermal DC) already covered by our verified timeline.
+- Environment: fresh workspace clone at 57f2c29; .env.local ABSENT (no Firecrawl/
+  Context.dev keys locally — Firecrawl frozen anyway; Context.dev key must be
+  re-supplied by editor before any scrape work). node_modules restored via npm ci.
+- Also: Current state block refreshed r14→r16 (r15/r16 bumps of 2026-09-26 had
+  added 3 T2 sources without updating the block; validator PASS re-confirmed:
+  61 claims 55/6/0, 70 sources, 15 capture links).
+- Validator PASS; zero credits spent (all routes were free). No push conflicts
+  (preflight ff-current at session start).
 
 ### 2026-09-28 — senior-engineer audit: security + perf batch implemented (Task 62)
 
