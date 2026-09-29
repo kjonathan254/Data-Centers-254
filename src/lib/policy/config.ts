@@ -141,29 +141,23 @@ export const SINCE_LAST_REVIEW: {
   date: string;
   items: { label: string; detail: string; tone: "up" | "flat" | "note" }[];
 } = {
-  fromVersion: "policy-2026-Q3-r12",
-  toVersion: "policy-2026-Q3-r13",
-  date: "2026-09-24",
+  fromVersion: "policy-2026-Q3-r15",
+  toVersion: "policy-2026-Q3-r16",
+  date: "2026-09-26",
   items: [
     {
-      label: "KE licensing pillar 1 -> 4 claims",
+      label: "+2 sources registered (Dangote Lamu energy reporting)",
       detail:
-        "KE-LC-C2 verified (data centres licensed under NFP-Tier 2, no DC-specific class) + KE-LC-C3 verified (8 Sep 2026 CA notice proposing a standalone data centre licence, 30-day window)",
+        "Kenyans.co.ke (T2, full capture) + The Africa Report (T2, snippet; paywalled - headline facts only): reference records for the announced 1,000 MW Lamu refinery power plant, ~500 MW offered to Kenya; LNG fuel type per The Africa Report",
       tone: "up",
     },
     {
-      label: "+3 sources registered",
+      label: "0 claim changes",
       detail:
-        "CDH TMT licensing alert (T2) · Techafricanews (T3) · w.media quoting the CA notice (T3); all captured free via curl, zero API credits",
-      tone: "up",
+        "61 claims unchanged (55 verified / 6 partially-verified); both records carry explicit no-claim-yet notes - upgrade path opens if a PPA, grid-connection or financing instrument surfaces",
+      tone: "flat",
     },
-    {
-      label: "+1 claim registered partially-verified",
-      detail:
-        "KE-LC-C4 proposed fee schedule (KSh 5,000 / 100,000 / 80,000 or 0.4% turnover) - single source; CA notice capture is the upgrade path",
-      tone: "note",
-    },
-    { label: "20 structured gaps (unchanged)", detail: "CA licence-class instrument still uncaptured; proposal-stage claims may change during consultation", tone: "flat" },
+    { label: "20 structured gaps (unchanged)", detail: "Energy/construction/environment pillars still unresearched in UG/RW; EAC regional frameworks untouched across all four markets", tone: "flat" },
   ],
 } as const;
 

@@ -333,7 +333,7 @@ export default async function PillarDeepDivePage({
                     </div>
                     <ul className="divide-y divide-[rgba(135,180,220,0.08)]">
                       {c.claims.map((cl) => (
-                        <li key={cl.id} className="p-4">
+                        <li key={cl.id} id={`claim-${cl.id}`} className="scroll-mt-24 p-4">
                           <div className="flex flex-wrap items-center gap-2">
                             <span
                               title={POLICY_STATES[cl.state as keyof typeof POLICY_STATES]?.blurb}

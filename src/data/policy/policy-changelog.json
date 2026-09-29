@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1-changelog",
-  "datasetVersion": "policy-2026-Q3-r14",
+  "datasetVersion": "policy-2026-Q3-r16",
   "note": "Claim-level dataset changelog. One entry per dataset revision, hand-refreshed on every bump by diffing the previous published dataset (git show <prev>:src/data/policy/policy-claims-2026-Q3.json) against the new one, mirroring SINCE_LAST_REVIEW in src/lib/policy/config.ts. Claim statements are verbatim from the dataset; sources are resolved at render time from the registry by sourceIds, never duplicated here. The page must never run git at request time.",
   "entries": [
     {
@@ -157,6 +157,29 @@
         "ca-open-consultations-2026"
       ],
       "editorialDecisionSummary": "Standing humanGate delegation (editor instruction 'Work on the data set', 2026-09-24; user approval same day), conditional on verification: the T1 consultation text was read in full from the capture before registration. Machine capture is evidence, never verification - verification here is the full-text read against the r13 claim set. Capture front-matter status remains capture-pending per house convention; the claim layer carries the verified states. Credit spend: 1 Context.dev credit for the PDF (born-digital flat rate) plus the index-page capture; two challenge-walled fetch attempts returned empty and were stopped rather than retried blindly."
+    },
+    {
+      "version": "policy-2026-Q3-r15",
+      "previousVersion": "policy-2026-Q3-r14",
+      "date": "2026-09-26",
+      "summary": "Reference source added without claim linkage: the IT News Africa announcement of the MTN Digital Infrastructure / Africa Data Hub Holding partnership (31 Aug 2026; UAE investor Tarek Al Ashram; initial focus South Africa and Nigeria; Bayobab a shareholder; framed under MTN's Ambition 2030), captured in full and registered tier-2. Candidate background evidence for the ai-digital-policy and regional-frameworks pillars. 61 claims unchanged (55 verified / 6 partially-verified); source registry 67 -> 68.",
+      "claims": [],
+      "sourcesAdded": [
+        "itnewsafrica-mtn-africa-data-hub"
+      ],
+      "editorialDecisionSummary": "Registered as a tier-2 reference record with an explicit no-claim-yet note: a commercial market development, not evidence for any existing statement. HumanGate intact - no claim proposed, nothing upgraded. Registry-only bump (audit pass 5, 2026-09-26)."
+    },
+    {
+      "version": "policy-2026-Q3-r16",
+      "previousVersion": "policy-2026-Q3-r15",
+      "date": "2026-09-26",
+      "summary": "Two reference sources added alongside the Dangote Lamu power-plant analysis, both concerning the announced 1,000 MW plant at the proposed Lamu refinery with ~500 MW offered to the Kenyan government: Kenyans.co.ke (tier-2, full text captured 2026-09-26) and The Africa Report (tier-2, snippet capture - paywalled/cookie-walled, headline facts only, establishes the plant's LNG fuel type). Candidate background evidence for the energy-electricity pillar (grid capacity expansion). 61 claims unchanged (55 verified / 6 partially-verified); source registry 68 -> 70.",
+      "claims": [],
+      "sourcesAdded": [
+        "kenyans-dangote-lamu-power",
+        "theafricareport-lamu-lng"
+      ],
+      "editorialDecisionSummary": "Registered as tier-2 reference records with explicit no-claim-yet notes: a commercial/energy market development at announcement stage. HumanGate intact - no claim proposed, nothing upgraded; upgrade path opens if a PPA, grid-connection or financing instrument surfaces. Registry-only bump (2026-09-26)."
     }
   ]
 }

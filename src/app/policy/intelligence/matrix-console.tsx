@@ -18,11 +18,13 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  ArrowUpRight,
   BadgeCheck,
   CalendarDays,
   CheckCircle2,
   ChevronRight,
   CircleDot,
+  Download,
   Cpu,
   Database,
   FileText,
@@ -277,6 +279,7 @@ export default function MatrixConsole({
               Compare
             </button>
           </div>
+          <ExportMenu data={data} />
         </div>
       </div>
 
@@ -600,7 +603,16 @@ export default function MatrixConsole({
                             <span className={`size-1.5 rounded-full ${STATE_META[cl.state]?.dot}`} aria-hidden="true" />
                             {STATE_META[cl.state]?.label}
                           </span>
-                          <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{cl.id}</span>
+                          <Link
+                            href={`/policy/intelligence/pillars/${active.pillar}#claim-${cl.id}`}
+                            onClick={() => setActive(null)}
+                            title={`Open claim ${cl.id} at its anchored record in the ${activePillar?.label ?? "pillar"} deep dive`}
+                            aria-label={`Open claim ${cl.id} in the pillar deep dive`}
+                            className="group/cl inline-flex items-center gap-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-500 transition-colors hover:text-cyan-300"
+                          >
+                            {cl.id}
+                            <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover/cl:opacity-100" aria-hidden="true" />
+                          </Link>
                           <CopyButton value={cl.id} className="ml-auto" />
                         </div>
                         <p className="mt-2 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
@@ -726,6 +738,112 @@ function CellPillContent({ cell }: { cell: OpsCell }) {
         ) : null
       )}
     </>
+  );
+}
+
+// ─── Compare-view exports (Phase 3, 2026-09-29) ───────────────────────────
+
+/**
+ * CSV/JSON export of the country × pillar coverage comparison. Everything in
+ * the file is derived from the same payload the dashboard renders — the
+ * export can never disagree with the page. Zero dependencies: Blob + object
+ * URL download. The /policy/intelligence/dataset route remains the canonical
+ * full-dataset download; this is the one-click comparison slice.
+ */
+function ExportMenu({ data }: { data: OpsData }) {
+  const countryName = (key: string) => data.countries.find((c) => c.key === key)?.name ?? key;
+  const pillarLabel = (id: string) => data.pillars.find((p) => p.id === id)?.label ?? id;
+
+  function triggerDownload(content: string, mime: string, ext: string) {
+    const blob = new Blob([content], { type: mime });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `dc254-policy-coverage-${data.meta.datasetVersion}.${ext}`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function exportCsv() {
+    const header = ["country", "pillar", ...STATE_ORDER, "total", "structured_gap"];
+    const esc = (v: string | number | boolean) => {
+      const s = String(v);
+      return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    };
+    const lines = [header.join(",")];
+    for (const cell of data.cells) {
+      lines.push(
+        [
+          esc(countryName(cell.country)),
+          esc(pillarLabel(cell.pillar)),
+          ...STATE_ORDER.map((s) => cell.states[s] ?? 0),
+          cell.total,
+          cell.gap,
+        ].join(",")
+      );
+    }
+    lines.push("");
+    lines.push(`# DC254 Policy Intelligence coverage matrix`);
+    lines.push(`# dataset ${data.meta.datasetVersion} · reviewed ${data.meta.reviewedLong} · ${data.meta.verified}/${data.meta.claims} claims verified`);
+    lines.push(`# states: ${STATE_ORDER.join(" / ")} · structured_gap is a research-coverage condition, never a claim state`);
+    triggerDownload(lines.join("\n"), "text/csv;charset=utf-8", "csv");
+  }
+
+  function exportJson() {
+    const payload = {
+      dataset: data.meta.datasetVersion,
+      schemaVersion: data.meta.schemaVersion,
+      reviewed: data.meta.reviewedLong,
+      verificationRate: `${data.meta.verified}/${data.meta.claims}`,
+      countries: data.countries.map((c) => ({
+        key: c.key,
+        name: c.name,
+        verified: c.verified,
+        partiallyVerified: c.partial,
+        claims: c.claims,
+        coveragePct: c.coveragePct,
+      })),
+      cells: data.cells.map((cell) => ({
+        country: cell.country,
+        pillar: cell.pillar,
+        states: cell.states,
+        total: cell.total,
+        structuredGap: cell.gap,
+      })),
+      note: "Coverage comparison exported from data-centers-254.vercel.app/policy/intelligence - states describe claims; structuredGap is an unresearched pillar, never a finding.",
+    };
+    triggerDownload(JSON.stringify(payload, null, 2) + "\n", "application/json", "json");
+  }
+
+  return (
+    <div
+      className="flex items-center gap-1 rounded-lg border border-slate-700/70 p-0.5"
+      role="group"
+      aria-label="Export the coverage comparison"
+    >
+      <button
+        type="button"
+        onClick={exportCsv}
+        title="Download the country × pillar coverage matrix as CSV"
+        aria-label="Export coverage matrix as CSV"
+        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
+      >
+        <Download className="size-3" aria-hidden="true" />
+        CSV
+      </button>
+      <button
+        type="button"
+        onClick={exportJson}
+        title="Download the coverage comparison as JSON (countries + pillar cells)"
+        aria-label="Export coverage comparison as JSON"
+        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
+      >
+        <Download className="size-3" aria-hidden="true" />
+        JSON
+      </button>
+    </div>
   );
 }
 

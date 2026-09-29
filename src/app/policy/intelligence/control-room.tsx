@@ -21,7 +21,7 @@
  */
 
 import { useMemo, useState } from "react";
-import { ChevronRight, Info } from "lucide-react";
+import { ChevronRight, Info, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import CopyButton from "@/components/copy-button";
 import { POLICY_STATES, POLICY_GAP_STYLE } from "@/lib/policy/config";
@@ -326,6 +326,67 @@ function SinceLastReview({
         ))}
       </ul>
 
+      {/* Quarterly delta view: one row per dataset release, computed entirely
+          from the changelog payload (Phase 3, 2026-09-29). Actions are counted,
+          never hardcoded; rows render server-side so the trail stays crawlable. */}
+      {changelog.length > 0 && (
+        <div className="mt-4">
+          <PanelLabel
+            right={
+              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                {changelog.length} release{changelog.length === 1 ? "" : "s"} · claim- and source-level
+              </span>
+            }
+          >
+            Release deltas
+          </PanelLabel>
+          <ol className="mt-3 space-y-2">
+            {changelog.map((entry) => {
+              const added = entry.claims.filter((c) => c.action === "added").length;
+              const upgraded = entry.claims.filter((c) => c.action === "upgraded").length;
+              const revised = entry.claims.length - added - upgraded;
+              const chips: { text: string; cls: string }[] = [];
+              if (added > 0) chips.push({ text: `+${added} claim${added === 1 ? "" : "s"} added`, cls: "border-emerald-500/30 bg-emerald-500/10 text-emerald-300" });
+              if (upgraded > 0) chips.push({ text: `${upgraded} upgraded`, cls: "border-cyan-500/30 bg-cyan-500/10 text-cyan-300" });
+              if (revised > 0) chips.push({ text: `${revised} revised`, cls: "border-slate-700 text-slate-300" });
+              if (entry.claims.length === 0) chips.push({ text: "0 claim changes", cls: "border-slate-700 text-slate-400" });
+              if (entry.sourcesAdded.length > 0)
+                chips.push({
+                  text: `+${entry.sourcesAdded.length} source${entry.sourcesAdded.length === 1 ? "" : "s"}`,
+                  cls: "border-sky-500/30 bg-sky-500/10 text-sky-300",
+                });
+              return (
+                <li
+                  key={entry.version}
+                  className="rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] px-3.5 py-2.5"
+                >
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
+                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-200">
+                      {entry.previousVersion.replace("policy-2026-Q3-", "")}
+                      <span aria-hidden="true" className="mx-1 text-slate-600">&rarr;</span>
+                      {entry.version.replace("policy-2026-Q3-", "")}
+                    </span>
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{entry.date}</span>
+                    <span className="flex flex-wrap items-center gap-1.5">
+                      {chips.map((chip) => (
+                        <span key={chip.text} className={`rounded-full border px-2 py-px text-[10px] font-medium ${chip.cls}`}>
+                          {chip.text}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-slate-500">{entry.summary}</p>
+                </li>
+              );
+            })}
+          </ol>
+          <p className="mt-2 text-[11px] leading-relaxed text-slate-600">
+            Every release is diffed against the previous published dataset; claim records resolve to
+            their anchored evidence trails in the pillar deep dives.
+          </p>
+        </div>
+      )}
+
       {/* Claim-level changelog: claim -> sources -> previous version -> editorial decision.
           Zero-JS <details> so the audit trail stays server-rendered and crawlable. */}
       {changelog.map((entry) => (
@@ -355,7 +416,15 @@ function SinceLastReview({
                 return (
                   <li key={cl.id} className="pt-3 first:pt-0">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-slate-400">{cl.id}</span>
+                      <Link
+                        href={`/policy/intelligence/pillars/${cl.pillar}#claim-${cl.id}`}
+                        title={`Open claim ${cl.id} at its anchored record in the ${pillarLabel(cl.pillar)} deep dive`}
+                        aria-label={`Open claim ${cl.id} in the pillar deep dive`}
+                        className="group/cl inline-flex items-center gap-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-400 transition-colors hover:text-cyan-300"
+                      >
+                        {cl.id}
+                        <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover/cl:opacity-100" aria-hidden="true" />
+                      </Link>
                       <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-cyan-300">
                         {cl.action}
                       </span>
