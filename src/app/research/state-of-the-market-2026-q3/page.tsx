@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "article",
     locale: "en_KE",
-    images: [{ url: "/images/limuru-campus-aerial-solar.webp", width: 1200, height: 630, alt: "State of the Market 2026-Q3, Data Centre 254" }],
+    images: [{ url: "/og/limuru-campus-aerial-solar.jpg", width: 1200, height: 630, alt: "State of the Market 2026-Q3, Data Centre 254" }],
   },
 };
 

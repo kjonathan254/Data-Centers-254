@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/founder-photo.webp", width: 800, height: 800, alt: "Kevin Jonathan Otieno, Founder of Data Centre 254" }],
+    images: [{ url: "/og/founder-photo.jpg", width: 1200, height: 630, alt: "Kevin Jonathan Otieno, Founder of Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About DC254: Mission & Methodology",
     description:
       "Kenya's independent knowledge platform for digital infrastructure.",
-    images: ["/images/founder-photo.webp"],
+    images: ["/og/founder-photo.jpg"],
   },
 };
 

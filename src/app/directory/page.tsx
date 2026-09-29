@@ -34,13 +34,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "DC Directory, Data Centre 254" }],
+      images: [{ url: "/og/africa-dc-map.jpg", width: 1200, height: 630, alt: "DC Directory, Data Centre 254" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: `${kenyaCount} Kenya data centres verified and sourced, ${kenyaOp} operational. Search, filter, and compare.`,
-      images: ["/images/africa-dc-map.webp"],
+      images: ["/og/africa-dc-map.jpg"],
     },
   };
 }

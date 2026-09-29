@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/kenya-transmission-pylons-3.webp", width: 1200, height: 675, alt: "Kenya power tariff tracker, Data Centre 254" }],
+    images: [{ url: "/og/kenya-transmission-pylons-3.jpg", width: 1200, height: 630, alt: "Kenya power tariff tracker, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kenya Power Tariff Tracker",
     description: "Data centre energy benchmarks for Kenya: TOU, demand charges, pass-throughs, regional context.",
-    images: ["/images/kenya-transmission-pylons-3.webp"],
+    images: ["/og/kenya-transmission-pylons-3.jpg"],
   },
 };
 

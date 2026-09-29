@@ -8,6 +8,7 @@ import {
 } from "@/lib/articles";
 import { CLUSTER_META } from "@/lib/cluster-meta";
 import { siteUrl } from "@/lib/site";
+import { ogImageFor } from "@/lib/og-image";
 import { notFound } from "next/navigation";
 import ArticlePageClient from "./ArticlePageClient";
 import ArticleBody from "./ArticleBody";
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       locale: "en_KE",
       url,
-      images: fm.og_image ? [{ url: fm.og_image, width: 1200, height: 630, alt: fm.title }] : undefined,
+      images: [{ url: ogImageFor(fm.og_image), width: 1200, height: 630, alt: fm.title }],
       publishedTime: fm.published_date,
       modifiedTime: fm.updated_date,
       authors: [fm.author],
@@ -57,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: fm.title,
       description: fm.meta_description,
-      images: fm.og_image ? [fm.og_image] : undefined,
+      images: [ogImageFor(fm.og_image)],
     },
   };
 }
@@ -109,7 +110,7 @@ export default async function ArticlePage({ params }: PageProps) {
     mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
     articleSection: fm.cluster,
     keywords: [fm.primary_keyword, ...fm.secondary_keywords].join(", "),
-    image: fm.og_image ? siteUrl(fm.og_image) : undefined,
+    image: siteUrl(ogImageFor(fm.og_image)),
   };
 
   // ─── JSON-LD: FAQPage ──────────────────────────────────────────────

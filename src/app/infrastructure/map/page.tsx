@@ -30,13 +30,13 @@ export function generateMetadata(): Metadata {
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: "/images/og-infrastructure-map.webp", width: 1200, height: 630, alt: "Kenya data centre map, Data Centre 254" }],
+      images: [{ url: "/og/og-infrastructure-map.jpg", width: 1200, height: 630, alt: "Kenya data centre map, Data Centre 254" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Kenya Data Centre Map: Facilities & Subsea Cables",
       description: `${FACILITY_COUNT} facilities, ${CABLES.tracked} tracked submarine cable systems (${CABLES.inService} in service), and the fibre backbone, zoom from East Africa down to the Nairobi cluster.`,
-      images: ["/images/og-infrastructure-map.webp"],
+      images: ["/og/og-infrastructure-map.jpg"],
     },
   };
 }

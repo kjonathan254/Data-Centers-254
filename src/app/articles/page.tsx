@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     locale: "en_KE",
     images: [
       {
-        url: "/images/east-africa-data-centre-aerial.webp",
+        url: "/og/east-africa-data-centre-aerial.jpg",
         width: 1200,
-        height: 675,
+        height: 630,
         alt: "Aerial view of a data centre campus in East Africa",
       },
     ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "All Articles — The Complete Data Centre 254 Library",
     description:
       "Every guide, explainer and market analysis on Kenya's data centre industry in one index.",
-    images: ["/images/east-africa-data-centre-aerial.webp"],
+    images: ["/og/east-africa-data-centre-aerial.jpg"],
   },
 };
 

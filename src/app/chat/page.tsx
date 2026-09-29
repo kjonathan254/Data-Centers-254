@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${BOT_IDENTITY.name}, the DC254 answer engine` }],
+    images: [{ url: "/og/africa-dc-map.jpg", width: 1200, height: 630, alt: `${BOT_IDENTITY.name}, the DC254 answer engine` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `Ask ${BOT_IDENTITY.name}: the DC254 answer engine`,
     description: "Answers from the verified DC254 dataset, sources attached.",
-    images: ["/images/africa-dc-map.webp"],
+    images: ["/og/africa-dc-map.jpg"],
   },
 };
 

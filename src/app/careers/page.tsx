@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Industry professionals at the NBO2 data centre launch in Nairobi (Careers) Data Centre 254" }],
+    images: [{ url: "/og/nbo2-launch-ribbon-cutting.jpg", width: 1200, height: 630, alt: "Industry professionals at the NBO2 data centre launch in Nairobi (Careers) Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Data Centre Careers & Business in Kenya",
     description: "Data centre jobs, certifications, and business opportunities in Kenya's growing DC industry.",
-    images: ["/images/nbo2-launch-ribbon-cutting.webp"],
+    images: ["/og/nbo2-launch-ribbon-cutting.jpg"],
   },
 };
 

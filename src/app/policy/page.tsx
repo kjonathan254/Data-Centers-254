@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     locale: "en_KE",
     images: [
       {
-        url: "/images/policy-intelligence-hero.webp",
-        width: 1080,
-        height: 669,
+        url: "/og/policy-intelligence-hero.jpg",
+        width: 1200,
+        height: 630,
         alt: "Policy & Regulation coverage on Data Centre 254",
       },
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Policy & Regulation: Kenya Data Centre Rules",
     description:
       "Licensing, data protection, taxation, and the rules shaping Kenya's data centre industry.",
-    images: ["/images/policy-intelligence-hero.webp"],
+    images: ["/og/policy-intelligence-hero.jpg"],
   },
 };
 

@@ -42,3 +42,6 @@ coverage/
 
 # PWA service worker (generated per build by scripts/pwa-prebuild.mjs)
 public/sw.js
+
+# OG image build artifacts (scripts/generate_og_images.mjs) — never commit
+/public/og/

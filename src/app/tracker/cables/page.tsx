@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/mombasa-cable-landing-4.webp", width: 1200, height: 675, alt: "Kenya subsea cable tracker, Data Centre 254" }],
+    images: [{ url: "/og/mombasa-cable-landing-4.jpg", width: 1200, height: 630, alt: "Kenya subsea cable tracker, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kenya Subsea Cable Tracker",
     description: "Mombasa's cable slate: live, landed and announced, sourced and dated.",
-    images: ["/images/mombasa-cable-landing-4.webp"],
+    images: ["/og/mombasa-cable-landing-4.jpg"],
   },
 };
 

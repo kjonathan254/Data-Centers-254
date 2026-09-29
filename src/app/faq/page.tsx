@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/africa-dc-map.webp", width: 1200, height: 675, alt: "Kenya's digital infrastructure map, DC254" }],
+    images: [{ url: "/og/africa-dc-map.jpg", width: 1200, height: 630, alt: "Kenya's digital infrastructure map, DC254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FAQ: Kenya's data centres, answered",
     description:
       "How many data centres does Kenya have? Which is the largest? What powers them? Answers from the verified DC254 directory.",
-    images: ["/images/africa-dc-map.webp"],
+    images: ["/og/africa-dc-map.jpg"],
   },
 };
 

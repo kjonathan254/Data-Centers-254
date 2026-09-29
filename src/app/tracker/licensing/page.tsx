@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/national-assembly-chamber-session.webp", width: 1200, height: 675, alt: "Kenya data centre licensing tracker, Data Centre 254" }],
+    images: [{ url: "/og/national-assembly-chamber-session.jpg", width: 1200, height: 630, alt: "Kenya data centre licensing tracker, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kenya Data Centre Licensing Tracker",
     description: "CA regimes, fees and timelines for Kenya's colocation market, dated and sourced.",
-    images: ["/images/national-assembly-chamber-session.webp"],
+    images: ["/og/national-assembly-chamber-session.jpg"],
   },
 };
 

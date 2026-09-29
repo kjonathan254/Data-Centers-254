@@ -13,6 +13,7 @@ import {
   getFacilities, getFacilityBySlug,
 } from "@/lib/directory-data";
 import { getFacilityEvidence, getPublicVerification, publicClaimState } from "@/lib/evidence";
+import { ogImageFor } from "@/lib/og-image";
 import { pickPeers } from "@/lib/compare";
 import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
@@ -124,9 +125,9 @@ export async function generateMetadata({
       siteName: "Data Centre 254",
       type: "website",
       locale: "en_KE",
-      images: [{ url: f.heroImage || "/images/africa-dc-map.webp", width: 1200, height: 675, alt: `${f.name}, Data Centre 254` }],
+      images: [{ url: ogImageFor(f.heroImage || "/images/africa-dc-map.webp"), width: 1200, height: 630, alt: `${f.name}, Data Centre 254` }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [f.heroImage || "/images/africa-dc-map.webp"] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImageFor(f.heroImage || "/images/africa-dc-map.webp")] },
   };
 }
 

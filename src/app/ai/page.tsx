@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/ai-gpu-servers.webp", width: 1200, height: 675, alt: "AI & Cloud, Data Centre 254" }],
+    images: [{ url: "/og/ai-gpu-servers.jpg", width: 1200, height: 630, alt: "AI & Cloud, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Infrastructure & Compute in Kenya",
     description:
       "AI infrastructure in Kenya, GPU capacity, cloud regions, AI-ready data centres, and computing demand.",
-    images: ["/images/ai-gpu-servers.webp"],
+    images: ["/og/ai-gpu-servers.jpg"],
   },
 };
 

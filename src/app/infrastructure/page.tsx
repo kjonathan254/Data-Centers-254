@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",
-    images: [{ url: "/images/nbo2-launch-ribbon-cutting.webp", width: 1200, height: 675, alt: "Infrastructure, Data Centre 254" }],
+    images: [{ url: "/og/nbo2-launch-ribbon-cutting.jpg", width: 1200, height: 630, alt: "Infrastructure, Data Centre 254" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Infrastructure: Fibre, Cables & Power",
     description:
       "Internet and connectivity infrastructure in Kenya, submarine cables, KIXP, terrestrial fibre, and more.",
-    images: ["/images/nbo2-launch-ribbon-cutting.webp"],
+    images: ["/og/nbo2-launch-ribbon-cutting.jpg"],
   },
 };
 

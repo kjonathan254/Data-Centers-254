@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/rack-report-cover.png",
+        url: "/og/rack-report-cover.jpg",
         width: 1200,
         height: 630,
         alt: "The Rack Report — Data Centre 254 monthly intelligence briefing",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "The Rack Report: Kenya's Data Centre Monthly",
     description:
       "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
-    images: ["/images/rack-report-cover.png"],
+    images: ["/og/rack-report-cover.jpg"],
   },
 };
 
