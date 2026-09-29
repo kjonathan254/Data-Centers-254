@@ -102,18 +102,26 @@
    UG/RW; EAC regional frameworks for all. Next capture frontier after gap audit.
 6. **TypeSafe Phase 0**: calibration harness design approved conceptually (Task
    20/21); awaiting user go + TYPESAFE_API_KEY locally.
-7. **Unpushed local-only scripts** (workspace, not in repo):
-   `/home/z/my-project/scripts/vercel_purge_deployments.mjs`,
-   `vercel_inventory.mjs`, `recompress_images.mjs` — incident tools; commit to a
-   `tools/` dir if reuse is expected.
+7. **Unpushed local-only scripts — MOOT (2026-09-29)**: the incident tools
+   (vercel_purge_deployments.mjs, vercel_inventory.mjs, recompress_images.mjs)
+   were lost with the workspace rollbacks; the sandbox scripts dir no longer
+   holds them. If reuse is ever needed, rebuild from git history or fresh
+   Vercel API work; nothing to push.
 8. **Control-room roadmap (from user-approved audit)**: Phase 1 shipped
    (dashboard canvas + interactions, commit ef02b95). Phase 2 shipped
    (2026-09-23): source-quality & provenance panel, per-pillar deep pages
    (/policy/intelligence/pillars/[pillar], all 10 static), dataset download
    route (/policy/intelligence/dataset), SectionNav rooms-id fix, mobile
-   overflow fixes (grid min-w-0). Phase 3 candidates remaining: claim-record
-   deep links from matrix drawer to pillar anchors, compare-view exports,
-   quarterly delta views. User mockup + audit text live in chat history.
+   overflow fixes (grid min-w-0). **Phase 3 SHIPPED (Task 64, commit b81c07f,
+   2026-09-29): (a) claim-record deep links — every pillar-page claim anchored
+   (id=claim-{ID}, scroll-mt-24), matrix-drawer Key-findings IDs and
+   changelog claim IDs link to their anchored trail; (b) compare-view exports —
+   CSV/JSON of the country × pillar matrix from the matrix toolbar, fully
+   dataset-derived, zero deps, /policy/intelligence/dataset stays canonical;
+   (c) Release deltas panel — per-release chips (claims added/upgraded/revised,
+   +sources) computed from the changelog.** Data repair included: r15+r16
+   changelog entries appended from verified git diffs + SINCE_LAST_REVIEW
+   refreshed to r15→r16. Roadmap items from the audit are now ALL shipped.
 9. **Google Alerts leads (editor's digest 2026-09-29, triaged — humanGate
    applies)**: (e) Nixon Kanali column "Africa can't build an AI economy on
    rented servers" (africabusinesscommunities.com, 2026-09-28) → access-hunt
@@ -752,6 +760,37 @@
   61 claims 55/6/0, 70 sources, 15 capture links).
 - Validator PASS; zero credits spent (all routes were free). No push conflicts
   (preflight ff-current at session start).
+
+### 2026-09-29 (session 2) — Control Room Phase 3 shipped + changelog backfill (Task 64)
+- Editor: "Move to another queue item". Queue survey: Brief/01 re-mint found
+  ALREADY DONE (commit b9023e8, corrections log amended — no session log entry
+  had been written; queue note in Task 61 was stale); thread 7 scripts MOOT
+  (wiped with rollbacks). Chose the editor-approved Phase 3 (open thread 8).
+- (a) Deep links: pillar pages anchor every claim (`id="claim-{ID}"`,
+  scroll-mt-24 — 19 anchors verified across licensing 17 + energy 2); matrix
+  drawer Key-findings IDs + SinceLastReview changelog claim IDs are now Links
+  to `/policy/intelligence/pillars/{pillar}#claim-{ID}` (ArrowUpRight hover
+  affordance, aria-labels, drawer closes on click).
+- (b) Exports: ExportMenu in the matrix toolbar — CSV (country, pillar, all 5
+  state counts, total, structured_gap + commented provenance footer) and JSON
+  (countries + cells + verificationRate), all derived from the same OpsData
+  payload the page renders; Blob download, zero deps; dataset route stays
+  canonical. Fixed own bug pre-commit (header.join(".") → ",").
+- (c) Delta view + data repair: changelog had r13+r14 only while dataset sat at
+  r16 — r15 (0287d72: +1 T2 MTN/Africa Hub reference source) and r16 (c5c5295:
+  +2 T2 Dangote Lamu sources) entries appended from the ACTUAL git diffs via
+  persisted scripts/repair_changelog_r15_r16.py (byte-stable dump, idempotent);
+  top datasetVersion marker → r16; SINCE_LAST_REVIEW refreshed r12→r13 → r15→r16
+  (items: +2 Dangote sources, 0 claim changes, 20 gaps unchanged) per its own
+  bump protocol. New "Release deltas" panel in SinceLastReview renders per-release
+  chips (added/upgraded/revised/+sources) computed from the changelog — nothing
+  hardcoded; server-rendered + crawlable.
+- Gates: tsc PASS, lint PASS, build PASS, article_validator 105/105 ALL OK,
+  validate_policy PASS (55/61, 70 sources). Built-HTML greps verified (anchors,
+  delta rows, deep-link hrefs ×8, export group, new strip). Pushed b81c07f
+  (524fd6d..b81c07f) after preflight; CI checked via REST API.
+- Zero API credits; no content/claims touched (humanGate) — reference-source
+  changelog entries document existing registry state, they add no claims.
 
 ### 2026-09-28 — senior-engineer audit: security + perf batch implemented (Task 62)
 
