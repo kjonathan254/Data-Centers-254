@@ -7,7 +7,7 @@ tool: z-ai page_reader (workspace curl 403 - bunny.net security block; page_read
 http_status: 200
 tier: 3
 claims: []
-status: capture-pending # becomes verified ONLY after an editor reads and confirms content
+status: closed-not-needed # editor disposition 2026-09-30 (chat: 'close out the 2 we don't need them'): reference record only, no claims registered, no further action
 note: Google Alerts lead (b), editor digest 2026-09-29. Arizton vendor press release for its paid Global Existing & Upcoming Data Center portfolio database. Market estimates stay attributed - no policy-claim upgrades proposed (Task 54 precedent).
 ---
 

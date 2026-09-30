@@ -60,16 +60,19 @@
   2026-09-23 capture session; user supplied a ROTATED key (fc-7726…) on
   2026-09-23 which ALSO returns HTTP 402 on both /v2/search and /v2/scrape
   (zero credits). Freeze continues: no search/scrape/monitor calls until refills.
-- **Auth/tooling**: fine-grained PAT (owner kjonathan254) wired into origin
-  remote URL — push + CI-run reads verified working; Actions-secrets WRITE is
-  MISSING (`x-accepted-github-permissions: secrets=read`). gh CLI 2.101.0 at
-  /home/z/bin/gh (auth via GH_TOKEN env). CI status verified GREEN 2026-09-23:
-  the user-reported lint failure was run 5f1963b ("Lint" step); fixed from
-  2900c04 onward — 2900c04 / a33567f / c12a017 all success.
-- **.env.local**: recreated 2026-09-29 (Task 65) after workspace wipe #6 — holds a
-  VALID Context.dev key (editor-supplied 2026-09-29, auth-proven via zero-credit
-  400-vs-401 probe against /v1/web/scrape). Firecrawl keys NOT present (frozen/
-  exhausted anyway). Rollbacks wipe this file — check it every session.
+- **Auth/tooling**: CLASSIC PAT (owner kjonathan254, scope `repo`, supplied in
+  chat 2026-09-30) wired into origin remote URL + stored gitignored
+  .env.local as GH_TOKEN — push + authenticated API reads verified working
+  (replaces the fine-grained PAT, which lacked secrets:write; the classic
+  token CAN set Actions secrets if ever needed). ROTATION OWED: this token
+  has transited chat (again) — rotate when convenient. gh CLI absent in
+  current sandbox; CI verification works via authenticated REST
+  check-runs, or the zero-auth Actions-HTML path (open thread 12).
+- **.env.local**: recreated 2026-09-30 (session 5) after workspace wipe #7 —
+  holds GH_TOKEN (classic PAT) ONLY. The Context.dev key was LOST with the
+  wipe — request from editor before any Context.dev work. Firecrawl keys
+  NOT present (frozen/exhausted anyway). Rollbacks wipe this file — check
+  it every session.
 - **OG image pipeline**: SHIPPED (Task 65, commit 5eb2dd8, 2026-09-29). Build-time
   sharp 1200x630 JPEG derivatives for all 83 og:image sources -> gitignored
   public/og/ (repo weight flat); metadata (openGraph/twitter/JSON-LD, 105 articles
@@ -132,23 +135,20 @@
    changelog entries appended from verified git diffs + SINCE_LAST_REVIEW
    refreshed to r15→r16. Roadmap items from the audit are now ALL shipped.
 9. **Google Alerts leads (editor's digest 2026-09-29, triaged — humanGate
-   applies)**: (e) Nixon Kanali column "Africa can't build an AI economy on
-   rented servers" (africabusinesscommunities.com, 2026-09-28) → access-hunt
-   capture filed 2026-09-29 (Cloudflare challenge on ABC; page_reader gets
-   security-verification shell; archive.org unreachable; no syndication found).
-   Fragments only: thesis is sovereign-infrastructure, Kenya anchor is the
-   Microsoft/G42 $1B geothermal DC — already covered with a verified timeline in
-   microsoft-g42-kenya-data-centre.md. NO quotes/claims registered (snippet rule).
-   Editorial candidate IF full text arrives: DC254 response piece on rented
-   servers vs sovereign compute, grounded in OUR verified coverage. Unblock:
-   editor saves the page from a personal browser, or a TechTrends origin copy
-   surfaces. (f) Arizton "Global Data Center Market Insights Across 6,610
-   Facilities" (openPR, 2026-09-28) → T3 capture filed (claims: []). Africa
-   content = one qualitative bullet (Nigeria/Kenya/Egypt/SA top markets), NO
-   numbers; global scope 4,408 existing + 2,202 upcoming. NOT a lead; registered
-   as a future context stat. Definitional note: Arizton 4,408 global vs IMF
-   ~160-Africa-is-5.5%-of-global imply different counting bases — never blend
-   (Task 54 discipline). Prior 2026-09-24 digest triage: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
+   applies) — CLOSED 2026-09-30**: editor chat: "Close out the 2 we don't
+   need them" → BOTH capture-pending items dispositioned as
+   closed-not-needed in their capture files (records retained, fragments
+   stay non-quotable, no claims were ever registered): (e) Nixon Kanali
+   column "Africa can't build an AI economy on rented servers"
+   (africabusinesscommunities.com, 2026-09-28) → access-hunt capture
+   2026-09-29 (Cloudflare challenge; full text never obtained); the
+   conditional response-piece idea is dropped with it. (f) Arizton "Global
+   Data Center Market Insights Across 6,610 Facilities" (openPR,
+   2026-09-28) → T3 reference record (Africa = one qualitative bullet, no
+   numbers). Definitional cross-refs stay in force (never blend Arizton
+   4,408 facilities / IMF ~160 base / R&M revenue $ / site MW). Prior
+   digest triage history:
+   2026-09-24 digest triage: (a) Cliffe Dekker Hofmeyr "Licensing, structuring and financing
    considerations for telecommunications businesses" (Kenya, 2026-09-23,
    law-firm alert; mentions Airtel Nxtra + Africa Data Centres pan-African
    delivery) → RESOLVED Task 53 — alert located via CDH sitemap (curl-open),
@@ -1078,3 +1078,33 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - EDITOR URL DROP (chat 2026-09-30, bare link, no instruction): GlobeNewswire 2026-09-29 Research-and-Markets PR "Global Data Center Colocation Market Landscape 2026-2031" ($88.91B 2025 -> $216.37B 2031, headline CAGR 15.98% vs 15.9% in its own Key Attributes table). Fetch chain: workspace curl blocked (HTTP/2 stream error, then timeout), r.jina.ai 401 (bad IP rep), web.archive.org unreachable -> z-ai page_reader got the full body (zero credits, no key needed).
 - Triage: NOT A LEAD. Africa content = ONE qualitative sentence naming Kenya in an MEA opportunity list (no figures). Analyst house unnamed in PR - attributed to Research and Markets, NOT Arizton (despite stylistic similarity to Arizton series). Capture filed: research/captures/2026-09-30-globenewswire-rm-global-colocation-landscape.md (T3, claims: [], capture-pending). Four-basis definitional note recorded (revenue / facilities / facility-share / MW) - never blend (Task 54).
 - .env.local still ABSENT (rule 3 checked). No Context.dev/Firecrawl credits spent this session.
+
+### 2026-09-30 (session 5) — PAT rewired, backlog cleared, mobilerun.ai binned (Task 68 cont.)
+- Editor supplied a CLASSIC PAT (scope `repo`) + repo URL; wired into origin
+  remote and stored gitignored .env.local as GH_TOKEN. Push of 8a40a4c
+  succeeded (fc81a4f..8a40a4c); CI verified via authenticated REST:
+  Content validation + Lint and build BOTH success. ROTATION OWED (token
+  transited chat, again).
+- Editor: "Close out the 2 we don't need them" -> BOTH 2026-09-29
+  capture-pending items dispositioned closed-not-needed in their capture
+  files: openpr-arizton-global-dc-facilities-database.md (T3 reference
+  record) and abc-kanali-ai-economy-rented-servers-access-hunt.md
+  (access-hunt dead end; response-piece idea dropped). Open thread 9 header
+  marked CLOSED 2026-09-30; history preserved; no claims were ever
+  registered on either.
+- Editor dropped https://mobilerun.ai/ to evaluate ("use it or bin it"):
+  fetched via z-ai page_reader. VERDICT: BINNED - Droidrun GmbH's
+  "cloud phones for AI agents" (cloud-hosted Android/iOS automation for
+  mobile apps). Zero overlap with DC254 (no mobile app to test; captures
+  served by page_reader/Context.dev/Firecrawl; browser automation is
+  desktop Playwright for posters). Recorded here so the loop is closed;
+  no adoption, no dependency.
+- Poster v2 (map-driven, commit 49647af) recovered from git history to
+  sandbox download/posters/2026-09-30-submarine-cables-v2/ for the
+  editor's social-media use (LinkedIn 4:5 2160x2700 + X 16:9 3200x1800;
+  visually verified: headline, Mombasa routes, real landing photo,
+  ANNOUNCED->LANDED->RFS->IN SERVICE pipeline, 7/1/2 counts). Repo stays
+  poster-free per 67140db decision.
+- Validator quirk noted: scripts/evidence_v02_validate.py hardcodes
+  /home/z/my-project/dc254/... path; fixed locally with a symlink (NOT a
+  repo change). All gates PASS.

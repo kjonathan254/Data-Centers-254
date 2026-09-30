@@ -7,7 +7,7 @@ tool: multiple (see access log below)
 http_status: 403
 tier: 3
 claims: []
-status: capture-pending # becomes verified ONLY after an editor reads and confirms content
+status: closed-not-needed # editor disposition 2026-09-30 (chat: 'close out the 2 we don't need them'): access-hunt dead end; response-piece idea dropped with it; fragments stay non-quotable
 note: Google Alerts lead (a), editor digest 2026-09-29. Opinion column - would be commentary context, never a claim source. All extraction routes blocked; only title + feed snippets captured. Nothing quotable under humanGate until full text is read.
 ---
 
