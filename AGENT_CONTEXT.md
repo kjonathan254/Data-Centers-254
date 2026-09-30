@@ -186,6 +186,17 @@
    1-minute move. Converter persisted at scripts/convert_uploaded_images.py
    (Pillow, webp q88); root uploads git-rm'd; og:image verified in built
    HTML; CI green (9bcbcf4).
+12. **RESOLVED (2026-09-30, session 4)** — CI check-runs verification for fc81a4f
+   (Phase 3): confirmed GREEN via the github.com Actions HTML page after
+   api.github.com rate-limited anonymous reads and the PAT was found absent
+   from the fresh sandbox remote: "Run 102 of CI. Redesign Phase 3 of
+   DC254_Map_and_Cable_Tracker_UX_Redesign.md" = completed successfully;
+   Runs 100 (Phase 1+2) and 101 (session log) also green; zero failure rows.
+   TOOLING NOTE (keep): the Actions HTML page carries aria-labels
+   "completed successfully: Run N of <workflow>. <commit msg>" and is
+   curl-open with zero auth — use it whenever api.github.com is rate-limited
+   or no PAT is wired; the REST check-runs path still preferred when a token
+   IS available.
 
 ## Tooling quick reference
 
@@ -1060,3 +1071,10 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
   content stays client-gated (unchanged from Phase 1+2 behaviour).
 - .env.local: ABSENT this session (survived check per rule 3). No API calls
   needed for this task; recreate before any Context.dev/Firecrawl work.
+
+### 2026-09-30 (session 4) — Phase 3 CI/live verified + editor URL triaged (Task 67 cont. + Task 68)
+- Sandbox wiped again (worklog mirror gone; repo restored via clone). main == origin/main at fc81a4f (Phase 3).
+- PHASE 3 VERIFICATION COMPLETED (the prior session logged local gates only): (a) Vercel live probe 200 on /infrastructure/map ("Trace the internet", "Share this view" in served HTML) and /tracker/cables ("Download data table"); (b) CI GREEN for fc81a4f confirmed via the github.com Actions HTML page (api.github.com rate-limited for anonymous egress IPs AND the PAT is no longer wired into the fresh sandbox remote): "Run 102 of CI. Redesign Phase 3 ..." = completed successfully; Runs 100 (Phase 1+2) and 101 (session log) also green; zero failure rows on the page. Zero-auth CI verification path recorded in Tooling notes (open thread 12 RESOLVED).
+- EDITOR URL DROP (chat 2026-09-30, bare link, no instruction): GlobeNewswire 2026-09-29 Research-and-Markets PR "Global Data Center Colocation Market Landscape 2026-2031" ($88.91B 2025 -> $216.37B 2031, headline CAGR 15.98% vs 15.9% in its own Key Attributes table). Fetch chain: workspace curl blocked (HTTP/2 stream error, then timeout), r.jina.ai 401 (bad IP rep), web.archive.org unreachable -> z-ai page_reader got the full body (zero credits, no key needed).
+- Triage: NOT A LEAD. Africa content = ONE qualitative sentence naming Kenya in an MEA opportunity list (no figures). Analyst house unnamed in PR - attributed to Research and Markets, NOT Arizton (despite stylistic similarity to Arizton series). Capture filed: research/captures/2026-09-30-globenewswire-rm-global-colocation-landscape.md (T3, claims: [], capture-pending). Four-basis definitional note recorded (revenue / facilities / facility-share / MW) - never blend (Task 54).
+- .env.local still ABSENT (rule 3 checked). No Context.dev/Firecrawl credits spent this session.
