@@ -4,16 +4,19 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X, Search, List, MapIcon, ArrowRight, Zap, Cable, Network,
-  ChevronRight, ChevronDown, Building2, RotateCcw, HardHat, Scale, Info,
+  ChevronRight, ChevronDown, ChevronUp, Building2, RotateCcw, HardHat,
+  Scale, Info, Route, Maximize, Minimize, Copy, Check, Download, FileText,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import EvidenceDrawer from "@/components/tracker/evidence-drawer";
+import { downloadCsv } from "@/lib/csv";
 import {
   KENYA_FACILITIES, REGION_ITEMS, CONTEXT_CITIES, SUBSEA_CABLES,
   LANDING_STATION, KIXP, LIVE_MW,
   type DcStatus, type KenyaFacility,
 } from "@/lib/map-data";
-import { SUBSEA_CABLES as CABLE_REGISTER } from "@/lib/market-trackers";
+import { SUBSEA_CABLES as CABLE_REGISTER, type CableRecord } from "@/lib/market-trackers";
 import { getPlatformStats } from "@/lib/site-stats";
 import { CYAN, NEON, AMBER, STATUS_COLOR } from "./map/shared";
 import { CountryMap } from "./map/country-map";
@@ -26,7 +29,7 @@ type Mode = "country" | "nairobi" | "mombasa";
 type ViewMode = "map" | "list";
 type TypeFilter = "all" | "datacenter" | "cable" | "ixp";
 type StatusFilterX = "all" | DcStatus | "pipeline";
-type PresetKey = "facility" | "cable" | "compare" | "building";
+type PresetKey = "facility" | "cable" | "compare" | "building" | "trace";
 
 // Canonical platform figures (site-stats is the single source of truth for
 // these labels — the map must not re-state them with different wording).
@@ -50,6 +53,7 @@ const PRESETS: { key: PresetKey; label: string; icon: typeof Search; caption: st
   { key: "cable", label: "Trace a cable", icon: Cable, caption: "Cable view — hover, tap or focus a cable in the list to light up its route." },
   { key: "compare", label: "Compare Nairobi & Mombasa", icon: Scale, caption: "Side by side: the two clusters that anchor Kenya’s internet." },
   { key: "building", label: "See what is being built", icon: HardHat, caption: "Everything not yet live: under construction, committed and early stage." },
+  { key: "trace", label: "Trace the internet", icon: Route, caption: "Follow a cable ashore: landing station, terrestrial fibre, the Nairobi cluster and its IXP." },
 ];
 
 const CITY_NAMES: Record<string, string> = {
@@ -133,14 +137,34 @@ function StatsBand() {
 function PanelShell({ title, subtitle, onClose, children }: {
   title: string; subtitle?: string; onClose: () => void; children: React.ReactNode;
 }) {
+  // Phase 3 mobile bottom-sheet: tap or swipe the handle to expand/collapse.
+  const [expanded, setExpanded] = useState(false);
+  const touchY = useRef<number | null>(null);
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className="glass-card rounded-xl p-4 md:p-5 w-full md:w-[340px] border-cyan/10 max-h-[46vh] md:max-h-[calc(100%-2rem)] overflow-y-auto scrollbar-thin md:absolute md:top-4 md:right-4 md:left-auto md:bottom-4 fixed bottom-0 left-0 right-0 md:z-10 rounded-b-none md:rounded-b-xl"
+      className={`glass-card rounded-xl p-4 md:p-5 w-full md:w-[340px] border-cyan/10 ${expanded ? "max-h-[85vh]" : "max-h-[46vh]"} md:max-h-[calc(100%-2rem)] overflow-y-auto scrollbar-thin md:absolute md:top-4 md:right-4 md:left-auto md:bottom-4 fixed bottom-0 left-0 right-0 md:z-10 rounded-b-none md:rounded-b-xl transition-[max-height] duration-300`}
     >
+      <button
+        type="button"
+        onClick={() => setExpanded((v) => !v)}
+        onTouchStart={(e) => { touchY.current = e.touches[0].clientY; }}
+        onTouchEnd={(e) => {
+          if (touchY.current === null) return;
+          const dy = e.changedTouches[0].clientY - touchY.current;
+          if (dy < -24) setExpanded(true);
+          else if (dy > 24) setExpanded(false);
+          touchY.current = null;
+        }}
+        aria-expanded={expanded}
+        aria-label={expanded ? "Collapse details sheet" : "Expand details sheet"}
+        className="mx-auto mb-1.5 flex h-5 w-11 items-center justify-center rounded-full bg-border/40 md:hidden"
+      >
+        <ChevronUp aria-hidden="true" className={`size-4 text-muted-foreground transition-transform ${expanded ? "rotate-180" : ""}`} />
+      </button>
       <div className="flex items-start justify-between mb-4 gap-2">
         <div className="min-w-0">
           <h3 className="text-foreground font-semibold text-base md:text-lg leading-tight">{title}</h3>
@@ -272,6 +296,78 @@ function ComparisonPanel({ onClose, onOpenMetro }: { onClose: () => void; onOpen
   );
 }
 
+// ─── TRACE THE INTERNET (Phase 3: the map as a story, not a catalogue)
+
+function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: {
+  cableId: string;
+  onCable: (id: string) => void;
+  onClose: () => void;
+  onOpenMetro: (m: "nairobi" | "mombasa") => void;
+  onOpenEvidence: () => void;
+}) {
+  const cable = SUBSEA_CABLES.find((c) => c.id === cableId) ?? SUBSEA_CABLES[0];
+  const nboCount = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
+  const steps = [
+    { n: 1, title: `${cable.name} subsea route`, body: `${cable.note}. ${cable.designTbps ? `${cable.designTbps} Tbps design capacity, ` : ""}${cable.live ? `in service since ${cable.year}` : `in development, announced ${cable.year}`}.` },
+    { n: 2, title: "Cable landing station", body: "The route comes ashore at the Nyali landing station complex in Mombasa — Kenya's single point of contact with the global internet." },
+    { n: 3, title: "Terrestrial fibre", body: "Backhaul carriers move the traffic up the Mombasa–Nairobi fibre backbone — the dotted route now lit on the map." },
+    { n: 4, title: "Nairobi cluster", body: `${nboCount} data centres across the Nairobi metro, from Sameer Business Park to the hyperscale builds on Mombasa Road.` },
+    { n: 5, title: "KIXP Nairobi", body: `Traffic peers at the exchange: ${KIXP.members} member networks, ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak — open the Nairobi metro map to see where.` },
+  ];
+  return (
+    <PanelShell title="Trace the internet" subtitle="From a subsea cable to a Nairobi stack — the path your traffic takes" onClose={onClose}>
+      <div>
+        <p className="mb-1.5 text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Start from a cable</p>
+        <div className="flex flex-wrap gap-1.5">
+          {SUBSEA_CABLES.map((c) => {
+            const active = c.id === cable.id;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onCable(c.id)}
+                aria-pressed={active}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
+                  active ? "border-cyan/50 bg-cyan/15 text-cyan" : "border-border/60 bg-accent/30 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
+                }`}
+              >
+                <span aria-hidden="true" className="size-1.5 rounded-full" style={{ background: c.live ? NEON : AMBER }} />
+                {c.name}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <ol className="space-y-2.5 pt-1">
+        {steps.map((s) => (
+          <li key={s.n} className="flex gap-2.5">
+            <span aria-hidden="true" className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-cyan/40 bg-cyan/10 text-[10px] font-bold tabular-nums text-cyan">{s.n}</span>
+            <span className="text-xs leading-relaxed text-muted-foreground">
+              <strong className="font-semibold text-foreground">{s.title}.</strong> {s.body}
+            </span>
+          </li>
+        ))}
+      </ol>
+      <div className="grid grid-cols-2 gap-2 pt-1">
+        <Button variant="outline" size="sm" className="border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan" onClick={() => onOpenMetro("mombasa")}>
+          Open Mombasa
+        </Button>
+        <Button variant="outline" size="sm" className="border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan" onClick={() => onOpenMetro("nairobi")}>
+          Open Nairobi
+        </Button>
+      </div>
+      <button
+        type="button"
+        onClick={onOpenEvidence}
+        className="inline-flex items-center gap-1.5 rounded text-xs font-medium text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
+      >
+        Evidence and sources for {cable.name} <FileText className="size-3.5" aria-hidden="true" />
+      </button>
+      <p className="pt-1 text-[10px] text-muted-foreground/70">Route geometry is schematic — the chain is the point.</p>
+    </PanelShell>
+  );
+}
+
 // ─── MAIN ───────────────────────────────────────────────────────────────────
 
 export default function EastAfricaInfrastructureMap() {
@@ -289,6 +385,82 @@ export default function EastAfricaInfrastructureMap() {
   const [activePreset, setActivePreset] = useState<PresetKey | null>(null);
   const [comparisonOpen, setComparisonOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  // Phase 3: trace-the-internet mode, full-screen map, share view, evidence.
+  const [traceCable, setTraceCable] = useState<string>("seacom");
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [evidence, setEvidence] = useState<CableRecord | null>(null);
+  const mapStageRef = useRef<HTMLDivElement>(null);
+
+  // Shareable URL state: read once (?preset=cable&type=cable&metro=nairobi
+  // &cable=seacom&trace=dare1&status=Operational), then keep the address bar
+  // in sync via replaceState so "Share this view" always copies the view.
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const preset = p.get("preset");
+    if (preset === "facility" || preset === "cable" || preset === "compare" || preset === "building" || preset === "trace") {
+      setActivePreset(preset);
+      if (preset === "compare") setComparisonOpen(true);
+    }
+    const type = p.get("type");
+    if (type === "datacenter" || type === "cable" || type === "ixp") setTypeFilter(type);
+    const status = p.get("status");
+    if (status === "Operational" || status === "Under Construction" || status === "Committed" || status === "Early Stage" || status === "pipeline") setStatusFilter(status);
+    const cable = p.get("cable");
+    if (cable && SUBSEA_CABLES.some((c) => c.id === cable)) setActiveCable(cable);
+    const trace = p.get("trace");
+    if (trace && SUBSEA_CABLES.some((c) => c.id === trace)) setTraceCable(trace);
+    const metro = p.get("metro");
+    if (metro === "nairobi" || metro === "mombasa") setMode(metro);
+  }, []);
+
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (activePreset) p.set("preset", activePreset);
+    if (typeFilter !== "all") p.set("type", typeFilter);
+    if (statusFilter !== "all") p.set("status", statusFilter);
+    if (activePreset === "trace") p.set("trace", traceCable);
+    else if (activeCable) p.set("cable", activeCable);
+    if (mode !== "country") p.set("metro", mode);
+    const qs = p.toString();
+    window.history.replaceState(null, "", qs ? `${window.location.pathname}?${qs}` : window.location.pathname);
+  }, [activePreset, typeFilter, statusFilter, activeCable, traceCable, mode]);
+
+  // Full-screen map: browser Fullscreen API on the map stage, Esc exits.
+  useEffect(() => {
+    const onFs = () => setIsFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener("fullscreenchange", onFs);
+    return () => document.removeEventListener("fullscreenchange", onFs);
+  }, []);
+
+  const toggleFullscreen = () => {
+    try {
+      if (document.fullscreenElement) {
+        void document.exitFullscreen();
+      } else {
+        void mapStageRef.current?.requestFullscreen();
+      }
+    } catch {
+      // Fullscreen unavailable (older iOS Safari): the button is polish, not a blocker.
+    }
+  };
+
+  const share = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // clipboard unavailable (permissions / http): silently ignore
+    }
+  };
+
+  /** Map cable id -> the tracker register record with the source trail. */
+  const registerFor = (mapId: string): CableRecord | null => {
+    const c = SUBSEA_CABLES.find((x) => x.id === mapId);
+    if (!c) return null;
+    return CABLE_REGISTER.find((r) => r.name === c.name) ?? null;
+  };
 
   const q = search.trim().toLowerCase();
 
@@ -335,6 +507,10 @@ export default function EastAfricaInfrastructureMap() {
 
   const reset = () => { setMode("country"); setCityPanel(null); setFacilityPanel(null); };
 
+  // In trace mode the traced cable drives the route highlight; otherwise the
+  // hover/focus selection does.
+  const effectiveActiveCable = activePreset === "trace" ? traceCable : activeCable;
+
   // Presets set a purposeful state (mode + filters + focus), per the redesign
   // doc — clicking the active preset again clears it. Any manual filter change
   // hands control back to the user and clears the preset.
@@ -346,6 +522,7 @@ export default function EastAfricaInfrastructureMap() {
     if (key === "facility") { setTypeFilter("datacenter"); setStatusFilter("all"); setSearch(""); requestAnimationFrame(() => searchRef.current?.focus()); }
     if (key === "cable") { setTypeFilter("cable"); setStatusFilter("all"); }
     if (key === "building") { setTypeFilter("datacenter"); setStatusFilter("pipeline"); }
+    if (key === "trace") { setTypeFilter("cable"); setStatusFilter("all"); }
   };
   const setTypeManual = (t: TypeFilter) => { setTypeFilter(t); setActivePreset(null); setComparisonOpen(false); };
   const setStatusManual = (s: StatusFilterX) => { setStatusFilter(s); setActivePreset(null); };
@@ -363,6 +540,7 @@ export default function EastAfricaInfrastructureMap() {
   const filtersActive = typeFilter !== "all" || statusFilter !== "all" || q !== "" || activePreset !== null;
   const filterSummary = (() => {
     if (activePreset === "compare") return "Comparison open — Nairobi and Mombasa, side by side.";
+    if (activePreset === "trace") return "Trace mode — a subsea route, the landing station, terrestrial fibre and the Nairobi cluster, lit as one chain.";
     if (typeFilter === "cable") return `Cable view — ${CABLE_REGISTER.length} tracked systems: ${regLive} live · ${regPending} landed, RFS pending · ${regPlanned} planned. Hover, tap or focus a cable to trace its route.`;
     if (statusFilter === "pipeline") return `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities — under construction, committed or early stage.`;
     if (statusFilter !== "all") return `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities — ${statusFilter.toLowerCase()} only.`;
@@ -404,6 +582,14 @@ export default function EastAfricaInfrastructureMap() {
       return okType && okSearch;
     });
   }, [typeFilter, q]);
+
+  const exportListCsv = () => {
+    const rows: string[][] = [
+      ["Name", "Location", "Type", "Status", "Specs", "Year"],
+      ...listRows.map((r) => [r.name, r.loc, r.type, r.status ?? "Regional", r.specs, r.year?.toString() ?? ""]),
+    ];
+    downloadCsv("dc254-infrastructure-map-assets.csv", rows);
+  };
 
   const typeChips: { key: TypeFilter; label: string }[] = [
     { key: "all", label: "All assets" },
@@ -500,6 +686,10 @@ export default function EastAfricaInfrastructureMap() {
                   className={viewMode === "list" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""} aria-label="List view">
                   <List className="w-4 h-4" aria-hidden="true" /> List
                 </Button>
+                <Button size="sm" variant="outline" onClick={toggleFullscreen}
+                  aria-label={isFullscreen ? "Exit full-screen map" : "Full-screen map"} title="Full-screen map">
+                  {isFullscreen ? <Minimize className="w-4 h-4" aria-hidden="true" /> : <Maximize className="w-4 h-4" aria-hidden="true" />}
+                </Button>
               </div>
             </div>
           </div>
@@ -528,6 +718,13 @@ export default function EastAfricaInfrastructureMap() {
 
         {viewMode === "list" ? (
           <div className="glass-card rounded-xl overflow-hidden">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/30 px-4 py-2.5">
+              <p className="text-section-label">Data table · every mapped asset</p>
+              <button type="button" onClick={exportListCsv}
+                className="inline-flex items-center gap-1 rounded text-xs font-medium text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+                <Download className="w-3.5 h-3.5" aria-hidden="true" /> Download CSV
+              </button>
+            </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
@@ -574,7 +771,8 @@ export default function EastAfricaInfrastructureMap() {
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px] items-start">
             <div className="relative">
               <div
-                className="relative rounded-xl border border-border/30 overflow-hidden h-[480px] sm:h-[600px] md:h-[740px]"
+                ref={mapStageRef}
+                className={`relative border border-border/30 overflow-hidden h-[480px] sm:h-[600px] md:h-[740px] ${isFullscreen ? "rounded-none" : "rounded-xl"}`}
                 style={{ background: "radial-gradient(120% 90% at 50% 38%, #0a1526 0%, #070d18 55%, #04080e 100%)" }}
               >
               {/* faint tech grid */}
@@ -615,7 +813,8 @@ export default function EastAfricaInfrastructureMap() {
                   {mode === "country" && (
                     <CountryMap
                       dimmed={dimmedMapKeys}
-                      activeCable={activeCable}
+                      activeCable={effectiveActiveCable}
+                      traceCable={activePreset === "trace" ? traceCable : null}
                       onHoverCable={setActiveCable}
                       onOpenNairobi={() => openMetro("nairobi")}
                       onOpenMombasa={() => openMetro("mombasa")}
@@ -623,7 +822,7 @@ export default function EastAfricaInfrastructureMap() {
                     />
                   )}
                   {mode === "nairobi" && <NairobiMap dimmed={metroDimmed} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
-                  {mode === "mombasa" && <MombasaMap dimmed={metroDimmed} forcedCable={activeCable} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
+                  {mode === "mombasa" && <MombasaMap dimmed={metroDimmed} forcedCable={effectiveActiveCable} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
                 </motion.div>
               </AnimatePresence>
 
@@ -639,6 +838,15 @@ export default function EastAfricaInfrastructureMap() {
                   <ComparisonPanel
                     onClose={() => { setComparisonOpen(false); setActivePreset(null); }}
                     onOpenMetro={(m) => { setComparisonOpen(false); setActivePreset(null); openMetro(m); }}
+                  />
+                )}
+                {mode === "country" && activePreset === "trace" && (
+                  <TracePanel
+                    cableId={traceCable}
+                    onCable={setTraceCable}
+                    onClose={() => setActivePreset(null)}
+                    onOpenMetro={(m) => { setActivePreset(null); openMetro(m); }}
+                    onOpenEvidence={() => { const r = registerFor(traceCable); if (r) setEvidence(r); }}
                   />
                 )}
                 {mode === "nairobi" && facilityPanel && (
@@ -672,6 +880,17 @@ export default function EastAfricaInfrastructureMap() {
                   </PanelShell>
                 )}
               </AnimatePresence>
+
+              {/* full-screen exit, inside the stage so it is reachable while fullscreen */}
+              {isFullscreen && (
+                <button
+                  type="button"
+                  onClick={toggleFullscreen}
+                  className="absolute top-3 right-3 z-30 flex items-center gap-1.5 rounded-md border border-border/40 bg-[#0b1424]/85 px-2.5 py-1.5 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
+                >
+                  <Minimize className="w-3 h-3" aria-hidden="true" /> Exit full screen
+                </button>
+              )}
             </div>
             </div>
 
@@ -690,7 +909,7 @@ export default function EastAfricaInfrastructureMap() {
                 <p className="text-section-label mb-3">Cables landing in Mombasa</p>
                 <ul className="divide-y divide-border/30">
                   {SUBSEA_CABLES.map((c) => (
-                    <li key={c.id}>
+                    <li key={c.id} className={`flex items-stretch rounded-md transition-colors ${activeCable === c.id ? "bg-cyan/10" : "hover:bg-cyan/5"}`}>
                       <button
                         type="button"
                         onMouseEnter={() => setActiveCable(c.id)}
@@ -699,7 +918,7 @@ export default function EastAfricaInfrastructureMap() {
                         onBlur={() => setActiveCable(null)}
                         onClick={() => setMode("country")}
                         aria-label={`${c.name}, ${c.designTbps ? `${c.designTbps} terabits per second design capacity` : "in development"}, ${c.live ? "in service" : "in development"} since ${c.year}, trace route on map`}
-                        className={`flex w-full items-center gap-2 py-2 text-xs rounded-md px-1.5 -mx-1.5 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50 ${activeCable === c.id ? "bg-cyan/10" : "hover:bg-cyan/5"}`}
+                        className="flex min-w-0 flex-1 items-center gap-2 py-2 pl-1.5 text-xs focus:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50"
                       >
                         <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: c.live ? CYAN : AMBER }} />
                         <span className={`font-medium transition-colors ${activeCable === c.id ? "text-cyan" : "text-foreground"}`}>{c.name}</span>
@@ -708,11 +927,20 @@ export default function EastAfricaInfrastructureMap() {
                         </span>
                         <ChevronRight className={`w-3 h-3 shrink-0 transition-all ${activeCable === c.id ? "text-cyan translate-x-0.5" : "text-muted-foreground/50"}`} />
                       </button>
+                      <button
+                        type="button"
+                        onClick={() => { const r = registerFor(c.id); if (r) setEvidence(r); }}
+                        aria-label={`${c.name}: open the evidence record with sources`}
+                        title="Evidence and sources"
+                        className="my-1.5 mr-1 flex shrink-0 items-center rounded px-1.5 text-muted-foreground/60 transition-colors hover:text-cyan focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50"
+                      >
+                        <FileText className="w-3.5 h-3.5" aria-hidden="true" />
+                      </button>
                     </li>
                   ))}
                 </ul>
                 <p className="mt-2 text-[10px] leading-snug text-muted-foreground/70">
-                  Hover a cable to trace its route on the map. The cable tracker also lists LuLu (planned, 2026).
+                  Hover a cable to trace its route; the file icon opens its source trail. The cable tracker also lists LuLu (planned, 2026).
                 </p>
               </div>
               <a href="/infrastructure" className="block glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group">
@@ -748,8 +976,17 @@ export default function EastAfricaInfrastructureMap() {
               How Kenya connects <Cable className="w-4 h-4 ml-1" />
             </Button>
           </a>
+          <button
+            type="button"
+            onClick={share}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border/60 px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-cyan/40 hover:text-cyan focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
+          >
+            {copied ? <>Link copied <Check className="w-4 h-4 text-neon" aria-hidden="true" /></> : <>Share this view <Copy className="w-4 h-4" aria-hidden="true" /></>}
+          </button>
         </div>
       </div>
+
+      <EvidenceDrawer cable={evidence} onClose={() => setEvidence(null)} />
     </section>
   );
 }

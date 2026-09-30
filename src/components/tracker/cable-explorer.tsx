@@ -1,11 +1,13 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
-  ArrowRight, CalendarClock, Check, ChevronDown, Copy, ExternalLink,
-  RotateCcw, Search,
+  ArrowRight, CalendarClock, Check, ChevronDown, Copy, Download, FileText,
+  RotateCcw, Scale, Search, X,
 } from "lucide-react";
+import EvidenceDrawer from "@/components/tracker/evidence-drawer";
+import { downloadCsv } from "@/lib/csv";
 import {
   SUBSEA_CABLES, CABLES_LAST_VERIFIED, type CableRecord, type CableStatus,
 } from "@/lib/market-trackers";
@@ -54,6 +56,21 @@ function fmtVerified(iso: string): string {
 const VERIFIED_LABEL = fmtVerified(CABLES_LAST_VERIFIED);
 
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+// Phase 3 shareable URL state: short status codes keep URLs readable
+// (/tracker/cables?status=live — the redesign doc's own example).
+const STATUS_SHORT: Record<CableStatus, string> = {
+  "In service": "live",
+  "Landed, RFS pending": "pending",
+  Announced: "announced",
+  Planned: "planned",
+};
+const STATUS_FROM_SHORT = new Map(
+  Object.entries(STATUS_SHORT).map(([code, status]) => [code, status as CableStatus])
+);
+
+/** Compare-cables cap from the redesign doc: "select up to three cables". */
+const COMPARE_MAX = 3;
 
 /** Leading capacity figure for the compact row ("1.28 Tbps at launch, ..." -> "1.28 Tbps"). */
 function shortCapacity(c: string | null): string | null {
@@ -127,7 +144,10 @@ function StatusBar({ live, pending, pipeline }: { live: number; pending: number;
 
 // ── cable row (compact, expandable) ─────────────────────────────────────────
 
-function CableRow({ c, isOpen, onToggle }: { c: CableRecord; isOpen: boolean; onToggle: () => void }) {
+function CableRow({ c, isOpen, onToggle, inCompare, compareFull, onToggleCompare, onOpenEvidence }: {
+  c: CableRecord; isOpen: boolean; onToggle: () => void;
+  inCompare: boolean; compareFull: boolean; onToggleCompare: () => void; onOpenEvidence: () => void;
+}) {
   const meta = STATUS_META[c.status];
   const id = slug(c.name);
   const cap = shortCapacity(c.designCapacity);
@@ -190,19 +210,35 @@ function CableRow({ c, isOpen, onToggle }: { c: CableRecord; isOpen: boolean; on
               <dd className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-foreground">
                 <span aria-hidden="true" className={`inline-block size-1.5 rounded-full ${c.dataConfidence === "High" ? "bg-neon" : c.dataConfidence === "Medium" ? "bg-amber-500" : "bg-red-400"}`} />
                 {c.dataConfidence} confidence · verified {fmtVerified(c.lastVerified)}
-                {primary && (
-                  <a href={primary.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-cyan hover:underline">
-                    Source trail <ExternalLink className="size-3" aria-hidden="true" />
-                  </a>
-                )}
+                <button
+                  type="button"
+                  onClick={onOpenEvidence}
+                  className="inline-flex items-center gap-1 rounded text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
+                >
+                  Source trail available <FileText className="size-3" aria-hidden="true" />
+                </button>
               </dd>
             </div>
           </dl>
-          {c.dc254Article && (
-            <Link href={`/articles/${c.dc254Article}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5">
-              Read the full explainer <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-          )}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <button
+              type="button"
+              onClick={onToggleCompare}
+              aria-pressed={inCompare}
+              disabled={!inCompare && compareFull}
+              className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 disabled:cursor-not-allowed disabled:opacity-50 ${
+                inCompare ? "border-cyan/50 bg-cyan/15 text-cyan" : "border-border/60 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
+              }`}
+            >
+              <Scale className="size-3.5" aria-hidden="true" />
+              {inCompare ? "In comparison — remove" : compareFull ? `Comparison full (${COMPARE_MAX} max)` : "Add to comparison"}
+            </button>
+            {c.dc254Article && (
+              <Link href={`/articles/${c.dc254Article}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan transition-all hover:gap-2.5">
+                Read the full explainer <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            )}
+          </div>
         </div>
       )}
     </article>
@@ -224,6 +260,56 @@ export default function CableExplorer() {
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [copied, setCopied] = useState(false);
   const slateRef = useRef<HTMLElement>(null);
+  // Phase 3: compare-cables mode + evidence drawer.
+  const [compare, setCompare] = useState<Set<string>>(new Set());
+  const [evidence, setEvidence] = useState<CableRecord | null>(null);
+  const compareRef = useRef<HTMLDivElement>(null);
+
+  // Shareable URL state: read once on mount (?status=live&q=…&sort=…&cable=…
+  // &compare=seacom,teams), then keep the address bar in sync on every change
+  // via replaceState, so "Share this tracker" always copies the current view.
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const st = p.get("status");
+    if (st) {
+      const set = new Set<CableStatus>();
+      for (const part of st.split(",")) {
+        const s = STATUS_FROM_SHORT.get(part.trim());
+        if (s) set.add(s);
+      }
+      if (set.size > 0) setStatuses(set);
+    }
+    const qq = p.get("q");
+    if (qq) setQuery(qq);
+    const sp = p.get("sort");
+    if (sp === "newest" || sp === "oldest" || sp === "status") setSort(sp);
+    const cmp = p.get("compare");
+    if (cmp) {
+      const codes = cmp.split(",").map((s) => s.trim());
+      const names = SUBSEA_CABLES.filter((c) => codes.includes(slug(c.name))).map((c) => c.name).slice(0, COMPARE_MAX);
+      if (names.length > 0) setCompare(new Set(names));
+    }
+    const cableParam = p.get("cable");
+    if (cableParam) {
+      const target = SUBSEA_CABLES.find((c) => slug(c.name) === cableParam.trim());
+      if (target) {
+        setOpen((prev) => new Set(prev).add(target.name));
+        requestAnimationFrame(() => {
+          document.getElementById(`cable-row-${slug(target.name)}`)?.scrollIntoView({ block: "center" });
+        });
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (statuses.size > 0) p.set("status", [...statuses].map((s) => STATUS_SHORT[s]).join(","));
+    if (query.trim() !== "") p.set("q", query.trim());
+    if (sort !== "status") p.set("sort", sort);
+    if (compare.size > 0) p.set("compare", [...compare].map((n) => slug(n)).join(","));
+    const qs = p.toString();
+    window.history.replaceState(null, "", qs ? `${window.location.pathname}?${qs}` : window.location.pathname);
+  }, [statuses, query, sort, compare]);
 
   // Timeline: RFS year for live systems; announcement year for the pipeline
   // records (Daraja announced Oct 2025, LuLu at ITW Africa Sep 2026 — from
@@ -269,6 +355,44 @@ export default function CableExplorer() {
   const focusStatuses = (set: CableStatus[]) => {
     setStatuses(new Set(set));
     scrollToSlate();
+  };
+
+  const compareRecords = useMemo(
+    () => SUBSEA_CABLES.filter((c) => compare.has(c.name)),
+    [compare]
+  );
+
+  const toggleCompare = (name: string) => {
+    const adding = !compare.has(name);
+    setCompare((prev) => {
+      const next = new Set(prev);
+      if (next.has(name)) next.delete(name);
+      else if (next.size < COMPARE_MAX) next.add(name);
+      return next;
+    });
+    if (adding && compare.size === 0) {
+      requestAnimationFrame(() => compareRef.current?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" }));
+    }
+  };
+
+  const exportCsv = () => {
+    const rows: string[][] = [
+      ["Name", "Long name", "Status", "RFS year", "Kenyan landings", "Owners", "Design capacity", "Confidence", "Last verified", "Sources", "Primary source URL"],
+      ...SUBSEA_CABLES.map((c) => [
+        c.name,
+        c.longName ?? "",
+        c.status,
+        c.rfsDate ?? "",
+        c.kenyanLandings.join("; "),
+        c.owners,
+        c.designCapacity ?? "Not published",
+        c.dataConfidence,
+        c.lastVerified,
+        String(c.sources.length),
+        c.sources[0]?.url ?? "",
+      ]),
+    ];
+    downloadCsv(`dc254-subsea-cables-${CABLES_LAST_VERIFIED}.csv`, rows);
   };
 
   const openFromTimeline = (name: string) => {
@@ -361,8 +485,9 @@ export default function CableExplorer() {
           </p>
         </div>
 
-        {/* Controls */}
-        <div className="mt-6 space-y-3">
+        {/* Controls — sticky on mobile so search/status/sort stay reachable
+            while scrolling the slate (redesign doc: sticky status tabs). */}
+        <div className="sticky top-14 z-20 -mx-2 mt-6 space-y-3 rounded-lg bg-background/95 px-2 py-1.5 backdrop-blur">
           <div className="flex flex-wrap items-center gap-2">
             <label htmlFor="cable-search" className="sr-only">Search cable or consortium</label>
             <div className="relative">
@@ -417,8 +542,67 @@ export default function CableExplorer() {
                 <RotateCcw className="size-3" aria-hidden="true" /> Clear filters
               </button>
             )}
+            <button type="button" onClick={exportCsv} className="inline-flex items-center gap-1 rounded text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+              <Download className="size-3" aria-hidden="true" /> Download data table (CSV)
+            </button>
           </p>
         </div>
+
+        {/* Compare cables (Phase 3: up to three systems side by side) */}
+        {compare.size > 0 && (
+          <div ref={compareRef} className="mt-8 scroll-mt-20">
+            <div className="card-solid rounded-xl border border-cyan/25 p-4 sm:p-5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-section-label">Compare cables · {compare.size}/{COMPARE_MAX}</p>
+                <div className="flex items-center gap-3">
+                  <button type="button" onClick={share} className="inline-flex items-center gap-1 rounded text-xs font-medium text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+                    {copied ? <>Link copied <Check className="size-3.5 text-neon" aria-hidden="true" /></> : <>Share this comparison <Copy className="size-3.5" aria-hidden="true" /></>}
+                  </button>
+                  <button type="button" onClick={() => setCompare(new Set())} className="inline-flex items-center gap-1 rounded text-xs font-medium text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+                    <X className="size-3.5" aria-hidden="true" /> Clear
+                  </button>
+                </div>
+              </div>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[640px] text-xs">
+                  <thead>
+                    <tr className="border-b border-border/40 text-left">
+                      {(["Cable", "Status", "RFS year", "Kenyan landing", "Design capacity", "Confidence", ""] as const).map((h) => (
+                        <th key={h} scope="col" className="py-2 pr-3 text-[10px] font-mono font-medium uppercase tracking-widest text-muted-foreground/80">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {compareRecords.map((c) => {
+                      const meta = STATUS_META[c.status];
+                      return (
+                        <tr key={c.name} className="border-b border-border/20 align-top last:border-0">
+                          <td className="py-2.5 pr-3">
+                            <span className="font-semibold text-foreground">{c.name}</span>
+                            <span className="block text-[10px] leading-snug text-muted-foreground">{c.owners}</span>
+                          </td>
+                          <td className="py-2.5 pr-3"><span className={`inline-block rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${meta.badge}`}>{meta.short}</span></td>
+                          <td className="py-2.5 pr-3 tabular-nums text-foreground">{c.rfsDate ?? "—"}</td>
+                          <td className="py-2.5 pr-3 text-muted-foreground">{c.kenyanLandings.join(" · ")}</td>
+                          <td className="py-2.5 pr-3 text-foreground">{c.designCapacity ?? "Not published"}</td>
+                          <td className="py-2.5 pr-3 text-muted-foreground">{c.dataConfidence}</td>
+                          <td className="py-2.5">
+                            <button type="button" onClick={() => toggleCompare(c.name)} aria-label={`Remove ${c.name} from comparison`} className="rounded p-0.5 text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+                              <X className="size-3.5" aria-hidden="true" />
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-2.5 text-[11px] leading-snug text-muted-foreground/80">
+                Design capacity is operator-reported and usually far above lit capacity, which is not published and is deliberately not estimated here.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Timeline */}
         <div className="mt-8">
@@ -470,7 +654,15 @@ export default function CableExplorer() {
                     <ul className="mt-3 space-y-2">
                       {rows.map((c) => (
                         <li key={c.name}>
-                          <CableRow c={c} isOpen={open.has(c.name)} onToggle={() => toggleRow(c.name)} />
+                          <CableRow
+                            c={c}
+                            isOpen={open.has(c.name)}
+                            onToggle={() => toggleRow(c.name)}
+                            inCompare={compare.has(c.name)}
+                            compareFull={compare.size >= COMPARE_MAX}
+                            onToggleCompare={() => toggleCompare(c.name)}
+                            onOpenEvidence={() => setEvidence(c)}
+                          />
                         </li>
                       ))}
                     </ul>
@@ -481,13 +673,23 @@ export default function CableExplorer() {
               <ul className="space-y-2">
                 {filtered.map((c) => (
                   <li key={c.name}>
-                    <CableRow c={c} isOpen={open.has(c.name)} onToggle={() => toggleRow(c.name)} />
+                    <CableRow
+                      c={c}
+                      isOpen={open.has(c.name)}
+                      onToggle={() => toggleRow(c.name)}
+                      inCompare={compare.has(c.name)}
+                      compareFull={compare.size >= COMPARE_MAX}
+                      onToggleCompare={() => toggleCompare(c.name)}
+                      onOpenEvidence={() => setEvidence(c)}
+                    />
                   </li>
                 ))}
               </ul>
             )}
         </div>
       </section>
+
+      <EvidenceDrawer cable={evidence} onClose={() => setEvidence(null)} />
     </div>
   );
 }

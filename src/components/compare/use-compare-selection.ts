@@ -40,7 +40,6 @@ export function useCompareSelection() {
     // ([]) and sync after mount to avoid a hydration mismatch. The proper
     // React 19 refactor is useSyncExternalStore with a cached snapshot —
     // tracked as follow-up, not worth the regression risk inline.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSlugs(read());
     const sync = () => setSlugs(read());
     window.addEventListener(EVENT, sync);

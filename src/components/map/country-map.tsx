@@ -9,7 +9,7 @@ import {
   KENYA_FACILITIES,
 } from "@/lib/map-data";
 import { PIDA_PROJECTS } from "@/lib/pida-data";
-import { CYAN, AMBER, smoothPath, toPts } from "./shared";
+import { CYAN, AMBER, NEON, smoothPath, toPts } from "./shared";
 
 const PIDA_VIOLET = "oklch(0.72 0.15 305)";
 
@@ -28,6 +28,7 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
 function CountryMapInner({
   dimmed,
   activeCable,
+  traceCable,
   onHoverCable,
   onOpenNairobi,
   onOpenMombasa,
@@ -36,6 +37,9 @@ function CountryMapInner({
   dimmed: Set<string>;
   /** Cable id currently hovered (map or side rail), highlights its route. */
   activeCable: string | null;
+  /** Phase 3 "trace the internet": when set, lights up the chain
+   *  cable route → landing station → terrestrial fibre → Nairobi cluster. */
+  traceCable?: string | null;
   onHoverCable: (id: string | null) => void;
   onOpenNairobi: () => void;
   onOpenMombasa: () => void;
@@ -134,12 +138,37 @@ function CountryMapInner({
       <text x={proj(0.4, 37.5).x} y={proj(0.4, 37.5).y} textAnchor="middle" fontSize={38} fontWeight={700} letterSpacing={7} fill="oklch(0.93 0.03 200 / 0.55)" className="select-none">KENYA</text>
       <text x={proj(-6.5, 41.8).x} y={proj(-6.5, 41.8).y} textAnchor="middle" fontSize={26} fontStyle="italic" letterSpacing={2} fill="oklch(0.78 0.06 230 / 0.45)" className="select-none">Indian Ocean</text>
 
-      {/* terrestrial fibre */}
+      {/* terrestrial fibre — in trace mode the Mombasa→Nairobi backbone
+          brightens with marching dashes toward the cluster */}
       {FIBRE_ROUTES.map((r) => {
         const d = smoothPath(toPts(r.waypoints, proj));
+        const traced = Boolean(traceCable) && r.id === "msa-nbo";
         return (
           <g key={r.id} opacity={dimmed.has("cable") ? 0.18 : 1}>
-            <path d={d} fill="none" stroke="oklch(0.93 0.01 260 / 0.35)" strokeWidth={1.8} strokeDasharray="1 7" strokeLinecap="round" />
+            {traced && <path d={d} fill="none" stroke={CYAN} strokeOpacity={0.28} strokeWidth={7} strokeLinecap="round" />}
+            <path
+              d={d}
+              fill="none"
+              stroke={traced ? "oklch(0.93 0.01 260 / 0.9)" : "oklch(0.93 0.01 260 / 0.35)"}
+              strokeWidth={traced ? 2.8 : 1.8}
+              strokeDasharray="1 7"
+              strokeLinecap="round"
+            >
+              {traced && <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.1s" repeatCount="indefinite" />}
+            </path>
+            {traced && (
+              <text
+                x={proj(-2.55, 37.9).x}
+                y={proj(-2.55, 37.9).y}
+                textAnchor="middle"
+                fontSize={16}
+                fontWeight={600}
+                fill="oklch(0.93 0.01 260 / 0.85)"
+                className="select-none"
+              >
+                terrestrial fibre
+              </text>
+            )}
           </g>
         );
       })}
@@ -218,15 +247,23 @@ function CountryMapInner({
         );
       })}
 
-      {/* landing station, Nyali, Mombasa */}
+      {/* landing station, Nyali, Mombasa — pulses while trace mode is on */}
       {(() => {
         const ls = proj(-4.04, 39.715);
         const dim = dimmed.has("datacenter");
+        const tracing = Boolean(traceCable);
         return (
           <g opacity={dim ? 0.25 : 1}>
+            {tracing && (
+              <circle cx={ls.x} cy={ls.y} r={9} fill="none" stroke={CYAN} strokeWidth={1.5}>
+                <animate attributeName="r" from="9" to="27" dur="1.8s" repeatCount="indefinite" />
+                <animate attributeName="stroke-opacity" from="0.75" to="0" dur="1.8s" repeatCount="indefinite" />
+              </circle>
+            )}
             <path d={`M${ls.x},${ls.y - 7} L${ls.x + 7},${ls.y} L${ls.x},${ls.y + 7} L${ls.x - 7},${ls.y} Z`}
               fill={CYAN} fillOpacity={0.9} stroke="oklch(0.1 0.02 250)" strokeWidth={1.1} />
-            <text x={ls.x} y={ls.y + 24} textAnchor="middle" fontSize={15} fill="oklch(0.93 0.01 260 / 0.6)">Nyali landing station</text>
+            <text x={ls.x} y={ls.y + 24} textAnchor="middle" fontSize={tracing ? 16 : 15}
+              fontWeight={tracing ? 700 : 400} fill={tracing ? CYAN : "oklch(0.93 0.01 260 / 0.6)"}>Nyali landing station</text>
           </g>
         );
       })()}
@@ -309,7 +346,7 @@ function CountryMapInner({
         <text x={msa.x + 26} y={msa.y + 18} fontSize={18} fill="oklch(0.93 0.01 260 / 0.55)">{msaCount} DC · {liveCables} cables</text>
       </g>
 
-      {/* Nairobi cluster, click to zoom */}
+      {/* Nairobi cluster, click to zoom — extra pulse while tracing */}
       <g
         className="map-cluster cursor-pointer focus:outline-none"
         onClick={onOpenNairobi}
@@ -319,7 +356,13 @@ function CountryMapInner({
         aria-label={`Nairobi cluster: ${nboCount} data centres, zoom into the Nairobi metro map`}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenNairobi(); } }}
       >
-        <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={CYAN} strokeWidth={2.4} filter="url(#clusterGlow)" />
+        {traceCable && (
+          <circle cx={nbo.x} cy={nbo.y} r={21} fill="none" stroke={NEON} strokeWidth={1.6}>
+            <animate attributeName="r" from="21" to="46" dur="1.6s" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" from="0.8" to="0" dur="1.6s" repeatCount="indefinite" />
+          </circle>
+        )}
+        <circle cx={nbo.x} cy={nbo.y} r={21} fill="oklch(0.2 0.05 250 / 0.95)" stroke={traceCable ? NEON : CYAN} strokeWidth={2.4} filter="url(#clusterGlow)" />
         <circle cx={nbo.x} cy={nbo.y} r={21} fill="none" stroke={CYAN} strokeOpacity={0.45} strokeWidth={1.2}>
           <animate attributeName="r" from="21" to="38" dur="2s" repeatCount="indefinite" />
           <animate attributeName="stroke-opacity" from="0.55" to="0" dur="2s" repeatCount="indefinite" />

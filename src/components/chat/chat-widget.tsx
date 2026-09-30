@@ -41,7 +41,6 @@ export default function ChatWidget() {
 
   useEffect(() => {
     // Mount-time hydration from sessionStorage (SSR-safe pulse state).
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSeen(sessionStorage.getItem(PULSE_KEY) === "1");
   }, []);
 

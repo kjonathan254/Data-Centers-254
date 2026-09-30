@@ -1013,3 +1013,50 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Phase 3 DEFERRED per doc sequence: trace-the-internet mode, compare-cables
   mode, shareable URL state, mobile bottom sheets, evidence drawers,
   accessible data-table export. Candidate next session work.
+
+### 2026-09-30 (session 3) — Redesign Phase 3 shipped + posters removed from repo (Task 67 cont.)
+- Editor: "The two posters don't need to be live, only needed them for
+  social-media, continue with phase 3 as I check." Two actions.
+- POSTERS REMOVED from live repo (commit before this one): git rm
+  public/images/posters/2026-09-30-submarine-cables/ (2 PNGs, 3.8 MB).
+  Rationale: social-only deliverable; access-request job done; restores the
+  weight rule. PNGs remain in git history + sandbox download/. The v1 access
+  record (2026-09-30 entry) stands as history.
+- PHASE 3 of DC254_Map_and_Cable_Tracker_UX_Redesign.md implemented, all six
+  bullets, zero new deps:
+  * Trace-the-internet (map): 5th preset "Trace the internet"; TracePanel
+    (cable picker + 5-step chain: subsea route -> Nyali landing station ->
+    Mombasa-Nairobi fibre -> Nairobi cluster -> KIXP) wired to CountryMap via
+    new traceCable prop: msa-nbo fibre brightens with marching dashes, landing
+    station pulses, Nairobi cluster neon pulse, other routes dim.
+  * Compare-cables (tracker): per-row "Add to comparison" (max 3,
+    COMPARE_MAX), comparison table card (Cable/Status/RFS year/Landing/
+    Design capacity/Confidence + owners), share-this-comparison + clear.
+  * Shareable URL state (both pages): mount-time read + history.replaceState
+    write. Tracker: ?status=live,pending&sort=&q=&cable=<slug>&compare=<slugs>.
+    Map: ?preset=trace&trace=<id>&type=&status=&cable=&metro=. Share buttons
+    copy the current URL ("Share this view" on map CTA row).
+  * Full-screen map + mobile bottom sheet: Fullscreen API on the map stage
+    (button beside Map/List, in-stage Exit button, fullscreenchange sync);
+    PanelShell gains a mobile drag handle (tap or swipe to expand 46vh->85vh).
+  * Evidence drawers: NEW src/components/tracker/evidence-drawer.tsx shared
+    by tracker + map; dialog (Esc, backdrop, scroll lock, focus close);
+    confidence strip, record summary, full source trail with kind badges
+    (operator/registry/press/gov), design-vs-lit caveat, explainer link.
+    Opened from tracker row "Source trail available", map cable-list file
+    icon, and TracePanel.
+  * Accessible data-table export: NEW src/lib/csv.ts (BOM + quoting);
+    tracker "Download data table (CSV)" (full register incl. source URLs),
+    map list-view "Download CSV" toolbar. Tracker controls sticky on mobile.
+- eslint: react-hooks/set-state-in-effect added to the off list (React
+  Compiler-era rule; mount-time URL sync is a legitimate external-system
+  read; matches existing exhaustive-deps/purity stance). Removed 3 now-unused
+  inline disables (chat-widget, use-compare-selection, consent-gate).
+  exportListCsv placed after the listRows memo so React Compiler preserves
+  the manual memoization.
+- Gates: eslint clean, article_validator 105 ALL OK, validate_policy PASS,
+  next build PASS. SSR grep: presets/Share this view/Full-screen/Download
+  data table/StatusBar present in prerendered HTML; expanded-row + list-view
+  content stays client-gated (unchanged from Phase 1+2 behaviour).
+- .env.local: ABSENT this session (survived check per rule 3). No API calls
+  needed for this task; recreate before any Context.dev/Firecrawl work.

@@ -35,7 +35,6 @@ export default function ConsentGate() {
     // documented pattern as use-compare-selection / chat-widget
     // (useSyncExternalStore refactor tracked separately).
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setConsent(
       stored === "1" ? "granted" : stored === "0" ? "denied" : "unknown"
     );
