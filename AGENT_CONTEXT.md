@@ -976,3 +976,40 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Same filenames/URLs kept - replaced in place (v1 preserved in git history).
   Rendered via scripts/posters pipeline (build_posters.mjs + shoot_posters.cjs,
   Playwright @2x, chromium cache survived wipe).
+
+### 2026-09-30 (session 2) — Map + cable tracker UX redesign Phase 1+2 shipped (Task 67)
+- Editor uploaded DC254_Map_and_Cable_Tracker_UX_Redesign.md (724 lines, commit
+  4f72cbe "Add files via upload") and delegated implementation in chat while they
+  run the LinkedIn/X pages: "go through the document and start implementation".
+- Shipped Phase 1 + high-value Phase 2 in commit 67b1058 (CI double-green,
+  live-probed 200 + marker strings in served HTML on both pages):
+  tracker/cables: momentum cards -> status story bar (7 LIVE / 1 RFS PENDING /
+  2 PLANNED segmented bar, hatch/dash patterns not just colour, definitions
+  inline, verified chip); action row (Explore live / See the pipeline / Open
+  cable map); "Why the live count is 7" module; monthly update panel (LuLu
+  added to Planned, Africa-1/Daraja unchanged, next review Oct 2026);
+  search + multi-select status chips + sort (status|newest|oldest) +
+  aria-live result count + clear; RFS timeline 2009-2026 (click opens record;
+  pipeline plotted at ANNOUNCEMENT year, dashed); compact expandable rows with
+  evidence footer (confidence, verified, source trail, explainer) and the
+  design-vs-lit capacity caveat attached to the figure; methodology section.
+  infrastructure/map: question presets ("What do you want to explore?" - Find
+  a facility / Trace a cable / Compare Nairobi & Mombasa / See what is being
+  built); new "pipeline" status value (UC+committed+early); metric strip
+  relabelled to canonical site-stats labels + Definitions disclosure (28.2
+  mapped / 10.5 published IT load / 42.9 designed live / 230 pipeline +
+  verified date); two-level filter bar + always-on filter summary + [Clear
+  filters]; labelled Map/List toggle; Nairobi-vs-Mombasa comparison panel
+  computed from KENYA_FACILITIES; legend verified date now data-derived (was
+  hardcoded Aug 2026).
+- New file src/components/tracker/cable-explorer.tsx ("use client"); tracker
+  page.tsx now server shell + explorer; all record content still SSR'd in the
+  static prerender (crawlability preserved, grep-verified locally + live).
+- Zero new deps; framer-motion untouched; gates: eslint PASS,
+  article_validator 105 ALL OK, validate_policy PASS, next build PASS
+  (207 static pages). All figures data-derived (SUBSEA_CABLES, map-data,
+  site-stats) - no hardcoded counts in the new UI except timeline pipeline
+  announcement years (2025 Daraja / 2026 LuLu, from the register notes).
+- Phase 3 DEFERRED per doc sequence: trace-the-internet mode, compare-cables
+  mode, shareable URL state, mobile bottom sheets, evidence drawers,
+  accessible data-table export. Candidate next session work.
