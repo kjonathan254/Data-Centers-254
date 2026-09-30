@@ -937,3 +937,14 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
   rebuilt from scratch after wipe). 16:9 layout fixes after first render: byline
   typo JONATHON->JONATHAN (both files), full-width footer, names nowrap, thesis1
   added to fill left-column void. Repo untouched (no repo changes this task).
+
+### 2026-09-30 — Posters committed to repo (Task 66 follow-up, editor access request)
+- Editor could not retrieve the poster PNGs from the chat sandbox, asked to
+  "upload the images on my repo". Explicit editor instruction overrides the
+  earlier "deliverables outside repo" stance for THIS pair.
+- Committing only the 2 share PNGs (3.8 MB total) to
+  public/images/posters/2026-09-30-submarine-cables/ — served by the live site
+  after Vercel deploy AND browsable/downloadable on GitHub. Vector PDFs and
+  editable HTML stay outside the repo (weight rule) in sandbox download/.
+- Posters under public/images are NOT og:image sources; generate_og_images.mjs
+  unaffected (no frontmatter/page refs point here).
