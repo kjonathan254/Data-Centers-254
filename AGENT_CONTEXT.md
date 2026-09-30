@@ -948,3 +948,31 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
   editable HTML stay outside the repo (weight rule) in sandbox download/.
 - Posters under public/images are NOT og:image sources; generate_og_images.mjs
   unaffected (no frontmatter/page refs point here).
+
+### 2026-09-30 — Poster redesign v2: map-driven (editor art direction)
+- Editor feedback on v1: abstract fibre visual wrong for this post; asked for
+  "real cable images we have on the site" and a much more map-driven graphic
+  that teaches before the caption: headline "INSIDE THE MAP / 7 CABLES ARE
+  LIVE. WHAT ABOUT THE REST?", Kenyan coast with cable routes, bottom pipeline
+  ANNOUNCED -> LANDED -> RFS -> IN SERVICE, then 7 LIVE | 1 RFS PENDING |
+  2 PLANNED.
+- Built custom SVG schematic map (viewBox 976x560, both formats) using REAL
+  waypoint geometry from src/lib/map-data.ts SUBSEA_CABLES (9 systems) + LuLu
+  coastal corridor from the tracker (Mombasa -> Vipingo/Kilifi/Malindi -> Lamu).
+  Projection X=(lng-38.45)*150, Y=(2.0-lat)*50. Status encoded in line style:
+  solid cyan in-service / amber dashed landed-RFS / grey dotted announced-
+  planned, legend inside the panel; Mombasa landing-hub marker; dashed
+  terrestrial backhaul hint to Nairobi (DC hub); graticule + bathymetry hints;
+  "SCHEMATIC - NOT TO SCALE" honesty note.
+- Real photography: mombasa-cable-landing-4.webp (tracker hero, cable ship +
+  landing floats) as the photo band; build_posters.mjs token changed
+  {{CABLE}}->{{PHOTO}}. Logo chip unchanged.
+- First-render fixes: Mombasa label clipped at panel edge (two-line lockup);
+  Africa-1/Daraja endpoints had been evenly spaced with labels instead of true
+  Y (lat 1.4N -> y30, 2.17S -> y209) - corrected; LuLu label moved clear of the
+  amber line; land/ocean contrast raised (#040D1A on #071120); 4:5 footer
+  nowrap collision (center span shortened to map URL); 16:9 headline manual
+  3-line break; 4:5 map 560->600 + photo 118->130 for rhythm.
+- Same filenames/URLs kept - replaced in place (v1 preserved in git history).
+  Rendered via scripts/posters pipeline (build_posters.mjs + shoot_posters.cjs,
+  Playwright @2x, chromium cache survived wipe).
