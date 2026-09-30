@@ -68,9 +68,9 @@
   has transited chat (again) — rotate when convenient. gh CLI absent in
   current sandbox; CI verification works via authenticated REST
   check-runs, or the zero-auth Actions-HTML path (open thread 12).
-- **.env.local**: recreated 2026-09-30 (session 5) after workspace wipe #7 —
-  holds GH_TOKEN (classic PAT) ONLY. The Context.dev key was LOST with the
-  wipe — request from editor before any Context.dev work. Firecrawl keys
+- **.env.local**: recreated 2026-09-30 (session 6) after workspace wipe #8 —
+  holds GH_TOKEN (classic PAT) + CONTEXT_DEV_API_KEY (re-supplied in chat
+  2026-09-30, auth-proven via zero-credit 400-vs-401 probe). Firecrawl keys
   NOT present (frozen/exhausted anyway). Rollbacks wipe this file — check
   it every session.
 - **OG image pipeline**: SHIPPED (Task 65, commit 5eb2dd8, 2026-09-29). Build-time
@@ -112,6 +112,18 @@
    `no-capture-ref`. Re-capture through the pipeline to bring under drift watch.
 5. **Pillar gaps** (20): energy-electricity + construction + environmental for
    UG/RW; EAC regional frameworks for all. Next capture frontier after gap audit.
+   **PROGRESS 2026-09-30 (session 6)**: the EAC regional-frameworks gap
+   (shared by all four countries) now has its first two T1 captures, both
+   capture-pending: 2026-09-30-eac-tor-dp-harmonization-crossborder.md
+   (EARDIP consultancy TOR — official machinery for data-protection
+   harmonisation + EAC Cross-border Data Flows Mechanism) and
+   2026-09-30-eac-pr-data-governance-framework.md (Secretariat press release
+   25 Oct 2024 — Data Governance Policy Framework VALIDATED in Kigali,
+   AU-DPF-aligned; NOT yet adopted — status nuance recorded). Future claim
+   candidates drafted in the captures; editor approval needed before any
+   dataset change. Remaining frontier: national energy/construction/
+   environmental gaps (UG ERA, RW REG/EUCL+REMA, TZ EMA 2004, KE
+   construction) + the older 2021 EAC policy text for genealogy.
 6. **TypeSafe Phase 0**: calibration harness design approved conceptually (Task
    20/21); awaiting user go + TYPESAFE_API_KEY locally.
 7. **Unpushed local-only scripts — MOOT (2026-09-29)**: the incident tools
@@ -1108,3 +1120,33 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Validator quirk noted: scripts/evidence_v02_validate.py hardcodes
   /home/z/my-project/dc254/... path; fixed locally with a symlink (NOT a
   repo change). All gates PASS.
+
+### 2026-09-30 (session 6) — Context.dev key re-supplied; EAC regional gap captured (Task 69)
+- Sandbox wipe #8 on arrival (3rd this conversation). Recovery per protocol:
+  anonymous clone at 9c53d35, PAT + Context.dev key re-stored to gitignored
+  .env.local, remote re-wired, preflight clean.
+- Editor re-supplied CONTEXT_DEV_API_KEY in chat. Zero-credit auth probe:
+  POST /v1/web/scrape with empty body -> HTTP 400 INPUT_VALIDATION_ERROR
+  (authenticated; a bad key returns 401). Key VALID.
+- Pillar-gap frontier RESUMED (open thread 5). Tranche 1 = the EAC
+  regional-frameworks gap (highest leverage: shared by KE/UG/RW/TZ):
+  * contextdev_search.mjs "EAC Data Protection and Privacy Policy 2021..." (1
+    credit, 10 candidates). KEY FINDING: the live track is now the EAC DATA
+    GOVERNANCE POLICY FRAMEWORK (successor to the 2021 policy work).
+  * Capture A (T1, 1 credit via contextdev_capture.mjs): EARDIP consultancy
+    TOR PDF "Data Protection Harmonization and Cross-Border Data Flows in
+    the EAC" (eac.int documents download; curl 403 -> Context.dev handled
+    the PDF, 14pp, born-digital flat rate) -> 2026-09-30-eac-tor-dp-
+    harmonization-crossborder.md. Objective verbatim: develop a legal and
+    policy framework to harmonize DP legislation AND advance the EAC
+    Mechanism for Cross-border Data Flows.
+  * Capture B (T1, FREE via z-ai page_reader): Secretariat press release
+    3195 (25 Oct 2024) -> 2026-09-30-eac-pr-data-governance-framework.md.
+    DGPF validated in Kigali, AU Data Policy Framework-aligned; STATUS
+    NUANCE: validated, not adopted - recorded in the capture.
+- Spend this session: 2 Context.dev credits (1 search + 1 PDF scrape).
+  Claims: [] on both captures; NO dataset changes this session (humanGate).
+  Future claim candidates drafted inside capture B for the editor.
+- Gates: validate_policy PASS; article_validator 105 ALL OK (content
+  untouched). AGENT_CONTEXT updated (current-state .env.local, open thread
+  5 progress note, this log).
