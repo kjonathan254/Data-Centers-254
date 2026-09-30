@@ -913,3 +913,27 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
   to stemOf/stemOwners pair, verified 80/80 then 83/83.
 - Pushed 5eb2dd8 (29 files, +250/-54) after preflight; CI checked via REST API.
   No content/claims touched (humanGate); zero API credits spent.
+
+### 2026-09-30 — Submarine-cables share posters (Task 66, deliverables outside repo)
+- Editor: poster for the cables post, "use our dc254 poster template with image and
+  dc logo". Workspace had been WIPED again (7th) — fresh clone at 9e81a1a.
+- Facts re-verified from src/lib/market-trackers.ts SUBSEA_CABLES (never from the
+  post text alone): 10 systems = 7 In service (TEAMS, SEACOM, EASSy, LION2, DARE1,
+  PEACE, 2Africa) + 1 Landed/RFS pending (Africa-1) + 2 Announced/Planned (Daraja,
+  LuLu). Matches the editor's 7/1/2 digest exactly.
+- Template carried over from Tasks 55/60 (sources lost in wipes, spec recovered
+  from session logs): navy gradient + #38C7F0 cyan, Geist + Geist Mono (Google
+  Fonts CDN), constellation SVG motif, logo.webp chip, CTA pill, "Edited by
+  Kevin Jonathan Otieno" byline + site URL. pdf-skill poster pipeline: Direct
+  HTML Flow (poster.md bypass rules) -> poster_validate check-html PASS ->
+  html2poster.js vector PDFs -> pdf_qa --poster PASS -> meta.set (Title/Author/
+  Subject) -> Playwright screenshots @2x.
+- Deliverables (download/posters/2026-09-30-submarine-cables/):
+  dc254-cables-linkedin-4x5.png 2160x2700; dc254-cables-x-16x9.png 3200x1800;
+  matching vector PDFs (pdf_qa PASS) + editable HTML sources. Image: repo asset
+  dc-fibre-optics.webp (1344x768 — sharpest cable-themed asset; tracker hero
+  mombasa-cable-landing-4.webp is only 758x404, too soft at poster width).
+- Source of truth: scripts/posters/ (templates + build_posters.mjs + shoot_posters.cjs,
+  rebuilt from scratch after wipe). 16:9 layout fixes after first render: byline
+  typo JONATHON->JONATHAN (both files), full-width footer, names nowrap, thesis1
+  added to fill left-column void. Repo untouched (no repo changes this task).
