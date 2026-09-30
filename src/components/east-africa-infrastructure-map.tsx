@@ -1,19 +1,20 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X, Search, List, MapIcon, ArrowRight, Zap, Cable, Network,
-  ChevronRight, Building2, RotateCcw,
+  ChevronRight, ChevronDown, Building2, RotateCcw, HardHat, Scale, Info,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   KENYA_FACILITIES, REGION_ITEMS, CONTEXT_CITIES, SUBSEA_CABLES,
-  LANDING_STATION, KIXP, LIVE_MW, PIPELINE_MW,
+  LANDING_STATION, KIXP, LIVE_MW,
   type DcStatus, type KenyaFacility,
 } from "@/lib/map-data";
 import { SUBSEA_CABLES as CABLE_REGISTER } from "@/lib/market-trackers";
+import { getPlatformStats } from "@/lib/site-stats";
 import { CYAN, NEON, AMBER, STATUS_COLOR } from "./map/shared";
 import { CountryMap } from "./map/country-map";
 import { NairobiMap, MombasaMap } from "./map/metro-maps";
@@ -24,6 +25,32 @@ const CITY_LABEL: Record<DcCity, string> = { nairobi: "Nairobi", mombasa: "Momba
 type Mode = "country" | "nairobi" | "mombasa";
 type ViewMode = "map" | "list";
 type TypeFilter = "all" | "datacenter" | "cable" | "ixp";
+type StatusFilterX = "all" | DcStatus | "pipeline";
+type PresetKey = "facility" | "cable" | "compare" | "building";
+
+// Canonical platform figures (site-stats is the single source of truth for
+// these labels — the map must not re-state them with different wording).
+const PLATFORM = getPlatformStats();
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+/** "2026-09" (or full ISO) -> "Sep 2026"; falls back to the raw string. */
+function fmtVerified(iso: string): string {
+  const m = /^(\d{4})-(\d{2})/.exec(iso);
+  if (!m) return iso;
+  const mi = Number(m[2]) - 1;
+  return `${MONTHS[mi] ?? ""} ${m[1]}`.trim();
+}
+const VERIFIED_DATE_LABEL = fmtVerified(PLATFORM.lastVerified);
+
+// Question-based presets (redesign doc: "Orient the user → let them choose a
+// question → show one focused visual answer"). Each sets a purposeful state,
+// not just a filter value.
+const PRESETS: { key: PresetKey; label: string; icon: typeof Search; caption: string }[] = [
+  { key: "facility", label: "Find a facility", icon: Search, caption: "Facilities front and centre — narrow with the search box by name or operator." },
+  { key: "cable", label: "Trace a cable", icon: Cable, caption: "Cable view — hover, tap or focus a cable in the list to light up its route." },
+  { key: "compare", label: "Compare Nairobi & Mombasa", icon: Scale, caption: "Side by side: the two clusters that anchor Kenya’s internet." },
+  { key: "building", label: "See what is being built", icon: HardHat, caption: "Everything not yet live: under construction, committed and early stage." },
+];
 
 const CITY_NAMES: Record<string, string> = {
   dar: "Dar es Salaam, Tanzania",
@@ -57,24 +84,46 @@ function CountUp({ value, format }: { value: number; format: (n: number) => stri
 function StatsBand() {
   const ops = KENYA_FACILITIES.filter((f) => f.status === "Operational").length;
   const nbo = KENYA_FACILITIES.filter((f) => f.metro === "nairobi").length;
+  const regLive = CABLE_REGISTER.filter((c) => c.status === "In service").length;
+  const regPending = CABLE_REGISTER.filter((c) => c.status === "Landed, RFS pending").length;
   const int = (n: number) => String(Math.round(n));
+  // Redesign doc: precise labels, a definition one line away, verified date on
+  // show. Capacity leaves the strip — it lives in the Definitions disclosure
+  // below, where each of the site's four canonical figures can be explained.
   const stats = [
-    { label: "Facilities", value: KENYA_FACILITIES.length, format: int, sub: `${ops} operational · ${nbo} in Nairobi metro` },
-    { label: "Mapped live capacity", value: LIVE_MW, format: (n: number) => `${n.toFixed(1)} MW`, sub: `of ${PIPELINE_MW} MW announced pipeline` },
-    { label: "Subsea cables", value: CABLE_REGISTER.filter((c) => c.status === "In service").length, format: int, sub: `in service of ${CABLE_REGISTER.length} tracked systems` },
-    { label: "KIXP Nairobi", value: KIXP.members, format: int, sub: `members · ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak` },
+    { label: "Facilities tracked", value: KENYA_FACILITIES.length, format: int, sub: `${ops} operational · ${nbo} in Nairobi metro` },
+    { label: "Operational", value: ops, format: int, sub: `of ${KENYA_FACILITIES.length} tracked in Kenya` },
+    { label: "Live cable systems", value: regLive, format: int, sub: `of ${CABLE_REGISTER.length} tracked · ${regPending} landed, RFS pending` },
+    { label: "KIXP members", value: KIXP.members, format: int, sub: `~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak traffic` },
   ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-      {stats.map((s) => (
-        <div key={s.label} className="glass-card rounded-xl p-3 md:p-4 border-cyan/10">
-          <p className="text-section-label mb-1">{s.label}</p>
-          <p className="text-foreground text-xl md:text-2xl font-bold tracking-tight tabular-nums">
-            <CountUp value={s.value} format={s.format} />
-          </p>
-          <p className="text-muted-foreground text-xs mt-1">{s.sub}</p>
+    <div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {stats.map((s) => (
+          <div key={s.label} className="glass-card rounded-xl p-3 md:p-4 border-cyan/10">
+            <p className="text-section-label mb-1">{s.label}</p>
+            <p className="text-foreground text-xl md:text-2xl font-bold tracking-tight tabular-nums">
+              <CountUp value={s.value} format={s.format} />
+            </p>
+            <p className="text-muted-foreground text-xs mt-1">{s.sub}</p>
+          </div>
+        ))}
+      </div>
+      <details className="glass-card group mt-3 rounded-xl border-cyan/10 px-4 py-3">
+        <summary className="flex cursor-pointer list-none items-center gap-2 text-xs font-medium text-cyan">
+          <Info aria-hidden="true" className="size-3.5 shrink-0" />
+          Definitions
+          <span className="font-normal text-muted-foreground">· dataset verified {VERIFIED_DATE_LABEL}</span>
+          <ChevronDown aria-hidden="true" className="ml-auto size-3.5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
+        </summary>
+        <div className="mt-3 space-y-2 text-xs leading-relaxed text-muted-foreground">
+          <p><strong className="text-foreground">Mapped live capacity — {LIVE_MW} MW.</strong> Operational facilities plotted on this map that publish an MW figure; the map-layer subset of the directory.</p>
+          <p><strong className="text-foreground">Published in-service IT load — {PLATFORM.publishedItLoadMw} MW.</strong> Verified IT load at operational Kenya facilities — the directory&apos;s strictest figure.</p>
+          <p><strong className="text-foreground">Live designed capacity — {PLATFORM.designedLiveMw} MW.</strong> Built, operational Kenya facilities at designed capacity.</p>
+          <p><strong className="text-foreground">Announced pipeline — {PLATFORM.pipelineMw} MW.</strong> Under-construction, committed and early-stage developer figures; not built capacity.</p>
+          <p className="text-muted-foreground/80">These are the site&apos;s canonical labels — the directory and market report use the same numbers. PIDA registry projects are never counted in any of them.</p>
         </div>
-      ))}
+      </details>
     </div>
   );
 }
@@ -171,26 +220,86 @@ function Legend() {
   );
 }
 
+// ─── COMPARISON (redesign doc: Nairobi vs Mombasa, populated from the dataset)
+
+function ComparisonPanel({ onClose, onOpenMetro }: { onClose: () => void; onOpenMetro: (m: "nairobi" | "mombasa") => void }) {
+  const nbo = KENYA_FACILITIES.filter((f) => f.metro === "nairobi");
+  const msa = KENYA_FACILITIES.filter((f) => f.metro === "mombasa");
+  const ops = (list: KenyaFacility[]) => list.filter((f) => f.status === "Operational").length;
+  const mw = (list: KenyaFacility[]) => {
+    const t = list.filter((f) => f.status === "Operational").reduce((s, f) => s + (f.totalMW || 0), 0);
+    return `${(Math.round(t * 10) / 10).toFixed(1)} MW`;
+  };
+  const liveLandings = CABLE_REGISTER.filter((c) => c.status === "In service").length;
+  const rows: { dim: string; a: string; b: string }[] = [
+    { dim: "Facilities tracked", a: String(nbo.length), b: String(msa.length) },
+    { dim: "Operational", a: String(ops(nbo)), b: String(ops(msa)) },
+    { dim: "Published capacity (operational)", a: mw(nbo), b: mw(msa) },
+    { dim: "Live subsea landings", a: "—", b: `${liveLandings} systems` },
+    { dim: "Primary role", a: "Data-centre and enterprise cluster", b: "Cable landing and coastal connectivity gateway" },
+    { dim: "Key assets", a: "IXPs, operators, enterprise sites", b: "Landing stations, subsea systems, coastal routes" },
+  ];
+  return (
+    <PanelShell title="Nairobi vs Mombasa" subtitle="The two clusters that anchor Kenya's internet, side by side" onClose={onClose}>
+      <table className="w-full text-xs">
+        <thead>
+          <tr className="border-b border-border/40 text-left">
+            <th scope="col" className="py-2 pr-2 text-[10px] font-medium font-mono uppercase tracking-widest text-muted-foreground/80">Dimension</th>
+            <th scope="col" className="py-2 pr-2 text-[10px] font-medium font-mono uppercase tracking-widest text-cyan">Nairobi</th>
+            <th scope="col" className="py-2 text-[10px] font-medium font-mono uppercase tracking-widest text-amber-500">Mombasa</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.dim} className="border-b border-border/20 align-top last:border-0">
+              <td className="py-2 pr-2 text-muted-foreground">{r.dim}</td>
+              <td className="py-2 pr-2 text-foreground">{r.a}</td>
+              <td className="py-2 text-foreground">{r.b}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="grid grid-cols-2 gap-2 pt-1">
+        <Button variant="outline" size="sm" className="border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan" onClick={() => onOpenMetro("nairobi")}>
+          View Nairobi
+        </Button>
+        <Button variant="outline" size="sm" className="border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan" onClick={() => onOpenMetro("mombasa")}>
+          View Mombasa
+        </Button>
+      </div>
+      <p className="pt-1 text-[10px] text-muted-foreground/70">Figures computed from the verified facility dataset (map layer). Published capacity = operational sites with an MW figure.</p>
+    </PanelShell>
+  );
+}
+
 // ─── MAIN ───────────────────────────────────────────────────────────────────
 
 export default function EastAfricaInfrastructureMap() {
   const [mode, setMode] = useState<Mode>("country");
   const [viewMode, setViewMode] = useState<ViewMode>("map");
   const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
-  const [statusFilter, setStatusFilter] = useState<"all" | DcStatus>("all");
+  const [statusFilter, setStatusFilter] = useState<StatusFilterX>("all");
   const [search, setSearch] = useState("");
   const [cityPanel, setCityPanel] = useState<string | null>(null);
   const [facilityPanel, setFacilityPanel] = useState<KenyaFacility | null>(null);
   // Cable traced from the country map OR the side-rail cable list -
   // one shared state keeps both highlights in sync.
   const [activeCable, setActiveCable] = useState<string | null>(null);
+  // Redesign doc: question-based presets + cluster comparison.
+  const [activePreset, setActivePreset] = useState<PresetKey | null>(null);
+  const [comparisonOpen, setComparisonOpen] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const q = search.trim().toLowerCase();
 
   const facilityVisible = useMemo(() => {
     const set = new Set<string>();
     for (const f of KENYA_FACILITIES) {
-      const okStatus = statusFilter === "all" || f.status === statusFilter;
+      // "pipeline" = anything not yet operational (redesign preset: see what
+      // is being built — under construction, committed and early stage).
+      const okStatus =
+        statusFilter === "all" ||
+        (statusFilter === "pipeline" ? f.status !== "Operational" : f.status === statusFilter);
       const okSearch = !q || f.name.toLowerCase().includes(q) || f.operator.toLowerCase().includes(q) || (f.note ?? "").toLowerCase().includes(q);
       if (okStatus && okSearch) set.add(f.id);
     }
@@ -226,13 +335,42 @@ export default function EastAfricaInfrastructureMap() {
 
   const reset = () => { setMode("country"); setCityPanel(null); setFacilityPanel(null); };
 
-  // One-line confirmation of what the status/search filters highlight, so the
-  // dimming on the map reads as intended filtering, not as a rendering glitch.
-  // Map view only (the list shows its own filtered rows), suppressed for the
-  // cable-only view (facilities are meant to be dim there) and whenever no
-  // facility-affecting filter is active.
-  const showFacilityFeedback =
-    viewMode === "map" && (statusFilter !== "all" || q !== "") && typeFilter !== "cable";
+  // Presets set a purposeful state (mode + filters + focus), per the redesign
+  // doc — clicking the active preset again clears it. Any manual filter change
+  // hands control back to the user and clears the preset.
+  const applyPreset = (key: PresetKey) => {
+    setMode("country"); setCityPanel(null); setFacilityPanel(null); setViewMode("map");
+    if (activePreset === key) { setActivePreset(null); setComparisonOpen(false); return; }
+    setActivePreset(key);
+    setComparisonOpen(key === "compare");
+    if (key === "facility") { setTypeFilter("datacenter"); setStatusFilter("all"); setSearch(""); requestAnimationFrame(() => searchRef.current?.focus()); }
+    if (key === "cable") { setTypeFilter("cable"); setStatusFilter("all"); }
+    if (key === "building") { setTypeFilter("datacenter"); setStatusFilter("pipeline"); }
+  };
+  const setTypeManual = (t: TypeFilter) => { setTypeFilter(t); setActivePreset(null); setComparisonOpen(false); };
+  const setStatusManual = (s: StatusFilterX) => { setStatusFilter(s); setActivePreset(null); };
+  const clearFilters = () => {
+    setTypeFilter("all"); setStatusFilter("all"); setSearch("");
+    setActivePreset(null); setComparisonOpen(false);
+  };
+
+  // One-line summary of what the current view shows, so the dimming on the
+  // map reads as intended filtering, not as a rendering glitch (redesign doc:
+  // "Add a visible filter summary + [Clear filters]").
+  const regLive = CABLE_REGISTER.filter((c) => c.status === "In service").length;
+  const regPending = CABLE_REGISTER.filter((c) => c.status === "Landed, RFS pending").length;
+  const regPlanned = CABLE_REGISTER.length - regLive - regPending;
+  const filtersActive = typeFilter !== "all" || statusFilter !== "all" || q !== "" || activePreset !== null;
+  const filterSummary = (() => {
+    if (activePreset === "compare") return "Comparison open — Nairobi and Mombasa, side by side.";
+    if (typeFilter === "cable") return `Cable view — ${CABLE_REGISTER.length} tracked systems: ${regLive} live · ${regPending} landed, RFS pending · ${regPlanned} planned. Hover, tap or focus a cable to trace its route.`;
+    if (statusFilter === "pipeline") return `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities — under construction, committed or early stage.`;
+    if (statusFilter !== "all") return `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities — ${statusFilter.toLowerCase()} only.`;
+    if (typeFilter === "datacenter") return q ? `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities on the map` : `Facility view — all ${KENYA_FACILITIES.length} facilities; cables and regional context dimmed.`;
+    if (typeFilter === "ixp") return "IXP view — KIXP Nairobi and the regional exchanges; facilities and cables dimmed.";
+    if (q) return `Highlighting ${facilityVisible.size} of ${KENYA_FACILITIES.length} facilities on the map`;
+    return `All layers — ${KENYA_FACILITIES.length} facilities · ${CABLE_REGISTER.length} tracked cable systems (${regLive} live) · KIXP Nairobi.`;
+  })();
 
   const openMetro = (m: "nairobi" | "mombasa") => { setMode(m); setCityPanel(null); };
 
@@ -269,16 +407,17 @@ export default function EastAfricaInfrastructureMap() {
 
   const typeChips: { key: TypeFilter; label: string }[] = [
     { key: "all", label: "All assets" },
-    { key: "datacenter", label: "Data centres" },
+    { key: "datacenter", label: "Facilities" },
     { key: "cable", label: "Cables" },
     { key: "ixp", label: "IXPs" },
   ];
-  const statusChips: { key: "all" | DcStatus; label: string }[] = [
+  const statusChips: { key: StatusFilterX; label: string }[] = [
     { key: "all", label: "Any status" },
     { key: "Operational", label: "Operational" },
     { key: "Under Construction", label: "In construction" },
     { key: "Committed", label: "Committed" },
     { key: "Early Stage", label: "Early stage" },
+    { key: "pipeline", label: "Pipeline (not yet live)" },
   ];
 
   return (
@@ -286,7 +425,7 @@ export default function EastAfricaInfrastructureMap() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-8">
-          <p className="text-section-label mb-3 text-center">Infrastructure · Interactive map</p>
+          <p className="text-section-label mb-3 text-center">Infrastructure map</p>
           <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
           <p className="text-subtitle-center">
             {KENYA_FACILITIES.length} facilities in Kenya, {CABLE_REGISTER.length} tracked submarine
@@ -295,54 +434,96 @@ export default function EastAfricaInfrastructureMap() {
           </p>
         </div>
 
+        {/* Question presets (redesign doc: orient → choose a question → focused answer) */}
+        <div className="mb-6">
+          <p className="mb-2.5 text-center text-sm font-medium text-foreground">What do you want to explore?</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {PRESETS.map((p) => {
+              const Icon = p.icon;
+              const active = activePreset === p.key;
+              return (
+                <button
+                  key={p.key}
+                  type="button"
+                  onClick={() => applyPreset(p.key)}
+                  aria-pressed={active}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
+                    active
+                      ? "border-cyan/50 bg-cyan/15 text-cyan"
+                      : "border-border/60 bg-accent/30 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
+                  }`}
+                >
+                  <Icon aria-hidden="true" className="size-3.5" />
+                  {p.label}
+                </button>
+              );
+            })}
+          </div>
+          {activePreset && (
+            <p className="mt-2 text-center text-xs text-muted-foreground" aria-live="polite">
+              {PRESETS.find((p) => p.key === activePreset)?.caption}
+            </p>
+          )}
+        </div>
+
         {/* Stats */}
         <div className="mb-6">
           <StatsBand />
         </div>
 
-        {/* Filters */}
+        {/* Filters — primary asset row, secondary status row, then the summary
+            line with [Clear filters] (redesign doc: filter bar as command centre) */}
         <div className="mb-6 space-y-3">
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             {typeChips.map((t) => (
               <Button key={t.key} size="sm" variant={typeFilter === t.key ? "default" : "outline"}
-                onClick={() => setTypeFilter(t.key)}
+                onClick={() => setTypeManual(t.key)}
                 className={typeFilter === t.key ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs sm:text-sm" : "text-xs sm:text-sm"}>
                 {t.label}
               </Button>
             ))}
-            <span className="w-px h-5 bg-border/60 mx-1 hidden sm:block" />
-            {statusChips.map((s) => (
-              <Button key={s.key} size="sm" variant={statusFilter === s.key ? "default" : "outline"}
-                onClick={() => setStatusFilter(s.key)}
-                className={statusFilter === s.key ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs sm:text-sm" : "text-xs sm:text-sm"}>
-                {s.label}
-              </Button>
-            ))}
             <div className="ml-auto flex items-center gap-2">
               <div className="relative">
-                <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
-                <input type="text" placeholder="Search facilities…" value={search}
+                <label htmlFor="map-search" className="sr-only">Search facilities, cables and IXPs</label>
+                <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" aria-hidden="true" />
+                <input id="map-search" type="text" placeholder="Search facilities…" value={search}
+                  ref={searchRef}
                   onChange={(e) => setSearch(e.target.value)}
                   className="h-9 sm:h-8 w-40 sm:w-48 pl-8 pr-3 text-sm rounded-md bg-surface border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-cyan/50" />
               </div>
               <div className="flex items-center gap-1">
-                <Button size="sm" variant={viewMode === "map" ? "default" : "ghost"} onClick={() => setViewMode("map")}
+                <Button size="sm" variant={viewMode === "map" ? "default" : "outline"} onClick={() => setViewMode("map")}
                   className={viewMode === "map" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""} aria-label="Map view">
-                  <MapIcon className="w-4 h-4" />
+                  <MapIcon className="w-4 h-4" aria-hidden="true" /> Map
                 </Button>
-                <Button size="sm" variant={viewMode === "list" ? "default" : "ghost"} onClick={() => setViewMode("list")}
+                <Button size="sm" variant={viewMode === "list" ? "default" : "outline"} onClick={() => setViewMode("list")}
                   className={viewMode === "list" ? "bg-cyan text-cyan-foreground hover:bg-cyan/90" : ""} aria-label="List view">
-                  <List className="w-4 h-4" />
+                  <List className="w-4 h-4" aria-hidden="true" /> List
                 </Button>
               </div>
             </div>
           </div>
-          {showFacilityFeedback && (
-            <p className="text-xs text-muted-foreground" aria-live="polite">
-              Highlighting <span className="font-medium text-foreground">{facilityVisible.size}</span> of{" "}
-              {KENYA_FACILITIES.length} facilities on the map
-            </p>
+          {typeFilter !== "cable" && (
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/70 mr-1">Status</span>
+              {statusChips.map((s) => (
+                <Button key={s.key} size="sm" variant={statusFilter === s.key ? "default" : "outline"}
+                  onClick={() => setStatusManual(s.key)}
+                  className={statusFilter === s.key ? "bg-cyan text-cyan-foreground hover:bg-cyan/90 text-xs" : "text-xs"}>
+                  {s.label}
+                </Button>
+              ))}
+            </div>
           )}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <p className="text-xs text-muted-foreground" aria-live="polite">{filterSummary}</p>
+            {filtersActive && (
+              <button type="button" onClick={clearFilters}
+                className="inline-flex items-center gap-1 rounded text-xs text-cyan hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60">
+                <RotateCcw className="w-3 h-3" aria-hidden="true" /> Clear filters
+              </button>
+            )}
+          </div>
         </div>
 
         {viewMode === "list" ? (
@@ -454,6 +635,12 @@ export default function EastAfricaInfrastructureMap() {
 
               {/* Panels */}
               <AnimatePresence>
+                {mode === "country" && comparisonOpen && (
+                  <ComparisonPanel
+                    onClose={() => { setComparisonOpen(false); setActivePreset(null); }}
+                    onOpenMetro={(m) => { setComparisonOpen(false); setActivePreset(null); openMetro(m); }}
+                  />
+                )}
                 {mode === "nairobi" && facilityPanel && (
                   <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · ${CITY_LABEL[facilityPanel.city]}`} onClose={() => setFacilityPanel(null)}>
                     <FacilityCard f={facilityPanel} />
@@ -543,7 +730,7 @@ export default function EastAfricaInfrastructureMap() {
             <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
               <Legend />
               <p className="text-[10px] text-muted-foreground hidden sm:block">
-                Natural Earth borders (indicative) · facility positions schematic · verified Aug 2026
+                Natural Earth borders (indicative) · facility positions schematic · verified {VERIFIED_DATE_LABEL}
               </p>
             </div>
           </>
