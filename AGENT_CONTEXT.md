@@ -1150,3 +1150,29 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Gates: validate_policy PASS; article_validator 105 ALL OK (content
   untouched). AGENT_CONTEXT updated (current-state .env.local, open thread
   5 progress note, this log).
+
+### 2026-09-30 (session 7) — Editor URL pair triaged: PwC echo (captured) + Absa op-ed (not a lead) (Task 70)
+- Editor dropped two URLs (no instruction, digest pattern): (1) tech.africa
+  "PwC: Africa data centre capex to reach $255bn by 2050" (1 Oct 2026);
+  (2) cioafrica.co "Digital Finance for AI-Driven Economies" (30 Sept 2026,
+  bylined Dlamini & Southey). Working tree had a fresh container quirk: all
+  files flipped 644->755 (0 content diff) — fixed with core.fileMode=false
+  (local config only).
+- (1) TECH.AFRICA -> PRESS ECHO of PwC Global Data Centre Outlook 2026-50,
+  which DC254 already covers end-to-end in pwc-global-data-centre-capex-2050
+  (2026-09-04; $255B Africa central, $193-284B range, Kenya ~95% renewable
+  grid, "not an AI bet" — ALL already in the article). One adjacent figure
+  the site lacks: PwC SA's $582bn infra / ~$71bn digital by 2050 — judged
+  out of scope (SA national infra outlook, not a DC datum). Compact T3
+  confirmation capture filed: 2026-09-30-techafrica-pwc-africa-capex-echo.md
+  (capture-pending; zero changes proposed).
+- (2) CIO AFRICA -> NOT A LEAD, NO capture filed (matches "Not leads"
+  register precedent): vendor thought-leadership (Absa CIB) on cross-border
+  payments/digital finance (PAPSS, ISO 20022, correspondent banking). ZERO
+  data-centre content (the single "data centre" string is the page sidebar);
+  no data-residency/sovereignty content either — does not even feed the
+  cross-border-data-flows pillar (payments-domain, not data-governance).
+  Opinion columns are never claim sources (Kanali precedent); this one has
+  nothing to comment on either.
+- Gates: validate_policy PASS, article_validator 105 ALL OK. Zero Context.dev
+  credits spent (curl-open sites + existing coverage).
