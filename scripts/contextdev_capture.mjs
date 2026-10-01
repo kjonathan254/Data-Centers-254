@@ -57,7 +57,7 @@ console.log(`Scraping: ${url}`);
 const res = await fetch("https://api.context.dev/v1/web/scrape", {
   method: "POST",
   headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
-  body: JSON.stringify({ url, formats: { markdown: true }, maxAgeMs: 0 }),
+  body: JSON.stringify({ url, formats: { markdown: true }, maxAgeMs: 0, timeoutOpts: { milliseconds: 180000 } }),
 });
 
 if (!res.ok) {
