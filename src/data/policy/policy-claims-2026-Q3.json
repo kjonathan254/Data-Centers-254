@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.2-policy",
-  "datasetVersion": "policy-2026-Q3-r16",
-  "generatedAt": "2026-09-26",
+  "datasetVersion": "policy-2026-Q3-r17",
+  "generatedAt": "2026-10-02",
   "researchQuestion": "What policy and regulatory frameworks govern data-centre development and operation across Kenya, Uganda, Rwanda and Tanzania, and where are the material differences?",
   "method": "evidence-first: one claim = one verifiable statement, each tied to tiered sources; the article is the interpretation layer built only after editor review",
   "humanGate": {
@@ -14,7 +14,8 @@
       "uganda": "approved 2026-09-22 (r2 delegated rulings applied)",
       "rwanda": "approved 2026-09-22 (delegated review, no state changes; RW-DP-C6 stays partially-verified pending full-text capture of NCSA deadline notice)",
       "tanzania": "approved 2026-09-22 (delegated review, no state changes; TZ-LC-C2, TZ-EN-C1, TZ-ENV-C1 stay partially-verified with documented upgrade paths)",
-      "kenya": "approved 2026-09-22 (delegated review; 9 verified from T1 regulator captures, 4 partially-verified pending statute text; construction-building recorded as a structured gap)"
+      "kenya": "approved 2026-09-22 (delegated review; 9 verified from T1 regulator captures, 4 partially-verified pending statute text; construction-building recorded as a structured gap)",
+      "evidence-captures-2026-10-02": "Editor delegation in chat 2026-10-02 ('1 and 2 are approved if you also approve, you have the authority to decide and tell me your decision and why'): agent re-read all six pending captures (GlobeNewswire R&M colocation T3; EAC TOR + PR T1; TZ EMA 2004; UG NEA 2019; RW Law 48/2018 + Order 001/2019) plus the TZ Schedule correction and approved with per-capture rationale - 5 evidence captures promoted onto T1 instrument text (7 new verified claims: UG-ENV-C1, RW-ENV-C1, TZ-ENV-C2, UG-RG-C1, RW-RG-C1, TZ-RG-C1, KE-RG-C2); GlobeNewswire closed not-needed (no Africa figures, unnamed analyst house, self-inconsistent CAGR; revenue baseline stays out per Task 54); TZ gap First->Third Schedule corrected on captured s.81 text. DC-specific EIA/ESIA treatment deliberately NOT asserted anywhere (regulations/classification open)."
     }
   },
   "statusVocabulary": {
@@ -826,6 +827,71 @@
       "retrievedDate": "2026-09-24",
       "captureStatus": "captured",
       "captureNote": "Full page captured via Context.dev (clean-URL route bypasses the JS challenge that walls /index.php/ paths - diagnosis recorded 2026-09-24, upgrading the r13 'JS-blocked' note). Carries the data-centres consultation entry verbatim: 30-day comment window from publication; submission channels - post/hand delivery to the Director General (P.O. Box 14448-00800, Nairobi), electronic form (forms.cloud.microsoft/r/uB4Z5GktUB), email datacentres@ca.go.ke; links the framework PDF. Capture file: research/captures/2026-09-24-ca-go-ke-open-consultations.md."
+    },
+    "tanzlii-ema-2004": {
+      "label": "Tanzania National Environmental Management Act (EMA 2004, Cap. 191) - TanzLII consolidated text to 31 December 2023",
+      "url": "https://tanzlii.org/en/akn/tz/act/2004/20/eng@2023-12-31",
+      "tier": 1,
+      "publisher": "TanzLII (Judiciary of Tanzania / Office of the Attorney General)",
+      "sourceType": "National statute (full text captured, consolidated)",
+      "publishedDate": "2023-12-31",
+      "retrievedDate": "2026-10-01",
+      "captureStatus": "captured",
+      "captureNote": "Full act text (307KB markdown incl. site chrome) via Context.dev scrape after timeoutOpts fix; TanzLII Cloudflare-blocked to both curl and page_reader. Capture: research/captures/2026-10-01-tz-ema-2004-tanzlii.md"
+    },
+    "ug-nea-2019-faolex": {
+      "label": "Uganda National Environment Act, 2019 (Act 5 of 2019) - Acts Supplement No. 2 to the Uganda Gazette No. 10 Vol. CXII, 7 March 2019 (178pp)",
+      "url": "https://faolex.fao.org/docs/pdf/uga192395.pdf",
+      "tier": 1,
+      "publisher": "Uganda Government Printer (UPPC) via FAOLEX",
+      "sourceType": "National statute (official Gazette print, full text)",
+      "publishedDate": "2019-03-07",
+      "retrievedDate": "2026-10-01",
+      "captureStatus": "captured",
+      "captureNote": "Direct PDF download via ECOLEX discovery (LEX-FAOC192395); zero retrieval credits (ULII Cloudflare-blocked). Capture: research/captures/2026-10-01-ug-nea-2019-esia-schedule5.md"
+    },
+    "rw-env-law-48-2018-faolex": {
+      "label": "Rwanda Law No. 48/2018 of 13/08/2018 on Environment - Official Gazette no. Special of 21/09/2018 (trilingual KIN/ENG/FRE)",
+      "url": "https://faolex.fao.org/docs/pdf/rwa182097.pdf",
+      "tier": 1,
+      "publisher": "Republic of Rwanda, Official Gazette via FAOLEX",
+      "sourceType": "National framework statute (official Gazette print, full text)",
+      "publishedDate": "2018-08-13",
+      "retrievedDate": "2026-10-01",
+      "captureStatus": "captured",
+      "captureNote": "Direct PDF download via ECOLEX discovery (LEX-FAOC182097). Gazette print is the controlling record for the 13/08/2018 date (secondary sources citing 13/09/2018 are contradicted by it). Capture: research/captures/2026-10-01-rw-env-law-48-2018-eia-order-001-2019.md"
+    },
+    "rw-eia-order-001-2019-faolex": {
+      "label": "Rwanda Ministerial Order No. 001/2019 of 15/04/2019 establishing the list of projects that must undergo environmental impact assessment - Official Gazette no. 15 of 15/04/2019 (trilingual)",
+      "url": "https://faolex.fao.org/docs/pdf/rwa193635.pdf",
+      "tier": 1,
+      "publisher": "Republic of Rwanda, Official Gazette via FAOLEX",
+      "sourceType": "Statutory order - EIA project list (official Gazette print, full text)",
+      "publishedDate": "2019-04-15",
+      "retrievedDate": "2026-10-01",
+      "captureStatus": "captured",
+      "captureNote": "Direct PDF download via ECOLEX discovery (LEX-FAOC193635). Operative trigger list under Law 48/2018 Art. 30; supersedes Ministerial Order 001/2018. Capture: research/captures/2026-10-01-rw-env-law-48-2018-eia-order-001-2019.md"
+    },
+    "eac-dgpf-validation-pr": {
+      "label": "EAC set to advance Data Governance and Protection with development of a regional Policy Framework - EAC Secretariat press release, 25 October 2024",
+      "url": "https://www.eac.int/press-releases/3195-eac-set-to-advance-data-governance-and-protection-with-development-of-a-regional-policy-framework",
+      "tier": 1,
+      "publisher": "East African Community Secretariat",
+      "sourceType": "Regional secretariat official record (validation workshop)",
+      "publishedDate": "2024-10-25",
+      "retrievedDate": "2026-09-30",
+      "captureStatus": "captured",
+      "captureNote": "Full body via page reader (eac.int downloads 403 to curl). Documents VALIDATION (Kigali, 25 Oct 2024) + AU Data Policy Framework alignment - not Council adoption. Capture: research/captures/2026-09-30-eac-pr-data-governance-framework.md"
+    },
+    "eac-eardip-tor": {
+      "label": "Terms of Reference: Data Protection Harmonization and Cross-Border Data Flows in the East African Community (EARDIP consultancy, 240 days) - EAC Secretariat",
+      "url": "https://www.eac.int/documents?controller=download&task=download.file&file=950f748c-3321-4647-b8aa-0698ccaabc8b&name=TOR_CONSULTANCY%20SERVICE-%20TERMS%20OF%20REFERENCE%20FOR%20DATA%20PROTECTION%20HARMONIZATION%20AND%20CROSS-BORDER%20DATA%20FLOWS%20IN%20THE%20EAST%20AFRICAN%20COMMUNITY_FINAL.pdf",
+      "tier": 1,
+      "publisher": "East African Community Secretariat",
+      "sourceType": "Regional procurement instrument (full text captured, 14pp)",
+      "retrievedDate": "2026-09-30",
+      "captureStatus": "captured",
+      "captureNote": "Full 14pp PDF via Context.dev scrape (curl 403 on eac.int). Documents the live machinery: stocktaking report, harmonization principles, Cross-border Data Flows Mechanism draft legal instrument, 8-month schedule. Capture: research/captures/2026-09-30-eac-tor-dp-harmonization-crossborder.md"
     }
   },
   "countries": {
@@ -860,12 +926,12 @@
         },
         {
           "pillar": "environmental",
-          "gap": "No claims researched yet (NEMA requirements for large facilities, ESIA thresholds)",
+          "gap": "Statute level captured and verified (UG-ENV-C1): National Environment Act 2019 two-track regime with verbatim Schedule 5 ESIA triggers (power infrastructure, industrial parks). Still open: ESIA Regulations 2020 operational Category lists and NEMA guidance - whether a DC-scale campus is caught in practice unconfirmed.",
           "expectedSources": [
-            "National Environment Management Authority (NEMA)",
-            "National Environment Act, 2019"
+            "Uganda ESIA Regulations, 2020",
+            "National Environment Management Authority (NEMA) guidance"
           ],
-          "upgradePath": "Fetch NEMA ESIA category guidance; check generator/cooling thresholds"
+          "upgradePath": "Capture ESIA Regulations 2020 (FAOLEX/ECOLEX mirror preferred; ULII Cloudflare-blocked) and check Category lists against DC-scale loads."
         },
         {
           "pillar": "cross-border-data-flows",
@@ -878,12 +944,12 @@
         },
         {
           "pillar": "regional-frameworks",
-          "gap": "EAC harmonisation instruments not yet researched",
+          "gap": "EAC Data Governance Policy Framework validated Oct 2024 now verified from two T1 secretariat records (UG-RG-C1); Cross-border Data Flows Mechanism draft legal instrument in development under the EARDIP consultancy (TOR captured, 240-day schedule). Open: Council adoption status and national implementation records.",
           "expectedSources": [
-            "EAC Secretariat instruments",
-            "national ratification records"
+            "EAC Council of Ministers records",
+            "EAC Mechanism for Cross-border Data Flows draft instrument"
           ],
-          "upgradePath": "Deferred to the regional-comparison phase (editor sequencing)"
+          "upgradePath": "Monitor EAC Council outputs for adoption; capture the mechanism draft instrument when published."
         }
       ],
       "investigatedAt": "2026-09-22",
@@ -1035,6 +1101,27 @@
           ],
           "state": "verified",
           "note": "Non-Ugandan official assessment (Tier 3 for our purposes); UIA/UFZA primary instruments not yet captured. No data-centre-specific incentive verified - any DC-specific treatment remains unverified. | r11 upgrade (editor-delegated 2026-09-23): Investment Code Act 2019 (T1, ULII) captured: s.12 sets incentive qualification (minimum capital, Schedule 2 priority areas, 80% export criterion, 60% citizen employment), s.13 provides the Authority's certificate of incentives, and the Uganda Free Zones Authority is named in s.4 definitions. Free Zones Act 2014 s.48 (T1) confirms exemptions from taxes and duties on EPZ imported inputs. However, neither captured instrument contains the 10-year income tax holiday: the Code defers to 'qualifications for incentives set out in any other law' and the captured Free Zones Act is the 2014 original. The holiday (T3: PwC tax summaries confirm availability to 80%+ exporters) lives in the Income Tax Act as amended - claim remains partially-verified pending that instrument's capture. | r12 upgrade (editor-approved conditional on verification, 2026-09-23): Income Tax Act Cap 340 s.21(1)(y) - 'the income of a person derived from the exportation of finished consumer and capital goods for a period of ten years', with the 80% export condition (para (aa)) and the prescribed-conditions/certificate regime ((ab),(ac); inserted by IT (Am) Act 2008) - captured via a Grant Thornton/ULRC-based full-text reproduction (T2); the operationalising 2009 Regulations are in the same capture; PwC current edition (T3) corroborates the ten-year/80% terms. Verified under 'two independent corroborating sources'; the official ULII consolidation remains the confirmation target (fetch-blocked 2026-09-23). The holiday is sector-agnostic statute text - any data-centre-specific treatment remains unverified."
+        },
+        {
+          "id": "UG-ENV-C1",
+          "pillar": "environmental",
+          "state": "verified",
+          "statement": "Uganda's National Environment Act 2019 (ss.110-113) runs a two-track environmental and social assessment regime: Schedule 4 projects proceed on a NEMA project brief, while Schedule 5 projects - explicitly including solar plants above 2 MW, thermal power generation and other combustion installations, wind farms of at least 10 MW, hydropower above 1 MW, high-voltage transmission lines, distribution lines above 33 kV, electrical substations, and industrial estates or development parks - require a full environmental and social impact assessment (scoping, terms of reference, study).",
+          "sourceIds": [
+            "ug-nea-2019-faolex"
+          ],
+          "note": "T1 official Gazette print (Acts Supplement No. 2, 7 Mar 2019, UPPC) via FAOLEX - research/captures/2026-10-01-ug-nea-2019-esia-schedule5.md. A data-centre campus is NOT a named Schedule 5 category; exposure arrives via the power-infrastructure subitems or industrial-park siting - read-across deliberately not asserted. Printed '2500/10,000m2' floor-area notation (Sch.5 item 5(e)) flagged verbatim, unresolved. ESIA Regulations 2020 uncaptured - operational Category lists remain the open gap (see pillarGaps). MW/kV figures are regulatory trigger thresholds, never market baselines (Task 54)."
+        },
+        {
+          "id": "UG-RG-C1",
+          "pillar": "regional-frameworks",
+          "state": "verified",
+          "statement": "The East African Community - of which Uganda is a Partner State - validated a regional Data Governance Policy Framework at a Kigali stakeholder workshop in October 2024, to harmonise data protection, privacy and security standards across Partner States in alignment with the African Union Data Policy Framework (2022); a consultancy under the Eastern African Regional Digital Integration Project (EARDIP) is separately developing a draft legal instrument for an EAC Mechanism for Cross-border Data Flows.",
+          "sourceIds": [
+            "eac-dgpf-validation-pr",
+            "eac-eardip-tor"
+          ],
+          "note": "Reuses two T1 EAC Secretariat records captured once for the shared regional-frameworks gap: research/captures/2026-09-30-eac-pr-data-governance-framework.md (validation PR) + research/captures/2026-09-30-eac-tor-dp-harmonization-crossborder.md (EARDIP TOR). Status language: VALIDATED October 2024, never 'adopted' - the PR documents a validation workshop + roadmap, not Council adoption. Horizontal data-governance status claim, not a DC obligation. EAC-wide instrument cited from Uganda, same pattern as the CET claim (see KE-RG-C1)."
         }
       ]
     },
@@ -1070,12 +1157,12 @@
         },
         {
           "pillar": "environmental",
-          "gap": "No claims researched yet (REMA EIA requirements for large facilities)",
+          "gap": "Statute level captured and verified (RW-ENV-C1): Law 48/2018 Arts. 30-34 + Ministerial Order 001/2019 Annex I/II trigger lists (two-of-three building thresholds, industries, HV/MV lines). Still open: whether a DC campus is caught (building-classification question under Annex I item 1 degrees) and REMA operational guidance.",
           "expectedSources": [
-            "Rwanda Environment Management Authority (REMA)",
-            "Environment Law No 48/2018"
+            "Rwanda Environment Management Authority (REMA) guidance",
+            "Rwanda Building Code 2019"
           ],
-          "upgradePath": "Deferred to a later increment"
+          "upgradePath": "Classification-practice check (commercial/administrative premise) + capture REMA EIA procedural guidance."
         },
         {
           "pillar": "cross-border-data-flows",
@@ -1087,12 +1174,12 @@
         },
         {
           "pillar": "regional-frameworks",
-          "gap": "EAC harmonisation instruments not yet researched",
+          "gap": "EAC Data Governance Policy Framework validated Oct 2024 now verified from two T1 secretariat records (RW-RG-C1); Cross-border Data Flows Mechanism draft legal instrument in development under the EARDIP consultancy (TOR captured, 240-day schedule). Open: Council adoption status and national implementation records.",
           "expectedSources": [
-            "EAC Secretariat instruments",
-            "national ratification records"
+            "EAC Council of Ministers records",
+            "EAC Mechanism for Cross-border Data Flows draft instrument"
           ],
-          "upgradePath": "Regional comparison phase (editor sequencing)"
+          "upgradePath": "Monitor EAC Council outputs for adoption; capture the mechanism draft instrument when published."
         }
       ],
       "investigatedAt": "2026-09-22",
@@ -1234,6 +1321,28 @@
           ],
           "state": "verified",
           "note": "Official-domain snippets only (minict.gov.rw / minecofin.gov.rw); SSP PDF capture pending. Any explicit 'data centre' language in the SSP awaits full-text capture. | r11 upgrade (editor-delegated 2026-09-23): SSP 2024-2029 full text (T1 PDF, minict.gov.rw) captured: 'The SSP is based on three foundational pillars from SRMP II: Digital Business, Digital Citizen, and Digital Government'; alignment passage names NST2 (2024/25-2028/29), SRMP II (2024-2028), DTS (2020-2030), Vision 2050, AU Agenda 2063 and SDGs. SSP additionally evidences data-centre-specific policy content: planned EUCL framework to categorise data centres under industrial tariffs (electricity-cost halving rationale), 50% hosting-price reduction at the National Data Center, 2023 data-centre and cloud service directives, and an explicit action to 'Invest in building and upgrading secure data centers'."
+        },
+        {
+          "id": "RW-ENV-C1",
+          "pillar": "environmental",
+          "state": "verified",
+          "statement": "Rwanda's Ministerial Order No. 001/2019 (under Law No. 48/2018 of 13/08/2018 on Environment, Arts. 30-34) subjects buildings classified as commercial or administrative that meet at least two of three thresholds (capacity above 500 people, floor area above 1,500 sqm, plot above 1,000 sqm), plus industries and high- and medium-voltage electrical lines, to full environmental impact assessment, approved by REMA, with consultancy costs borne by the project initiator.",
+          "sourceIds": [
+            "rw-env-law-48-2018-faolex",
+            "rw-eia-order-001-2019-faolex"
+          ],
+          "note": "T1 trilingual Official Gazette prints via FAOLEX - research/captures/2026-10-01-rw-env-law-48-2018-eia-order-001-2019.md. Two-of-three structure and the building-classification premise are claim-critical and preserved (not shortened to 'any large building requires EIA'); the 'publicly accessible facilities' phrasing in Annex I item 1 degrees leaves DC classification open - not resolved editorially. Order supersedes Ministerial Order 001/2018. sqm/person thresholds are regulatory triggers, never market baselines (Task 54)."
+        },
+        {
+          "id": "RW-RG-C1",
+          "pillar": "regional-frameworks",
+          "state": "verified",
+          "statement": "The East African Community - of which Rwanda is a Partner State - validated a regional Data Governance Policy Framework at a Kigali stakeholder workshop in October 2024, to harmonise data protection, privacy and security standards across Partner States in alignment with the African Union Data Policy Framework (2022); a consultancy under the Eastern African Regional Digital Integration Project (EARDIP) is separately developing a draft legal instrument for an EAC Mechanism for Cross-border Data Flows.",
+          "sourceIds": [
+            "eac-dgpf-validation-pr",
+            "eac-eardip-tor"
+          ],
+          "note": "Reuses two T1 EAC Secretariat records captured once for the shared regional-frameworks gap: research/captures/2026-09-30-eac-pr-data-governance-framework.md (validation PR) + research/captures/2026-09-30-eac-tor-dp-harmonization-crossborder.md (EARDIP TOR). Status language: VALIDATED October 2024, never 'adopted' - the PR documents a validation workshop + roadmap, not Council adoption. Horizontal data-governance status claim, not a DC obligation. EAC-wide instrument cited from Rwanda, same pattern as the CET claim (see KE-RG-C1)."
         }
       ]
     },
@@ -1281,13 +1390,13 @@
         },
         {
           "pillar": "environmental",
-          "gap": "EMA 2004 First Schedule (EIA trigger list) text pending - whether DC-scale load requires full EIA unconfirmed",
+          "gap": "CORRECTED r17 per captured T1 text: the EMA 2004 EIA trigger list is the THIRD Schedule (s.81), not the First Schedule as previously recorded. Statute captured and verified (TZ-ENV-C2): triggers include electrical infrastructure (item 10) and out-of-scale structures (item 1(b)); s.81(3) licence does not substitute the EIA Certificate. Still open: EIA Regulations category lists (mandatory vs exempt) - whether DC-scale load is caught unconfirmed - and the 2025 EMA amendment text.",
           "expectedSources": [
-            "Environmental Management Act 2004 full text",
-            "EIA Regulations 2005",
+            "Environmental Management (EIA) Regulations 2005",
+            "Environmental Management (Amendment) Act 2025 (Act No. 5 of 2025)",
             "eia.nemc.or.tz portal"
           ],
-          "upgradePath": "Fetch EMA 2004 + EIA Regs (nemc.or.tz uploads, faolex mirrors)"
+          "upgradePath": "Capture the EIA Regulations 2005 + Act 5/2025 (TanzLII eng@2025-03-14 flagged) and re-check s.81 / Third Schedule currency."
         },
         {
           "pillar": "ai-digital-policy",
@@ -1308,12 +1417,12 @@
         },
         {
           "pillar": "regional-frameworks",
-          "gap": "EAC harmonisation instruments not yet researched; EAC CET 2022 (captured, T1) is the first shared regional instrument in the dataset",
+          "gap": "EAC Data Governance Policy Framework validated Oct 2024 now verified from two T1 secretariat records (TA-RG-C1); Cross-border Data Flows Mechanism draft legal instrument in development under the EARDIP consultancy (TOR captured, 240-day schedule). Open: Council adoption status and national implementation records.",
           "expectedSources": [
-            "EAC Secretariat instruments",
-            "EAC Data Protection & Privacy Policy"
+            "EAC Council of Ministers records",
+            "EAC Mechanism for Cross-border Data Flows draft instrument"
           ],
-          "upgradePath": "Regional comparison phase (editor sequencing)"
+          "upgradePath": "Monitor EAC Council outputs for adoption; capture the mechanism draft instrument when published."
         }
       ],
       "investigatedAt": "2026-09-22",
@@ -1497,7 +1606,28 @@
             "nemc-certificates-2026"
           ],
           "state": "partially-verified",
-          "note": "Regulator operations confirmed from official pages; the Environmental Management Act 2004 and its EIA First Schedule (whether a DC-scale facility triggers a full EIA) remain capture-pending. eia.nemc.or.tz portal is the operational entry point."
+          "note": "Regulator operations confirmed from official pages; the Environmental Management Act 2004 is now captured (T1, TanzLII consolidated 2023-12-31 - corrected r17: EIA triggers are the THIRD Schedule, see TZ-ENV-C2); the EIA Regulations' category lists (whether a DC-scale facility is mandatory) remain capture-pending. eia.nemc.or.tz portal is the operational entry point."
+        },
+        {
+          "id": "TZ-ENV-C2",
+          "pillar": "environmental",
+          "state": "verified",
+          "statement": "Tanzania's Environmental Management Act 2004 (s.81) mandates an Environmental Impact Assessment, at the proponent's cost, for projects of a type specified in the Act's Third Schedule - which includes electrical infrastructure (item 10) and any structure of a scale not in keeping with its surroundings (item 1(b)) - and s.81(3) provides that a licence or permit under any other written law does not entitle a developer to proceed without an EIA Certificate issued under the Act.",
+          "sourceIds": [
+            "tanzlii-ema-2004"
+          ],
+          "note": "T1 full act text (TanzLII, consolidated 2023-12-31) - research/captures/2026-10-01-tz-ema-2004-tanzlii.md. CLAIM-CRITICAL CORRECTION applied r17: the EIA trigger list is the THIRD Schedule (s.81(1), s.102(1)), not the First Schedule as the pre-r17 gap text and TZ-ENV-C1's note said (First = National Environmental Advisory Committee composition, s.11(3)). Does NOT assert that DCs require EIA: mandatory-vs-exempt categorisation runs through the EIA Regulations (uncaptured). Environmental Management (Amendment) Act 2025 (Act 5/2025, TanzLII eng@2025-03-14) flagged uncaptured - currency re-check on capture. Threshold items are regulatory triggers, never market baselines (Task 54)."
+        },
+        {
+          "id": "TZ-RG-C1",
+          "pillar": "regional-frameworks",
+          "state": "verified",
+          "statement": "The East African Community - of which Tanzania is a Partner State - validated a regional Data Governance Policy Framework at a Kigali stakeholder workshop in October 2024, to harmonise data protection, privacy and security standards across Partner States in alignment with the African Union Data Policy Framework (2022); a consultancy under the Eastern African Regional Digital Integration Project (EARDIP) is separately developing a draft legal instrument for an EAC Mechanism for Cross-border Data Flows.",
+          "sourceIds": [
+            "eac-dgpf-validation-pr",
+            "eac-eardip-tor"
+          ],
+          "note": "Reuses two T1 EAC Secretariat records captured once for the shared regional-frameworks gap: research/captures/2026-09-30-eac-pr-data-governance-framework.md (validation PR) + research/captures/2026-09-30-eac-tor-dp-harmonization-crossborder.md (EARDIP TOR). Status language: VALIDATED October 2024, never 'adopted' - the PR documents a validation workshop + roadmap, not Council adoption. Horizontal data-governance status claim, not a DC obligation. EAC-wide instrument cited from Tanzania, same pattern as the CET claim (see KE-RG-C1)."
         }
       ]
     },
@@ -1747,6 +1877,17 @@
             "ca-dc-licensing-framework-2026"
           ],
           "note": "r14 registration (2026-09-24, standing humanGate delegation, T1 read in full). Verified on the primary instrument: para 19 + Table 1 rows 1-5 (framework FY2026/2027; public consultation FY2026/2027; finalisation FY2026/2027; consequential revision of the telecommunications market structure FY2026/2027; implementation FY2027/2028). Confirms the FY2027/2028 implementation timing previously held on w.media alone (T3, KE-LC-C4 note). The 'consequential revision' row corroborates that the market-structure change stripping NFP-T2 of data centres follows framework finalisation, not the consultation itself."
+        },
+        {
+          "id": "KE-RG-C2",
+          "pillar": "regional-frameworks",
+          "state": "verified",
+          "statement": "The East African Community - of which Kenya is a Partner State - validated a regional Data Governance Policy Framework at a Kigali stakeholder workshop in October 2024, to harmonise data protection, privacy and security standards across Partner States in alignment with the African Union Data Policy Framework (2022); a consultancy under the Eastern African Regional Digital Integration Project (EARDIP) is separately developing a draft legal instrument for an EAC Mechanism for Cross-border Data Flows.",
+          "sourceIds": [
+            "eac-dgpf-validation-pr",
+            "eac-eardip-tor"
+          ],
+          "note": "Reuses two T1 EAC Secretariat records captured once for the shared regional-frameworks gap: research/captures/2026-09-30-eac-pr-data-governance-framework.md (validation PR) + research/captures/2026-09-30-eac-tor-dp-harmonization-crossborder.md (EARDIP TOR). Status language: VALIDATED October 2024, never 'adopted' - the PR documents a validation workshop + roadmap, not Council adoption. Horizontal data-governance status claim, not a DC obligation. EAC-wide instrument cited from Kenya, same pattern as the CET claim (see KE-RG-C1)."
         }
       ]
     }

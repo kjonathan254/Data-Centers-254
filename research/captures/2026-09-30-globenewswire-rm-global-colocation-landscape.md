@@ -7,7 +7,7 @@ tool: z-ai page_reader (workspace curl blocked - HTTP/2 stream error then timeou
 http_status: 200
 tier: 3
 claims: []
-status: capture-pending # becomes verified ONLY after an editor reads and confirms content
+status: closed-not-needed # editor-delegated review 2026-10-02 (editor chat: '1 and 2 are approved if you also approve'): reference record only, no claims registered, no source record; banked T3 context stat (global colocation revenue trajectory) stays out of the dataset per Task 54 four-baseline discipline - no Africa figures, analyst house unnamed, self-inconsistent CAGR (15.98% vs 15.9%)
 note: Editor dropped the bare URL in chat 2026-09-30 (no instruction attached) while checking LinkedIn/X. Treated as lead triage per digest protocol (open thread 9 precedent). Vendor market-research PR - estimates stay attributed, no claim upgrades proposed (Task 54 precedent).
 ---
 
