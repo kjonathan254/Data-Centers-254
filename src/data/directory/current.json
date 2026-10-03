@@ -692,7 +692,7 @@
       "renewableClaim": "Geothermal power from Olkaria discussed as primary source",
       "notable": "Would be the largest single foreign direct investment in Kenya's digital infrastructure. Partnership between Microsoft and G42 (UAE-based AI company). Safaricom named as local partner.",
       "lastVerified": "2026-10",
-      "dataSource": "Semafor, Tom's Hardware, Business Daily; WEF analysis and The Elephant (Oct 2026), echoing Reuters via Bloomberg",
+      "dataSource": "Semafor, Tom's Hardware, Business Daily; Bloomberg via Reuters wire (May 2026, wire copy captured by DC254); WEF and The Elephant (Oct 2026)",
       "dataConfidence": "Medium",
       "articleSlugs": [
         "microsoft-g42-kenya-data-centre",
@@ -716,7 +716,7 @@
         }
       ],
       "certNote": null,
-      "divergenceNote": "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints, Kenya Power cannot currently deliver the required 100+ MW at a single site. By May 2026, negotiations had also stalled over requests for guaranteed annual capacity payments, with the project's scale and power requirements still under discussion; Kenyan officials said talks were continuing. Attribution: Reuters via Bloomberg, as echoed by WEF (2026-10) and The Elephant (2026-10-02); both articles draw on the same reporting chain, so this is corroborated reportage, not two independent confirmations. Treat the 100 MW figure as an announcement, not a pipeline."
+      "divergenceNote": "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints, Kenya Power cannot currently deliver the required 100+ MW at a single site. By May 2026, negotiations had also stalled over requests for guaranteed annual capacity payments: Microsoft and G42 asked the Kenyan government to commit to paying for a certain amount of capacity annually, and talks broke down when it could not provide the guarantees at the level requested; a scale-back of the project was flagged as possible (Bloomberg News, 10 May 2026, as reported in a Reuters wire of 11 May 2026, captured by DC254; Reuters could not verify the Bloomberg report). Kenya's position: the project 'is not failed or withdrawn' (Information Ministry principal secretary John Tanui) and scale and power requirements remain under discussion. Treat the 100 MW figure as an announcement, not a pipeline."
     },
     {
       "id": "18",
