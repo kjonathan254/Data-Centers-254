@@ -691,8 +691,8 @@
       "powerSource": "Requires dedicated power infrastructure",
       "renewableClaim": "Geothermal power from Olkaria discussed as primary source",
       "notable": "Would be the largest single foreign direct investment in Kenya's digital infrastructure. Partnership between Microsoft and G42 (UAE-based AI company). Safaricom named as local partner.",
-      "lastVerified": "2026-09",
-      "dataSource": "Semafor, Tom's Hardware, Business Daily",
+      "lastVerified": "2026-10",
+      "dataSource": "Semafor, Tom's Hardware, Business Daily; WEF analysis and The Elephant (Oct 2026), echoing Reuters via Bloomberg",
       "dataConfidence": "Medium",
       "articleSlugs": [
         "microsoft-g42-kenya-data-centre",
@@ -716,7 +716,7 @@
         }
       ],
       "certNote": null,
-      "divergenceNote": "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints, Kenya Power cannot currently deliver the required 100+ MW at a single site. Treat the 100 MW figure as an announcement, not a pipeline."
+      "divergenceNote": "No site has been confirmed (Nairobi vs Olkaria), and reporting indicates the project stalled on grid power constraints, Kenya Power cannot currently deliver the required 100+ MW at a single site. By May 2026, negotiations had also stalled over requests for guaranteed annual capacity payments, with the project's scale and power requirements still under discussion; Kenyan officials said talks were continuing. Attribution: Reuters via Bloomberg, as echoed by WEF (2026-10) and The Elephant (2026-10-02); both articles draw on the same reporting chain, so this is corroborated reportage, not two independent confirmations. Treat the 100 MW figure as an announcement, not a pipeline."
     },
     {
       "id": "18",
