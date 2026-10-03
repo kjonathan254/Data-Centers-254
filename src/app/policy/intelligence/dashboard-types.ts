@@ -14,6 +14,14 @@ export interface OpsSource {
   /** e.g. "statute", "regulator", "policy-document", "press" — from the dataset. */
   sourceType: string;
   excerpt: string;
+  /**
+   * Deep link to the verbatim capture file (public GitHub blob) when the
+   * dataset captureNote references research/captures/<file>.md. Present for
+   * captured T1/T2 sources; absent when no capture exists on disk. This is
+   * the "evidence pipeline made public" link: claim → source → verbatim
+   * capture, one click, no repo knowledge required.
+   */
+  captureUrl?: string;
 }
 
 export interface OpsClaim {

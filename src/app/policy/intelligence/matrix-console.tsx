@@ -638,7 +638,20 @@ export default function MatrixConsole({
                                   </a>{" "}
                                   — {s.label}
                                   <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                                    T{s.tier} · {s.captureStatus}
+                                    T{s.tier} ·{" "}
+                                    {s.captureUrl ? (
+                                      <a
+                                        href={s.captureUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open the verbatim capture file (the exact text we read, archived)"
+                                        className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/60"
+                                      >
+                                        {s.captureStatus} ↗
+                                      </a>
+                                    ) : (
+                                      s.captureStatus
+                                    )}
                                   </span>
                                   {s.excerpt && (
                                     <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">

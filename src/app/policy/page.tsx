@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ArticleClusterPage from "@/components/article-cluster-page";
+import { getPolicyStats } from "@/lib/policy";
 
 export const metadata: Metadata = {
   title: "Policy & Regulation: Kenya Data Centre Rules",
@@ -43,6 +44,10 @@ export const metadata: Metadata = {
 };
 
 export default function PolicyPage() {
+  // Card numbers are derived from the live dataset (never hardcoded) so the
+  // landing card can never go stale again after a dataset revision bump.
+  const stats = getPolicyStats();
+  const verified = stats.byState["verified"] ?? 0;
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -56,8 +61,8 @@ export default function PolicyPage() {
               New · Policy Intelligence
             </p>
             <p className="mt-1 text-sm font-medium text-slate-200">
-              56 audited regulatory claims across Uganda, Rwanda, Tanzania and Kenya — every claim
-              with its sources, tiers and a five-state verification vocabulary.
+              {stats.claims} audited regulatory claims across Uganda, Rwanda, Tanzania and Kenya ({verified} verified) —
+              every claim with its sources, tiers and a five-state verification vocabulary.
             </p>
             <p className="mt-1 text-xs text-slate-500">
               Open the evidence layer →

@@ -86,6 +86,23 @@ const data = policyJson as unknown as PolicyDatasetJson;
 
 // ─── Loaders ───────────────────────────────────────────────────────────────
 
+// ─── Evidence-pipeline deep links ──────────────────────────────────────────
+
+// Public blob base for verbatim capture files. When a source's captureNote
+// references research/captures/<file>.md, policyCaptureUrl() turns it into a
+// link so the claim → source → verbatim capture chain is auditable from the
+// site itself. validate_policy.py's capture-link gate verifies every path
+// exists on disk, so a generated link can never 404 inside the repo.
+const REPO_BLOB_BASE = "https://github.com/kjonathan254/Data-Centers-254/blob/main";
+const CAPTURE_PATH_RE = /research\/captures\/[\w.-]+\.md/;
+
+export function policyCaptureUrl(note: string | null | undefined): string | undefined {
+  const m = note?.match(CAPTURE_PATH_RE);
+  return m ? `${REPO_BLOB_BASE}/${m[0]}` : undefined;
+}
+
+// ─── Dataset access ────────────────────────────────────────────────────────
+
 export function getPolicyDataset(): PolicyDatasetJson {
   return data;
 }

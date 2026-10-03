@@ -456,7 +456,20 @@ function SinceLastReview({
                               {s.publisher}
                             </a>
                             <span className="font-mono text-[10px] uppercase text-slate-500">
-                              T{s.tier} &middot; {s.captureStatus}
+                              T{s.tier} &middot;{" "}
+                              {s.captureUrl ? (
+                                <a
+                                  href={s.captureUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  title="Open the verbatim capture file (the exact text we read, archived)"
+                                  className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/60"
+                                >
+                                  {s.captureStatus} ↗
+                                </a>
+                              ) : (
+                                s.captureStatus
+                              )}
                             </span>
                             {i < cl.sources.length - 1 && <span className="text-slate-700">/</span>}
                           </span>
@@ -653,7 +666,20 @@ function ClaimCard({ claim }: { claim: OpsData["claims"][number] }) {
                 </a>{" "}
                 — {s.label}
                 <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                  T{s.tier} · {s.captureStatus}
+                  T{s.tier} ·{" "}
+                  {s.captureUrl ? (
+                    <a
+                      href={s.captureUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Open the verbatim capture file (the exact text we read, archived)"
+                      className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/60"
+                    >
+                      {s.captureStatus} ↗
+                    </a>
+                  ) : (
+                    s.captureStatus
+                  )}
                 </span>
                 {s.excerpt && (
                   <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
@@ -890,6 +916,20 @@ function CountryRoom({
                 <span className="block text-xs text-slate-500">{s.label}</span>
                 <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-wider text-slate-600">
                   T{s.tier} · {s.captureStatus}
+                  {s.captureUrl && (
+                    <>
+                      {" "}·{" "}
+                      <a
+                        href={s.captureUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Open the verbatim capture file (the exact text we read, archived)"
+                        className="underline decoration-slate-700 underline-offset-2 transition-colors hover:text-cyan-300 hover:decoration-cyan-500/60"
+                      >
+                        capture ↗
+                      </a>
+                    </>
+                  )}
                   {s.id ? ` · ${s.id}` : ""}
                 </span>
               </li>

@@ -11,6 +11,7 @@ import {
   getPolicyChangelog,
   countLabel,
   formatPolicyDate,
+  policyCaptureUrl,
   type PolicySource,
 } from "@/lib/policy";
 import ControlRoomDashboard from "./control-room";
@@ -95,6 +96,7 @@ function buildOpsData(): OpsData {
             captureStatus: src.captureStatus,
             sourceType: src.sourceType,
             excerpt: src.excerpt ?? "",
+            captureUrl: policyCaptureUrl(src.captureNote),
           };
         });
       const minTier = sources.length ? Math.min(...sources.map((s) => s.tier)) : null;
@@ -162,6 +164,7 @@ function buildOpsData(): OpsData {
     captureStatus: s.captureStatus,
     sourceType: s.sourceType,
     excerpt: s.excerpt ?? "",
+    captureUrl: policyCaptureUrl(s.captureNote),
   });
   const changelog = getPolicyChangelog().map((e) => ({
     version: e.version,
@@ -201,6 +204,7 @@ function buildOpsData(): OpsData {
       captureStatus: s.captureStatus,
       sourceType: s.sourceType,
       excerpt: s.excerpt ?? "",
+      captureUrl: policyCaptureUrl(s.captureNote),
     }))
     .sort((a, b) => a.tier - b.tier || a.publisher.localeCompare(b.publisher) || a.id.localeCompare(b.id));
 
