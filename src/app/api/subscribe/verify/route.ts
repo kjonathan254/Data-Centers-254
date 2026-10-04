@@ -33,9 +33,9 @@ function welcomeEmailHtml(): string {
     <p style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#7dd3fc;margin:0 0 8px;">Data Centre 254</p>
     <h1 style="font-size:22px;margin:0 0 16px;color:#ffffff;">Welcome to The Rack Report</h1>
     <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">
-      Thanks for subscribing. Every Monday, DC254 will send you a concise
-      briefing on what changed across Kenya and East Africa's digital
-      infrastructure, before the working week starts.
+      Thanks for subscribing. On the first Monday of every month, DC254 will
+      send you a concise briefing on what changed across Kenya and East
+      Africa's digital infrastructure, before the working week starts.
     </p>
     <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">
       You can expect coverage of data centres, capacity, operators, subsea

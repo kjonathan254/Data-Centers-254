@@ -54,7 +54,7 @@ const reports = [
     title: "The Rack Report, Issue 002",
     period: "5 October 2026 · 6 pages",
     description:
-      "The weekly intelligence briefing for the people building, financing and regulating Kenya's digital infrastructure. Issue 002: what is actually live in Kenya's digital infrastructure, the verified board (27 tracked, 20 operational, 10.5 MW live), the 230 MW pipeline question, seven live cables at Mombasa, and the CA licence consultation closing on or about 8 October.",
+      "The monthly intelligence briefing for the people building, financing and regulating Kenya's digital infrastructure. Issue 002: what is actually live in Kenya's digital infrastructure, the verified board (27 tracked, 20 operational, 10.5 MW live), the 230 MW pipeline question, seven live cables at Mombasa, and the CA licence consultation closing on or about 8 October.",
     stats: [],
     summaryHref: "/rack-report",
     pdfHref: "/reports/rack-report-issue-2.pdf",

@@ -93,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/data-exports`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/rack-report`, lastModified: contentDate, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/rack-report`, lastModified: contentDate, changeFrequency: "monthly", priority: 0.9 },
     // /search is deliberately noindexed (internal search tool, empty state
     // without JS), so it must not be listed in the sitemap: a sitemap entry
     // would contradict the noindex and confuse crawlers.

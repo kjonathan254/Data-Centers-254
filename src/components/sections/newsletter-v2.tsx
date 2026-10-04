@@ -96,7 +96,7 @@ export default function NewsletterV2() {
         <div className="card-solid mx-auto max-w-xl p-8 text-center sm:p-10">
           <p className="eyebrow">The Rack Report</p>
           <h2 className="h-display-sm mt-3 text-foreground">
-            One weekly briefing on what changed in East Africa&apos;s digital
+            One monthly briefing on what changed in East Africa&apos;s digital
             infrastructure.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -170,7 +170,8 @@ export default function NewsletterV2() {
                 </p>
               )}
               <p className="mt-4 text-xs text-muted-foreground">
-                One issue every Monday. Unsubscribe anytime. Your email is used
+                One issue, the first Monday of every month. Unsubscribe anytime.
+                Your email is used
                 to send The Rack Report only &mdash; we do not sell subscriber
                 details.{" "}
                 <Link href="/privacy" className="text-cyan hover:underline">

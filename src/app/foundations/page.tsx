@@ -5,12 +5,12 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Foundations: Data Centre Basics",
   description:
-    "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
+    "The 12 foundational articles that launched The Rack Report, the monthly intelligence briefing from DataCentre254.",
   alternates: { canonical: "/foundations" },
   openGraph: {
     title: "Foundations: Data Centre Basics",
     description:
-      "The 12 foundational articles that launched The Rack Report, the weekly intelligence briefing from DataCentre254.",
+      "The 12 foundational articles that launched The Rack Report, the monthly intelligence briefing from DataCentre254.",
     siteName: "Data Centre 254",
     type: "website",
     locale: "en_KE",

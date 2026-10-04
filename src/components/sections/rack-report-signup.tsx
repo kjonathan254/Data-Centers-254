@@ -157,8 +157,8 @@ export default function RackReportSignup() {
             </p>
           )}
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            One concise briefing every Monday. Unsubscribe anytime. We do not sell
-            subscriber details.
+            One concise briefing, the first Monday of every month. Unsubscribe
+            anytime. We do not sell subscriber details.
           </p>
         </>
       )}

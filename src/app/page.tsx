@@ -37,7 +37,7 @@ export default function Home() {
         <LatestIntelligence />
         {/* 8, Learn the infrastructure: three beginner doors, not nine categories */}
         <StartHere />
-        {/* 9, Stay informed: The Rack Report, weekly Monday briefing */}
+        {/* 9, Stay informed: The Rack Report, monthly first-Monday briefing */}
         <NewsletterV2 />
       </main>
       <Footer />

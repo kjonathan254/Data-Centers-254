@@ -2,37 +2,41 @@
 
 **Owner: Kevin Jonathan Otieno. Companion to docs/NEWS-TO-ASSETS-PLAYBOOK.md
 and docs/RESEARCH-VERIFICATION-STANDARDS.md. This page formalises what the
-signup forms promise ("One concise briefing every Monday. Unsubscribe anytime.")
-so the commitment survives beyond any single month's energy.**
+signup forms promise ("One concise briefing, the first Monday of every month.
+Unsubscribe anytime.") so the commitment survives beyond any single month's
+energy.**
 
-> **Cadence change, October 2026:** The Rack Report returns to **weekly**
-> (every Monday) with Issue 002, published **Monday 5 October 2026**.
-> Editor's ruling, 5 October 2026: "I would make The Rack Report less of a
-> 'newsletter of links' and more of a weekly intelligence briefing. Its job
-> is: What changed? What can we verify? Why does it matter? What should we
-> watch next?" The weekly loop pairs the Monday briefing with Wednesday's
-> investigation and Friday's flagship intelligence on the site. The September
-> 2026 monthly interlude is superseded; issue numbering continues
-> sequentially (Issue 001 shipped 14 September 2026).
+> **Cadence change, October 2026 (corrected 5 October 2026):** The Rack
+> Report runs **monthly, first Monday** at 06:00 EAT, from Issue 002
+> (published Monday 5 October 2026). The same-day flip to weekly is
+> superseded by the editor's corrected ruling: "Cadence is 1 month, weekly
+> isn't viable." The intelligence-briefing positioning is cadence-independent
+> and stands: the seven-section anatomy, the verification chain, and the
+> promise discipline below. The September rationale carries: one well-
+> verified issue a month is sustainable alongside the reporting load. Issue
+> numbering continues sequentially; Issue 003 is due Monday 2 November 2026.
 >
-> **Cadence change, September 2026 (superseded 5 October 2026):** moved from
-> weekly to monthly (first Monday) with the original Issue 002 send; rationale
-> was sustainability alongside the reporting load. The weekly intelligence
-> briefing format restores weekly cadence at lower per-issue weight.
+> **Cadence change, 5 October 2026 (superseded same day):** flipped monthly
+> to weekly with Issue 002; the editor corrected it before the next send.
+>
+> **Cadence change, September 2026:** moved from weekly to monthly (first
+> Monday) with the original Issue 002 send; rationale was sustainability
+> alongside the reporting load. That ruling is restored as the standing
+> cadence.
 
 ## The two streams
 
 | Stream | Cadence | Send window | Format | Status page |
 |---|---|---|---|---|
-| The Rack Report | Weekly, Monday | 06:00 EAT (03:00 UTC) | Email + PDF | /rack-report |
+| The Rack Report | Monthly, first Monday | 06:00 EAT (03:00 UTC) | Email + PDF | /rack-report |
 | DC254 Brief | Monthly, first Tuesday | 06:00 EAT | Email + web summary | /research |
 
-- **The Rack Report** is the flagship: the week's most important
+- **The Rack Report** is the flagship: the month's most important
   developments in the seven-section briefing anatomy (Headline, By the
   Numbers, Infrastructure Intelligence, Inside the Map, Policy Watch, What
   We're Watching, From DataCentre254). Issue numbering is sequential and
-  never skips; if a Monday must slip, the issue ships the next day with a
-  dated editor's note.
+  never skips; if a first Monday must slip, the issue ships the next day
+  with a dated editor's note.
 - **The DC254 Brief** is the monthly digest: what changed in the durable
   assets (directory, trackers, snapshots), what shipped on the site, and
   what the next month is watching. It is the segmentation-aware stream.

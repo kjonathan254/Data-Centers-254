@@ -16,29 +16,29 @@ import RackReportSignup from "@/components/sections/rack-report-signup";
 import { getLatestArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "The Rack Report: Kenya's Data Centre Weekly",
+  title: "The Rack Report: Kenya's Data Centre Briefing",
   description:
-    "The Rack Report is DC254's weekly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free, every Monday.",
+    "The Rack Report is DC254's monthly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free, the first Monday of every month.",
   alternates: { canonical: "/rack-report" },
   openGraph: {
-    title: "The Rack Report: Kenya's Data Centre Weekly",
+    title: "The Rack Report: Kenya's Data Centre Briefing",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
     type: "website",
     images: [
       {
         url: "/og/rack-report-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "The Rack Report — Data Centre 254 weekly intelligence briefing",
+        alt: "The Rack Report — Data Centre 254 monthly intelligence briefing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Rack Report: Kenya's Data Centre Weekly",
+    title: "The Rack Report: Kenya's Data Centre Briefing",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
     images: ["/og/rack-report-cover.jpg"],
   },
 };
@@ -50,7 +50,7 @@ const anatomy = [
   {
     icon: Newspaper,
     name: "The Headline",
-    body: "What changed this week, and what it actually means.",
+    body: "What changed this month, and what it actually means.",
   },
   {
     icon: BarChart3,
@@ -98,11 +98,11 @@ export default function RackReportPage() {
               The Rack Report · by DataCentre254
             </p>
             <h1 className="text-display-sm text-foreground mb-5">
-              The Monday briefing on Kenya and East Africa&apos;s digital
+              The monthly briefing on Kenya and East Africa&apos;s digital
               infrastructure.
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              The Rack Report is DC254&apos;s weekly intelligence briefing.
+              The Rack Report is DC254&apos;s monthly intelligence briefing.
               Every issue distils the most important developments across the
               market: new and expanding data centres, operator activity,
               capacity changes, power and connectivity, subsea cables, AI
@@ -172,8 +172,8 @@ export default function RackReportPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 {
-                  t: "Weekly, Monday",
-                  b: "One issue, every Monday, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
+                  t: "Monthly, first Monday",
+                  b: "One issue, the first Monday of every month, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
                 },
                 {
                   t: "One sponsor, labelled",
