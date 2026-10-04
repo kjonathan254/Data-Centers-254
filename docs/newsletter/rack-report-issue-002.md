@@ -2,95 +2,83 @@
 
 **DC254 · Monday 5 October 2026 · Master editorial copy (source of truth for PDF + email editions)**
 
+**Theme: What Is Actually Live in Kenya's Digital Infrastructure?**
+
 ---
 
 ## 01 · THE HEADLINE
 
-### America's development bank makes its biggest equity bet, and it points at African bandwidth
+### Kenya's infrastructure story is growing quickly. The numbers only make sense when you separate them.
 
-On 16 September 2026, Reuters reported that the US International Development Finance Corporation will invest up to $155 million in WIOCC Group, and called it the largest equity investment in the agency's history. The money is equity, not a loan: the DFC shares both the risk and the upside of WIOCC's build-out across subsea cables, open-access terrestrial fibre and data centres. It also stacks on top of the $300 million committed by Africa Finance Corporation and Saudi Arabia's Vision Invest, announced at LEAP 2026 in Riyadh on 1 September (WIOCC Group, 3 September 2026). That is up to $455 million of fresh institutional capital behind one wholesale platform in sixteen days. The phrase "up to" matters: commitments of this size are drawn in tranches as projects hit milestones, so the number that finally counts is how much capacity actually goes live, where, and when.
+Kenya's digital infrastructure story is growing quickly, but the numbers become misleading when announcements, construction projects and operational infrastructure are treated as the same thing. They are three different kinds of fact. An announcement is intention. A construction site is capital at risk. An operational facility is serving load. This week, DC254 looked at what can actually be verified, and re-checked every figure against the directory before publishing this issue. The result is a simple discipline: count what is live, list what is announced, and never let the two blur into one flattering number.
 
-*Sources: Reuters, 16 September 2026; WIOCC Group, 3 September 2026*
+*Sources: DC254 directory and cable tracker, Q3 2026 snapshot, re-verified 5 October 2026*
 
 ## 02 · BY THE NUMBERS
 
-### $455M
+### The verified board, on one screen
 
-**Institutional capital committed to WIOCC Group in sixteen days**
+**27** — facilities and projects tracked in Kenya
 
-$300 million from Africa Finance Corporation and Vision Invest (announced 1 September 2026, reported 3 September 2026), followed by up to $155 million in US DFC equity, the agency's largest ever (Reuters, 16 September 2026). WIOCC is a wholesalers' wholesaler: it sells large blocks of capacity to the operators, ISPs and enterprises that serve everyone else, so this capital enters the market as wholesale bandwidth price pressure and open-access fibre, not consumer brands. Its asset base already carries more than US$950 million invested across subsea stakes, terrestrial fibre and a data centre division (Submarine Networks, 4 September 2026).
+**20** — operational
 
-## 03 · INFRASTRUCTURE
+**10.5 MW** — verified live IT load, published by 8 of the 20 operational facilities
 
-### Nairobi's newest delivered megawatts, and the scoreboard behind them
+**230 MW** — announced pipeline
 
-The most concrete infrastructure fact in this issue: Digital Realty and Africa Data Centres launched NBO2 in Nairobi with about 6.4 megawatts of commissioned capacity reported by trade press (ET Datacenters, 10 September 2026; first reported 7 September 2026). Commissioned megawatts are the market's real currency, which is why we keep a running scoreboard rather than a pile of press releases. On that scoreboard, Raxio's up to $380 million July 2026 raise keeps its Nairobi build on the watch list until commissioning is reported, iXAfrica's NBOX1 (22.5MW design capacity) remains the region's hyperscale AI reference site, and Nxtra by Airtel Africa's Tatu City campus, with US$150 million committed across two phases totalling 44MW, continues construction that began in September 2025. Status, not criticism: the distinction between announced and delivered is where infrastructure stories go to hide.
+**7** — submarine cable systems currently in service at Mombasa
 
-*Sources: ET Datacenters, 10 September 2026; Raxio Group disclosures, July 2026; ICT Authority, 12 September 2025; operator disclosures*
+Then one important sentence: **the 230 MW pipeline is not 230 MW of operational capacity.** That is this newsletter's central lesson. The pipeline splits into 77 MW physically under construction, 53 MW committed, and 100 MW resting on a single early-stage announcement. The 10.5 MW is a floor, not a ceiling: most operational facilities do not publish a live load figure, so Kenya's real running load is higher and unmeasured in public data. Read the two numbers side by side, never added together.
 
-## 04 · POWER
+*Sources: DC254 directory, Q3 2026, re-verified 5 October 2026*
 
-### Generation is not reliability, and buyers who confuse the two overpay
+## 03 · INFRASTRUCTURE INTELLIGENCE
 
-Kenya's grid headlines are genuinely good: geothermal supplies roughly 45 percent of generation around the clock (Climate Investment Funds, 5 September 2024), about 950MW of installed geothermal capacity anchors the system, and record peak demand sits at 2,439MW (TechCabal, 20 August 2026). But generation and reliability are different products. No credible data centre trusts the grid alone: UPS banks bridge the first seconds, diesel generators carry the load for as long as fuel lasts, and automatic transfer switches choreograph the handover. The developments behind this issue illustrate both halves. Amaco's HERCULES plan in Mombasa is designed to self-generate from a floating LNG-fed barge rather than wait for grid allocation, with initial site demand of 75 to 100MW (Business Daily, 17 August and 10 September 2026). And the reported scale of hyperscale interest, G42's electricity request growing from 60MW to 1,000MW, about a third of Kenya's installed generation (Kenyans.co.ke, 22 August 2026; Business Daily, 10 September 2026), shows why transmission planning, not generation, is the binding constraint.
+### The value is not knowing a project exists. It is knowing where it sits.
 
-## 05 · CONNECTIVITY
+Every DC254 record carries a status, and the four statuses mean very different things: Operational, then Under Construction, then Committed, then Early Stage. The ladder matters because certainty decays at every rung. The 20 operational facilities carry 42.9 MW of designed capacity. The 3 under-construction projects, iXAfrica NBOX1.2 (18 MW), Africa Data Centres NBO2 (15 MW) and Nxtra by Airtel at Tatu City (44 MW), have capital committed and structures going up. The 1 committed project, iXAfrica NBOX2 at Tilisi (53 MW), has a developer on the hook. The 3 early-stage records, led by the Microsoft and G42 announcement (100 MW stated), are intentions. One geographic fact sharpens the picture: every non-operational record sits in the Nairobi metro, while Mombasa's four records are all operational. The next 230 MW, if it gets built, lands where the demand, fibre and staff already are.
 
-### What $455 million buys on the water
+Read the full briefing: data-centers-254.vercel.app/articles/kenya-digital-infrastructure-what-is-live
 
-Follow the WIOCC capital downstream and it lands on the Kenyan coast, where seven live submarine systems already converge on one short stretch of shoreline near Mombasa. DFC equity in a wholesaler with $950 million-plus of assets (Submarine Networks, 4 September 2026) means more open-access terrestrial fibre and more wholesale capacity competition, which is what actually moves Kenyan transit prices. Meanwhile the physical progress is quiet but real: Daraja, the Meta-backed cable hosted by Safaricom from Salalah to Mombasa, remains on course for service this year, and Africa-1, landed at Mombasa in 2024, still awaits its ready-for-service call. "Landed" is not "in service"; a single RFS announcement changes Kenya's live cable count for the first time since 2024. LuLu, the proposed 500km coastal diversity route from Mombasa to Lamu with 144 fibre pairs, remains announced with no supplier signed.
+*Sources: DC254 directory, Q3 2026, re-verified 5 October 2026; operator disclosures*
 
-*Sources: Submarine Networks, 4 September 2026; operator and consortium disclosures, September 2026*
+## 04 · INSIDE THE MAP
 
-## 06 · MONEY & INVESTMENT
+### Kenya's international connectivity story begins at Mombasa
 
-### Three kinds of capital, one signal
+DC254 currently tracks 10 submarine cable systems, with 7 in service: TEAMS and SEACOM (2009), EASSy (2010), LION2 (2012), DARE1 (2021), PEACE (2022) and 2Africa (2024). The other 3 sit at different stages of development, and the distinction matters as much here as it does on land. Africa-1 has landed at Mombasa but has not announced ready for service, so it is not counted as live. Daraja, the Meta-backed cable hosted by Safaricom from Salalah to Mombasa, is announced. LuLu, the proposed 500 km coastal diversity route from Mombasa towards Lamu, is planned. Announced, landed, ready for service and operational are not interchangeable terms. A single RFS announcement changes Kenya's live cable count for the first time since 2024, which is why the tracker watches the coast as closely as the rack row.
 
-Look at who is writing the cheques. The US DFC's up to $155 million is Uncle Sam's balance sheet taking equity risk, a validation no press release can fake (Reuters, 16 September 2026). Africa Finance Corporation brings institutional project discipline, and Vision Invest brings Saudi commercial capital (WIOCC Group, 3 September 2026). Around them sits the wider backdrop: AWS publicly committing US$1.5 billion toward African digital infrastructure, and Oracle's first African cloud region still pending on Kenyan soil after the $600M AmCham summit pledges (The Star, 14 September 2026). Different mandates, different return horizons, one shared bet: African digital infrastructure has become an investable asset class. For Kenya the near-term test is conversion, turning announced capital into commissioned capacity, hired engineers and signed contracts.
+Explore the map: data-centers-254.vercel.app/infrastructure/map
 
-## 07 · POLICY
+*Sources: DC254 cable tracker, verified monthly; operator and consortium disclosures*
 
-### 8 October: the licence consultation clock is running
+## 05 · POLICY WATCH
 
-Stakeholders have until roughly 8 October 2026 to file submissions on the Communications Authority's proposed standalone data centre licence, a 30-day window that opened on 8 September 2026. The fee comparison is the headline (a KES 5,000 application fee and KES 100,000 initial fee against the NFP-T2 route's KES 15 million 15-year charge), but the three quieter details still decide the economics: the 0.5% Universal Service Fund levy applies on top, the 15-year validity matches the current regime, and existing NFP and ASP holders can keep operating data centres without taking the new licence. The parallel track remains data protection: ODPC guidance expects Kenyan personal data to be processed in Kenya or to keep a serving copy in-country, which turns every licensing decision into a compliance decision too. Operators reading both regimes together will write better submissions.
+### The licence question that outlasts the deadline
 
-*Sources: Communications Authority of Kenya, 8 September 2026; ODPC guidance*
+Kenya's proposed standalone data-centre licence is this week's other important development. The Communications Authority's consultation is still open, with the consultation period closing on or about 8 October, thirty days from the 8 September publication. The interesting question is not merely the proposed licence. It is the treatment of existing NFP and ASP licence holders, who can currently keep operating data centres without taking the new one. The same point surfaced in this week's LinkedIn discussion on the framework. The question to watch: will the final framework create materially different regulatory positions between existing NFP/ASP licence holders and new data-centre entrants? Surfacing the issue is the job; pretending we already know the answer is not. Submissions close soon, and whoever files will be reading that carve-out closely.
 
-## 08 · WHAT WE'RE WATCHING
+*Sources: Communications Authority of Kenya, consultation published 8 September 2026, page re-verified 5 October 2026*
 
-**WATCH 01 · The CA docket.** Who files by ~8 October, and whether the final framework touches the fee schedule or the NFP/ASP carve-out.
+## 06 · WHAT WE'RE WATCHING
 
-**WATCH 02 · Daraja and Africa-1 RFS.** Both systems are physically close to done. A ready-for-service announcement moves Kenya's live cable count for the first time since 2024.
+**WATCH 01 · Data-centre licensing.** How the CA resolves the proposed standalone framework, and what it does with the NFP/ASP carve-out.
 
-**WATCH 03 · Amaco's next filing.** A signed GE Vernova contract, a financing close, or a confirmed site handover at Dongo Kundu moves HERCULES from announced to underway.
+**WATCH 02 · Capacity vs pipeline.** Whether announced projects progress into construction and ultimately into operational capacity. The 230 MW is the number to watch move, rung by rung.
 
-**WATCH 04 · WIOCC's drawdown.** How quickly the $455M converts into visible milestones: new fibre routes, data centre groundbreakings, tranche disclosures.
+**WATCH 03 · Mombasa connectivity.** Movement among the cable systems currently tracked as landed, RFS-pending or planned. One RFS call changes the live count.
 
-## 09 · FROM DATACENTRE254
+## 07 · FROM DC254
 
-Go deeper on the stories behind this issue, researched, sourced, published openly:
+**The infrastructure behind the headline matters.** A project announcement tells us something. Construction tells us more. An operational facility tells us much more. DC254's job is to keep those categories separate. We don't count an announcement as infrastructure.
 
-- **US DFC Bets Up to $155M on WIOCC: What It Means for Kenya** · why an equity structure and the phrase "up to" both matter
-- **Kenya's Power Reliability: What Generation Numbers Hide** · uptime is engineered in the building, not generated on the grid
-- **Raxio vs Africa Data Centres: A Fair Comparison** · delivered megawatts versus announced plans, status not criticism
-- **Colocation in Nairobi: The Buyer's Guide** · updated 18 September 2026 with the current scoreboard
+**Access digital intelligence.** Explore the latest DC254 research, directory and infrastructure maps at data-centers-254.vercel.app/research.
 
-All articles at data-centers-254.vercel.app. Every figure cited above carries its source and publication date.
+---
 
-## 10 · THE ISSUE IN NUMBERS
+## EDITOR'S NOTE
 
-| Figure | What it is |
-|---|---|
-| **$155M** | US DFC equity commitment to WIOCC, the agency's largest ever (Reuters, 16 September 2026) |
-| **$455M** | Total fresh institutional capital into WIOCC in sixteen days |
-| **6.4MW** | Commissioned capacity at NBO2, Nairobi, launched September 2026 (ET Datacenters, 10 September 2026) |
-| **~8 Oct 2026** | Deadline for CA standalone licence submissions (30 days from 8 September) |
-| **45%** | Geothermal share of Kenya's generation (Climate Investment Funds, 5 September 2024) |
-| **2,439MW** | Kenya's record peak demand (TechCabal, 20 August 2026) |
-
-## 11 · EDITOR'S NOTE
-
-**Verification standard.** Every figure in The Rack Report carries its source and publication date, and we do not publish numbers we cannot trace to an operator, regulator or dated news report. Where plans are announced but not yet contracted, we say so in the same breath as the headline figure, because the difference between a plan and a project is where infrastructure stories go to hide.
+**Verification standard.** Every figure in The Rack Report carries its source and publication date, and we do not publish numbers we cannot trace to an operator, regulator or dated news report. Where plans are announced but not yet contracted, we say so in the same breath as the headline figure, because the difference between a plan and a project is where infrastructure stories go to hide. This issue's figures were re-verified against the DC254 dataset on 5 October 2026.
 
 **Corrections and tips.** Spotted something wrong or know something we should verify? DC254 corrects errors openly and quickly. Reach the newsroom through the contact page at data-centers-254.vercel.app, or reply to any edition of this briefing by email.
 
@@ -98,4 +86,4 @@ All articles at data-centers-254.vercel.app. Every figure cited above carries it
 
 ---
 
-*Compiled from reporting current to 19 September 2026. Sources dated in text.*
+*Compiled from reporting current to 2 October 2026. Sources dated in text. Figures re-verified 5 October 2026.*

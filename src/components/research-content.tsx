@@ -52,13 +52,13 @@ const reports = [
   {
     edition: "Rack Report · Issue 002",
     title: "The Rack Report, Issue 002",
-    period: "5 October 2026 · 8 pages",
+    period: "5 October 2026 · 6 pages",
     description:
-      "The monthly intelligence briefing for the people building, financing and regulating Kenya's digital infrastructure. Issue 002: the US DFC's largest-ever equity bet, up to $155M into WIOCC and what it means for Kenya's bandwidth, NBO2's 6.4MW of delivered capacity, why generation is not reliability, and the CA licence consultation closing on 8 October.",
+      "The weekly intelligence briefing for the people building, financing and regulating Kenya's digital infrastructure. Issue 002: what is actually live in Kenya's digital infrastructure, the verified board (27 tracked, 20 operational, 10.5 MW live), the 230 MW pipeline question, seven live cables at Mombasa, and the CA licence consultation closing on or about 8 October.",
     stats: [],
     summaryHref: "/rack-report",
     pdfHref: "/reports/rack-report-issue-2.pdf",
-    pdfMeta: "PDF · 8 pages · 0.4 MB",
+    pdfMeta: "PDF · 6 pages · 0.2 MB",
     featured: false,
   },
   {

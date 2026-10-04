@@ -2,29 +2,37 @@
 
 **Owner: Kevin Jonathan Otieno. Companion to docs/NEWS-TO-ASSETS-PLAYBOOK.md
 and docs/RESEARCH-VERIFICATION-STANDARDS.md. This page formalises what the
-signup forms promise ("One concise email each month. Unsubscribe anytime.")
+signup forms promise ("One concise briefing every Monday. Unsubscribe anytime.")
 so the commitment survives beyond any single month's energy.**
 
-> **Cadence change, September 2026:** The Rack Report moved from weekly to
-> **monthly** (first Monday) with Issue 002, which ships **Monday
-> 5 October 2026**. Issue numbering continues sequentially from the weekly
-> era (Issue 001 shipped 14 September 2026). Rationale: one deeply sourced
-> issue a month is sustainable alongside the reporting load, and a promise
-> kept twelve times a year beats one kept in spirit fifty-two.
+> **Cadence change, October 2026:** The Rack Report returns to **weekly**
+> (every Monday) with Issue 002, published **Monday 5 October 2026**.
+> Editor's ruling, 5 October 2026: "I would make The Rack Report less of a
+> 'newsletter of links' and more of a weekly intelligence briefing. Its job
+> is: What changed? What can we verify? Why does it matter? What should we
+> watch next?" The weekly loop pairs the Monday briefing with Wednesday's
+> investigation and Friday's flagship intelligence on the site. The September
+> 2026 monthly interlude is superseded; issue numbering continues
+> sequentially (Issue 001 shipped 14 September 2026).
+>
+> **Cadence change, September 2026 (superseded 5 October 2026):** moved from
+> weekly to monthly (first Monday) with the original Issue 002 send; rationale
+> was sustainability alongside the reporting load. The weekly intelligence
+> briefing format restores weekly cadence at lower per-issue weight.
 
 ## The two streams
 
 | Stream | Cadence | Send window | Format | Status page |
 |---|---|---|---|---|
-| The Rack Report | Monthly, first Monday | 06:00 EAT (03:00 UTC) | 8-page PDF + email | /rack-report |
+| The Rack Report | Weekly, Monday | 06:00 EAT (03:00 UTC) | Email + PDF | /rack-report |
 | DC254 Brief | Monthly, first Tuesday | 06:00 EAT | Email + web summary | /research |
 
-- **The Rack Report** is the flagship: the month's most important
-  developments in the fixed nine-section anatomy (Headline, By the Numbers,
-  Infrastructure, Power, Connectivity, Money, Policy, What We're Watching,
-  From DataCentre254). Issue numbering is sequential and never skips; if the
-  first Monday must slip, the issue ships the next day with a dated editor's
-  note.
+- **The Rack Report** is the flagship: the week's most important
+  developments in the seven-section briefing anatomy (Headline, By the
+  Numbers, Infrastructure Intelligence, Inside the Map, Policy Watch, What
+  We're Watching, From DataCentre254). Issue numbering is sequential and
+  never skips; if a Monday must slip, the issue ships the next day with a
+  dated editor's note.
 - **The DC254 Brief** is the monthly digest: what changed in the durable
   assets (directory, trackers, snapshots), what shipped on the site, and
   what the next month is watching. It is the segmentation-aware stream.
@@ -64,7 +72,7 @@ the trust engine.
 ## Sponsor-ready inventory (rules)
 
 - One sponsor per Rack Report issue, clearly labelled, tracked click report
-  monthly (sponsor click counters already run in the newsletter store).
+  per slot (sponsor click counters already run in the newsletter store).
 - Segment counts shown on /advertise come from the live store, never inflated.
 - The quarterly State of the Market dataset bundle is the sponsorship
   adjacent product: free, cited, and proof of the audience's professionalism.

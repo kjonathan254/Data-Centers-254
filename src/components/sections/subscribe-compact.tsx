@@ -86,12 +86,12 @@ export default function SubscribeCompact({
 
   return (
     <aside className="mt-14 rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8">
-      <p className="eyebrow">The Rack Report · Monthly intelligence briefing</p>
+      <p className="eyebrow">The Rack Report · Weekly intelligence briefing</p>
       <p className="mt-2 text-base font-semibold text-foreground sm:text-lg">
-        This was one article. The monthly briefing is the whole build-out.
+        This was one article. The Monday briefing is the whole build-out.
       </p>
       <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-        The monthly briefing on Kenya&apos;s data-centre industry, read by
+        The weekly briefing on Kenya&apos;s data-centre industry, read by
         operators, investors and journalists.
       </p>
       <p className="mt-2 text-sm font-medium text-foreground/90">
@@ -158,7 +158,7 @@ export default function SubscribeCompact({
             </p>
           )}
           <p className="mt-3 text-xs text-muted-foreground">
-            One issue each month. Unsubscribe anytime.
+            One issue every Monday. Unsubscribe anytime.
           </p>
         </>
       )}

@@ -4,9 +4,7 @@ import {
   Newspaper,
   BarChart3,
   Server,
-  Zap,
   Network,
-  Banknote,
   Landmark,
   Eye,
   Link2,
@@ -18,29 +16,29 @@ import RackReportSignup from "@/components/sections/rack-report-signup";
 import { getLatestArticles } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "The Rack Report: Kenya's Data Centre Monthly",
+  title: "The Rack Report: Kenya's Data Centre Weekly",
   description:
-    "The Rack Report is DC254's monthly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free, first Monday of the month.",
+    "The Rack Report is DC254's weekly intelligence briefing: data centres, power, cloud, connectivity, investment, and policy. Free, every Monday.",
   alternates: { canonical: "/rack-report" },
   openGraph: {
-    title: "The Rack Report: Kenya's Data Centre Monthly",
+    title: "The Rack Report: Kenya's Data Centre Weekly",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
     type: "website",
     images: [
       {
         url: "/og/rack-report-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "The Rack Report — Data Centre 254 monthly intelligence briefing",
+        alt: "The Rack Report — Data Centre 254 weekly intelligence briefing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Rack Report: Kenya's Data Centre Monthly",
+    title: "The Rack Report: Kenya's Data Centre Weekly",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The weekly intelligence briefing from DataCentre254.",
     images: ["/og/rack-report-cover.jpg"],
   },
 };
@@ -52,47 +50,37 @@ const anatomy = [
   {
     icon: Newspaper,
     name: "The Headline",
-    body: "The biggest development of the month, and what it actually means.",
+    body: "What changed this week, and what it actually means.",
   },
   {
     icon: BarChart3,
     name: "By the Numbers",
-    body: "One important industry statistic, sourced and put in context.",
+    body: "The verified figures, sourced and put in context.",
   },
   {
     icon: Server,
-    name: "Infrastructure",
-    body: "What's happening with data centres, builds, capacity, operators.",
-  },
-  {
-    icon: Zap,
-    name: "Power",
-    body: "Energy developments affecting the industry: tariffs, generation, grid.",
+    name: "Infrastructure Intelligence",
+    body: "What is live, what is under construction, what is only announced.",
   },
   {
     icon: Network,
-    name: "Connectivity",
-    body: "Subsea cables, fibre, IXPs and network expansion.",
-  },
-  {
-    icon: Banknote,
-    name: "Money",
-    body: "Investment, funding, acquisitions and expansion deals.",
+    name: "Inside the Map",
+    body: "Subsea cables, landing states and connectivity from Mombasa up.",
   },
   {
     icon: Landmark,
-    name: "Policy",
-    body: "Government and regulatory developments that move the market.",
+    name: "Policy Watch",
+    body: "Regulatory developments, and the questions they raise without answering.",
   },
   {
     icon: Eye,
     name: "What We're Watching",
-    body: "Two to three developments likely to matter next, before they land.",
+    body: "Three developments likely to matter next, before they land.",
   },
   {
     icon: Link2,
     name: "From DataCentre254",
-    body: "Links to our strongest analysis of the month, for going deeper.",
+    body: "The founder's note, and where to go deeper on the site.",
   },
 ];
 
@@ -110,11 +98,11 @@ export default function RackReportPage() {
               The Rack Report · by DataCentre254
             </p>
             <h1 className="text-display-sm text-foreground mb-5">
-              The monthly briefing on Kenya and East Africa&apos;s digital
+              The Monday briefing on Kenya and East Africa&apos;s digital
               infrastructure.
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-4">
-              The Rack Report is DC254&apos;s monthly infrastructure briefing.
+              The Rack Report is DC254&apos;s weekly intelligence briefing.
               Every issue distils the most important developments across the
               market: new and expanding data centres, operator activity,
               capacity changes, power and connectivity, subsea cables, AI
@@ -184,8 +172,8 @@ export default function RackReportPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 {
-                  t: "Monthly, first Monday",
-                  b: "One issue, every month, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
+                  t: "Weekly, Monday",
+                  b: "One issue, every Monday, sequential numbering. Sent 06:00 EAT so Nairobi starts with it.",
                 },
                 {
                   t: "One sponsor, labelled",
@@ -212,11 +200,11 @@ export default function RackReportPage() {
               Read Issue #002
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
-              Issue 002 ships on Monday 5 October 2026: the US DFC&apos;s
-              largest-ever equity bet, up to $155M into WIOCC and what it means
-              for Kenya&apos;s bandwidth, NBO2&apos;s 6.4MW of delivered
-              capacity, why generation is not reliability, and the CA licence
-              consultation closing on 8 October.
+              Issue 002 published on Monday 5 October 2026: what is actually
+              live in Kenya&apos;s digital infrastructure. The verified board
+              (27 tracked, 20 operational, 10.5 MW live), the 230 MW pipeline
+              question, seven live cable systems at Mombasa, and the CA licence
+              consultation closing on or about 8 October.
             </p>
             <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-4 flex flex-col sm:flex-row sm:items-center gap-4">
               <div className="flex-1">
@@ -224,7 +212,7 @@ export default function RackReportPage() {
                   The Rack Report · Issue 002
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Monday 5 October 2026 · 8 pages · PDF, about 430 KB
+                  Monday 5 October 2026 · 6 pages · PDF, about 165 KB
                 </p>
               </div>
               <a

@@ -14,7 +14,7 @@ const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
   check:
     "Almost there - check your inbox and click the confirmation link to get the next issue.",
   subscribed:
-    "You're on the list. The next issue lands on the first Monday of the month. Watch your inbox.",
+    "You're on the list. The next issue lands on Monday morning. Watch your inbox.",
   already: "You're already on the list.",
   error: "Something went wrong. Try again.",
 };
@@ -157,7 +157,7 @@ export default function RackReportSignup() {
             </p>
           )}
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            One concise email each month. Unsubscribe anytime. We do not sell
+            One concise briefing every Monday. Unsubscribe anytime. We do not sell
             subscriber details.
           </p>
         </>
