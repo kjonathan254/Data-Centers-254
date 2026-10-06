@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nairobi is the cluster. Mombasa is the gateway. | DC254 Infrastructure Brief</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: 1080px 1350px; margin: 0; }
+
+  html, body { margin: 0; padding: 0; width: 1080px; background: #0B0C12;
+               font-family: 'Carlito','Liberation Sans',sans-serif; }
+
+  .page { background: #0B0C12; width: 1080px; height: 1350px; position: relative;
+          display: flex; flex-direction: column;
+          page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* decorative layers: photo, grid, glow - all contained (inset 0, no negative offsets) */
+  .bgphoto { position: absolute; inset: 0; z-index: 0; background-size: cover;
+             background-position: center; pointer-events: none; }
+  .grid-lines { position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none;
+    background-image: linear-gradient(rgba(56,196,216,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(56,196,216,0.04) 1px, transparent 1px);
+    background-size: 72px 72px; }
+  .glow { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 40% at 85% 0%, rgba(56,196,216,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 10% 100%, rgba(56,196,216,0.06), transparent 60%); }
+
+  .inner { position: relative; z-index: 2; display: flex; flex-direction: column; flex: 1;
+           padding: 64px 72px; }
+
+  .kicker { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #38C4D8;
+            font-size: 15px; letter-spacing: 0.28em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 14px; margin-bottom: 34px; }
+  .kicker::after { content: ''; flex: 1; height: 1px;
+                   background: linear-gradient(90deg, rgba(56,196,216,0.5), rgba(56,196,216,0.05)); }
+
+  h1 { color: #F1F5F9; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; font-size: 60px; }
+  h2 { color: #F1F5F9; font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; font-size: 47px; }
+  .sub { color: #8A93A6; font-size: 24px; line-height: 1.45; }
+
+  .foot { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+          font-size: 14px; display: flex; justify-content: space-between; align-items: center;
+          margin-top: auto; padding-top: 28px; border-top: 1px solid rgba(148,163,184,0.12); }
+  .foot .brand { color: #38C4D8; font-weight: 700; letter-spacing: 0.12em; }
+
+  .bigrow { display: flex; align-items: baseline; gap: 20px; margin: 8px 0 6px; }
+  .bignum { color: #38C4D8; font-weight: 700; font-size: 158px; line-height: 0.95;
+            font-variant-numeric: tabular-nums; letter-spacing: -0.03em; }
+  .bignum small { font-size: 40px; color: #F1F5F9; font-weight: 700; }
+  .bigcap { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #8A93A6;
+            font-size: 15px; text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.7; }
+
+  .stat { display: flex; align-items: baseline; gap: 18px; padding: 20px 0;
+          border-bottom: 1px solid rgba(148,163,184,0.12); }
+  .stat:last-of-type { border-bottom: none; }
+  .stat .v { color: #F1F5F9; font-weight: 700; font-size: 30px; font-variant-numeric: tabular-nums;
+             min-width: 150px; }
+  .stat .v.cyan { color: #38C4D8; }
+  .stat .l { color: #8A93A6; font-size: 21px; line-height: 1.4; }
+  .stat .l b { color: #F1F5F9; font-weight: 700; }
+
+  .punch { color: #F1F5F9; font-weight: 700; font-size: 25px; line-height: 1.4;
+           border-left: 3px solid #38C4D8; padding-left: 20px; margin-top: 26px; }
+  .punch .cy { color: #38C4D8; }
+
+  /* slide 1 real-photo split */
+  .splitwrap { flex: 1; display: flex; align-items: center; margin: 12px 0 6px; }
+  .splitband { position: relative; display: flex; width: 100%; height: 690px; }
+  .half { position: relative; width: 50%; height: 100%; }
+  .half img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+              display: block; filter: grayscale(0.45) brightness(0.72) contrast(1.06); }
+  .half:first-child img { border-radius: 16px 0 0 16px; object-position: 30% 40%; }
+  .half:last-child img { border-radius: 0 16px 16px 0; object-position: center 55%; }
+  .tint { position: absolute; inset: 0; }
+  .half:first-child .tint { border-radius: 16px 0 0 16px;
+    background: linear-gradient(180deg, rgba(5,6,10,0.05) 38%, rgba(5,6,10,0.96) 92%),
+                linear-gradient(0deg, rgba(56,196,216,0.30), rgba(56,196,216,0.30)); }
+  .half:last-child .tint { border-radius: 0 16px 16px 0;
+    background: linear-gradient(180deg, rgba(5,6,10,0.05) 38%, rgba(5,6,10,0.96) 92%),
+                linear-gradient(0deg, rgba(232,163,61,0.32), rgba(232,163,61,0.32)); }
+  .hcap { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 26px 20px;
+          display: flex; flex-direction: column; gap: 7px; }
+  .hlabel { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 15px;
+            letter-spacing: 0.18em; text-transform: uppercase; }
+  .hlabel.cy { color: #38C4D8; }
+  .hlabel.am { color: #E8A33D; }
+  .hstat { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 12.5px;
+           letter-spacing: 0.06em; color: #C6CEDC; text-shadow: 0 1px 10px rgba(5,6,10,0.95); }
+  .seam { position: absolute; left: 50%; top: 0; height: 100%; transform: translateX(-50%);
+          z-index: 3; }
+
+  /* slide 4 statement cards */
+  .stmt { background: rgba(255,255,255,0.028); border: 1px solid rgba(148,163,184,0.16);
+          border-radius: 12px; padding: 30px 32px; margin-top: 18px; }
+  .stmt p { color: #F1F5F9; font-size: 27px; line-height: 1.45; font-weight: 700; }
+  .stmt p span { color: #38C4D8; }
+  .stmt.amberline { border-left: 3px solid #E8A33D; }
+  .stmt.cyanline { border-left: 3px solid #38C4D8; }
+  .both { margin-top: 26px; background: rgba(56,196,216,0.055); border: 1px solid rgba(56,196,216,0.45);
+          border-radius: 12px; padding: 28px 32px; }
+  .both p { color: #F1F5F9; font-size: 25px; line-height: 1.5; }
+  .both p b { color: #38C4D8; }
+
+  /* slide 5 chain */
+  .chain { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 0; margin-top: 6px; }
+  .link { display: flex; align-items: center; gap: 24px; }
+  .link .idx { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+               font-size: 15px; width: 40px; }
+  .link .box { flex: 1; border: 1px solid rgba(148,163,184,0.16); background: rgba(255,255,255,0.028);
+               border-radius: 10px; padding: 22px 26px; display: flex; align-items: center;
+               justify-content: space-between; }
+  .link .box b { color: #F1F5F9; font-size: 25px; font-weight: 700; }
+  .link .box span { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #8A93A6;
+                    font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .link.gateway .box { border-color: rgba(232,163,61,0.4); background: rgba(232,163,61,0.05); }
+  .link.gateway .box span { color: #E8A33D; }
+  .link.cluster .box { border-color: rgba(56,196,216,0.4); background: rgba(56,196,216,0.05); }
+  .link.cluster .box span { color: #38C4D8; }
+  .conn { height: 40px; display: flex; align-items: center; margin-left: 64px; }
+
+  /* cable chips slide 3 */
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .chip { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 15px;
+          letter-spacing: 0.1em; color: #B7C0D0; border: 1px solid rgba(148,163,184,0.22);
+          border-radius: 5px; padding: 8px 13px; }
+  .chip.live { color: #0B0C12; background: #38C4D8; border-color: #38C4D8; font-weight: 700; }
+
+  /* slide 7 */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0 22px; }
+  .pcard { border-radius: 12px; padding: 26px 28px; border: 1px solid rgba(148,163,184,0.16);
+           background: rgba(255,255,255,0.028); }
+  .pcard.nbo { border-color: rgba(56,196,216,0.45); background: rgba(56,196,216,0.055); }
+  .pcard.mba { border-color: rgba(232,163,61,0.45); background: rgba(232,163,61,0.05); }
+  .pcard .t { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 14px;
+              letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+  .pcard.nbo .t { color: #38C4D8; }
+  .pcard.mba .t { color: #E8A33D; }
+  .pcard .n { color: #F1F5F9; font-weight: 700; font-size: 62px; line-height: 1;
+              font-variant-numeric: tabular-nums; }
+  .pcard .n small { font-size: 24px; color: #8A93A6; font-weight: 400; }
+  .pcard .d { color: #8A93A6; font-size: 19px; margin-top: 10px; line-height: 1.45; }
+  .mapband { position: relative; border: 1px solid rgba(56,196,216,0.35); border-radius: 14px;
+             height: 296px; }
+  .mapband img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+                 object-position: 74% 55%; border-radius: 13px; display: block; }
+  .urlbox { border: 1px solid rgba(56,196,216,0.45); background: rgba(56,196,216,0.07);
+            border-radius: 12px; padding: 22px 30px; text-align: center; margin-top: 22px; }
+  .urlbox .u { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #38C4D8;
+               font-size: 26px; font-weight: 700; letter-spacing: 0.02em; }
+  .urlbox .ul { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #8A93A6;
+                font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* browser preview auto-scale (print unaffected) */
+  @media screen {
+    html { height: auto; display: flex; justify-content: center; background: #0B0C12; }
+    body { transform-origin: top center;
+           scale: min(1, calc(100vw / 1080));
+           margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.35); }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · HOOK · real-photo split -->
+<div class="page" id="s1">
+  <div class="inner">
+    <div class="kicker">DC254 · Infrastructure map brief · 6 Oct 2026</div>
+    <h1>Nairobi and Mombasa do different jobs in Kenya&rsquo;s digital infrastructure.</h1>
+    <p class="sub" style="margin-top:24px;">Two centres of gravity. One system. The map makes the split visible.</p>
+    <div class="splitwrap">
+      <div class="splitband">
+        <div class="half">
+          <img src="images/nairobi-skyline-night-kicc.webp" alt="">
+          <div class="tint"></div>
+          <div class="hcap">
+            <span class="hlabel cy">Nairobi · the cluster</span>
+            <span class="hstat">19 TRACKED · 13 LIVE · 6 IN PIPELINE</span>
+          </div>
+        </div>
+        <div class="half">
+          <img src="images/mombasa-port-wide.webp" alt="">
+          <div class="tint"></div>
+          <div class="hcap">
+            <span class="hlabel am">Mombasa · the gateway</span>
+            <span class="hstat">7 LIVE · 1 LANDED, RFS PENDING · 2 EARLIER-STAGE</span>
+          </div>
+        </div>
+        <svg class="seam" width="240" height="690" viewBox="0 0 240 690" fill="none">
+          <line x1="120" y1="18" x2="120" y2="672" stroke="#38C4D8" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <circle cx="120" cy="345" r="7" fill="#38C4D8"/>
+          <circle cx="120" cy="345" r="16" fill="none" stroke="#38C4D8" stroke-opacity="0.4" stroke-width="2"/>
+          <text x="120" y="52" font-family="Liberation Mono, monospace" font-size="12" fill="#C6CEDC" letter-spacing="2" text-anchor="middle">TERRESTRIAL FIBRE</text>
+        </svg>
+      </div>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>OPEN DATA CENTRE INTELLIGENCE · KENYA</span><span>01 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 2 · NAIROBI THE CLUSTER · photo: Nairobi data-hall interior -->
+<div class="page" id="s2">
+  <div class="bgphoto" style="background-image:url('images/atlancis-nairobi-datacentre-hall.webp'); opacity:0.15;"></div>
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">The cluster</div>
+    <h2>Nairobi: the infrastructure cluster</h2>
+    <div class="bigrow">
+      <div class="bignum">19</div>
+      <div class="bigcap">tracked data centres<br>of 27 tracked nationally · 70%</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="stat"><span class="v cyan">13</span><span class="l"><b>operational facilities</b> serving load today</span></div>
+      <div class="stat"><span class="v">6</span><span class="l"><b>projects in the pipeline</b> - under construction, committed, early stage. Every project in Kenya&rsquo;s pipeline sits in the Nairobi metro.</span></div>
+      <div class="stat"><span class="v">144</span><span class="l"><b>KIXP member networks</b> peer here (PeeringDB, Oct 2026) - ~3.0 Tbps of connected capacity; TESPOK's measured record peak: 1.3 Tbps (June 2024)</span></div>
+      <p class="punch">Concentration, interconnection and enterprise demand: <span class="cy">this is where the computing lives.</span></p>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>SOURCE: DC254 DIRECTORY, Q3 2026</span><span>02 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 3 · MOMBASA THE GATEWAY · photo: cable landing at the coast -->
+<div class="page" id="s3">
+  <div class="bgphoto" style="background-image:url('images/mombasa-cable-landing-2.webp'); opacity:0.10; background-position:center 22%;"></div>
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">The gateway</div>
+    <h2>Mombasa: the international gateway</h2>
+    <div class="bigrow">
+      <div class="bignum">7</div>
+      <div class="bigcap">live subsea cable systems<br>connected to the coast</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="stat"><span class="v">4 / 4</span><span class="l"><b>tracked data centres, all operational</b> - a mature, serving market, not a pipeline story</span></div>
+      <div class="stat"><span class="v">3</span><span class="l"><b>more systems in the register</b> at earlier stages: Africa-1 landed with RFS pending, Daraja announced, LuLu planned</span></div>
+      <div class="chips">
+        <span class="chip live">TEAMS</span><span class="chip live">SEACOM</span><span class="chip live">EASSy</span>
+        <span class="chip live">LION2</span><span class="chip live">DARE1</span><span class="chip live">PEACE</span>
+        <span class="chip live">2AFRICA</span>
+      </div>
+      <p class="punch" style="border-left-color:#E8A33D;">Landing stations here route Kenya to <span class="cy">Europe, Asia, the Middle East and the wider region.</span></p>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>SOURCE: DC254 CABLE TRACKER, VERIFIED MONTHLY</span><span>03 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 4 · WHY THE DISTINCTION MATTERS · clean statement slide -->
+<div class="page" id="s4">
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">Why the distinction matters</div>
+    <h2>A gateway is not a cluster. A cluster is not a gateway.</h2>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="stmt amberline"><p><span>Mombasa brings the routes.</span> A cable landing does not automatically make a city a data-centre cluster.</p></div>
+      <div class="stmt cyanline"><p><span>Nairobi concentrates the compute.</span> A data-centre cluster does not automatically provide international route diversity.</p></div>
+      <div class="both"><p>Kenya needs both: <b>Mombasa for international connectivity</b>, <b>Nairobi for concentration, interconnection and enterprise demand</b>. Neither role substitutes for the other.</p></div>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>OPEN DATA CENTRE INTELLIGENCE · KENYA</span><span>04 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 5 · THE CHAIN · photo: fibre corridor ducts -->
+<div class="page" id="s5">
+  <div class="bgphoto" style="background-image:url('images/fibre-handhole-duct-cables.webp'); opacity:0.11;"></div>
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">The infrastructure chain</div>
+    <h2>From the coast to the customer</h2>
+    <div class="chain">
+      <div class="link gateway"><span class="idx">01</span><div class="box"><b>Subsea cables</b><span>international routes</span></div></div>
+      <div class="conn"><svg width="20" height="30"><path d="M10 0 V20 M3 14 L10 22 L17 14" stroke="#E8A33D" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="link gateway"><span class="idx">02</span><div class="box"><b>Mombasa landing stations</b><span>the gateway</span></div></div>
+      <div class="conn"><svg width="20" height="30"><path d="M10 0 V20 M3 14 L10 22 L17 14" stroke="#5B6478" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="link"><span class="idx">03</span><div class="box"><b>Terrestrial fibre</b><span>the corridor</span></div></div>
+      <div class="conn"><svg width="20" height="30"><path d="M10 0 V20 M3 14 L10 22 L17 14" stroke="#5B6478" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="link cluster"><span class="idx">04</span><div class="box"><b>Nairobi data centres</b><span>the cluster</span></div></div>
+      <div class="conn"><svg width="20" height="30"><path d="M10 0 V20 M3 14 L10 22 L17 14" stroke="#38C4D8" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="link cluster"><span class="idx">05</span><div class="box"><b>IXPs and connected networks</b><span>KIXP · 144 members</span></div></div>
+      <div class="conn"><svg width="20" height="30"><path d="M10 0 V20 M3 14 L10 22 L17 14" stroke="#5B6478" stroke-width="2.5" fill="none"/></svg></div>
+      <div class="link"><span class="idx">06</span><div class="box"><b>Businesses, cloud services and users</b><span>demand</span></div></div>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>OPEN DATA CENTRE INTELLIGENCE · KENYA</span><span>05 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 6 · THE STRATEGIC QUESTION · photo: the corridor between the cities -->
+<div class="page" id="s6">
+  <div class="bgphoto" style="background-image:url('images/nairobi-expressway-wide.webp'); opacity:0.10; background-position:center 68%;"></div>
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">The strategic question</div>
+    <h2>How effectively can Kenya connect the gateway to the cluster?</h2>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+      <div class="stmt"><p style="font-size:24px;"><span>01</span> &nbsp;Coastal cable capacity</p></div>
+      <div class="stmt"><p style="font-size:24px;"><span>02</span> &nbsp;Terrestrial fibre</p></div>
+      <div class="stmt"><p style="font-size:24px;"><span>03</span> &nbsp;Nairobi facilities</p></div>
+      <div class="stmt"><p style="font-size:24px;"><span>04</span> &nbsp;IXPs</p></div>
+      <div class="stmt"><p style="font-size:24px;"><span>05</span> &nbsp;Regional markets</p></div>
+      <p class="punch">The opportunity is <span class="cy">the connection between the two.</span></p>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>OPEN DATA CENTRE INTELLIGENCE · KENYA</span><span>06 / 07</span></div>
+  </div>
+</div>
+
+<!-- SLIDE 7 · CTA · photo: DC254 infrastructure map -->
+<div class="page" id="s7">
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">Explore the infrastructure</div>
+    <h2>See both cities on the DC254 map</h2>
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="pair">
+        <div class="pcard nbo">
+          <div class="t">Nairobi · the cluster</div>
+          <div class="n">19 <small>tracked DCs</small></div>
+          <div class="d">13 operational, every pipeline project in the metro, KIXP peering</div>
+        </div>
+        <div class="pcard mba">
+          <div class="t">Mombasa · the gateway</div>
+          <div class="n">7 <small>live cables</small></div>
+          <div class="d">4 / 4 data centres operational, landing stations to three continents</div>
+        </div>
+      </div>
+      <div class="mapband"><img src="images/og-infrastructure-map.webp" alt=""></div>
+      <div class="urlbox">
+        <div class="ul">Open the infrastructure map</div>
+        <div class="u">data-centers-254.vercel.app/infrastructure/map</div>
+      </div>
+      <p class="sub" style="margin-top:22px; font-size:21px;">Figures: DC254 directory and cable tracker, verified 6 October 2026.</p>
+    </div>
+    <div class="foot"><span class="brand">DC254</span><span>OPEN DATA CENTRE INTELLIGENCE · KENYA</span><span>07 / 07</span></div>
+  </div>
+</div>
+
+</body>
+</html>
