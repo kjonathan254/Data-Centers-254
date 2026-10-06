@@ -12,7 +12,7 @@ secondary_keywords:
 author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
-updated_date: '2026-08-28'
+updated_date: '2026-10-06'
 category: Infrastructure
 cluster: Infrastructure
 og_image: "/images/fibre-patch-panel-sc-connectors.webp"
@@ -50,8 +50,12 @@ internal_links:
   - text: "Nairobi Vs Mombasa Data Centre Locations"
     href: "/articles/nairobi-vs-mombasa-data-centre-locations"
 external_sources:
-- title: KIXP, Kenya Internet Exchange Point Official Statistics
-  url: https://www.kixp.or.ke
+- title: PeeringDB: KIXP - Nairobi exchange profile (144 member networks, verified October 2026)
+  url: https://www.peeringdb.com/ix/236
+- title: Internet Society Pulse IXP Tracker: KIXP - Nairobi (2,985 Gbps connected capacity, October 2026)
+  url: https://pulse.internetsociety.org/en/ixp-tracker/ixp/144/
+- title: TESPOK: KIXP historic peak of 1.3 Tbps (25 June 2024)
+  url: https://www.facebook.com/tespokkenya/
 - title: Packet Clearing House, Internet Exchange Directory and Peering Data
   url: https://www.pch.net
 faq:
@@ -68,17 +72,21 @@ faq:
     The cost differential is significant: peering is typically free or involves a
     small port fee, while international transit can cost USD 50–200 per Mbps per month.'
 - question: How many members does KIXP have and what traffic does it handle?
-  answer: As of 2025, KIXP has over 70 connected members spanning ISPs, mobile network
-    operators, content delivery networks, cloud providers, and enterprise networks.
-    The exchange handles peak traffic volumes exceeding 150 Gbps, a dramatic increase
-    from under 1 Gbps a decade ago. KIXP's member base includes Safaricom, Telkom
-    Kenya, Liquid Intelligent Technologies, Jamii Telecommunications, FAIBA (Wananchi
-    Group), and increasingly, global cloud platforms. The exchange operates from multiple
-    points of presence across Nairobi data centres, and its recent upgrade to 100G
-    port capabilities has significantly increased capacity for high-bandwidth members.
-    According to [KIXP's published statistics](https://www.kixp.or.ke), the exchange
-    keeps over 70% of locally-sourced traffic within Kenya, avoiding expensive international
-    transit.
+  answer: As of October 2026, PeeringDB lists KIXP Nairobi at 144 connected member
+    networks spanning ISPs, mobile network operators, content delivery networks,
+    cloud providers, and enterprise networks, with roughly 2,985 Gbps of connected
+    member port capacity (ISOC Pulse, October 2026). On measured traffic, TESPOK
+    announced a historic peak of 1.3 Tbps on 25 June 2024 - the exchange's own
+    statistics page (kixp.or.ke) has been unreachable since at least early October
+    2026, so current traffic levels cannot be independently verified from the
+    operator right now. KIXP's member base includes Safaricom, Telkom Kenya, Liquid
+    Intelligent Technologies, Jamii Telecommunications, FAIBA (Wananchi Group), and
+    increasingly, global cloud platforms. The exchange operates from multiple points
+    of presence across Nairobi data centres, and its 100G port capabilities have
+    significantly increased capacity for high-bandwidth members. Internet Society
+    Pulse measures that 89% of Kenya's 225 active networks can reach IXP peering
+    either directly or through a member, and 40% of Kenya's 1,000 most-visited
+    websites are served from in-country servers or caches.
 - question: What is a data centre cross-connect and why does it matter?
   answer: A cross-connect is a physical cable link between two different networks
     or equipment within the same data centre facility. Unlike connections that route
@@ -113,8 +121,10 @@ faq:
     IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected
     members. It benefits from South Africa's larger internet user base and mature
     telecom market. KIXP is East Africa's leading IXP and the most significant hub
-    for the wider East African region, handling 150+ Gbps peak traffic with 70+ members,
-    impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing
+    for the wider East African region - 144 member networks per PeeringDB (October
+    2026), roughly 3 Tbps of connected port capacity, and a measured historic peak
+    of 1.3 Tbps (TESPOK, June 2024), impressive for a market of Kenya's size. KIXP
+    has upgraded to 100G ports, narrowing
     the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120
     Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's
     role as the [landing point for multiple submarine cables](/articles/submarine-cables-landing-mombasa),
@@ -148,7 +158,7 @@ The benefits are substantial:
 
 ### History and Growth
 
-The **Kenya Internet Exchange Point (KIXP)** was established in 2002 by the Telecommunications Service Providers Association of Kenya (TESPOK), making it one of the first IXPs in East Africa. At launch, it handled just a few hundred megabits per second. Today, [according to KIXP's published data](https://www.kixp.or.ke), the exchange handles **peak traffic exceeding 150 Gbps**, a growth of several orders of magnitude that reflects Kenya's dramatic internet expansion.
+The **Kenya Internet Exchange Point (KIXP)** was established in 2002 by the Telecommunications Service Providers Association of Kenya (TESPOK), making it one of the first IXPs in East Africa. At launch, it handled just a few hundred megabits per second. The growth curve since is steep: the Internet Society measured 19 Gbps of peak traffic by 2020, TESPOK announced a historic peak of 1.3 Tbps on 25 June 2024, and by October 2026 PeeringDB listed **144 member networks with roughly 2,985 Gbps of connected port capacity** - a growth of several orders of magnitude that reflects Kenya's dramatic internet expansion.
 
 KIXP is a neutral, not-for-profit exchange operated by [Packet Clearing House](https://www.pch.net) in partnership with TESPOK. It operates from multiple points of presence (PoPs) across Nairobi's major data centre facilities, ensuring that members can connect from whichever facility they operate in.
 
@@ -293,7 +303,7 @@ Peering is a reciprocal arrangement where two networks exchange traffic directly
 
 ### How many members does KIXP have and what traffic does it handle?
 
-As of 2025, KIXP has over 70 connected members spanning ISPs, mobile network operators, content delivery networks, cloud providers, and enterprise networks. The exchange handles peak traffic volumes exceeding 150 Gbps, a dramatic increase from under 1 Gbps a decade ago. KIXP's member base includes Safaricom, Telkom Kenya, Liquid Intelligent Technologies, Jamii Telecommunications, FAIBA (Wananchi Group), and increasingly, global cloud platforms. The exchange operates from multiple points of presence across Nairobi data centres, and its recent upgrade to 100G port capabilities has significantly increased capacity for high-bandwidth members. According to [KIXP's published statistics](https://www.kixp.or.ke), the exchange keeps over 70% of locally-sourced traffic within Kenya, avoiding expensive international transit.
+As of October 2026, PeeringDB lists KIXP Nairobi at [144 connected member networks](https://www.peeringdb.com/ix/236) spanning ISPs, mobile network operators, content delivery networks, cloud providers, and enterprise networks, with roughly 2,985 Gbps of connected member port capacity (ISOC Pulse, October 2026). On measured traffic, TESPOK announced a historic peak of 1.3 Tbps on 25 June 2024; the exchange's own statistics site (kixp.or.ke) has been unreachable since at least early October 2026, so more recent traffic levels cannot be independently verified from the operator. KIXP's member base includes Safaricom, Telkom Kenya, Liquid Intelligent Technologies, Jamii Telecommunications, FAIBA (Wananchi Group), and increasingly, global cloud platforms. The exchange operates from multiple points of presence across Nairobi data centres, and its 100G port capabilities have significantly increased capacity for high-bandwidth members. Internet Society Pulse measures that 89% of Kenya's 225 active networks can reach IXP peering either directly or through a member, and 40% of Kenya's 1,000 most-visited websites are served from in-country servers or caches.
 
 ### What is a data centre cross-connect and why does it matter?
 
@@ -305,4 +315,4 @@ AWS (Amazon Web Services) has established a direct presence in Nairobi, intercon
 
 ### How does KIXP compare to NAPAfrica and IXPN?
 
-KIXP, NAPAfrica (South Africa), and IXPN (Nigeria) are Africa's three largest Internet Exchange Points, but they differ significantly in scale and maturity. NAPAfrica, operated by INX-ZA in Johannesburg and Cape Town, is Africa's largest IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected members. It benefits from South Africa's larger internet user base and mature telecom market. KIXP is East Africa's leading IXP and the most significant hub for the wider East African region, handling 150+ Gbps peak traffic with 70+ members, impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120 Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's role as the landing point for multiple submarine cables, making it a natural aggregation point for traffic flowing between East Africa, Southern Africa, and the rest of the world.
+KIXP, NAPAfrica (South Africa), and IXPN (Nigeria) are Africa's three largest Internet Exchange Points, but they differ significantly in scale and maturity. NAPAfrica, operated by INX-ZA in Johannesburg and Cape Town, is Africa's largest IXP by traffic, handling peak volumes exceeding 2 Tbps with over 300 connected members. It benefits from South Africa's larger internet user base and mature telecom market. KIXP is East Africa's leading IXP and the most significant hub for the wider East African region - 144 member networks per PeeringDB (October 2026), roughly 3 Tbps of connected port capacity, and a measured historic peak of 1.3 Tbps (TESPOK, June 2024), impressive for a market of Kenya's size. KIXP has upgraded to 100G ports, narrowing the infrastructure gap with South Africa. IXPN in Nigeria handles roughly 100–120 Gbps peak traffic with 60+ members. KIXP's strategic advantage lies in Kenya's role as the landing point for multiple submarine cables, making it a natural aggregation point for traffic flowing between East Africa, Southern Africa, and the rest of the world.

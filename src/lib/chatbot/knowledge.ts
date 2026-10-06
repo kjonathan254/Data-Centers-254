@@ -115,7 +115,7 @@ function buildRawChunks(): RawChunk[] {
     kind: "fact",
     title: "KIXP Kenya Internet Exchange Point",
     href: "/infrastructure/map",
-    text: `KIXP, the Kenya Internet Exchange Point in Nairobi, keeps local traffic local: ${KIXP.members} member networks, peak traffic around ${KIXP.peakGbps} Gbps, running since ${KIXP.year}.`,
+    text: `KIXP, the Kenya Internet Exchange Point in Nairobi, keeps local traffic local: ${KIXP.members} member networks with about ${(KIXP.capacityGbps / 1000).toFixed(1)} Tbps of connected member port capacity (PeeringDB, October 2026), running since ${KIXP.year}. TESPOK announced a historic peak of 1.3 Tbps in June 2024.`,
     boost: 1.3,
   });
   // Kenya fixed broadband, headline numbers (CA sector statistics, June 2025;

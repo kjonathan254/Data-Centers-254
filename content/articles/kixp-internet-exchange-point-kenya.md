@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-26"
-updated_date: "2026-09-16"
+updated_date: "2026-10-06"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/submarine-cables-map.webp"
@@ -48,16 +48,16 @@ internal_links:
 external_sources:
   - title: "Internet Society - Internet Exchange Points"
     url: "https://www.internetsociety.org/resources/deploying-internet-exchange-points/"
-  - title: "KIXP - Kenya Internet Exchange Point"
-    url: "https://www.kixp.or.ke/"
+  - title: "TESPOK (KIXP operator)"
+    url: "https://www.tespok.co.ke/"
   - title: "Internet Society: Anchoring the African Internet Ecosystem (24 June 2020, KIXP 1 Gbps 2012 to 19 Gbps 2020)"
     url: "https://www.internetsociety.org/resources/deploy360/2020/anchoring-the-african-internet-ecosystem/"
   - title: "TESPOK: KIXP historic peak of 1.3 Tbps (25 June 2024)"
     url: "https://www.facebook.com/tespokkenya/"
   - title: "iXAfrica press release: KIXP peering node partnership (10 December 2024)"
     url: "https://ixafrica.co.ke/"
-  - title: "PeeringDB: KIXP Nairobi exchange profile (April 2026 snapshot)"
-    url: "https://www.peeringdb.com/ix/240"
+  - title: "PeeringDB: KIXP - Nairobi exchange profile (144 member networks, verified October 2026)"
+    url: "https://www.peeringdb.com/ix/236"
   - title: "Communications Authority of Kenya sector statistics, Q3 2025/26 (reported 19 June 2026)"
     url: "https://www.ca.go.ke/"
 faq:
@@ -66,7 +66,7 @@ faq:
   - question: "Who can connect to KIXP?"
     answer: "KIXP is open to any organisation that operates its own autonomous system (AS). This includes ISPs, mobile operators, content providers like Google and Netflix, cloud platforms, government networks, and educational institutions."
   - question: "How much traffic does KIXP handle?"
-    answer: "KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by April 2026 PeeringDB listed 142 peering networks with 3 Tbps of connected capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence."
+    answer: "KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by October 2026 PeeringDB listed 144 peering networks with roughly 2,985 Gbps of connected port capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence."
   - question: "Does KIXP reduce internet costs for users?"
     answer: "Indirectly, yes. By keeping traffic local, ISPs avoid paying for international bandwidth on every local connection. This cost saving can be passed on to consumers. KIXP has been cited as a factor in Kenya's relatively affordable internet prices."
   - question: "What is peering vs transit?"
@@ -92,13 +92,13 @@ With KIXP, the same traffic crosses a single Ethernet switch in Nairobi. Latency
 
 ## The History of KIXP
 
-KIXP was established in 2000 by the [Telecommunications Service Providers Association of Kenya (TESPOK)](https://www.kixp.or.ke/), making it one of the first IXPs in sub-Saharan Africa. At the time, Kenya's internet was served almost entirely through satellite links. International bandwidth cost upwards of USD 7,000 per megabit per second per month, a price that made any meaningful local internet ecosystem impossible.
+KIXP was established in 2000 by the [Telecommunications Service Providers Association of Kenya (TESPOK)](https://www.tespok.co.ke/), making it one of the first IXPs in sub-Saharan Africa. At the time, Kenya's internet was served almost entirely through satellite links. International bandwidth cost upwards of USD 7,000 per megabit per second per month, a price that made any meaningful local internet ecosystem impossible.
 
 The early years were difficult. KIXP's founding members had to overcome regulatory resistance from the then-monopoly operator, Kenya Posts and Telecommunications Corporation (KPTC), and later Telkom Kenya. There was no legal framework for internet peering, and the dominant incumbent had little incentive to share traffic locally when it was earning revenue carrying that same traffic internationally.
 
 The breakthrough came with the liberalisation of Kenya's telecommunications sector in the mid-2000s. The Communications Commission of Kenya (now the Communications Authority of Kenya) issued new licensing frameworks that encouraged competition and infrastructure sharing. When TEAMS and SEACOM submarine cables landed in Mombasa in 2009–2010, international bandwidth prices collapsed. But paradoxically, this made KIXP *more* important, not less: cheaper international bandwidth meant more Kenyans came online, which meant more local content and services, which meant more traffic that benefited from local peering.
 
-By 2012, KIXP was handling over 1 Gbps of peak traffic, and the Internet Society measured 19 Gbps by 2020, with the exchange's cost savings to members quadrupling over the previous decade. The curve then steepened dramatically: TESPOK announced a historic peak of 1.3 Tbps in June 2024, and by April 2026 PeeringDB listed KIXP Nairobi with 142 peering networks, 158 connections and 3 Tbps of connected port capacity. Each local cache a network installs compounds the effect, because cached content pulls more traffic onto the exchange.
+By 2012, KIXP was handling over 1 Gbps of peak traffic, and the Internet Society measured 19 Gbps by 2020, with the exchange's cost savings to members quadrupling over the previous decade. The curve then steepened dramatically: TESPOK announced a historic peak of 1.3 Tbps in June 2024, and by October 2026 PeeringDB listed KIXP Nairobi with 144 peering networks and roughly 2,985 Gbps of connected port capacity. Each local cache a network installs compounds the effect, because cached content pulls more traffic onto the exchange.
 
 ## Who Connects to KIXP?
 
@@ -200,7 +200,7 @@ KIXP is open to any organisation that operates its own autonomous system (AS). T
 
 **How much traffic does KIXP handle?**
 
-KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by April 2026 PeeringDB listed 142 peering networks with 3 Tbps of connected capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence.
+KIXP's peak traffic reached a historic 1.3 Tbps in June 2024 (TESPOK), and by October 2026 PeeringDB listed 144 peering networks with roughly 2,985 Gbps of connected port capacity, making KIXP one of the largest internet exchange points in East Africa. Growth has accelerated as content providers, cloud platforms and now AI workloads establish local presence.
 
 **Does KIXP reduce internet costs for users?**
 

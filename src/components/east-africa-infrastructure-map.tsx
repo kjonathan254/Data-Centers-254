@@ -98,7 +98,7 @@ function StatsBand() {
     { label: "Facilities tracked", value: KENYA_FACILITIES.length, format: int, sub: `${ops} operational · ${nbo} in Nairobi metro` },
     { label: "Operational", value: ops, format: int, sub: `of ${KENYA_FACILITIES.length} tracked in Kenya` },
     { label: "Live cable systems", value: regLive, format: int, sub: `of ${CABLE_REGISTER.length} tracked · ${regPending} landed, RFS pending` },
-    { label: "KIXP members", value: KIXP.members, format: int, sub: `~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak traffic` },
+    { label: "KIXP members", value: KIXP.members, format: int, sub: `~${(KIXP.capacityGbps / 1000).toFixed(1)} Tbps connected capacity (PeeringDB)` },
   ];
   return (
     <div>
@@ -312,7 +312,7 @@ function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: 
     { n: 2, title: "Cable landing station", body: "The route comes ashore at the Nyali landing station complex in Mombasa — Kenya's single point of contact with the global internet." },
     { n: 3, title: "Terrestrial fibre", body: "Backhaul carriers move the traffic up the Mombasa–Nairobi fibre backbone — the dotted route now lit on the map." },
     { n: 4, title: "Nairobi cluster", body: `${nboCount} data centres across the Nairobi metro, from Sameer Business Park to the hyperscale builds on Mombasa Road.` },
-    { n: 5, title: "KIXP Nairobi", body: `Traffic peers at the exchange: ${KIXP.members} member networks, ~${(KIXP.peakGbps / 1000).toFixed(1)} Tbps peak — open the Nairobi metro map to see where.` },
+    { n: 5, title: "KIXP Nairobi", body: `Traffic peers at the exchange: ${KIXP.members} member networks, ~${(KIXP.capacityGbps / 1000).toFixed(1)} Tbps connected capacity — open the Nairobi metro map to see where.` },
   ];
   return (
     <PanelShell title="Trace the internet" subtitle="From a subsea cable to a Nairobi stack — the path your traffic takes" onClose={onClose}>
@@ -568,7 +568,7 @@ export default function EastAfricaInfrastructureMap() {
         specs: c.designTbps ? `${c.designTbps} Tbps design capacity` : "Route in survey", year: c.year,
       });
     }
-    rows.push({ id: "kixp", name: "KIXP Nairobi", loc: "Nairobi", type: "ixp", status: "Operational", statusColor: NEON, specs: `${KIXP.members} members · ${KIXP.peakGbps} Gbps peak`, year: KIXP.year });
+    rows.push({ id: "kixp", name: "KIXP Nairobi", loc: "Nairobi", type: "ixp", status: "Operational", statusColor: NEON, specs: `${KIXP.members} members · ${KIXP.capacityGbps.toLocaleString("en-US")} Gbps capacity`, year: KIXP.year });
     for (const it of REGION_ITEMS) {
       rows.push({
         id: it.id, name: it.name, loc: CITY_NAMES[it.city] ?? it.city,

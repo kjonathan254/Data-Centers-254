@@ -156,6 +156,12 @@ export const FIBRE_ROUTES: { id: string; waypoints: [number, number][]; note?: s
   { id: "berbera-ethiopia", waypoints: [[11.34, 45.01], [9.56, 44.07], [9.02, 38.75]], note: "Somcable terrestrial backbone from the Berbera cable landings (2Africa, PEACE) via Hargeisa into Ethiopia; extensions toward South Sudan reported 15 Sep 2026 (Business Daily)" },
 ];
 
-export const KIXP = { name: "KIXP", members: 140, peakGbps: 2900, year: 2000, city: "nairobi" as const };
+// KIXP Nairobi, verified 2026-10-06: PeeringDB ix 236 live API net_count = 144 member networks;
+// ISOC Pulse (PeeringDB sync, Oct 2026) capacity = 2,985 Gbps — cumulative member port speeds
+// ("potential maximum traffic"), NOT measured peak traffic. Measured peak on record: 1.3 Tbps
+// historic peak (TESPOK announcement, 25 June 2024). KIXP's own site (kixp.or.ke) was
+// unreachable 2026-10-06; TESPOK's KIXP Statistics page publishes no figures.
+// Evidence: research/captures/2026-10-06-kixp-nairobi-peeringdb-isoc-pulse.md
+export const KIXP = { name: "KIXP", members: 144, capacityGbps: 2985, year: 2000, city: "nairobi" as const };
 
 export const CABLE_TOTAL_TBPS = SUBSEA_CABLES.reduce((s, c) => s + (c.designTbps ?? 0), 0); // 25.74
