@@ -50,11 +50,11 @@ internal_links:
   - text: "Nairobi Vs Mombasa Data Centre Locations"
     href: "/articles/nairobi-vs-mombasa-data-centre-locations"
 external_sources:
-- title: PeeringDB: KIXP - Nairobi exchange profile (144 member networks, verified October 2026)
+- title: "PeeringDB: KIXP - Nairobi exchange profile (144 member networks, verified October 2026)"
   url: https://www.peeringdb.com/ix/236
-- title: Internet Society Pulse IXP Tracker: KIXP - Nairobi (2,985 Gbps connected capacity, October 2026)
+- title: "Internet Society Pulse IXP Tracker: KIXP - Nairobi (2,985 Gbps connected capacity, October 2026)"
   url: https://pulse.internetsociety.org/en/ixp-tracker/ixp/144/
-- title: TESPOK: KIXP historic peak of 1.3 Tbps (25 June 2024)
+- title: "TESPOK: KIXP historic peak of 1.3 Tbps (25 June 2024)"
   url: https://www.facebook.com/tespokkenya/
 - title: Packet Clearing House, Internet Exchange Directory and Peering Data
   url: https://www.pch.net
