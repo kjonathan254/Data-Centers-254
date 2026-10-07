@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+/*
+ * Daily revalidation (system audit 2026-10-07): the Hero component picks
+ * its photograph from a curated cast by calendar day in EAT. This route
+ * revalidates once a day so the new day's pick is baked into the edge
+ * render without any client JS or deploy. Everything on this page is
+ * deterministic from the datasets, so ISR is safe here.
+ */
+export const revalidate = 86_400;
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">

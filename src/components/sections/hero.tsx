@@ -10,10 +10,63 @@ import { getPlatformStats, STAT_LABELS } from "@/lib/site-stats";
  * Server component: zero client JS, zero scroll effects, zero pinning.
  * All figures come from site-stats.ts so the labels here match the
  * directory, map and methodology word for word.
+ *
+ * Hero rotation (system audit 2026-10-07): the photograph rotates daily
+ * through a curated cast of seven real photographs already published on
+ * the platform (no AI-generated shots, no new uploads). The pick is
+ * deterministic on the calendar day in East Africa Time, not random:
+ *  - every visitor that day sees the same hero, so repeat visits and the
+ *    edge cache stay coherent;
+ *  - the hero changes for returning visitors without any deploy or client
+ *    JS, which is what "rotated a bit" asked for;
+ *  - the image still renders with `priority` on first paint, so LCP and
+ *    the zero-client-JS property are untouched.
+ * The page carries `revalidate = 86400` so the prerender refreshes once a
+ * day and the new day's pick is baked in at the edge.
  */
+const HERO_ROTATION: { src: string; alt: string }[] = [
+  {
+    src: "/images/hero-server-hall.webp",
+    alt: "Corridor between server racks inside a modern data centre",
+  },
+  {
+    src: "/images/dc-engineer-rack-aisle.webp",
+    alt: "Engineer working between server racks in a data centre aisle",
+  },
+  {
+    src: "/images/atlancis-nairobi-datacentre-hall.webp",
+    alt: "Server hall inside a Nairobi data centre facility",
+  },
+  {
+    src: "/images/nairobi-skyline-night-kicc.webp",
+    alt: "Nairobi city skyline at night with the KICC tower lit",
+  },
+  {
+    src: "/images/mombasa-port-wide.webp",
+    alt: "Mombasa port where Kenya's submarine cables come ashore",
+  },
+  {
+    src: "/images/dc-aisle-red-status-lighting.webp",
+    alt: "Data centre aisle lit red by equipment status lights",
+  },
+  {
+    src: "/images/dc-ups-power-room.webp",
+    alt: "Uninterruptible power supply room inside a data centre",
+  },
+];
+
+/** Day of year in EAT (UTC+3), 0-indexed, stable across the whole day. */
+function heroRotationIndex(): number {
+  const now = new Date(Date.now() + 3 * 60 * 60 * 1000);
+  const startOfYear = Date.UTC(now.getUTCFullYear(), 0, 0);
+  const dayOfYear = Math.floor((now.getTime() - startOfYear) / 86_400_000);
+  return dayOfYear % HERO_ROTATION.length;
+}
+
 export default function Hero() {
   const stats_ = getPlatformStats();
   const explainers = getAllArticles().length;
+  const hero = HERO_ROTATION[heroRotationIndex()];
 
   // All three stats read from the verified datasets, never hardcoded.
   // The three-beat strip the homepage leads with: what exists, what
@@ -31,10 +84,10 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden">
-      {/* Fullscreen photograph */}
+      {/* Fullscreen photograph, rotated daily through the verified cast */}
       <Image
-        src="/images/hero-server-hall.webp"
-        alt="Corridor between server racks inside a modern data centre"
+        src={hero.src}
+        alt={hero.alt}
         fill
         priority
         sizes="100vw"
