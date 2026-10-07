@@ -112,6 +112,28 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Vercel origin-transfer relief (Task 92, editor commission "Vercel says I
+  // have used the 10GB"): the Hobby plan includes only 10 GB/month of Fast
+  // Origin Transfer (edge cache misses pulling bytes from the deployment),
+  // and the image optimizer is the main multiplier: every unique
+  // /_next/image variant (url x width x DPR) is generated once per region
+  // and pulled from origin. Two dials, both safe:
+  //  - minimumCacheTTL floor of one day: belt-and-braces for the F3 header
+  //    fix — even a source that ever loses its Cache-Control still produces
+  //    optimizer responses that stay edge-cacheable for a day instead of the
+  //    60-second default that caused constant re-pulls before F3;
+  //  - trimmed width grids: 8 deviceSizes + 4 imageSizes instead of the 16
+  //    defaults. Halves the unique-variant space (209 images x up to 16
+  //    widths), drops the rarely-used 16/32/48px icon variants, and caps the
+  //    largest variant at 1920 instead of 3840 (retina laptops get 1920
+  //    instead of 3840 — roughly a quarter of the bytes per hero request).
+  //    Next.js rounds a requested width up to the nearest available entry,
+  //    so layouts do not change.
+  images: {
+    minimumCacheTTL: 86400,
+    deviceSizes: [640, 828, 1080, 1920],
+    imageSizes: [64, 128, 256, 384],
+  },
   async redirects() {
     return [
       // /index was a duplicate of /directory — permanently redirect legacy links
