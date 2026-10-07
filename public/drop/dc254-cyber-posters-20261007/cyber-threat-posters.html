@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DC254 cyber-threat poster cards (LinkedIn 4:5 + X 16:9)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; background: #05060A;
+               font-family: 'Carlito','Liberation Sans',sans-serif; }
+
+  .frame { position: relative; background: #0B0C12; overflow: hidden;
+           margin: 24px auto; }
+  #li { width: 1080px; height: 1350px; }
+  #x  { width: 1200px; height: 675px; }
+
+  /* ambient layers */
+  .grid-lines { position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none;
+    background-image: linear-gradient(rgba(56,196,216,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(56,196,216,0.04) 1px, transparent 1px);
+    background-size: 72px 72px; }
+  .glow { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 60% 40% at 85% 0%, rgba(56,196,216,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 10% 100%, rgba(56,196,216,0.06), transparent 60%); }
+
+  .kicker { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #38C4D8;
+            letter-spacing: 0.28em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 14px; }
+  .kicker::after { content: ''; flex: 1; height: 1px;
+                   background: linear-gradient(90deg, rgba(56,196,216,0.5), rgba(56,196,216,0.05)); }
+  .mono { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; }
+
+  /* ============ LINKEDIN 1080x1350 ============ */
+  #li .inner { position: relative; z-index: 2; height: 100%;
+               display: flex; flex-direction: column; padding: 58px 64px 0; }
+  #li .kicker { font-size: 15px; margin-bottom: 36px; }
+  #li h1 { color: #F1F5F9; font-weight: 700; line-height: 1.08; letter-spacing: -0.015em;
+           font-size: 62px; }
+  #li h1 .n { color: #38C4D8; }
+  #li .sub { color: #8A93A6; font-size: 23.5px; line-height: 1.42; margin-top: 22px; }
+
+  /* photo band */
+  #li .photo { position: relative; margin-top: 34px; height: 388px; border-radius: 14px;
+               overflow: hidden; border: 1px solid rgba(148,163,184,0.16); }
+  #li .photo .img { position: absolute; inset: 0; background-size: cover;
+                    background-position: center 62%; }
+  #li .photo .shade { position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(11,12,18,0.14) 0%, rgba(11,12,18,0.02) 42%,
+                 rgba(11,12,18,0.86) 100%); }
+  #li .photo .chip { position: absolute; left: 22px; bottom: 18px; right: 22px;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; }
+  #li .photo .cap { color: #C8D2DC; font-size: 17.5px; line-height: 1.35; max-width: 700px;
+                    text-shadow: 0 1px 10px rgba(0,0,0,0.65); }
+  #li .photo .src { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    color: #7FDCEA; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    white-space: nowrap; border: 1px solid rgba(56,196,216,0.45); border-radius: 999px;
+    padding: 7px 14px; background: rgba(5,6,10,0.55); text-shadow: none; }
+
+  /* quarter ladder */
+  #li .ladder { margin-top: 26px; border: 1px solid rgba(148,163,184,0.14);
+                border-radius: 14px; padding: 22px 26px 20px; background: rgba(148,163,184,0.045); }
+  #li .ladder .t { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+    font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+  #li .qs { display: flex; align-items: stretch; gap: 10px; }
+  #li .q { flex: 1; }
+  #li .q .qq { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+               font-size: 12.5px; letter-spacing: 0.08em; margin-bottom: 7px; }
+  #li .q .qv { color: #E7ECF2; font-size: 27px; font-weight: 700; letter-spacing: -0.01em; }
+  #li .q .qs2 { color: #5B6478; font-size: 13.5px; margin-top: 5px; }
+  #li .q.spike .qv { color: #E8A33D; }
+  #li .q.spike .qs2 { color: #E8A33D; }
+  #li .q.total { border-left: 1px solid rgba(148,163,184,0.16); padding-left: 18px; flex: 1.25; }
+  #li .q.total .qq, #li .q.total .qs2 { color: #38C4D8; }
+  #li .q.total .qv { color: #38C4D8; font-size: 30px; }
+
+  /* stats row */
+  #li .stats { display: flex; gap: 12px; margin-top: 24px; }
+  #li .st { flex: 1; border-top: 2px solid rgba(56,196,216,0.55); padding-top: 14px; }
+  #li .st .v { color: #F1F5F9; font-size: 33px; font-weight: 700; letter-spacing: -0.01em; }
+  #li .st .v span { color: #38C4D8; }
+  #li .st .k { color: #8A93A6; font-size: 15.5px; line-height: 1.3; margin-top: 6px; }
+
+  #li .quote { margin-top: 26px; color: #C8D2DC; font-size: 24px; line-height: 1.38; }
+  #li .quote b { color: #F1F5F9; }
+
+  /* CTA + foot */
+  #li .cta { margin-top: auto; margin-left: -64px; margin-right: -64px;
+    background: linear-gradient(90deg, rgba(56,196,216,0.16), rgba(56,196,216,0.05));
+    border-top: 1px solid rgba(56,196,216,0.35);
+    padding: 20px 64px; display: flex; justify-content: space-between; align-items: center; }
+  #li .cta .go { color: #F1F5F9; font-size: 20.5px; font-weight: 700; }
+  #li .cta .url { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+                  color: #7FDCEA; font-size: 15.5px; letter-spacing: 0.02em; }
+  #li .foot { margin-left: -64px; margin-right: -64px; padding: 16px 64px 26px;
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+    font-size: 12.5px; display: flex; justify-content: space-between;
+    border-top: 1px solid rgba(148,163,184,0.10); }
+
+  /* ============ X 1200x675 ============ */
+  #x .inner { position: relative; z-index: 2; height: 100%;
+              display: flex; }
+  #x .left { width: 700px; padding: 52px 40px 40px 56px; display: flex; flex-direction: column; }
+  #x .kicker { font-size: 12.5px; margin-bottom: 26px; }
+  #x h1 { color: #F1F5F9; font-weight: 700; line-height: 1.09; letter-spacing: -0.015em;
+          font-size: 47px; }
+  #x h1 .n { color: #38C4D8; }
+  #x .sub { color: #8A93A6; font-size: 19px; line-height: 1.42; margin-top: 16px; }
+  #x .sub b { color: #C8D2DC; font-weight: 700; }
+
+  #x .facts { margin-top: 28px; display: flex; gap: 26px; }
+  #x .quote { margin-top: 28px; border-left: 3px solid rgba(56,196,216,0.55);
+              padding-left: 16px; color: #C8D2DC; font-size: 17.5px; line-height: 1.4; }
+  #x .quote b { color: #F1F5F9; }
+  #x .f .v { color: #F1F5F9; font-size: 22px; font-weight: 700; }
+  #x .f .v span { color: #38C4D8; }
+  #x .f .k { color: #5B6478; font-size: 13px; margin-top: 4px; }
+
+  #x .ctabar { margin-top: auto; border-top: 1px solid rgba(148,163,184,0.12); padding-top: 16px;
+    display: flex; justify-content: space-between; align-items: center; }
+  #x .ctabar .go { color: #F1F5F9; font-weight: 700; font-size: 16.5px; }
+  #x .ctabar .url { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+                    color: #7FDCEA; font-size: 14px; }
+
+  #x .right { position: relative; flex: 1; }
+  #x .right .img { position: absolute; inset: 0; background-size: cover;
+                   background-position: center 68%; }
+  #x .right .fade { position: absolute; inset: 0;
+    background: linear-gradient(90deg, #0B0C12 0%, rgba(11,12,18,0.42) 30%,
+                 rgba(11,12,18,0.06) 62%, rgba(11,12,18,0.30) 100%); }
+  #x .right .fade2 { position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(11,12,18,0.82) 0%, rgba(11,12,18,0.0) 34%); }
+  #x .right .chip { position: absolute; left: 30px; right: 26px; bottom: 20px;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; }
+  #x .right .cap { color: #C8D2DC; font-size: 14.5px; line-height: 1.35; max-width: 320px;
+                   text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
+  #x .right .src { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    color: #7FDCEA; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+    white-space: nowrap; border: 1px solid rgba(56,196,216,0.45); border-radius: 999px;
+    padding: 5px 11px; background: rgba(5,6,10,0.55); }
+</style>
+</head>
+<body>
+
+<!-- ================= LINKEDIN 1080x1350 ================= -->
+<div class="frame" id="li">
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="kicker">DC254 &middot; Infrastructure Brief &middot; 07 Oct 2026</div>
+    <h1>Kenya recorded <span class="n">11.1 billion</span> detected cyber-threat events. So what is that for a data&nbsp;centre&nbsp;market?</h1>
+    <div class="sub">The useful question is not the number. It is what a country must build, power, connect and staff to see that number at all. Detection at this scale is an infrastructure story.</div>
+
+    <div class="photo">
+      <div class="img" style="background-image:url('images/atlancis-nairobi-datacentre-hall.webp')"></div>
+      <div class="shade"></div>
+      <div class="chip">
+        <div class="cap">A Nairobi data-centre hall. Every counted threat event crossed hardware like this before anyone wrote a report.</div>
+        <div class="src">Real site photography</div>
+      </div>
+    </div>
+
+    <div class="ladder">
+      <div class="t">The FY 2025/26 ladder, from the KE-CIRT/CC bulletins</div>
+      <div class="qs">
+        <div class="q"><div class="qq">Q1 JUL-SEP 25</div><div class="qv">842M</div><div class="qs2">quiet quarter</div></div>
+        <div class="q spike"><div class="qq">Q2 OCT-DEC 25</div><div class="qv">4.56B</div><div class="qs2">+441.27% spike</div></div>
+        <div class="q"><div class="qq">Q3 JAN-MAR 26</div><div class="qv">3.37B</div><div class="qs2">cooling</div></div>
+        <div class="q"><div class="qq">Q4 APR-JUN 26</div><div class="qv">2.36B</div><div class="qs2">cooling</div></div>
+        <div class="q total"><div class="qq">FY 2025/26 TOTAL</div><div class="qv">11,124,602,684</div><div class="qs2">+29.0% YoY &middot; detected events, not breaches</div></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="st"><div class="v">83.1M <span>+60.8%</span></div><div class="k">advisories issued to affected ICT users</div></div>
+      <div class="st"><div class="v">144 <span>/ 2,985 Gbps</span></div><div class="k">KIXP member networks / connected port capacity</div></div>
+      <div class="st"><div class="v">20 <span>of 27</span></div><div class="k">tracked facilities operational &middot; 230 MW pipeline</div></div>
+    </div>
+
+    <div class="quote">"The threat data and the construction data are <b>the same story told twice</b>."</div>
+
+    <div class="cta">
+      <div class="go">What 11.1 billion events mean for data centres</div>
+      <div class="url">data-centers-254.vercel.app</div>
+    </div>
+    <div class="foot">
+      <span>DC254 &middot; DATA CENTRES KENYA</span>
+      <span>FIGURES: KE-CIRT/CC QUARTERLY BULLETINS FY 2025/26 &middot; PEERINGDB OCT 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= X 1200x675 ================= -->
+<div class="frame" id="x">
+  <div class="grid-lines"></div>
+  <div class="glow"></div>
+  <div class="inner">
+    <div class="left">
+      <div class="kicker">DC254 &middot; Infrastructure Brief</div>
+      <h1>Kenya recorded <span class="n">11.1 billion</span> detected cyber-threat events in FY&nbsp;2025/26.</h1>
+      <div class="sub">Not 11.1 billion breaches. Detected events, counted by national monitoring that exists, is staffed and publishes its methods. The infrastructure behind the count is the story: <b>20 operational facilities, 144 networks at KIXP, a 230 MW pipeline</b> that absorbs both the threat curve and the load curve.</div>
+      <div class="facts">
+        <div class="f"><div class="v">11,124,602,684 <span>+29.0%</span></div><div class="k">FY 2025/26 ladder total</div></div>
+        <div class="f"><div class="v">83.1M <span>+60.8%</span></div><div class="k">advisories issued</div></div>
+        <div class="f"><div class="v"><span>+441.27%</span></div><div class="k">Q2 spike quarter</div></div>
+      </div>
+      <div class="quote">"The threat data and the construction data are <b>the same story told twice</b>."</div>
+      <div class="ctabar">
+        <div class="go">What that means for data centres</div>
+        <div class="url">data-centers-254.vercel.app</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="img" style="background-image:url('images/nairobi-skyline-night-kicc.webp')"></div>
+      <div class="fade"></div>
+      <div class="fade2"></div>
+      <div class="chip">
+        <div class="cap">Nairobi at night. The cluster where Kenya's detection capacity concentrates.</div>
+        <div class="src">Real site photography</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
