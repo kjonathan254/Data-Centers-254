@@ -147,6 +147,33 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
+      // System audit 2026-10-07 finding F3 (editor approved): static images
+      // used to serve with the platform default `max-age=0, must-revalidate`,
+      // forcing a revalidation round-trip per image per visit. One day of
+      // browser freshness plus a week of stale-while-revalidate is safe even
+      // though these filenames are descriptive rather than content-hashed:
+      // if an image is ever replaced in place, old copies age out within a
+      // day and the CDN keeps serving stale copies in the background for a
+      // week. Security headers still apply — the /:path* rule above matches
+      // these paths too, and Next merges all matching header rules.
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/og/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
     ];
   },
 };
