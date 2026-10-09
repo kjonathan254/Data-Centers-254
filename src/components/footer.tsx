@@ -46,7 +46,7 @@ export default function Footer() {
             {/* Masthead hierarchy: brand · tagline · publisher · place.
                 Reads as a publication Elmac owns and operates, not a client credit. */}
             <p className="text-base font-semibold tracking-tight text-foreground mb-2">
-              DataCentre254
+              DC254
             </p>
             <p className="text-sm font-medium text-foreground/80 leading-relaxed mb-2 max-w-xs">
               Digital infrastructure intelligence from Kenya

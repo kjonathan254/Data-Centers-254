@@ -209,7 +209,7 @@ export default function MethodologyPage() {
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-14">
             One rule sits above the machinery: the AI research assistant
             collects and scores evidence, but it never establishes facts. Every
-            verification decision is approved by the DataCentre254 editor, and
+            verification decision is approved by the DC254 editor, and
             every status change is recorded in an append-only evidence ledger,
             so the history of a record can be audited, not just its current
             state. The v0.2 pilot covers eleven facilities; the panel on those

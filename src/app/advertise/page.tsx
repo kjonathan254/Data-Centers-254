@@ -91,7 +91,7 @@ export default async function AdvertisePage() {
             Reach the people building Kenya&apos;s digital infrastructure
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl mb-12">
-            DataCentre254 is a specialist media channel focused exclusively on
+            DC254 is a specialist media channel focused exclusively on
             Kenya&apos;s data-centre and digital-infrastructure ecosystem, not a
             general tech site. Sponsorship here means your brand is associated
             with research and clarity, clearly labelled and never at the cost
@@ -127,7 +127,7 @@ export default async function AdvertisePage() {
 
           {/* Briefing sponsorship, slot pricing */}
           <h2 className="text-xl font-semibold text-foreground mb-2">Sponsor The Rack Report</h2>
-          <p className="text-sm text-muted-foreground mb-6">The monthly intelligence briefing from DataCentre254: infrastructure, power, connectivity, money and policy, the first Monday of every month.</p>
+          <p className="text-sm text-muted-foreground mb-6">The monthly intelligence briefing from DC254: infrastructure, power, connectivity, money and policy, the first Monday of every month.</p>
           <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-14">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
               <div>

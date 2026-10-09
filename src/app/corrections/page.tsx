@@ -143,6 +143,69 @@ export default function CorrectionsPage() {
             </ul>
           </div>
 
+          {/* Open discrepancies — unresolved source conflicts, kept visible on purpose */}
+          <h2 className="text-xl font-semibold text-foreground mb-2">
+            Open discrepancies
+          </h2>
+          <p className="mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Conflicts in the source material that we have not been able to
+            resolve yet, kept visible on purpose: a discrepancy published with
+            its status is more trustworthy than one quietly papered over. Each
+            entry carries what we hold, what conflicts, and what would resolve
+            it.
+          </p>
+          <div className="mb-14 space-y-4">
+            <div className="rounded-xl border border-amber-500/25 bg-amber-500/5 p-6">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+                <p className="text-sm font-semibold text-foreground">
+                  CA licensing instrument: gazette date vs revision date
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Open since 24 September 2026
+                </p>
+              </div>
+              <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+                <li className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-amber-500/60" />
+                  <span>
+                    <span className="font-medium text-foreground">What we hold: </span>
+                    the CA consultation framework (captured as a primary
+                    instrument, 24 Sep 2026) dates the current market
+                    structure &ldquo;revised in April 2026&rdquo;; the
+                    corroborated T2 source (CDH law-firm alert) says the
+                    Revised Telecommunications Market Structure was gazetted on
+                    6 March 2026.
+                  </span>
+                </li>
+                <li className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-amber-500/60" />
+                  <span>
+                    <span className="font-medium text-foreground">Why it matters: </span>
+                    the gazette date anchors every licensing claim built on
+                    that instrument, so the site states 6 March 2026 (the
+                    corroborated source) until the primary text resolves it.
+                  </span>
+                </li>
+                <li className="flex gap-2.5">
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-amber-500/60" />
+                  <span>
+                    <span className="font-medium text-foreground">What resolves it: </span>
+                    capturing the Kenya Gazette legal notice itself — scheduled
+                    in the Issue 003 Policy Watch cycle (Monday 2 November
+                    2026).
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              Record-level divergences — where a facility&apos;s marketing
+              figures and the evidence part ways — are published on each
+              facility&apos;s own profile under &ldquo;Where marketing and
+              evidence diverge&rdquo; (29 records currently carry one), so
+              they stay attached to the claim they qualify.
+            </p>
+          </div>
+
           {/* The public log */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Corrections and update log

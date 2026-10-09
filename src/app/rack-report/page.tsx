@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Rack Report: Kenya's Data Centre Briefing",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DC254.",
     type: "website",
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Rack Report: Kenya's Data Centre Briefing",
     description:
-      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DataCentre254.",
+      "Data centres. Power. Cloud. Connectivity. Investment. Policy. The monthly intelligence briefing from DC254.",
     images: ["/og/rack-report-cover.jpg"],
   },
 };
@@ -80,7 +80,7 @@ const anatomy = [
   },
   {
     icon: Link2,
-    name: "From DataCentre254",
+    name: "From DC254",
     body: "The founder's note, and where to go deeper on the site.",
   },
 ];
@@ -96,7 +96,7 @@ export default function RackReportPage() {
         <section className="section-y border-b border-border/40">
           <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
             <p className="text-section-label mb-4">
-              The Rack Report · by DataCentre254
+              The Rack Report · by DC254
             </p>
             <h1 className="text-display-sm text-foreground mb-5">
               The monthly briefing on Kenya and East Africa&apos;s digital

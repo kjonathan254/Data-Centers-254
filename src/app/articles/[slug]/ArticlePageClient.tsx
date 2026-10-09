@@ -263,7 +263,7 @@ export default function ArticlePageClient({ article, related, body }: Props) {
               </span>
             </div>
             <p className="text-xs text-muted-foreground mt-1.5">
-              DataCentre254 &middot; An Elmac Communications Ltd publication
+              DC254 &middot; An Elmac Communications Ltd publication
             </p>
           </div>
 

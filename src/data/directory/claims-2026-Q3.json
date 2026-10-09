@@ -272,7 +272,7 @@
           "note": "Editor review 2026-09-22: confirmed against the official iXAfrica campus specs and site.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -293,7 +293,7 @@
           "note": "Editor review 2026-09-22: confirmed against the official iXAfrica campus specs and site.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -314,7 +314,7 @@
           "note": "Editor review 2026-09-22: hyperscale, carrier-neutral, AI-ready positioning confirmed against the official site. Superlatives (first and largest) remain marketing language, not verified fact.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -335,7 +335,7 @@
           "note": "Editor review 2026-09-22: Mombasa Road / Cabanas location confirmed against the official site and registry.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -356,7 +356,7 @@
           "note": "Editor review 2026-09-22: NBOX1.1 live at 4.5 MW per the official campus specs; operational status consistent with independent 2025 launch reports.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -376,7 +376,7 @@
           "note": "Operator-stated figures, verbatim on the official campus specs (NBOX1.1: 4.5MW IT Load, 780 Racks; NBOX1.2: 18MW IT Load, 3,744 Racks). The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -404,7 +404,7 @@
           "note": "Editor review 2026-09-22: identity supported; facility solidly verified.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -425,7 +425,7 @@
           "note": "Editor review 2026-09-22: operator supported.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -446,7 +446,7 @@
           "note": "Editor review 2026-09-22: carrier-neutral colocation classification supported.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -467,7 +467,7 @@
           "note": "Operator's current page says 'Located at Sameer Industrial Park'; the registry says 'Sameer Business Park'. Same complex; both wordings recorded.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -488,7 +488,7 @@
           "note": "Editor review 2026-09-22: operational status supported (operator lists NBO1 in its live footprint; active registry record with 126 networks).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -508,7 +508,7 @@
           "note": "Operator's own current wording on africadatacentres.com ('Available site capacity 7.5 MW'). An older 2021 operator data sheet cited lower client IT load (about 2.7 MW plus planned expansion), showing the figures evolved. Exact current sold/available IT load, precise hall counts and any expansion beyond the 7.5 MW site figure stay under individual review, per the editor's action.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -535,7 +535,7 @@
           "note": "Editor review 2026-09-22: icolo.io/location/nbo1/ states NBO1 launched September 2019 in Karen; clean primary source.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -556,7 +556,7 @@
           "note": "Editor review 2026-09-22: confirmed on the operator facility page (iColo, now Digital Realty).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -577,7 +577,7 @@
           "note": "Editor review 2026-09-22: carrier-neutral colocation plus teleport, per the operator page; tech-spec PDF and connectivity lists align.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -598,7 +598,7 @@
           "note": "Editor review 2026-09-22: Karen location stated verbatim on the operator facility page.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -619,7 +619,7 @@
           "note": "Editor review 2026-09-22: launched September 2019 per the operator page; 280 racks and 624 sqm of customer space stated on the same page.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -648,7 +648,7 @@
           "note": "Editor review 2026-09-22: opened 7 September 2026; multiple independent launch reports corroborate.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -670,7 +670,7 @@
           "note": "Editor review 2026-09-22: Digital Realty rebranding confirmed in the launch coverage and operator material.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -691,7 +691,7 @@
           "note": "Digital Realty's site listing describes carrier-neutral colocation (editor review, 2026-09-22); the fetched press and registry documents describe the facility without the word 'colocation'. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -712,7 +712,7 @@
           "note": "Launch coverage places NBO2 in Karen; the Digital Realty listing gives the Langata South Road & LRC Road junction (editor review). The directory's earlier street detail (Bogani East Road) is retained on the record but rests on earlier collection.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -734,7 +734,7 @@
           "note": "Editor review 2026-09-22: operational (opened 7 September 2026); corroborated by launch coverage and the live operator listing.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -756,7 +756,7 @@
           "note": "All launch coverage states 6.4 MW; the editor verified Digital Realty's official GlobeNewswire release (7 Sep 2026) stating the 6.4-megawatt Nairobi Two Data Center. The earlier iColo X post (January 2026, pre-launch) cited 6.5 MW IT load; recorded as a pre-launch discrepancy rather than silently overwritten, per the editor's action. The directory record now carries 6.4 MW.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -783,7 +783,7 @@
           "note": "Editor review 2026-09-22: operator page states 'Miritini is currently home to MBA1'.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -804,7 +804,7 @@
           "note": "Editor review 2026-09-22: confirmed on the operator page (iColo, now Digital Realty).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -825,7 +825,7 @@
           "note": "Operator page: 'Colocate your business-critical equipment in MBA1'. Editor review 2026-09-22 confirms colocation classification.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -846,7 +846,7 @@
           "note": "Operator page states 'Miritini is currently home to MBA1' (the earlier note that the operator page does not state the area was wrong; the verbatim text is in the store).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -867,7 +867,7 @@
           "note": "Operator page: 'operational since 2017'. Editor review 2026-09-22 confirms.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -885,7 +885,7 @@
           "note": "Operator page wording is explicit: 13 MW is the planned campus total (3 data centres), not an MBA1-only figure. Per the editor's action, the 'MBA1 = 13 MW' attribution is removed; the qualified campus claim is what the directory now carries. MBA1's own live IT load (0.9 MW per the iColo homepage, earlier collection) was not re-confirmed in this sweep.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -912,7 +912,7 @@
           "note": "Editor review 2026-09-22: confirmed on the operator page.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -933,7 +933,7 @@
           "note": "Editor review 2026-09-22: confirmed (iColo, now Digital Realty).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -954,7 +954,7 @@
           "note": "Operator page: 'Colocate your business-critical equipment in MBA2'. Editor review 2026-09-22 confirms colocation classification.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -975,7 +975,7 @@
           "note": "Operator page states 'Situated in Nyali' (the earlier note that the operator page does not state the area was wrong; the verbatim text is in the store).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -996,7 +996,7 @@
           "note": "Operator page: 'launched in 2022'. Editor review 2026-09-22 confirms.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1016,7 +1016,7 @@
           "note": "Operator-stated ('Hosting up to 600 customer racks'; '600 Racks' key facts), verbatim on the operator page. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1044,7 +1044,7 @@
           "note": "Editor review 2026-09-22: paix.io/kenya confirms NBO-1 in Britam Tower, Upper Hill.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1065,7 +1065,7 @@
           "note": "Editor review 2026-09-22: confirmed on the operator Kenya page.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1086,7 +1086,7 @@
           "note": "Editor review 2026-09-22: carrier/cloud-neutral colocation per the operator page; PeeringDB consistent.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1107,7 +1107,7 @@
           "note": "Editor review 2026-09-22: Britam Tower, Upper Hill confirmed on the operator page and registry.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1128,7 +1128,7 @@
           "note": "Editor review 2026-09-22: operational per the live operator page and active registry record (38 networks).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1146,7 +1146,7 @@
           "note": "Directory tracks 1.5 MW (launch-era specification). No public source in the 2026-09-22 sweep documents the figure; retained as an operator-stated launch spec, not a verified number. Editor review did not overturn this.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1172,7 +1172,7 @@
           "note": "Editor review 2026-09-22: Airtel/Nxtra and Tatu City announcements, the September 2025 groundbreaking and government participation confirm the project. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1193,7 +1193,7 @@
           "note": "Editor review 2026-09-22: the announcements name Nxtra by Airtel (Airtel Kenya) as the developer-operator. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1212,7 +1212,7 @@
           "note": "Editor review 2026-09-22: 44 MW in two 22 MW phases is the figure in the Airtel/Nxtra and Tatu City announcements, corroborated by multiple independent reports. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1233,7 +1233,7 @@
           "note": "Tatu City location confirmed by the editor against the announcements; street-level detail (Eastern Bypass) rests on the directory's earlier collection. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1254,7 +1254,7 @@
           "note": "Editor review 2026-09-22: under construction, groundbreaking September 2025, revised completion target July 2027, corroborated by multiple independent reports. Explicitly not operational. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1273,7 +1273,7 @@
           "note": "Editor review 2026-09-22: the 44 MW planned figure is in the developer announcements and is corroborated by independent reporting; recorded as planned capacity for a project, not an operational figure. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1300,7 +1300,7 @@
           "note": "Editor review 2026-09-22: SEACOM documentation, landing-point lists and independent cable maps confirm the Mombasa CLS. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1321,7 +1321,7 @@
           "note": "Editor review 2026-09-22: the registry names the operator as SEACOM Limited; SEACOM documentation confirms. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1342,7 +1342,7 @@
           "note": "Editor review 2026-09-22: cable landing station role confirmed via SEACOM documentation and independent cable maps. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1363,7 +1363,7 @@
           "note": "City-level location is part of the editor-verified existence finding (landing-point lists and cable maps). The street-level address (Swahili Cultural Centre, per the registry) remains a separate, not-yet-corroborated claim, per the editor: exact address and full ancillary specs are separate claims. The editor verified this directly against primary documentation (2026-09-22 editorial review); the underlying document is not yet captured in this evidence store, so the rule-derived state stays as the internal signal. Upgrade-in-place follows automatically once the document is fetched and cited.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1384,7 +1384,7 @@
           "note": "The editor's verification covers existence and type of the landing station; an explicit in-service statement has not been captured, so operational status stays at Review. The registry record has been active since 2013 with 31 networks.",
           "state": "review",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1411,7 +1411,7 @@
           "note": "Editor review 2026-09-22: official facility page live at raxiogroup.com/data-centres/uganda (the earlier sweep hit a block; the page fetches fine).",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1432,7 +1432,7 @@
           "note": "Editor review 2026-09-22: the official page is Raxio Uganda's own facility page with downloadable tech specs.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1453,7 +1453,7 @@
           "note": "Official key facts state 'Colocation'; the independent press coverage says 'carrier and cloud-neutral data centre'. Editor review 2026-09-22 confirms.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1474,7 +1474,7 @@
           "note": "Official page: 'located 15km from Kampala CBD within the Namanve Industrial Park along the Kampala-Jinja Highway'.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1495,7 +1495,7 @@
           "note": "Official page presents the live facility (key facts, security, connectivity); press describes functions hosted at the operating facility. Editor review 2026-09-22 confirms operational status.",
           "state": "verified",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1509,7 +1509,7 @@
     },
     "africa-data-centres-kigali-kgl1": {
       "investigatedAt": "2026-09-22",
-      "investigationNote": "Editor decision, 2026-09-22: DataCentre254 currently lacks sufficient authoritative evidence to verify an operational (or completed) Africa Data Centres facility identified as KGL1 in Kigali. Held as Unsupported; non-existence is NOT asserted. The record stays on hold pending a primary source (a new ADC facility page, a completion notice, or independent confirmation). PAIX has a separately documented Kigali presence.",
+      "investigationNote": "Editor decision, 2026-09-22: DC254 currently lacks sufficient authoritative evidence to verify an operational (or completed) Africa Data Centres facility identified as KGL1 in Kigali. Held as Unsupported; non-existence is NOT asserted. The record stays on hold pending a primary source (a new ADC facility page, a completion notice, or independent confirmation). PAIX has a separately documented Kigali presence.",
       "claims": [
         {
           "id": "KGL1-C1",
@@ -1519,7 +1519,7 @@
           "note": "Editor review 2026-09-22: no material change. The 2026-09-22 negative sweep stands: no dedicated current ADC facility page, no completion or go-live announcement in primary or secondary sweeps.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1537,7 +1537,7 @@
           "note": "Editor review 2026-09-22: no material change.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1555,7 +1555,7 @@
           "note": "Editor review 2026-09-22: no material change.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1573,7 +1573,7 @@
           "note": "Editor review 2026-09-22: no material change.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1591,7 +1591,7 @@
           "note": "Editor review 2026-09-22: no material change. The 2022 plan (2 MW, groundbreaking Q1 2023) and aggregator listings are not sufficient to publish any stage claim as verified.",
           "state": "unsupported",
           "humanReview": "approved",
-          "reviewedBy": "Editor, DataCentre254",
+          "reviewedBy": "Editor, DC254",
           "reviewedAt": "2026-09-22",
           "assessment": {
             "method": "rule-tier-v0.2",
@@ -1606,7 +1606,7 @@
   },
   "editorialReview": {
     "reviewedAt": "2026-09-22",
-    "reviewedBy": "Editor, DataCentre254",
+    "reviewedBy": "Editor, DC254",
     "scope": "all 11 pilot facilities, claim-by-claim",
     "method": "human primary-source review (official operator pages, tech-spec PDFs, Digital Realty launch release, ADC Nairobi page, X posts, market briefs); primary sources take precedence; the claim is the unit of truth",
     "note": "editorState is the editor's determination where it diverges from the rule derivation; rule-derived states are preserved for audit"

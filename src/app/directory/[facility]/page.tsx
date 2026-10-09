@@ -161,7 +161,7 @@ export default async function FacilityPage({
 
   const specs: { icon: typeof Zap; label: string; value: string }[] = [];
   if (f.itLoadMw) specs.push({ icon: Zap, label: "Live IT load", value: `${f.itLoadMw} MW` });
-  if (f.totalCapacityMw) specs.push({ icon: Zap, label: "Total capacity", value: `${f.totalCapacityMw} MW` });
+  if (f.totalCapacityMw) specs.push({ icon: Zap, label: "Designed capacity", value: `${f.totalCapacityMw} MW` });
   if (f.rackCount) specs.push({ icon: Server, label: "Racks", value: f.rackCount.toLocaleString() });
   if (f.tierRating) specs.push({ icon: Shield, label: "Tier rating", value: f.tierRating });
   if (f.facilityType) specs.push({ icon: Building2, label: "Facility type", value: f.facilityType });
@@ -232,7 +232,7 @@ export default async function FacilityPage({
                 </span>
               )}
               <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${VERIFY_BADGE[verify.state]}`}
-                title="Claim-level verification state, approved by the DataCentre254 editor">
+                title="Claim-level verification state, approved by the DC254 editor">
                 <VerifyIcon state={verify.state} className="size-3.5" />
                 {verify.label}
               </span>
@@ -501,7 +501,7 @@ export default async function FacilityPage({
               {verify.editorialStatus !== "approved" ? (
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Claim-level evidence was collected on {evidence.investigatedAt} and is
-                  now in editorial review. Until the DataCentre254 editor approves each
+                  now in editorial review. Until the DC254 editor approves each
                   claim, the public verification state stays <strong>Unverified</strong>.
                 </p>
               ) : (
@@ -572,7 +572,7 @@ export default async function FacilityPage({
 
               <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
                 Every claim is verified separately against tiered sources. The AI research
-                assistant collects and scores evidence; DataCentre254&apos;s editor approves
+                assistant collects and scores evidence; DC254&apos;s editor approves
                 each verification decision and the full history is kept in an evidence ledger.
               </p>
               <Link href="/methodology" className="mt-2 inline-block text-xs text-cyan underline hover:underline">

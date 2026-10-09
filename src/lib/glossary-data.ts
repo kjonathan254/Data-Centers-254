@@ -21,6 +21,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
   },
   {
+    term: "AI-ready",
+    short: "A facility designed for high-density AI workloads: GPU-capable power density per rack, enhanced liquid or in-row cooling, and low-latency network access.",
+    definition:
+      "AI-ready describes a data centre built or fitted out for the demands of AI training and inference clusters rather than standard enterprise IT. The practical markers are much higher power density per rack (GPU racks commonly draw far more than a conventional 5-10 kW rack), enhanced cooling such as direct liquid or in-row systems, and the network fabric to move large datasets. Because no independent certification standard for \u2018AI-ready\u2019 exists yet, the claim is only as good as its evidence: in the DC254 directory the AI-ready flag is applied to 5 of the 27 tracked Kenyan facilities where the operator publishes specific density or cooling figures, and each record links to the source. Treat unexplained AI-ready marketing as a label, not a specification.",
+    category: "Infrastructure",
+    relatedTerms: ["Hyperscale", "IT Load", "Colocation", "Tier Rating"],
+  },
+  {
     term: "Tier Rating",
     short: "A classification system (Tier I–IV) that rates a data centre’s reliability and redundancy, defined by the Uptime Institute.",
     definition:

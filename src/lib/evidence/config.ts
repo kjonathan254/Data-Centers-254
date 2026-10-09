@@ -8,7 +8,7 @@
  *
  * Editorial invariants (do not break in code):
  *  - The AI discovers, extracts and scores evidence; it never establishes
- *    facts. DataCentre254 (the editor) is the sole verification authority.
+ *    facts. DC254 (the editor) is the sole verification authority.
  *  - Public verification states are human-gated: a claim shows its state
  *    publicly only after editorial approval (humanReview === "approved").
  *  - The editor may settle a claim at a different state than the rule

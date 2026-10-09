@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import {
   Search, SlidersHorizontal, X, Building2, Zap, Server,
-  MapPin, Shield, Globe, ArrowUpDown, Database, Wifi,
+  MapPin, Shield, Globe, ArrowUpDown, Database, Wifi, Download,
   AlertTriangle, CheckCircle, Clock, HardHat, Megaphone, ShieldCheck,
   GitCompareArrows, ExternalLink, Landmark,
   type LucideIcon,
@@ -84,6 +84,28 @@ const statusCfg: Record<string, { color: string; bg: string; icon: LucideIcon }>
   "Early Stage": { color: "text-muted-foreground", bg: "bg-accent/50 border-border", icon: Megaphone },
   Planned: { color: "text-muted-foreground", bg: "bg-accent/50 border-border", icon: Clock },
 };
+
+/**
+ * Capacity-type chip: every MW figure on a card is labelled with what kind of
+ * capacity it is, so a planned pipeline number can never be misread as live
+ * load. Text label is primary; colour is never the sole carrier.
+ */
+type CapacityChipInfo = { tag: "LIVE" | "DESIGNED" | "PLANNED" | "ANNOUNCED"; mw: number; tip: string };
+function capacityChip(f: Facility): CapacityChipInfo | null {
+  if (f.itLoadMw != null) return { tag: "LIVE", mw: f.itLoadMw, tip: "Live IT load: power actually consumed by IT equipment today, as published by the operator" };
+  if (f.totalCapacityMw == null) return null;
+  if (f.status === "Operational") return { tag: "DESIGNED", mw: f.totalCapacityMw, tip: "Designed capacity: buildable capacity of a live facility whose live IT load is not published" };
+  if (f.status === "Early Stage") return { tag: "ANNOUNCED", mw: f.totalCapacityMw, tip: "Announced capacity: developer-stated future capacity, not yet financed or built" };
+  return { tag: "PLANNED", mw: f.totalCapacityMw, tip: "Planned capacity: designed capacity of a project under construction or committed" };
+}
+
+/** Saved views: one-click presets over the verified dataset (client-side, composable with the server filters). */
+const QUICK_VIEWS: { id: string; label: string; hint: string; match: (f: Facility) => boolean }[] = [
+  { id: "op-nbo", label: "Operational · Nairobi", hint: "Operational facilities in the Nairobi metro", match: (f) => f.status === "Operational" && f.city === "Nairobi" },
+  { id: "uc", label: "Under construction", hint: "Projects being built now", match: (f) => f.status === "Under Construction" },
+  { id: "carrier", label: "Carrier-neutral", hint: "Open to any carrier or customer", match: (f) => f.carrierNeutral === true },
+  { id: "ai", label: "AI-ready", hint: "Designed for high-density AI workloads", match: (f) => f.aiReady === true },
+];
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -195,6 +217,7 @@ export default function DirectorySection({
   const [sortBy, setSortBy] = useState("itLoadMw");
   const [sortOrder, setSortOrder] = useState("desc");
   const [showFilters, setShowFilters] = useState(false);
+  const [quickView, setQuickView] = useState<string | null>(null);
   const { slugs: compareSlugs, toggle: toggleCompare } = useCompareSelection();
   const compareSet = new Set(compareSlugs);
 
@@ -226,7 +249,26 @@ export default function DirectorySection({
     else if (sortBy === "stage") setSortBy("itLoadMw");
   };
 
-  const activeCount = [status !== "all", operator !== "all", country !== "all", facilityType !== "all"].filter(Boolean).length;
+  const activeCount = [status !== "all", operator !== "all", country !== "all", facilityType !== "all", quickView !== null].filter(Boolean).length;
+  const qv = quickView ? QUICK_VIEWS.find((v) => v.id === quickView) ?? null : null;
+  const shown = data && tab !== "cables" ? data.facilities.filter((f) => !qv || qv.match(f)) : [];
+
+  const exportCsv = () => {
+    if (!data || !shown.length) return;
+    const esc = (v: unknown) => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+    const head = ["name", "slug", "operator", "city", "country", "status", "live_it_load_mw", "designed_capacity_mw", "racks", "tier_rating", "ai_ready", "carrier_neutral", "last_verified", "data_source"];
+    const lines = [head.join(",")];
+    for (const f of shown) {
+      lines.push([f.name, f.slug, f.operator.name, f.city, f.country ?? "Kenya", f.status, f.itLoadMw, f.totalCapacityMw, f.rackCount, f.tierRating, f.aiReady, f.carrierNeutral, f.lastVerified, f.dataSource].map(esc).join(","));
+    }
+    const blob = new Blob(["\uFEFF" + lines.join("\n")], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `dc254-directory-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <section id="directory" className="py-14 lg:py-20">
@@ -251,6 +293,13 @@ export default function DirectorySection({
               How we verify →
             </Link>
           </div>
+          <p className="mt-3 text-xs leading-relaxed text-muted-foreground max-w-2xl">
+            Capacity vocabulary: <span className="font-medium text-foreground/80">LIVE</span> = published live IT load ·{" "}
+            <span className="font-medium text-foreground/80">DESIGNED</span> = buildable capacity of a live facility ·{" "}
+            <span className="font-medium text-foreground/80">PLANNED</span> = under construction or committed ·{" "}
+            <span className="font-medium text-foreground/80">ANNOUNCED</span> = developer-stated, not yet built. Every MW figure on a card carries its type.{" "}
+            <Link href="/glossary" className="text-cyan underline hover:underline">Definitions →</Link>
+          </p>
         </div>
 
         {/* Tabs, the four audit-recommended views of the dataset */}
@@ -279,6 +328,26 @@ export default function DirectorySection({
             );
           })}
         </div>
+
+        {/* Quick views: one-click presets over the verified dataset */}
+        {tab !== "cables" && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground mr-1">Quick views</span>
+            {QUICK_VIEWS.map((v) => {
+              const on = quickView === v.id;
+              return (
+                <button key={v.id} type="button" title={v.hint} aria-pressed={on}
+                  onClick={() => setQuickView(on ? null : v.id)}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                    on ? "border-cyan/40 bg-cyan/10 text-cyan" : "border-border/60 text-muted-foreground hover:border-cyan/30 hover:text-foreground"
+                  }`}>
+                  {v.label}
+                  {on && <X className="size-3" aria-hidden="true" />}
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         {/* Stats, scoped to the active tab so each number keeps its canonical label */}
         {tab === "cables" ? (() => {
@@ -367,6 +436,10 @@ export default function DirectorySection({
             </Select>) : null}
             {tab !== "cables" ? (
             <Button variant="outline" onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")} aria-label="Toggle sort order" className="h-11 px-3 border-border/50"><ArrowUpDown className="size-4" /></Button>) : null}
+            {tab !== "cables" ? (
+            <Button variant="outline" onClick={exportCsv} disabled={!data || !shown.length} title="Download the current view as CSV (the public dataset, CC BY 4.0)" aria-label="Export the current directory view as CSV" className="h-11 px-4 border-border/50 gap-2">
+              <Download className="size-4" />CSV
+            </Button>) : null}
           </div>
 
           {showFilters && data && tab !== "cables" && (
@@ -383,12 +456,12 @@ export default function DirectorySection({
               <div><label className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-2 block">Type</label>
                 <Select value={facilityType} onValueChange={setFacilityType}><SelectTrigger className="border-border/50 bg-background text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent><SelectItem value="all">All Types</SelectItem>{data.filters.types.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}</SelectContent></Select></div>
-              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setCountry("all"); setFacilityType("all"); }} className="text-xs text-cyan underline hover:underline sm:col-span-2 lg:col-span-4 text-left">Clear all filters</button>}
+              {activeCount > 0 && <button onClick={() => { setStatus("all"); setOperator("all"); setCountry("all"); setFacilityType("all"); setQuickView(null); }} className="text-xs text-cyan underline hover:underline sm:col-span-2 lg:col-span-4 text-left">Clear all filters</button>}
             </div>
           )}
         </div>
 
-        {!loading && data && tab !== "cables" && <p className="text-sm text-muted-foreground my-6">Showing {data.facilities.length} facilit{data.facilities.length === 1 ? "y" : "ies"}{search && <> for &ldquo;{search}&rdquo;</>}</p>}
+        {!loading && data && tab !== "cables" && <p className="text-sm text-muted-foreground my-6">Showing {shown.length} facilit{shown.length === 1 ? "y" : "ies"}{qv && <> · quick view: <span className="text-cyan">{qv.label}</span></>}{search && <> for &ldquo;{search}&rdquo;</>}</p>}
         {tab === "cables" && (() => { const rows = cableRows(search); return <p className="text-sm text-muted-foreground my-6">Showing {rows.length} cable system{rows.length === 1 ? "" : "s"}{search && <> matching &ldquo;{search}&rdquo;</>} · <Link href="/tracker/cables" className="text-cyan underline hover:underline">full cable tracker →</Link></p>; })()}
 
         {loading && !data && tab !== "cables" && <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">{Array.from({ length: 4 }).map((_, i) => <div key={i} className="card-solid rounded-xl p-6 space-y-4"><Skeleton className="h-6 w-48" /><Skeleton className="h-4 w-full" /><Skeleton className="h-4 w-3/4" /></div>)}</div>}
@@ -398,9 +471,10 @@ export default function DirectorySection({
 
         {!loading && data && tab !== "cables" && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-            {data.facilities.map((f) => {
+            {shown.map((f) => {
               const sc = statusCfg[f.status] || statusCfg.Planned;
               const inCompare = compareSet.has(f.slug);
+              const cap = capacityChip(f);
               return (
                 <article key={f.id} className="card-solid card-solid-hover relative rounded-xl p-5 sm:p-6 group">
                   {/* Stretched link, whole card navigates to the profile */}
@@ -410,7 +484,7 @@ export default function DirectorySection({
                     <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
                   </div>
                   <div className="flex flex-wrap gap-3 mb-3">
-                    {f.itLoadMw && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Zap className="size-3.5 text-cyan" /><span>{f.itLoadMw} MW</span></div>}
+                    {cap && <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title={cap.tip}><Zap className="size-3.5 text-cyan" /><span className="font-mono text-[10px] font-bold tracking-wider text-cyan">{cap.tag}</span><span className="font-medium text-foreground/80 tabular-nums">{cap.mw} MW</span></div>}
                     {f.rackCount && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Server className="size-3.5 text-cyan" /><span>{f.rackCount.toLocaleString()} racks</span></div>}
                     {f.carrierNeutral === true && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">CARRIER-NEUTRAL</Badge>}
                     {f.aiReady && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
@@ -444,8 +518,11 @@ export default function DirectorySection({
             Data sourced from operator websites, independent registers, and
             credible press, every entry carries named sources, a last-verified
             date, a PeeringDB cross-reference where one exists, and an explicit
-            note wherever marketing claims and evidence part ways. Last
-            verified: September 2026.{" "}
+            note wherever marketing claims and evidence part ways. Each record
+            carries its own verification date on purpose: records are
+            re-verified on rolling dates, so a September date beside an October
+            one is the system working, not drift. Last verified: September
+            2026.{" "}
             <Link href="/methodology" className="text-cyan/80 hover:text-cyan underline hover:underline">
               Read the full methodology
             </Link>

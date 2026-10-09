@@ -114,7 +114,7 @@ export function ConsoleRail() {
     >
       <a
         href="/policy"
-        title="DataCentre254 · Policy Intelligence — back to policy explainers"
+        title="DC254 · Policy Intelligence — back to policy explainers"
         className="mx-auto mb-5 flex size-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-gradient-to-br from-cyan-500/20 to-transparent shadow-[0_0_20px_rgba(34,211,238,0.18)] transition-shadow hover:shadow-[0_0_28px_rgba(34,211,238,0.35)]"
       >
         <Radar className="size-5 text-cyan-300" aria-hidden="true" />
