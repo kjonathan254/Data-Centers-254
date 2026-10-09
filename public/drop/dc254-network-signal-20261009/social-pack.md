@@ -98,6 +98,6 @@ data-centers-254.vercel.app/directory
 
 ## House rules carried from previous packs
 
-- Do not hand-edit the PNGs or PDF; regenerate from the HTML source via scripts/shot_network_signal_20261009.py so figures stay dataset-tied.
+- Do not hand-edit the PNGs or PDF; regenerate the PNGs from the HTML source via `scripts/shot_network_signal_20261009.py`, then rebuild the PDF from the QA'd PNGs via `scripts/make_linkedin_pdf_network_signal_20261009.py` (image-based, lossless, one PNG per page — pixel-exact to the frames that passed overflow QA) so figures stay dataset-tied.
 - Figures are dataset-exact to `src/data/directory/current.json` Q3 2026. Any future refresh starts from the dataset, not from this pack.
 - /drop mirror is a TEMPORARY delivery route: delete from the repo after the editor confirms download.
