@@ -1414,3 +1414,10 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - git rm -r both pack dirs (21 files, ~10.2 MB: 6 webp photos, 7 PNGs, LinkedIn PDF x1, 2 HTML sources, 2 social-packs, 2 poster PNGs, 2 diagram webp) + public/drop/index.html rewritten to the EMPTY-STATE template (noindex + TEMPORARY banner kept; "Delivery slot: empty" notes both packs delivered 9 Oct 2026 and that packs can be re-staged on request).
 - This also trims ~10.2 MB off every future deployment bundle (Deployment Storage meter, Task 93/94 context) and stops the per-deploy /drop byte carry.
 - Spend: 0 credits. Open items: SOC-NIGERIA decision; 3-article freshness upgrade; chatbot cyber fact card; captures pending editor review; KE-LC-C3 late-Oct probe; Issue 003 Mon 2 Nov; Q4 dataset-sync queue (drift table in the offline social-pack copy).
+
+### 2026-10-09 (session 12 cont. 19) - Tooling decision: KIE.ai PARKED (editor directive)
+- Editor evaluated KIE.ai agent skills (200+ image/video/music/speech generation models + coding-agent hosting, metered in KIE credits). DECISION, his words: "Since its metered or require payments keep it in the back pocket we may use it in the future."
+- STATUS: NOT installed, NO key created, 0 spend. Do NOT install or provision without a fresh editor go-ahead.
+- Feasibility already verified for a future green-light: sandbox has Node 24.21 / npx 11.19; install path `npx skills add https://kie.ai`; key would go to gitignored /home/z/my-project/.env.local as KIE_API_KEY (same discipline as VERCEL_TOKEN - never in chat, never in repo); first use requires a supply-chain review of what the skills install.
+- Agreed scope IF activated later: generated art is for clearly-illustrative editorial needs only (candidate: SOC-NIGERIA illustration) or social experiments - it never enters the data-product pipeline (carousels/posters/directory stay real photography + dataset-exact diagrams). Note: in-house image generation already covers basic illustration at 0 external cost, so KIE is only for its specific models (e.g. Veo video).
+- Spend: 0 credits. Open items unchanged.
