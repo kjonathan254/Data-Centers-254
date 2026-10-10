@@ -1498,3 +1498,11 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - One commit (7b78e6a); article_validator regression ALL OK (109). CI double-green.
 - Production probes: /drop 200 (index lists pack); both PNGs 200 image/png with byte counts == local; poster remote md5 1753fa7b... == local md5 (byte-identical); post-copy.txt 200 text/plain.
 - Spend: 0 credits. Next on this pack: clear after editor download confirmation.
+
+### 2026-10-11 (session 14) - Mazingira pack cleared from drop folder on editor confirmation (Task 106)
+- Editor: "Clear them already down loaded" - download confirmed, execute the standing clear step of the drop-folder convention.
+- Cleared public/drop/mazingira-day-20261010/ (git rm: poster, infographic, post-copy.txt); drop index.html "Available now" section replaced by "Previously delivered and cleared (11 Oct 2026)" entry keeping the verified-figures record (90%+ generation mix / 27 facilities / 7 cables) and the staged->cleared dates; 9 Oct previous-packs note untouched.
+- Canonical copies NOT lost: regeneration pipeline intact at /home/z/my-project/scripts/mazingira/ (poster.html, infographic.html, render.py, brand assets); local delivery copy /home/z/my-project/download/dc254-mazingira-day-20261010/ also cleared per convention (pipeline can rebuild byte-identical PNGs on request).
+- One commit (0f4f90f, 4 files, 6 insertions / 50 deletions); article_validator ALL OK (109); validate_policy PASS 62/68 (unchanged). CI double-green (check_ci.py 0f4f90f).
+- Production probes: both pack URLs 404 (files gone); /drop 200 via 308 -> index shows only the two previously-cleared sections, zero mazingira-day-20261010 links remaining.
+- Spend: 0 credits. Open items unchanged (SA capture awaiting editor read; Kwach/Access-Partnership captures on request; iColo->DRTY rename awaits site-level evidence; WIOCC reference-registration RR003; Issue 003 Mon 2 Nov; KE-LC-C3 probe late Oct).
