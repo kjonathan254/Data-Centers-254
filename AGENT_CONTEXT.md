@@ -1483,3 +1483,11 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - CI: check_ci.py b754590 double-green (Lint and build + Content validation).
 - PRODUCTION: article URL 200 (152,919 B); exactly 5 <figure> blocks in SSR (1 hero + 4 inline); all 5 /images/ sources present with next/image srcset; captions in SSR; Article JSON-LD present carrying the /og/ hero variant (site convention).
 - Spend: 0 credits. Open items unchanged (SA capture pending editor read; iColo->DRTY full rename awaits site-level evidence; WIOCC reference-registration deferred to RR003; Issue 003 Mon 2 Nov; KE-LC-C3 probe late Oct; 3-article freshness; SOC-NIGERIA; chatbot cyber card; Q4 dataset-sync queue).
+
+### 2026-10-10 (session 13 cont. 27) - DC254 Mazingira Day identity set (Task 104)
+- Editor pasted his Mazingira Day message + two draft PNGs: "Use the idea and pngs above and create a dc254 identity" - build the branded identity set from the concept (same-day, Mazingira Day itself).
+- Figures verified before pixel: 27 Kenyan facilities EXACT (current.json 27 Kenya + 4 EAC); renewable share downgraded from the draft's "93% in 2024" (not repo-verified) to the house phrasing "over 90%" with the editor's generation-mix qualifier; 7 live subsea cable systems matches RR002.
+- Identity from live site tokens, not invented: globals.css oklch palette (neon green/chart-4 gold/cyan/dark bg), Geist variable font (fetched latin woff2, matches next/font), real logo-icon monogram tile + wordmark recreated exactly (DC white, 2 red #F60218, 5 white, 4 green #009841, sampled from master logo).
+- Built HTML/CSS -> Playwright @2x: poster 2160x2160, infographic 2160x2700. Iteration 2 fixed infographic canvas overflow (footer clipped) + restored editor's exact H1 + em-dash removal.
+- Pack: /home/z/my-project/download/dc254-mazingira-day-20261010/ (poster, infographic, post-copy.txt with figure notes). Assets NOT committed (social-pack convention: delivered pack, cleared after editor download confirmation). Reusable pipeline saved at /home/z/my-project/scripts/mazingira/.
+- Spend: 0 credits. Open items unchanged.
