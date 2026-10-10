@@ -26,6 +26,14 @@ images:
     alt: "Power distribution equipment inside a data centre facility"
     caption: "Published capacity is a design statement, not a consumption record. The distinction is the single most common misreading in data centre reporting"
     position: "inline"
+  - src: "/images/dc-policy-regulation.webp"
+    alt: "Institutional building at dusk, the standing imagery of regulatory authority"
+    caption: "The CA's proposed standalone licence would make operating conditional on paperwork; whether that paperwork includes disclosure obligations is not yet public"
+    position: "inline"
+  - src: "/images/nbo2-launch-ribbon-cutting.webp"
+    alt: "Officials cutting the ribbon at the NBO2 data centre launch in Nairobi"
+    caption: "NBO2 formally opened on 7 September 2026, announced at 6.4 MW of capacity with no measurement basis stated; the DC254 record labels the figure designed capacity and leaves live IT load empty"
+    position: "inline"
   - src: "/images/dc-cooling-plant-pipes.webp"
     alt: "Cooling plant pipework serving a data centre white space"
     caption: "Cooling method is occasionally stated by operators; cooling water consumption and source are not published by any tracked facility in Kenya"
@@ -74,6 +82,8 @@ Because that is the uncomfortable part of the current record. The market publish
 
 On 8 September 2026 the Communications Authority of Kenya published a notice proposing a standalone data centre licence category, replacing the current treatment of colocation operators under the Network Facilities Provider Tier 2 regime. The Authority's stated rationale is to "provide regulatory clarity, enhance visibility over data centre operations, support investment in digital infrastructure, and align Kenya's framework with proportionate approaches adopted in comparable jurisdictions." The proposed licence would cover "entities that provide colocation data centre services, including the attendant supporting services."
 
+![Institutional building at dusk, the standing imagery of regulatory authority](/images/dc-policy-regulation.webp)
+
 The proposal sat on the Authority's open consultations page through our verified captures of 24 September, 4 October and 6 October, with a comment window of thirty days from publication, closing on or about 8 October 2026. Outcome searches we ran on 10 October, including sweeps for a gazette supplement and industry-association submissions, found no decision notice; the most recent coverage on record is still from the proposal window itself. What the final framework contains, fees, obligations, and critically whether it attaches any disclosure or reporting requirements to the licence, is not yet public. We will report it with the instrument captured the day it is.
 
 The advisory market is not waiting. AfriTrade Group published commentary on the framework in mid-September, and on 9 October Access Partnership and AfriTrade announced a joint practice covering digital infrastructure across Kenya and the wider East African region, with data centre approvals named in the initial scope (TechAfrica News, ITWeb Africa, Capital FM, 8–9 October 2026). When the consultants mobilise before the rules are final, it is a fair signal that compliance, and the paperwork around it, is about to become a real cost line.
@@ -96,6 +106,8 @@ The pattern is consistent: the industry publishes what helps it sell, and the re
 
 The measurement-basis problem is easiest to see in a single live example. When Digital Realty announced the opening of NBO2 in Nairobi on 7 September 2026, the announcement's headline figure was "6.4 MW of capacity", with no statement of whether that is commissioned IT load, installed design capacity, or a campus-level planning number. An earlier figure of 6.5 MW of IT load, from Developing Telecoms in August 2024 and repeated by the operator before launch, sits on the same record as a documented pre-launch discrepancy. The DC254 record carries both, labels the 6.4 MW as designed capacity, and leaves live IT load deliberately empty because no commissioned figure has been published.
 
+![Officials cutting the ribbon at the NBO2 data centre launch in Nairobi](/images/nbo2-launch-ribbon-cutting.webp)
+
 Down the road on the same Karen campus, NBO1, the facility PeeringDB shows carrying more than 60 networks and four internet exchanges, publishes no IT load figure at all. The operator's own listing does not state one, and the DC254 divergence note for the record says exactly that: ask for committed and available capacity in kW before sizing a deployment.
 
 None of this is unusual, and that is the point. Across the 27 tracked records there are 29 standing divergence notes, each recording a place where the public record conflicts, drifts or goes quiet. The directory's capacity chips, LIVE, DESIGNED, PLANNED, ANNOUNCED, exist because a bare megawatt number, repeated without its basis, is the single most common misreading in this market. Disclosure policy should start from the same insight: a capacity figure without a stated measurement basis is not transparency, it is marketing with a decimal point.
@@ -104,6 +116,8 @@ None of this is unusual, and that is the point. Across the 27 tracked records th
 
 Power is the first question every serious buyer, investor and regulator asks about a data centre, and it is where Kenya's public record is thinnest relative to interest. What exists is architecture and design talk: 2N power distribution claims, N+2 cooling, and design statements like the NBO2 master plan's captive substation consuming over 20 MW at full build. What does not exist, for any tracked facility, is a consumption figure, how many megawatt-hours the building actually drew last year, against what contracted supply, at what load factor.
 
+![Power distribution equipment inside a data centre facility](/images/dc-power-systems.webp)
+
 The closest the public record comes to a power story is the one attached to the market's most-announced project. The Microsoft and G42 joint venture, stated at 100 MW and a billion US dollars, remains an early-stage record on the DC254 board, and our power-corridor tracking notes the single-site power-delivery constraint that has been reported around it. Geothermal from Olkaria is discussed as the primary source, discussed being the operative word, since no PPA, no grid agreement and no consumption profile has been published for verification.
 
 This is where the licence consultation matters most. Grid-connected load of this scale is a planning question for Kenyan institutions, and consumption data is exactly what a licensing or reporting framework could require operators to file, even if commercial confidentiality keeps the raw numbers out of public view, an aggregate or audited disclosure would transform the quality of public debate.
@@ -111,6 +125,8 @@ This is where the licence consultation matters most. Grid-connected load of this
 ## Water and cooling: almost nothing on the record
 
 If electricity is thin, water is absent. Cooling method occasionally appears as an operator claim, the tracked Kenya records variously state N+2 cooling and similar architectures, but consumption, source and treatment are unpublished across the board. There is no published Kenyan water figure in the verified dataset, not because nobody has looked, but because no operator has put one on the record.
+
+![Cooling plant pipework serving a data centre white space](/images/dc-cooling-plant-pipes.webp)
 
 The regional context makes this worth attention now rather than later. In South Africa, civil rights groups have called for a halt to new data centre construction amid water and power concerns; the country's Human Rights Commission told the Associated Press it had received more than 250 submissions after inviting public input in May, and President Ramaphosa's push to attract further digital infrastructure investment now runs alongside that scrutiny (AP, 4 September 2026). The claims in that debate are contested and, on several points, unverified, which is precisely the problem. A market that had published consumption figures per facility would be arguing with numbers instead of about them.
 
