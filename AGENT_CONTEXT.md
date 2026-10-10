@@ -1491,3 +1491,10 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Built HTML/CSS -> Playwright @2x: poster 2160x2160, infographic 2160x2700. Iteration 2 fixed infographic canvas overflow (footer clipped) + restored editor's exact H1 + em-dash removal.
 - Pack: /home/z/my-project/download/dc254-mazingira-day-20261010/ (poster, infographic, post-copy.txt with figure notes). Assets NOT committed (social-pack convention: delivered pack, cleared after editor download confirmation). Reusable pipeline saved at /home/z/my-project/scripts/mazingira/.
 - Spend: 0 credits. Open items unchanged.
+
+### 2026-10-10 (session 13 cont. 28) - Mazingira pack staged on the public drop folder (Task 105)
+- Editor: "Drop pn the drop folder om the repo" - stage the Mazingira Day pack on public/drop per the established delivery convention (staged -> editor downloads from live site -> cleared after confirmation).
+- Staged public/drop/mazingira-day-20261010/ (poster 1,154,446 B; infographic 1,273,219 B; post-copy.txt 1,807 B); drop index.html updated: "Available now" section with 3 download links + verified-figures line (90%+ generation mix / 27 facilities / 7 cables), previous-packs-cleared note kept, download links styled site-cyan (was default browser blue on dark).
+- One commit (7b78e6a); article_validator regression ALL OK (109). CI double-green.
+- Production probes: /drop 200 (index lists pack); both PNGs 200 image/png with byte counts == local; poster remote md5 1753fa7b... == local md5 (byte-identical); post-copy.txt 200 text/plain.
+- Spend: 0 credits. Next on this pack: clear after editor download confirmation.
