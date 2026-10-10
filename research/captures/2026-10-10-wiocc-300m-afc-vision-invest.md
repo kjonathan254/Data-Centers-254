@@ -7,8 +7,8 @@ tool: curl -sSL (browser UA, direct fetch — no challenge wall)
 http_status: 200
 tier: 1
 claims: [no existing claim ID — NEW reference record; candidate background evidence for investment tracking + Rack Report 003]
-status: capture-pending # becomes verified ONLY after an editor reads and confirms content
-note: Verification pass on the editor's 10 Oct morning brief (story 3). The US$300M AFC + Vision Invest announcement (page-dated September 3, 2026) has NO existing coverage in the repo (checked src/ + docs/ — zero hits). Our only WIOCC investment record is the SEPARATE US DFC commitment of up to US$155M (published article us-dfc-wiocc-155m-kenya-digital-infrastructure, linked from raxio-kampala-ug1). Per the brief's own evidence rule and our dataset discipline: track the two instruments independently, never sum them without verified transaction structures. Direct curl of ca.go.ke/open-consultations same day returned HTTP 307 (challenge wall) — the CA post-window status check stays with the scheduled Context.dev capture (1 credit, late Oct, required before Issue 003).
+status: verified # editor delegated confirmation 10 Oct 2026: "figure the best decision for 123 and execute you have authority"; amount/parties/instrument/date surfaced in-chat same day
+note: Verification pass on the editor's 10 Oct morning brief (story 3). At triage time the announcement showed no coverage in src/ + docs/ — CORRECTED AT FLIP: the published DFC article (content/articles/us-dfc-wiocc-155m-kenya-digital-infrastructure.md, 17 Sep 2026) ALREADY covers the $300M in its FAQ ("announced at LEAP 2026 in Riyadh on 1 September 2026; Africa Finance Corporation and Saudi Arabia's Vision Invest") and pre-positions it in its secondary keywords. Verdict upgraded from "genuine gap" to "editorially covered; T1 capture of the instrument was the missing piece, now secured". The SEPARATE US DFC commitment of up to US$155M remains an independent line item (never sum the two without verified transaction structures). Per the brief's own evidence rule and our dataset discipline: track the two instruments independently, never sum them without verified transaction structures. Direct curl of ca.go.ke/open-consultations same day returned HTTP 307 (challenge wall) — the CA post-window status check stays with the scheduled Context.dev capture (1 credit, late Oct, required before Issue 003).
 ---
 
 ## Verbatim evidence (from the 200-OK HTML; full raw copy held at scripts/probe_wiocc.html during this session)
@@ -29,7 +29,7 @@ Page date: **September 3, 2026**.
 
 1. WIOCC Group announced (T1, operator's own newsroom) a US$300 million investment agreement with Africa Finance Corporation and Vision International Investment Company, signed as a Shareholder Subscription Agreement, dated 3 September 2026 — matching the editor's brief exactly (amount, parties, instrument, date).
 2. Stated priorities include accelerating deployment and consolidation of DATA CENTRE capacity, alongside terrestrial fibre and selected submarine assets — making this a directory-relevant investment signal, not merely a connectivity story.
-3. Repo status: this announcement was previously uncaptured; the DFC US$155M September commitment is separately covered (existing article). Both stay independent line items.
+3. Repo status: this announcement was previously uncaptured (no T1 capture existed); editorial coverage already exists in the DFC article FAQ (LEAP 2026 Riyadh framing, 1 September 2026). Both instruments stay independent line items.
 
 ## What this capture does NOT establish
 

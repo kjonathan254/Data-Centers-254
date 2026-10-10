@@ -6,8 +6,8 @@ title: "Digital Realty Strengthens Nairobi as East Africa Digital Gateway with N
 tool: curl -sSL (browser UA, direct fetch — no challenge wall)
 http_status: 200
 tier: 1
-claims: [icolo-nbo2 record; candidate NEW: iColo→Digital Realty brand transition (Kenya)]
-status: capture-pending # becomes verified ONLY after an editor reads and confirms content
+claims: [icolo-nbo2 record (re-confirms launch date + 6.4 figure); NEW fact registered: iColo→Digital Realty brand transition (Kenya) — recorded on icolo-nbo1 + icolo-nbo2 same day]
+status: verified # editor delegated confirmation 10 Oct 2026: "figure the best decision for 123 and execute you have authority"; key facts (7 Sep date, unqualified 6.4 MW wording, brand transition) surfaced in-chat same day
 note: Verification pass on the editor's 10 Oct morning brief (story 1). PR dated September 07, 2026. Capacity figure appears as unqualified "6.4 MW of capacity" / "6.4-megawatt (MW)" — the operator does NOT state whether it is commissioned IT load, installed or design capacity. This CONFIRMS the dataset's conservative handling on icolo-nbo2 (totalCapacityMw 6.4 → DESIGNED chip, itLoadMw deliberately null, divergenceNote "commissioned (as opposed to design) IT load has not been published"). Also establishes the brand transition: "as iColo transitions to the Digital Realty brand in Kenya" — naming drift candidate for the Q4 dataset-sync queue (operator strings on icolo-nbo1 / icolo-nbo2 / icolo-mba1 / icolo-mba2).
 ---
 

@@ -908,7 +908,7 @@
       "coolingType": "N+2 cooling (per Digital Realty listing)",
       "powerSource": "2N power (per Digital Realty listing)",
       "renewableClaim": null,
-      "notable": "iColo (a Digital Realty company) runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing.",
+      "notable": "iColo (a Digital Realty company) runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing. Operator announced (Digital Realty launch PR, 7 Sep 2026, captured 10 Oct 2026) that iColo transitions to the Digital Realty brand in Kenya; the record retains iColo naming pending site-level rebrand evidence.",
       "lastVerified": "2026-09",
       "dataSource": "iColo website; Digital Realty listing; PeeringDB register",
       "dataConfidence": "High",
@@ -965,6 +965,11 @@
           "kind": "operator"
         },
         {
+          "label": "Digital Realty, NBO2 launch press release (brand transition announcement; 7 Sep 2026; captured 10 Oct 2026)",
+          "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center",
+          "kind": "operator"
+        },
+        {
           "label": "PeeringDB facility record (fetched 8 Sep 2026)",
           "url": "https://www.peeringdb.com/fac/6448",
           "kind": "registry"
@@ -1002,9 +1007,9 @@
       "coolingType": "N+2 cooling (per Digital Realty listing)",
       "powerSource": "2N power; master plan includes a captive substation consuming over 20 MW at full build",
       "renewableClaim": null,
-      "notable": "Launched 7 September 2026 at an event attended by ICT Principal Secretary John Tanui, who framed it as part of Kenya's push to become East Africa's leading digital hub. Designed to serve cloud providers, financial institutions, enterprises and ISPs. Developing Telecoms reported (August 2024) a 6.5 MW IT load within a master plan of three data centres; the Digital Realty listing describes a 3,600 m² building with 2N power, N+2 cooling, PCI-DSS, ISO 27001 and 90-day CCTV retention. Capacity is 6.4 MW per Digital Realty's launch announcement (7 September 2026); an earlier iColo X post (January 2026) and Developing Telecoms (August 2024) cited 6.5 MW IT load, recorded as a pre-launch discrepancy. Digital Realty's listing places NBO2 on the Karen campus about 300 m from NBO1.",
-      "lastVerified": "2026-09",
-      "dataSource": "Capital FM / allAfrica launch coverage (7 Sep 2026); Developing Telecoms (Aug 2024); Digital Realty listing; PeeringDB register",
+      "notable": "Launched 7 September 2026 at an event attended by ICT Principal Secretary John Tanui, who framed it as part of Kenya's push to become East Africa's leading digital hub. Designed to serve cloud providers, financial institutions, enterprises and ISPs. Developing Telecoms reported (August 2024) a 6.5 MW IT load within a master plan of three data centres; the Digital Realty listing describes a 3,600 m² building with 2N power, N+2 cooling, PCI-DSS, ISO 27001 and 90-day CCTV retention. Capacity is 6.4 MW per Digital Realty's launch announcement (7 September 2026); an earlier iColo X post (January 2026) and Developing Telecoms (August 2024) cited 6.5 MW IT load, recorded as a pre-launch discrepancy. Digital Realty's listing places NBO2 on the Karen campus about 300 m from NBO1. Digital Realty's launch PR (7 Sep 2026) also announces that iColo transitions to the Digital Realty brand in Kenya; the record retains iColo naming pending site-level rebrand evidence.",
+      "lastVerified": "2026-10",
+      "dataSource": "Capital FM / allAfrica launch coverage (7 Sep 2026); Developing Telecoms (Aug 2024); Digital Realty launch PR (7 Sep 2026, captured 10 Oct 2026); Digital Realty listing; PeeringDB register",
       "dataConfidence": "Medium",
       "operatorId": "icolo",
       "connectivityFacility": [],
@@ -1029,8 +1034,8 @@
           "kind": "press"
         },
         {
-          "label": "Digital Realty, NBO2 launch announcement",
-          "url": "https://www.digitalrealty.com/about/newsroom",
+          "label": "Digital Realty, NBO2 launch press release (7 Sep 2026; captured 10 Oct 2026)",
+          "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center",
           "kind": "operator"
         },
         {

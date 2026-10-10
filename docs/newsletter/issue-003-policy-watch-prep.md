@@ -67,6 +67,12 @@ report until the CA moves: whether the Authority signalled any change between
 proposal and decision (scope, fees, timeline), and what the licence would mean
 for the 20 operational facilities already tracked (the map's own register).
 
+**Cross-link:** the standalone Policy Intelligence piece
+`content/articles/kenya-data-centres-what-operators-should-disclose.md`
+(published 10 October 2026) carries the five-indicator disclosure framework.
+Policy Watch should link it and lift the comparison table once the outcome is
+verified; the outcome searches run 10 October found no decision document.
+
 Angles worth one paragraph each, only if evidenced by the outcome:
 1. **The licence map fact**: every co-location facility in the directory
    (operational or pipeline) becomes a licensing counterparty — the directory
