@@ -1,0 +1,39 @@
+DC254 — Agent Fleet Tech Desk pack (5-card carousel, 1080x1350 @2x)
+Rendered 11 October 2026 · figures verified against the DC254 repository and directory
+Pattern attribution: "Grok Bot" architecture thread by @monokern (Aug 2026) — used as an
+architecture sketch; product claims unverified and attributed on the cards.
+
+FILES
+  dc254-agent-fleet-01.png  Cover — "Your next coworker doesn't sleep."
+  dc254-agent-fleet-02.png  Chat AI vs agent fleet (comparison table)
+  dc254-agent-fleet-03.png  The org chart (Chief of Staff + 5 specialists)
+  dc254-agent-fleet-04.png  The guardrail (reversibility matrix)
+  dc254-agent-fleet-05.png  We run one (DC254's own fleet) + CTA
+
+── LINKEDIN (caption, ~210 chars visible before "more"; 4 hashtags) ──
+
+Your next coworker doesn't sleep. A new kind of software worker runs on cloud VMs — with its own browser, terminal and file system — and keeps working after you close the laptop. We drew the agent-fleet architecture in 5 cards: the chat-vs-fleet shift, the org chart, and the one guardrail question that governs it all. Card 5 is the fun one: this website itself is run by a small fleet — 186 pages pinged to search engines on every deploy, four validators on every article, zero spend. Pattern after the "Grok Bot" thread by @monokern (product claims unverified, pattern presented).
+
+#DataCentres #DigitalInfrastructure #AIAgents #Kenya
+
+── X / TWITTER (thread, 5 tweets, each under 280 chars; 1 hashtag on 1/ only) ──
+
+1/ Your next coworker doesn't sleep. Agent fleets run on cloud VMs — browser, terminal, file system — and keep working after you close the laptop. A 5-card explainer: #AIAgents
+
+2/ Chat AI vs agent fleet. Runs on: your tab vs a data-centre VM. Persistence: stops vs 24/7. Team: one conversation vs delegation. Workflow: you type every prompt vs scheduled routines.
+
+3/ The org chart: you talk to one Chief of Staff agent. It delegates to Scout, Copywriter, Designer, Ops tracker and Auditor — each by a written job description.
+
+4/ The guardrail is one question: can this action be undone? Reversible — agent proceeds. Irreversible (send emails, move money, publish) — human approves first.
+
+5/ We run one. This site: 186 URLs auto-pinged to search engines per deploy, 4 validators per article, a state file that never double-submits. Agent fleets are becoming baseline data-centre tenants. data-centers-254.vercel.app/rack-report
+
+── INSTAGRAM (caption; 4 hashtags) ──
+
+Your next coworker doesn't sleep. Agent fleets run on cloud VMs in data centres and keep working after you close the laptop. Swipe through the architecture in 5 cards — and check card 5: this website is run by a small fleet too. #DataCentres #AIAgents #DigitalInfrastructure #Kenya
+
+── NOTES FOR THE EDITOR ──
+- First-person figures on card 5 are verified: 186 URLs = IndexNow state file; 4 validators = article gates; zero spend = standing 0-credit rule.
+- The 27-facility figure matches the directory (27 Kenya records). If the directory count changes before posting, update card 5's last line and re-render (scripts/agent-fleet/render.py).
+- Cards present the architecture pattern, not the product: the @monokern attribution line appears on cards 2, 3, 4 and in full on card 5.
+- Suggested alt text for card 1: "Dark green DC254 branded card with the headline 'Your next coworker doesn't sleep' and a note that agents run on cloud virtual machines in data centres."
