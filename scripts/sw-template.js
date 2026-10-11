@@ -104,6 +104,20 @@ async function cacheFirst(request, event) {
   }
 }
 
+// Chrome rejects a redirected response handed to respondWith() for a
+// navigation request (net::ERR_FAILED), and a cached redirected match can
+// trip the same check. Re-serve any response that followed a redirect as a
+// plain Response carrying the final body, status and headers.
+async function unwrapRedirect(response) {
+  if (!response || !response.redirected) return response;
+  const body = await response.arrayBuffer();
+  return new Response(body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: response.headers,
+  });
+}
+
 async function networkFirstPage(request, event) {
   const cache = await caches.open(PAGE_CACHE);
 
@@ -113,19 +127,21 @@ async function networkFirstPage(request, event) {
     // the catch/non-ok path and we would serve the offline page for a
     // perfectly healthy redirect), so build a fresh follow-redirect request
     // that preserves the navigation's accept headers.
-    const fresh = await fetch(
-      new Request(request.url, {
-        method: "GET",
-        headers: request.headers,
-        redirect: "follow",
-        cache: "no-cache",
-      })
+    const fresh = await unwrapRedirect(
+      await fetch(
+        new Request(request.url, {
+          method: "GET",
+          headers: request.headers,
+          redirect: "follow",
+          cache: "no-cache",
+        })
+      )
     );
     if (fresh && fresh.ok) {
       event.waitUntil(cache.put(request, fresh.clone()));
       return fresh;
     }
-    // Client errors (404, 410, ...) are the app real answers: the styled
+    // Client errors (404, 410, ...) are the app's real answers: the styled
     // not-found page is the truth a reader should see, never the offline
     // fallback. Pass them through untouched and uncached (429 excepted: it
     // is a capacity condition, not a content answer).
