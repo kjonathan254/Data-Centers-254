@@ -1,0 +1,48 @@
+# IndexNow submission - runs after a successful production deployment and
+# submits new/changed URLs to api.indexnow.org (Bing/Yandex/Seznam/Naver).
+#
+# The committed state file (.indexnow-state.json) tracks submitted
+# (url, lastmod) pairs so each deploy submits only what changed. State changes
+# are committed back with [skip ci] so the push does not re-trigger CI.
+#
+# Manual run: Actions tab -> "IndexNow submission" -> Run workflow
+# (use --all locally once after key rotation: npm run indexnow -- --all)
+name: IndexNow submission
+
+on:
+  deployment_status:
+    types: [success]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    name: Submit changed URLs
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'production')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Submit to IndexNow
+        run: node scripts/indexnow_submit.mjs
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .indexnow-state.json
+          git diff --cached --quiet || git commit -m "chore(indexnow): update submission state [skip ci]"
+          git push
