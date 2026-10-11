@@ -1,17 +1,27 @@
 # IndexNow submission - runs after a successful production deployment and
 # submits new/changed URLs to api.indexnow.org (Bing/Yandex/Seznam/Naver).
 #
-# The committed state file (.indexnow-state.json) tracks submitted
-# (url, lastmod) pairs so each deploy submits only what changed. State changes
-# are committed back with [skip ci] so the push does not re-trigger CI.
+# Triggers:
+#   - deployment_status success (Vercel production deploys emit these; the
+#     environment name is matched case-insensitively because Vercel sends
+#     "Production")
+#   - workflow_run after CI succeeds on main (belt-and-braces: fires even if
+#     the deployment event plumbing hiccups; state-diff makes it a no-op
+#     when nothing changed)
+#   - workflow_dispatch (Actions tab -> "IndexNow submission" -> Run workflow;
+#     use --all locally once after key rotation: npm run indexnow -- --all)
 #
-# Manual run: Actions tab -> "IndexNow submission" -> Run workflow
-# (use --all locally once after key rotation: npm run indexnow -- --all)
+# The committed state file (.indexnow-state.json) tracks submitted
+# (url, lastmod) pairs so each run submits only what changed. State changes
+# are committed back with [skip ci] so the push does not re-trigger CI.
 name: IndexNow submission
 
 on:
   deployment_status:
     types: [success]
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -27,8 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     if: >
       github.event_name == 'workflow_dispatch' ||
-      (github.event.deployment_status.state == 'success' &&
-       github.event.deployment.environment == 'production')
+      (github.event_name == 'deployment_status' &&
+       github.event.deployment_status.state == 'success' &&
+       contains(github.event.deployment.environment, 'roduc')) ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
     steps:
       - uses: actions/checkout@v4
 
