@@ -75,3 +75,26 @@ This model matches the README's claims; no drift found between documented and ac
 5. **llms-full.txt footprint:** 1.45 MB static file, CDN-cached, regenerated on every build. If origin-transfer ever becomes a concern again (Task 92 history), the file can be split per-cluster — flagging the tradeoff now.
 
 *No findings were padded; categories with nothing material say so (F009, F010, F012).*
+
+## Repeat run — 2026-10-11 (post-IndexNow implementation, Task 115)
+
+Method: 9-dimension re-sweep with the new code in tree, plus live verification of the prior dispositions. This run doubles as the Karpathy-guidelines benchmark (see AGENT_CONTEXT.md, Task 115): every new line was written under the four rules, and the benchmark evidence is cited per rule there.
+
+### Prior findings F001-F012 — dispositions hold
+
+Re-verified: the 10 dead-code files remain deleted (zero importers re-checked on the current tree); `.env.example` still documents all 7 vars; vitest 13/13 still green; safeJsonLd still wired at all 15 JSON-LD sites; llms-full.txt still generated at build and served with cache headers (live probe 200). No finding regressed.
+
+### New findings from this run: none material
+
+The IndexNow implementation (commit 026a095) was audited as if it were foreign code, per the protocol:
+
+- **No new dependencies.** package.json diff is the `indexnow` npm-script line only; the script uses Node built-ins (`fetch`, `node:fs`, `node:path`).
+- **Net LOC negative:** +78 (scripts/indexnow_submit.mjs) −83 (scripts/indexnow_ping.py removed) −1 (my own duplicate key file removed before commit).
+- **Robustness dimension:** key discovery fails loud when the public/ hex-named key file count ≠ 1 (verified live: exit 1 with two files present); HTTP failures exit 1 and print the response body; submission state persists only after a 2xx so a failed run retries the same URLs (no silent skip).
+- **Duplication dimension — one micro-finding, fixed in the same commit:** the repo had TWO IndexNow paths after 026a095's predecessor work (c1e590a, 2026-09-16) added a manual-only full-sitemap pinger (`indexnow_ping.py`, never referenced anywhere, resubmitted all URLs on every run). Consolidated to one automated, lastmod-diffed path; the superseded script is removed.
+- **Configuration-drift dimension:** `.indexnow-state.json` is committed (reviewable diffs, survives ephemeral CI runners), state commits carry `[skip ci]` to avoid pointless CI runs; no gitignore changes.
+
+### Blocker recorded (not debt, editor action)
+
+The deploy-triggered workflow (`.github/workflows/indexnow.yml`, staged in the workspace at pending/indexnow.workflow.yml) cannot be pushed: the current Personal Access Token lacks the `workflow` scope, which GitHub enforces for any commit touching workflows. Until the editor grants the scope (or adds the file via the GitHub UI), the submission trigger is the in-session `npm run indexnow` step that already runs after every push as part of the session protocol — so submissions are current, just not yet fire-and-forget.
+

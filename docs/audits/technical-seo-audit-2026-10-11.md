@@ -58,3 +58,26 @@ None.
 - robots.txt live: single `*` group, sitemap directive present.
 - HTML size probes: homepage 239,772 B; sample article 138,464 B.
 - /articles hub: 109 unique article hrefs in raw HTML.
+
+---
+
+## Repeat run — 2026-10-11 (post-implementation, Task 115)
+
+Trigger: editor approved IndexNow ("IndexNow approved, re run the audit"). Full category re-sweep re-verified all pass categories unchanged; probes: robots 200, llms.txt 200, llms-full.txt 200 with cache headers, real-slug article 200, true-404 returns 404, sitemap 186 URLs.
+
+### Audit-gap correction (recorded against the original run)
+
+The original run scored IndexNow 0/100 as "not implemented". That was **wrong in part**: commit c1e590a (2026-09-16) had already deployed a key file (`/42ceac901e1b7b7f38fc8bbef59bc19d.txt`, live-verified 200 both runs) and a manual submission script (`scripts/indexnow_ping.py`). The original probe checked the literal `/indexnow.txt` path and the claim "no submission endpoint" did not sweep `scripts/`. Lesson recorded: probe the repo for key files and submission code, not just the conventional URL.
+
+### IndexNow re-scored: 0/100 → 90/100
+
+What now exists (all verified live this run):
+
+- **Key file**: committed, public-by-design (editor-approved storage decision), served at the keyLocation URL — 200 with exact key content.
+- **Submission**: `scripts/indexnow_submit.mjs` posts to `api.indexnow.org` (aggregator: Bing, Yandex, Seznam, Naver). Seed submission accepted: **186/186 URLs, HTTP 200 OK**. Immediate re-run: "nothing to submit (186 URLs unchanged)" — lastmod-diff state (`.indexnow-state.json`, committed) prevents resubmission spam and survives ephemeral runners.
+- **Trigger**: `npm run indexnow` runs in-session after every push (session protocol step) — submissions are current. The remaining 10 points: the fully automated `deployment_status`-triggered GitHub workflow is written and staged but unpushable — the Personal Access Token lacks the `workflow` scope (GitHub rejects any commit touching `.github/workflows/`). Editor action required (grant scope or add the file via GitHub UI); until then the manual-in-session path carries the load.
+
+### Updated score: 83/100 → 94/100
+
+Formula from the table: (95×8 + 90)/9 = 94.4 → **94/100**. (The original's 83 was itself conservative against its own arithmetic — (95×8+0)/9 = 84 — kept as documented.) IndexNow moves from the only failing category to a passing one with a single named, editor-actionable deduction. Remaining ceiling to 100: IndexNow automation (10) — all other categories have no new deductions this run.
+
