@@ -142,9 +142,9 @@ export default function SearchClient() {
           <span className="inline-block font-mono text-xs sm:text-sm tracking-widest text-cyan mb-4 uppercase">
             Search
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight mb-6">
             Find What You Need
-          </h1>
+          </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
             Search across articles, the DC Directory, and the entire Data Centre 254 knowledge base.
           </p>

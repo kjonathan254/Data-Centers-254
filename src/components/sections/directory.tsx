@@ -277,7 +277,7 @@ export default function DirectorySection({
         {/* Header, left-aligned, editorial */}
         <div className="max-w-2xl">
           <span className="eyebrow">Kenya &amp; East Africa DC Directory</span>
-          <h1 className="h-display mt-3 text-foreground">Every data centre in one place.</h1>
+          <h2 className="h-display mt-3 text-foreground">Every data centre in one place.</h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
             One dataset, four views: the verified Kenyan facilities, the East
             African reference records, the announced capacity pipeline and the

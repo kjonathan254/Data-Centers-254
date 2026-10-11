@@ -108,12 +108,36 @@ async function networkFirstPage(request, event) {
   const cache = await caches.open(PAGE_CACHE);
 
   try {
-    const fresh = await fetch(request, { cache: "no-cache" });
+    // Re-fetch by URL with redirect handling made explicit. A navigate
+    // Request re-fetched as-is does not reliably follow 3xx (a 308 lands in
+    // the catch/non-ok path and we would serve the offline page for a
+    // perfectly healthy redirect), so build a fresh follow-redirect request
+    // that preserves the navigation's accept headers.
+    const fresh = await fetch(
+      new Request(request.url, {
+        method: "GET",
+        headers: request.headers,
+        redirect: "follow",
+        cache: "no-cache",
+      })
+    );
     if (fresh && fresh.ok) {
       event.waitUntil(cache.put(request, fresh.clone()));
       return fresh;
     }
-    // Server error (5xx/404): show whatever we have, else the offline page.
+    // Client errors (404, 410, ...) are the app real answers: the styled
+    // not-found page is the truth a reader should see, never the offline
+    // fallback. Pass them through untouched and uncached (429 excepted: it
+    // is a capacity condition, not a content answer).
+    if (
+      fresh &&
+      fresh.status >= 400 &&
+      fresh.status < 500 &&
+      fresh.status !== 429
+    ) {
+      return fresh;
+    }
+    // Server error (5xx/429): show whatever we have, else the offline page.
     const fallback =
       (await cache.match(request)) ||
       (await caches.open(CORE_CACHE)).match(OFFLINE_URL);

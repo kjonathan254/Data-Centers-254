@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--
+  THE RACK REPORT · PRINT TEMPLATE (A4, 6-page sheet arrangement)
+  Lineage: Issue 001/002 layout, extended with the Issue 003 editor upgrades
+  (cover + inline photos, CSS bar charts, data tables with status colour-coding).
+
+  HOW TO USE (per docs/NEWSLETTER-CADENCE.md + RESEARCH-VERIFICATION-STANDARDS.md):
+    1. Copy this file to /home/z/my-project/tmp/rack-report-NNN-print.html
+    2. Replace every {{PLACEHOLDER}} with verified editorial copy from the
+       issue master doc (docs/newsletter/rack-report-issue-NNN.md).
+       Every figure must carry its source line and re-verification date.
+    3. Optional blocks: uncomment one PHOTO SLOT / BAR CHART BLOCK / DATA TABLE
+       per page where the content justifies it. Delete the rest.
+    4. Render: python3 scripts/build_rack_report_pdf.py <html> <output.pdf>
+    5. Do NOT commit the rendered HTML; commit the PDF to public/reports/ and
+       update the /rack-report archive (featured + past + next-issue slots).
+  House rules: no em dashes. Status colour-coding: operational = cyan,
+  under-construction/committed = gold, early-stage = muted grey.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Rack Report · Issue {{ISSUE_NO}} · {{ISSUE_DATE}}</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  :root {
+    --bg: #0B0C12; --bg-deep: #05060A; --cyan: #38C4D8;
+    --gold: #D9A94A; --head: #F1F5F9; --body: #B7C0D0; --muted: #8A93A6; --faint: #5B6478;
+  }
+  body { font-family: 'Carlito','Liberation Sans',sans-serif; background: var(--bg); color: var(--body); }
+  .mono { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; }
+  .page {
+    width: 210mm; height: 297mm; position: relative; overflow: hidden;
+    background: var(--bg); page-break-after: always;
+    padding: 20mm 17mm 24mm;
+  }
+  .page:last-child { page-break-after: auto; }
+  .pfoot {
+    position: absolute; left: 17mm; right: 17mm; bottom: 11mm;
+    display: flex; justify-content: space-between;
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 7.6px; letter-spacing: 1.6px; color: var(--faint);
+  }
+  .slabel {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 9.5px; letter-spacing: 3px; color: var(--cyan); margin-bottom: 7mm;
+  }
+  h2 {
+    font-size: 21.5px; line-height: 1.22; color: var(--head); font-weight: 700;
+    padding-bottom: 4mm; margin-bottom: 5.5mm; position: relative;
+  }
+  h2::after {
+    content: ""; position: absolute; left: 0; bottom: 0; height: 0.7mm; width: 100%;
+    background: linear-gradient(90deg, var(--cyan) 0%, rgba(56,196,216,0.25) 60%, rgba(56,196,216,0) 100%);
+  }
+  .sec { margin-bottom: 11mm; }
+  p.body { font-size: 11.6px; line-height: 1.66; margin-bottom: 3.4mm; }
+  p.body b, p.body strong { color: var(--head); font-weight: 700; }
+  .src {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 7.8px; line-height: 1.5; color: var(--faint); letter-spacing: 0.3px;
+  }
+  .linkline { font-size: 10.6px; color: var(--cyan); margin: 2.5mm 0 3.5mm; }
+  .linkline .u { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 9.3px; }
+
+  /* cover */
+  .cover { background: var(--bg-deep); padding: 0; }
+  .ring { position: absolute; border: 1px solid rgba(56,196,216,0.09); border-radius: 50%; }
+  .r1 { width: 130mm; height: 130mm; top: -38mm; right: -34mm; }
+  .r2 { width: 92mm; height: 92mm; top: -19mm; right: -15mm; border-color: rgba(56,196,216,0.13); }
+  .r3 { width: 58mm; height: 58mm; top: -2mm; right: 2mm; border-color: rgba(56,196,216,0.18); }
+  .cover-inner { position: absolute; left: 17mm; right: 17mm; top: 88mm; }
+  .cover-label {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 9.5px; letter-spacing: 3.2px; color: var(--cyan); margin-bottom: 9mm;
+  }
+  .cover-label .dot { color: var(--cyan); }
+  h1 { font-size: 46px; line-height: 1.06; color: var(--head); font-weight: 700; margin-bottom: 10mm; }
+  h1 .dim { color: var(--muted); font-weight: 400; }
+  .cover-issue {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 10px; letter-spacing: 2.8px; color: var(--head); margin-bottom: 16mm;
+  }
+  .strap { font-size: 14.5px; font-weight: 700; color: var(--head); margin-bottom: 4mm; }
+  .cover-sub { font-size: 11.6px; line-height: 1.6; color: var(--muted); max-width: 128mm; }
+  .cover-foot {
+    position: absolute; left: 17mm; right: 17mm; bottom: 11mm;
+    display: flex; justify-content: space-between;
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 7.6px; letter-spacing: 1.6px; color: var(--faint);
+  }
+  .cover-foot .c { color: var(--cyan); }
+
+  /* OPTIONAL COVER PHOTO SLOT (Issue 003 lineage): uncomment, add class
+     has-photo to .cover, point img at an absolute file path. */
+  .cover-photo { position: absolute; top: 0; left: 0; right: 0; height: 82mm; overflow: hidden; }
+  .cover-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .cover-photo::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(5,6,10,0.15) 0%, rgba(5,6,10,0.0) 35%, rgba(5,6,10,0.92) 100%); }
+  .cover.has-photo .cover-inner { top: 96mm; }
+
+  /* stat rows */
+  .statrow { display: flex; align-items: baseline; gap: 6mm; padding: 2.6mm 0; border-bottom: 1px solid rgba(91,100,120,0.18); }
+  .statrow:last-of-type { border-bottom: none; }
+  .statnum { font-size: 24px; font-weight: 700; color: var(--cyan); min-width: 34mm; letter-spacing: -0.3px; }
+  .stattxt { font-size: 11.2px; line-height: 1.45; color: var(--body); }
+  .stattxt b { color: var(--head); }
+  .lesson {
+    margin-top: 5.5mm; border: 1px solid rgba(56,196,216,0.35); border-left: 1.4mm solid var(--cyan);
+    background: rgba(56,196,216,0.05); border-radius: 2mm; padding: 4.5mm 5.5mm;
+  }
+  .lesson .big { font-size: 14px; font-weight: 700; color: var(--head); margin-bottom: 2.2mm; }
+  .lesson p { font-size: 10.8px; line-height: 1.6; color: var(--body); }
+
+  /* OPTIONAL BAR CHART BLOCK (Issue 003 lineage): pure CSS horizontal bars.
+     Bars must sum to a verified total; label every bar with its number. */
+  .barchart { margin: 4mm 0 2mm; }
+  .barchart .bct { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 7.8px; letter-spacing: 1.6px; color: var(--faint); margin-bottom: 2.5mm; }
+  .bcrow { display: flex; align-items: center; gap: 3mm; margin-bottom: 1.8mm; }
+  .bcrow .bclabel { flex: 0 0 52mm; font-size: 9.6px; color: var(--body); line-height: 1.3; }
+  .bcrow .bctrack { flex: 1; height: 4.6mm; background: rgba(91,100,120,0.14); border-radius: 1mm; overflow: hidden; }
+  .bcrow .bcbar { height: 100%; background: linear-gradient(90deg, var(--cyan), rgba(56,196,216,0.65)); border-radius: 1mm; }
+  .bcrow .bcbar.gold { background: linear-gradient(90deg, var(--gold), rgba(217,169,74,0.6)); }
+  .bcrow .bcnum { flex: 0 0 12mm; text-align: right; font-size: 11px; font-weight: 700; color: var(--head); }
+
+  /* ladder strip */
+  .ladder { display: flex; gap: 3mm; margin: 4mm 0 4.5mm; }
+  .rung { flex: 1; border: 1px solid rgba(56,196,216,0.3); border-radius: 2mm; padding: 3mm 3.2mm; background: rgba(56,196,216,0.04); }
+  .rung .st { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 7.4px; letter-spacing: 1.2px; color: var(--cyan); margin-bottom: 1.6mm; }
+  .rung .n { font-size: 16px; font-weight: 700; color: var(--head); }
+  .rung .mw { font-size: 9.3px; color: var(--muted); margin-top: 0.8mm; line-height: 1.35; }
+
+  /* cable chips */
+  .chips { display: flex; flex-wrap: wrap; gap: 2mm; margin: 3.5mm 0 1.5mm; }
+  .chip {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 8.2px;
+    letter-spacing: 0.6px; padding: 1.7mm 2.8mm; border-radius: 1.6mm;
+    border: 1px solid rgba(56,196,216,0.45); color: var(--head); background: rgba(56,196,216,0.07);
+  }
+  .chip.dev { border-color: rgba(138,147,166,0.4); color: var(--muted); background: rgba(138,147,166,0.06); }
+  .chiplabel { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 7.6px; letter-spacing: 1.4px; color: var(--faint); margin-top: 2.5mm; }
+
+  /* OPTIONAL DATA TABLE (Issue 003 lineage). th monospace cyan; rows zebra;
+     status cell colour-coding: .st-op (cyan, operational), .st-uc (gold,
+     under construction or committed), .st-es (muted, early stage). */
+  .dtable { width: 100%; border-collapse: collapse; margin: 3.5mm 0 2mm; }
+  .dtable th {
+    font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 7.6px;
+    letter-spacing: 1.2px; color: var(--cyan); text-align: left; padding: 2.2mm 2.6mm;
+    border-bottom: 1px solid rgba(56,196,216,0.35);
+  }
+  .dtable td { font-size: 9.6px; line-height: 1.45; color: var(--body); padding: 2.1mm 2.6mm;
+    border-bottom: 1px solid rgba(91,100,120,0.14); vertical-align: top; }
+  .dtable tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+  .dtable td b { color: var(--head); font-weight: 700; }
+  .dtable .st-op { color: var(--cyan); font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 8px; }
+  .dtable .st-uc { color: var(--gold); font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 8px; }
+  .dtable .st-es { color: var(--muted); font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 8px; }
+
+  /* OPTIONAL INLINE PHOTO SLOT (Issue 003 lineage): place between p.body blocks. */
+  .inline-photo { margin: 3.5mm 0 4mm; }
+  .inline-photo img { width: 100%; height: 52mm; object-fit: cover; border-radius: 2mm; display: block; }
+  .inline-photo .cap { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace;
+    font-size: 7.4px; letter-spacing: 0.4px; color: var(--faint); margin-top: 1.6mm; }
+
+  /* watches */
+  .watch { margin-bottom: 4.6mm; padding-left: 5mm; border-left: 0.7mm solid rgba(56,196,216,0.4); }
+  .watch .wlabel { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 8.2px; letter-spacing: 2px; color: var(--cyan); margin-bottom: 1.4mm; }
+  .watch .wtitle { font-size: 12.2px; font-weight: 700; color: var(--head); margin-bottom: 1.4mm; }
+  .watch p { font-size: 10.8px; line-height: 1.58; }
+
+  /* from dc254 */
+  .founder { border: 1px solid rgba(56,196,216,0.25); background: rgba(56,196,216,0.04); border-radius: 2mm; padding: 5mm 6mm; margin-bottom: 6mm; }
+  .founder p { font-size: 11.4px; line-height: 1.66; }
+  .cta { font-size: 12.5px; font-weight: 700; color: var(--head); }
+  .cta span { color: var(--cyan); }
+  .cta-sub { font-size: 10.8px; color: var(--body); margin-top: 1.6mm; }
+
+  /* editor note */
+  .ednote { margin-bottom: 4.2mm; }
+  .ednote .lead { color: var(--head); font-weight: 700; }
+  .ednote p { font-size: 10.6px; line-height: 1.62; }
+
+  /* back cover */
+  .back { background: var(--bg-deep); }
+  .back-inner { position: absolute; left: 17mm; right: 17mm; top: 96mm; text-align: left; }
+  .back h1 { font-size: 40px; }
+  .back p { font-size: 12px; line-height: 1.66; color: var(--body); max-width: 138mm; }
+  .back .sub { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 10px; letter-spacing: 2px; color: var(--cyan); margin-top: 9mm; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 · COVER -->
+<div class="page cover">
+  <!-- OPTIONAL: uncomment for the Issue 003-lineage cover photo
+  <div class="cover-photo"><img src="file:///ABSOLUTE/PATH/TO/PHOTO.webp" alt=""></div>
+  -->
+  <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+  <div class="cover-inner">
+    <div class="cover-label"><span class="dot">&#9679;</span>&nbsp; THE RACK REPORT &middot; BY DATACENTRE254</div>
+    <h1>{{COVER_HEADLINE_LINE1}}<br>{{COVER_HEADLINE_LINE2}}</h1>
+    <div class="cover-issue">ISSUE {{ISSUE_NO}} &middot; {{ISSUE_DATE_LONG}}</div>
+    <div class="strap">Data centres. Power. Cloud. Connectivity. Investment. Policy.</div>
+    <p class="cover-sub">{{COVER_SUB}} Every fact in this briefing carries its source and date.</p>
+  </div>
+  <div class="cover-foot"><span class="c">DC254</span><span>&middot; DATACENTRE254</span><span>DATA-CENTERS-254.VERCEL.APP/RACK-REPORT</span></div>
+</div>
+
+<!-- PAGE 2 · HEADLINE + BY THE NUMBERS -->
+<div class="page">
+  <div class="sec">
+    <div class="slabel">01 &middot; THE HEADLINE</div>
+    <h2>{{HEADLINE_H2}}</h2>
+    <p class="body">{{HEADLINE_BODY_P1}}</p>
+    <p class="body">{{HEADLINE_BODY_P2}}</p>
+    <p class="src">Sources: {{HEADLINE_SOURCES}}</p>
+  </div>
+  <div class="sec">
+    <div class="slabel">02 &middot; BY THE NUMBERS</div>
+    <h2>{{NUMBERS_H2}}</h2>
+    <div class="statrow"><div class="statnum">{{N1}}</div><div class="stattxt">{{N1_TEXT}}</div></div>
+    <div class="statrow"><div class="statnum">{{N2}}</div><div class="stattxt">{{N2_TEXT}}</div></div>
+    <div class="statrow"><div class="statnum">{{N3}}</div><div class="stattxt">{{N3_TEXT}}</div></div>
+    <div class="statrow"><div class="statnum">{{N4}}</div><div class="stattxt">{{N4_TEXT}}</div></div>
+    <div class="statrow"><div class="statnum">{{N5}}</div><div class="stattxt">{{N5_TEXT}}</div></div>
+    <!-- OPTIONAL BAR CHART BLOCK: one .bcrow per verified bucket; bar width
+         = bucket / max-bucket * 100 percent. Delete if unused.
+    <div class="barchart">
+      <div class="bct">{{CHART_TITLE}}</div>
+      <div class="bcrow"><div class="bclabel">{{BUCKET1}}</div><div class="bctrack"><div class="bcbar" style="width:100%"></div></div><div class="bcnum">{{V1}}</div></div>
+      <div class="bcrow"><div class="bclabel">{{BUCKET2}}</div><div class="bctrack"><div class="bcbar gold" style="width:60%"></div></div><div class="bcnum">{{V2}}</div></div>
+    </div>
+    -->
+    <div class="lesson">
+      <div class="big">{{LESSON_BIG}}</div>
+      <p>{{LESSON_BODY}}</p>
+    </div>
+  </div>
+  <div class="pfoot"><span>THE RACK REPORT &middot; ISSUE {{ISSUE_NO}}</span><span>DATACENTRE254 &middot; 02</span></div>
+</div>
+
+<!-- PAGE 3 · INFRASTRUCTURE INTELLIGENCE + INSIDE THE MAP -->
+<div class="page">
+  <div class="sec">
+    <div class="slabel">03 &middot; INFRASTRUCTURE INTELLIGENCE</div>
+    <h2>{{INFRA_H2}}</h2>
+    <p class="body">{{INFRA_BODY_P1}}</p>
+    <!-- OPTIONAL DATA TABLE: one row per verified record; status cell class
+         st-op / st-uc / st-es. Delete if unused.
+    <table class="dtable">
+      <tr><th>{{COL1}}</th><th>{{COL2}}</th><th>{{COL3}}</th><th>STATUS</th></tr>
+      <tr><td><b>{{ROW1A}}</b></td><td>{{ROW1B}}</td><td>{{ROW1C}}</td><td class="st-op">{{ROW1_STATUS}}</td></tr>
+      <tr><td><b>{{ROW2A}}</b></td><td>{{ROW2B}}</td><td>{{ROW2C}}</td><td class="st-uc">{{ROW2_STATUS}}</td></tr>
+      <tr><td><b>{{ROW3A}}</b></td><td>{{ROW3B}}</td><td>{{ROW3C}}</td><td class="st-es">{{ROW3_STATUS}}</td></tr>
+    </table>
+    -->
+    <p class="body">{{INFRA_BODY_P2}}</p>
+    <p class="linkline">{{INFRA_LINK_TEXT}} &rarr; <span class="u">{{INFRA_LINK_URL}}</span></p>
+    <p class="src">Sources: {{INFRA_SOURCES}}</p>
+  </div>
+  <div class="sec">
+    <div class="slabel">04 &middot; INSIDE THE MAP</div>
+    <h2>{{MAP_H2}}</h2>
+    <p class="body">{{MAP_BODY_P1}}</p>
+    <div class="chips">
+      <span class="chip">{{CABLE_LIVE_1}}</span><span class="chip">{{CABLE_LIVE_2}}</span><span class="chip">{{CABLE_LIVE_3}}</span>
+    </div>
+    <div class="chips">
+      <span class="chip dev">{{CABLE_DEV_1}}</span><span class="chip dev">{{CABLE_DEV_2}}</span>
+    </div>
+    <div class="chiplabel">{{CHIPLABEL}}</div>
+    <p class="body" style="margin-top:3mm;">{{MAP_BODY_P2}}</p>
+    <p class="linkline">{{MAP_LINK_TEXT}} &rarr; <span class="u">{{MAP_LINK_URL}}</span></p>
+    <p class="src">Sources: {{MAP_SOURCES}}</p>
+  </div>
+  <div class="pfoot"><span>THE RACK REPORT &middot; ISSUE {{ISSUE_NO}}</span><span>DATACENTRE254 &middot; 03</span></div>
+</div>
+
+<!-- PAGE 4 · POLICY WATCH + WHAT WE'RE WATCHING -->
+<div class="page">
+  <div class="sec">
+    <div class="slabel">05 &middot; POLICY WATCH</div>
+    <h2>{{POLICY_H2}}</h2>
+    <p class="body">{{POLICY_BODY_P1}}</p>
+    <p class="body">{{POLICY_BODY_P2}}</p>
+    <p class="src">Sources: {{POLICY_SOURCES}}</p>
+  </div>
+  <div class="sec">
+    <div class="slabel">06 &middot; WHAT WE&rsquo;RE WATCHING</div>
+    <h2>Three things likely to matter next</h2>
+    <div class="watch">
+      <div class="wlabel">WATCH 01</div>
+      <div class="wtitle">{{WATCH1_TITLE}}</div>
+      <p>{{WATCH1_BODY}}</p>
+    </div>
+    <div class="watch">
+      <div class="wlabel">WATCH 02</div>
+      <div class="wtitle">{{WATCH2_TITLE}}</div>
+      <p>{{WATCH2_BODY}}</p>
+    </div>
+    <div class="watch">
+      <div class="wlabel">WATCH 03</div>
+      <div class="wtitle">{{WATCH3_TITLE}}</div>
+      <p>{{WATCH3_BODY}}</p>
+    </div>
+  </div>
+  <div class="pfoot"><span>THE RACK REPORT &middot; ISSUE {{ISSUE_NO}}</span><span>DATACENTRE254 &middot; 04</span></div>
+</div>
+
+<!-- PAGE 5 · FROM DC254 + EDITOR'S NOTE -->
+<div class="page">
+  <div class="sec">
+    <div class="slabel">07 &middot; FROM DC254</div>
+    <h2>{{FROM_H2}}</h2>
+    <div class="founder">
+      <p><b>{{FOUNDER_LEAD}}</b> {{FOUNDER_BODY}}</p>
+    </div>
+    <p class="cta">{{CTA_TEXT}} <span>&rarr;</span></p>
+    <p class="cta-sub">{{CTA_SUB}}</p>
+  </div>
+  <div class="sec">
+    <div class="slabel">EDITOR&rsquo;S NOTE</div>
+    <div class="ednote"><p><span class="lead">Verification standard.</span> Every figure in The Rack Report carries its source and publication date, and we do not publish numbers we cannot trace to an operator, regulator or dated news report. Where plans are announced but not yet contracted, we say so in the same breath as the headline figure, because the difference between a plan and a project is where infrastructure stories go to hide. This issue&rsquo;s figures were re-verified against the DC254 dataset on {{VERIFY_DATE}}.</p></div>
+    <div class="ednote"><p><span class="lead">Corrections and tips.</span> Spotted something wrong or know something we should verify? DC254 corrects errors openly and quickly. Reach the newsroom through the contact page at data-centers-254.vercel.app, or reply to any edition of this briefing by email.</p></div>
+    <div class="ednote"><p><span class="lead">Masthead.</span> Published by DataCentre254, Kenya&rsquo;s open data centre directory and intelligence library. An Elmac Communications Ltd publication. Written and edited by Kevin Jonathan Otieno. The Rack Report accepts one sponsor per issue, always clearly labelled, with audience numbers published live and never inflated.</p></div>
+  </div>
+  <div class="pfoot"><span>THE RACK REPORT &middot; ISSUE {{ISSUE_NO}}</span><span>DATACENTRE254 &middot; 05</span></div>
+</div>
+
+<!-- PAGE 6 · BACK COVER -->
+<div class="page back">
+  <div class="back-inner">
+    <h1>Get the briefing<br><span class="dim">every month.</span></h1>
+    <p>The Rack Report lands free in your inbox on the first Monday of every month, 06:00 EAT: what changed, what can be verified, why it matters, and what to watch next, in one read. One sponsor per issue, clearly labelled. Reader trust is the product.</p>
+    <div class="sub">SUBSCRIBE AT DATA-CENTERS-254.VERCEL.APP/RACK-REPORT</div>
+  </div>
+  <div class="cover-foot"><span class="c">ISSUE {{ISSUE_NO}}</span><span>&middot; PUBLISHED BY DATACENTRE254 &middot;</span><span>NAIROBI, KENYA</span></div>
+</div>
+
+</body>
+</html>
