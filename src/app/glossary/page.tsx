@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import GlossaryContent from "./GlossaryContent";
 import { glossaryTerms, glossaryCategories } from "@/lib/glossary-data";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 // Derived so the claimed term count can never drift from the list itself.
 const N_TERMS = glossaryTerms.length;
@@ -55,7 +56,7 @@ export default function GlossaryPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <div className="min-h-screen flex flex-col">
         <Navbar />

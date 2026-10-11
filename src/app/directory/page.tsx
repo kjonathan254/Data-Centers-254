@@ -6,6 +6,7 @@ import Directory from "@/components/sections/directory";
 import MarketSnapshot from "@/components/sections/market-snapshot";
 import { getFacilities, getMarketSnapshot, getKenyaCitySplit } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 export async function generateMetadata(): Promise<Metadata> {
   const facilities = getFacilities();
@@ -118,7 +119,7 @@ export default async function DirectoryPage({
       <main id="main-content" className="flex-1">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(datasetJsonLd) }}
         />
         <div className="sr-only" aria-hidden="true">
           <h1>Kenya Data Centre Directory</h1>

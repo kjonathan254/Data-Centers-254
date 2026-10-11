@@ -7,6 +7,7 @@ import { kiswahiliTerms } from "@/lib/glossary-kiswahili";
 import { glossaryTerms } from "@/lib/glossary-data";
 import KiswahiliQuiz from "./KiswahiliQuiz";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Data Centre in Swahili: Kamusi ya Misamiati 24",
@@ -126,7 +127,7 @@ export default function KiswahiliGlossaryPage() {
         </div>
       </main>
       <Footer />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
     </div>
   );
 }

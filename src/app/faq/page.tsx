@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { getFacilities, getDirectoryStats, getOperators } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "FAQ: Kenya's data centres, answered",
@@ -128,7 +129,7 @@ export default function FaqPage() {
       <main id="main-content" className="flex-1">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
         />
         <section className="section-y">
           <div className="container-site">

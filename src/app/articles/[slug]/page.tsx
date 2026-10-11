@@ -12,6 +12,7 @@ import { ogImageFor } from "@/lib/og-image";
 import { notFound } from "next/navigation";
 import ArticlePageClient from "./ArticlePageClient";
 import ArticleBody from "./ArticleBody";
+import { safeJsonLd } from "@/lib/jsonld";
 
 // ─── Static Generation ──────────────────────────────────────────────────
 
@@ -142,11 +143,11 @@ export default async function ArticlePage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main id="main-content" className="flex-1">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(articleLd) }} />
         {faqLd && (
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqLd) }} />
         )}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }} />
         {/* Markdown body is rendered on the server (ArticleBody) and handed
             to the client shell as an RSC slot — no client markdown parser. */}
         <ArticlePageClient

@@ -10,6 +10,7 @@ import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
 import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 /**
  * Kenya Data Centre Tracker, the working view of the supply pipeline.
@@ -198,7 +199,7 @@ export default function TrackerPage() {
       <main id="main-content" className="flex-1 py-10 lg:py-16">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(trackerJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(trackerJsonLd) }}
         />
         <div className="container-site">
           {/* Header */}

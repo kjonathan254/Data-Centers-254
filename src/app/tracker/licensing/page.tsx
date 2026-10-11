@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
 import { LICENSING_REGIMES, LICENSING_SOURCES, LICENSING_LAST_VERIFIED } from "@/lib/market-trackers";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Kenya Data Centre Licensing Tracker: CA Regimes & Fees",
@@ -52,7 +53,7 @@ export default function LicensingTrackerPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main id="main-content" className="flex-1 py-10 lg:py-16">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
         <div className="container-site">
           {/* Header */}
           <div className="max-w-2xl">

@@ -56,10 +56,18 @@ for label, rel in PAGES.items():
             fails += 1
         print(f"[{status}] {label} block {i}: {t}"
               + (f" missing={missing}" if missing else ""))
-        # article byline check: author name should be the FULL name now
+        # article byline check: author name must match the canonical byline.
+        # Byline history (both rulings landed 2026-09-16): 56d972d tightened
+        # the gate to the four-word form, then 8ba8394 set the site-wide
+        # canonical to "Kevin Jonathan Otieno" (99/99 articles, production
+        # byline + JSON-LD) without updating this gate. The stale expectation
+        # stayed latent because this gate SKIPS samples whose prerendered HTML
+        # is missing, so sessions validating against a clean .next got vacuous
+        # passes. Surfaced 2026-10-11 by a full rebuild; expectation now tracks
+        # the canonical byline. Keep in sync with content frontmatter `author`.
         if t in ("Article", "NewsArticle"):
             name = data.get("author", {}).get("name", "")
-            ok = name == "Kevin Jonathan Onyango Otieno"
+            ok = name == "Kevin Jonathan Otieno"
             print(f"       author: {name!r} {'OK' if ok else 'MISMATCH'}")
             if not ok:
                 fails += 1

@@ -45,3 +45,7 @@ public/sw.js
 
 # OG image build artifacts (scripts/generate_og_images.mjs) — never commit
 /public/og/
+
+# llms-full.txt build artifact (scripts/generate_llms_full.mjs) — never commit;
+# regenerated deterministically from content/articles/ at build time
+/public/llms-full.txt

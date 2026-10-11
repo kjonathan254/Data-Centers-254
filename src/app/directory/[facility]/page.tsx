@@ -17,6 +17,7 @@ import { ogImageFor } from "@/lib/og-image";
 import { pickPeers } from "@/lib/compare";
 import { getArticleBySlug } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
+import { safeJsonLd } from "@/lib/jsonld";
 
 /**
  * Per-facility profile pages, the SEO landers for queries like
@@ -204,7 +205,7 @@ export default async function FacilityPage({
     <div className="min-h-screen flex flex-col">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <Navbar />
       <main id="main-content" className="flex-1">

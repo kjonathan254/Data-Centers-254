@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
 import CableExplorer from "@/components/tracker/cable-explorer";
+import { safeJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Kenya Subsea Cable Tracker: Mombasa Landings & Pipeline",
@@ -50,7 +51,7 @@ export default function CablesTrackerPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main id="main-content" className="flex-1 py-10 lg:py-16">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
         <div className="container-site">
           {/* Header */}
           <div className="max-w-2xl">

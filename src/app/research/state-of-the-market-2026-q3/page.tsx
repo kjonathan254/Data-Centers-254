@@ -11,6 +11,7 @@ import {
 } from "@/lib/market-trackers";
 import { SITE_URL } from "@/lib/site";
 import snapshotJson from "@/data/directory/snapshots/2026-Q3.json";
+import { safeJsonLd } from "@/lib/jsonld";
 
 /**
  * State of the Market 2026-Q3 (audit Phase 2, Table 8.3: "publish the next
@@ -84,7 +85,7 @@ export default function StateOfMarket2026Q3() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main id="main-content" className="flex-1">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
         <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto section-y">
           <p className="text-section-label mb-4">Quarterly Report · {snap.snapshotOf} Edition</p>
           <h1 className="text-display-sm text-foreground mb-5">State of the Market 2026-Q3</h1>

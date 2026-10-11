@@ -196,6 +196,30 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Tech-debt audit 2026-10-11: llms.txt (hand-maintained) and
+      // llms-full.txt (generated at build from content/articles/) only change
+      // when a deploy ships, so they can cache like static assets. One day of
+      // browser freshness plus a week of stale-while-revalidate keeps AI
+      // fetchers and feed readers off the origin without ever serving a
+      // stale corpus for long.
+      {
+        source: "/llms-full.txt",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/llms.txt",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
     ];
   },
 };
