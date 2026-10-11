@@ -1593,3 +1593,10 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
   - R4 Goal-Driven Execution: success criteria defined pre-implementation and verified in order: negative path (exit 1, two key files), seed (HTTP 200, 186/186), convergence (exit 0), CI double-green on 026a095, live probes; the one open criterion (automated trigger) explicitly tracked as editor action, not silently marked done.
   - Benchmark verdict: the guidelines caught 1 self-inflicted duplication (key file), 1 pre-existing duplication (ping.py), and blocked 1 permission-guard workaround. Adopted skill is earning its keep.
 - Spend: 0 credits.
+
+### 2026-10-11 (session 14 cont. 10) - Editor token rotation: new fine-grained PAT lacks push permission (Task 116)
+- Editor pasted a fresh GitHub token in chat (transit surface noted - revoke after use). Installed to .env.local per house protocol (chmod 600, gitignored, no-token remote + credential helper sourcing .env.local; old token line replaced).
+- Verified: API reads 200 (login kjonathan254). Push attempts FAILED 403 "Permission to kjonathan254/Data-Centers-254.git denied to kjonathan254" - bare denial, NOT the workflow-specific rejection the old token produced.
+- Isolation test running: non-workflow push vs workflow push, to distinguish missing Contents write from missing repository access / missing Workflows permission.
+- The parked IndexNow workflow (pending/indexnow.workflow.yml) remains unpushable until the token is corrected: needs Contents RW + Workflows RW and this repo in the access list.
+- Spend: 0 credits.
