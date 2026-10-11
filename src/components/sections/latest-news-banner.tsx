@@ -18,7 +18,7 @@ export default function LatestNewsBanner() {
             <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[320px] lg:col-span-2">
               <Image
                 src="/images/nairobi-skyline-night.webp"
-                alt="Regulatory authority building at dusk"
+                alt="Nairobi's central business district skyline at dusk, office towers and the expressway lit up"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"
                 className="object-cover"

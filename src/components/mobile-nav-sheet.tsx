@@ -52,7 +52,7 @@ export default function MobileNavSheet({ open, onOpenChange }: MobileNavSheetPro
                 href={link.href}
                 prefetch={true}
                 onClick={closeMobile}
-                className="block w-full text-left px-3 py-2.5 text-sm rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
+                className="block w-full text-left px-3 py-3 text-sm rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export default function MobileNavSheet({ open, onOpenChange }: MobileNavSheetPro
                 href={link.href}
                 prefetch={true}
                 onClick={closeMobile}
-                className="block w-full text-left px-3 py-2.5 text-sm rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
+                className="block w-full text-left px-3 py-3 text-sm rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-all"
               >
                 {link.label}
               </Link>

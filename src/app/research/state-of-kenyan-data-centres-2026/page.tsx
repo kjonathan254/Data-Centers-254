@@ -162,8 +162,8 @@ export default function StateOfKenyanDataCentres2026() {
             actually differentiates buildings is networks present. This is the
             PeeringDB-registered hierarchy on the day of verification:
           </p>
-          <div className="overflow-hidden rounded-xl border border-border/50 mb-14">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto rounded-xl border border-border/50 mb-14">
+            <table className="w-full min-w-[640px] text-sm">
               <thead>
                 <tr className="border-b border-border/50 bg-accent/40 text-left">
                   <th className="px-4 py-3 font-medium text-muted-foreground">#</th>
