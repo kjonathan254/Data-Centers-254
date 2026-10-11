@@ -50,6 +50,14 @@ https://data-centers-254.vercel.app/contact
 
 ---
 
+## Video asset (Remotion, 1080x1920 vertical, silent)
+
+- data-centres-run-on-practice.mp4 - 15s clip: "Classroom training teaches the
+  theory. Data centres run on practice." + the four exposure modes (site visits,
+  shadow shifts, internships, guest talks) + contact CTA.
+- Optional attach for LinkedIn/X; the post works text-only as designed. No
+  statistics, no named organisations - same safeguards as the text post.
+
 ## Execution notes
 
 - Keep this post lightweight; it exists to bridge Tuesday's evidence question and

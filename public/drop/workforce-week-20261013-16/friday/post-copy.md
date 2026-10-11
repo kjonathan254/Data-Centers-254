@@ -71,6 +71,19 @@ https://data-centers-254.vercel.app/contact
   chip row, contact urlbox, Nairobi community-event background.
 - partnership-graphic-x-1200x675.png: horizontal three-column variant with contact URL.
 
+## Video assets (Remotion, 1080x1920 vertical, silent)
+
+- the-talent-pipeline-is-a-partnership.mp4 - 29s main cut: hook ("Kenya's data
+  centres will be run by people who have not all been trained yet"), the
+  three-node model (industry - training - talent with connector labels), the
+  observation beat ("a workforce that stays"), contact CTA.
+- the-partnership-explained-60s.mp4 - 58s explainer cut: adds the week recap,
+  the four partnership modes (workforce research, mentorship, practical
+  exposure, training partnerships) and the invitation to operators,
+  universities, TVETs and academies.
+- The three-node model is labelled a framing on screen; no statistics in
+  either cut.
+
 ## Execution notes
 
 - Follow up within 24 hours on every organisation that reacts (like, comment, share);

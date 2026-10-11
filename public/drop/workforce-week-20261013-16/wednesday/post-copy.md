@@ -74,6 +74,19 @@ https://data-centers-254.vercel.app/careers
 9. The habits the floor rewards: safety, reliability, curiosity, documentation
 10. CTA: which pathway next? + careers link + Friday teaser
 
+## Video assets (Remotion, 1080x1920 vertical, silent)
+
+- there-is-no-single-data-centre-career.mp4 - 39s main cut: hook, six pathway
+  cards (power, cooling, networks, cloud, security, operations - each with ways
+  in), closing vote CTA (careers link).
+- six-pathways-explained-70s.mp4 - 71s explainer cut: the same six pathways at
+  a slower pace with longer "what the work is" lines, plus "four honest ways
+  in" (TVET, degree, apprenticeship, certification) and the floor habits.
+- Certification appears only in the "such as / not a recommendation" framing,
+  on screen and in the source policy.
+- No statistics in either cut - the pathway structure mirrors Monday's roles
+  and the careers hub.
+
 ## Execution notes
 
 - Run the "which pathway" question as a poll on X the same day; quote the leading

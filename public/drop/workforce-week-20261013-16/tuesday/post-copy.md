@@ -77,6 +77,20 @@ https://data-centers-254.vercel.app/careers
 10. CTA: which skills are hardest to develop or recruit for? + careers link
     + Wednesday teaser
 
+## Video assets (Remotion, 1080x1920 vertical, silent)
+
+- kenya-is-building-data-centres-who-will-run-them.mp4 - 35s main cut: hook,
+  the three tracked numbers (27 / 42.9 MW / 230 MW, each with its source line),
+  the open question ("The facilities are counted. The workforce is not."),
+  closing CTA (careers link).
+- the-gap-explained-60s.mp4 - 64s explainer cut: same evidence plus four extra
+  beats (what the build-out needs, evidence not opinions with the four evidence
+  streams, timing framing "staffing starts months before day one").
+- Use the main cut as the LinkedIn/X attach; the explainer fits LinkedIn native
+  video, YouTube Shorts and the careers page.
+- Same safeguards as the carousel: every statistic carries its source + date on
+  screen; the skills gap appears only as an open question.
+
 ## Execution notes
 
 - Post 8:00-9:00 EAT when Nairobi professional traffic peaks.
