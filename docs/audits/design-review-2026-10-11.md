@@ -47,8 +47,8 @@
 - Contrast pairs, touch targets, alt coverage and reduced-motion were WCAG-audited on 11 October (Task 112) and are unchanged here except where fixed above.
 - Heading order on all other routes: clean.
 
-## Post-fix verification (production, after deploy)
+## Post-fix verification (production, 11 October 2026) - DONE
 
-1. /directory and /search each expose exactly one H1 (browser count).
-2. With the service worker active, `/subscribe` renders the styled not-found page and `/news` lands on tracker content — not the offline page.
-3. `article_validator` (109), `validate_policy`, `validate_jsonld`, `audit_assets` all green; CI double-green.
+1. /directory and /search each expose exactly one H1 - verified live.
+2. With the service worker active (fresh browser): /subscribe renders the styled not-found page ("This server rack does not exist"); /news renders tracker content (correct title and h1, no offline page, no ERR_FAILED). Deployed in two commits (e3d4dc0 masking + structure, 9f50909 redirect unwrap) after the first push exposed the Chrome redirected-response rejection live; both documented above.
+3. All four content gates green (article_validator 109, validate_policy PASS 62/68, validate_jsonld, audit_assets); CI double-green on both commits; IndexNow auto-fired on the deploy.
