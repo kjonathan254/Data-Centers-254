@@ -3,7 +3,7 @@
 import re, glob, os, json
 from PIL import Image
 
-ROOT = "/home/z/my-project/data-centers-audit/repo"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 IMG_DIR = os.path.join(ROOT, "public", "images")
 
 # 1. inventory + dimensions
@@ -66,6 +66,8 @@ if missing_og:
     for s in missing_og:
         print("  ", s)
 
+out_dir = os.path.join(ROOT, "research")
 json.dump({"imgs": imgs, "refs": {k: sorted(v) for k, v in refs.items()},
            "unused": unused, "lowres": lowres, "missing_og": missing_og},
-          open("/home/z/my-project/data-centers-audit/research/image_audit_2026-09-16.json", "w"), indent=1)
+          open(os.path.join(out_dir, "image_audit_latest.json"), "w"), indent=1)
+print(f"report: {os.path.relpath(os.path.join(out_dir, 'image_audit_latest.json'), ROOT)}")

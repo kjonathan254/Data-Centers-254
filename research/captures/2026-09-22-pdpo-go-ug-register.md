@@ -9,6 +9,7 @@ tier: 1
 claims: [UG-DP-C4]
 status: capture-pending # becomes verified ONLY after an editor reads and confirms content
 note: PDPO registration portal page; direct evidence for online registration claim
+security_note: 2026-10-11 audit redacted the site's own Google Maps Static API key (key=AIzaSy...) that was embedded verbatim in the captured static-map image URL below; key replaced with REDACTED -- the key belongs to pdpo.go.ug and is public-by-design on their page, but we do not republish third-party keys
 ---
 
 Cookies help us remember your preferences and keep registry workflows fast. [Learn more](https://pdpo.go.ug/cookie-policy)
@@ -185,7 +186,7 @@ Email[info@pdpo.gou.ug](mailto:info@pdpo.gou.ug)
 
 [Get Directions](https://www.google.com/maps/search/?api=1&query=0.32411,32.57558)
 
-![](https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i9906590&2i8373428&2e1&3u16&4m2&1u300&2u150&5m6&1e0&5sen-US&6sus&10b1&12b1&14i47083502&8e1&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=49232)
+![](https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i9906590&2i8373428&2e1&3u16&4m2&1u300&2u150&5m6&1e0&5sen-US&6sus&10b1&12b1&14i47083502&8e1&key=REDACTED-2026-10-11-SECURITY-AUDIT&token=49232)
 
 Twitter Widget Iframe
 
