@@ -1607,3 +1607,10 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - AUDIT RE-SCORED: IndexNow 90 -> 95 (automation deduction cleared; parity with other passing categories), overall 83 -> 95/100 ((95x8+95)/9). TECH_DEBT_AUDIT.md blocker section marked RESOLVED with the residual Actions-write nicety noted.
 - For editor (optional): add Actions Read+write to the token for CLI dispatch; browser "Run workflow" works regardless (uses editor session). Revoke the two superseded chat-transited tokens at leisure.
 - Spend: 0 credits.
+
+### 2026-10-11 (session 14 cont. 12) - IndexNow automation PROVEN end-to-end, trigger bug fixed (Task 117 complete)
+- Workflow first fire: run 38136468526 via workflow_run trigger, conclusion success, runner log verdict: "IndexNow: nothing to submit (186 URLs unchanged since last run)" - the full chain (trigger -> checkout -> live sitemap diff vs committed state -> correct no-op) executed on GitHub's infrastructure.
+- TRIGGER BUG CAUGHT PRE-FIRE: Vercel sends environment name "Production" (capital P); original filter compared lowercase 'production' and would never have matched - silent dead trigger. Fixed with contains(environment, 'roduc') (GitHub expressions contains() is case-insensitive). Second lesson for the audit trail: verify trigger plumbing with real events, not just YAML syntax.
+- Belt-and-braces added: workflow_run after "CI" success on main - submissions no longer depend on Vercel's deployment_status plumbing; state-diff makes extra fires no-ops (proven: no duplicate submissions).
+- CLI workflow_dispatch 403s (token lacks Actions write) - editor-side UI dispatch works regardless; optional Actions RW grant if CLI dispatch wanted.
+- Spend: 0 credits.
