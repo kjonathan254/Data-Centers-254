@@ -397,26 +397,27 @@ const SceneRenderer: React.FC<{ scene: Scene; tagline: string }> = ({ scene, tag
 };
 
 export const VideoShell: React.FC<{ config: VideoConfig }> = ({ config }) => {
-  let offset = 0;
+  const sequences = config.scenes.map((scene, i) => ({
+    scene,
+    from: config.scenes
+      .slice(0, i)
+      .reduce((acc, s) => acc + s.frames, 0),
+  }));
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.bg, fontFamily: FONT }}>
       <Fonts />
-      {config.scenes.map((scene, i) => {
-        const from = offset;
-        offset += scene.frames;
-        return (
-          <Sequence
-            key={i}
-            from={from}
-            durationInFrames={scene.frames}
-            name={`s${i + 1}-${scene.kind}`}
-          >
-            <Backdrop image={scene.image} />
-            <SceneRenderer scene={scene} tagline={"tagline" in scene ? scene.tagline : config.title} />
-            <BrandMark />
-          </Sequence>
-        );
-      })}
+      {sequences.map(({ scene, from }, i) => (
+        <Sequence
+          key={i}
+          from={from}
+          durationInFrames={scene.frames}
+          name={`s${i + 1}-${scene.kind}`}
+        >
+          <Backdrop image={scene.image} />
+          <SceneRenderer scene={scene} tagline={"tagline" in scene ? scene.tagline : config.title} />
+          <BrandMark />
+        </Sequence>
+      ))}
       <ProgressBar />
     </AbsoluteFill>
   );
