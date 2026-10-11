@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
+    "indexnow": "node scripts/indexnow_submit.mjs",
     "validate:content": "python3 scripts/article_validator.py"
   },
   "dependencies": {
