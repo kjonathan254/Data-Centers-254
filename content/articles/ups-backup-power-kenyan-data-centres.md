@@ -12,11 +12,11 @@ secondary_keywords:
 author: Kevin Jonathan Otieno
 author_bio_link: /about
 published_date: '2026-08-28'
-updated_date: '2026-08-28'
+updated_date: '2026-10-11'
 category: Energy & Power
 cluster: Energy
 og_image: "/images/dc-ups-batteries.webp"
-reading_time: "14 min"
+reading_time: "15 min"
 images:
 - src: "/images/dc-ups-batteries.webp"
   alt: "UPS battery strings in a data centre electrical room"
@@ -44,11 +44,15 @@ internal_links:
   href: /articles/kenya-power-tariffs-data-centres
 - text: Data Centre PUE (Power Usage Effectiveness)
   href: /articles/data-centre-pue-power-usage-effectiveness
+- text: Kenya's Data Centre Compute Hub Plan Explained
+  href: /articles/kenya-data-centre-compute-hub-plan-explained
 external_sources:
 - title: Schneider Electric Data Centre UPS Systems Guide
   url: https://www.se.com/ww/en/work/campaigns/data-center-solutions/
 - title: Uptime Institute Annual Outage Analysis
   url: https://uptimeinstitute.com/resources/research-and-reports
+- title: Data Center Knowledge, The UPS Is Uninterruptible by Design. Its Future Is Not. (October 2026)
+  url: https://www.datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-
 faq:
 - question: How long should a UPS system run during a power outage in a Kenyan data
     centre?
@@ -98,6 +102,16 @@ faq:
     reaches the servers. The generator provides power for as long as the outage lasts,
     limited only by fuel supply. Most Kenyan data centres store 24 to 72 hours of
     diesel fuel on site.
+- question: Will AI workloads change UPS design in Kenyan data centres?
+  answer: 'Globally, AI workloads are reshaping power train design. Hyperscale operators
+    are moving toward rack-level battery backup units, 800 V DC distribution and battery
+    energy storage systems configured as UPS alternatives, and Dell''Oro projects that
+    solid-state transformers will begin weighing on UPS demand from 2029. Kenyan data
+    centres continue to run conventional centralized UPS and generator designs, which
+    remain the right baseline for today''s colocation and enterprise loads. The practical
+    step for Kenyan buyers is to ask vendors about lithium iron phosphate batteries,
+    BESS-ready electrical rooms and higher-voltage DC readiness when specifying new
+    halls.'
 canonical_url: https://data-centers-254.vercel.app/articles/ups-backup-power-kenyan-data-centres
 ---
 
@@ -260,7 +274,7 @@ A properly maintained ATS is critical because it is the **coordination point** b
 
 ## Maintenance and Testing Schedules
 
-UPS and generator systems require rigorous, scheduled maintenance to ensure they perform when needed. According to the [Uptime Institute](https://uptimeinstitute.com/resources/research-and-reports), a significant percentage of data centre outages are caused by **preventable failures in power infrastructure**.
+UPS and generator systems require rigorous, scheduled maintenance to ensure they perform when needed. The statistics show why this discipline matters. The [Uptime Institute](https://uptimeinstitute.com/resources/research-and-reports)'s Annual Outage Analysis 2026 found that power-related issues caused **more than one in five IT service outages** reported over the past three years. Within those power-related incidents, **UPS failures were the leading cause at 39%**, ahead of transfer switch failures (34%) and generator failures (28%), as reported by [Data Center Knowledge](https://www.datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-) citing the report. Uptime's research also flags a rising fire risk from lithium-ion UPS batteries. Most of these failures trace back to preventable maintenance and testing gaps, which is why the schedules below matter.
 
 ### UPS Maintenance
 - **Weekly**: Visual inspection of UPS status indicators, battery voltage readings, and alarm logs
@@ -286,7 +300,7 @@ Understanding the [data centre PUE (Power Usage Effectiveness)](/articles/data-c
 |---------------|---------------------------|------------------------|
 | UPS units (500 kVA, N+1) | 45,000,000 | 45,000,000 |
 | Initial batteries | 25,000,000 | 40,000,000 |
-| Battery replacement (year 5) | 25,000,000 |, |
+| Battery replacement (year 5) | 25,000,000 | 0 |
 | Installation and commissioning | 12,000,000 | 12,000,000 |
 | Maintenance (10 years) | 8,000,000 | 5,000,000 |
 | Cooling for battery room (10 years) | 6,000,000 | 2,500,000 |
@@ -306,6 +320,18 @@ As this simplified model shows, the **lithium-ion system is approximately 14% ch
 
 **Liquid Intelligent Technologies (Nairobi)**: Liquid's facilities deploy Vertiv Liebert EXL UPS systems with comprehensive battery monitoring. Their focus on energy efficiency has seen them pioneer advanced power management techniques in the Kenyan market.
 
+## How the AI Era Is Reshaping UPS Design
+
+Everything above describes how Kenyan data centres build and run UPS systems today. Globally, however, the UPS is being reconsidered from both ends of the power chain, and buyers planning new capacity should understand where the technology is heading.
+
+The pressure comes from AI load profiles. Large GPU training clusters can swing their power demand by **tens of megawatts in seconds**, producing rapid load cycles that conventional UPS systems were never designed to smooth. Alex Cordovil, research director at Dell'Oro Group, told Data Center Knowledge that this has effectively flipped the UPS's job: "It's now less about protecting the IT load from the grid and more about protecting the grid from the IT load." His conclusion on the technology's survival is blunt but reassuring: "The UPS has been given a death sentence a few times, and every time it has come back in a new form."
+
+Three architecture shifts are driving that reinvention. First, hyperscale operators have adopted Open Compute Project direct-current designs with **distributed, rack-level battery backup units (BBUs)** alongside or in place of centralized UPS, and the move toward **800 V DC distribution** in AI factories extends this approach through sidecar power cabinets. Second, **battery energy storage systems (BESS)** are emerging as UPS alternatives at campus scale: in June 2025, BESS supplier FlexGen Power Systems and electrical contractor Rosendin announced a partnership to develop utility-scale BESS that can support data centres without traditional UPS systems. Third, **solid-state transformers (SSTs)** are on the horizon: Dell'Oro projects they will begin weighing meaningfully on UPS demand from 2029, initially in large AI factories that have largely moved away from UPS-based architectures. Supporting innovations include lithium iron phosphate (LFP), sodium-ion and nickel-zinc battery chemistries, plus supercapacitors that can absorb and release power in milliseconds.
+
+None of this means the centralized UPS disappears. Data Center Knowledge's October 2026 analysis concludes the opposite: with a large installed base serving non-AI workloads and inference workloads bringing availability requirements back to the fore, the UPS is evolving rather than vanishing, shifting from a pure resiliency device toward power-quality management and arbitrating between multiple energy sources.
+
+For Kenyan operators and buyers, two watch items follow. Kenya's grid already draws **over 90% of its electricity from renewable sources** (a generation mix figure, not a guarantee of site-specific power delivery), and as wind and solar capacity grows, grid power becomes comparatively clean but increasingly dynamic, the same pattern that is driving UPS redesign globally. And as Kenya positions itself for AI and GPU workloads through initiatives such as the country's [data centre compute hub plan](/articles/kenya-data-centre-compute-hub-plan-explained), buyers specifying new halls should ask vendors about LFP battery options, BESS-ready electrical rooms and how designs would accommodate higher-voltage DC distribution if AI-grade densities arrive. No Kenyan operator has announced an 800 V DC or BBU-based design; treat these as global trends to monitor, not local deployments.
+
 ## Frequently Asked Questions
 
 ### How long should a UPS system run during a power outage in a Kenyan data centre?
@@ -323,6 +349,10 @@ Lithium-ion batteries offer several advantages over traditional VRLA lead-acid b
 ### How much does a UPS system cost for a Kenyan data centre?
 
 Costs vary enormously based on capacity and configuration. A 100 kVA online double-conversion UPS system from a tier-one manufacturer (Eaton, Schneider, Vertiv) costs approximately **KES 8 to 15 million** (USD 55,000 to 100,000) for the unit alone. Add battery cabinets, installation, switchgear, and commissioning, and a complete 100 kVA UPS room can cost KES 15 to 25 million. For a larger facility (say 1 MVA) with N+1 or 2N redundancy, the UPS infrastructure alone can range from KES 120 million to KES 250 million or more. These figures include import duties, shipping, and local installation costs.
+
+### Will AI workloads change UPS design in Kenyan data centres?
+
+Globally, yes. Hyperscale operators are moving toward rack-level battery backup units, 800 V DC distribution and battery energy storage systems configured as UPS alternatives, and Dell'Oro projects solid-state transformers will begin weighing on UPS demand from 2029. Kenyan data centres continue to run conventional centralized UPS and generator designs, which remain the right baseline for today's colocation and enterprise loads. The practical step for Kenyan buyers is to ask vendors about lithium iron phosphate batteries, BESS-ready electrical rooms and higher-voltage DC readiness when specifying new halls.
 
 ### What role do diesel generators play alongside UPS systems?
 
