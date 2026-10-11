@@ -1506,3 +1506,12 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - One commit (0f4f90f, 4 files, 6 insertions / 50 deletions); article_validator ALL OK (109); validate_policy PASS 62/68 (unchanged). CI double-green (check_ci.py 0f4f90f).
 - Production probes: both pack URLs 404 (files gone); /drop 200 via 308 -> index shows only the two previously-cleared sections, zero mazingira-day-20261010 links remaining.
 - Spend: 0 credits. Open items unchanged (SA capture awaiting editor read; Kwach/Access-Partnership captures on request; iColo->DRTY rename awaits site-level evidence; WIOCC reference-registration RR003; Issue 003 Mon 2 Nov; KE-LC-C3 probe late Oct).
+
+### 2026-10-11 (session 14 cont. 2) - Editor's lnkd.in link triaged: Data Center Knowledge UPS-in-the-AI-era analysis captured (Task 107)
+- Editor: "what can you do with content from this site I think there are some valuable content from this site how can we mint and make use of the content" + lnkd.in/p/d5vmsDyb.
+- Resolved the shortlink chain (lnkd.in -> LinkedIn post 7513342397364494336 by Data Center Knowledge -> second lnkd.in -> article): "The UPS Is Uninterruptible by Design. Its Future Is Not.", Andrew Donoghue, DCK (Informa TechTarget), published 6 Oct 2026. Full text captured via curl (200, 483 KB raw at scripts/dck_ups_article.html).
+- Article's load-bearing figures independently verified (3 free web_search passes, 0 credits): Uptime Annual Outage Analysis 2026 exists (8th ed., May 2026; power = leading cause, UPS leading power failure) with 39/34/28 split attributed via DCK (report paywalled); Dell'Oro SST-2029 quote VERBATIM on delloro.com newsroom (19 Aug 2026); FlexGen+Rosendin BESS-as-UPS-alternative partnership confirmed by DCD/REW/evertiq (Jun 2025).
+- T1 capture written: research/captures/2026-10-11-datacenterknowledge-ups-ai-era.md (capture-pending; verbatim evidence, establishes/does-NOT-establish, routing).
+- Gap quantified: repo's UPS article (28 Aug) cites Uptime only generically, zero AI-era content (no BBU/800VDC/BESS/SST), no hard outage numbers. Refresh is the highest-leverage use; standalone "is the UPS dead?" article NOT recommended (keyword cannibalisation of "UPS systems Kenya").
+- Docs-only commit; site untouched.
+- Spend: 0 credits. Open items unchanged + capture awaiting editor read.
