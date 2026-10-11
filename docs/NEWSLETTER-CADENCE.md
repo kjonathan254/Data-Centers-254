@@ -14,7 +14,10 @@ energy.**
 > and stands: the seven-section anatomy, the verification chain, and the
 > promise discipline below. The September rationale carries: one well-
 > verified issue a month is sustainable alongside the reporting load. Issue
-> numbering continues sequentially; Issue 003 is due Monday 2 November 2026.
+> numbering continues sequentially. Numbering ruling (editor, 11 October
+> 2026): Issue 003 is the October edition, published Monday 13 October 2026
+> (slightly past the first-Monday slot; the month still has its issue).
+> November's edition is Issue 004, due Monday 2 November 2026, 06:00 EAT.
 >
 > **Cadence change, 5 October 2026 (superseded same day):** flipped monthly
 > to weekly with Issue 002; the editor corrected it before the next send.

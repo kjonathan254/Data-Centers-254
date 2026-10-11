@@ -118,14 +118,14 @@ export default function RackReportPage() {
             <p className="mt-5 text-xs text-muted-foreground">
               Prefer to look first?{" "}
               <a
-                href="/reports/rack-report-issue-1.pdf"
+                href="/reports/rack-report-issue-3.pdf"
                 target="_blank"
                 rel="noopener"
                 className="text-cyan underline underline-offset-2 hover:text-cyan"
               >
                 Read a sample issue
               </a>{" "}
-              (Issue 001, PDF).
+              (Issue 003, PDF).
             </p>
           </div>
         </section>
@@ -205,7 +205,7 @@ export default function RackReportPage() {
               online. Each PDF is the exact edition subscribers receive.
             </p>
 
-            {/* Issue 002 - latest, featured */}
+            {/* Issue 003 - latest, featured */}
             <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-5 sm:p-6 mb-4">
               <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1">
@@ -214,11 +214,44 @@ export default function RackReportPage() {
                   </p>
                   <p className="text-sm font-semibold text-foreground mb-1 flex items-center gap-2">
                     <FileText className="size-4 text-cyan shrink-0" />
+                    The Rack Report · Issue 003
+                  </p>
+                  <p className="text-sm text-foreground/90 mb-1.5">
+                    Who powers Kenya&apos;s data centres, and who is telling us?
+                  </p>
+                  <p className="text-xs text-muted-foreground mb-2">
+                    Monday 13 October 2026 · 8 pages · PDF, 0.4 MB
+                  </p>
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    The full power ledger for all 27 tracked Kenyan facilities
+                    (grid + backup 14, grid-only 6, no operator-disclosed
+                    renewable PPA), the AI-era rethink of the UPS, and the CA
+                    licensing window that closed without a decision.
+                  </p>
+                </div>
+                <a
+                  href="/reports/rack-report-issue-3.pdf"
+                  download
+                  className="inline-flex items-center justify-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-6 h-11 text-sm font-semibold hover:bg-cyan/90 transition-all shrink-0 sm:self-center"
+                >
+                  Download the PDF
+                </a>
+              </div>
+            </div>
+
+            {/* Issue 002 - the archive */}
+            <div className="rounded-xl border border-border/50 bg-card/60 p-5 sm:p-6 mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex-1">
+                  <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-2">
+                    Past issue
+                  </p>
+                  <p className="text-sm font-semibold text-foreground mb-1 flex items-center gap-2">
+                    <FileText className="size-4 text-muted-foreground shrink-0" />
                     The Rack Report · Issue 002
                   </p>
                   <p className="text-sm text-foreground/90 mb-1.5">
-                    What is actually live in Kenya&apos;s digital
-                    infrastructure?
+                    What is actually live in Kenya&apos;s digital infrastructure?
                   </p>
                   <p className="text-xs text-muted-foreground mb-2">
                     Monday 5 October 2026 · 6 pages · PDF, 0.2 MB
@@ -233,7 +266,7 @@ export default function RackReportPage() {
                 <a
                   href="/reports/rack-report-issue-2.pdf"
                   download
-                  className="inline-flex items-center justify-center gap-2 glow-cyan bg-cyan text-background rounded-lg px-6 h-11 text-sm font-semibold hover:bg-cyan/90 transition-all shrink-0 sm:self-center"
+                  className="inline-flex items-center justify-center gap-2 border border-cyan/40 text-cyan rounded-lg px-6 h-11 text-sm font-semibold hover:bg-cyan/10 transition-all shrink-0 sm:self-center"
                 >
                   Download the PDF
                 </a>
@@ -279,11 +312,11 @@ export default function RackReportPage() {
                 Next issue
               </p>
               <p className="text-sm font-semibold text-foreground mb-1">
-                The Rack Report · Issue 003
+                The Rack Report · Issue 004
               </p>
               <p className="text-xs text-muted-foreground">
                 Monday 2 November 2026, 06:00 EAT · the first-Monday cadence
-                promise, in writing.
+                promise, in writing. November&rsquo;s edition is Issue 004.
               </p>
             </div>
 
