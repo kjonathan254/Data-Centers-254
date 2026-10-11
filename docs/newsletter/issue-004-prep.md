@@ -45,6 +45,12 @@ Logged in the Task 108 DCK sweep as genuine topic gaps: N+1 cooling as a failure
 - **Corrections log:** check `src/lib/corrections-data.ts` for any material figure changes before send.
 - **iColo -> Digital Realty naming:** full rename awaits site-level rebrand evidence; watch for it this month.
 
+### 8. The agent fleet is a data-centre tenant (Tech Desk panel candidate, added 11 Oct)
+
+A viral architecture blueprint ("Grok Bot", X thread by @monokern, 20 Aug — triaged batch 4 in `skills/SKILL-STACK-2026-10-11.md`) pitches 24/7 autonomous agent teams running on dedicated cloud VMs: persistent browsers, cron routines, VM rebuild cycles. The demand-side infrastructure story writes itself: always-on agents are baseline compute tenants that never sleep, and that load lands in facilities like the 27 in the DC254 directory. The strongest, fully verifiable version of the panel is first-person: DC254 itself runs a small agent fleet (IndexNow submission automation, CI content gates, committed state files) — what it does while the editor sleeps, what it costs (0 credits), and what generalised agent fleets would mean for African colocation demand.
+
+Verification state and hard caveat: the product claims in the thread are UNVERIFIED (x.com blocks unauthenticated probes at 0 credits); the panel must present the architecture pattern, attribute product claims to the thread, and ground every number in DC254's own repo/directory. Promoted by: editor confirms the panel for RR004; otherwise it can ship as a DCK explainer pre-issue on the RR003 pattern.
+
 ---
 
 ## Before Issue 004 (REQUIRED checklist)
