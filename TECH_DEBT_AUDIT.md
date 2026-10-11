@@ -96,5 +96,5 @@ The IndexNow implementation (commit 026a095) was audited as if it were foreign c
 
 ### Blocker recorded (not debt, editor action)
 
-The deploy-triggered workflow (`.github/workflows/indexnow.yml`, staged in the workspace at pending/indexnow.workflow.yml) cannot be pushed: the current Personal Access Token lacks the `workflow` scope, which GitHub enforces for any commit touching workflows. Until the editor grants the scope (or adds the file via the GitHub UI), the submission trigger is the in-session `npm run indexnow` step that already runs after every push as part of the session protocol — so submissions are current, just not yet fire-and-forget.
+The deploy-triggered workflow (`.github/workflows/indexnow.yml`, staged in the workspace at pending/indexnow.workflow.yml) cannot be pushed: the current Personal Access Token lacks the `workflow` scope, which GitHub enforces for any commit touching workflows. **RESOLVED same day:** the editor supplied a token with Contents + Workflows write; the workflow shipped in commit 2818699 (CI double-green) and now fires on production `deployment_status: success`. The in-session `npm run indexnow` step remains as belt-and-braces. Residual nicety, not debt: the token lacks Actions write, so CLI dispatch 403s — editor-side UI dispatch or an Actions-permission grant covers manual runs.
 
