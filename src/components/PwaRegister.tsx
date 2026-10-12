@@ -150,7 +150,7 @@ export default function PwaRegister() {
       aria-label="Install DC254"
       className="fixed bottom-20 inset-x-3 z-50 sm:bottom-6 sm:inset-x-auto sm:right-5 sm:max-w-sm"
     >
-      <div className="glass-card rounded-xl border border-border/50 p-3.5 shadow-2xl">
+      <div className="card-solid rounded-xl border border-border/50 p-3.5 shadow-2xl">
         <div className="flex items-start gap-3">
           <Image
             src="/icon-192.png"

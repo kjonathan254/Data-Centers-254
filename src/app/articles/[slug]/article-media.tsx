@@ -68,7 +68,7 @@ export function ArticleImageBlock({ image }: { image: ArticleImage }) {
           : isSectionBreak || isInfographic
           ? "-mx-4 sm:-mx-6"
           : ""
-      } ${isInfographic || isDiagram || isVideo ? "glass-card rounded-xl overflow-hidden border border-border/50" : ""}`}
+      } ${isInfographic || isDiagram || isVideo ? "card-solid rounded-xl overflow-hidden border border-border/50" : ""}`}
     >
       {isDiagram || isVideo ? (
         <div className="bg-surface/60">

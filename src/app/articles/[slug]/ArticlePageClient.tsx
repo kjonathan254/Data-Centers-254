@@ -80,7 +80,7 @@ function TableOfContents({ headings }: { headings: HeadingItem[] }) {
   if (h2s.length < 2) return null;
 
   return (
-    <nav className="glass-card rounded-xl p-5 sm:p-6 mb-10 border border-border/50">
+    <nav className="card-solid rounded-xl p-5 sm:p-6 mb-10 border border-border/50">
       <h2 className="text-xs font-mono uppercase tracking-widest text-cyan mb-4">
         On this page
       </h2>
@@ -119,7 +119,7 @@ function FaqSection({ faq }: { faq: ArticleFaq[] }) {
         {faq.map((item, i) => (
           <div
             key={i}
-            className="glass-card rounded-xl border border-border/50 overflow-hidden"
+            className="card-solid rounded-xl border border-border/50 overflow-hidden"
           >
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -363,7 +363,7 @@ export default function ArticlePageClient({ article, related, body }: Props) {
                   <Link
                     key={r.slug}
                     href={`/articles/${r.slug}`}
-                    className="block glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group"
+                    className="block card-solid card-solid-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors">

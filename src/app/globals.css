@@ -132,14 +132,14 @@
   .glow-neon-sm {
     box-shadow: 0 0 10px oklch(0.75 0.18 155 / 15%);
   }
-  .glass-card {
+  /* Map HUD panel - the one intentional survivor of the old glass system
+     (Task 132 consolidation). Translucent + blurred ON PURPOSE: the map
+     component's floating PanelShell overlays the live map. Do not convert
+     to card-solid (opaque would hide the map behind the panel). */
+  .hud-panel {
     background: oklch(0.12 0.008 260 / 60%);
     backdrop-filter: blur(12px);
     border: 1px solid oklch(1 0 0 / 6%);
-  }
-  .glass-card-hover:hover {
-    background: oklch(0.14 0.01 260 / 70%);
-    border-color: oklch(0.78 0.14 195 / 20%);
   }
   .grid-bg {
     background-image:

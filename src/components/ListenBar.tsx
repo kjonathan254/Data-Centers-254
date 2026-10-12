@@ -433,7 +433,7 @@ export default function ListenBar({ targetId, slug }: Props) {
     <>
       <section
         aria-label="Listen to this article"
-        className="glass-card rounded-xl border border-border/50 p-4 sm:p-5 mb-10"
+        className="card-solid rounded-xl border border-border/50 p-4 sm:p-5 mb-10"
       >
         <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
           <button

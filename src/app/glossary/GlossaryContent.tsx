@@ -138,7 +138,7 @@ export default function GlossaryContent({
         {/* Terms list */}
         <div className="space-y-3">
           {filtered.length === 0 ? (
-            <div className="glass-card rounded-xl p-8 text-center">
+            <div className="card-solid rounded-xl p-8 text-center">
               <BookOpen className="size-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground">No terms match your search.</p>
             </div>
@@ -149,7 +149,7 @@ export default function GlossaryContent({
                 <div
                   key={t.term}
                   id={t.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-                  className="glass-card rounded-xl border border-border/50 overflow-hidden"
+                  className="card-solid rounded-xl border border-border/50 overflow-hidden"
                 >
                   {/* Term header, always visible */}
                   <button

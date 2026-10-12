@@ -178,7 +178,7 @@ export default function SearchClient() {
         {loading && (
           <div className="space-y-3">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="glass-card rounded-xl p-5 animate-pulse">
+              <div key={i} className="card-solid rounded-xl p-5 animate-pulse">
                 <div className="h-5 bg-accent rounded w-3/4 mb-2" />
                 <div className="h-4 bg-accent rounded w-1/2" />
               </div>
@@ -187,7 +187,7 @@ export default function SearchClient() {
         )}
 
         {!loading && searched && totalResults === 0 && (
-          <div className="glass-card rounded-xl p-12 text-center">
+          <div className="card-solid rounded-xl p-12 text-center">
             <SearchIcon className="size-10 text-muted-foreground mx-auto mb-4" />
             <p className="text-lg font-medium text-foreground mb-2">
               No results for &ldquo;{query}&rdquo;
@@ -222,7 +222,7 @@ export default function SearchClient() {
                     >
                       <Link
                         href={`/directory/${f.slug}`}
-                        className="block glass-card glass-card-hover rounded-xl p-4 sm:p-5 border border-border/50 hover:border-cyan/30 transition-all group"
+                        className="block card-solid card-solid-hover rounded-xl p-4 sm:p-5 border border-border/50 hover:border-cyan/30 transition-all group"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0 flex-1">
@@ -282,7 +282,7 @@ export default function SearchClient() {
                     >
                       <Link
                         href={`/articles/${a.slug}`}
-                        className="block glass-card glass-card-hover rounded-xl p-4 sm:p-5 border border-border/50 hover:border-cyan/30 transition-all group"
+                        className="block card-solid card-solid-hover rounded-xl p-4 sm:p-5 border border-border/50 hover:border-cyan/30 transition-all group"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0 flex-1">

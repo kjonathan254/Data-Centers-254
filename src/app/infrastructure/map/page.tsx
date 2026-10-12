@@ -57,7 +57,7 @@ export default function InfrastructureMapPage() {
 
         {/* PIDA / African Infrastructure Database layer */}
         <section className="max-w-5xl mx-auto px-4 md:px-6 mt-12">
-          <div className="glass-card rounded-2xl border border-border/50 p-6 sm:p-8">
+          <div className="card-solid rounded-2xl border border-border/50 p-6 sm:p-8">
             <div className="flex items-start gap-3 mb-4">
               <span className="mt-0.5 inline-flex items-center justify-center size-9 shrink-0 rounded-xl border border-purple-400/30 bg-purple-400/10">
                 <Database className="size-4.5 text-purple-400" />

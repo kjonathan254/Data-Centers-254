@@ -124,7 +124,7 @@ export default function ResearchContent() {
               }}
             >
               <div
-                className={`glass-card rounded-xl p-6 sm:p-7 h-full flex flex-col ${
+                className={`card-solid rounded-xl p-6 sm:p-7 h-full flex flex-col ${
                   report.featured
                     ? "border-cyan/25 shadow-[0_0_40px_oklch(0.78_0.14_195/6%)]"
                     : ""
@@ -209,7 +209,7 @@ export default function ResearchContent() {
               ease: [0.22, 1, 0.36, 1] as const,
             }}
           >
-            <div className="glass-card rounded-xl p-6 sm:p-7 h-full flex flex-col border-dashed">
+            <div className="card-solid rounded-xl p-6 sm:p-7 h-full flex flex-col border-dashed">
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="inline-flex items-center rounded-full border border-border/60 bg-accent/20 px-3 py-1 text-2xs font-medium tracking-wide uppercase text-muted-foreground">
                   Brief / 02 · In production
@@ -263,7 +263,7 @@ export default function ResearchContent() {
         >
           <Link
             href="/directory"
-            className="glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group"
+            className="card-solid rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group"
           >
             <p className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors">
               Browse the DC Directory
@@ -275,7 +275,7 @@ export default function ResearchContent() {
           </Link>
           <Link
             href="/methodology"
-            className="glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group"
+            className="card-solid rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group"
           >
             <p className="text-sm font-semibold text-foreground group-hover:text-cyan transition-colors">
               How we count

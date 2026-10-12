@@ -40,7 +40,7 @@ export default function Custom404() {
           <div className="grid sm:grid-cols-2 gap-3 text-left">
             <Link
               href="/"
-              className="glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
+              className="card-solid card-solid-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
             >
               <Home className="h-5 w-5 text-muted-foreground group-hover:text-cyan transition-colors shrink-0" />
               <div>
@@ -53,7 +53,7 @@ export default function Custom404() {
 
             <Link
               href="/directory"
-              className="glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
+              className="card-solid card-solid-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
             >
               <Search className="h-5 w-5 text-muted-foreground group-hover:text-cyan transition-colors shrink-0" />
               <div>
@@ -66,7 +66,7 @@ export default function Custom404() {
 
             <Link
               href="/data-centres"
-              className="glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
+              className="card-solid card-solid-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
             >
               <ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-cyan transition-colors shrink-0" />
               <div>
@@ -79,7 +79,7 @@ export default function Custom404() {
 
             <Link
               href="/about"
-              className="glass-card glass-card-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
+              className="card-solid card-solid-hover rounded-xl p-4 border border-border/50 hover:border-cyan/30 transition-all group flex items-center gap-3"
             >
               <Server className="h-5 w-5 text-muted-foreground group-hover:text-cyan transition-colors shrink-0" />
               <div>

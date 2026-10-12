@@ -67,7 +67,7 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
   };
 
   return (
-    <section className="mt-14 glass-card rounded-2xl border border-cyan/20 p-6 sm:p-8">
+    <section className="mt-14 card-solid rounded-2xl border border-cyan/20 p-6 sm:p-8">
       <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-1">
         Jaribio, test your vocabulary
       </h2>

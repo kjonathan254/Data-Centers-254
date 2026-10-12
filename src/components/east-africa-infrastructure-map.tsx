@@ -104,7 +104,7 @@ function StatsBand() {
     <div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {stats.map((s) => (
-          <div key={s.label} className="glass-card rounded-xl p-3 md:p-4 border-cyan/10">
+          <div key={s.label} className="card-solid rounded-xl p-3 md:p-4 border-cyan/10">
             <p className="text-section-label mb-1">{s.label}</p>
             <p className="text-foreground text-xl md:text-2xl font-bold tracking-tight tabular-nums">
               <CountUp value={s.value} format={s.format} />
@@ -113,7 +113,7 @@ function StatsBand() {
           </div>
         ))}
       </div>
-      <details className="glass-card group mt-3 rounded-xl border-cyan/10 px-4 py-3">
+      <details className="card-solid group mt-3 rounded-xl border-cyan/10 px-4 py-3">
         <summary className="flex cursor-pointer list-none items-center gap-2 text-xs font-medium text-cyan">
           <Info aria-hidden="true" className="size-3.5 shrink-0" />
           Definitions
@@ -146,7 +146,7 @@ function PanelShell({ title, subtitle, onClose, children }: {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className={`glass-card rounded-xl p-4 md:p-5 w-full md:w-[340px] border-cyan/10 ${expanded ? "max-h-[85vh]" : "max-h-[46vh]"} md:max-h-[calc(100%-2rem)] overflow-y-auto scrollbar-thin md:absolute md:top-4 md:right-4 md:left-auto md:bottom-4 fixed bottom-0 left-0 right-0 md:z-10 rounded-b-none md:rounded-b-xl transition-[max-height] duration-300`}
+      className={`hud-panel rounded-xl p-4 md:p-5 w-full md:w-[340px] border-cyan/10 ${expanded ? "max-h-[85vh]" : "max-h-[46vh]"} md:max-h-[calc(100%-2rem)] overflow-y-auto scrollbar-thin md:absolute md:top-4 md:right-4 md:left-auto md:bottom-4 fixed bottom-0 left-0 right-0 md:z-10 rounded-b-none md:rounded-b-xl transition-[max-height] duration-300`}
     >
       <button
         type="button"
@@ -736,7 +736,7 @@ export default function EastAfricaInfrastructureMap() {
         </div>
 
         {viewMode === "list" ? (
-          <div className="glass-card rounded-xl overflow-hidden">
+          <div className="card-solid rounded-xl overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/30 px-4 py-2.5">
               <p className="text-section-label">Data table · every mapped asset</p>
               <button type="button" onClick={exportListCsv}
@@ -913,7 +913,7 @@ export default function EastAfricaInfrastructureMap() {
 
             {/* Side rail */}
             <aside className="space-y-4 lg:sticky lg:top-24">
-              <div className="glass-card rounded-xl p-4 border-cyan/10">
+              <div className="card-solid rounded-xl p-4 border-cyan/10">
                 <p className="text-section-label mb-3">How to read this map</p>
                 <ul className="space-y-2.5 text-xs text-muted-foreground leading-relaxed">
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters, tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
@@ -923,7 +923,7 @@ export default function EastAfricaInfrastructureMap() {
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0 border border-dashed" style={{ borderColor: CYAN }} /><span>Hover any cable — on the map or in the cable list — to trace its route.</span></li>
                 </ul>
               </div>
-              <div className="glass-card rounded-xl p-4 border-cyan/10">
+              <div className="card-solid rounded-xl p-4 border-cyan/10">
                 <p className="text-section-label mb-3">Cables landing in Mombasa</p>
                 <ul className="divide-y divide-border/30">
                   {SUBSEA_CABLES.map((c) => (
@@ -969,7 +969,7 @@ export default function EastAfricaInfrastructureMap() {
                   Hover a cable to trace its route; the file icon opens its source trail. The cable tracker also lists LuLu (planned, 2026).
                 </p>
               </div>
-              <a href="/infrastructure" className="block glass-card rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group">
+              <a href="/infrastructure" className="block card-solid rounded-xl p-4 border-cyan/10 hover:border-cyan/30 transition-colors group">
                 <p className="text-section-label mb-2">Deep dive</p>
                 <p className="text-sm text-foreground font-medium flex items-center gap-1">
                   Kenya&rsquo;s connectivity stack
