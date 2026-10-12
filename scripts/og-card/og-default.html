@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Geist'; src:url('file:///home/z/my-project/Data-Centers-254/node_modules/geist/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; }
+  @font-face { font-family:'Geist'; src:url('file:///home/z/my-project/Data-Centers-254/node_modules/geist/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2'); font-weight:500; font-style:normal; }
+  @font-face { font-family:'Geist'; src:url('file:///home/z/my-project/Data-Centers-254/node_modules/geist/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2'); font-weight:600; font-style:normal; }
+  @font-face { font-family:'Geist'; src:url('file:///home/z/my-project/Data-Centers-254/node_modules/geist/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2'); font-weight:700; font-style:normal; }
+  @font-face { font-family:'Geist'; src:url('file:///home/z/my-project/Data-Centers-254/node_modules/geist/dist/fonts/geist-sans/Geist-Black.woff2') format('woff2'); font-weight:900; font-style:normal; }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    font-family:'Geist', sans-serif;
+    background:#04070d;
+    position:relative;
+    color:#fff;
+  }
+
+  /* Layer 1: Nairobi night skyline silhouette (real repo photo, pre-cropped to
+     the tower band - the source photo's lower half is Wilson Airport hangars). */
+  .skyline {
+    position:absolute; left:0; right:0; top:150px; height:430px;
+    background:url('file:///home/z/my-project/Data-Centers-254/research/og-assets/skyline-band.jpg') center 26%/cover no-repeat;
+    filter:brightness(1.05) saturate(0.9);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 26%, rgba(0,0,0,1) 55%, rgba(0,0,0,0.75) 85%, transparent 100%);
+    mask-image:linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 26%, rgba(0,0,0,1) 55%, rgba(0,0,0,0.75) 85%, transparent 100%);
+  }
+
+  /* Layer 2: data-centre hall (real repo photo, dark blue LED aisle),
+     screen-blended so racks + lights glow through the navy floor */
+  .servers {
+    position:absolute; right:-80px; bottom:-70px; width:900px; height:430px;
+    background:url('file:///home/z/my-project/Data-Centers-254/public/images/hero-server-hall.webp') center 62%/cover no-repeat;
+    opacity:0.5; mix-blend-mode:screen;
+    -webkit-mask-image:radial-gradient(80% 90% at 62% 78%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.45) 55%, transparent 80%);
+    mask-image:radial-gradient(80% 90% at 62% 78%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.45) 55%, transparent 80%);
+  }
+
+  /* Layer 3: network constellation (digital infrastructure) */
+  .net { position:absolute; inset:0; }
+
+  /* Layer 4: scrims keeping the text zone clean */
+  .scrim-left {
+    position:absolute; inset:0;
+    background:linear-gradient(93deg, rgba(4,7,13,0.97) 0%, rgba(4,7,13,0.9) 30%, rgba(4,7,13,0.45) 52%, rgba(4,7,13,0.05) 74%);
+  }
+  .scrim-top {
+    position:absolute; inset:0;
+    background:linear-gradient(to bottom, rgba(4,7,13,0.55) 0%, transparent 26%);
+  }
+  .scrim-bottom {
+    position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(3,6,11,0.75) 0%, rgba(3,6,11,0.25) 14%, transparent 32%);
+  }
+
+  /* content */
+  .content { position:absolute; inset:0; padding:56px 72px 52px 76px; display:flex; flex-direction:column; }
+
+  .brand { display:flex; align-items:center; gap:24px; }
+  .brand img { width:90px; height:90px; border-radius:22px; border:1px solid rgba(255,255,255,0.14); box-shadow:0 10px 34px rgba(0,0,0,0.5); }
+  .brand-name { font-size:34px; font-weight:800; letter-spacing:2.5px; }
+  .brand-name .b254 { color:#4cc9e8; }
+  .brand-sub { margin-top:7px; font-size:16px; font-weight:500; letter-spacing:4px; color:rgba(178,208,226,0.78); }
+
+  .headline { margin-top:52px; font-size:78px; line-height:1.09; font-weight:900; letter-spacing:-1.5px; }
+  .headline .hl { color:#4cc9e8; }
+
+  .tags { margin-top:44px; font-size:22px; font-weight:500; color:rgba(228,240,248,0.88); letter-spacing:0.2px; }
+  .tags .sep { color:rgba(76,201,232,0.75); font-weight:700; padding:0 10px; }
+
+  .bottom { margin-top:auto; display:flex; align-items:center; justify-content:space-between; }
+  .pill {
+    display:inline-flex; align-items:center; gap:12px;
+    border:1.5px solid rgba(255,255,255,0.17); border-radius:999px;
+    padding:13px 28px; font-size:21px; font-weight:600; color:rgba(255,255,255,0.92);
+    background:rgba(6,12,20,0.55); backdrop-filter:blur(4px);
+  }
+  .pill .dot { width:10px; height:10px; border-radius:50%; background:#34d399; box-shadow:0 0 10px rgba(52,211,153,0.9); }
+  .badge { font-size:16px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.5); }
+</style>
+</head>
+<body>
+  <div class="skyline"></div>
+  <div class="servers"></div>
+  <svg class="net" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+    <g stroke="#4cc9e8" stroke-opacity="0.22" stroke-width="1.4">
+      <path d="M870 160 L985 118 L1105 165"/>
+      <path d="M985 118 L1030 235"/>
+      <path d="M870 160 L905 288"/>
+      <path d="M1030 235 L1105 165"/>
+      <path d="M905 288 L1030 235"/>
+      <path d="M905 288 L1010 372"/>
+      <path d="M1030 235 L1120 305"/>
+      <path d="M1010 372 L1120 305"/>
+      <path d="M1010 372 L1062 470"/>
+      <path d="M870 160 L760 205"/>
+      <path d="M760 205 L905 288"/>
+      <path d="M760 205 L700 320"/>
+    </g>
+    <g fill="#4cc9e8">
+      <circle cx="870" cy="160" r="5" fill-opacity="0.8"/>
+      <circle cx="985" cy="118" r="7" fill-opacity="0.9"/>
+      <circle cx="1105" cy="165" r="4.5" fill-opacity="0.7"/>
+      <circle cx="1030" cy="235" r="9" fill-opacity="0.95"/>
+      <circle cx="905" cy="288" r="6" fill-opacity="0.8"/>
+      <circle cx="1010" cy="372" r="10" fill-opacity="0.95"/>
+      <circle cx="1120" cy="305" r="4.5" fill-opacity="0.7"/>
+      <circle cx="1062" cy="470" r="6" fill-opacity="0.75"/>
+      <circle cx="760" cy="205" r="4" fill-opacity="0.6"/>
+      <circle cx="700" cy="320" r="3.5" fill-opacity="0.5"/>
+    </g>
+    <g fill="#9adcf0">
+      <circle cx="985" cy="118" r="2.4"/>
+      <circle cx="1030" cy="235" r="3"/>
+      <circle cx="1010" cy="372" r="3.4"/>
+    </g>
+  </svg>
+  <div class="scrim-left"></div>
+  <div class="scrim-top"></div>
+  <div class="scrim-bottom"></div>
+
+  <div class="content">
+    <div class="brand">
+      <img src="file:///home/z/my-project/Data-Centers-254/public/logo-icon.png" alt="">
+      <div>
+        <div class="brand-name">DATA CENTRE <span class="b254">254</span></div>
+        <div class="brand-sub">KENYA'S DATA CENTRE DIRECTORY</div>
+      </div>
+    </div>
+
+    <div class="headline">Inside Kenya's<br>Digital <span class="hl">Infrastructure</span></div>
+
+    <div class="tags">Data centres<span class="sep">&middot;</span>Connectivity<span class="sep">&middot;</span>Power<span class="sep">&middot;</span>Cloud<span class="sep">&middot;</span>AI</div>
+
+    <div class="bottom">
+      <div class="pill"><span class="dot"></span>data-centers-254.vercel.app</div>
+      <div class="badge">INDEPENDENT &middot; LOCAL &middot; VERIFIED</div>
+    </div>
+  </div>
+</body>
+</html>

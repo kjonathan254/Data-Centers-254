@@ -56,3 +56,7 @@ dc254-skills-campaign/renders/
 
 # Task 129 visual QA screenshots (3.2MB) - local-only, keep repo lean
 research/task129-shots/
+
+# Task 130 QA renders (local-only)
+research/task130-*.png
+research/og-render-*.png

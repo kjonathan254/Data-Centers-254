@@ -89,11 +89,11 @@ export default function TheScale() {
           <Link
             href="/infrastructure/map"
             aria-label="Open the infrastructure map"
-            className="group relative block h-[440px] overflow-hidden rounded-xl border border-border/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan sm:h-[540px] lg:order-2 lg:h-auto lg:min-h-[600px]"
+            className="group relative block h-[300px] overflow-hidden rounded-xl border border-border/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan sm:h-[380px] lg:order-2 lg:h-auto lg:min-h-[480px]"
           >
             <div
               className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.015]"
-              style={{ background: "radial-gradient(120% 90% at 50% 38%, #0a1526 0%, #070d18 55%, #04080e 100%)" }}
+              style={{ background: "radial-gradient(120% 120% at 58% 40%, #0a1526 0%, #070d18 55%, #04080e 100%)" }}
             >
               <MapPreview />
             </div>

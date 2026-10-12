@@ -19,6 +19,13 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
   Tanzania: { size: 32 },
 };
 
+// Cable-label nudges for the preview crop: Daraja's last waypoint (its Salalah
+// end) sits end-anchored straight into Nairobi's "N data centres" sub-label at
+// the larger preview scale - drop the label below the cable run instead.
+const CABLE_LABEL_NUDGE: Record<string, { dy?: number }> = {
+  daraja: { dy: 34 },
+};
+
 /**
  * Static, server-rendered preview of the DC254 infrastructure map.
  *
@@ -38,14 +45,14 @@ export default function MapPreview() {
 
   return (
     <svg
-      viewBox="0 0 1000 1570"
+      viewBox="-30 530 1090 950"
       className="h-full w-full"
-      preserveAspectRatio="xMidYMid meet"
+      preserveAspectRatio="xMidYMid slice"
       role="img"
       aria-label={`Preview of the DC254 infrastructure map: ${nboCount} data centres around Nairobi, ${msaCount} in Mombasa, ${liveCables} in-service submarine cables landing on the Kenyan coast`}
     >
       <defs>
-        <radialGradient id="mpGlow" cx="50%" cy="42%" r="65%">
+        <radialGradient id="mpGlow" cx="58%" cy="40%" r="65%">
           <stop offset="0%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0.16" />
           <stop offset="100%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0" />
         </radialGradient>
@@ -63,18 +70,18 @@ export default function MapPreview() {
         </linearGradient>
       </defs>
 
-      {/* ambient glow over Kenya */}
-      <rect x="0" y="0" width="1000" height="1570" fill="url(#mpGlow)" />
+      {/* ambient glow over Kenya (covers the landscape crop window) */}
+      <rect x="-40" y="525" width="1130" height="935" fill="url(#mpGlow)" />
 
       {/* subtle graticule */}
       <g stroke="oklch(0.78 0.14 195 / 0.06)" strokeWidth={0.8}>
         {[30, 32, 34, 36, 38, 40, 42].map((lng) => {
           const x = proj(0, lng).x;
-          return <line key={`gx${lng}`} x1={x} y1={0} x2={x} y2={1570} />;
+          return <line key={`gx${lng}`} x1={x} y1={525} x2={x} y2={1455} />;
         })}
         {[-6, -4, -2, 0, 2, 4].map((lat) => {
           const y = proj(lat, 0).y;
-          return <line key={`gy${lat}`} x1={0} y1={y} x2={1000} y2={y} />;
+          return <line key={`gy${lat}`} x1={-40} y1={y} x2={1080} y2={y} />;
         })}
       </g>
 
@@ -147,15 +154,20 @@ export default function MapPreview() {
         const [lat, lng] = c.waypoints[c.waypoints.length - 1];
         const p = proj(lat, lng);
         const anchorEnd = c.id !== "eassy";
+        const nudge = CABLE_LABEL_NUDGE[c.id] ?? {};
         return (
           <text
             key={`lbl-${c.id}`}
             x={p.x + (anchorEnd ? -10 : 10)}
-            y={p.y + 4}
+            y={p.y + 4 + (nudge.dy ?? 0)}
             textAnchor={anchorEnd ? "end" : "start"}
             fontSize={26}
             fontWeight={500}
-            fill={c.live ? "oklch(0.78 0.14 195 / 0.8)" : "oklch(0.85 0.12 85 / 0.85)"}
+            fill={c.live ? "oklch(0.78 0.14 195 / 0.9)" : "oklch(0.85 0.12 85 / 0.9)"}
+            stroke="#04080e"
+            strokeWidth={4}
+            strokeLinejoin="round"
+            paintOrder="stroke"
           >
             {c.label}
           </text>
@@ -169,7 +181,8 @@ export default function MapPreview() {
           <g>
             <path d={`M${ls.x},${ls.y - 7} L${ls.x + 7},${ls.y} L${ls.x},${ls.y + 7} L${ls.x - 7},${ls.y} Z`}
               fill={CYAN} fillOpacity={0.9} stroke="oklch(0.1 0.02 250)" strokeWidth={1.1} />
-            <text x={ls.x} y={ls.y + 26} textAnchor="middle" fontSize={18} fill="oklch(0.93 0.01 260 / 0.6)">Nyali landing station</text>
+            <text x={ls.x - 14} y={ls.y + 56} textAnchor="end" fontSize={18} fill="oklch(0.93 0.01 260 / 0.65)"
+              stroke="#04080e" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">Nyali landing station</text>
           </g>
         );
       })()}
@@ -222,8 +235,8 @@ export default function MapPreview() {
           <animate attributeName="stroke-opacity" from="0.5" to="0" dur="2.2s" repeatCount="indefinite" />
         </circle>
         <text x={msa.x} y={msa.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={15} fontWeight={700} fill={CYAN}>{msaCount}</text>
-        <text x={msa.x + 26} y={msa.y - 4} fontSize={25} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.9)">Mombasa</text>
-        <text x={msa.x + 26} y={msa.y + 19} fontSize={20} fill="oklch(0.93 0.01 260 / 0.55)">{msaCount} DC · {liveCables} cables</text>
+        <text x={msa.x + 26} y={msa.y - 4} fontSize={25} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.9)" stroke="#04080e" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">Mombasa</text>
+        <text x={msa.x + 26} y={msa.y + 19} fontSize={20} fill="oklch(0.93 0.01 260 / 0.6)" stroke="#04080e" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">{msaCount} DC · {liveCables} cables</text>
       </g>
 
       {/* Nairobi cluster */}
@@ -234,12 +247,12 @@ export default function MapPreview() {
           <animate attributeName="stroke-opacity" from="0.55" to="0" dur="2s" repeatCount="indefinite" />
         </circle>
         <text x={nbo.x} y={nbo.y + 1} textAnchor="middle" dominantBaseline="central" fontSize={18} fontWeight={700} fill={CYAN}>{nboCount}</text>
-        <text x={nbo.x} y={nbo.y + 48} textAnchor="middle" fontSize={27} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.95)">Nairobi</text>
-        <text x={nbo.x} y={nbo.y + 69} textAnchor="middle" fontSize={21} fill="oklch(0.93 0.01 260 / 0.6)">{nboCount} data centres</text>
+        <text x={nbo.x} y={nbo.y + 48} textAnchor="middle" fontSize={27} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.95)" stroke="#04080e" strokeWidth={4.5} strokeLinejoin="round" paintOrder="stroke">Nairobi</text>
+        <text x={nbo.x} y={nbo.y + 69} textAnchor="middle" fontSize={21} fill="oklch(0.93 0.01 260 / 0.65)" stroke="#04080e" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">{nboCount} data centres</text>
       </g>
 
       {/* compass */}
-      <g opacity={0.55} transform="translate(954, 52)">
+      <g opacity={0.55} transform="translate(48, 622)">
         <circle r={17} fill="none" stroke="oklch(0.93 0.01 260 / 0.35)" strokeWidth={1} />
         <path d="M0,-13 L4.5,4 L0,1.5 L-4.5,4 Z" fill={CYAN} />
         <text y={-22} textAnchor="middle" fontSize={13} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.7)">N</text>
