@@ -172,7 +172,7 @@ export default function ArticleClusterPage({ cluster }: { cluster: string }) {
 
         {/* Back to all topics */}
         <Link
-          href="/#the-library"
+          href="/articles"
           className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-cyan"
         >
           <ArrowRight className="size-4 rotate-180" />

@@ -274,7 +274,7 @@ export default async function FacilityPage({
               ? `Its designed capacity is ${f.totalCapacityMw} MW${f.itLoadMw ? `, of which ${f.itLoadMw} MW of IT load is live` : ""}.`
               : "Its total capacity has not been publicly disclosed."}{" "}
             {f.tierRating ? `The facility carries a Tier ${f.tierRating} rating. ` : ""}
-            It sits inside DC254&apos;s four-stage supply pipeline , {" "}
+            It sits inside DC254&apos;s four-stage supply pipeline,{" "}
             <Link href="/directory" className="text-cyan underline hover:underline">
               see how Kenya&apos;s market stages up
             </Link>
@@ -298,7 +298,7 @@ export default async function FacilityPage({
               </p>
               <Link
                 href={`/directory/compare?ids=${encodeURIComponent([f.slug, ...peers.map((p) => p.slug)].join(","))}`}
-                className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-cyan px-3.5 py-1.5 text-xs font-bold text-background transition-opacity hover:opacity-90"
+                className="ml-auto inline-flex min-h-11 items-center gap-1.5 rounded-lg bg-cyan px-3.5 text-xs font-bold text-background transition-opacity hover:opacity-90"
               >
                 Side by side <ArrowRight className="size-3.5" />
               </Link>

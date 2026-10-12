@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import {
   X, Search, List, MapIcon, ArrowRight, Zap, Cable, Network,
   ChevronRight, ChevronDown, ChevronUp, Building2, RotateCcw, HardHat,
@@ -161,7 +161,7 @@ function PanelShell({ title, subtitle, onClose, children }: {
         }}
         aria-expanded={expanded}
         aria-label={expanded ? "Collapse details sheet" : "Expand details sheet"}
-        className="mx-auto mb-1.5 flex h-5 w-11 items-center justify-center rounded-full bg-border/40 md:hidden"
+        className="mx-auto mb-1 flex h-9 w-16 items-center justify-center rounded-full bg-border/25 hover:bg-border/50 transition-colors md:hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
       >
         <ChevronUp aria-hidden="true" className={`size-4 text-muted-foreground transition-transform ${expanded ? "rotate-180" : ""}`} />
       </button>
@@ -189,8 +189,13 @@ function StatusChip({ status }: { status: DcStatus }) {
 }
 
 function FacilityCard({ f }: { f: KenyaFacility }) {
+  // Deep-link to the verified directory profile when the slug is mapped;
+  // fall back to a pre-filtered search so the link always lands honestly.
+  const profileHref = f.directorySlug
+    ? `/directory/${f.directorySlug}`
+    : `/directory?search=${encodeURIComponent(f.name)}`;
   return (
-    <a href="/directory" className="block group">
+    <a href={profileHref} className="block group">
       <div className="bg-surface/50 rounded-lg p-3.5 border border-border/20 hover:border-cyan/30 transition-colors">
         <div className="flex items-center gap-2 mb-1.5">
           <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: STATUS_COLOR[f.status] }} />
@@ -238,6 +243,7 @@ function Legend() {
       <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: AMBER }} />Under construction</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rounded-full border border-dashed" style={{ borderColor: CYAN }} />Announced</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-5 h-0.5 rounded-full" style={{ background: CYAN }} />Subsea cable</span>
+      <span className="flex items-center gap-1.5"><span className="inline-block w-2 h-2 rounded-full border" style={{ borderColor: CYAN }} />Satellite towns (status-coloured)</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-2.5 h-2.5 rotate-45" style={{ background: "oklch(0.72 0.15 305)" }} />PIDA project (continental registry)</span>
       <span className="flex items-center gap-1.5"><span className="inline-block w-5 border-t border-dashed border-foreground/40" />Terrestrial fibre</span>
     </div>
@@ -446,8 +452,20 @@ export default function EastAfricaInfrastructureMap() {
   };
 
   const share = async () => {
+    const url = window.location.href;
+    // Mobile: the platform share sheet is the expected pattern (the URL-state
+    // sync keeps the address bar equal to this view). Clipboard is the
+    // desktop fallback and the only path where "Link copied" shows.
+    if (typeof navigator.share === "function") {
+      try {
+        await navigator.share({ title: document.title, url });
+        return;
+      } catch {
+        // sheet dismissed or blocked — fall through to clipboard
+      }
+    }
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -607,12 +625,13 @@ export default function EastAfricaInfrastructureMap() {
   ];
 
   return (
+    <MotionConfig reducedMotion="user">
     <section className="section-y">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-8">
           <p className="text-section-label mb-3 text-center">Infrastructure map</p>
-          <h2 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h2>
+          <h1 className="text-display-sm text-foreground mb-3 text-center">Every data centre in Kenya, mapped</h1>
           <p className="text-subtitle-center">
             {KENYA_FACILITIES.length} facilities in Kenya, {CABLE_REGISTER.length} tracked submarine
             cable systems ({CABLE_REGISTER.filter((c) => c.status === "In service").length} in service),
@@ -623,7 +642,7 @@ export default function EastAfricaInfrastructureMap() {
         {/* Question presets (redesign doc: orient → choose a question → focused answer) */}
         <div className="mb-6">
           <p className="mb-2.5 text-center text-sm font-medium text-foreground">What do you want to explore?</p>
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:flex-wrap sm:justify-center sm:overflow-visible scrollbar-thin">
             {PRESETS.map((p) => {
               const Icon = p.icon;
               const active = activePreset === p.key;
@@ -633,7 +652,7 @@ export default function EastAfricaInfrastructureMap() {
                   type="button"
                   onClick={() => applyPreset(p.key)}
                   aria-pressed={active}
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
+                  className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
                     active
                       ? "border-cyan/50 bg-cyan/15 text-cyan"
                       : "border-border/60 bg-accent/30 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
@@ -819,6 +838,7 @@ export default function EastAfricaInfrastructureMap() {
                       onOpenNairobi={() => openMetro("nairobi")}
                       onOpenMombasa={() => openMetro("mombasa")}
                       onOpenCity={(id) => setCityPanel((p) => (p === id ? null : id))}
+                      onOpenFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))}
                     />
                   )}
                   {mode === "nairobi" && <NairobiMap dimmed={metroDimmed} selectedId={facilityPanel?.id ?? null} onFacility={(f) => setFacilityPanel((p) => (p?.id === f.id ? null : f))} />}
@@ -849,24 +869,21 @@ export default function EastAfricaInfrastructureMap() {
                     onOpenEvidence={() => { const r = registerFor(traceCable); if (r) setEvidence(r); }}
                   />
                 )}
-                {mode === "nairobi" && facilityPanel && (
+                {facilityPanel && (
                   <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · ${CITY_LABEL[facilityPanel.city]}`} onClose={() => setFacilityPanel(null)}>
                     <FacilityCard f={facilityPanel} />
-                    <a href="/directory">
+                    {facilityPanel.city === "mombasa" && (
+                      <div className="bg-surface/50 rounded-lg p-3 border border-border/20 text-xs text-muted-foreground leading-relaxed">
+                        Six of the seven in-service cable systems (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) come
+                        ashore here, with 2Africa also in service since 2024 and Meta&rsquo;s Daraja in development.
+                        Mombasa is Kenya&rsquo;s single point of contact with the global internet.
+                      </div>
+                    )}
+                    <a href={facilityPanel.directorySlug ? `/directory/${facilityPanel.directorySlug}` : `/directory?search=${encodeURIComponent(facilityPanel.name)}`}>
                       <Button variant="outline" size="sm" className="w-full mt-2 border-cyan/20 text-cyan hover:bg-cyan/10 hover:text-cyan">
-                        Browse all {KENYA_FACILITIES.length} in the directory <ArrowRight className="w-4 h-4 ml-1" />
+                        {facilityPanel.directorySlug ? `Open the ${facilityPanel.shortName} profile` : `Find ${facilityPanel.shortName} in the directory`} <ArrowRight className="w-4 h-4 ml-1" />
                       </Button>
                     </a>
-                  </PanelShell>
-                )}
-                {mode === "mombasa" && facilityPanel && (
-                  <PanelShell title={facilityPanel.name} subtitle={`${facilityPanel.operator} · Mombasa`} onClose={() => setFacilityPanel(null)}>
-                    <FacilityCard f={facilityPanel} />
-                    <div className="bg-surface/50 rounded-lg p-3 border border-border/20 text-xs text-muted-foreground leading-relaxed">
-                      Six of the seven in-service cable systems (SEACOM, TEAMS, EASSy, LION2, DARE1 and PEACE) come
-                      ashore here, with 2Africa also in service since 2024 and Meta&rsquo;s Daraja in development.
-                      Mombasa is Kenya&rsquo;s single point of contact with the global internet.
-                    </div>
                   </PanelShell>
                 )}
                 {mode === "country" && cityPanel && (
@@ -900,6 +917,7 @@ export default function EastAfricaInfrastructureMap() {
                 <p className="text-section-label mb-3">How to read this map</p>
                 <ul className="space-y-2.5 text-xs text-muted-foreground leading-relaxed">
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: CYAN }} /><span>Bubble sizes mark the big clusters, tap <span className="text-foreground font-medium">Nairobi</span> or <span className="text-foreground font-medium">Mombasa</span> to zoom in.</span></li>
+                  <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0 border" style={{ borderColor: CYAN }} /><span>Small dots outside the metros are satellite towns — Thika, Limuru, Konza, Tilisi and Tatu City. Tap one to open its profile.</span></li>
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: NEON }} /><span>Dot colours show status: green live, amber building, dashed cyan announced.</span></li>
                   <li className="flex gap-2"><span className="inline-block w-4 h-0.5 mt-1.5 shrink-0 rounded-full" style={{ background: CYAN }} /><span>Solid cyan lines are the {SUBSEA_CABLES.filter((c) => c.live).length} in-service cable routes (of {CABLE_REGISTER.length} tracked systems), dashed amber routes are still in development, dotted lines are terrestrial fibre.</span></li>
                   <li className="flex gap-2"><span className="w-2 h-2 rounded-full mt-1.5 shrink-0 border border-dashed" style={{ borderColor: CYAN }} /><span>Hover any cable — on the map or in the cable list — to trace its route.</span></li>
@@ -916,7 +934,15 @@ export default function EastAfricaInfrastructureMap() {
                         onMouseLeave={() => setActiveCable(null)}
                         onFocus={() => setActiveCable(c.id)}
                         onBlur={() => setActiveCable(null)}
-                        onClick={() => setMode("country")}
+                        onClick={() => {
+                          setMode("country");
+                          // Mobile: the rail stacks below the map stage — bring the map back into view.
+                          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                            mapStageRef.current?.scrollIntoView({ block: "nearest" });
+                          } else {
+                            mapStageRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                          }
+                        }}
                         aria-label={`${c.name}, ${c.designTbps ? `${c.designTbps} terabits per second design capacity` : "in development"}, ${c.live ? "in service" : "in development"} since ${c.year}, trace route on map`}
                         className="flex min-w-0 flex-1 items-center gap-2 py-2 pl-1.5 text-xs focus:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50"
                       >
@@ -988,5 +1014,6 @@ export default function EastAfricaInfrastructureMap() {
 
       <EvidenceDrawer cable={evidence} onClose={() => setEvidence(null)} />
     </section>
+    </MotionConfig>
   );
 }

@@ -221,7 +221,7 @@ export default function SearchClient() {
                       transition={{ duration: 0.3, delay: i * 0.05 }}
                     >
                       <Link
-                        href={`/directory?highlight=${encodeURIComponent(f.name)}`}
+                        href={`/directory/${f.slug}`}
                         className="block glass-card glass-card-hover rounded-xl p-4 sm:p-5 border border-border/50 hover:border-cyan/30 transition-all group"
                       >
                         <div className="flex items-start justify-between gap-3">

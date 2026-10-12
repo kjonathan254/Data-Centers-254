@@ -196,7 +196,7 @@ export default function TrackerPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main id="main-content" className="flex-1 py-10 lg:py-16">
+      <main id="main-content" className="flex-1 pt-20 pb-10 lg:pt-24 lg:pb-16">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: safeJsonLd(trackerJsonLd) }}

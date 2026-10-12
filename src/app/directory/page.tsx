@@ -55,7 +55,6 @@ export default async function DirectoryPage({
   const facilities = getFacilities();
   const snap = getMarketSnapshot();
   const regional = facilities.filter((f) => (f.country || "Kenya") !== "Kenya");
-  const opNames = [...new Set(facilities.map((f) => f.operator.name))];
   const operationalCount = facilities.filter((f) => f.status === "Operational").length;
   const nairobiCount = facilities.filter((f) => f.city === "Nairobi").length;
   const mombasaCount = facilities.filter((f) => f.city === "Mombasa").length;
@@ -121,24 +120,8 @@ export default async function DirectoryPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: safeJsonLd(datasetJsonLd) }}
         />
-        <div className="sr-only" aria-hidden="true">
-          <h1>Kenya Data Centre Directory</h1>
-          <p>
-            Data Centre 254's directory lists {facilities.length} data centre facilities in Kenya.
-            Operators include: {opNames.join(", ")}.
-          </p>
-          <ul>
-            {facilities.map((f) => (
-              <li key={f.id}>
-                {f.name}, {f.operator.name}, {f.city}{f.tierRating ? `, ${f.tierRating}` : ""}
-                {f.itLoadMw ? `, ${f.itLoadMw}MW IT load` : ""}
-                {f.status !== "Operational" ? `, ${f.status}` : ""}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="container-site mt-6">
-          <h2 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h2>
+        <div className="container-site mt-20 lg:mt-24">
+          <h1 className="text-display-sm text-foreground mb-3">How many data centres are in Kenya?</h1>
           <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mb-2">
             DC254 currently tracks <strong className="text-foreground">{snap.kenyaFacilities} data centre facilities in Kenya</strong>{" "}
             ({nairobiCount} in Nairobi, {mombasaCount} in Mombasa, the rest in {citySplitBody.list}), of which{" "}

@@ -140,7 +140,7 @@ export default function Navbar() {
               aria-label="Open menu"
               aria-expanded={mobileOpen}
               aria-haspopup="dialog"
-              className="lg:hidden h-8 w-8 inline-flex items-center justify-center rounded-lg text-muted-foreground hover:text-cyan hover:bg-cyan/10 transition-colors focus-visible:ring-2 focus-visible:ring-cyan/60 outline-none"
+              className="lg:hidden size-11 inline-flex items-center justify-center rounded-lg text-muted-foreground hover:text-cyan hover:bg-cyan/10 transition-colors focus-visible:ring-2 focus-visible:ring-cyan/60 outline-none"
             >
               <Menu className="h-5 w-5" />
             </button>

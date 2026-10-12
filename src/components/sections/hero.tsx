@@ -149,11 +149,11 @@ export default function Hero() {
         {/* Stat strip, the platform's verified numbers as the hero's base */}
         <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border/60 pt-6 sm:grid-cols-3 sm:gap-8">
           {stats.map((s) => (
-            <div key={s.label} className="flex flex-col">
-              <dd className="stat-value order-1">{s.value}</dd>
-              <dt className="order-2 mt-1 text-xs leading-snug text-muted-foreground">
+            <div key={s.label} className="flex flex-col-reverse">
+              <dt className="mt-1 text-xs leading-snug text-muted-foreground">
                 {s.label}
               </dt>
+              <dd className="stat-value">{s.value}</dd>
             </div>
           ))}
         </dl>

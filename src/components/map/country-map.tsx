@@ -6,10 +6,10 @@ import {
 } from "@/lib/map-geo";
 import {
   SUBSEA_CABLES, FIBRE_ROUTES, CONTEXT_CITIES, REGION_ITEMS,
-  KENYA_FACILITIES,
+  KENYA_FACILITIES, type KenyaFacility,
 } from "@/lib/map-data";
 import { PIDA_PROJECTS } from "@/lib/pida-data";
-import { CYAN, AMBER, NEON, smoothPath, toPts } from "./shared";
+import { CYAN, AMBER, NEON, STATUS_COLOR, smoothPath, toPts } from "./shared";
 
 const PIDA_VIOLET = "oklch(0.72 0.15 305)";
 
@@ -33,6 +33,7 @@ function CountryMapInner({
   onOpenNairobi,
   onOpenMombasa,
   onOpenCity,
+  onOpenFacility,
 }: {
   dimmed: Set<string>;
   /** Cable id currently hovered (map or side rail), highlights its route. */
@@ -44,6 +45,8 @@ function CountryMapInner({
   onOpenNairobi: () => void;
   onOpenMombasa: () => void;
   onOpenCity: (id: string) => void;
+  /** Satellite-town facility tapped (Thika, Limuru, Konza, Tilisi, Tatu). */
+  onOpenFacility: (f: KenyaFacility) => void;
 }) {
   const nbo = proj(-1.29, 36.828);
   const msa = proj(-4.0435, 39.6682);
@@ -51,6 +54,10 @@ function CountryMapInner({
   const msaCount = KENYA_FACILITIES.filter((f) => f.metro === "mombasa").length;
   const liveCables = SUBSEA_CABLES.filter((c) => c.live).length;
   const pidaMapped = PIDA_PROJECTS.filter((p) => p.lat !== null && p.lng !== null);
+  // Satellite towns: tracked facilities outside the two metro frames.
+  // KDC SME is excluded — its site is undisclosed, so plotting a marker
+  // would fabricate a location; it stays a directory-only record.
+  const satellites = KENYA_FACILITIES.filter((f) => f.metro === "none" && f.id !== "kdc");
 
   return (
     <svg
@@ -371,6 +378,37 @@ function CountryMapInner({
         <text x={nbo.x} y={nbo.y + 46} textAnchor="middle" fontSize={24} fontWeight={700} fill="oklch(0.93 0.01 260 / 0.95)">Nairobi</text>
         <text x={nbo.x} y={nbo.y + 65} textAnchor="middle" fontSize={19} fill="oklch(0.93 0.01 260 / 0.6)">{nboCount} data centres</text>
       </g>
+
+      {/* satellite towns — tracked facilities outside the metro frames;
+          tap to open the facility panel, same status colours as the metros */}
+      {satellites.map((f) => {
+        const { x, y } = proj(f.lat, f.lng);
+        const dim = dimmed.has(f.id) || dimmed.has("datacenter");
+        const color = STATUS_COLOR[f.status];
+        const dashed = f.status !== "Operational";
+        return (
+          <g
+            key={`sat-${f.id}`}
+            className="cursor-pointer focus:outline-none"
+            opacity={dim ? 0.18 : 1}
+            onClick={() => onOpenFacility(f)}
+            tabIndex={dim ? -1 : 0}
+            role="button"
+            aria-label={`${f.name}, ${f.operator}, ${f.status}, satellite town, open details`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpenFacility(f); } }}
+          >
+            <title>{`${f.name} · ${f.status}`}</title>
+            {/* invisible hit area so the small marker is easy to tap */}
+            <circle cx={x} cy={y} r={20} fill="transparent" pointerEvents="all" />
+            {dashed ? (
+              <circle cx={x} cy={y} r={6.5} fill="oklch(0.2 0.05 250 / 0.9)" stroke={color} strokeWidth={1.8} strokeDasharray="3.2 2.4" />
+            ) : (
+              <circle cx={x} cy={y} r={6.5} fill={color} stroke="oklch(0.1 0.02 250)" strokeWidth={1.4} />
+            )}
+            <text x={x + 11} y={y + 4.5} fontSize={14.5} fontWeight={550} fill="oklch(0.93 0.01 260 / 0.78)" className="select-none">{f.shortName}</text>
+          </g>
+        );
+      })}
 
       {/* compass */}
       <g opacity={0.55} transform={`translate(${LW - 46}, 52)`}>

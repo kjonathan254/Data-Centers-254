@@ -34,7 +34,7 @@ export default function LatestIntelligenceInner({ articles }: { articles: Articl
             </h2>
           </div>
           <Link
-            href="/search"
+            href="/articles"
             className="hidden shrink-0 items-center gap-1.5 text-sm font-medium text-cyan hover:gap-2.5 transition-all sm:inline-flex"
           >
             All articles
@@ -91,7 +91,7 @@ export default function LatestIntelligenceInner({ articles }: { articles: Articl
         </div>
 
         <Link
-          href="/search"
+          href="/articles"
           className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-cyan hover:gap-2.5 transition-all sm:hidden"
         >
           All articles

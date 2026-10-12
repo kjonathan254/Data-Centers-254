@@ -394,9 +394,9 @@
   50% { opacity: 1; transform: scale(1.4); }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* html { scroll-behavior: smooth } lives in the prefers-reduced-motion
+   no-preference block at the end of this file — an unconditional rule here
+   defeated that guard for reduced-motion users. */
 
 /* ─── DC254 infrastructure map animations ───────────────────────────────── */
 @keyframes dc254-flow {

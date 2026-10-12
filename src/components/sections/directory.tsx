@@ -496,7 +496,7 @@ export default function DirectorySection({
                       type="button"
                       onClick={() => toggleCompare(f.slug)}
                       aria-pressed={inCompare}
-                      className={`relative z-10 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors ${
+                      className={`relative z-10 inline-flex min-h-11 items-center gap-1.5 rounded-full border px-3 text-xs font-medium transition-colors ${
                         inCompare
                           ? "border-cyan/50 bg-cyan/15 text-cyan"
                           : "border-border/60 text-muted-foreground hover:border-cyan/40 hover:text-cyan"

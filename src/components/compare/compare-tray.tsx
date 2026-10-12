@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { GitCompareArrows, X } from "lucide-react";
 import { useCompareSelection } from "@/components/compare/use-compare-selection";
@@ -14,7 +15,15 @@ import { getCompareCandidates } from "@/lib/compare";
 export default function CompareTray() {
   const router = useRouter();
   const { slugs, clear } = useCompareSelection();
-  if (slugs.length === 0) return null;
+  // X dismisses the tray WITHOUT wiping the selection (it used to call clear,
+  // identical to the adjacent Clear button); adding another facility brings
+  // the tray back.
+  const [dismissed, setDismissed] = useState(false);
+  const count = slugs.length;
+  useEffect(() => {
+    setDismissed(false);
+  }, [count]);
+  if (slugs.length === 0 || dismissed) return null;
 
   const bySlug = new Map(getCompareCandidates().map((c) => [c.slug, c]));
 
@@ -39,22 +48,22 @@ export default function CompareTray() {
           <button
             type="button"
             onClick={clear}
-            className="rounded-lg px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="inline-flex min-h-10 items-center rounded-lg px-3 text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             Clear
           </button>
           <button
             type="button"
             onClick={() => router.push(`/directory/compare?ids=${encodeURIComponent(slugs.join(","))}`)}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-cyan px-4 py-1.5 text-xs font-bold text-background transition-opacity hover:opacity-90"
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-lg bg-cyan px-4 text-xs font-bold text-background transition-opacity hover:opacity-90"
           >
             Compare now
           </button>
           <button
             type="button"
-            onClick={clear}
-            aria-label="Close comparison tray"
-            className="rounded-lg p-1.5 text-muted-foreground transition-colors hover:text-foreground lg:hidden"
+            onClick={() => setDismissed(true)}
+            aria-label="Dismiss the comparison tray, selection is kept"
+            className="grid size-11 place-items-center rounded-lg text-muted-foreground transition-colors hover:text-foreground lg:hidden"
           >
             <X className="size-4" />
           </button>

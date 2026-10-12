@@ -54,12 +54,12 @@ export default function ProofBand() {
         <dl className="mt-8 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {proofs.map((p) => (
             <div key={p.label} className="border-t border-border/60 pt-5">
-              <dd className="text-2xl font-semibold tabular-nums text-foreground">
-                {p.value}
-              </dd>
-              <dt className="mt-1.5 text-sm font-medium text-foreground">
+              <dt className="text-sm font-medium text-foreground">
                 {p.label}
               </dt>
+              <dd className="mt-1.5 text-2xl font-semibold tabular-nums text-foreground">
+                {p.value}
+              </dd>
               <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                 {p.note}
               </p>

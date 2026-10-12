@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 /**
  * Shared "add to compare" selection, persisted in sessionStorage so it
@@ -34,6 +35,7 @@ function write(slugs: string[]) {
 
 export function useCompareSelection() {
   const [slugs, setSlugs] = useState<string[]>([]);
+  const { toast } = useToast();
 
   useEffect(() => {
     // Mount-time hydration from sessionStorage: state must start server-safe
@@ -52,11 +54,21 @@ export function useCompareSelection() {
 
   const toggle = useCallback((slug: string) => {
     const current = read();
-    const next = current.includes(slug)
-      ? current.filter((s) => s !== slug)
-      : [...current, slug].slice(0, COMPARE_LIMIT);
-    write(next);
-  }, []);
+    if (current.includes(slug)) {
+      write(current.filter((s) => s !== slug));
+      return;
+    }
+    if (current.length >= COMPARE_LIMIT) {
+      // Silent slicing used to swallow the tap — tell the user why nothing
+      // appeared instead of leaving the button looking broken.
+      toast({
+        title: "Compare holds 4 facilities",
+        description: "Remove one from the tray first, then add this one.",
+      });
+      return;
+    }
+    write([...current, slug]);
+  }, [toast]);
 
   const clear = useCallback(() => write([]), []);
 
