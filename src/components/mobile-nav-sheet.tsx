@@ -4,29 +4,12 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import Link from "next/link";
 import BrandLogo from "@/components/brand-logo";
 
-const topicLinks = [
-  { label: "Data Centres", href: "/data-centres" },
-  { label: "Infrastructure", href: "/infrastructure" },
-  { label: "Map", href: "/infrastructure/map" },
-  { label: "AI", href: "/ai" },
-  { label: "Energy", href: "/energy" },
-  { label: "Policy", href: "/policy" },
-  { label: "Careers", href: "/careers" },
-  { label: "Research", href: "/research" },
-];
-
-const platformLinks = [
-  { label: "DC Directory", href: "/directory" },
-  { label: "Tracker", href: "/tracker" },
-  { label: "Compare", href: "/directory/compare" },
-  { label: "Ask Jibu", href: "/chat" },
-  { label: "Glossary", href: "/glossary" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Foundations", href: "/foundations" },
-  { label: "Search", href: "/search" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+// Nav links live in one module (was copy-pasted in navbar + footer — Task 130
+// backlog). Mobile keeps its desktop-plus-FAQ platform list from the module.
+import {
+  TOPIC_LINKS as topicLinks,
+  MOBILE_PLATFORM_LINKS as platformLinks,
+} from "@/lib/nav-data";
 
 interface MobileNavSheetProps {
   open: boolean;

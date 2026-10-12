@@ -12,33 +12,12 @@ import BrandLogo from "@/components/brand-logo";
 import dynamic from "next/dynamic";
 const MobileNavSheet = dynamic(() => import("@/components/mobile-nav-sheet"));
 
-const topicLinks = [
-  { label: "Data Centres", href: "/data-centres" },
-  { label: "Infrastructure", href: "/infrastructure" },
-  { label: "Map", href: "/infrastructure/map" },
-  { label: "AI", href: "/ai" },
-  { label: "Energy", href: "/energy" },
-  { label: "Policy", href: "/policy" },
-  { label: "Careers", href: "/careers" },
-  { label: "Research", href: "/research" },
-];
-
-const platformLinks = [
-  { label: "DC Directory", href: "/directory" },
-  { label: "Tracker", href: "/tracker" },
-  { label: "Compare", href: "/directory/compare" },
-  { label: "Ask Jibu", href: "/chat" },
-  { label: "Glossary", href: "/glossary" },
-  { label: "Foundations", href: "/foundations" },
-  { label: "Search", href: "/search" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
-const exploreLinks = [
-  { label: "Knowledge Base", href: "/data-centres" },
-  ...platformLinks,
-];
+// Nav links live in one module (was copy-pasted here, in the mobile sheet and
+// in the footer — Task 130 backlog). Aliased to keep the JSX below untouched.
+import {
+  TOPIC_LINKS as topicLinks,
+  EXPLORE_LINKS as exploreLinks,
+} from "@/lib/nav-data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

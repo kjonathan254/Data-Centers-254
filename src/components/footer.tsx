@@ -4,33 +4,13 @@ import Link from "next/link";
 import { Linkedin, Mail } from "lucide-react";
 import BrandLogo from "@/components/brand-logo";
 
-const topicLinks = [
-  { label: "Data Centres", href: "/data-centres" },
-  { label: "Infrastructure", href: "/infrastructure" },
-  { label: "Map", href: "/infrastructure/map" },
-  { label: "Policy & Regulation", href: "/policy" },
-  { label: "AI", href: "/ai" },
-  { label: "Energy", href: "/energy" },
-  { label: "Careers", href: "/careers" },
-  { label: "Research", href: "/research" },
-];
-
-const platformLinks = [
-  { label: "DC Directory", href: "/directory" },
-  { label: "Tracker", href: "/tracker" },
-  { label: "Compare", href: "/directory/compare" },
-  { label: "Data Exports", href: "/data-exports" },
-  { label: "Ask Jibu", href: "/chat" },
-  { label: "Methodology", href: "/methodology" },
-  { label: "Corrections", href: "/corrections" },
-  { label: "Glossary", href: "/glossary" },
-  { label: "Kiswahili Glossary", href: "/glossary/kiswahili" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Foundations", href: "/foundations" },
-  { label: "Search", href: "/search" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+// Nav links live in one module (was copy-pasted in navbar + mobile sheet —
+// Task 130 backlog). Footer keeps its long "Policy & Regulation" label and its
+// footer-only resource links, both declared in the module.
+import {
+  FOOTER_TOPIC_LINKS as topicLinks,
+  FOOTER_PLATFORM_LINKS as platformLinks,
+} from "@/lib/nav-data";
 
 export default function Footer() {
   return (
