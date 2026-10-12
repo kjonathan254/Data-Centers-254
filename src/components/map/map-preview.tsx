@@ -22,8 +22,11 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
 // Cable-label nudges for the preview crop: Daraja's last waypoint (its Salalah
 // end) sits end-anchored straight into Nairobi's "N data centres" sub-label at
 // the larger preview scale - drop the label below the cable run instead.
+// LION2's tip sits at the window's southern edge; at md widths the crop band
+// would sliver-cut its label, so it rides up along its own cable run.
 const CABLE_LABEL_NUDGE: Record<string, { dy?: number }> = {
   daraja: { dy: 34 },
+  lion2: { dy: -26 },
 };
 
 /**
@@ -45,14 +48,17 @@ export default function MapPreview() {
 
   return (
     <svg
-      viewBox="-30 530 1090 950"
+      /* Window is Kenya-centred (x 625.5, y ~940) and generous on every side,
+         so the cover-mode crop at any card aspect only ever trims context
+         (Ethiopia/Tanzania/Somalia edges), never the Kenyan shape itself. */
+      viewBox="-95 384 1440 1112"
       className="h-full w-full"
       preserveAspectRatio="xMidYMid slice"
       role="img"
       aria-label={`Preview of the DC254 infrastructure map: ${nboCount} data centres around Nairobi, ${msaCount} in Mombasa, ${liveCables} in-service submarine cables landing on the Kenyan coast`}
     >
       <defs>
-        <radialGradient id="mpGlow" cx="58%" cy="40%" r="65%">
+        <radialGradient id="mpGlow" cx="50%" cy="45%" r="60%">
           <stop offset="0%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0.16" />
           <stop offset="100%" stopColor="oklch(0.78 0.14 195)" stopOpacity="0" />
         </radialGradient>
@@ -71,17 +77,17 @@ export default function MapPreview() {
       </defs>
 
       {/* ambient glow over Kenya (covers the landscape crop window) */}
-      <rect x="-40" y="525" width="1130" height="935" fill="url(#mpGlow)" />
+      <rect x="-100" y="380" width="1455" height="1120" fill="url(#mpGlow)" />
 
       {/* subtle graticule */}
       <g stroke="oklch(0.78 0.14 195 / 0.06)" strokeWidth={0.8}>
-        {[30, 32, 34, 36, 38, 40, 42].map((lng) => {
+        {[30, 32, 34, 36, 38, 40, 42, 44].map((lng) => {
           const x = proj(0, lng).x;
-          return <line key={`gx${lng}`} x1={x} y1={525} x2={x} y2={1455} />;
+          return <line key={`gx${lng}`} x1={x} y1={380} x2={x} y2={1500} />;
         })}
         {[-6, -4, -2, 0, 2, 4].map((lat) => {
           const y = proj(lat, 0).y;
-          return <line key={`gy${lat}`} x1={-40} y1={y} x2={1080} y2={y} />;
+          return <line key={`gy${lat}`} x1={-100} y1={y} x2={1350} y2={y} />;
         })}
       </g>
 
