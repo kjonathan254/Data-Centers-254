@@ -25,6 +25,26 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
   Tanzania: { size: 30 },
 };
 
+// 2Africa's offshore label row collided with the italic "Indian Ocean" decor
+// label (x-overlap ~60 units, baselines 17 apart - visible double-print).
+// Lifting 2Africa clears it; the ocean label also hides below sm.
+const CABLE_LABEL_NUDGE: Record<string, { dy?: number }> = {
+  "2africa": { dy: -16 },
+};
+
+// Satellite-town labels print on top of each other around Nairobi at country
+// scale: Red Hill and Tilisi are ~2km apart on the ground (markers coincide)
+// and Nxtra Tatu sits inside the Nairobi cluster ring, so the default
+// right-side placement stacked four baselines within ~4 units. End-anchor the
+// western trio away from the cluster; Thika and Konza keep the default spot.
+// Names hide below sm - markers stay tappable and the facility panel carries
+// the name on phones.
+const SATELLITE_LABEL_NUDGE: Record<string, { dx: number; dy?: number; end?: boolean }> = {
+  redhill: { dx: -12, end: true },
+  tilisi: { dx: -12, dy: 20, end: true },
+  "nxtra-tatu": { dx: -12, dy: -20, end: true },
+};
+
 function CountryMapInner({
   dimmed,
   activeCable,
@@ -101,8 +121,9 @@ function CountryMapInner({
         })}
       </g>
 
-      {/* equator label */}
-      <text x={LW - 14} y={proj(0, 0).y - 7} textAnchor="end" fontSize={15} letterSpacing={2.5} fill="oklch(0.78 0.05 230 / 0.4)">EQUATOR</text>
+      {/* equator label - west frame edge, where the line is uncluttered; the
+          east end shared its row with SEACOM's label tail (double-print) */}
+      <text x={14} y={proj(0, 0).y - 7} textAnchor="start" fontSize={15} letterSpacing={2.5} fill="oklch(0.78 0.05 230 / 0.4)">EQUATOR</text>
 
       {/* context countries */}
       {COUNTRY_SHAPES.filter((s) => !s.focus).map((s) => (
@@ -143,7 +164,9 @@ function CountryMapInner({
         );
       })}
       <text x={proj(0.4, 37.5).x} y={proj(0.4, 37.5).y} textAnchor="middle" fontSize={38} fontWeight={700} letterSpacing={7} fill="oklch(0.93 0.03 200 / 0.55)" className="select-none">KENYA</text>
-      <text x={proj(-6.5, 41.8).x} y={proj(-6.5, 41.8).y} textAnchor="middle" fontSize={26} fontStyle="italic" letterSpacing={2} fill="oklch(0.78 0.06 230 / 0.45)" className="select-none">Indian Ocean</text>
+      {/* decor label, kept clear of 2Africa via CABLE_LABEL_NUDGE; hidden
+          below sm so the phone view carries only story labels */}
+      <text x={proj(-6.5, 41.8).x} y={proj(-6.5, 41.8).y} textAnchor="middle" fontSize={26} fontStyle="italic" letterSpacing={2} fill="oklch(0.78 0.06 230 / 0.45)" className="hidden sm:inline select-none">Indian Ocean</text>
 
       {/* terrestrial fibre — in trace mode the Mombasa→Nairobi backbone
           brightens with marching dashes toward the cluster */}
@@ -223,15 +246,17 @@ function CountryMapInner({
         const isActive = activeCable === c.id;
         const someActive = activeCable !== null;
         const dimByFilter = dimmed.has("cable");
+        const nudge = CABLE_LABEL_NUDGE[c.id]?.dy ?? 0;
         return (
           <g
             key={`lbl-${c.id}`}
             pointerEvents="none"
             opacity={dimByFilter ? 0.18 : someActive && !isActive ? 0.4 : 1}
+            className={c.live ? undefined : "hidden sm:inline"}
           >
             <text
               x={p.x + (anchorEnd ? -10 : 10)}
-              y={p.y + 4}
+              y={p.y + 4 + nudge}
               textAnchor={anchorEnd ? "end" : "start"}
               fontSize={isActive ? 27 : 22}
               fontWeight={isActive ? 750 : 500}
@@ -269,8 +294,9 @@ function CountryMapInner({
             )}
             <path d={`M${ls.x},${ls.y - 7} L${ls.x + 7},${ls.y} L${ls.x},${ls.y + 7} L${ls.x - 7},${ls.y} Z`}
               fill={CYAN} fillOpacity={0.9} stroke="oklch(0.1 0.02 250)" strokeWidth={1.1} />
-            <text x={ls.x} y={ls.y + 24} textAnchor="middle" fontSize={tracing ? 16 : 15}
-              fontWeight={tracing ? 700 : 400} fill={tracing ? CYAN : "oklch(0.93 0.01 260 / 0.6)"}>Nyali landing station</text>
+            <text x={ls.x - 22} y={ls.y + 4.5} textAnchor="end" fontSize={tracing ? 16 : 15}
+              fontWeight={tracing ? 700 : 400} fill={tracing ? CYAN : "oklch(0.93 0.01 260 / 0.6)"}
+              className="hidden sm:inline">Nyali landing station</text>
           </g>
         );
       })()}
@@ -291,7 +317,10 @@ function CountryMapInner({
               strokeWidth={1}
             />
             {isHub && (
-              <text x={x} y={y + 24} textAnchor="middle" fontSize={14} fontWeight={600} fill="oklch(0.93 0.01 260 / 0.65)">
+              /* the hub diamond sits under the Mombasa cluster circle, so the
+                 old y+24 label row printed onto the cluster's sub-label and
+                 Nyali's label; annotate top-right instead, hidden below sm */
+              <text x={x + 26} y={y - 22} textAnchor="start" fontSize={14} fontWeight={600} fill="oklch(0.93 0.01 260 / 0.65)" className="hidden sm:inline">
                 PIDA hub · $395m
               </text>
             )}
@@ -405,7 +434,20 @@ function CountryMapInner({
             ) : (
               <circle cx={x} cy={y} r={6.5} fill={color} stroke="oklch(0.1 0.02 250)" strokeWidth={1.4} />
             )}
-            <text x={x + 11} y={y + 4.5} fontSize={14.5} fontWeight={550} fill="oklch(0.93 0.01 260 / 0.78)" className="select-none">{f.shortName}</text>
+            {(() => {
+              const nudge = SATELLITE_LABEL_NUDGE[f.id];
+              return (
+                <text
+                  x={x + (nudge ? nudge.dx : 11)}
+                  y={y + 4.5 + (nudge?.dy ?? 0)}
+                  textAnchor={nudge?.end ? "end" : "start"}
+                  fontSize={14.5}
+                  fontWeight={550}
+                  fill="oklch(0.93 0.01 260 / 0.78)"
+                  className="hidden sm:inline select-none"
+                >{f.shortName}</text>
+              );
+            })()}
           </g>
         );
       })}

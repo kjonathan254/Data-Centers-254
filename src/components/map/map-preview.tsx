@@ -22,11 +22,12 @@ const LABEL_NUDGE: Record<string, { dy?: number; size?: number }> = {
 // Cable-label nudges for the preview crop: Daraja's last waypoint (its Salalah
 // end) sits end-anchored straight into Nairobi's "N data centres" sub-label at
 // the larger preview scale - drop the label below the cable run instead.
-// LION2's tip sits at the window's southern edge; at md widths the crop band
-// would sliver-cut its label, so it rides up along its own cable run.
+// LION2 at dy 0 put its label on Dar es Salaam's city-label row (both sit at
+// y ~1426-1430, x-overlap >100 units - double-print); dy -2 lifts it just
+// clear while keeping the baseline inside the 768px crop band (bottom ~1460).
 const CABLE_LABEL_NUDGE: Record<string, { dy?: number }> = {
   daraja: { dy: 34 },
-  lion2: { dy: -26 },
+  lion2: { dy: -2 },
 };
 
 /**
@@ -129,7 +130,11 @@ export default function MapPreview() {
         );
       })}
       <text x={proj(0.4, 37.5).x} y={proj(0.4, 37.5).y} textAnchor="middle" fontSize={44} fontWeight={700} letterSpacing={7} fill="oklch(0.93 0.03 200 / 0.55)" className="select-none">KENYA</text>
-      <text x={proj(-6.5, 41.8).x} y={proj(-6.5, 41.8).y} textAnchor="middle" fontSize={27} fontStyle="italic" letterSpacing={2} fill="oklch(0.78 0.06 230 / 0.45)" className="select-none">Indian Ocean</text>
+      {/* Open water east of LION2's end: the old mid-ocean spot (proj -6.5,
+          41.8) printed straight through 2Africa's "...Tbps system" tail at
+          every width. Hidden below sm - on phones the south band carries only
+          the story labels (Mombasa pair + the three live cable names). */}
+      <text x={proj(-7.45, 43.3).x} y={proj(-7.45, 43.3).y} textAnchor="middle" fontSize={27} fontStyle="italic" letterSpacing={2} fill="oklch(0.78 0.06 230 / 0.45)" className="hidden sm:inline select-none">Indian Ocean</text>
 
       {/* terrestrial fibre */}
       {FIBRE_ROUTES.map((r) => {
@@ -170,6 +175,7 @@ export default function MapPreview() {
             fontSize={26}
             fontWeight={500}
             fill={c.live ? "oklch(0.78 0.14 195 / 0.9)" : "oklch(0.85 0.12 85 / 0.9)"}
+            className={c.live ? undefined : "hidden sm:inline"}
             stroke="#04080e"
             strokeWidth={4}
             strokeLinejoin="round"
@@ -188,6 +194,7 @@ export default function MapPreview() {
             <path d={`M${ls.x},${ls.y - 7} L${ls.x + 7},${ls.y} L${ls.x},${ls.y + 7} L${ls.x - 7},${ls.y} Z`}
               fill={CYAN} fillOpacity={0.9} stroke="oklch(0.1 0.02 250)" strokeWidth={1.1} />
             <text x={ls.x - 14} y={ls.y + 56} textAnchor="end" fontSize={18} fill="oklch(0.93 0.01 260 / 0.65)"
+              className="hidden sm:inline"
               stroke="#04080e" strokeWidth={4} strokeLinejoin="round" paintOrder="stroke">Nyali landing station</text>
           </g>
         );
