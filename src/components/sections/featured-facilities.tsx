@@ -112,12 +112,12 @@ export default function FeaturedFacilities() {
               >
                 <article className="card-solid card-solid-hover h-full rounded-xl">
                   <div className="flex items-center justify-between gap-2">
-                    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-widest ${meta.cls}`}>
+                    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-2xs uppercase tracking-widest ${meta.cls}`}>
                       <StatusIcon className="size-3" />
                       {meta.label}
                     </span>
                     {f.aiReady && (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-cyan">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 font-mono text-2xs uppercase tracking-widest text-cyan">
                         <Cpu className="size-3" />
                         AI-ready
                       </span>
@@ -127,7 +127,7 @@ export default function FeaturedFacilities() {
                   <h3 className="mt-4 text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-cyan">
                     {f.name}
                   </h3>
-                  <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+                  <p className="mt-1 font-mono text-2xs uppercase tracking-wider text-muted-foreground">
                     {f.operator.name} · {f.city}
                   </p>
 
@@ -137,12 +137,12 @@ export default function FeaturedFacilities() {
                         {cap.value}{" "}
                         <span className="text-sm font-normal text-muted-foreground">MW</span>
                       </p>
-                      <p className="mt-0.5 text-[11px] text-muted-foreground">{cap.label}</p>
+                      <p className="mt-0.5 text-2xs text-muted-foreground">{cap.label}</p>
                     </div>
                     <ArrowRight className="mb-1 size-4 shrink-0 text-cyan transition-all group-hover:translate-x-1" />
                   </div>
 
-                  <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-cyan/70">
+                  <p className="mt-3 font-mono text-2xs uppercase tracking-widest text-cyan/70">
                     Verified {fmtVerified(f.lastVerified)}
                   </p>
                 </article>

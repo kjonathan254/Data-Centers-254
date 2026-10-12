@@ -92,7 +92,7 @@ export default function ComparePicker({
           <GitCompareArrows className="size-4 text-cyan" />
           Comparing {selected.length} of {MAX_COMPARE} facilities
         </p>
-        <p className="text-xs text-muted-foreground/70">
+        <p className="text-xs text-muted-foreground">
           Pick up to {MAX_COMPARE}, the table below updates and the link stays shareable.
         </p>
       </div>
@@ -138,7 +138,7 @@ export default function ComparePicker({
               setOpen(true);
             }}
             onFocus={() => setOpen(true)}
-            className="h-10 w-full rounded-lg border border-border/50 bg-background pl-10 pr-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:outline-none focus:ring-1 focus:ring-cyan/20 disabled:opacity-50"
+            className="h-10 w-full rounded-lg border border-border/50 bg-background pl-10 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-cyan/40 focus:outline-none focus:ring-1 focus:ring-cyan/20 disabled:opacity-50"
           />
         </div>
 
@@ -165,7 +165,7 @@ export default function ComparePicker({
                     </span>
                   </span>
                   <span className="shrink-0 text-right">
-                    <span className="block text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                    <span className="block text-2xs font-mono uppercase tracking-wider text-muted-foreground">
                       {STATUS_HINT[c.status] ?? c.status}
                     </span>
                     {c.mw != null && (

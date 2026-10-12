@@ -38,7 +38,7 @@ export default function CompareTray() {
           {slugs.map((slug) => (
             <li
               key={slug}
-              className="max-w-full truncate rounded-full border border-border/60 bg-accent/50 px-2.5 py-0.5 text-[11px] text-muted-foreground"
+              className="max-w-full truncate rounded-full border border-border/60 bg-accent/50 px-2.5 py-0.5 text-2xs text-muted-foreground"
             >
               {bySlug.get(slug)?.name ?? slug}
             </li>

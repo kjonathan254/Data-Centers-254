@@ -99,10 +99,10 @@ export default function SourceQuality({ data }: { data: OpsData }) {
       className="scroll-mt-28 rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]"
     >
       <div className="flex flex-wrap items-baseline justify-between gap-2 p-5 pb-0">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+        <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">
           Source quality &amp; provenance
         </h2>
-        <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+        <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
           {countLabel(sources.length, "registered source")} · {t1Share}% Tier-1 · {capturedShare}% captured
         </span>
       </div>
@@ -111,7 +111,7 @@ export default function SourceQuality({ data }: { data: OpsData }) {
         {/* ── Left: tier mix + capture health ─────────────────────────── */}
         <div className="min-w-0 space-y-5 lg:col-span-4">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Tier mix</p>
+            <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Tier mix</p>
             <div ref={wipeRef} className="mt-2" aria-hidden="true">
               <div className={`flex h-3 w-full gap-px overflow-hidden rounded-full bg-[#0B1627] ${wipeCls}`}>
                 {TIERS.map((t) =>
@@ -147,13 +147,13 @@ export default function SourceQuality({ data }: { data: OpsData }) {
                       <span className="flex items-center gap-2 text-xs font-medium">
                         <span className={`inline-block size-2 rounded-full ${t.seg}`} aria-hidden="true" />
                         {t.label}
-                        <span className="hidden font-mono text-[9px] uppercase tracking-wider text-slate-600 group-hover:inline">
+                        <span className="hidden font-mono text-2xs uppercase tracking-wider text-slate-400 group-hover:inline">
                           filter
                         </span>
                       </span>
                       <span className="font-mono text-xs font-bold">
                         {tierCounts[t.id] ?? 0}
-                        <span className="ml-1 font-normal text-slate-600">
+                        <span className="ml-1 font-normal text-slate-400">
                           {Math.round(((tierCounts[t.id] ?? 0) / Math.max(sources.length, 1)) * 100)}%
                         </span>
                       </span>
@@ -165,7 +165,7 @@ export default function SourceQuality({ data }: { data: OpsData }) {
           </div>
 
           <div className="border-t border-[rgba(135,180,220,0.10)] pt-4">
-            <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Capture health</p>
+            <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Capture health</p>
             <div className={`mt-2 flex h-3 w-full gap-px overflow-hidden rounded-full bg-[#0B1627]`} aria-hidden="true">
               {CAPTURE_STATES.map((c) =>
                 captureCounts[c.id] ? (
@@ -205,7 +205,7 @@ export default function SourceQuality({ data }: { data: OpsData }) {
                 );
               })}
             </ul>
-            <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+            <p className="mt-2 text-2xs leading-relaxed text-slate-400">
               Captured sources are stored verbatim in{" "}
               <span className="font-mono text-slate-400">research/captures/</span> and watched for content drift.
             </p>
@@ -217,10 +217,10 @@ export default function SourceQuality({ data }: { data: OpsData }) {
           <div className="flex h-full min-w-0 flex-col rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#0B1627]/60">
             <div className="flex flex-wrap items-center gap-2 border-b border-[rgba(135,180,220,0.10)] px-3 py-2.5">
               <Database className="size-3.5 shrink-0 text-cyan-400" aria-hidden="true" />
-              <p className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Source explorer</p>
-              <span className="ml-auto font-mono text-[10px] uppercase tracking-wider text-slate-500">
+              <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Source explorer</p>
+              <span className="ml-auto font-mono text-2xs uppercase tracking-wider text-slate-400">
                 {countLabel(filtered.length, "match", "matches")}
-                {filtered.length !== sources.length && <span className="text-slate-600"> / {sources.length}</span>}
+                {filtered.length !== sources.length && <span className="text-slate-400"> / {sources.length}</span>}
               </span>
             </div>
 
@@ -229,7 +229,7 @@ export default function SourceQuality({ data }: { data: OpsData }) {
                 <SourceRow key={s.id} source={s} />
               ))}
               {filtered.length === 0 && (
-                <li className="px-3 py-6 text-center text-xs text-slate-500">
+                <li className="px-3 py-6 text-center text-xs text-slate-400">
                   No sources match this filter combination.
                 </li>
               )}
@@ -239,7 +239,7 @@ export default function SourceQuality({ data }: { data: OpsData }) {
               <button
                 type="button"
                 onClick={() => setShowAll(!showAll)}
-                className="border-t border-[rgba(135,180,220,0.10)] w-full py-2 text-center font-mono text-[10px] uppercase tracking-widest text-slate-400 transition-colors hover:bg-[#13253A]/60 hover:text-cyan-300"
+                className="border-t border-[rgba(135,180,220,0.10)] w-full py-2 text-center font-mono text-2xs uppercase tracking-widest text-slate-400 transition-colors hover:bg-[#13253A]/60 hover:text-cyan-300"
               >
                 {showAll ? "Show fewer" : `Show all ${filtered.length} sources`}
               </button>
@@ -264,7 +264,7 @@ function SourceRow({ source: s }: { source: OpsSource }) {
         className="group flex items-start gap-3 px-3 py-2.5 transition-colors hover:bg-[#13253A]/60"
       >
         <span
-          className={`mt-0.5 inline-flex shrink-0 items-center rounded border px-1.5 py-px font-mono text-[9px] font-bold uppercase tracking-wider ${
+          className={`mt-0.5 inline-flex shrink-0 items-center rounded border px-1.5 py-px font-mono text-2xs font-bold uppercase tracking-wider ${
             tierMeta?.chip ?? "border-slate-700 text-slate-400"
           }`}
         >
@@ -273,14 +273,14 @@ function SourceRow({ source: s }: { source: OpsSource }) {
         <span className="min-w-0 flex-1">
           <span className="block truncate text-sm leading-snug text-slate-200 group-hover:text-cyan-200">
             {s.publisher}
-            <span className="text-slate-500"> — {s.label}</span>
+            <span className="text-slate-400"> — {s.label}</span>
           </span>
-          <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+          <span className="mt-0.5 block font-mono text-2xs uppercase tracking-wider text-slate-400">
             {s.sourceType} · {capMeta?.label ?? s.captureStatus} · {s.id}
           </span>
         </span>
         <ArrowUpRight
-          className="mt-1 size-3.5 shrink-0 text-slate-600 transition-colors group-hover:text-cyan-300"
+          className="mt-1 size-3.5 shrink-0 text-slate-400 transition-colors group-hover:text-cyan-300"
           aria-hidden="true"
         />
       </a>

@@ -17,7 +17,7 @@ export default function Error({
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="max-w-lg text-center">
-        <p className="text-[11px] font-mono uppercase tracking-widest text-cyan/70 mb-6">
+        <p className="text-2xs font-mono uppercase tracking-widest text-cyan/70 mb-6">
           Something went wrong
         </p>
         <h1 className="text-2xl font-bold text-foreground mb-3">
@@ -26,7 +26,7 @@ export default function Error({
         {/* Error details stay server-side; only the digest is surfaced so
             support can correlate with logs without leaking internals. */}
         {error.digest && (
-          <p className="text-xs font-mono text-muted-foreground/70 mb-6">
+          <p className="text-xs font-mono text-muted-foreground mb-6">
             [digest: {error.digest}]
           </p>
         )}

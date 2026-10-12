@@ -87,7 +87,7 @@ export default function ChatPage() {
                   >
                     <c.icon className="size-4 text-cyan" />
                     <p className="mt-2 text-sm font-medium text-foreground">{c.label}</p>
-                    <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
+                    <p className="mt-0.5 line-clamp-2 text-2xs leading-snug text-muted-foreground">
                       Try: &ldquo;{c.q}&rdquo;
                     </p>
                   </div>
@@ -107,7 +107,7 @@ export default function ChatPage() {
               <div className="card-solid h-[72dvh] min-h-[480px] overflow-hidden rounded-2xl border-border/60">
                 <JibuChat variant="page" />
               </div>
-              <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground/60">
+              <p className="mt-3 text-2xs leading-relaxed text-muted-foreground">
                 {BOT_IDENTITY.name} is grounded in DC254&apos;s published corpus:
                 articles, directory and glossary, and links its sources on every
                 answer. Voice playback uses your device&apos;s built-in speech engine;

@@ -103,11 +103,11 @@ export default function InfrastructureMapPage() {
               <table className="w-full text-sm min-w-[680px]">
                 <thead>
                   <tr className="border-b border-border/50 text-left">
-                    <th className="px-2 py-2.5 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">Project</th>
-                    <th className="px-2 py-2.5 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">Sector</th>
-                    <th className="px-2 py-2.5 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">Status</th>
-                    <th className="px-2 py-2.5 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">Capex</th>
-                    <th className="px-2 py-2.5 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">PIDA code</th>
+                    <th className="px-2 py-2.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">Project</th>
+                    <th className="px-2 py-2.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">Sector</th>
+                    <th className="px-2 py-2.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">Status</th>
+                    <th className="px-2 py-2.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">Capex</th>
+                    <th className="px-2 py-2.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">PIDA code</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -118,7 +118,7 @@ export default function InfrastructureMapPage() {
                         <p className="text-xs text-muted-foreground mt-1">{p.countries.join(" · ")}</p>
                       </td>
                       <td className="px-2 py-3">
-                        <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-medium border ${sectorBadge[p.sector] ?? "border-border text-muted-foreground"}`}>
+                        <span className={`inline-block px-2 py-0.5 rounded-full text-2xs font-medium border ${sectorBadge[p.sector] ?? "border-border text-muted-foreground"}`}>
                           {p.sector}{p.subsector ? ` · ${p.subsector}` : ""}
                         </span>
                       </td>
@@ -132,7 +132,7 @@ export default function InfrastructureMapPage() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-              <p className="text-xs text-muted-foreground/70 max-w-md">
+              <p className="text-xs text-muted-foreground max-w-md">
                 Source: {PIDA_SOURCE.label}, fetched {PIDA_SOURCE.fetched}. Registry records
                 carry the registrant&apos;s own figures, we republish them dated, not verified.
               </p>

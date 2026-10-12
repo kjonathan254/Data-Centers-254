@@ -114,13 +114,13 @@ function StatusBar({ live, pending, pipeline }: { live: number; pending: number;
             className={`relative flex min-w-0 items-center justify-center overflow-hidden rounded-md border ${s.cls}`}
           >
             {s.pattern && <span aria-hidden="true" className="absolute inset-0" style={{ backgroundImage: s.pattern }} />}
-            <span className="relative z-10 whitespace-nowrap px-2 text-[11px] font-mono font-bold tracking-widest text-foreground">
+            <span className="relative z-10 whitespace-nowrap px-2 text-2xs font-mono font-bold tracking-widest text-foreground">
               {s.n} {s.label}
             </span>
           </div>
         ))}
       </div>
-      <ul className="mt-3 grid gap-1.5 text-[11px] leading-snug text-muted-foreground sm:grid-cols-3 sm:gap-3">
+      <ul className="mt-3 grid gap-1.5 text-2xs leading-snug text-muted-foreground sm:grid-cols-3 sm:gap-3">
         <li className="flex items-start gap-1.5">
           <span aria-hidden="true" className="mt-0.5 inline-block size-2 shrink-0 rounded-full bg-neon" />
           <span><strong className="font-semibold text-foreground">{live} live</strong> — carrying traffic on the Kenya segment.</span>
@@ -134,7 +134,7 @@ function StatusBar({ live, pending, pipeline }: { live: number; pending: number;
           <span><strong className="font-semibold text-foreground">{pipeline} planned</strong> — announced build or route, not counted as live.</span>
         </li>
       </ul>
-      <p className="mt-3 flex items-center gap-1.5 text-[11px] text-muted-foreground/80">
+      <p className="mt-3 flex items-center gap-1.5 text-2xs text-muted-foreground">
         <CalendarClock aria-hidden="true" className="size-3.5 text-cyan" />
         Verified {VERIFIED_LABEL} · monthly sweep
       </p>
@@ -167,16 +167,16 @@ function CableRow({ c, isOpen, onToggle, inCompare, compareFull, onToggleCompare
           {c.name}
           {c.longName && <span className="ml-2 hidden text-xs font-normal text-muted-foreground md:inline">{c.longName}</span>}
         </span>
-        <span className="rounded-full border border-border/60 bg-accent/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground tabular-nums">
+        <span className="rounded-full border border-border/60 bg-accent/40 px-2 py-0.5 text-2xs font-bold uppercase tracking-wider text-muted-foreground tabular-nums">
           {c.rfsDate ?? "no RFS date"}
         </span>
         <span className="truncate text-xs text-muted-foreground">{c.kenyanLandings[0]}</span>
         <span className="ml-auto flex items-center gap-2 sm:gap-3">
           {cap && <span className="whitespace-nowrap text-xs font-medium tabular-nums text-foreground">{cap}</span>}
-          <span className={`hidden rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider sm:inline-flex ${meta.badge}`}>
+          <span className={`hidden rounded-full border px-2 py-0.5 text-2xs font-bold uppercase tracking-wider sm:inline-flex ${meta.badge}`}>
             {meta.short}
           </span>
-          <span className="inline-flex items-center gap-1 text-[11px] font-medium text-cyan">
+          <span className="inline-flex items-center gap-1 text-2xs font-medium text-cyan">
             Details <ChevronDown aria-hidden="true" className={`size-3.5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
           </span>
         </span>
@@ -187,26 +187,26 @@ function CableRow({ c, isOpen, onToggle, inCompare, compareFull, onToggleCompare
           <p className="text-xs text-muted-foreground">{meta.blurb}</p>
           <dl className="grid gap-x-6 gap-y-2 text-xs sm:grid-cols-2">
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Owner / consortium</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Owner / consortium</dt>
               <dd className="mt-0.5 text-foreground">{c.owners}</dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Kenyan landing</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Kenyan landing</dt>
               <dd className="mt-0.5 text-foreground">{c.kenyanLandings.join(" · ")}</dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Design capacity</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Design capacity</dt>
               <dd className="mt-0.5 text-foreground">
                 {c.designCapacity ?? "Not published"}
                 {c.designCapacity && (
-                  <span className="mt-1 block text-[11px] leading-snug text-muted-foreground/80">
+                  <span className="mt-1 block text-2xs leading-snug text-muted-foreground">
                     Design capacity is operator-reported. Lit capacity is not published and is deliberately not estimated here.
                   </span>
                 )}
               </dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Evidence</dt>
               <dd className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-foreground">
                 <span aria-hidden="true" className={`inline-block size-1.5 rounded-full ${c.dataConfidence === "High" ? "bg-neon" : c.dataConfidence === "Medium" ? "bg-amber-500" : "bg-red-400"}`} />
                 {c.dataConfidence} confidence · verified {fmtVerified(c.lastVerified)}
@@ -568,7 +568,7 @@ export default function CableExplorer() {
                   <thead>
                     <tr className="border-b border-border/40 text-left">
                       {(["Cable", "Status", "RFS year", "Kenyan landing", "Design capacity", "Confidence", ""] as const).map((h) => (
-                        <th key={h} scope="col" className="py-2 pr-3 text-[10px] font-mono font-medium uppercase tracking-widest text-muted-foreground/80">{h}</th>
+                        <th key={h} scope="col" className="py-2 pr-3 text-2xs font-mono font-medium uppercase tracking-widest text-muted-foreground">{h}</th>
                       ))}
                     </tr>
                   </thead>
@@ -579,9 +579,9 @@ export default function CableExplorer() {
                         <tr key={c.name} className="border-b border-border/20 align-top last:border-0">
                           <td className="py-2.5 pr-3">
                             <span className="font-semibold text-foreground">{c.name}</span>
-                            <span className="block text-[10px] leading-snug text-muted-foreground">{c.owners}</span>
+                            <span className="block text-2xs leading-snug text-muted-foreground">{c.owners}</span>
                           </td>
-                          <td className="py-2.5 pr-3"><span className={`inline-block rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${meta.badge}`}>{meta.short}</span></td>
+                          <td className="py-2.5 pr-3"><span className={`inline-block rounded-full border px-2 py-0.5 text-2xs font-bold uppercase tracking-wider ${meta.badge}`}>{meta.short}</span></td>
                           <td className="py-2.5 pr-3 tabular-nums text-foreground">{c.rfsDate ?? "—"}</td>
                           <td className="py-2.5 pr-3 text-muted-foreground">{c.kenyanLandings.join(" · ")}</td>
                           <td className="py-2.5 pr-3 text-foreground">{c.designCapacity ?? "Not published"}</td>
@@ -597,7 +597,7 @@ export default function CableExplorer() {
                   </tbody>
                 </table>
               </div>
-              <p className="mt-2.5 text-[11px] leading-snug text-muted-foreground/80">
+              <p className="mt-2.5 text-2xs leading-snug text-muted-foreground">
                 Design capacity is operator-reported and usually far above lit capacity, which is not published and is deliberately not estimated here.
               </p>
             </div>
@@ -619,16 +619,16 @@ export default function CableExplorer() {
                     aria-label={`${t.name}, ${isLive ? "ready for service" : "announced"} ${t.year}. Show cable details.`}
                     className="group flex w-16 shrink-0 flex-col items-center gap-1.5 rounded-md py-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60"
                   >
-                    <span className={`text-[10px] font-mono tabular-nums ${isLive ? "text-foreground" : "text-muted-foreground"}`}>{t.year}</span>
+                    <span className={`text-2xs font-mono tabular-nums ${isLive ? "text-foreground" : "text-muted-foreground"}`}>{t.year}</span>
                     <span aria-hidden="true" className={`size-2.5 rounded-full border-2 transition-transform group-hover:scale-125 ${isLive ? "border-neon bg-neon/40" : "border-dashed border-cyan/70 bg-transparent"}`} />
-                    <span className={`text-center text-[10px] font-medium leading-tight ${isLive ? "text-foreground" : "text-muted-foreground"}`}>{t.name}</span>
+                    <span className={`text-center text-2xs font-medium leading-tight ${isLive ? "text-foreground" : "text-muted-foreground"}`}>{t.name}</span>
                   </button>
                   {!last && <span aria-hidden="true" className="mt-[26px] h-px flex-1 bg-border/40" style={{ minWidth: 16 }} />}
                 </li>
               );
             })}
           </ol>
-          <p className="mt-1 text-[10px] text-muted-foreground/70">
+          <p className="mt-1 text-2xs text-muted-foreground">
             Dotted markers are announced or planned systems (shown at announcement year, not RFS). Tap any entry to open its record.
           </p>
         </div>
@@ -647,8 +647,8 @@ export default function CableExplorer() {
                 const meta = STATUS_META[status];
                 return (
                   <div key={status}>
-                    <p className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">
-                      <span className={`inline-block rounded-full border px-2 py-0.5 text-[9px] font-bold ${meta.badge}`}>{status}</span>
+                    <p className="flex items-center gap-2 text-2xs font-mono uppercase tracking-widest text-muted-foreground">
+                      <span className={`inline-block rounded-full border px-2 py-0.5 text-2xs font-bold ${meta.badge}`}>{status}</span>
                       {meta.blurb}
                     </p>
                     <ul className="mt-3 space-y-2">

@@ -86,7 +86,7 @@ export default function NewReportBanner() {
             <dl className="mt-5 space-y-2.5 max-w-2xl">
               {takeaways.map((t) => (
                 <div key={t.t} className="flex gap-3">
-                  <dt className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-cyan/80 pt-0.5">
+                  <dt className="shrink-0 font-mono text-2xs uppercase tracking-widest text-cyan/80 pt-0.5">
                     {t.t}
                   </dt>
                   <dd className="text-xs leading-relaxed text-muted-foreground sm:text-sm">

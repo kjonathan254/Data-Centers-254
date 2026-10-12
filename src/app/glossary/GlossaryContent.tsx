@@ -164,7 +164,7 @@ export default function GlossaryContent({
                           {t.term}
                         </h2>
                         <span
-                          className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-mono font-medium border ${
+                          className={`inline-block px-2 py-0.5 rounded-full text-2xs font-mono font-medium border ${
                             categoryColors[t.category] ||
                             "text-muted-foreground bg-muted border-border"
                           }`}
@@ -193,7 +193,7 @@ export default function GlossaryContent({
                       {/* Related terms */}
                       {t.relatedTerms && t.relatedTerms.length > 0 && (
                         <div className="mt-4">
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                          <span className="text-2xs font-mono uppercase tracking-wider text-muted-foreground">
                             Related terms
                           </span>
                           <div className="flex flex-wrap gap-1.5 mt-1.5">
@@ -225,7 +225,7 @@ export default function GlossaryContent({
                       {/* Related articles */}
                       {t.relatedArticles && t.relatedArticles.length > 0 && (
                         <div className="mt-4">
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                          <span className="text-2xs font-mono uppercase tracking-wider text-muted-foreground">
                             Deep dives
                           </span>
                           <div className="mt-1.5 space-y-1">

@@ -71,7 +71,7 @@ export default function TheScale() {
                 </span>
               </li>
             </ul>
-            <p className="mt-6 max-w-lg text-xs leading-relaxed text-muted-foreground/80">
+            <p className="mt-6 max-w-lg text-xs leading-relaxed text-muted-foreground">
               This preview is drawn from the same verified dataset as the
               directory — the counts, routes and landing points are the real
               records, not an illustration. The full map adds Nairobi and

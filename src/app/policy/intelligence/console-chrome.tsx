@@ -83,7 +83,7 @@ export function ConsoleRail() {
         aria-current={isActive ? "true" : undefined}
         title={s.label}
         className={`group relative flex flex-col items-center gap-1 rounded-lg py-2.5 transition-colors ${
-          isActive ? "text-cyan-300" : "text-slate-500 hover:text-slate-200"
+          isActive ? "text-cyan-300" : "text-slate-400 hover:text-slate-200"
         }`}
       >
         <span
@@ -102,7 +102,7 @@ export function ConsoleRail() {
         >
           <Icon className="size-[18px]" aria-hidden="true" />
         </span>
-        <span className="text-[9px] font-medium leading-none tracking-wide">{s.label}</span>
+        <span className="text-2xs font-medium leading-none tracking-wide">{s.label}</span>
       </a>
     );
   };
@@ -147,7 +147,7 @@ export function ConsoleHeader({
         {/* Title block */}
         <div className="min-w-0 shrink-0">
           <p className="truncate text-sm font-bold tracking-[0.16em] text-white">POLICY INTELLIGENCE</p>
-          <p className="truncate text-[10px] leading-tight text-slate-500">East Africa regulatory evidence engine</p>
+          <p className="truncate text-2xs leading-tight text-slate-400">East Africa regulatory evidence engine</p>
         </div>
 
         {/* Centre pill nav (lg+) */}
@@ -186,24 +186,24 @@ export function ConsoleHeader({
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
             </span>
-            <span className="text-[11px] font-medium text-slate-300">Dataset refreshed</span>
-            <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{rTag}</span>
+            <span className="text-2xs font-medium text-slate-300">Dataset refreshed</span>
+            <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">{rTag}</span>
           </span>
           <span
             title={`Editorial review date: ${reviewedLong}`}
-            className="hidden items-center gap-1.5 rounded-lg border border-[rgba(135,180,220,0.12)] bg-[#0B1627] px-2.5 py-1.5 text-[11px] text-slate-300 sm:flex"
+            className="hidden items-center gap-1.5 rounded-lg border border-[rgba(135,180,220,0.12)] bg-[#0B1627] px-2.5 py-1.5 text-2xs text-slate-300 sm:flex"
           >
-            <CalendarDays className="size-3.5 text-slate-500" aria-hidden="true" />
+            <CalendarDays className="size-3.5 text-slate-400" aria-hidden="true" />
             {reviewedLong}
           </span>
           <span
             title="AI proposes, the editor disposes — every claim passes the human gate before publication"
             className="flex cursor-help items-center gap-1 rounded-full border border-[rgba(135,180,220,0.16)] bg-[#101D30] py-1 pl-1 pr-1.5"
           >
-            <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/40 to-violet-500/30 font-mono text-[9px] font-bold text-white">
+            <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/40 to-violet-500/30 font-mono text-2xs font-bold text-white">
               ED
             </span>
-            <ChevronDown className="size-3 text-slate-500" aria-hidden="true" />
+            <ChevronDown className="size-3 text-slate-400" aria-hidden="true" />
           </span>
         </div>
       </div>

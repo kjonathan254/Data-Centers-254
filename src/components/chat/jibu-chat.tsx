@@ -195,7 +195,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
           <p className="text-sm font-semibold text-foreground">
             {BOT_IDENTITY.name} <span className="font-normal text-muted-foreground">· {BOT_IDENTITY.role}</span>
           </p>
-          <p className="text-[11px] text-muted-foreground">
+          <p className="text-2xs text-muted-foreground">
             {busy ? "Scanning the verified dataset…" : offline ? "Offline, reconnect to chat" : `Answers grounded in ${new Date().toLocaleDateString("en-KE", { month: "long", year: "numeric" })} verified data`}
           </p>
         </div>
@@ -254,7 +254,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
                   )}
                 </p>
                 {m.shown?.length === m.text.length && m.fallback && m.fallback !== "error" && (
-                  <p className="mt-1.5 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-amber-500/90">
+                  <p className="mt-1.5 flex items-center gap-1 text-2xs font-medium uppercase tracking-wider text-amber-500/90">
                     <AlertTriangle className="size-3" />
                     Outside the verified dataset, double-check before citing
                   </p>
@@ -266,7 +266,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
                         key={c.href + c.label}
                         href={c.href}
                         target={c.href.startsWith("/api") ? undefined : undefined}
-                        className="inline-flex max-w-full items-center gap-1 rounded-full border border-cyan/25 bg-cyan/5 px-2.5 py-1 text-[11px] text-cyan transition-colors hover:bg-cyan/10"
+                        className="inline-flex max-w-full items-center gap-1 rounded-full border border-cyan/25 bg-cyan/5 px-2.5 py-1 text-2xs text-cyan transition-colors hover:bg-cyan/10"
                       >
                         <span className="truncate">{c.label}</span>
                         <ExternalLink className="size-3 shrink-0" />
@@ -281,7 +281,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
                         key={s}
                         type="button"
                         onClick={() => void send(s)}
-                        className="rounded-full border border-border/60 px-2.5 py-1 text-[11px] text-muted-foreground transition-colors hover:border-cyan/40 hover:text-cyan"
+                        className="rounded-full border border-border/60 px-2.5 py-1 text-2xs text-muted-foreground transition-colors hover:border-cyan/40 hover:text-cyan"
                       >
                         {s}
                       </button>
@@ -321,7 +321,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
             disabled={busy || offline}
             maxLength={500}
             aria-label="Your question"
-            className="h-10 min-w-0 flex-1 rounded-xl border border-border/50 bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:outline-none focus:ring-1 focus:ring-cyan/20 disabled:opacity-50"
+            className="h-10 min-w-0 flex-1 rounded-xl border border-border/50 bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-cyan/40 focus:outline-none focus:ring-1 focus:ring-cyan/20 disabled:opacity-50"
           />
           <button
             type="submit"
@@ -332,7 +332,7 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
             <Send className="size-4" />
           </button>
         </div>
-        <p className="mt-2 text-[10px] leading-relaxed text-muted-foreground/60">
+        <p className="mt-2 text-2xs leading-relaxed text-muted-foreground">
           {BOT_IDENTITY.name} answers only from DC254&apos;s verified dataset and articles, every figure carries its source. No signup, no tracking of your messages.
         </p>
       </form>

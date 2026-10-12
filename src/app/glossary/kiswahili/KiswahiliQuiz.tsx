@@ -95,7 +95,7 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
             <div className="h-full bg-cyan rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
           </div>
 
-          <p className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground mb-2">
+          <p className="text-2xs font-mono uppercase tracking-widest text-muted-foreground mb-2">
             Swali {index + 1} / {questions.length}
           </p>
           <p className="text-2xl sm:text-3xl font-bold text-foreground mb-1">{q.sw}</p>
@@ -109,7 +109,7 @@ export default function KiswahiliQuiz({ terms }: { terms: KiswahiliTerm[] }) {
               if (selected) {
                 if (isCorrect) cls = "border-neon/50 bg-neon/10 text-neon";
                 else if (isPicked) cls = "border-red-400/50 bg-red-400/10 text-red-400";
-                else cls = "border-border/50 text-muted-foreground/60";
+                else cls = "border-border/50 text-muted-foreground";
               }
               return (
                 <button

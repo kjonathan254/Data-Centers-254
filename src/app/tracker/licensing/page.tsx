@@ -84,7 +84,7 @@ export default function LicensingTrackerPage() {
                 <div key={s.label} className="card-solid rounded-xl p-4 sm:p-5">
                   <Icon className="size-4 text-cyan" />
                   <p className="mt-2 text-xl font-semibold tabular-nums text-foreground">{s.value}</p>
-                  <p className="text-[11px] leading-snug text-muted-foreground">{s.label} · {s.hint}</p>
+                  <p className="text-2xs leading-snug text-muted-foreground">{s.label} · {s.hint}</p>
                 </div>
               );
             })}
@@ -106,7 +106,7 @@ export default function LicensingTrackerPage() {
                 <div key={r.regime} className="card-solid rounded-xl p-4 sm:p-6">
                   <p className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-sm font-semibold text-foreground">{r.regime}</span>
-                    <span className={`rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${STATUS_BADGE[r.status] ?? STATUS_BADGE.Proposed}`}>
+                    <span className={`rounded-full border px-2 py-0.5 text-2xs font-bold uppercase tracking-wider ${STATUS_BADGE[r.status] ?? STATUS_BADGE.Proposed}`}>
                       {r.status}
                     </span>
                   </p>

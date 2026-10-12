@@ -165,7 +165,7 @@ export default function MethodologyPage() {
           <div className="space-y-3 mb-14">
             {confidence.map((c) => (
               <div key={c.level} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 rounded-lg border border-border/50 p-4">
-                <span className={`flex-shrink-0 inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-mono font-semibold tracking-wider w-fit ${c.className}`}>
+                <span className={`flex-shrink-0 inline-flex items-center rounded-md border px-2.5 py-1 text-2xs font-mono font-semibold tracking-wider w-fit ${c.className}`}>
                   {c.level}
                 </span>
                 <p className="text-sm leading-relaxed text-muted-foreground">{c.description}</p>

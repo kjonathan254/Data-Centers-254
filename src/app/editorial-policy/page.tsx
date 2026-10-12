@@ -86,7 +86,7 @@ export default function EditorialPolicyPage() {
           <div className="space-y-3 mb-14">
             {labels.map((l) => (
               <div key={l.label} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 rounded-lg border border-border/50 p-4">
-                <span className="flex-shrink-0 inline-flex items-center rounded-md bg-cyan/10 border border-cyan/25 px-2.5 py-1 text-[11px] font-mono font-semibold tracking-wider text-cyan w-fit">
+                <span className="flex-shrink-0 inline-flex items-center rounded-md bg-cyan/10 border border-cyan/25 px-2.5 py-1 text-2xs font-mono font-semibold tracking-wider text-cyan w-fit">
                   {l.label}
                 </span>
                 <p className="text-sm leading-relaxed text-muted-foreground">{l.description}</p>

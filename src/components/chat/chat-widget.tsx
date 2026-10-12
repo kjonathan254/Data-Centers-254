@@ -114,7 +114,7 @@ export default function ChatWidget() {
           className="card-solid mb-3 flex h-[min(620px,72dvh)] w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border/70 shadow-2xl shadow-black/40 outline-none"
         >
           <div className="flex items-center justify-between border-b border-border/50 bg-accent/30 pr-2">
-            <p className="px-4 pt-2 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
+            <p className="px-4 pt-2 text-2xs font-mono uppercase tracking-widest text-muted-foreground">
               DC254 · {BOT_IDENTITY.name}
             </p>
             <button

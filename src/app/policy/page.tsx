@@ -57,14 +57,14 @@ export default function PolicyPage() {
             href="/policy/intelligence"
             className="block rounded-lg border border-slate-800 bg-slate-900/40 p-4 transition-colors hover:border-slate-600"
           >
-            <p className="font-mono text-[11px] uppercase tracking-widest text-slate-500">
+            <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">
               New · Policy Intelligence
             </p>
             <p className="mt-1 text-sm font-medium text-slate-200">
               {stats.claims} audited regulatory claims across Uganda, Rwanda, Tanzania and Kenya ({verified} verified) —
               every claim with its sources, tiers and a five-state verification vocabulary.
             </p>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-slate-400">
               Open the evidence layer →
             </p>
           </Link>

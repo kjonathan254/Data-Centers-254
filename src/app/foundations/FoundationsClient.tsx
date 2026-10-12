@@ -62,7 +62,7 @@ export default function FoundationsClient({
 
         {/* Header */}
         <motion.div {...fadeUp} className="mt-10">
-          <p className="text-[11px] font-mono uppercase tracking-widest text-cyan/70">
+          <p className="text-2xs font-mono uppercase tracking-widest text-cyan/70">
             Editorial Pipeline
           </p>
           <h1 className="mt-4 text-display-sm text-foreground">
@@ -114,7 +114,7 @@ export default function FoundationsClient({
               <motion.div key={phase.name} {...fadeUp}>
                 {/* Phase header */}
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-cyan/70">
+                  <span className="text-2xs font-mono uppercase tracking-widest text-cyan/70">
                     Phase {phase.range[0]}–{phase.range[1]}
                   </span>
                   <span className="text-xs text-muted-foreground">
@@ -150,7 +150,7 @@ export default function FoundationsClient({
                               {isPublished ? (
                                 <CheckCircle2 className="size-4 text-emerald-400/60" />
                               ) : (
-                                <Circle className="size-4 text-muted-foreground/30" />
+                                <Circle className="size-4 text-muted-foreground" />
                               )}
                             </div>
 
@@ -165,18 +165,18 @@ export default function FoundationsClient({
                                     {article.title}
                                   </Link>
                                 ) : (
-                                  <span className="text-sm font-medium text-foreground/50">
+                                  <span className="text-sm font-medium text-foreground/60">
                                     {article.title}
                                   </span>
                                 )}
                                 <span
-                                  className={`text-[10px] font-mono uppercase tracking-wider ${sc.color}`}
+                                  className={`text-2xs font-mono uppercase tracking-wider ${sc.color}`}
                                 >
                                   {sc.label}
                                 </span>
                               </div>
 
-                              <div className="flex items-center gap-4 mt-1.5 text-[11px] text-muted-foreground font-mono">
+                              <div className="flex items-center gap-4 mt-1.5 text-2xs text-muted-foreground font-mono">
                                 <span className="flex items-center gap-1">
                                   <FileText className="size-3" />
                                   {article.cluster}
@@ -217,7 +217,7 @@ export default function FoundationsClient({
         {/* Bottom note */}
         <motion.p
           {...fadeUp}
-          className="mt-16 text-xs text-muted-foreground/50 text-center"
+          className="mt-16 text-xs text-muted-foreground text-center"
         >
           Each article requires: research, sourcing, fact verification, Kenyan
           context, original analysis, and editing before publication.

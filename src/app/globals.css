@@ -4,6 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Micro type tier — Task 129 text-scale pass. Single 11px floor replaces all
+     arbitrary text-[9px]/[10px]/[11px] runs (readability floor; hierarchy in
+     micro type is carried by weight/tracking/case, not px deltas). No paired
+     line-height on purpose: inherits parent leading exactly like the old
+     arbitrary runs did, so only intended size changes shift layout. */
+  --text-2xs: 0.6875rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

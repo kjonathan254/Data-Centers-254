@@ -190,12 +190,12 @@ export default function MatrixConsole({
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-t-xl border-b border-[rgba(135,180,220,0.12)] px-4 py-3.5 sm:px-5">
         <div>
           <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-slate-100">Policy coverage matrix</h3>
-          <p className="mt-0.5 text-xs text-slate-500">
+          <p className="mt-0.5 text-xs text-slate-400">
             {data.pillars.length} pillars × {data.countries.length} countries ·{" "}
             {countLabel(data.meta.claims, "claim")} · every tile opens its evidence
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-slate-400">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-2xs text-slate-400">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="size-3.5 text-emerald-400" aria-hidden="true" /> Verified
           </span>
@@ -205,12 +205,12 @@ export default function MatrixConsole({
           <span className={`flex items-center gap-1.5 ${POLICY_GAP_STYLE.text}`}>
             <span className="inline-block size-3 rounded-full border border-dashed border-violet-400" aria-hidden="true" /> Gap
           </span>
-          <span className="flex items-center gap-1.5 text-slate-500">
+          <span className="flex items-center gap-1.5 text-slate-400">
             <span className="inline-block h-px w-3.5 bg-slate-600" aria-hidden="true" /> No data
           </span>
           <span
             title="A tile counts claims by verification state; a dashed violet tile marks a structured gap — an unresearched pillar, never a finding. Click any tile for the claims, sources and upgrade path behind it."
-            className="cursor-help text-slate-500 transition-colors hover:text-slate-300"
+            className="cursor-help text-slate-400 transition-colors hover:text-slate-300"
           >
             <Info className="size-4" aria-hidden="true" />
           </span>
@@ -221,7 +221,7 @@ export default function MatrixConsole({
       <div className="sticky top-[118px] z-30 -mt-px rounded-t-lg border-b border-[rgba(135,180,220,0.10)] bg-[#0E1D31]/95 px-3 py-2 backdrop-blur sm:px-4">
         <div className="flex flex-wrap items-center gap-2">
           <div className="relative min-w-[200px] flex-1">
-            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-400" aria-hidden="true" />
             <input
               ref={searchRef}
               id="policy-claim-search"
@@ -230,10 +230,10 @@ export default function MatrixConsole({
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search claims, sources, regulators…"
               aria-label="Search claims, sources and regulators"
-              className="h-9 w-full rounded-lg border border-slate-700/70 bg-[#101D30] pl-9 pr-10 text-sm text-slate-200 placeholder:text-slate-500 focus:border-cyan-500/60 focus:outline-none"
+              className="h-9 w-full rounded-lg border border-slate-700/70 bg-[#101D30] pl-9 pr-10 text-sm text-slate-200 placeholder:text-slate-400 focus:border-cyan-500/60 focus:outline-none"
             />
             {query === "" && (
-              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-slate-700 bg-[#0B1627] px-1.5 py-0.5 font-mono text-[10px] leading-none text-slate-500 sm:block" aria-hidden="true">
+              <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-slate-700 bg-[#0B1627] px-1.5 py-0.5 font-mono text-2xs leading-none text-slate-400 sm:block" aria-hidden="true">
                 /
               </kbd>
             )}
@@ -286,7 +286,7 @@ export default function MatrixConsole({
       {/* ── Search results ──────────────────────────────────────────── */}
       {results ? (
         <div>
-          <p className="border-b border-[rgba(135,180,220,0.10)] px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-slate-500">
+          <p className="border-b border-[rgba(135,180,220,0.10)] px-4 py-2.5 font-mono text-2xs uppercase tracking-widest text-slate-400">
             {countLabel(results.length, "claim")} match &ldquo;{query.trim()}&rdquo;
           </p>
           <ul className="divide-y divide-[rgba(135,180,220,0.10)]">
@@ -300,19 +300,19 @@ export default function MatrixConsole({
                   <span className={`mt-1.5 size-2 shrink-0 rounded-full ${STATE_META[cl.state]?.dot ?? "bg-slate-500"}`} aria-hidden="true" />
                   <span className="min-w-0">
                     <span className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{cl.id}</span>
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">
+                      <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">{cl.id}</span>
+                      <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                         {cl.countryName} · {data.pillars.find((p) => p.id === cl.pillar)?.label ?? cl.pillar}
                       </span>
                     </span>
                     <span className="mt-1 block line-clamp-2 text-sm leading-relaxed text-slate-200">{cl.statement}</span>
                   </span>
-                  <ChevronRight className="ml-auto mt-1 size-4 shrink-0 text-slate-600" aria-hidden="true" />
+                  <ChevronRight className="ml-auto mt-1 size-4 shrink-0 text-slate-400" aria-hidden="true" />
                 </button>
               </li>
             ))}
             {results.length === 0 && (
-              <li className="px-4 py-6 text-sm text-slate-500">No claims match. Try a regulator, pillar or state name.</li>
+              <li className="px-4 py-6 text-sm text-slate-400">No claims match. Try a regulator, pillar or state name.</li>
             )}
           </ul>
         </div>
@@ -325,9 +325,9 @@ export default function MatrixConsole({
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold text-white">
                     <span aria-hidden="true" className="mr-1.5">{FLAGS[c.iso] ?? ""}</span>
-                    {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
+                    {c.name} <span className="ml-1 font-mono text-2xs text-slate-400">{c.iso}</span>
                   </p>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                  <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                     {c.verified}V · {c.partial}P · {c.coveragePct}%
                   </span>
                 </div>
@@ -346,18 +346,18 @@ export default function MatrixConsole({
                           <span className="flex items-center gap-1.5">
                             {STATE_ORDER.map((s) =>
                               cell.states[s] ? (
-                                <span key={s} className={`font-mono text-[11px] ${STATE_META[s].text}`}>
+                                <span key={s} className={`font-mono text-2xs ${STATE_META[s].text}`}>
                                   {cell.states[s]}
                                   <span className={`ml-0.5 inline-block size-1.5 rounded-full align-middle ${STATE_META[s].dot}`} />
                                 </span>
                               ) : null
                             )}
                             {cell.gap && (
-                              <span className={`rounded-full border px-1.5 py-px font-mono text-[10px] ${POLICY_GAP_STYLE.chip}`}>
+                              <span className={`rounded-full border px-1.5 py-px font-mono text-2xs ${POLICY_GAP_STYLE.chip}`}>
                                 gap
                               </span>
                             )}
-                            <ChevronRight className="size-4 text-slate-600" aria-hidden="true" />
+                            <ChevronRight className="size-4 text-slate-400" aria-hidden="true" />
                           </span>
                         </button>
                       </li>
@@ -373,7 +373,7 @@ export default function MatrixConsole({
             <table className="w-full min-w-[880px] border-collapse text-sm">
               <thead>
                 <tr className="border-b border-[rgba(135,180,220,0.12)]">
-                  <th className="px-4 py-3 text-left font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500 sm:px-5">
+                  <th className="px-4 py-3 text-left font-mono text-2xs font-medium uppercase tracking-[0.18em] text-slate-400 sm:px-5">
                     Pillar
                   </th>
                   {data.countries.map((c) => (
@@ -391,7 +391,7 @@ export default function MatrixConsole({
                       >
                         <span aria-hidden="true" className="mr-1.5 text-sm">{FLAGS[c.iso] ?? ""}</span>
                         <span className="text-xs font-semibold uppercase tracking-[0.14em]">{c.name}</span>
-                        <span className="block font-mono text-[10px] font-normal text-slate-500">
+                        <span className="block font-mono text-2xs font-normal text-slate-400">
                           {countLabel(c.claims, "claim")} · {c.coveragePct}%
                         </span>
                         <span
@@ -425,7 +425,7 @@ export default function MatrixConsole({
                             <span className="block text-sm font-medium text-slate-200 underline decoration-transparent underline-offset-2 transition-colors group-hover:text-cyan-300 group-hover:decoration-cyan-500/50">
                               {p.label}
                             </span>
-                            <span className="block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+                            <span className="block font-mono text-2xs uppercase tracking-wider text-slate-400">
                               deep dive ↗
                             </span>
                           </span>
@@ -439,7 +439,7 @@ export default function MatrixConsole({
                         if (!cell) {
                           return (
                             <td key={c.key} className={`px-3 py-2 text-center ${unfocused ? "opacity-35" : ""}`}>
-                              <span className="text-xs text-slate-700">—</span>
+                              <span className="text-xs text-slate-400">—</span>
                             </td>
                           );
                         }
@@ -494,19 +494,19 @@ export default function MatrixConsole({
                       <>
                         {[...new Set(activeClaims.map((cl) => cl.state))].map((s, i, arr) => (
                           <span key={s}>
-                            {i > 0 && <span className="text-slate-600"> · </span>}
+                            {i > 0 && <span className="text-slate-400"> · </span>}
                             <span className={STATE_META[s]?.text}>
                               {activeClaims.filter((x) => x.state === s).length}{" "}
                               {STATE_META[s]?.label.toLowerCase()}
                             </span>
                           </span>
                         ))}
-                        {activeGap && <span className={`text-slate-500`}> · </span>}
+                        {activeGap && <span className={`text-slate-400`}> · </span>}
                       </>
                     ) : null}
                     {activeGap && <span className={POLICY_GAP_STYLE.text}>1 gap</span>}
                     {!activeGap && activeClaims.length === 0 && (
-                      <span className="text-slate-500">No researched coverage</span>
+                      <span className="text-slate-400">No researched coverage</span>
                     )}
                   </p>
                 </div>
@@ -519,17 +519,17 @@ export default function MatrixConsole({
                   <X className="size-4" aria-hidden="true" />
                 </button>
               </div>
-              {activePillar && <p className="mt-2 text-xs leading-relaxed text-slate-500">{activePillar.blurb}</p>}
+              {activePillar && <p className="mt-2 text-xs leading-relaxed text-slate-400">{activePillar.blurb}</p>}
             </div>
 
             <div className="min-h-0 flex-1 overflow-y-auto p-5">
               {/* Pillar overview tiles */}
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Pillar overview</p>
+              <p className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">Pillar overview</p>
               <div className="mt-2.5 grid grid-cols-2 gap-3">
                 <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.07] p-3.5">
                   <CheckCircle2 className="size-5 text-emerald-400" aria-hidden="true" />
                   <p className="mt-2 font-mono text-2xl font-bold text-white">{activeVerified}</p>
-                  <p className="text-[11px] text-emerald-300/90">
+                  <p className="text-2xs text-emerald-300/90">
                     {activeVerified === 1 ? "Verified claim" : "Verified claims"}
                   </p>
                 </div>
@@ -547,7 +547,7 @@ export default function MatrixConsole({
                     }`}
                   />
                   <p className="mt-2 font-mono text-2xl font-bold text-white">{activeGap ? 1 : 0}</p>
-                  <p className={`text-[11px] ${activeGap ? POLICY_GAP_STYLE.text : "text-slate-500"}`}>
+                  <p className={`text-2xs ${activeGap ? POLICY_GAP_STYLE.text : "text-slate-400"}`}>
                     {activeGap ? "Gap" : "No open gap"}
                   </p>
                 </div>
@@ -556,7 +556,7 @@ export default function MatrixConsole({
               {/* Responsible regulator */}
               {activeCountry && (
                 <p className="mt-4 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-3 text-xs leading-relaxed text-slate-400">
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+                  <span className="font-mono text-2xs uppercase tracking-widest text-slate-400">
                     {PILLAR_DOMAIN[active.pillar] && activeCountry.regulators.some((r) => r.domain === PILLAR_DOMAIN[active.pillar])
                       ? "Responsible regulator"
                       : "Regulators in scope"}
@@ -576,29 +576,29 @@ export default function MatrixConsole({
               {/* Structured gap */}
               {activeGap && (
                 <div className={`mt-4 rounded-lg border bg-violet-400/[0.04] p-3 ${POLICY_GAP_STYLE.chip}`}>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+                  <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">
                     Structured gap — not a finding
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-slate-300">{activeGap.gap}</p>
                   {activeGap.expectedSources.length > 0 && (
-                    <p className="mt-2 text-xs leading-relaxed text-slate-500">
+                    <p className="mt-2 text-xs leading-relaxed text-slate-400">
                       Expected sources: {activeGap.expectedSources.join("; ")}
                     </p>
                   )}
-                  <p className="mt-1 text-xs leading-relaxed text-slate-500">Upgrade path: {activeGap.upgradePath}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-400">Upgrade path: {activeGap.upgradePath}</p>
                 </div>
               )}
 
               {/* Key findings */}
               {activeClaims.length > 0 && (
                 <>
-                  <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Key findings</p>
+                  <p className="mt-5 font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">Key findings</p>
                   <ul className="mt-2.5 space-y-3">
                     {activeClaims.map((cl) => (
                       <li key={cl.id} className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] p-3.5">
                         <div className="flex flex-wrap items-center gap-2">
                           <span
-                            className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${STATE_META[cl.state]?.text}`}
+                            className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-2xs font-medium ${STATE_META[cl.state]?.text}`}
                           >
                             <span className={`size-1.5 rounded-full ${STATE_META[cl.state]?.dot}`} aria-hidden="true" />
                             {STATE_META[cl.state]?.label}
@@ -608,7 +608,7 @@ export default function MatrixConsole({
                             onClick={() => setActive(null)}
                             title={`Open claim ${cl.id} at its anchored record in the ${activePillar?.label ?? "pillar"} deep dive`}
                             aria-label={`Open claim ${cl.id} in the pillar deep dive`}
-                            className="group/cl inline-flex items-center gap-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-500 transition-colors hover:text-cyan-300"
+                            className="group/cl inline-flex items-center gap-0.5 font-mono text-2xs uppercase tracking-wider text-slate-400 transition-colors hover:text-cyan-300"
                           >
                             {cl.id}
                             <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover/cl:opacity-100" aria-hidden="true" />
@@ -617,12 +617,12 @@ export default function MatrixConsole({
                         </div>
                         <p className="mt-2 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
                         {cl.note && <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{cl.note}</p>}
-                        <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                        <p className="mt-2 font-mono text-2xs uppercase tracking-wider text-slate-400">
                           Evidence strength: {cl.strength} · {cl.captureSummary}
                         </p>
                         {cl.sources.length > 0 && (
                           <details className="group mt-2">
-                            <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
+                            <summary className="cursor-pointer list-none font-mono text-2xs uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
                               View evidence trail · {countLabel(cl.sources.length, "source")} ▾
                             </summary>
                             <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
@@ -637,7 +637,7 @@ export default function MatrixConsole({
                                     {i + 1}. {s.publisher}
                                   </a>{" "}
                                   — {s.label}
-                                  <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                                  <span className="ml-1.5 whitespace-nowrap font-mono text-2xs uppercase tracking-wider text-slate-400">
                                     T{s.tier} ·{" "}
                                     {s.captureUrl ? (
                                       <a
@@ -654,7 +654,7 @@ export default function MatrixConsole({
                                     )}
                                   </span>
                                   {s.excerpt && (
-                                    <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+                                    <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-2xs leading-relaxed text-slate-400 line-clamp-4">
                                       {s.excerpt}
                                     </span>
                                   )}
@@ -670,8 +670,8 @@ export default function MatrixConsole({
               )}
 
               {/* Last updated */}
-              <p className="mt-5 flex items-center gap-2 border-t border-[rgba(135,180,220,0.10)] pt-4 text-xs text-slate-500">
-                <CalendarDays className="size-3.5 text-slate-600" aria-hidden="true" />
+              <p className="mt-5 flex items-center gap-2 border-t border-[rgba(135,180,220,0.10)] pt-4 text-xs text-slate-400">
+                <CalendarDays className="size-3.5 text-slate-400" aria-hidden="true" />
                 Last updated {data.meta.reviewedLong} · {data.meta.datasetVersion.replace("policy-", "")}
               </p>
             </div>
@@ -713,7 +713,7 @@ function cellPillStyle(cell: OpsCell): string {
   if (cell.total === 0) {
     return cell.gap
       ? `border-dashed border-violet-400/45 bg-violet-400/[0.05] hover:border-violet-400/70 ${POLICY_GAP_STYLE.chip}`
-      : "border-slate-800 bg-slate-900/40 text-slate-600 hover:border-slate-600";
+      : "border-slate-800 bg-slate-900/40 text-slate-400 hover:border-slate-600";
   }
   const v = cell.states["verified"] ?? 0;
   if (v === cell.total) {
@@ -730,7 +730,7 @@ function CellPillContent({ cell }: { cell: OpsCell }) {
         <span>GAP</span>
       </>
     ) : (
-      <span className="font-mono text-[11px] font-normal text-slate-600" aria-hidden="true">—</span>
+      <span className="font-mono text-2xs font-normal text-slate-400" aria-hidden="true">—</span>
     );
   }
   return (
@@ -841,7 +841,7 @@ function ExportMenu({ data }: { data: OpsData }) {
         onClick={exportCsv}
         title="Download the country × pillar coverage matrix as CSV"
         aria-label="Export coverage matrix as CSV"
-        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
+        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-2xs uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
       >
         <Download className="size-3" aria-hidden="true" />
         CSV
@@ -851,7 +851,7 @@ function ExportMenu({ data }: { data: OpsData }) {
         onClick={exportJson}
         title="Download the coverage comparison as JSON (countries + pillar cells)"
         aria-label="Export coverage comparison as JSON"
-        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
+        className="flex items-center gap-1 rounded-md px-2 py-1 font-mono text-2xs uppercase tracking-wider text-slate-400 transition-colors hover:bg-slate-700/40 hover:text-cyan-300"
       >
         <Download className="size-3" aria-hidden="true" />
         JSON

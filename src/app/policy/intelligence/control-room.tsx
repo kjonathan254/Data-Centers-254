@@ -63,7 +63,7 @@ const ROOM_TABS: { id: RoomTab; label: string }[] = [
 function PanelLabel({ children, right }: { children: React.ReactNode; right?: React.ReactNode }) {
   return (
     <div className="flex flex-wrap items-baseline justify-between gap-2">
-      <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">{children}</h2>
+      <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">{children}</h2>
       {right}
     </div>
   );
@@ -87,7 +87,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
         </h1>
         <span
           title="Verification rate = verified claims / claims entered in the dataset. Structured gaps are unresearched pillars: excluded from the denominator, never counted as findings."
-          className="mt-1 cursor-help text-slate-500 transition-colors hover:text-slate-300"
+          className="mt-1 cursor-help text-slate-400 transition-colors hover:text-slate-300"
         >
           <Info className="size-4" aria-hidden="true" />
         </span>
@@ -96,8 +96,8 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
       <div className="mt-4 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
         <p className="font-mono text-6xl font-bold leading-none text-white">
           <CountUp value={m.coveragePct} />
-          <span className="text-2xl text-slate-500">%</span>
-          <span className="mt-1.5 block text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">
+          <span className="text-2xl text-slate-400">%</span>
+          <span className="mt-1.5 block text-2xs font-medium uppercase tracking-[0.16em] text-slate-400">
             Claim verification rate
           </span>
         </p>
@@ -117,7 +117,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
         </ul>
       </div>
 
-      <p className="mt-3 max-w-[42ch] text-[11px] leading-relaxed text-slate-500">
+      <p className="mt-3 max-w-[42ch] text-2xs leading-relaxed text-slate-400">
         Share of entered claims meeting the evidence threshold. {m.gaps} research gaps remain across
         the {data.pillars.length} policy pillars.
       </p>
@@ -130,7 +130,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
             {other > 0 && <span className="bg-slate-600" style={{ width: `${(other / total) * 100}%` }} />}
           </div>
         </div>
-        <div className="mt-1.5 flex justify-between font-mono text-[9px] uppercase tracking-wider text-slate-600">
+        <div className="mt-1.5 flex justify-between font-mono text-2xs uppercase tracking-wider text-slate-400">
           <span>0%</span>
           <span>25%</span>
           <span>50%</span>
@@ -149,7 +149,7 @@ function EvidenceCoverageHero({ data }: { data: OpsData }) {
             <dd className="font-mono text-xl font-bold text-white">
               <CountUp value={s.v} duration={1100} />
             </dd>
-            <dt className="text-[10px] font-medium uppercase tracking-wider text-slate-500">{s.k}</dt>
+            <dt className="text-2xs font-medium uppercase tracking-wider text-slate-400">{s.k}</dt>
           </div>
         ))}
       </dl>
@@ -196,22 +196,22 @@ function CountryKpiCards({
           >
             <span className="flex items-center gap-1.5">
               <span aria-hidden="true" className="text-base leading-none">{FLAGS[c.iso] ?? ""}</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-300">{c.name}</span>
+              <span className="text-2xs font-bold uppercase tracking-[0.14em] text-slate-300">{c.name}</span>
             </span>
             <span className={`mt-2.5 font-mono text-4xl font-bold leading-none ${toneCls}`}>
               <CountUp value={c.coveragePct} duration={1200} />
-              <span className="text-lg text-slate-500">%</span>
+              <span className="text-lg text-slate-400">%</span>
             </span>
             <span className="mt-3 block h-1.5 w-full overflow-hidden rounded-full bg-[#0B1627]" aria-hidden="true">
               <span className={`block h-full rounded-full ${barCls}`} style={{ width: `${c.coveragePct}%` }} />
             </span>
-            <span className="mt-auto flex items-center justify-between gap-1 pt-3 text-[11px]">
+            <span className="mt-auto flex items-center justify-between gap-1 pt-3 text-2xs">
               <span className="font-medium">
                 <span className="text-emerald-400">{c.verified} verified</span>
-                <span className="text-slate-600"> / </span>
+                <span className="text-slate-400"> / </span>
                 <span className="text-amber-400">{c.partial} partial</span>
               </span>
-              <span className="font-mono text-[10px] text-slate-500">{c.claims} claims</span>
+              <span className="font-mono text-2xs text-slate-400">{c.claims} claims</span>
             </span>
           </button>
         );
@@ -234,7 +234,7 @@ function EvidenceStatesPanel({ data }: { data: OpsData }) {
     <div className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-5">
       <PanelLabel
         right={
-          <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+          <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
             claim states · live
           </span>
         }
@@ -254,7 +254,7 @@ function EvidenceStatesPanel({ data }: { data: OpsData }) {
                 </span>
                 <span className="font-mono text-xs text-slate-400">
                   <span className={`font-bold ${meta.text}`}>{n}</span>{" "}
-                  <span className="text-slate-600">({Math.round((n / total) * 100)}%)</span>
+                  <span className="text-slate-400">({Math.round((n / total) * 100)}%)</span>
                 </span>
               </div>
               <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-[#0B1627]" aria-hidden="true">
@@ -271,7 +271,7 @@ function EvidenceStatesPanel({ data }: { data: OpsData }) {
             </span>
             <span className={`font-mono text-xs font-bold ${POLICY_GAP_STYLE.text}`}>{data.gaps.length}</span>
           </div>
-          <p className="mt-1 text-[11px] leading-relaxed text-slate-600">
+          <p className="mt-1 text-2xs leading-relaxed text-slate-400">
             Unresearched pillars — a condition of research coverage, never a claim state.
           </p>
         </li>
@@ -309,7 +309,7 @@ function SinceLastReview({
     >
       <PanelLabel
         right={
-          <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+          <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
             {since.fromVersion.replace("policy-", "")} → {since.toVersion.replace("policy-", "")} ·{" "}
             {since.date}
           </span>
@@ -321,7 +321,7 @@ function SinceLastReview({
         {since.items.map((it) => (
           <li key={it.label} className="rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] px-3 py-2.5">
             <p className={`text-sm font-semibold ${toneCls[it.tone] ?? "text-slate-200"}`}>{it.label}</p>
-            <p className="mt-0.5 text-[11px] leading-relaxed text-slate-500">{it.detail}</p>
+            <p className="mt-0.5 text-2xs leading-relaxed text-slate-400">{it.detail}</p>
           </li>
         ))}
       </ul>
@@ -333,7 +333,7 @@ function SinceLastReview({
         <div className="mt-4">
           <PanelLabel
             right={
-              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+              <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                 {changelog.length} release{changelog.length === 1 ? "" : "s"} · claim- and source-level
               </span>
             }
@@ -361,26 +361,26 @@ function SinceLastReview({
                   className="rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] px-3.5 py-2.5"
                 >
                   <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-200">
+                    <span className="font-mono text-2xs font-semibold uppercase tracking-wider text-slate-200">
                       {entry.previousVersion.replace("policy-2026-Q3-", "")}
-                      <span aria-hidden="true" className="mx-1 text-slate-600">&rarr;</span>
+                      <span aria-hidden="true" className="mx-1 text-slate-400">&rarr;</span>
                       {entry.version.replace("policy-2026-Q3-", "")}
                     </span>
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{entry.date}</span>
+                    <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">{entry.date}</span>
                     <span className="flex flex-wrap items-center gap-1.5">
                       {chips.map((chip) => (
-                        <span key={chip.text} className={`rounded-full border px-2 py-px text-[10px] font-medium ${chip.cls}`}>
+                        <span key={chip.text} className={`rounded-full border px-2 py-px text-2xs font-medium ${chip.cls}`}>
                           {chip.text}
                         </span>
                       ))}
                     </span>
                   </div>
-                  <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-slate-500">{entry.summary}</p>
+                  <p className="mt-1.5 line-clamp-2 text-2xs leading-relaxed text-slate-400">{entry.summary}</p>
                 </li>
               );
             })}
           </ol>
-          <p className="mt-2 text-[11px] leading-relaxed text-slate-600">
+          <p className="mt-2 text-2xs leading-relaxed text-slate-400">
             Every release is diffed against the previous published dataset; claim records resolve to
             their anchored evidence trails in the pillar deep dives.
           </p>
@@ -392,22 +392,22 @@ function SinceLastReview({
       {changelog.map((entry) => (
         <details key={entry.version} className="group mt-3 rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30]">
           <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 px-3.5 py-2.5 text-xs font-medium text-slate-300 transition-colors hover:text-cyan-300 [&::-webkit-details-marker]:hidden">
-            <ChevronRight className="size-3.5 shrink-0 text-slate-600 transition-transform group-open:rotate-90" aria-hidden="true" />
+            <ChevronRight className="size-3.5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" aria-hidden="true" />
             Claim-level changes
-            <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+            <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
               {entry.previousVersion.replace("policy-", "")} <span aria-hidden="true">&rarr;</span>{" "}
               {entry.version.replace("policy-", "")}
             </span>
-            <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] text-slate-500">
+            <span className="ml-auto flex items-center gap-1.5 font-mono text-2xs text-slate-400">
               <span>{entry.claims.length} claims</span>
-              <span className="text-slate-700">/</span>
+              <span className="text-slate-400">/</span>
               <span>{entry.sourcesAdded.length} sources</span>
             </span>
           </summary>
           <div className="border-t border-[rgba(135,180,220,0.10)] px-3.5 py-3">
             <p className="text-xs leading-relaxed text-slate-400">{entry.summary}</p>
-            <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+            <p className="mt-1.5 text-2xs leading-relaxed text-slate-400">
+              <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">Editorial decision &middot; </span>
               {entry.editorialDecisionSummary}
             </p>
             <ol className="mt-3 space-y-3 divide-y divide-[rgba(135,180,220,0.08)]">
@@ -420,31 +420,31 @@ function SinceLastReview({
                         href={`/policy/intelligence/pillars/${cl.pillar}#claim-${cl.id}`}
                         title={`Open claim ${cl.id} at its anchored record in the ${pillarLabel(cl.pillar)} deep dive`}
                         aria-label={`Open claim ${cl.id} in the pillar deep dive`}
-                        className="group/cl inline-flex items-center gap-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-400 transition-colors hover:text-cyan-300"
+                        className="group/cl inline-flex items-center gap-0.5 font-mono text-2xs uppercase tracking-wider text-slate-400 transition-colors hover:text-cyan-300"
                       >
                         {cl.id}
                         <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover/cl:opacity-100" aria-hidden="true" />
                       </Link>
-                      <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-cyan-300">
+                      <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-2xs font-medium uppercase tracking-wider text-cyan-300">
                         {cl.action}
                       </span>
                       {cfg && (
                         <span
-                          className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${cfg.text}`}
+                          className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-2xs font-medium ${cfg.text}`}
                         >
                           <span className={`size-1.5 rounded-full ${cfg.dot}`} aria-hidden="true" />
                           {cfg.label}
                         </span>
                       )}
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                      <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                         {cl.country} &middot; {pillarLabel(cl.pillar)}
                       </span>
                     </div>
                     <p className="mt-1.5 text-sm leading-relaxed text-slate-200">{cl.statement}</p>
-                    <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">{cl.previousVersionNote}</p>
+                    <p className="mt-1.5 text-2xs leading-relaxed text-slate-400">{cl.previousVersionNote}</p>
                     {cl.sources.length > 0 && (
-                      <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] leading-relaxed text-slate-500">
-                        <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Evidence &middot; </span>
+                      <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-2xs leading-relaxed text-slate-400">
+                        <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">Evidence &middot; </span>
                         {cl.sources.map((s, i) => (
                           <span key={`${s.id}-${i}`} className="inline-flex items-center gap-1">
                             <a
@@ -455,7 +455,7 @@ function SinceLastReview({
                             >
                               {s.publisher}
                             </a>
-                            <span className="font-mono text-[10px] uppercase text-slate-500">
+                            <span className="font-mono text-2xs uppercase text-slate-400">
                               T{s.tier} &middot;{" "}
                               {s.captureUrl ? (
                                 <a
@@ -471,13 +471,13 @@ function SinceLastReview({
                                 s.captureStatus
                               )}
                             </span>
-                            {i < cl.sources.length - 1 && <span className="text-slate-700">/</span>}
+                            {i < cl.sources.length - 1 && <span className="text-slate-400">/</span>}
                           </span>
                         ))}
                       </p>
                     )}
-                    <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+                    <p className="mt-1.5 text-2xs leading-relaxed text-slate-400">
+                      <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">Editorial decision &middot; </span>
                       {cl.editorialDecision}
                     </p>
                   </li>
@@ -512,7 +512,7 @@ function ResearchQueueAlert({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel
       <div className="flex flex-wrap items-center justify-between gap-2">
         <PanelLabel
           right={
-            <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider">
+            <span className="flex items-center gap-2 font-mono text-2xs uppercase tracking-wider">
               <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2 py-px text-cyan-300">
                 {high} high
               </span>
@@ -523,7 +523,7 @@ function ResearchQueueAlert({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel
           }
         >
           Research queue <span className="ml-1 text-slate-300">{gaps.length}</span>
-          <span className="ml-2 hidden font-sans normal-case tracking-normal text-slate-500 sm:inline">
+          <span className="ml-2 hidden font-sans normal-case tracking-normal text-slate-400 sm:inline">
             What we&apos;re investigating next
           </span>
         </PanelLabel>
@@ -531,7 +531,7 @@ function ResearchQueueAlert({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel
           aria-label="Sort research queue"
           value={sort}
           onChange={(e) => setSort(e.target.value as "priority" | "pillar")}
-          className="h-7 rounded-lg border border-slate-700/70 bg-[#101D30] px-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400 focus:border-cyan-500/60 focus:outline-none"
+          className="h-7 rounded-lg border border-slate-700/70 bg-[#101D30] px-1.5 font-mono text-2xs uppercase tracking-wider text-slate-400 focus:border-cyan-500/60 focus:outline-none"
         >
           <option value="priority">HIGH ▾ priority</option>
           <option value="pillar">PILLAR ▾ a–z</option>
@@ -552,20 +552,20 @@ function ResearchQueueAlert({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel
                   {g.gap.charAt(0).toUpperCase()}
                   {g.gap.slice(1)}
                 </span>
-                <span className="hidden shrink-0 font-mono text-[11px] text-slate-500 sm:block">
+                <span className="hidden shrink-0 font-mono text-2xs text-slate-400 sm:block">
                   {g.countryName} · {pillarLabel(g.pillar)}
                 </span>
-                <ChevronRight className="size-3.5 shrink-0 text-slate-600 transition-transform group-open:rotate-90" aria-hidden="true" />
+                <ChevronRight className="size-3.5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" aria-hidden="true" />
                 <span className="sr-only">{String(i + 1)}</span>
               </summary>
               <div className="border-l border-violet-400/20 bg-[#0B1627]/60 px-4 py-3">
                 <p className="text-xs leading-relaxed text-slate-300">{g.gap}</p>
-                <p className="mt-2 text-xs leading-relaxed text-slate-500">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Expected sources · </span>
+                <p className="mt-2 text-xs leading-relaxed text-slate-400">
+                  <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">Expected sources · </span>
                   {g.expectedSources.join("; ")}
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-500">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Upgrade path · </span>
+                <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                  <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">Upgrade path · </span>
                   {g.upgradePath}
                 </p>
               </div>
@@ -594,7 +594,7 @@ function GapsByPillar({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel: (id:
   const [wipeRef, wipeCls] = useWipe<HTMLUListElement>();
   return (
     <div className="flex h-full flex-col rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-5 transition-colors duration-300 hover:border-[rgba(135,180,220,0.30)]">
-      <PanelLabel right={<span className={`font-mono text-[10px] uppercase tracking-wider ${POLICY_GAP_STYLE.text}`}>structured gaps</span>}>
+      <PanelLabel right={<span className={`font-mono text-2xs uppercase tracking-wider ${POLICY_GAP_STYLE.text}`}>structured gaps</span>}>
         Open gaps by pillar
       </PanelLabel>
       <ul ref={wipeRef} className="mt-4 flex-1 space-y-3">
@@ -618,7 +618,7 @@ function GapsByPillar({ gaps, pillarLabel }: { gaps: OpsGap[]; pillarLabel: (id:
             </div>
           </li>
         ))}
-        {rows.length === 0 && <li className="text-sm text-slate-500">No open gaps.</li>}
+        {rows.length === 0 && <li className="text-sm text-slate-400">No open gaps.</li>}
       </ul>
     </div>
   );
@@ -634,23 +634,23 @@ function ClaimCard({ claim }: { claim: OpsData["claims"][number] }) {
         {cfg && (
           <span
             title={POLICY_STATES[claim.state as keyof typeof POLICY_STATES]?.blurb}
-            className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-[10px] font-medium ${cfg.text}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border border-slate-700 px-2 py-0.5 text-2xs font-medium ${cfg.text}`}
           >
             <span className={`size-1.5 rounded-full ${cfg.dot}`} aria-hidden="true" />
             {cfg.label}
           </span>
         )}
-        <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{claim.id}</span>
+        <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">{claim.id}</span>
         <CopyButton value={claim.id} className="ml-auto" />
       </div>
       <p className="mt-2 text-sm leading-relaxed text-slate-200">{claim.statement}</p>
       {claim.note && <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{claim.note}</p>}
-      <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+      <p className="mt-2 font-mono text-2xs uppercase tracking-wider text-slate-400">
         Evidence strength: {claim.strength} · {claim.captureSummary}
       </p>
       {claim.sources.length > 0 && (
         <details className="mt-2">
-          <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
+          <summary className="cursor-pointer list-none font-mono text-2xs uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
             View evidence trail · {countLabel(claim.sources.length, "source")} ▾
           </summary>
           <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
@@ -665,7 +665,7 @@ function ClaimCard({ claim }: { claim: OpsData["claims"][number] }) {
                   {i + 1}. {s.publisher}
                 </a>{" "}
                 — {s.label}
-                <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                <span className="ml-1.5 whitespace-nowrap font-mono text-2xs uppercase tracking-wider text-slate-400">
                   T{s.tier} ·{" "}
                   {s.captureUrl ? (
                     <a
@@ -682,7 +682,7 @@ function ClaimCard({ claim }: { claim: OpsData["claims"][number] }) {
                   )}
                 </span>
                 {s.excerpt && (
-                  <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+                  <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-2xs leading-relaxed text-slate-400 line-clamp-4">
                     {s.excerpt}
                   </span>
                 )}
@@ -698,12 +698,12 @@ function ClaimCard({ claim }: { claim: OpsData["claims"][number] }) {
 function GapCard({ gap, pillarLabel }: { gap: OpsGap; pillarLabel: (id: string) => string }) {
   return (
     <div className={`rounded-lg border bg-violet-400/[0.04] p-4 ${POLICY_GAP_STYLE.chip}`}>
-      <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+      <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">
         Structured gap — not a finding · {pillarLabel(gap.pillar)}
       </p>
       <p className="mt-1.5 text-sm leading-relaxed text-slate-300">{gap.gap}</p>
-      <p className="mt-2 text-xs leading-relaxed text-slate-500">Expected sources: {gap.expectedSources.join("; ")}</p>
-      <p className="mt-1 text-xs leading-relaxed text-slate-500">Upgrade path: {gap.upgradePath}</p>
+      <p className="mt-2 text-xs leading-relaxed text-slate-400">Expected sources: {gap.expectedSources.join("; ")}</p>
+      <p className="mt-1 text-xs leading-relaxed text-slate-400">Upgrade path: {gap.upgradePath}</p>
     </div>
   );
 }
@@ -749,9 +749,9 @@ function CountryRoom({
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-baseline gap-3">
             <h3 className="text-xl font-bold text-white">
-              {c.name} <span className="ml-1 font-mono text-xs text-slate-500">{c.iso}</span>
+              {c.name} <span className="ml-1 font-mono text-xs text-slate-400">{c.iso}</span>
             </h3>
-            <span className="font-mono text-[11px] text-slate-500">
+            <span className="font-mono text-2xs text-slate-400">
               {c.coveragePct}% verified · {countLabel(claims.length, "claim")} · {c.facilities}{" "}
               {c.facilities === 1 ? "facility" : "facilities"} · {countLabel(gaps.length, "open gap")}
             </span>
@@ -773,8 +773,8 @@ function CountryRoom({
               }`}
             >
               {t.label}
-              {t.id === "claims" && <span className="ml-1.5 font-mono text-[10px] text-slate-500">{claims.length}</span>}
-              {t.id === "gaps" && <span className="ml-1.5 font-mono text-[10px] text-slate-500">{gaps.length}</span>}
+              {t.id === "claims" && <span className="ml-1.5 font-mono text-2xs text-slate-400">{claims.length}</span>}
+              {t.id === "gaps" && <span className="ml-1.5 font-mono text-2xs text-slate-400">{gaps.length}</span>}
             </button>
           ))}
         </div>
@@ -785,7 +785,7 @@ function CountryRoom({
         <div className="grid gap-5 p-4 sm:p-5 lg:grid-cols-2">
           <div className="space-y-4">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Evidence profile</p>
+              <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Evidence profile</p>
               <p className="mt-1.5 font-mono text-3xl font-bold text-white">{c.coveragePct}%</p>
               <div className="mt-2 flex h-2.5 w-full gap-px overflow-hidden rounded-full bg-[#0B1627]">
                 {STATE_ORDER.map((s) =>
@@ -794,21 +794,21 @@ function CountryRoom({
                   ) : null
                 )}
               </div>
-              <p className="mt-2 font-mono text-[11px]">
+              <p className="mt-2 font-mono text-2xs">
                 <span className="text-emerald-400">{c.verified} verified</span>
-                <span className="text-slate-600"> · </span>
+                <span className="text-slate-400"> · </span>
                 <span className="text-amber-400">{c.partial} partial</span>
-                <span className="text-slate-600"> · </span>
+                <span className="text-slate-400"> · </span>
                 <span className={POLICY_GAP_STYLE.text}>{gaps.length} structured gaps</span>
               </p>
-              <p className="mt-2 text-xs leading-relaxed text-slate-500">
+              <p className="mt-2 text-xs leading-relaxed text-slate-400">
                 Investigated {c.investigatedLong}
                 {c.facilitiesNote ? ` · ${c.facilitiesNote}` : ""}
               </p>
             </div>
             {priorityGaps.length > 0 && (
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Priority gaps</p>
+                <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Priority gaps</p>
                 <ul className="mt-2 space-y-1">
                   {priorityGaps.map((g) => (
                     <li key={g.pillar} className="flex items-center gap-2 text-xs text-slate-300">
@@ -820,17 +820,17 @@ function CountryRoom({
               </div>
             )}
             {c.investigationNote && (
-              <p className="border-t border-[rgba(135,180,220,0.10)] pt-3 text-[11px] leading-relaxed text-slate-500">
+              <p className="border-t border-[rgba(135,180,220,0.10)] pt-3 text-2xs leading-relaxed text-slate-400">
                 {c.investigationNote}
               </p>
             )}
           </div>
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Regulator map</p>
+            <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">Regulator map</p>
             <dl className="mt-2 space-y-1.5">
               {c.regulators.map((r) => (
                 <div key={r.domain} className="flex flex-wrap items-baseline gap-x-2 text-xs">
-                  <dt className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                  <dt className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                     {DOMAIN_LABELS[r.domain] ?? r.domain}
                   </dt>
                   <dd className="text-slate-300">{r.name}</dd>
@@ -859,7 +859,7 @@ function CountryRoom({
                     {p.label}
                   </Link>
                   {pClaims.length > 0 && (
-                    <span className="ml-2 text-slate-600">{countLabel(pClaims.length, "claim")}</span>
+                    <span className="ml-2 text-slate-400">{countLabel(pClaims.length, "claim")}</span>
                   )}
                 </h4>
                 {pClaims.length > 0 && (
@@ -886,7 +886,7 @@ function CountryRoom({
           <dl className="grid gap-3 sm:grid-cols-2">
             {c.regulators.map((r) => (
               <div key={r.domain} className="rounded-lg border border-[rgba(135,180,220,0.10)] bg-[#101D30] p-3">
-                <dt className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                <dt className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                   {DOMAIN_LABELS[r.domain] ?? r.domain}
                 </dt>
                 <dd className="mt-1 text-sm text-slate-200">{r.name}</dd>
@@ -899,7 +899,7 @@ function CountryRoom({
       {/* Sources tab */}
       {tab === "sources" && (
         <div className="p-4 sm:p-5">
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             {countLabel(uniqueSources.length, "distinct source")} across this country&rsquo;s claims.
           </p>
           <ul className="mt-3 space-y-2">
@@ -913,8 +913,8 @@ function CountryRoom({
                 >
                   {s.publisher}
                 </a>
-                <span className="block text-xs text-slate-500">{s.label}</span>
-                <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-wider text-slate-600">
+                <span className="block text-xs text-slate-400">{s.label}</span>
+                <span className="mt-0.5 block font-mono text-2xs uppercase tracking-wider text-slate-400">
                   T{s.tier} · {s.captureStatus}
                   {s.captureUrl && (
                     <>
@@ -944,7 +944,7 @@ function CountryRoom({
           {gaps.map((g) => (
             <GapCard key={`${g.country}-${g.pillar}`} gap={g} pillarLabel={pillarLabel} />
           ))}
-          {gaps.length === 0 && <p className="text-sm text-slate-500">No structured gaps for this country.</p>}
+          {gaps.length === 0 && <p className="text-sm text-slate-400">No structured gaps for this country.</p>}
         </div>
       )}
     </div>
@@ -981,11 +981,11 @@ function Legend({ data }: { data: OpsData }) {
               {liveCounts[key] !== undefined && (
                 <span className={`font-mono text-xs font-bold ${cfg.chip.match(/text-[\w-]+/)?.[0] ?? "text-slate-300"}`}>
                   {liveCounts[key]}
-                  <span className="ml-1 font-normal text-slate-600">/ {data.meta.claims}</span>
+                  <span className="ml-1 font-normal text-slate-400">/ {data.meta.claims}</span>
                 </span>
               )}
             </span>
-            <span className="block text-xs leading-relaxed text-slate-500">{desc[key] ?? cfg.blurb}</span>
+            <span className="block text-xs leading-relaxed text-slate-400">{desc[key] ?? cfg.blurb}</span>
           </span>
         </div>
       ))}
@@ -999,10 +999,10 @@ function Legend({ data }: { data: OpsData }) {
             <span className="text-sm font-medium text-slate-200">Structured gap</span>
             <span className={`font-mono text-xs font-bold ${POLICY_GAP_STYLE.text}`}>
               {data.gaps.length}
-              <span className="ml-1 font-normal text-slate-600">pillars</span>
+              <span className="ml-1 font-normal text-slate-400">pillars</span>
             </span>
           </span>
-          <span className="block text-xs leading-relaxed text-slate-500">Pillar owned but not yet researched — never a finding</span>
+          <span className="block text-xs leading-relaxed text-slate-400">Pillar owned but not yet researched — never a finding</span>
         </span>
       </div>
     </div>
@@ -1037,7 +1037,7 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
         </div>
         <div className="min-w-0 lg:col-span-7">
           <CountryKpiCards data={data} focus={focus} onSelect={selectCountry} />
-          <p className="mt-2.5 max-w-3xl text-[11px] leading-relaxed text-slate-500">
+          <p className="mt-2.5 max-w-3xl text-2xs leading-relaxed text-slate-400">
             Verification rate = verified claims / claims entered for that country. A pillar not yet
             researched is a structured gap, never a failed claim.
           </p>
@@ -1087,7 +1087,7 @@ export default function ControlRoomDashboard({ data }: { data: OpsData }) {
             <div className="mt-3">
               <Legend data={data} />
             </div>
-            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
+            <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-400">
               Evidence states describe the condition of a <span className="text-slate-400">claim</span>.
               A gap describes the condition of <span className="text-slate-400">research coverage</span> —
               it is never a claim, and it never borrows a claim&rsquo;s status. Hover any state for the
@@ -1127,8 +1127,8 @@ function CountryRoomSwitcher({
           type="button"
           onClick={() => setRoomKey(x.key)}
           aria-pressed={x.key === roomKey}
-          className={`rounded-md px-2 py-1 font-mono text-[10px] uppercase transition-colors ${
-            x.key === roomKey ? "bg-cyan-500/15 text-cyan-300" : "text-slate-500 hover:text-slate-300"
+          className={`rounded-md px-2 py-1 font-mono text-2xs uppercase transition-colors ${
+            x.key === roomKey ? "bg-cyan-500/15 text-cyan-300" : "text-slate-400 hover:text-slate-300"
           }`}
         >
           {x.iso}

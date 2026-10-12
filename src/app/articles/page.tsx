@@ -160,7 +160,7 @@ export default function ArticlesIndexPage() {
                   {group.label}
                 </h2>
                 <span
-                  className={`rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-wider ${group.color}`}
+                  className={`rounded-full border px-2.5 py-0.5 font-mono text-2xs uppercase tracking-wider ${group.color}`}
                 >
                   {group.articles.length}
                 </span>

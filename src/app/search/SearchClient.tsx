@@ -158,7 +158,7 @@ export default function SearchClient() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search articles, facilities, topics..."
-                className="w-full h-14 pl-12 pr-12 bg-surface border border-border rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-cyan/50 focus:ring-1 focus:ring-cyan/20 transition-all text-base"
+                className="w-full h-14 pl-12 pr-12 bg-surface border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan/50 focus:ring-1 focus:ring-cyan/20 transition-all text-base"
                 autoFocus
               />
               {query && (
@@ -188,7 +188,7 @@ export default function SearchClient() {
 
         {!loading && searched && totalResults === 0 && (
           <div className="glass-card rounded-xl p-12 text-center">
-            <SearchIcon className="size-10 text-muted-foreground/30 mx-auto mb-4" />
+            <SearchIcon className="size-10 text-muted-foreground mx-auto mb-4" />
             <p className="text-lg font-medium text-foreground mb-2">
               No results for &ldquo;{query}&rdquo;
             </p>
@@ -232,7 +232,7 @@ export default function SearchClient() {
                               </h3>
                               <Badge
                                 variant="outline"
-                                className={`text-[10px] px-1.5 py-0 rounded-full ${f.status === "Operational" ? "border-green-500/30 text-green-400" : "border-amber-500/30 text-amber-400"}`}
+                                className={`text-2xs px-1.5 py-0 rounded-full ${f.status === "Operational" ? "border-green-500/30 text-green-400" : "border-amber-500/30 text-amber-400"}`}
                               >
                                 {f.status}
                               </Badge>
@@ -256,7 +256,7 @@ export default function SearchClient() {
                               </p>
                             )}
                           </div>
-                          <ArrowRight className="size-4 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+                          <ArrowRight className="size-4 text-muted-foreground group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
                         </div>
                       </Link>
                     </motion.div>
@@ -292,7 +292,7 @@ export default function SearchClient() {
                               </h3>
                               <Badge
                                 variant="outline"
-                                className={`text-[10px] px-1.5 py-0 rounded-full ${clusterColors[a.cluster] || "border-border text-muted-foreground"}`}
+                                className={`text-2xs px-1.5 py-0 rounded-full ${clusterColors[a.cluster] || "border-border text-muted-foreground"}`}
                               >
                                 {a.cluster}
                               </Badge>
@@ -315,7 +315,7 @@ export default function SearchClient() {
                               )}
                             </div>
                           </div>
-                          <ArrowRight className="size-4 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+                          <ArrowRight className="size-4 text-muted-foreground group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
                         </div>
                       </Link>
                     </motion.div>

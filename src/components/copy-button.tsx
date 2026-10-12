@@ -42,7 +42,7 @@ export default function CopyButton({
       onClick={copy}
       aria-label={`${label}: ${value}`}
       title={copied ? "Copied" : label}
-      className={`inline-flex shrink-0 items-center gap-1 rounded-md border px-2 py-1 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+      className={`inline-flex shrink-0 items-center gap-1 rounded-md border px-2 py-1 font-mono text-2xs uppercase tracking-wider transition-colors ${
         copied
           ? "border-emerald-500/40 text-emerald-400"
           : "border-slate-700/80 text-slate-400 hover:border-slate-500 hover:text-slate-200"

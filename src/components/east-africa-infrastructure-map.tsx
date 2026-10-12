@@ -125,7 +125,7 @@ function StatsBand() {
           <p><strong className="text-foreground">Published in-service IT load — {PLATFORM.publishedItLoadMw} MW.</strong> Verified IT load at operational Kenya facilities — the directory&apos;s strictest figure.</p>
           <p><strong className="text-foreground">Live designed capacity — {PLATFORM.designedLiveMw} MW.</strong> Built, operational Kenya facilities at designed capacity.</p>
           <p><strong className="text-foreground">Announced pipeline — {PLATFORM.pipelineMw} MW.</strong> Under-construction, committed and early-stage developer figures; not built capacity.</p>
-          <p className="text-muted-foreground/80">These are the site&apos;s canonical labels — the directory and market report use the same numbers. PIDA registry projects are never counted in any of them.</p>
+          <p className="text-muted-foreground">These are the site&apos;s canonical labels — the directory and market report use the same numbers. PIDA registry projects are never counted in any of them.</p>
         </div>
       </details>
     </div>
@@ -181,7 +181,7 @@ function PanelShell({ title, subtitle, onClose, children }: {
 
 function StatusChip({ status }: { status: DcStatus }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-[11px] text-muted-foreground">
+    <span className="inline-flex items-center gap-1.5 text-2xs text-muted-foreground">
       <span className="inline-block w-2 h-2 rounded-full" style={{ background: STATUS_COLOR[status] }} />
       {status}
     </span>
@@ -205,10 +205,10 @@ function FacilityCard({ f }: { f: KenyaFacility }) {
         <p className="text-muted-foreground text-xs mb-2.5">{f.operator}</p>
         {f.note && <p className="text-muted-foreground text-xs mb-2.5 leading-relaxed">{f.note}</p>}
         <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          <Badge variant="outline" className="text-[10px] px-1.5 py-0">{f.tier}</Badge>
+          <Badge variant="outline" className="text-2xs px-1.5 py-0">{f.tier}</Badge>
           <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{f.totalMW > 0 ? `${f.totalMW} MW` : "MW n/p"}</span>
           {f.racks != null && <span className="flex items-center gap-1"><Building2 className="w-3 h-3" />{f.racks} racks</span>}
-          {f.aiReady && <Badge variant="outline" className="text-[10px] px-1.5 py-0 border-cyan/30 text-cyan">AI-ready</Badge>}
+          {f.aiReady && <Badge variant="outline" className="text-2xs px-1.5 py-0 border-cyan/30 text-cyan">AI-ready</Badge>}
         </div>
       </div>
     </a>
@@ -221,11 +221,11 @@ function CityAssetRow({ item }: { item: (typeof REGION_ITEMS)[number] }) {
       <div className="flex items-center gap-2 mb-1">
         <span className="w-2 h-2 rounded-full shrink-0" style={{ background: item.type === "ixp" ? NEON : CYAN }} />
         <span className="text-foreground font-medium text-sm truncate">{item.name}</span>
-        <span className="ml-auto text-[10px] text-muted-foreground shrink-0">{item.year}</span>
+        <span className="ml-auto text-2xs text-muted-foreground shrink-0">{item.year}</span>
       </div>
       <p className="text-muted-foreground text-xs mb-2">{item.description}</p>
       <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-        <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.type === "ixp" ? "IXP" : "Data centre"}</Badge>
+        <Badge variant="outline" className="text-2xs px-1.5 py-0">{item.type === "ixp" ? "IXP" : "Data centre"}</Badge>
         {item.powerMW && <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-cyan" />{item.powerMW} MW</span>}
         {item.members != null && <span className="flex items-center gap-1"><Network className="w-3 h-3 text-neon" />{item.members} members</span>}
         {item.peakGbps != null && <span>{item.peakGbps} Gbps peak</span>}
@@ -274,9 +274,9 @@ function ComparisonPanel({ onClose, onOpenMetro }: { onClose: () => void; onOpen
       <table className="w-full text-xs">
         <thead>
           <tr className="border-b border-border/40 text-left">
-            <th scope="col" className="py-2 pr-2 text-[10px] font-medium font-mono uppercase tracking-widest text-muted-foreground/80">Dimension</th>
-            <th scope="col" className="py-2 pr-2 text-[10px] font-medium font-mono uppercase tracking-widest text-cyan">Nairobi</th>
-            <th scope="col" className="py-2 text-[10px] font-medium font-mono uppercase tracking-widest text-amber-500">Mombasa</th>
+            <th scope="col" className="py-2 pr-2 text-2xs font-medium font-mono uppercase tracking-widest text-muted-foreground">Dimension</th>
+            <th scope="col" className="py-2 pr-2 text-2xs font-medium font-mono uppercase tracking-widest text-cyan">Nairobi</th>
+            <th scope="col" className="py-2 text-2xs font-medium font-mono uppercase tracking-widest text-amber-500">Mombasa</th>
           </tr>
         </thead>
         <tbody>
@@ -297,7 +297,7 @@ function ComparisonPanel({ onClose, onOpenMetro }: { onClose: () => void; onOpen
           View Mombasa
         </Button>
       </div>
-      <p className="pt-1 text-[10px] text-muted-foreground/70">Figures computed from the verified facility dataset (map layer). Published capacity = operational sites with an MW figure.</p>
+      <p className="pt-1 text-2xs text-muted-foreground">Figures computed from the verified facility dataset (map layer). Published capacity = operational sites with an MW figure.</p>
     </PanelShell>
   );
 }
@@ -323,7 +323,7 @@ function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: 
   return (
     <PanelShell title="Trace the internet" subtitle="From a subsea cable to a Nairobi stack — the path your traffic takes" onClose={onClose}>
       <div>
-        <p className="mb-1.5 text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Start from a cable</p>
+        <p className="mb-1.5 text-2xs font-mono uppercase tracking-widest text-muted-foreground">Start from a cable</p>
         <div className="flex flex-wrap gap-1.5">
           {SUBSEA_CABLES.map((c) => {
             const active = c.id === cable.id;
@@ -333,7 +333,7 @@ function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: 
                 type="button"
                 onClick={() => onCable(c.id)}
                 aria-pressed={active}
-                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
+                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-2xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/60 ${
                   active ? "border-cyan/50 bg-cyan/15 text-cyan" : "border-border/60 bg-accent/30 text-muted-foreground hover:border-cyan/40 hover:text-cyan"
                 }`}
               >
@@ -347,7 +347,7 @@ function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: 
       <ol className="space-y-2.5 pt-1">
         {steps.map((s) => (
           <li key={s.n} className="flex gap-2.5">
-            <span aria-hidden="true" className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-cyan/40 bg-cyan/10 text-[10px] font-bold tabular-nums text-cyan">{s.n}</span>
+            <span aria-hidden="true" className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-cyan/40 bg-cyan/10 text-2xs font-bold tabular-nums text-cyan">{s.n}</span>
             <span className="text-xs leading-relaxed text-muted-foreground">
               <strong className="font-semibold text-foreground">{s.title}.</strong> {s.body}
             </span>
@@ -369,7 +369,7 @@ function TracePanel({ cableId, onCable, onClose, onOpenMetro, onOpenEvidence }: 
       >
         Evidence and sources for {cable.name} <FileText className="size-3.5" aria-hidden="true" />
       </button>
-      <p className="pt-1 text-[10px] text-muted-foreground/70">Route geometry is schematic — the chain is the point.</p>
+      <p className="pt-1 text-2xs text-muted-foreground">Route geometry is schematic — the chain is the point.</p>
     </PanelShell>
   );
 }
@@ -714,7 +714,7 @@ export default function EastAfricaInfrastructureMap() {
           </div>
           {typeFilter !== "cable" && (
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/70 mr-1">Status</span>
+              <span className="text-2xs font-mono uppercase tracking-widest text-muted-foreground mr-1">Status</span>
               {statusChips.map((s) => (
                 <Button key={s.key} size="sm" variant={statusFilter === s.key ? "default" : "outline"}
                   onClick={() => setStatusManual(s.key)}
@@ -893,7 +893,7 @@ export default function EastAfricaInfrastructureMap() {
                     onClose={() => setCityPanel(null)}
                   >
                     {REGION_ITEMS.filter((i) => i.city === cityPanel).map((i) => <CityAssetRow key={i.id} item={i} />)}
-                    <p className="text-[11px] text-muted-foreground pt-1">Tracked in summary, DC254 profiles focus on Kenya.</p>
+                    <p className="text-2xs text-muted-foreground pt-1">Tracked in summary, DC254 profiles focus on Kenya.</p>
                   </PanelShell>
                 )}
               </AnimatePresence>
@@ -951,21 +951,21 @@ export default function EastAfricaInfrastructureMap() {
                         <span className="text-muted-foreground ml-auto whitespace-nowrap">
                           {c.designTbps ? `${c.designTbps} Tbps` : "in development"} · {c.year}
                         </span>
-                        <ChevronRight className={`w-3 h-3 shrink-0 transition-all ${activeCable === c.id ? "text-cyan translate-x-0.5" : "text-muted-foreground/50"}`} />
+                        <ChevronRight className={`w-3 h-3 shrink-0 transition-all ${activeCable === c.id ? "text-cyan translate-x-0.5" : "text-muted-foreground"}`} />
                       </button>
                       <button
                         type="button"
                         onClick={() => { const r = registerFor(c.id); if (r) setEvidence(r); }}
                         aria-label={`${c.name}: open the evidence record with sources`}
                         title="Evidence and sources"
-                        className="my-1.5 mr-1 flex shrink-0 items-center rounded px-1.5 text-muted-foreground/60 transition-colors hover:text-cyan focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50"
+                        className="my-1.5 mr-1 flex shrink-0 items-center rounded px-1.5 text-muted-foreground transition-colors hover:text-cyan focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan/50"
                       >
                         <FileText className="w-3.5 h-3.5" aria-hidden="true" />
                       </button>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-2 text-[10px] leading-snug text-muted-foreground/70">
+                <p className="mt-2 text-2xs leading-snug text-muted-foreground">
                   Hover a cable to trace its route; the file icon opens its source trail. The cable tracker also lists LuLu (planned, 2026).
                 </p>
               </div>
@@ -983,7 +983,7 @@ export default function EastAfricaInfrastructureMap() {
             {/* Legend + note */}
             <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
               <Legend />
-              <p className="text-[10px] text-muted-foreground hidden sm:block">
+              <p className="text-2xs text-muted-foreground hidden sm:block">
                 Natural Earth borders (indicative) · facility positions schematic · verified {VERIFIED_DATE_LABEL}
               </p>
             </div>

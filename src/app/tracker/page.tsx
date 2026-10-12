@@ -246,7 +246,7 @@ export default function TrackerPage() {
                   <p className="mt-2 text-2xl font-semibold tabular-nums text-foreground">
                     {s.value}
                   </p>
-                  <p className="text-[11px] leading-snug text-muted-foreground">
+                  <p className="text-2xs leading-snug text-muted-foreground">
                     {s.label} · {s.hint}
                   </p>
                 </div>
@@ -278,7 +278,7 @@ export default function TrackerPage() {
                   <div key={stage} className="card-solid relative overflow-hidden rounded-xl">
                     <div className={`absolute inset-x-0 top-0 h-0.5 ${meta.bar}`} aria-hidden="true" />
                     <div className="p-4 sm:p-5">
-                      <p className={`flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider ${meta.color}`}>
+                      <p className={`flex items-center gap-1.5 text-2xs font-medium uppercase tracking-wider ${meta.color}`}>
                         <Icon className="size-3.5" />
                         {stage === "Operational" ? "Live" : stage}
                       </p>
@@ -299,11 +299,11 @@ export default function TrackerPage() {
                                 <span className="truncate text-sm font-medium text-foreground group-hover:text-cyan">
                                   {f.name}
                                 </span>
-                                <span className={`shrink-0 rounded-full border px-1.5 py-px text-[9px] font-bold uppercase tracking-wider ${meta.badge}`}>
+                                <span className={`shrink-0 rounded-full border px-1.5 py-px text-2xs font-bold uppercase tracking-wider ${meta.badge}`}>
                                   {facilityMw(f) != null ? `${facilityMw(f)} MW` : "n/a"}
                                 </span>
                               </span>
-                              <span className="mt-1 flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                              <span className="mt-1 flex items-center gap-1.5 text-2xs text-muted-foreground">
                                 <MapPin className="size-3 shrink-0" />
                                 {f.city}
                                 <span className="ml-auto inline-flex items-center gap-1">
@@ -315,7 +315,7 @@ export default function TrackerPage() {
                           </li>
                         ))}
                         {inStage.length === 0 && (
-                          <li className="rounded-lg border border-dashed border-border/40 p-3 text-[11px] text-muted-foreground">
+                          <li className="rounded-lg border border-dashed border-border/40 p-3 text-2xs text-muted-foreground">
                             Nothing tracked in this stage yet.
                           </li>
                         )}
@@ -365,7 +365,7 @@ export default function TrackerPage() {
                   );
                 })}
               </ul>
-              <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground/70">
+              <p className="mt-4 text-2xs leading-relaxed text-muted-foreground">
                 Facilities without a published live IT load are shown at zero
                 length, not excluded, the gap is the story.
               </p>
@@ -391,7 +391,7 @@ export default function TrackerPage() {
                         <Link href={`/directory/${f.slug}`} className="truncate text-sm font-medium text-foreground hover:text-cyan">
                           {f.name}
                         </Link>
-                        <span className="shrink-0 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan">
+                        <span className="shrink-0 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 text-2xs font-bold uppercase tracking-wider text-cyan">
                           {when}
                         </span>
                       </p>
@@ -417,7 +417,7 @@ export default function TrackerPage() {
                   <li key={f.id}>
                     <Link
                       href={`/directory/${f.slug}`}
-                      className="inline-block rounded-full border border-border/60 bg-accent/40 px-2.5 py-1 text-[11px] text-muted-foreground transition-colors hover:border-cyan/40 hover:text-cyan"
+                      className="inline-block rounded-full border border-border/60 bg-accent/40 px-2.5 py-1 text-2xs text-muted-foreground transition-colors hover:border-cyan/40 hover:text-cyan"
                     >
                       {f.name} · {facilityMw(f) != null ? `${facilityMw(f)} MW` : "capacity n/a"}
                     </Link>
@@ -458,7 +458,7 @@ export default function TrackerPage() {
                     <tr key={o.name} className="border-b border-border/30 last:border-b-0">
                       <td className="px-4 py-3">
                         <span className="block font-medium text-foreground">{o.name}</span>
-                        <span className="block text-[11px] text-muted-foreground">
+                        <span className="block text-2xs text-muted-foreground">
                           {o.type}
                           {o.parent ? ` · ${o.parent}` : ""}
                         </span>
@@ -469,7 +469,7 @@ export default function TrackerPage() {
                           {[...o.stages].map((s) => (
                             <span
                               key={s}
-                              className={`rounded-full border px-1.5 py-px text-[9px] font-bold uppercase tracking-wider ${STAGE_META[s]?.badge ?? STAGE_META["Early Stage"].badge}`}
+                              className={`rounded-full border px-1.5 py-px text-2xs font-bold uppercase tracking-wider ${STAGE_META[s]?.badge ?? STAGE_META["Early Stage"].badge}`}
                             >
                               {s === "Operational" ? "Live" : s}
                             </span>
@@ -506,7 +506,7 @@ export default function TrackerPage() {
                     <Link href={`/directory/${f.slug}`} className="truncate text-sm font-medium text-foreground hover:text-cyan">
                       {f.name}
                     </Link>
-                    <span className="inline-flex shrink-0 items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                    <span className="inline-flex shrink-0 items-center gap-1.5 text-2xs font-bold uppercase tracking-wider text-muted-foreground">
                       <span className={`size-1.5 rounded-full ${CONFIDENCE_DOT[f.dataConfidence] ?? "bg-muted-foreground"}`} aria-hidden="true" />
                       {f.dataConfidence} confidence
                     </span>

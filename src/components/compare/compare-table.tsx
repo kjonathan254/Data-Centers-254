@@ -170,7 +170,7 @@ export default function CompareTable({ facilities }: { facilities: Facility[] })
                     className="px-4 py-4 text-left align-bottom border-l border-border/40"
                   >
                     <span
-                      className={`mb-2 inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium ${STAGE_BADGE[f.status] ?? STAGE_BADGE["Early Stage"]}`}
+                      className={`mb-2 inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-2xs font-medium ${STAGE_BADGE[f.status] ?? STAGE_BADGE["Early Stage"]}`}
                     >
                       <Icon className="size-3" />
                       {f.status === "Operational" ? "Live" : f.status}
@@ -214,7 +214,7 @@ export default function CompareTable({ facilities }: { facilities: Facility[] })
                       {isLeader && row.numeric ? (
                         <>
                           {row.value(f)}
-                          <span className="ml-1.5 inline-block rounded bg-cyan/15 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-cyan align-middle">
+                          <span className="ml-1.5 inline-block rounded bg-cyan/15 px-1 py-px text-2xs font-bold uppercase tracking-wider text-cyan align-middle">
                             Leads
                           </span>
                         </>
@@ -245,7 +245,7 @@ export default function CompareTable({ facilities }: { facilities: Facility[] })
         </table>
       </div>
 
-      <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
+      <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">
         <strong className="font-medium text-muted-foreground">Reading this table:</strong>{" "}
         a cyan <span className="font-semibold text-cyan">Leads</span> flag marks the highest
         figure in a row, it is not an endorsement, and &ldquo;Not disclosed&rdquo; means the

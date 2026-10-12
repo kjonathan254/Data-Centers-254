@@ -157,7 +157,7 @@ export default function Hero() {
             </div>
           ))}
         </dl>
-        <p className="mt-4 text-[11px] text-muted-foreground/80">
+        <p className="mt-4 text-2xs text-muted-foreground">
           {stats_.kenyaFacilities} verified facilities in Kenya ·{" "}
           {stats_.regionalRecords} East Africa reference records · last verified{" "}
           {verifiedDate} ·{" "}

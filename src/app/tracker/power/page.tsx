@@ -85,7 +85,7 @@ export default function PowerTrackerPage() {
                 <div key={s.label} className="card-solid rounded-xl p-4 sm:p-5">
                   <Icon className="size-4 text-cyan" />
                   <p className="mt-2 text-xl font-semibold tabular-nums text-foreground">{s.value}</p>
-                  <p className="text-[11px] leading-snug text-muted-foreground">{s.label} · {s.hint}</p>
+                  <p className="text-2xs leading-snug text-muted-foreground">{s.label} · {s.hint}</p>
                 </div>
               );
             })}
@@ -107,7 +107,7 @@ export default function PowerTrackerPage() {
                 <li key={row.metric} className="card-solid rounded-xl p-4 sm:p-5">
                   <p className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-sm font-medium text-foreground">{row.metric}</span>
-                    <span className={`rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${BASIS_BADGE[row.basis] ?? BASIS_BADGE["Reported range"]}`}>
+                    <span className={`rounded-full border px-2 py-0.5 text-2xs font-bold uppercase tracking-wider ${BASIS_BADGE[row.basis] ?? BASIS_BADGE["Reported range"]}`}>
                       {row.basis.replace("DC254 ", "")}
                     </span>
                   </p>

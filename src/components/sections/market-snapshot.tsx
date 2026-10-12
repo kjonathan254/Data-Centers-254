@@ -87,14 +87,14 @@ export default function MarketSnapshot() {
             return (
               <div key={s.stage} className="card-solid relative overflow-hidden rounded-xl p-4 sm:p-5">
                 <div className={`absolute inset-x-0 top-0 h-0.5 ${meta.bar}`} aria-hidden="true" />
-                <p className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                <p className="flex items-center gap-1.5 text-2xs font-medium uppercase tracking-wider text-muted-foreground">
                   <Icon className={`size-3.5 ${meta.color}`} />
                   {s.stage === "Operational" ? "Live" : s.stage}
                 </p>
                 <p className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
                   {s.mw.toFixed(1)} <span className="text-sm font-normal text-muted-foreground">MW</span>
                 </p>
-                <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
+                <p className="mt-1 text-2xs leading-snug text-muted-foreground">
                   {s.count} facilit{s.count === 1 ? "y" : "ies"} · {meta.hint}
                 </p>
               </div>
@@ -102,21 +102,21 @@ export default function MarketSnapshot() {
           })}
           <div className="card-solid relative overflow-hidden rounded-xl border-cyan/30 p-4 sm:p-5">
             <div className="absolute inset-x-0 top-0 h-0.5 bg-cyan" aria-hidden="true" />
-            <p className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-cyan">
+            <p className="flex items-center gap-1.5 text-2xs font-medium uppercase tracking-wider text-cyan">
               <Zap className="size-3.5" />
               Total supply
             </p>
             <p className="mt-2 text-2xl font-semibold text-foreground tabular-nums">
               {snap.totalSupplyMw.toFixed(1)} <span className="text-sm font-normal text-muted-foreground">MW</span>
             </p>
-            <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
+            <p className="mt-1 text-2xs leading-snug text-muted-foreground">
               {snap.facilities} facilities · {snap.operators} operators
             </p>
           </div>
         </div>
 
         {/* Printed definition, the trust layer that paid trackers bolt behind signup */}
-        <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
+        <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">
           <strong className="font-medium text-muted-foreground">How we count:</strong>{" "}
           Total supply is the sum of designed capacity across all four stages.
           Of the {snap.stages[0].mw.toFixed(1)} MW of live capacity,{" "}

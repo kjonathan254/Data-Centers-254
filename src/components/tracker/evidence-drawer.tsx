@@ -73,7 +73,7 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
       <div className="absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto scrollbar-thin rounded-t-2xl border border-border/60 bg-surface shadow-2xl sm:inset-y-0 sm:left-auto sm:right-0 sm:max-h-none sm:w-[420px] sm:rounded-none sm:rounded-l-2xl">
         <div className="sticky top-0 z-10 flex items-start justify-between gap-3 border-b border-border/40 bg-surface/95 px-5 py-4 backdrop-blur">
           <div className="min-w-0">
-            <p className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence record</p>
+            <p className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Evidence record</p>
             <h2 id="evidence-drawer-title" className="mt-0.5 truncate text-lg font-semibold text-foreground">{cable.name}</h2>
           </div>
           <button
@@ -103,26 +103,26 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
           {/* status + record summary */}
           <dl className="space-y-2.5 text-xs">
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Status</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Status</dt>
               <dd className="mt-0.5 text-foreground">{cable.status}{cable.rfsDate ? ` · RFS ${cable.rfsDate}` : " · no RFS date published"}</dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Owner / consortium</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Owner / consortium</dt>
               <dd className="mt-0.5 text-foreground">{cable.owners}</dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Kenyan landing</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Kenyan landing</dt>
               <dd className="mt-0.5 text-foreground">{cable.kenyanLandings.join(" · ")}</dd>
             </div>
             <div>
-              <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence note</dt>
+              <dt className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">Evidence note</dt>
               <dd className="mt-0.5 leading-relaxed text-muted-foreground">{cable.note}</dd>
             </div>
           </dl>
 
           {/* source trail */}
           <div>
-            <p className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">
+            <p className="text-2xs font-mono uppercase tracking-widest text-muted-foreground">
               Source trail · {cable.sources.length} {cable.sources.length === 1 ? "source" : "sources"}
             </p>
             <ul className="mt-2 space-y-2">
@@ -130,7 +130,7 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
                 <li key={`${s.url}-${i}`} className="rounded-lg border border-border/40 bg-accent/20 px-3 py-2.5">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-xs font-medium leading-snug text-foreground">{s.label}</span>
-                    <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${KIND_BADGE[s.kind]}`}>
+                    <span className={`shrink-0 rounded-full border px-2 py-0.5 text-2xs font-bold uppercase tracking-wider ${KIND_BADGE[s.kind]}`}>
                       {KIND_LABEL[s.kind]}
                     </span>
                   </div>
@@ -138,7 +138,7 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1.5 inline-flex max-w-full items-center gap-1 truncate text-[11px] text-cyan hover:underline"
+                    className="mt-1.5 inline-flex max-w-full items-center gap-1 truncate text-2xs text-cyan hover:underline"
                   >
                     <ExternalLink className="size-3 shrink-0" aria-hidden="true" />
                     <span className="truncate">{s.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}</span>
@@ -147,7 +147,7 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
               ))}
             </ul>
             {primary && (
-              <p className="mt-2 text-[11px] leading-snug text-muted-foreground/80">
+              <p className="mt-2 text-2xs leading-snug text-muted-foreground">
                 Primary record: <a href={primary.url} target="_blank" rel="noopener noreferrer" className="text-cyan hover:underline">{primary.label}</a>.
                 Sources are republished as cited; figures are the source&rsquo;s own.
               </p>
@@ -168,7 +168,7 @@ export default function EvidenceDrawer({ cable, onClose }: { cable: CableRecord 
               Read the full explainer <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           )}
-          <p className="flex items-center gap-1.5 pb-2 text-[11px] text-muted-foreground/70">
+          <p className="flex items-center gap-1.5 pb-2 text-2xs text-muted-foreground">
             <FileText aria-hidden="true" className="size-3.5" />
             DC254 verification: monthly sweep, every claim traced to a named source.
           </p>

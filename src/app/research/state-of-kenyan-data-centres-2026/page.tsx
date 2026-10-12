@@ -105,7 +105,7 @@ export default function StateOfKenyanDataCentres2026() {
               className="inline-flex shrink-0 items-center gap-2 rounded-md bg-cyan px-4 py-2.5 text-sm font-medium text-cyan-foreground hover:bg-cyan/90 transition-colors"
             >
               <Download className="size-4" /> Download PDF
-              <span className="text-[10px] opacity-70 font-normal">4 pages · 2.7 MB</span>
+              <span className="text-2xs opacity-70 font-normal">4 pages · 2.7 MB</span>
             </a>
           </div>
 
@@ -119,8 +119,8 @@ export default function StateOfKenyanDataCentres2026() {
             ].map((s) => (
               <div key={s.label} className="card-solid rounded-xl p-4">
                 <p className="text-2xl font-bold text-foreground tabular-nums">{s.value}</p>
-                <p className="text-[11px] font-medium text-foreground/80 mt-1">{s.label}</p>
-                <p className="text-[11px] text-muted-foreground mt-0.5">{s.sub}</p>
+                <p className="text-2xs font-medium text-foreground/80 mt-1">{s.label}</p>
+                <p className="text-2xs text-muted-foreground mt-0.5">{s.sub}</p>
               </div>
             ))}
           </div>
@@ -228,7 +228,7 @@ export default function StateOfKenyanDataCentres2026() {
               <Link key={f.id} href={`/directory/${f.slug}`} className="card-solid card-solid-hover group rounded-xl p-4">
                 <div className="flex items-center justify-between gap-2 mb-1">
                   <span className="text-sm font-semibold text-foreground group-hover:text-cyan">{f.name}</span>
-                  <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-[10px] text-muted-foreground">{s}</span>
+                  <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-2xs text-muted-foreground">{s}</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
                   {f.totalCapacityMw ? `${f.totalCapacityMw} MW announced` : "capacity undisclosed"} · {f.operator.name}

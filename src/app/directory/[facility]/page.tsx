@@ -59,7 +59,7 @@ const TIER_BADGE: Record<number, string> = {
   1: "border-neon/30 text-neon",
   2: "border-cyan/30 text-cyan",
   3: "border-border text-muted-foreground",
-  4: "border-border/50 text-muted-foreground/60",
+  4: "border-border/50 text-muted-foreground",
 };
 
 const TIER_LABEL: Record<number, string> = {
@@ -314,7 +314,7 @@ export default async function FacilityPage({
                   <div key={s.label} className="card-solid rounded-xl p-4">
                     <Icon className="size-4 text-cyan mb-2" />
                     <p className="text-base font-semibold text-foreground">{s.value}</p>
-                    <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
+                    <p className="text-2xs text-muted-foreground mt-0.5">{s.label}</p>
                   </div>
                 );
               })}
@@ -374,7 +374,7 @@ export default async function FacilityPage({
                   <ul className="mt-3 flex flex-wrap gap-2">
                     {f.connectivityFacility.map((cf) => (
                       <li key={cf.provider.name} className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-                        {cf.provider.name} <span className="ml-1 text-[10px] text-cyan/60">{cf.provider.type}</span>
+                        {cf.provider.name} <span className="ml-1 text-2xs text-cyan/60">{cf.provider.type}</span>
                       </li>
                     ))}
                   </ul>
@@ -408,15 +408,15 @@ export default async function FacilityPage({
                 </h2>
                 <dl className="mt-4 space-y-3 text-sm">
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Source</dt>
+                    <dt className="text-2xs uppercase tracking-wider text-muted-foreground">Source</dt>
                     <dd className="mt-0.5 text-foreground/90">{f.dataSource}</dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Last verified</dt>
+                    <dt className="text-2xs uppercase tracking-wider text-muted-foreground">Last verified</dt>
                     <dd className="mt-0.5 text-foreground/90">{fmtVerified(f.lastVerified)}</dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Confidence</dt>
+                    <dt className="text-2xs uppercase tracking-wider text-muted-foreground">Confidence</dt>
                     <dd className="mt-0.5">
                       <span className={`inline-flex rounded-full border px-2.5 py-0.5 text-xs ${
                         f.dataConfidence === "High"
@@ -431,7 +431,7 @@ export default async function FacilityPage({
                   </div>
                   {f.peeringdbFacId !== undefined && (
                     <div>
-                      <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Independent cross-check</dt>
+                      <dt className="text-2xs uppercase tracking-wider text-muted-foreground">Independent cross-check</dt>
                       <dd className="mt-0.5">
                         <a
                           href={`https://www.peeringdb.com/fac/${f.peeringdbFacId}`}
@@ -448,7 +448,7 @@ export default async function FacilityPage({
                   )}
                   {f.sources && f.sources.length > 0 && (
                     <div>
-                      <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">Sources</dt>
+                      <dt className="text-2xs uppercase tracking-wider text-muted-foreground">Sources</dt>
                       <dd className="mt-1 space-y-1.5">
                         {f.sources.map((s) => (
                           <a
@@ -461,7 +461,7 @@ export default async function FacilityPage({
                             <ExternalLink className="mt-0.5 size-3 shrink-0 opacity-60" />
                             <span>
                               {s.label}
-                              <span className="ml-1 text-[10px] uppercase tracking-wider text-cyan/60">{s.kind}</span>
+                              <span className="ml-1 text-2xs uppercase tracking-wider text-cyan/60">{s.kind}</span>
                             </span>
                           </a>
                         ))}
@@ -469,7 +469,7 @@ export default async function FacilityPage({
                     </div>
                   )}
                 </dl>
-                <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
+                <p className="mt-4 border-t border-border/40 pt-3 text-2xs leading-relaxed text-muted-foreground">
                   Every DC254 data point follows the same discipline: claim,
                   source, date verified, independent evidence.
                 </p>
@@ -528,7 +528,7 @@ export default async function FacilityPage({
                     <div key={claim.id} className="rounded-lg border border-border/50 p-4">
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <p className="text-sm font-medium text-foreground/90">{claim.statement}</p>
-                        <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wider ${VERIFY_BADGE[publicClaimState(claim)]}`}>
+                        <span className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-2xs uppercase tracking-wider ${VERIFY_BADGE[publicClaimState(claim)]}`}>
                           <VerifyIcon state={publicClaimState(claim)} className="size-3" />
                           {publicClaimState(claim)}
                         </span>
@@ -544,14 +544,14 @@ export default async function FacilityPage({
                             return (
                               <li key={sid} className="text-xs leading-relaxed text-muted-foreground">
                                 <div className="flex flex-wrap items-center gap-2">
-                                  <span className={`rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${TIER_BADGE[s.tier]}`}>
+                                  <span className={`rounded-full border px-1.5 py-0.5 text-2xs font-medium ${TIER_BADGE[s.tier]}`}>
                                     Tier {s.tier} · {TIER_LABEL[s.tier]}
                                   </span>
                                   <a href={s.url} target="_blank" rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1 text-cyan hover:underline">
                                     {s.label} <ExternalLink className="size-3 opacity-60" />
                                   </a>
-                                  <span className="text-[10px] text-muted-foreground/70">
+                                  <span className="text-2xs text-muted-foreground">
                                     retrieved {s.retrievedDate}
                                     {s.publishedDate ? ` · published ${s.publishedDate}` : ""}
                                   </span>
@@ -571,7 +571,7 @@ export default async function FacilityPage({
                 </div>
               </details>
 
-              <p className="mt-4 border-t border-border/40 pt-3 text-[11px] leading-relaxed text-muted-foreground">
+              <p className="mt-4 border-t border-border/40 pt-3 text-2xs leading-relaxed text-muted-foreground">
                 Every claim is verified separately against tiered sources. The AI research
                 assistant collects and scores evidence; DC254&apos;s editor approves
                 each verification decision and the full history is kept in an evidence ledger.
@@ -586,7 +586,7 @@ export default async function FacilityPage({
           <nav aria-label="More facilities" className="mt-14 grid gap-3 border-t border-border/40 pt-8 sm:grid-cols-2">
             {prev ? (
               <Link href={`/directory/${prev.slug}`} className="card-solid card-solid-hover group rounded-xl p-4">
-                <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground">
+                <span className="flex items-center gap-1.5 text-2xs uppercase tracking-wider text-muted-foreground">
                   <ArrowLeft className="size-3.5" /> Larger capacity
                 </span>
                 <span className="mt-1 block text-sm font-medium text-foreground group-hover:text-cyan">{prev.name}</span>
@@ -594,7 +594,7 @@ export default async function FacilityPage({
             ) : <div />}
             {next && (
               <Link href={`/directory/${next.slug}`} className="card-solid card-solid-hover group rounded-xl p-4 sm:text-right">
-                <span className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider text-muted-foreground sm:justify-end">
+                <span className="flex items-center gap-1.5 text-2xs uppercase tracking-wider text-muted-foreground sm:justify-end">
                   Next facility <ArrowRight className="size-3.5" />
                 </span>
                 <span className="mt-1 block text-sm font-medium text-foreground group-hover:text-cyan">{next.name}</span>

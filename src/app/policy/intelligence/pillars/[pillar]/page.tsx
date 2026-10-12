@@ -172,7 +172,7 @@ export default async function PillarDeepDivePage({
           {/* Breadcrumb */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-slate-500"
+            className="flex items-center gap-1.5 font-mono text-2xs uppercase tracking-wider text-slate-400"
           >
             <Link
               href="/policy/intelligence"
@@ -181,13 +181,13 @@ export default async function PillarDeepDivePage({
               <ArrowLeft className="size-3.5" aria-hidden="true" />
               Policy Intelligence
             </Link>
-            <ChevronRight className="size-3.5 text-slate-700" aria-hidden="true" />
+            <ChevronRight className="size-3.5 text-slate-400" aria-hidden="true" />
             <span className="text-slate-300">{p.label}</span>
           </nav>
 
           {/* Header */}
           <header className="mt-6">
-            <p className="font-mono text-xs uppercase tracking-widest text-slate-500">
+            <p className="font-mono text-xs uppercase tracking-widest text-slate-400">
               Policy pillar deep dive · dataset {ds.datasetVersion}
             </p>
             <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-[40px] sm:leading-[1.15]">
@@ -196,35 +196,35 @@ export default async function PillarDeepDivePage({
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">{p.blurb}</p>
 
             {/* Stat chips — all derived from the dataset */}
-            <dl className="mt-6 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-wider">
+            <dl className="mt-6 flex flex-wrap gap-2 font-mono text-2xs uppercase tracking-wider">
               <div className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] px-3 py-2">
                 <dt className="sr-only">Coverage</dt>
                 <dd className="text-white">
-                  <CountUp value={d.coveragePct} />% <span className="text-slate-500">verified</span>
+                  <CountUp value={d.coveragePct} />% <span className="text-slate-400">verified</span>
                 </dd>
               </div>
               <div className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] px-3 py-2">
                 <dt className="sr-only">Claims</dt>
                 <dd className="text-white">
-                  {d.allClaims.length} <span className="text-slate-500">claims</span>
+                  {d.allClaims.length} <span className="text-slate-400">claims</span>
                 </dd>
               </div>
               <div className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] px-3 py-2">
                 <dt className="sr-only">Sources</dt>
                 <dd className="text-white">
-                  {d.sources.length} <span className="text-slate-500">sources</span>
+                  {d.sources.length} <span className="text-slate-400">sources</span>
                 </dd>
               </div>
               <div className="rounded-lg border border-[rgba(135,180,220,0.16)] bg-[#101D30] px-3 py-2">
                 <dt className="sr-only">Countries covered</dt>
                 <dd className="text-white">
-                  {d.countriesCovered}/4 <span className="text-slate-500">markets</span>
+                  {d.countriesCovered}/4 <span className="text-slate-400">markets</span>
                 </dd>
               </div>
               <div className="rounded-lg border border-dashed border-violet-400/40 bg-violet-400/5 px-3 py-2">
                 <dt className="sr-only">Structured gaps</dt>
                 <dd className={POLICY_GAP_STYLE.text}>
-                  {d.gapsCount} <span className="text-slate-500">gaps</span>
+                  {d.gapsCount} <span className="text-slate-400">gaps</span>
                 </dd>
               </div>
             </dl>
@@ -232,7 +232,7 @@ export default async function PillarDeepDivePage({
 
           {/* Coverage across the four markets */}
           <section className="mt-10" aria-label={`${p.label} coverage by country`}>
-            <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+            <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">
               Coverage across the four markets
             </h2>
             <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -252,14 +252,14 @@ export default async function PillarDeepDivePage({
                     }`}
                   >
                     <p className="text-sm font-semibold text-white">
-                      {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
+                      {c.name} <span className="ml-1 font-mono text-2xs text-slate-400">{c.iso}</span>
                     </p>
                     {total > 0 ? (
                       <>
                         <p className="mt-1 font-mono text-2xl font-bold text-white">
                           {Math.round((v / total) * 100)}%
                         </p>
-                        <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                        <p className="mt-1 font-mono text-2xs uppercase tracking-wider text-slate-400">
                           {v} verified · {pv} partial · {total - v - pv} other
                         </p>
                         <div
@@ -283,13 +283,13 @@ export default async function PillarDeepDivePage({
                         </div>
                       </>
                     ) : (
-                      <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                      <p className="mt-2 font-mono text-2xs uppercase tracking-wider text-slate-400">
                         no researched claims
                       </p>
                     )}
                     {c.gap && (
                       <p
-                        className={`mt-2 rounded-full border px-2 py-px text-center font-mono text-[10px] ${POLICY_GAP_STYLE.chip}`}
+                        className={`mt-2 rounded-full border px-2 py-px text-center font-mono text-2xs ${POLICY_GAP_STYLE.chip}`}
                       >
                         structured gap
                       </p>
@@ -298,7 +298,7 @@ export default async function PillarDeepDivePage({
                 );
               })}
             </div>
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-2 text-xs text-slate-400">
               Open the same tiles in the{" "}
               <Link
                 href="/policy/intelligence#matrix"
@@ -312,7 +312,7 @@ export default async function PillarDeepDivePage({
 
           {/* Claims by country */}
           <section className="mt-12" aria-label={`${p.label} claims`}>
-            <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+            <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">
               Claims &amp; evidence trails
             </h2>
             {d.allClaims.length === 0 && (
@@ -328,9 +328,9 @@ export default async function PillarDeepDivePage({
                   <div key={c.key} className="rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31]">
                     <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[rgba(135,180,220,0.16)] p-4">
                       <h3 className="text-base font-bold text-white">
-                        {c.name} <span className="ml-1 font-mono text-[11px] text-slate-500">{c.iso}</span>
+                        {c.name} <span className="ml-1 font-mono text-2xs text-slate-400">{c.iso}</span>
                       </h3>
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                      <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                         {countLabel(c.claims.length, "claim")}
                       </span>
                     </div>
@@ -340,7 +340,7 @@ export default async function PillarDeepDivePage({
                           <div className="flex flex-wrap items-center gap-2">
                             <span
                               title={POLICY_STATES[cl.state as keyof typeof POLICY_STATES]?.blurb}
-                              className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-medium ${
+                              className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-2xs font-medium ${
                                 POLICY_STATES[cl.state as keyof typeof POLICY_STATES]?.chip ??
                                 "border-slate-700 text-slate-300"
                               }`}
@@ -353,7 +353,7 @@ export default async function PillarDeepDivePage({
                               />
                               {POLICY_STATES[cl.state as keyof typeof POLICY_STATES]?.label ?? cl.state}
                             </span>
-                            <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
+                            <span className="font-mono text-2xs uppercase tracking-wider text-slate-400">
                               {cl.id}
                             </span>
                             <CopyButton value={cl.id} className="ml-auto" />
@@ -362,7 +362,7 @@ export default async function PillarDeepDivePage({
                           {cl.note && <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{cl.note}</p>}
                           {cl.sources.length > 0 && (
                             <details className="mt-2">
-                              <summary className="cursor-pointer list-none font-mono text-[10px] uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
+                              <summary className="cursor-pointer list-none font-mono text-2xs uppercase tracking-widest text-sky-400 hover:text-sky-300 [&::-webkit-details-marker]:hidden">
                                 View evidence trail · {countLabel(cl.sources.length, "source")} ▾
                               </summary>
                               <ol className="mt-2 space-y-2 border-t border-[rgba(135,180,220,0.10)] pt-2">
@@ -377,7 +377,7 @@ export default async function PillarDeepDivePage({
                                       {s.publisher}
                                     </a>{" "}
                                     — {s.label}
-                                    <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                                    <span className="ml-1.5 whitespace-nowrap font-mono text-2xs uppercase tracking-wider text-slate-400">
                                       T{s.tier} ·{" "}
                                       {s.captureUrl ? (
                                         <a
@@ -394,7 +394,7 @@ export default async function PillarDeepDivePage({
                                       )}
                                     </span>
                                     {s.excerpt && (
-                                      <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+                                      <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-2xs leading-relaxed text-slate-400 line-clamp-4">
                                         {s.excerpt}
                                       </span>
                                     )}
@@ -414,11 +414,11 @@ export default async function PillarDeepDivePage({
           {/* Sources + gaps */}
           <div className="mt-12 grid gap-6 lg:grid-cols-5">
             <section className="lg:col-span-3" aria-label={`${p.label} sources`}>
-              <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+              <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">
                 Sources behind this pillar
               </h2>
               {d.sources.length === 0 ? (
-                <p className="mt-3 text-sm text-slate-500">
+                <p className="mt-3 text-sm text-slate-400">
                   No sources registered for this pillar yet.
                 </p>
               ) : (
@@ -432,7 +432,7 @@ export default async function PillarDeepDivePage({
                         className="group flex items-start gap-3 px-4 py-3 transition-colors hover:bg-[#13253A]/60"
                       >
                         <span
-                          className={`mt-0.5 inline-flex shrink-0 items-center rounded border px-1.5 py-px font-mono text-[9px] font-bold uppercase tracking-wider ${
+                          className={`mt-0.5 inline-flex shrink-0 items-center rounded border px-1.5 py-px font-mono text-2xs font-bold uppercase tracking-wider ${
                             s.tier === 1
                               ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
                               : s.tier === 2
@@ -444,14 +444,14 @@ export default async function PillarDeepDivePage({
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block text-sm leading-snug text-slate-200 group-hover:text-cyan-200">
-                            {s.publisher} <span className="text-slate-500">— {s.label}</span>
+                            {s.publisher} <span className="text-slate-400">— {s.label}</span>
                           </span>
-                          <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+                          <span className="mt-0.5 block font-mono text-2xs uppercase tracking-wider text-slate-400">
                             {s.sourceType} · {s.captureStatus} · {s.id}
                           </span>
                         </span>
                         <ArrowUpRight
-                          className="mt-1 size-3.5 shrink-0 text-slate-600 group-hover:text-cyan-300"
+                          className="mt-1 size-3.5 shrink-0 text-slate-400 group-hover:text-cyan-300"
                           aria-hidden="true"
                         />
                       </a>
@@ -462,11 +462,11 @@ export default async function PillarDeepDivePage({
             </section>
 
             <section className="lg:col-span-2" aria-label={`${p.label} structured gaps`}>
-              <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+              <h2 className="font-mono text-2xs uppercase tracking-[0.18em] text-slate-400">
                 Structured gaps
               </h2>
               {d.gapsCount === 0 ? (
-                <p className="mt-3 text-sm leading-relaxed text-slate-500">
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
                   No structured gaps — every market has researched coverage for this pillar.
                 </p>
               ) : (
@@ -478,14 +478,14 @@ export default async function PillarDeepDivePage({
                         key={c.key}
                         className={`rounded-xl border bg-violet-400/[0.04] p-4 ${POLICY_GAP_STYLE.chip}`}
                       >
-                        <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+                        <p className="font-mono text-2xs uppercase tracking-widest text-slate-400">
                           {c.name} — structured gap, not a finding
                         </p>
                         <p className="mt-1.5 text-sm leading-relaxed text-slate-300">{c.gap!.gap}</p>
-                        <p className="mt-2 text-xs leading-relaxed text-slate-500">
+                        <p className="mt-2 text-xs leading-relaxed text-slate-400">
                           Expected sources: {c.gap!.expectedSources.join("; ")}
                         </p>
-                        <p className="mt-1 text-xs leading-relaxed text-slate-500">
+                        <p className="mt-1 text-xs leading-relaxed text-slate-400">
                           Upgrade path: {c.gap!.upgradePath}
                         </p>
                       </div>
@@ -501,7 +501,7 @@ export default async function PillarDeepDivePage({
               href={`/policy/intelligence/pillars/${prevId}`}
               className="group rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-4 transition-colors hover:border-cyan-500/40"
             >
-              <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+              <span className="flex items-center gap-1.5 font-mono text-2xs uppercase tracking-widest text-slate-400">
                 <ArrowLeft
                   className="size-3.5 transition-transform group-hover:-translate-x-0.5"
                   aria-hidden="true"
@@ -516,7 +516,7 @@ export default async function PillarDeepDivePage({
               href={`/policy/intelligence/pillars/${nextId}`}
               className="group rounded-xl border border-[rgba(135,180,220,0.16)] bg-[#0E1D31] p-4 text-right transition-colors hover:border-cyan-500/40"
             >
-              <span className="flex items-center justify-end gap-1.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+              <span className="flex items-center justify-end gap-1.5 font-mono text-2xs uppercase tracking-widest text-slate-400">
                 Next pillar
                 <ArrowUpRight
                   className="size-3.5 transition-transform group-hover:-translate-y-0.5"
@@ -529,7 +529,7 @@ export default async function PillarDeepDivePage({
             </Link>
           </nav>
 
-          <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+          <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-2xs uppercase tracking-wider text-slate-400">
             {ds.datasetVersion} · {countLabel(d.allClaims.length, "claim")} in this pillar ·{" "}
             {countLabel(d.sources.length, "source")} · editorial gate: {ds.humanGate.status}
           </p>

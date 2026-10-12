@@ -132,7 +132,7 @@ export default function ResearchContent() {
               >
                 <div className="flex items-center justify-between gap-3 mb-4">
                   <span
-                    className={`inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-medium tracking-wide uppercase ${
+                    className={`inline-flex items-center rounded-full border px-3 py-1 text-2xs font-medium tracking-wide uppercase ${
                       report.featured
                         ? "border-cyan/30 text-cyan bg-cyan/5"
                         : "border-border/60 text-muted-foreground bg-accent/20"
@@ -162,7 +162,7 @@ export default function ResearchContent() {
                         <p className="text-sm font-bold text-foreground tabular-nums">
                           {s.value}
                         </p>
-                        <p className="text-[10px] text-muted-foreground mt-0.5">
+                        <p className="text-2xs text-muted-foreground mt-0.5">
                           {s.label}
                         </p>
                       </div>
@@ -189,7 +189,7 @@ export default function ResearchContent() {
                     }`}
                   >
                     <Download className="size-4" /> Download PDF
-                    <span className="text-[10px] opacity-70 font-normal">
+                    <span className="text-2xs opacity-70 font-normal">
                       {report.pdfMeta}
                     </span>
                   </a>
@@ -211,7 +211,7 @@ export default function ResearchContent() {
           >
             <div className="glass-card rounded-xl p-6 sm:p-7 h-full flex flex-col border-dashed">
               <div className="flex items-center justify-between gap-3 mb-4">
-                <span className="inline-flex items-center rounded-full border border-border/60 bg-accent/20 px-3 py-1 text-[11px] font-medium tracking-wide uppercase text-muted-foreground">
+                <span className="inline-flex items-center rounded-full border border-border/60 bg-accent/20 px-3 py-1 text-2xs font-medium tracking-wide uppercase text-muted-foreground">
                   Brief / 02 · In production
                 </span>
                 <Zap className="size-4 text-muted-foreground" />

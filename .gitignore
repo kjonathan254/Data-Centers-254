@@ -53,3 +53,6 @@ public/sw.js
 # W42 skills campaign - local-only artifacts
 dc254-skills-campaign/remotion-project/node_modules/
 dc254-skills-campaign/renders/
+
+# Task 129 visual QA screenshots (3.2MB) - local-only, keep repo lean
+research/task129-shots/

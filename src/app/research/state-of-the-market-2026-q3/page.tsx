@@ -111,8 +111,8 @@ export default function StateOfMarket2026Q3() {
             ].map((s) => (
               <div key={s.label} className="card-solid rounded-xl p-4">
                 <p className="text-2xl font-bold text-foreground tabular-nums">{s.value}</p>
-                <p className="text-[11px] font-medium text-foreground/80 mt-1">{s.label}</p>
-                <p className="text-[11px] text-muted-foreground mt-0.5">{s.sub}</p>
+                <p className="text-2xs font-medium text-foreground/80 mt-1">{s.label}</p>
+                <p className="text-2xs text-muted-foreground mt-0.5">{s.sub}</p>
               </div>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function StateOfMarket2026Q3() {
                   <Icon className="size-4 text-cyan shrink-0" />
                   <div>
                     <p className="text-xl font-semibold tabular-nums text-foreground">{s.n}</p>
-                    <p className="text-[11px] text-muted-foreground">{s.label}</p>
+                    <p className="text-2xs text-muted-foreground">{s.label}</p>
                   </div>
                 </div>
               );
@@ -241,7 +241,7 @@ export default function StateOfMarket2026Q3() {
                   >
                     <FileSpreadsheet className="size-3.5 shrink-0 text-cyan" />
                     {f.label}
-                    <span className="ml-auto font-mono text-[10px] opacity-70">{f.name}</span>
+                    <span className="ml-auto font-mono text-2xs opacity-70">{f.name}</span>
                   </a>
                 </li>
               ))}

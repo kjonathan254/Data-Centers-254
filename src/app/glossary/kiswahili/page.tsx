@@ -70,7 +70,7 @@ export default function KiswahiliGlossaryPage() {
             {kiswahiliTerms.map((t, i) => (
               <div key={t.en} className="rounded-xl border border-border/50 bg-accent/30 p-5">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
-                  <span className="text-[11px] font-mono text-cyan/60">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-2xs font-mono text-cyan/60">{String(i + 1).padStart(2, "0")}</span>
                   <h2 className="text-base font-semibold text-foreground">{t.sw}</h2>
                   <span className="text-xs text-muted-foreground">· {t.en}</span>
                 </div>

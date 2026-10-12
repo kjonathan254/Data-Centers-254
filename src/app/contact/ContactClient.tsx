@@ -140,7 +140,7 @@ export default function ContactClient() {
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cyan/50 transition-colors text-sm"
+                  className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan/50 transition-colors text-sm"
                   placeholder="Your name"
                 />
               </div>
@@ -154,7 +154,7 @@ export default function ContactClient() {
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cyan/50 transition-colors text-sm"
+                  className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan/50 transition-colors text-sm"
                   placeholder="you@example.com"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function ContactClient() {
                 rows={6}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-3 py-2.5 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cyan/50 transition-colors text-sm leading-relaxed resize-none"
+                className="w-full px-3 py-2.5 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan/50 transition-colors text-sm leading-relaxed resize-none"
                 placeholder="Your message..."
               />
             </div>

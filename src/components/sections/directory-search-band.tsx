@@ -34,7 +34,7 @@ export default function DirectorySearchBand() {
               name="search"
               placeholder="Search facilities, operators, cities…"
               aria-label="Search the data centre directory"
-              className="h-11 w-full rounded-lg border border-border bg-background pl-9 pr-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/40"
+              className="h-11 w-full rounded-lg border border-border bg-background pl-9 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/40"
             />
           </div>
           <button

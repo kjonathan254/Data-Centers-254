@@ -297,16 +297,16 @@ export default function PolicyIntelligencePage() {
               </blockquote>
               <div className="mt-4 grid gap-3 lg:grid-cols-2">
                 <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
-                  <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">How claims are built</h3>
+                  <h3 className="font-mono text-2xs uppercase tracking-widest text-slate-400">How claims are built</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-400">{ds.method}</p>
                   <p className="mt-3 text-sm leading-relaxed text-slate-400">{ds.gapSchema.rule}</p>
                 </div>
                 <div className={`rounded-xl border p-5 ${CONTROL_ROOM_SURFACES.border} ${CONTROL_ROOM_SURFACES.card}`}>
-                  <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Source tiers &amp; capture states</h3>
+                  <h3 className="font-mono text-2xs uppercase tracking-widest text-slate-400">Source tiers &amp; capture states</h3>
                   <dl className="mt-2 space-y-1.5">
                     {Object.entries(POLICY_SOURCE_TIERS).map(([tier, label]) => (
                       <div key={tier} className="flex gap-2 text-sm">
-                        <dt className="w-8 shrink-0 font-mono text-xs uppercase leading-relaxed text-slate-500">T{tier}</dt>
+                        <dt className="w-8 shrink-0 font-mono text-xs uppercase leading-relaxed text-slate-400">T{tier}</dt>
                         <dd className="text-slate-400">{label.replace(/^T\d+ · /, "")}</dd>
                       </div>
                     ))}
@@ -314,14 +314,14 @@ export default function PolicyIntelligencePage() {
                   <dl className="mt-3 space-y-1 border-t border-[rgba(135,180,220,0.10)] pt-3">
                     {Object.entries(POLICY_CAPTURE_LABELS).map(([key, label]) => (
                       <div key={key} className="flex gap-2 text-xs">
-                        <dt className="w-28 shrink-0 font-mono text-[10px] uppercase leading-relaxed text-slate-500">{key}</dt>
-                        <dd className="text-slate-500">{label}</dd>
+                        <dt className="w-28 shrink-0 font-mono text-2xs uppercase leading-relaxed text-slate-400">{key}</dt>
+                        <dd className="text-slate-400">{label}</dd>
                       </div>
                     ))}
                   </dl>
                 </div>
               </div>
-              <p className="mt-4 max-w-3xl text-xs leading-relaxed text-slate-500">
+              <p className="mt-4 max-w-3xl text-xs leading-relaxed text-slate-400">
                 This is not a blog category. It is the auditable evidence layer behind our policy
                 coverage: every statement above is a dataset claim with named sources, tiers and
                 capture states, published under a five-state vocabulary. Where a pillar has not been
@@ -341,7 +341,7 @@ export default function PolicyIntelligencePage() {
               </p>
             </section>
 
-            <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+            <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-2xs uppercase tracking-wider text-slate-400">
               {ops.meta.datasetVersion} · {countLabel(ops.meta.claims, "claim")} · {countLabel(ops.meta.sources, "source")} ·{" "}
               {ops.meta.gaps} structured gaps ·{" "}
               <a

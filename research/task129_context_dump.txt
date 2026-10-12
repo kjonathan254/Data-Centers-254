@@ -1,0 +1,588 @@
+
+##### src/app/articles/[slug]/ArticlePageClient.tsx
+  L 227 [OPACITY-LOW] text-foreground/60
+        | <span className="text-foreground/60 truncate max-w-[200px]">{frontmatter.title}</span>
+  L 242 [OPACITY-LOW] text-foreground/80
+        | <span className="font-medium text-foreground/80">
+
+##### src/app/chat/page.tsx
+  L 110 [OPACITY-LOW] text-muted-foreground/60
+        | <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground/60">
+
+##### src/app/contact/ContactClient.tsx
+  L 143 [OPACITY-LOW] text-muted-foreground/40
+        | className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cyan
+  L 157 [OPACITY-LOW] text-muted-foreground/40
+        | className="w-full h-11 px-3 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cyan
+  L 195 [OPACITY-LOW] text-muted-foreground/40
+        | className="w-full px-3 py-2.5 bg-surface border border-border rounded-lg text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-cy
+
+##### src/app/data-exports/ExportInterestClient.tsx
+  L  85 [OPACITY-LOW] text-muted-foreground/50
+        | className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus
+
+##### src/app/directory/[facility]/page.tsx
+  L  62 [OPACITY-LOW] text-muted-foreground/60
+        | 4: "border-border/50 text-muted-foreground/60",
+  L 220 [OPACITY-LOW] text-foreground/80
+        | <span className="text-foreground/80">{f.name}</span>
+  L 554 [OPACITY-LOW] text-muted-foreground/70
+        | <span className="text-[10px] text-muted-foreground/70">
+
+##### src/app/error.tsx
+  L  29 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="text-xs font-mono text-muted-foreground/70 mb-6">
+
+##### src/app/foundations/FoundationsClient.tsx
+  L 153 [OPACITY-LOW] text-muted-foreground/30
+        | <Circle className="size-4 text-muted-foreground/30" />
+  L 168 [OPACITY-LOW] text-foreground/50
+        | <span className="text-sm font-medium text-foreground/50">
+  L 220 [OPACITY-LOW] text-muted-foreground/50
+        | className="mt-16 text-xs text-muted-foreground/50 text-center"
+
+##### src/app/glossary/kiswahili/KiswahiliQuiz.tsx
+  L 112 [OPACITY-LOW] text-muted-foreground/60
+        | else cls = "border-border/50 text-muted-foreground/60";
+
+##### src/app/infrastructure/map/page.tsx
+  L 135 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="text-xs text-muted-foreground/70 max-w-md">
+
+##### src/app/policy/intelligence/console-chrome.tsx
+  L  86 [SLATE500] text-slate-500
+        | isActive ? "text-cyan-300" : "text-slate-500 hover:text-slate-200"
+  L 150 [SLATE500] text-slate-500
+        | <p className="truncate text-[10px] leading-tight text-slate-500">East Africa regulatory evidence engine</p>
+  L 190 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{rTag}</span>
+  L 196 [SLATE500] text-slate-500
+        | <CalendarDays className="size-3.5 text-slate-500" aria-hidden="true" />
+  L 206 [SLATE500] text-slate-500
+        | <ChevronDown className="size-3 text-slate-500" aria-hidden="true" />
+
+##### src/app/policy/intelligence/control-room.tsx
+  L  66 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">{children}</h2>
+  L  90 [SLATE500] text-slate-500
+        | className="mt-1 cursor-help text-slate-500 transition-colors hover:text-slate-300"
+  L  99 [SLATE500] text-slate-500
+        | <span className="text-2xl text-slate-500">%</span>
+  L 100 [SLATE500] text-slate-500
+        | <span className="mt-1.5 block text-[11px] font-medium uppercase tracking-[0.16em] text-slate-500">
+  L 120 [SLATE500] text-slate-500
+        | <p className="mt-3 max-w-[42ch] text-[11px] leading-relaxed text-slate-500">
+  L 133 [SLATE600] text-slate-600
+        | <div className="mt-1.5 flex justify-between font-mono text-[9px] uppercase tracking-wider text-slate-600">
+  L 152 [SLATE500] text-slate-500
+        | <dt className="text-[10px] font-medium uppercase tracking-wider text-slate-500">{s.k}</dt>
+  L 203 [SLATE500] text-slate-500
+        | <span className="text-lg text-slate-500">%</span>
+  L 211 [SLATE600] text-slate-600
+        | <span className="text-slate-600"> / </span>
+  L 214 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] text-slate-500">{c.claims} claims</span>
+  L 237 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 257 [SLATE600] text-slate-600
+        | <span className="text-slate-600">({Math.round((n / total) * 100)}%)</span>
+  L 274 [SLATE600] text-slate-600
+        | <p className="mt-1 text-[11px] leading-relaxed text-slate-600">
+  L 312 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 324 [SLATE500] text-slate-500
+        | <p className="mt-0.5 text-[11px] leading-relaxed text-slate-500">{it.detail}</p>
+  L 336 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 366 [SLATE600] text-slate-600
+        | <span aria-hidden="true" className="mx-1 text-slate-600">&rarr;</span>
+  L 369 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">{entry.date}</span>
+  L 378 [SLATE500] text-slate-500
+        | <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-slate-500">{entry.summary}</p>
+  L 383 [SLATE600] text-slate-600
+        | <p className="mt-2 text-[11px] leading-relaxed text-slate-600">
+  L 395 [SLATE600] text-slate-600
+        | <ChevronRight className="size-3.5 shrink-0 text-slate-600 transition-transform group-open:rotate-90" aria-hidden="true" />
+  L 397 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 401 [SLATE500] text-slate-500
+        | <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] text-slate-500">
+  L 403 [SLATE700] text-slate-700
+        | <span className="text-slate-700">/</span>
+  L 409 [SLATE500] text-slate-500
+        | <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+  L 410 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+  L 439 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 444 [SLATE500] text-slate-500
+        | <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">{cl.previousVersionNote}</p>
+  L 446 [SLATE500] text-slate-500
+        | <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] leading-relaxed text-slate-500">
+  L 447 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Evidence &middot; </span>
+  L 458 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase text-slate-500">
+  L 474 [SLATE700] text-slate-700
+        | {i < cl.sources.length - 1 && <span className="text-slate-700">/</span>}
+  L 479 [SLATE500] text-slate-500
+        | <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+  L 480 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Editorial decision &middot; </span>
+  L 526 [SLATE500] text-slate-500
+        | <span className="ml-2 hidden font-sans normal-case tracking-normal text-slate-500 sm:inline">
+  L 555 [SLATE500] text-slate-500
+        | <span className="hidden shrink-0 font-mono text-[11px] text-slate-500 sm:block">
+  L 558 [SLATE600] text-slate-600
+        | <ChevronRight className="size-3.5 shrink-0 text-slate-600 transition-transform group-open:rotate-90" aria-hidden="true" />
+  L 563 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs leading-relaxed text-slate-500">
+  L 564 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Expected sources · </span>
+  L 567 [SLATE500] text-slate-500
+        | <p className="mt-1 text-xs leading-relaxed text-slate-500">
+  L 568 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">Upgrade path · </span>
+  L 621 [SLATE500] text-slate-500
+        | {rows.length === 0 && <li className="text-sm text-slate-500">No open gaps.</li>}
+  L 643 [SLATE500] text-slate-500
+        | <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{claim.id}</span>
+  L 648 [SLATE500] text-slate-500
+        | <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 668 [SLATE500] text-slate-500
+        | <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 685 [SLATE500] text-slate-500
+        | <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+  L 701 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 705 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs leading-relaxed text-slate-500">Expected sources: {gap.expectedSources.join("; ")}</p>
+  L 706 [SLATE500] text-slate-500
+        | <p className="mt-1 text-xs leading-relaxed text-slate-500">Upgrade path: {gap.upgradePath}</p>
+  L 752 [SLATE500] text-slate-500
+        | {c.name} <span className="ml-1 font-mono text-xs text-slate-500">{c.iso}</span>
+  L 754 [SLATE500] text-slate-500
+        | <span className="font-mono text-[11px] text-slate-500">
+  L 776 [SLATE500] text-slate-500
+        | {t.id === "claims" && <span className="ml-1.5 font-mono text-[10px] text-slate-500">{claims.length}</span>}
+  L 777 [SLATE500] text-slate-500
+        | {t.id === "gaps" && <span className="ml-1.5 font-mono text-[10px] text-slate-500">{gaps.length}</span>}
+  L 788 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Evidence profile</p>
+  L 799 [SLATE600] text-slate-600
+        | <span className="text-slate-600"> · </span>
+  L 801 [SLATE600] text-slate-600
+        | <span className="text-slate-600"> · </span>
+  L 804 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs leading-relaxed text-slate-500">
+  L 811 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Priority gaps</p>
+  L 823 [SLATE500] text-slate-500
+        | <p className="border-t border-[rgba(135,180,220,0.10)] pt-3 text-[11px] leading-relaxed text-slate-500">
+  L 829 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Regulator map</p>
+  L 833 [SLATE500] text-slate-500
+        | <dt className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 862 [SLATE600] text-slate-600
+        | <span className="ml-2 text-slate-600">{countLabel(pClaims.length, "claim")}</span>
+  L 889 [SLATE500] text-slate-500
+        | <dt className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 902 [SLATE500] text-slate-500
+        | <p className="text-xs text-slate-500">
+  L 916 [SLATE500] text-slate-500
+        | <span className="block text-xs text-slate-500">{s.label}</span>
+  L 917 [SLATE600] text-slate-600
+        | <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-wider text-slate-600">
+  L 947 [SLATE500] text-slate-500
+        | {gaps.length === 0 && <p className="text-sm text-slate-500">No structured gaps for this country.</p>}
+  L 984 [SLATE600] text-slate-600
+        | <span className="ml-1 font-normal text-slate-600">/ {data.meta.claims}</span>
+  L 988 [SLATE500] text-slate-500
+        | <span className="block text-xs leading-relaxed text-slate-500">{desc[key] ?? cfg.blurb}</span>
+  L1002 [SLATE600] text-slate-600
+        | <span className="ml-1 font-normal text-slate-600">pillars</span>
+  L1005 [SLATE500] text-slate-500
+        | <span className="block text-xs leading-relaxed text-slate-500">Pillar owned but not yet researched — never a finding</span>
+  L1040 [SLATE500] text-slate-500
+        | <p className="mt-2.5 max-w-3xl text-[11px] leading-relaxed text-slate-500">
+  L1090 [SLATE500] text-slate-500
+        | <p className="mt-3 max-w-3xl text-xs leading-relaxed text-slate-500">
+  L1131 [SLATE500] text-slate-500
+        | x.key === roomKey ? "bg-cyan-500/15 text-cyan-300" : "text-slate-500 hover:text-slate-300"
+
+##### src/app/policy/intelligence/matrix-console.tsx
+  L 193 [SLATE500] text-slate-500
+        | <p className="mt-0.5 text-xs text-slate-500">
+  L 208 [SLATE500] text-slate-500
+        | <span className="flex items-center gap-1.5 text-slate-500">
+  L 213 [SLATE500] text-slate-500
+        | className="cursor-help text-slate-500 transition-colors hover:text-slate-300"
+  L 224 [SLATE500] text-slate-500
+        | <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+  L 233 [SLATE500] placeholder:text-slate-500
+        | className="h-9 w-full rounded-lg border border-slate-700/70 bg-[#101D30] pl-9 pr-10 text-sm text-slate-200 placeholder:text-slate-500 focus:border-cyan-500/60 f
+  L 236 [SLATE500] text-slate-500
+        | <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-slate-700 bg-[#0B1627] px-1.5 py-0.5 font-mono text-[
+  L 289 [SLATE500] text-slate-500
+        | <p className="border-b border-[rgba(135,180,220,0.10)] px-4 py-2.5 font-mono text-[11px] uppercase tracking-widest text-slate-500">
+  L 303 [SLATE500] text-slate-500
+        | <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">{cl.id}</span>
+  L 304 [SLATE600] text-slate-600
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-600">
+  L 310 [SLATE600] text-slate-600
+        | <ChevronRight className="ml-auto mt-1 size-4 shrink-0 text-slate-600" aria-hidden="true" />
+  L 315 [SLATE500] text-slate-500
+        | <li className="px-4 py-6 text-sm text-slate-500">No claims match. Try a regulator, pillar or state name.</li>
+  L 328 [SLATE500] text-slate-500
+        | {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
+  L 330 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 360 [SLATE600] text-slate-600
+        | <ChevronRight className="size-4 text-slate-600" aria-hidden="true" />
+  L 376 [SLATE500] text-slate-500
+        | <th className="px-4 py-3 text-left font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500 sm:px-5">
+  L 394 [SLATE500] text-slate-500
+        | <span className="block font-mono text-[10px] font-normal text-slate-500">
+  L 428 [SLATE600] text-slate-600
+        | <span className="block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+  L 442 [SLATE700] text-slate-700
+        | <span className="text-xs text-slate-700">—</span>
+  L 497 [SLATE600] text-slate-600
+        | {i > 0 && <span className="text-slate-600"> · </span>}
+  L 504 [SLATE500] className={`text-slate-500`}>
+        | {activeGap && <span className={`text-slate-500`}> · </span>}
+  L 509 [SLATE500] text-slate-500
+        | <span className="text-slate-500">No researched coverage</span>
+  L 522 [SLATE500] text-slate-500
+        | {activePillar && <p className="mt-2 text-xs leading-relaxed text-slate-500">{activePillar.blurb}</p>}
+  L 527 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Pillar overview</p>
+  L 550 [SLATE500] text-slate-500
+        | <p className={`text-[11px] ${activeGap ? POLICY_GAP_STYLE.text : "text-slate-500"}`}>
+  L 559 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 579 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 584 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs leading-relaxed text-slate-500">
+  L 588 [SLATE500] text-slate-500
+        | <p className="mt-1 text-xs leading-relaxed text-slate-500">Upgrade path: {activeGap.upgradePath}</p>
+  L 595 [SLATE500] text-slate-500
+        | <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">Key findings</p>
+  L 611 [SLATE500] text-slate-500
+        | className="group/cl inline-flex items-center gap-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-500 transition-colors hover:text-cyan-300"
+  L 620 [SLATE500] text-slate-500
+        | <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 640 [SLATE500] text-slate-500
+        | <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 657 [SLATE500] text-slate-500
+        | <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+  L 673 [SLATE500] text-slate-500
+        | <p className="mt-5 flex items-center gap-2 border-t border-[rgba(135,180,220,0.10)] pt-4 text-xs text-slate-500">
+  L 674 [SLATE600] text-slate-600
+        | <CalendarDays className="size-3.5 text-slate-600" aria-hidden="true" />
+  L 716 [SLATE600] text-slate-600
+        | : "border-slate-800 bg-slate-900/40 text-slate-600 hover:border-slate-600";
+  L 733 [SLATE600] text-slate-600
+        | <span className="font-mono text-[11px] font-normal text-slate-600" aria-hidden="true">—</span>
+
+##### src/app/policy/intelligence/page.tsx
+  L 300 [SLATE500] text-slate-500
+        | <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">How claims are built</h3>
+  L 305 [SLATE500] text-slate-500
+        | <h3 className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Source tiers &amp; capture states</h3>
+  L 309 [SLATE500] text-slate-500
+        | <dt className="w-8 shrink-0 font-mono text-xs uppercase leading-relaxed text-slate-500">T{tier}</dt>
+  L 317 [SLATE500] text-slate-500
+        | <dt className="w-28 shrink-0 font-mono text-[10px] uppercase leading-relaxed text-slate-500">{key}</dt>
+  L 318 [SLATE500] text-slate-500
+        | <dd className="text-slate-500">{label}</dd>
+  L 324 [SLATE500] text-slate-500
+        | <p className="mt-4 max-w-3xl text-xs leading-relaxed text-slate-500">
+  L 344 [SLATE600] text-slate-600
+        | <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+
+##### src/app/policy/intelligence/pillars/[pillar]/page.tsx
+  L 175 [SLATE500] text-slate-500
+        | className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-slate-500"
+  L 184 [SLATE700] text-slate-700
+        | <ChevronRight className="size-3.5 text-slate-700" aria-hidden="true" />
+  L 190 [SLATE500] text-slate-500
+        | <p className="font-mono text-xs uppercase tracking-widest text-slate-500">
+  L 193 [ONEOFF40] text-[40px]
+        | <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-[40px] sm:leading-[1.15]">
+  L 203 [SLATE500] text-slate-500
+        | <CountUp value={d.coveragePct} />% <span className="text-slate-500">verified</span>
+  L 209 [SLATE500] text-slate-500
+        | {d.allClaims.length} <span className="text-slate-500">claims</span>
+  L 215 [SLATE500] text-slate-500
+        | {d.sources.length} <span className="text-slate-500">sources</span>
+  L 221 [SLATE500] text-slate-500
+        | {d.countriesCovered}/4 <span className="text-slate-500">markets</span>
+  L 227 [SLATE500] text-slate-500
+        | {d.gapsCount} <span className="text-slate-500">gaps</span>
+  L 235 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  L 255 [SLATE500] text-slate-500
+        | {c.name} <span className="ml-1 font-mono text-[10px] text-slate-500">{c.iso}</span>
+  L 262 [SLATE500] text-slate-500
+        | <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 286 [SLATE500] text-slate-500
+        | <p className="mt-2 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 301 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs text-slate-500">
+  L 315 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  L 331 [SLATE500] text-slate-500
+        | {c.name} <span className="ml-1 font-mono text-[11px] text-slate-500">{c.iso}</span>
+  L 333 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 356 [SLATE500] text-slate-500
+        | <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
+  L 380 [SLATE500] text-slate-500
+        | <span className="ml-1.5 whitespace-nowrap font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 397 [SLATE500] text-slate-500
+        | <span className="mt-1 block border-l border-slate-700 pl-2 font-mono text-[10px] leading-relaxed text-slate-500 line-clamp-4">
+  L 417 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  L 421 [SLATE500] text-slate-500
+        | <p className="mt-3 text-sm text-slate-500">
+  L 447 [SLATE500] text-slate-500
+        | {s.publisher} <span className="text-slate-500">— {s.label}</span>
+  L 449 [SLATE600] text-slate-600
+        | <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+  L 454 [SLATE600] text-slate-600
+        | className="mt-1 size-3.5 shrink-0 text-slate-600 group-hover:text-cyan-300"
+  L 465 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  L 469 [SLATE500] text-slate-500
+        | <p className="mt-3 text-sm leading-relaxed text-slate-500">
+  L 481 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 485 [SLATE500] text-slate-500
+        | <p className="mt-2 text-xs leading-relaxed text-slate-500">
+  L 488 [SLATE500] text-slate-500
+        | <p className="mt-1 text-xs leading-relaxed text-slate-500">
+  L 504 [SLATE500] text-slate-500
+        | <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 519 [SLATE500] text-slate-500
+        | <span className="flex items-center justify-end gap-1.5 font-mono text-[10px] uppercase tracking-widest text-slate-500">
+  L 532 [SLATE600] text-slate-600
+        | <p className="mt-10 border-t border-[rgba(135,180,220,0.10)] pt-4 font-mono text-[10px] uppercase tracking-wider text-slate-600">
+
+##### src/app/policy/intelligence/source-quality.tsx
+  L 102 [SLATE500] text-slate-500
+        | <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  L 105 [SLATE500] text-slate-500
+        | <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 114 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Tier mix</p>
+  L 150 [SLATE600] text-slate-600
+        | <span className="hidden font-mono text-[9px] uppercase tracking-wider text-slate-600 group-hover:inline">
+  L 156 [SLATE600] text-slate-600
+        | <span className="ml-1 font-normal text-slate-600">
+  L 168 [SLATE500] text-slate-500
+        | <p className="font-mono text-[10px] uppercase tracking-widest text-slate-500">Capture health</p>
+  L 208 [SLATE500] text-slate-500
+        | <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+  L 221 [SLATE500] text-slate-500
+        | <span className="ml-auto font-mono text-[10px] uppercase tracking-wider text-slate-500">
+  L 223 [SLATE600] text-slate-600
+        | {filtered.length !== sources.length && <span className="text-slate-600"> / {sources.length}</span>}
+  L 232 [SLATE500] text-slate-500
+        | <li className="px-3 py-6 text-center text-xs text-slate-500">
+  L 276 [SLATE500] text-slate-500
+        | <span className="text-slate-500"> — {s.label}</span>
+  L 278 [SLATE600] text-slate-600
+        | <span className="mt-0.5 block font-mono text-[9px] uppercase tracking-wider text-slate-600">
+  L 283 [SLATE600] text-slate-600
+        | className="mt-1 size-3.5 shrink-0 text-slate-600 transition-colors group-hover:text-cyan-300"
+
+##### src/app/policy/page.tsx
+  L  60 [SLATE500] text-slate-500
+        | <p className="font-mono text-[11px] uppercase tracking-widest text-slate-500">
+  L  67 [SLATE500] text-slate-500
+        | <p className="mt-1 text-xs text-slate-500">
+
+##### src/app/research/state-of-kenyan-data-centres-2026/page.tsx
+  L 122 [OPACITY-LOW] text-foreground/80
+        | <p className="text-[11px] font-medium text-foreground/80 mt-1">{s.label}</p>
+
+##### src/app/research/state-of-the-market-2026-q3/page.tsx
+  L 114 [OPACITY-LOW] text-foreground/80
+        | <p className="text-[11px] font-medium text-foreground/80 mt-1">{s.label}</p>
+
+##### src/app/search/SearchClient.tsx
+  L 161 [OPACITY-LOW] text-muted-foreground/50
+        | className="w-full h-14 pl-12 pr-12 bg-surface border border-border rounded-xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:bord
+  L 191 [OPACITY-LOW] text-muted-foreground/30
+        | <SearchIcon className="size-10 text-muted-foreground/30 mx-auto mb-4" />
+  L 259 [OPACITY-LOW] text-muted-foreground/30
+        | <ArrowRight className="size-4 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+  L 318 [OPACITY-LOW] text-muted-foreground/30
+        | <ArrowRight className="size-4 text-muted-foreground/30 group-hover:text-cyan group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+
+##### src/app/subscribe/invalid/page.tsx
+  L  22 [OPACITY-LOW] text-white/70
+        | <p className="mt-4 text-base leading-relaxed text-white/70">
+  L  29 [HEXDARK] text-[#04121f]
+        | className="mt-8 inline-block rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
+
+##### src/app/subscribe/unsubscribed/page.tsx
+  L  22 [OPACITY-LOW] text-white/70
+        | <p className="mt-4 text-base leading-relaxed text-white/70">
+  L  28 [OPACITY-LOW] text-white/50
+        | <p className="mt-3 text-sm text-white/50">
+  L  33 [HEXDARK] text-[#04121f]
+        | className="mt-8 inline-block rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
+
+##### src/app/subscribe/verified/page.tsx
+  L  22 [OPACITY-LOW] text-white/70
+        | <p className="mt-4 text-base leading-relaxed text-white/70">
+  L  27 [OPACITY-LOW] text-white/50
+        | <p className="mt-3 text-sm text-white/50">
+  L  33 [HEXDARK] text-[#04121f]
+        | className="mt-8 inline-block rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
+
+##### src/app/tracker/page.tsx
+  L 368 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground/70">
+
+##### src/components/chat/jibu-chat.tsx
+  L 324 [OPACITY-LOW] text-muted-foreground/60
+        | className="h-10 min-w-0 flex-1 rounded-xl border border-border/50 bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border
+  L 335 [OPACITY-LOW] text-muted-foreground/60
+        | <p className="mt-2 text-[10px] leading-relaxed text-muted-foreground/60">
+
+##### src/components/compare/compare-picker.tsx
+  L  95 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="text-xs text-muted-foreground/70">
+  L 141 [OPACITY-LOW] text-muted-foreground/60
+        | className="h-10 w-full rounded-lg border border-border/50 bg-background pl-10 pr-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cya
+
+##### src/components/compare/compare-table.tsx
+  L 207 [ONEOFF13] text-[13px]
+        | row.long ? "text-xs leading-relaxed" : "text-[13px]"
+  L 248 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
+
+##### src/components/consent-gate.tsx
+  L  95 [HEXDARK] text-[#04121f]
+        | className="rounded-lg bg-sky-500 px-3 py-1.5 text-xs font-semibold text-[#04121f] transition-colors hover:bg-sky-400"
+  L 102 [OPACITY-LOW] [LIGHT-BG-PAIR?] text-white/80
+        | className="rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 transition-colors hover:bg-white/5"
+
+##### src/components/east-africa-infrastructure-map.tsx
+  L 128 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="text-muted-foreground/80">These are the site&apos;s canonical labels — the directory and market report use the same numbers. PIDA registry project
+  L 277 [OPACITY-LOW] text-muted-foreground/80
+        | <th scope="col" className="py-2 pr-2 text-[10px] font-medium font-mono uppercase tracking-widest text-muted-foreground/80">Dimension</th>
+  L 300 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="pt-1 text-[10px] text-muted-foreground/70">Figures computed from the verified facility dataset (map layer). Published capacity = operational sites
+  L 326 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mb-1.5 text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Start from a cable</p>
+  L 372 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="pt-1 text-[10px] text-muted-foreground/70">Route geometry is schematic — the chain is the point.</p>
+  L 717 [OPACITY-LOW] text-muted-foreground/70
+        | <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/70 mr-1">Status</span>
+  L 954 [OPACITY-LOW] text-muted-foreground/50
+        | <ChevronRight className={`w-3 h-3 shrink-0 transition-all ${activeCable === c.id ? "text-cyan translate-x-0.5" : "text-muted-foreground/50"}`} />
+  L 961 [OPACITY-LOW] text-muted-foreground/60
+        | className="my-1.5 mr-1 flex shrink-0 items-center rounded px-1.5 text-muted-foreground/60 transition-colors hover:text-cyan focus-visible:outline-none focus-vis
+  L 968 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="mt-2 text-[10px] leading-snug text-muted-foreground/70">
+
+##### src/components/footer.tsx
+  L  51 [OPACITY-LOW] text-foreground/80
+        | <p className="text-sm font-medium text-foreground/80 leading-relaxed mb-2 max-w-xs">
+  L  56 [OPACITY-LOW] text-foreground/70
+        | <Link href="/about" className="text-foreground/70 hover:text-cyan underline underline-offset-2">
+
+##### src/components/sections/directory-search-band.tsx
+  L  37 [OPACITY-LOW] text-muted-foreground/60
+        | className="h-11 w-full rounded-lg border border-border bg-background pl-9 pr-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40
+
+##### src/components/sections/directory.tsx
+  L 297 [OPACITY-LOW] text-foreground/80
+        | Capacity vocabulary: <span className="font-medium text-foreground/80">LIVE</span> = published live IT load ·{" "}
+  L 298 [OPACITY-LOW] text-foreground/80
+        | <span className="font-medium text-foreground/80">DESIGNED</span> = buildable capacity of a live facility ·{" "}
+  L 299 [OPACITY-LOW] text-foreground/80
+        | <span className="font-medium text-foreground/80">PLANNED</span> = under construction or committed ·{" "}
+  L 300 [OPACITY-LOW] text-foreground/80
+        | <span className="font-medium text-foreground/80">ANNOUNCED</span> = developer-stated, not yet built. Every MW figure on a card carries its type.{" "}
+  L 419 [OPACITY-LOW] text-muted-foreground/60
+        | className="h-11 pl-10 bg-background border-border/50 text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:ring-cyan/20 rounded-lg tex
+  L 487 [OPACITY-LOW] text-foreground/80
+        | {cap && <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title={cap.tip}><Zap className="size-3.5 text-cyan" /><span className="font-mon
+
+##### src/components/sections/hero.tsx
+  L 160 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-4 text-[11px] text-muted-foreground/80">
+
+##### src/components/sections/market-snapshot.tsx
+  L  97 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
+  L 112 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-1 text-[11px] leading-snug text-muted-foreground/80">
+  L 119 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground/80">
+
+##### src/components/sections/newsletter-v2.tsx
+  L 142 [OPACITY-LOW] text-muted-foreground/50
+        | className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus
+
+##### src/components/sections/rack-report-signup.tsx
+  L 129 [OPACITY-LOW] text-muted-foreground/50
+        | className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus
+
+##### src/components/sections/subscribe-compact.tsx
+  L 129 [OPACITY-LOW] text-muted-foreground/50
+        | className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus
+
+##### src/components/sections/the-scale.tsx
+  L  74 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-6 max-w-lg text-xs leading-relaxed text-muted-foreground/80">
+
+##### src/components/tracker/cable-explorer.tsx
+  L 137 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-3 flex items-center gap-1.5 text-[11px] text-muted-foreground/80">
+  L 190 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Owner / consortium</dt>
+  L 194 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Kenyan landing</dt>
+  L 198 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Design capacity</dt>
+  L 202 [OPACITY-LOW] text-muted-foreground/80
+        | <span className="mt-1 block text-[11px] leading-snug text-muted-foreground/80">
+  L 209 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence</dt>
+  L 571 [OPACITY-LOW] text-muted-foreground/80
+        | <th key={h} scope="col" className="py-2 pr-3 text-[10px] font-mono font-medium uppercase tracking-widest text-muted-foreground/80">{h}</th>
+  L 600 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-2.5 text-[11px] leading-snug text-muted-foreground/80">
+  L 631 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="mt-1 text-[10px] text-muted-foreground/70">
+
+##### src/components/tracker/evidence-drawer.tsx
+  L  76 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence record</p>
+  L 106 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Status</dt>
+  L 110 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Owner / consortium</dt>
+  L 114 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Kenyan landing</dt>
+  L 118 [OPACITY-LOW] text-muted-foreground/80
+        | <dt className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">Evidence note</dt>
+  L 125 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/80">
+  L 150 [OPACITY-LOW] text-muted-foreground/80
+        | <p className="mt-2 text-[11px] leading-snug text-muted-foreground/80">
+  L 171 [OPACITY-LOW] text-muted-foreground/70
+        | <p className="flex items-center gap-1.5 pb-2 text-[11px] text-muted-foreground/70">
+
+##### src/components/ui/toast.tsx
+  L  80 [OPACITY-LOW] text-foreground/50
+        | "absolute right-1 top-1 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-1 g

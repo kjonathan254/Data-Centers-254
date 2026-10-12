@@ -122,7 +122,7 @@ export default function JibuWelcome({
       <div className="flex items-center gap-3 pr-8">
         <JibuAvatar className="size-10" />
         <div className="min-w-0">
-          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+          <p className="font-mono text-2xs uppercase tracking-widest text-muted-foreground">
             DC254 · {BOT_IDENTITY.name}
           </p>
           <p className="text-base font-semibold text-foreground">

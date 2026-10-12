@@ -142,8 +142,8 @@ function CableRegister({ search }: { search: string }) {
         if (!group.length) return null;
         return (
           <div key={status}>
-            <p className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-muted-foreground">
-              <span className={`inline-block rounded-full border px-2 py-0.5 text-[9px] font-bold ${CABLE_STATUS_META[status].badge}`}>{status}</span>
+            <p className="flex items-center gap-2 text-2xs font-mono uppercase tracking-widest text-muted-foreground">
+              <span className={`inline-block rounded-full border px-2 py-0.5 text-2xs font-bold ${CABLE_STATUS_META[status].badge}`}>{status}</span>
               {group.length} system{group.length === 1 ? "" : "s"}
             </p>
             <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
@@ -154,7 +154,7 @@ function CableRegister({ search }: { search: string }) {
                       <h3 className="text-base font-semibold text-foreground leading-snug">{c.name}</h3>
                       {c.longName && <p className="text-xs text-muted-foreground mt-0.5">{c.longName}</p>}
                     </div>
-                    <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${CABLE_STATUS_META[c.status].badge}`}>
+                    <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-2xs font-medium border ${CABLE_STATUS_META[c.status].badge}`}>
                       {c.rfsDate ? `RFS ${c.rfsDate}` : "no RFS date"}
                     </Badge>
                   </div>
@@ -321,7 +321,7 @@ export default function DirectorySection({
                 }`}
               >
                 {t.label}
-                <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-bold tabular-nums ${
+                <span className={`rounded-full px-1.5 py-0.5 text-2xs font-bold tabular-nums ${
                   active ? "bg-cyan/20 text-cyan" : "bg-accent/60 text-muted-foreground"
                 }`}>{count}</span>
               </button>
@@ -369,7 +369,7 @@ export default function DirectorySection({
                 <div key={s.label} className="card-solid rounded-xl p-4">
                   <Icon className="size-4 text-cyan mb-2" />
                   <p className="text-lg sm:text-xl font-semibold text-foreground tabular-nums">{s.value}</p>
-                  <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
+                  <p className="text-2xs text-muted-foreground mt-0.5">{s.label}</p>
                 </div>); })}
             </div>
           );
@@ -404,7 +404,7 @@ export default function DirectorySection({
                 <div key={s.label} className="card-solid rounded-xl p-4">
                   <Icon className="size-4 text-cyan mb-2" />
                   <p className="text-lg sm:text-xl font-semibold text-foreground tabular-nums">{s.value}</p>
-                  <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
+                  <p className="text-2xs text-muted-foreground mt-0.5">{s.label}</p>
                 </div>); })}
             </div>
           );
@@ -416,13 +416,13 @@ export default function DirectorySection({
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
               <Input placeholder={tab === "cables" ? "Search cable systems, owners, landings..." : "Search facilities, operators, locations..."} value={search} onChange={(e) => setSearch(e.target.value)}
-                className="h-11 pl-10 bg-background border-border/50 text-foreground placeholder:text-muted-foreground/60 focus:border-cyan/40 focus:ring-cyan/20 rounded-lg text-sm" />
+                className="h-11 pl-10 bg-background border-border/50 text-foreground placeholder:text-muted-foreground focus:border-cyan/40 focus:ring-cyan/20 rounded-lg text-sm" />
               {search && <button onClick={() => setSearch("")} aria-label="Clear search" className="absolute right-3 top-1/2 -translate-y-1/2"><X className="size-4 text-muted-foreground hover:text-foreground" /></button>}
             </div>
             {tab !== "cables" ? (
             <Button variant="outline" onClick={() => setShowFilters(!showFilters)} className="h-11 px-4 border-border/50 gap-2 relative">
               <SlidersHorizontal className="size-4" />Filters
-              {activeCount > 0 && <span className="absolute -top-1.5 -right-1.5 size-5 rounded-full bg-cyan text-background text-[10px] font-bold flex items-center justify-center">{activeCount}</span>}
+              {activeCount > 0 && <span className="absolute -top-1.5 -right-1.5 size-5 rounded-full bg-cyan text-background text-2xs font-bold flex items-center justify-center">{activeCount}</span>}
             </Button>) : null}
             {tab !== "cables" ? (
             <Select value={sortBy} onValueChange={setSortBy}>
@@ -481,14 +481,14 @@ export default function DirectorySection({
                   <Link href={`/directory/${f.slug}`} className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan" aria-label={`${f.name}, full profile`} />
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="min-w-0"><h3 className="text-base font-semibold text-foreground group-hover:text-cyan transition-colors leading-snug">{f.name}</h3><p className="text-xs text-muted-foreground mt-0.5">{f.operator.name}</p></div>
-                    <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
+                    <Badge variant="outline" className={`shrink-0 rounded-full px-2.5 py-0.5 text-2xs font-medium border ${sc.bg} ${sc.color}`}>{f.status}</Badge>
                   </div>
                   <div className="flex flex-wrap gap-3 mb-3">
-                    {cap && <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title={cap.tip}><Zap className="size-3.5 text-cyan" /><span className="font-mono text-[10px] font-bold tracking-wider text-cyan">{cap.tag}</span><span className="font-medium text-foreground/80 tabular-nums">{cap.mw} MW</span></div>}
+                    {cap && <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title={cap.tip}><Zap className="size-3.5 text-cyan" /><span className="font-mono text-2xs font-bold tracking-wider text-cyan">{cap.tag}</span><span className="font-medium text-foreground/80 tabular-nums">{cap.mw} MW</span></div>}
                     {f.rackCount && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Server className="size-3.5 text-cyan" /><span>{f.rackCount.toLocaleString()} racks</span></div>}
-                    {f.carrierNeutral === true && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">CARRIER-NEUTRAL</Badge>}
-                    {f.aiReady && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
-                    {f.tierRating && <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-medium border-border text-muted-foreground">{f.tierRating}</Badge>}
+                    {f.carrierNeutral === true && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-neon/25 text-neon bg-neon/5">CARRIER-NEUTRAL</Badge>}
+                    {f.aiReady && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
+                    {f.tierRating && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-border text-muted-foreground">{f.tierRating}</Badge>}
                   </div>
                   {f.description && <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{f.description}</p>}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/30">
@@ -505,7 +505,7 @@ export default function DirectorySection({
                       <GitCompareArrows className="size-3.5" />
                       {inCompare ? "Added to compare" : "Compare"}
                     </button>
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}{f.country && f.country !== "Kenya" ? `, ${f.country}` : ""}</span>{f.peeringdbNetworks !== undefined && <span title="Networks registered on PeeringDB">{f.peeringdbNetworks} networks</span>}{f.sources && f.sources.length > 0 && <span className="inline-flex items-center gap-1 text-cyan/80" title="Named sources on the profile"><ExternalLink className="size-3" />{f.sources.length}</span>}<span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground"><span className="flex items-center gap-1.5"><MapPin className="size-3" />{f.city}{f.country && f.country !== "Kenya" ? `, ${f.country}` : ""}</span>{f.peeringdbNetworks !== undefined && <span title="Networks registered on PeeringDB">{f.peeringdbNetworks} networks</span>}{f.sources && f.sources.length > 0 && <span className="inline-flex items-center gap-1 text-cyan/80" title="Named sources on the profile"><ExternalLink className="size-3" />{f.sources.length}</span>}<span className="flex items-center gap-1"><Shield className="size-3 text-neon" />Verified {fmtVerified(f.lastVerified)}</span></div>
                   </div>
                 </article>
               );
