@@ -1,89 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import SubscribeForm from "@/components/subscribe-form";
 
-type FormState =
-  | "idle"
-  | "submitting"
-  | "check"
-  | "subscribed"
-  | "already"
-  | "error";
-
-const messages: Record<Exclude<FormState, "idle" | "submitting">, string> = {
-  check: "Almost there - check your inbox and click the confirmation link.",
-  subscribed: "Done, you're on the list.",
-  already: "You're already on the list.",
-  error: "Something went wrong. Try again.",
-};
+const COMPACT_ROLES = [
+  { value: "operator", label: "Data centre staff" },
+  { value: "leadership", label: "CTO / IT leader" },
+  { value: "investor", label: "Investor / analyst" },
+  { value: "journalist", label: "Journalist" },
+  { value: "vendor", label: "Vendor / supplier" },
+  { value: "student", label: "Student" },
+  { value: "other", label: "Just interested" },
+];
 
 /**
  * Compact end-of-article signup for The Rack Report. Sits right after the
  * article body, the moment a reader has just finished something useful is
  * the highest-intent moment to ask. Each placement is source-tagged so the
  * media kit can eventually say which articles convert.
+ * Form machine lives in the shared SubscribeForm (Task 132); this placement
+ * inlines the role select between email and button and uses its own copy.
  */
 export default function SubscribeCompact({
   source = "article",
 }: {
   source?: string;
 }) {
-  const [state, setState] = useState<FormState>("idle");
-  const [role, setRole] = useState("other");
-  // The API returns specific, retryable copy for known failures (rate limit,
-  // email stack down). Show it verbatim instead of a generic message so a
-  // 503 during an outage does not read as "the form is broken".
-  const [serverError, setServerError] = useState<string | null>(null);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
-    const honeypot = (form.elements.namedItem("website") as HTMLInputElement)?.value;
-    if (!email) return;
-
-    setState("submitting");
-    setServerError(null);
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          role,
-          companyType: "",
-          source,
-          website: honeypot || "",
-        }),
-      });
-      const data = await res.json();
-      if (res.ok) {
-        if (data.message === "Already subscribed") {
-          setState("already");
-        } else if (
-          typeof data.message === "string" &&
-          data.message.startsWith("Check your inbox")
-        ) {
-          setState("check");
-        } else {
-          setState("subscribed");
-        }
-      } else {
-        // Covers 429/503 (rate limit, email stack down) and any other failure.
-        // Surface the server's message when it has one; fall back to generic.
-        setServerError(
-          typeof data?.error === "string" && data.error.trim() !== ""
-            ? data.error
-            : null
-        );
-        setState("error");
-      }
-    } catch {
-      setServerError(null);
-      setState("error");
-    }
-  }
-
   return (
     <aside className="mt-14 rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8">
       <p className="eyebrow">The Rack Report · Monthly intelligence briefing</p>
@@ -98,70 +39,23 @@ export default function SubscribeCompact({
         Data centres. Power. Cloud. Connectivity. Investment. Policy.
       </p>
 
-      {state === "subscribed" || state === "already" || state === "check" ? (
-        <p
-          className="mt-4 rounded-lg border border-neon/25 bg-neon/10 px-4 py-3 text-sm text-foreground"
-          role="status"
-        >
-          {messages[state]}
-        </p>
-      ) : (
-        <>
-          <form
-            onSubmit={handleSubmit}
-            className="mt-4 flex flex-col items-stretch gap-2 sm:flex-row"
-          >
-            <input
-              type="text"
-              name="website"
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-              className="hidden"
-            />
-            <input
-              name="email"
-              type="email"
-              required
-              placeholder="Email address"
-              disabled={state === "submitting"}
-              aria-label="Email address"
-              className="h-11 flex-1 rounded-lg border border-border bg-background px-3.5 text-sm text-foreground placeholder:text-muted-foreground transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50"
-            />
-            <select
-              name="role"
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
-              disabled={state === "submitting"}
-              aria-label="Which describes you"
-              className="h-11 rounded-lg border border-border bg-background px-3 text-sm text-foreground transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50 sm:max-w-[180px]"
-            >
-              <option value="operator">Data centre staff</option>
-              <option value="leadership">CTO / IT leader</option>
-              <option value="investor">Investor / analyst</option>
-              <option value="journalist">Journalist</option>
-              <option value="vendor">Vendor / supplier</option>
-              <option value="student">Student</option>
-              <option value="other">Just interested</option>
-            </select>
-            <button
-              type="submit"
-              disabled={state === "submitting"}
-              className="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-5 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {state === "submitting" ? "One moment…" : "Get the next issue"}
-            </button>
-          </form>
-          {state === "error" && (
-            <p className="mt-2 text-xs text-destructive" role="alert">
-              {serverError ?? messages.error}
-            </p>
-          )}
+      <SubscribeForm
+        source={source}
+        roles={COMPACT_ROLES}
+        selectPlacement="inline"
+        selectAriaLabel="Which describes you"
+        selectClassName="h-11 rounded-lg border border-border bg-background px-3 text-sm text-foreground transition-colors focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/30 disabled:opacity-50 sm:max-w-[180px]"
+        formClassName="mt-4 flex flex-col items-stretch gap-2 sm:flex-row"
+        buttonClassName="h-11 cursor-pointer whitespace-nowrap rounded-lg bg-cyan px-5 text-sm font-semibold text-background transition-colors hover:bg-cyan/90 disabled:cursor-not-allowed disabled:opacity-50"
+        copy={{ subscribed: "Done, you're on the list." }}
+        successClassName="mt-4 rounded-lg border border-neon/25 bg-neon/10 px-4 py-3 text-sm text-foreground"
+        errorClassName="mt-2 text-xs text-destructive"
+        footer={
           <p className="mt-3 text-xs text-muted-foreground">
             One issue, the first Monday of every month. Unsubscribe anytime.
           </p>
-        </>
-      )}
+        }
+      />
     </aside>
   );
 }
