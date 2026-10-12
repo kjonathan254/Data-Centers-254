@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "video": {
+    "id": "dc254-numbers",
+    "title": "DC254 Numbers - Kenya's data-centre market, counted honestly",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "kicker": "DC254  \u00b7  NUMBERS  \u00b7  OCTOBER 2026",
+    "footer": {
+      "brand": "DC254",
+      "site": "data-centers-254.vercel.app",
+      "date": "October 2026"
+    },
+    "closing": {
+      "line1": "Every figure on DC254 carries",
+      "line2": "its source and date.",
+      "ctaLabel": "EXPLORE THE DIRECTORY",
+      "ctaUrl": "data-centers-254.vercel.app/directory"
+    }
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "seconds": 5,
+      "headlineMuted": "Kenya's data-centre market,",
+      "headlineStrong": "counted honestly.",
+      "headlineAccent": "Dated and sourced.",
+      "support": "Five verified figures from the DC254 directory \u00b7 2026-Q3 dataset.",
+      "labels": [
+        "Facilities \u00b7 27",
+        "Live IT load \u00b7 10.5 MW",
+        "Pipeline \u00b7 230 MW",
+        "Connections \u00b7 448",
+        "Cables \u00b7 7"
+      ],
+      "footnote": "DC254 Numbers \u00b7 the source and date appear on every card",
+      "footage": null
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "VERIFIED FACILITIES",
+      "value": "27",
+      "label": "Data-centre facilities verified in Kenya \u2014 20 operational today; 31 tracked including 4 East Africa reference records",
+      "source": "DC254 directory \u00b7 2026-Q3 dataset",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/ixafrica-nbox1-campus-aerial.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "PUBLISHED IN-SERVICE IT LOAD",
+      "value": "10.5",
+      "unit": "MW",
+      "label": "Running IT load published by Kenya's operational facilities \u2014 against 42.9 MW of live designed (built) capacity",
+      "source": "DC254 directory \u00b7 2026-Q3 dataset",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/hero-server-hall.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "ANNOUNCED PIPELINE",
+      "value": "230",
+      "unit": "MW",
+      "label": "Under-construction, committed and early-stage supply, as announced by developers \u2014 272.9 MW total tracked, all stages",
+      "source": "DC254 directory \u00b7 2026-Q3 dataset",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/construction-crane-scaffolding.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "NETWORK CONNECTIONS",
+      "value": "448",
+      "label": "Networks connected across Kenya's 20 operational facilities, per PeeringDB \u2014 Africa Data Centres NBO1 alone hosts 122",
+      "source": "PeeringDB via DC254 directory",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/fibre-patch-panel-sc-connectors.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "SUBSEA CABLES",
+      "value": "7",
+      "label": "Subsea cables in service at Kenyan landings, of 10 systems tracked \u2014 Africa-1 is landed, ready-for-service pending",
+      "source": "DC254 cable tracker",
+      "sourceDate": "verified Sep 2026",
+      "footage": "footage/mombasa-cable-landing.webp"
+    },
+    {
+      "type": "closing",
+      "seconds": 6
+    }
+  ],
+  "sourcePolicy": "Every statistic scene carries a named source and verification date, enforced in code (missing source renders a DO NOT PUBLISH flag). Figures are the canonical site-stats set: 27 verified Kenya facilities (20 operational), 10.5 MW published in-service IT load, 42.9 MW live designed capacity, 230 MW announced pipeline, 272.9 MW total tracked supply, 448 PeeringDB network connections across the 20 operational facilities (per-facility counts summed), 7 of 10 subsea cable systems in service. Dataset: DC254 directory 2026-Q3 (released 2026-09-19, facility records last verified Oct 2026); cable tracker last verified Sep 2026. No market-size, revenue, utilisation or job figures - those are not in the verified dataset. Backgrounds are real images from the DC254 repo, chosen to match each card's subject."
+}

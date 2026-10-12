@@ -1,0 +1,68 @@
+DC254 NUMBERS + INSIDE THE MAP — post copy (prepared 2026-10-12)
+=================================================================
+
+Every figure in both videos carries its on-screen source and verification
+date. If the directory updates before posting, re-verify against
+src/lib/site-stats.ts and re-render (see README.md).
+
+--------------------------------------------------------------------------
+LINKEDIN (main post; hook inside the ~210-char visible window)
+
+Kenya's data-centre market, counted honestly: 27 verified facilities. 10.5 MW
+published in-service IT load. 230 MW announced pipeline. 448 network
+connections. 7 subsea cables in service.
+
+Every figure carries its source and date — on screen, in the video.
+
+And if you have ever wondered how the internet actually reaches a rack in
+Nairobi: seven subsea cables come ashore at Mombasa, terrestrial fibre
+carries the traffic inland, and exchanges like KIXP (144 member networks)
+peer it inside Nairobi's carrier-neutral data centres. 13 operational
+facilities in Nairobi. 4 in Mombasa.
+
+Sources: DC254 directory 2026-Q3 dataset (verified Oct 2026), DC254 cable
+tracker (verified Sep 2026), PeeringDB, TESPOK.
+
+Full directory: data-centers-254.vercel.app/directory
+Infrastructure map: data-centers-254.vercel.app/infrastructure/map
+
+#DataCentres #Kenya #DigitalInfrastructure #Connectivity
+
+--------------------------------------------------------------------------
+X / TWITTER (thread, 3 tweets, each <280 chars)
+
+1/ Kenya's data-centre market, counted honestly — every figure dated and
+sourced on screen:
+
+27 verified facilities (20 operational)
+10.5 MW published in-service IT load
+230 MW announced pipeline
+448 network connections (PeeringDB)
+7 subsea cables in service
+
+2/ And the physical path behind it: seven subsea cables land at Mombasa
+(TEAMS 2009 -> 2Africa 2024), terrestrial fibre hands traffic inland, and
+KIXP — 144 member networks, 1.3 Tbps historic peak — peers it inside
+Nairobi's carrier-neutral data centres.
+
+3/ Sources: DC254 directory 2026-Q3 (verified Oct 2026) · DC254 cable
+tracker (Sep 2026) · PeeringDB · TESPOK.
+
+Directory: data-centers-254.vercel.app/directory
+Map: data-centers-254.vercel.app/infrastructure/map
+
+#Kenya #DataCentres
+
+--------------------------------------------------------------------------
+EDITOR NOTES
+
+- Both videos are 1080x1920 (Reels/Shorts/TikTok-ready) and mute-readable.
+- Suggested alt text, Numbers: "Five animated statistic cards, each showing
+  a verified Kenya data-centre figure with its source and date."
+- Suggested alt text, Map: "Animated Kenya map showing subsea cables landing
+  at Mombasa, fibre to Nairobi, and the hub facilities, with sourced KIXP
+  and facility counts."
+- If figures change: edit src/content/dc254-numbers.json or
+  inside-the-map.json in the dc254-video workspace, re-render, re-verify
+  against site-stats.ts. Never post a figure whose source line you cannot
+  read on the frame.

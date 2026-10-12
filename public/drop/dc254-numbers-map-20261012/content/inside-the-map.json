@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "video": {
+    "id": "inside-the-map",
+    "title": "Inside the Map - how Kenya's internet reaches a rack",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "kicker": "DC254  \u00b7  INSIDE THE MAP  \u00b7  OCTOBER 2026",
+    "footer": {
+      "brand": "DC254",
+      "site": "data-centers-254.vercel.app",
+      "date": "October 2026"
+    },
+    "closing": {
+      "line1": "Cables, fibre, hubs, facilities \u2014",
+      "line2": "mapped and maintained on DC254.",
+      "ctaLabel": "OPEN THE INFRASTRUCTURE MAP",
+      "ctaUrl": "data-centers-254.vercel.app/infrastructure/map"
+    }
+  },
+  "scenes": [
+    {
+      "type": "network",
+      "seconds": 12,
+      "kicker": "STEP 1 \u00b7 THE COAST",
+      "headline": "Seven subsea cables come ashore at Mombasa.",
+      "chips": [
+        "TEAMS \u00b7 2009",
+        "SEACOM \u00b7 2009",
+        "EASSy \u00b7 2010",
+        "LION2 \u00b7 2012",
+        "DARE1 \u00b7 2021",
+        "PEACE \u00b7 2022",
+        "2Africa \u00b7 2024"
+      ],
+      "footnote": "All land at Mombasa; 2Africa also at Mtwapa \u00b7 Africa-1 is landed, RFS pending \u00b7 Source: DC254 cable tracker, verified Sep 2026",
+      "chipsTop": 1440,
+      "footage": null
+    },
+    {
+      "type": "partnership",
+      "seconds": 9,
+      "kicker": "STEP 2 \u00b7 THE BACKBONE",
+      "headline": "Landing stations hand traffic to terrestrial fibre, into Nairobi.",
+      "nodes": [
+        { "label": "MOMBASA", "sub": "4 operational facilities incl. landing stations" },
+        { "label": "TERRESTRIAL FIBRE", "sub": "National transmission corridors" },
+        { "label": "NAIROBI", "sub": "Connectivity hubs & exchanges" }
+      ],
+      "connectors": ["terrestrial fibre handoff", "metro fibre"],
+      "footnote": "Every node on this chain is tracked individually in the DC254 directory.",
+      "footage": "footage/fibre-handhole-duct-cables.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 7,
+      "kicker": "THE PEERING HUB",
+      "value": "144",
+      "unit": "networks",
+      "label": "Networks peering at KIXP, hosted inside Nairobi's carrier-neutral data centres \u2014 2,985 Gbps port capacity; KIXP peak: 1.3 Tbps (TESPOK, Jun 2024)",
+      "source": "PeeringDB \u00b7 KIXP profile \u00b7 TESPOK",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/woman-network-engineer-patch-panel.webp"
+    },
+    {
+      "type": "statistic",
+      "seconds": 6,
+      "kicker": "THE FACILITIES",
+      "value": "13",
+      "label": "Operational data centres in Nairobi \u2014 where the exchanges and the carriers meet; 4 more operate in Mombasa",
+      "source": "DC254 directory \u00b7 2026-Q3 dataset",
+      "sourceDate": "verified Oct 2026",
+      "footage": "footage/nairobi-skyline-night-kicc.webp"
+    },
+    {
+      "type": "closing",
+      "seconds": 6
+    }
+  ],
+  "sourcePolicy": "Relationship chain (Mombasa landings -> terrestrial fibre -> Nairobi hubs -> facilities) is animated as a schematic; the Kenya outline is generated from the open johan/world.geo.json dataset and node positions are real coordinates. Cable names, RFS years and landing sites: DC254 cable tracker, last verified Sep 2026 (2Africa also lands at Mtwapa; Africa-1 landed, RFS pending; Daraja announced and LuLu planned are excluded from the on-screen count of seven in-service systems). KIXP figures: PeeringDB KIXP profile (144 member networks, 2,985 Gbps port capacity, verified Oct 2026) and TESPOK historic peak 1.3 Tbps (25 Jun 2024), as cited in the validated DC254 KIXP explainer. Facility counts: DC254 directory 2026-Q3 dataset (13 operational Nairobi, 4 operational Mombasa). The map is a stylised schematic, not a routing map: no fibre routes, capacities or paths are drawn as fact beyond the Mombasa-Nairobi relationship the validated articles describe."
+}
