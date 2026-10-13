@@ -1,0 +1,19 @@
+{
+ "generatedAt": "2026-10-13T17:40:01Z",
+ "inputs": [
+  "intelligence/raw/2026-10-14-pilot-news.json"
+ ],
+ "runIds": [
+  "EYJrixtPCxsEDAnS2"
+ ],
+ "recordsIn": 34,
+ "recordsOut": 34,
+ "dupesRemoved": 0,
+ "dupes": [],
+ "topicCounts": {
+  "workforce": 11,
+  "connectivity": 8,
+  "facility": 5,
+  "policy": 10
+ }
+}

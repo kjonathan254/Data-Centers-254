@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DC254 evidence record",
+  "description": "Common evidence register record for all Intelligence Monitor topics (Task 142). One record = one source item. Original source claims are kept verbatim in claims_extracted / evidence_excerpt; AI-generated fields (topic, role_category) are additions, never replacements.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "topic",
+    "record_type",
+    "title",
+    "source_url",
+    "collected_at",
+    "claims_extracted",
+    "verification_status",
+    "last_checked_at"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^dc254-(facility|workforce|policy|connectivity|market)-[0-9]{8}-[0-9]{3,}$",
+      "description": "dc254-{topic}-{YYYYMMDD}-{seq}"
+    },
+    "topic": {
+      "type": "string",
+      "enum": ["facility", "workforce", "policy", "connectivity", "market"]
+    },
+    "record_type": {
+      "type": "string",
+      "description": "search-result, job-ad, course, page, report, cable, tender, announcement, etc."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "organisation": {
+      "type": "string",
+      "description": "Company/agency/institution if evidenced; domain-prefixed form when only the domain is evidenced; UNKNOWN otherwise"
+    },
+    "country": {
+      "type": "string",
+      "description": "Kenya, Uganda, Tanzania, ... or UNKNOWN. Never inferred beyond what the source states."
+    },
+    "location": { "type": "string", "description": "City/region if stated, else UNKNOWN" },
+    "source_url": { "type": "string", "format": "uri", "minLength": 1 },
+    "published_at": { "type": "string", "description": "Source publication date if available, else UNKNOWN" },
+    "collected_at": { "type": "string", "description": "ISO 8601 UTC - when DC254 collected it" },
+    "event_date": { "type": "string", "description": "Date of the actual event if known, else UNKNOWN" },
+    "claims_extracted": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Specific claims found in the source, verbatim or tightly paraphrased with wording preserved"
+    },
+    "evidence_excerpt": { "type": "string", "description": "Relevant source passage verbatim" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["UNREVIEWED", "corroborated", "disputed", "rejected", "expired"]
+    },
+    "confidence_notes": { "type": "string", "description": "Missing details, ambiguities, limitations, why-this-is-unverified" },
+    "reviewed_by": { "type": ["string", "null"], "description": "Human reviewer; null until reviewed" },
+    "last_checked_at": { "type": "string", "description": "Most recent source check (collection counts as first check)" },
+    "change_history": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["at", "what"],
+        "properties": {
+          "at": { "type": "string" },
+          "what": { "type": "string" }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Collection-layer provenance (Apify run, query, position)",
+      "properties": {
+        "runId": { "type": "string" },
+        "actor": { "type": "string" },
+        "queryTerm": { "type": "string" },
+        "serpPosition": { "type": "integer" },
+        "displayedUrl": { "type": "string" }
+      }
+    },
+    "topic_fields": {
+      "type": "object",
+      "description": "Topic-specific additions. facilities: operator/facilityLocation/capacityValue/capacityType/operationalStatus/projectStage. connectivity: cableName/landingPoint/rfsStatus/capacityValue/capacityUnit/operator. workforce: roleCategory/skillsRequired/qualificationsRequired/experienceRequired/employmentType/trainingMode/trainingProvider/programme. policy: issuingInstitution/policyType/relevantProvision/effectiveDate.",
+      "properties": {
+        "role_category": {
+          "type": "string",
+          "enum": [
+            "power-electrical",
+            "cooling-facilities",
+            "networks-connectivity",
+            "cloud-it-operations",
+            "security-compliance",
+            "construction-commissioning",
+            "operations-customer-services",
+            "unclassified"
+          ]
+        },
+        "skills_required": { "type": "array", "items": { "type": "string" } },
+        "qualifications_required": { "type": "array", "items": { "type": "string" } },
+        "experience_required": { "type": "string" },
+        "employment_type": { "type": "string" }
+      }
+    }
+  }
+}

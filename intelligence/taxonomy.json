@@ -1,0 +1,62 @@
+{
+  "version": "2026-10-14",
+  "purpose": "Controlled classification vocabulary for the DC254 Intelligence Monitor. Classification is an AI-assisted aid; original source wording must be preserved alongside it so every extracted skill or topic can be traced back to its source.",
+  "topics": {
+    "facility": "Data-centre facilities and projects: new sites, construction, capacity, operational milestones, expansions, ownership",
+    "connectivity": "Submarine cables, terrestrial fibre, IXPs, cloud regions, network expansions",
+    "workforce": "Jobs, technical skills, qualifications, courses, certifications, apprenticeships",
+    "policy": "Regulation, licensing, energy policy, data protection, tenders, public consultations, skills programmes",
+    "market": "Investment, market entry, financial results, industry reports without a facility/connectivity/workforce/policy claim"
+  },
+  "record_types": {
+    "search-result": "A search-engine result (lead, not evidence)",
+    "job-ad": "A publicly advertised job",
+    "course": "A training programme or course listing",
+    "certification": "A certification or accreditation record",
+    "page": "An organization website page",
+    "report": "A published report or research document",
+    "tender": "A procurement notice",
+    "announcement": "A company/agency announcement or press item",
+    "cable": "A submarine/terrestrial network item"
+  },
+  "role_categories": {
+    "power-electrical": {
+      "label": "Power and electrical",
+      "keywords": ["ups", "generator", "switchgear", "power distribution", "electrical", "diesel", "gen-set", "transformer", "rectifier", "bms"]
+    },
+    "cooling-facilities": {
+      "label": "Cooling and facilities",
+      "keywords": ["hvac", "chiller", "cooling", "thermal management", "preventive maintenance", "crac", "precision air", "facilities"]
+    },
+    "networks-connectivity": {
+      "label": "Networks and connectivity",
+      "keywords": ["fibre", "fiber", "routing", "switching", "network engineer", "network operations", "noc", "peering", "transmission", "bandwidth"]
+    },
+    "cloud-it-operations": {
+      "label": "Cloud and IT operations",
+      "keywords": ["linux", "virtualisation", "virtualization", "server", "cloud", "monitoring", "devops", "systems administrator", "vmware"]
+    },
+    "security-compliance": {
+      "label": "Security and compliance",
+      "keywords": ["physical security", "cybersecurity", "cyber security", "access control", "compliance", "guard", "iso 27001", "soc analyst"]
+    },
+    "construction-commissioning": {
+      "label": "Construction and commissioning",
+      "keywords": ["project delivery", "testing", "commissioning", "health and safety", "site engineer", "project manager", "quantity surveyor", "mep"]
+    },
+    "operations-customer-services": {
+      "label": "Operations and customer services",
+      "keywords": ["incident response", "service management", "customer support", "data centre technician", "operations technician", "shift", "sla"]
+    },
+    "unclassified": {
+      "label": "Unclassified",
+      "keywords": []
+    }
+  },
+  "rules": [
+    "Role categories are assigned from keywords in the ORIGINAL title/description only; the original wording travels with the record.",
+    "Country is set from explicit evidence in the source (text or .ke domain), never from query scope alone.",
+    "Use UNKNOWN for unavailable fields. Never fabricate.",
+    "A record's classification is provisional until a human reviewer sets verification_status."
+  ]
+}
