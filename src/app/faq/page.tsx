@@ -37,6 +37,13 @@ export default function FaqPage() {
   const facilities = getFacilities();
   const operators = getOperators();
   const stats = getDirectoryStats();
+  // Verification month quoted in the FAQ: the dataset-wide max, never the
+  // first record's date (order-dependent) or a wall-clock fallback (Task 141).
+  const verifiedMonth = facilities
+    .map((f) => f.lastVerified || "")
+    .filter(Boolean)
+    .sort()
+    .at(-1);
 
   const largest = facilities
     .filter((f) => f.itLoadMw)
@@ -97,7 +104,7 @@ export default function FaqPage() {
     },
     {
       q: "How does DC254 verify its numbers?",
-      a: `Every facility in the directory carries a named data source, a confidence rating and a last-verified date, currently ${fmtVerified(facilities[0]?.lastVerified ?? new Date().toISOString())} across the board. We separate verified, in-service IT load from developer-announced pipeline figures, and we publish the method so you can check our work. When a claim cannot be verified, the directory says so instead of rounding up.`,
+      a: `Every facility in the directory carries a named data source, a confidence rating and a last-verified date, currently ${verifiedMonth ? fmtVerified(verifiedMonth) : "shown on each entry"} across the board. We separate verified, in-service IT load from developer-announced pipeline figures, and we publish the method so you can check our work. When a claim cannot be verified, the directory says so instead of rounding up.`,
       links: [{ label: "read the DC254 methodology", href: "/methodology" }],
     },
     {

@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
 import { LICENSING_REGIMES, LICENSING_SOURCES, LICENSING_LAST_VERIFIED } from "@/lib/market-trackers";
+import { verifiedMonthShort } from "@/lib/verified-month";
 import { SITE_URL } from "@/lib/site";
 import { safeJsonLd } from "@/lib/jsonld";
 
@@ -77,7 +78,7 @@ export default function LicensingTrackerPage() {
               { icon: Landmark, label: "Regime of record", value: "NFP-T2", hint: "since 6 March 2026" },
               { icon: Scale, label: "Proposed initial fee", value: "KES 100,000", hint: "vs KES 15M under NFP-T2" },
               { icon: CalendarClock, label: "Consultation window", value: "30 days", hint: "opened 8 Sep 2026" },
-              { icon: Shield, label: "Dataset verified", value: "Oct 2026", hint: "against the CA's own document" },
+              { icon: Shield, label: "Dataset verified", value: verifiedMonthShort(LICENSING_LAST_VERIFIED), hint: "against the CA's own document" },
             ].map((s) => {
               const Icon = s.icon;
               return (

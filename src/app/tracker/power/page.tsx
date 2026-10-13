@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
 import { POWER_TARIFFS, TARIFF_SOURCES, TARIFFS_LAST_VERIFIED } from "@/lib/market-trackers";
+import { verifiedMonthShort } from "@/lib/verified-month";
 import { SITE_URL } from "@/lib/site";
 import { safeJsonLd } from "@/lib/jsonld";
 
@@ -78,7 +79,7 @@ export default function PowerTrackerPage() {
               { icon: Zap, label: "Blended energy", value: "KES 13-16/kWh", hint: "24/7 load, TOU-weighted" },
               { icon: Scale, label: "Demand charge", value: "KES 300-500/kVA", hint: "per month, on max demand" },
               { icon: FileSpreadsheet, label: "All-in effective", value: "KES 15-20/kWh", hint: "incl. levies & pass-throughs" },
-              { icon: Shield, label: "Dataset verified", value: "Sep 2026", hint: "benchmarks re-checked" },
+              { icon: Shield, label: "Dataset verified", value: verifiedMonthShort(TARIFFS_LAST_VERIFIED), hint: "benchmarks re-checked" },
             ].map((s) => {
               const Icon = s.icon;
               return (

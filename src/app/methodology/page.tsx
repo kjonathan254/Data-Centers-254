@@ -13,6 +13,12 @@ import {
   Mail,
 } from "lucide-react";
 import { correctionsLog, formatCorrectionDate } from "@/lib/corrections-data";
+import { getMarketSnapshot } from "@/lib/directory-data";
+import { verifiedMonthLong } from "@/lib/verified-month";
+
+/** Derived, never hardcoded: the month the directory dataset was last
+ * verified (Task 141 drift rule). */
+const verifiedLong = verifiedMonthLong(getMarketSnapshot().lastVerified);
 
 export const metadata: Metadata = {
   title: "Methodology: How DC254 Verifies Its Data",
@@ -69,7 +75,7 @@ const cadence = [
   {
     icon: Database,
     title: "DC Directory: monthly sweep, quarterly re-verification",
-    body: "The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in October 2026.",
+    body: `The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in ${verifiedLong}.`,
   },
   {
     icon: Newspaper,
@@ -446,7 +452,7 @@ export default function MethodologyPage() {
             You are welcome to cite our data in reports, articles, and briefs.
             Please credit &ldquo;Data Centre 254&rdquo; with a link to the
             relevant page, and include the verification date shown on the entry
-            (for example: &ldquo;DC254 Directory, verified September 2026&rdquo;).
+            (for example: &ldquo;DC254 Directory, verified {verifiedLong}&rdquo;).
             For bulk data, interviews, or briefing requests,{" "}
             <Link href="/contact" className="text-cyan underline hover:underline">
               contact us

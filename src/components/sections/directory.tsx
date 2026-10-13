@@ -14,7 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { SUBSEA_CABLES, type CableRecord, type CableStatus } from "@/lib/market-trackers";
+import { SUBSEA_CABLES, CABLES_LAST_VERIFIED, type CableRecord, type CableStatus } from "@/lib/market-trackers";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
@@ -201,9 +201,14 @@ function CableRegister({ search }: { search: string }) {
 export default function DirectorySection({
   initialSearch = "",
   tabCounts,
+  verifiedAsOf,
 }: {
   initialSearch?: string;
   tabCounts: { kenya: number; ea: number; pipeline: number };
+  /** Dataset-wide lastVerified month, server-derived from the records. Every
+      "Dataset verified" stamp below renders from this or a named constant —
+      never a hardcoded month (Task 141 drift rule). */
+  verifiedAsOf?: string;
 }) {
   const [data, setData] = useState<DirData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -287,7 +292,7 @@ export default function DirectorySection({
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <Shield className="size-3.5 text-neon" />
-              Dataset last verified: September 2026
+              Dataset last verified: {fmtVerified(verifiedAsOf ?? null) ?? "…"}
             </span>
             <Link href="/methodology" className="text-cyan underline hover:underline">
               How we verify →
@@ -361,7 +366,7 @@ export default function DirectorySection({
             { label: "Landed, RFS pending", value: String(landed), icon: Clock },
             { label: "Announced / planned", value: String(dev), icon: Megaphone },
             { label: "Kenyan landing points", value: String(landings.size), icon: MapPin },
-            { label: "Dataset verified", value: "Sep 2026", icon: Shield },
+            { label: "Dataset verified", value: fmtVerified(CABLES_LAST_VERIFIED) ?? CABLES_LAST_VERIFIED, icon: Shield },
           ];
           return (
             <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
@@ -389,14 +394,14 @@ export default function DirectorySection({
               { label: "Under construction", value: String(sc.underConstruction), icon: HardHat },
               { label: "Countries covered", value: String(sc.countries.length), icon: Globe },
               { label: "Operators on record", value: String(sc.operators), icon: Building2 },
-              { label: "Dataset verified", value: "Sep 2026", icon: Shield },
+              { label: "Dataset verified", value: fmtVerified(verifiedAsOf ?? null) ?? "--", icon: Shield },
             ] : [
               { label: "Pipeline projects", value: String(sc.count), icon: Database },
               { label: "Announced pipeline", value: `${sc.announcedMw.toFixed(1)} MW`, icon: Zap },
               { label: "Under construction", value: String(sc.underConstruction), icon: HardHat },
               { label: "Committed", value: String(sc.committed), icon: ShieldCheck },
               { label: "Early stage", value: String(sc.earlyStage), icon: Megaphone },
-              { label: "Dataset verified", value: "Sep 2026", icon: Shield },
+              { label: "Dataset verified", value: fmtVerified(verifiedAsOf ?? null) ?? "--", icon: Shield },
             ];
           return (
             <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">

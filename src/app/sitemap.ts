@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/directory`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/tracker`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.8 },
     // Market tracker sub-pages (Phase 2): cables, power tariffs, licensing.
-    // Dated from their own verified month in market-trackers.ts (Sep 2026).
+    // Dated from the directory's verified month (verifiedDate above).
     { url: `${baseUrl}/tracker/cables`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/tracker/power`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/tracker/licensing`, lastModified: verifiedDate, changeFrequency: "weekly", priority: 0.7 },

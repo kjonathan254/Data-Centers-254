@@ -163,6 +163,7 @@ export default async function DirectoryPage({
         <Directory
           initialSearch={search ?? ""}
           tabCounts={{ kenya: kenyaCount, ea: regional.length, pipeline: pipelineCount }}
+          verifiedAsOf={snap.lastVerified}
         />
       </main>
       <Footer />
