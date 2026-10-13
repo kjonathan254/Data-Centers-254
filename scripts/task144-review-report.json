@@ -1,0 +1,35 @@
+{
+ "task": "144",
+ "applied_at": "2026-10-13T20:05:33Z",
+ "queue": "intelligence/queue/2026-10-14-pilot.json",
+ "records_total": 36,
+ "status_counts": {
+  "corroborated": 9,
+  "UNREVIEWED": 27
+ },
+ "changes": [
+  {
+   "record_id": "dc254-policy-20261013-002",
+   "verdict": "corroborated",
+   "corrections": [
+    "title",
+    "claims",
+    "topic"
+   ]
+  },
+  {
+   "record_id": "dc254-policy-20261013-001",
+   "verdict": "corroborated",
+   "corrections": [
+    "claims",
+    "topic"
+   ]
+  },
+  {
+   "record_id": "dc254-connectivity-20261014-001",
+   "verdict": "corroborated (new record)",
+   "corrections": []
+  }
+ ],
+ "editorial_outcome": "Article content/articles/kenya-kdeap-fibre-backbone-tender.md published (editor-directed), plus PS post image public/images/ps-tanui-kdeap-prebid.webp (800x533, from the official LinkedIn post, attributed in caption)."
+}

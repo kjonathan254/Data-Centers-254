@@ -453,7 +453,7 @@
   },
   {
    "record_id": "dc254-policy-20261013-001",
-   "topic": "policy",
+   "topic": "connectivity",
    "record_type": "search-result",
    "title": "Kenya digital infrastructure tender bids close 29 October ...",
    "organisation": "domain: facebook.com",
@@ -464,13 +464,15 @@
    "collected_at": "2026-10-13T17:40:01Z",
    "event_date": "UNKNOWN",
    "claims_extracted": [
-    "This will be achieved through onboarding government services in the Konza Data Centre and the completion an operationalization of the Disaster ...Read more"
+    "A major opportunity to extend Kenya's digital infrastructure and accelerate universal connectivity is now open.",
+    "Through the Kenya Digital Economy Acceleration Project, the ICT Authority invites eligible private-sector partners to participate in a three-year framework for national backbone links and cross-border and metropolitan links.",
+    "Bids close at 10:00 a.m. EAT on 29 October 2026."
    ],
-   "evidence_excerpt": "This will be achieved through onboarding government services in the Konza Data Centre and the completion an operationalization of the Disaster ...Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Verification search 14 Oct 2026 (two targeted queries incl. exact-phrase 'Specific Procurement Notice'): NO official KDIAP SPN located from this egress - only this LinkedIn post and the related Facebook post. The 'bids close 29 October' claim remains UNVERIFIED against a primary document. Do not publish the deadline until the official notice is located on World Bank or ministry portals.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-14T20:40:00Z",
+   "evidence_excerpt": "A major opportunity to extend Kenya's digital infrastructure and accelerate universal connectivity is now open.",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Verification search 14 Oct 2026 (two targeted queries incl. exact-phrase 'Specific Procurement Notice'): NO official KDIAP SPN located from this egress - only this LinkedIn post and the related Facebook post. The 'bids close 29 October' claim remains UNVERIFIED against a primary document. Do not publish the deadline until the official notice is located on World Bank or ministry portals. REVIEW 2026-10-13T20:05:33Z (Task 144): VERDICT corroborated via the author's LinkedIn twin post of the same announcement (activity 7505707320652345344, fetched in full) plus the ICTA open-tenders page and trade press (ITWeb Africa 16 Sep, Telecompaper 17 Sep). CORRECTIONS (documented): (1) earlier claims_extracted about onboarding government services in the Konza Data Centre and the Disaster Recovery operationalisation were Google snippet contamination - that text is NOT in this post; claims replaced with the twin-post verbatim text. (2) topic policy -> connectivity (id retained). The Facebook page itself was not fetched from this egress; verification rests on the LinkedIn twin and ICTA. The post's 'bids close 10:00 a.m. EAT on 29 October 2026' claim is CONFIRMED.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-13T20:05:33Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
@@ -479,6 +481,10 @@
     {
      "at": "2026-10-14T20:40:00Z",
      "what": "review verdict UNREVIEWED applied (Task 143)"
+    },
+    {
+     "at": "2026-10-13T20:05:33Z",
+     "what": "Task 144 verification via LinkedIn twin post + ICTA tenders page: corroborated; snippet-contamination claims (Konza DC / Disaster Recovery) removed; topic fix policy->connectivity"
     }
    ],
    "provenance": {
@@ -525,24 +531,26 @@
   },
   {
    "record_id": "dc254-policy-20261013-002",
-   "topic": "policy",
+   "topic": "connectivity",
    "record_type": "search-result",
-   "title": "Kenya Digital Infrastructure Acceleration Project Invitation",
+   "title": "KDEAP framework tender invitation: national backbone, cross-border and metropolitan links (PS official LinkedIn post, SPN announcement)",
    "organisation": "domain: linkedin.com",
    "country": "Kenya",
    "location": "UNKNOWN",
    "source_url": "https://www.linkedin.com/posts/johntanui_specific-procurement-notice-activity-7505707320652345344-9wZU",
-   "published_at": "UNKNOWN",
+   "published_at": "2026-09-15",
    "collected_at": "2026-10-13T17:40:01Z",
-   "event_date": "UNKNOWN",
+   "event_date": "2026-09-15",
    "claims_extracted": [
-    "Bids close at 10:00 a.m. EAT on 29 October 2026. Tender documents ... Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub.Read more"
+    "Through the Kenya Digital Economy Acceleration Project, the ICT Authority invites eligible private-sector partners to participate in a three-year framework for: National backbone links; Cross-border and metropolitan links.",
+    "Bids close at 10:00 a.m. EAT on 29 October 2026.",
+    "We call upon qualified local and international infrastructure providers to participate in this competitive procurement and partner with us in building a connected, resilient and inclusive digital Kenya."
    ],
-   "evidence_excerpt": "Bids close at 10:00 a.m. EAT on 29 October 2026. Tender documents ... Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub.Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Same verdict as 20261013-001: official SPN not located 14 Oct; LinkedIn post is a lead, not the document of record.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-14T20:40:00Z",
+   "evidence_excerpt": "Through the Kenya Digital Economy Acceleration Project, the ICT Authority invites eligible private-sector partners to participate in a three-year framework for: National backbone links; Cross-border and metropolitan links.",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'. REVIEW 2026-10-14T20:40:00Z (Task 143): official SPN not located from that egress; kept UNREVIEWED. REVIEW 2026-10-13T20:05:33Z (Task 144): post page fetched in FULL via og:description (page-level, not snippet). VERDICT corroborated. CORRECTIONS (documented, id retained): (1) SERP-derived title 'Kenya Digital Infrastructure Acceleration Project' is a mis-expansion - the post body states Kenya DIGITAL ECONOMY Acceleration Project (KDEAP); title fixed accordingly. (2) 'Konza Data Centre' / 'Disaster Recovery' claims previously associated with this lead were Google snippet contamination and are NOT present in the post text. (3) topic policy -> connectivity. Corroboration: ICTA open-tenders page (advert 'Framework agreement for extending national backbone & cross border links', Lot 1 + Lot 2, published 15 Sep 2026), ITWeb Africa (16 Sep 2026), Telecompaper (17 Sep 2026), PS pre-bid post 13 Oct 2026. The pilot 'bids close 29 Oct' claim is CONFIRMED (10:00 a.m. EAT). Tender-document link in post (lnkd.in/dMNg8U68) not resolved to a final URL from this egress; document of record = ICTA tenders page. published_at derived from LinkedIn activity ID timestamp (approximate).",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-13T20:05:33Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
@@ -551,6 +559,10 @@
     {
      "at": "2026-10-14T20:40:00Z",
      "what": "review verdict UNREVIEWED applied (Task 143)"
+    },
+    {
+     "at": "2026-10-13T20:05:33Z",
+     "what": "Task 144 page-level verification: corroborated; title mis-expansion fixed (was 'Kenya Digital Infrastructure Acceleration Project Invitation'); snippet-contamination claims removed; topic fix policy->connectivity"
     }
    ],
    "provenance": {
@@ -1359,6 +1371,45 @@
     "runId": "manual-review",
     "actor": "apify~web-fetch",
     "queryTerm": "CA licence follow-up",
+    "serpPosition": null,
+    "displayedUrl": ""
+   }
+  },
+  {
+   "record_id": "dc254-connectivity-20261014-001",
+   "topic": "connectivity",
+   "record_type": "announcement",
+   "title": "KSh 13 billion catalytic funding announced at KDEAP backbone pre-bid session (at least 27,000 km, Multi-Round Reverse Auction)",
+   "organisation": "State Department for ICT and the Digital Economy / ICT Authority (recorded via official LinkedIn post of PS Eng. John Kipchumba Tanui)",
+   "country": "Kenya",
+   "location": "Nairobi (pre-bid session, per post)",
+   "source_url": "https://www.linkedin.com/posts/johntanui_digitalsuperhighway-kdeap-digitaleconomy-ugcPost-7515689951108292609-He6k",
+   "published_at": "2026-10-13",
+   "collected_at": "2026-10-13T20:05:33Z",
+   "event_date": "2026-10-13",
+   "claims_extracted": [
+    "The Government is making available KSh 13 billion to catalyse matching private investment and deliver at least 27,000 km of backbone, middle-mile and cross-border fibre.",
+    "Public support will be allocated competitively through a Multi-Round Reverse Auction (MRRA) to mobilise matching private capital.",
+    "Since 2022, the private sector has added 24,000 km of fibre and the public sector 17,000 km.",
+    "The Communications Authority's April-June 2026 report records 88M mobile subscriptions, 54.9M mobile broadband and 54M mobile money subscriptions; fixed internet connections reached 2.84 million by June 2026, up 32.4 percent, including 1.57 million fibre connections (up 29.7 percent); submarine cables and cross-border links give Kenya approximately 28.95 Tbps of international bandwidth.",
+    "Ambition: over eight million fixed broadband connections.",
+    "Also present at the pre-bid session was the CEO of the ICT Authority, Mr. Jesse Maruti (per the post)."
+   ],
+   "evidence_excerpt": "The Government is making available KSh 13 billion to catalyse matching private investment and deliver at least 27,000 km of backbone, middle-mile and cross-border fibre - closing connectivity gaps, strengthening resilience and making it cheaper to connect homes, businesses and public institutions.",
+   "verification_status": "corroborated",
+   "confidence_notes": "Post page fetched in FULL 14 Oct 2026 via og:description (page-level capture, intelligence/raw/2026-10-14-page-ps-tanui-prebid.txt). Corroboration: People Daily 13 Oct 2026 (KSh13B, 27,000 km, 24,000/17,000 km split; byline Kenneth Mwenda, JSON-LD captured), W.Media 13 Oct 2026 (US$100M equivalence; 28.95 Tbps attributed to the PS), ICTA open-tenders page (advert published 15 Sep 2026), ITWeb Africa / Telecompaper (framework structure), CA own communications for 2.84M fixed / 1.57M fibre (+32.4% / +29.7%), The Tech Hut for 87.99M SIM subscriptions June 2026. FIGURES ATTRIBUTED TO THE POST AND STILL SINGLE-SOURCE: KSh 13 billion envelope, 27,000 km target, MRRA mechanism, 54.9M mobile broadband, 54M mobile money, 8M fixed broadband ambition. Fixed-internet figures independently corroborated. Editorial outcome: DC254 article /articles/kenya-kdeap-fibre-backbone-tender published 14 Oct 2026 (editor-directed). published_at derived from LinkedIn activity ID timestamp (approximate).",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-13T20:05:33Z",
+   "change_history": [
+    {
+     "at": "2026-10-13T20:05:33Z",
+     "what": "created during Task 144 editor-directed research pass (PS post fetched in full)"
+    }
+   ],
+   "provenance": {
+    "runId": "manual-review",
+    "actor": "z-ai page_reader + curl og:description",
+    "queryTerm": "editor directive (lnkd.in/p/dbQq5bbp)",
     "serpPosition": null,
     "displayedUrl": ""
    }
