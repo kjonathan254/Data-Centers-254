@@ -59,16 +59,19 @@ def cmd_check() -> int:
 
 
 def cmd_run(args) -> int:
-    if not args.queries:
-        print("ERROR: at least one --query required", file=sys.stderr)
-        return 2
-
-    run_input = {
-        # google-search-scraper expects queries as ONE newline-separated string
-        "queries": "\n".join(args.queries),
-        "resultsPerPage": args.results_per_page,
-        "maxPages": args.max_pages,
-    }
+    if args.input_json:
+        run_input = json.loads(args.input_json)
+    else:
+        if not args.queries:
+            print("ERROR: at least one --query required (or use --input-json)",
+                  file=sys.stderr)
+            return 2
+        run_input = {
+            # google-search-scraper expects queries as ONE newline-separated string
+            "queries": "\n".join(args.queries),
+            "resultsPerPage": args.results_per_page,
+            "maxPages": args.max_pages,
+        }
     started = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     run = _post_json(_url(f"/acts/{args.actor}/runs"), run_input)["data"]
     run_id = run["id"]
@@ -130,6 +133,8 @@ def main() -> int:
     r.add_argument("--actor", default="apify~google-search-scraper")
     r.add_argument("--out", required=True)
     r.add_argument("--query", dest="queries", action="append", default=[])
+    r.add_argument("--input-json", default=None,
+                   help="Raw actor input JSON (overrides query-based google-search input)")
     r.add_argument("--results-per-page", type=int, default=10)
     r.add_argument("--max-pages", type=int, default=1)
     r.add_argument("--timeout", type=int, default=300)

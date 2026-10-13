@@ -1,0 +1,21 @@
+{
+ "checkedAt": "2026-10-14T20:40:00Z",
+ "verdictsApplied": 14,
+ "stillUnreviewed": 20,
+ "newRecords": 1,
+ "topicFixes": 1,
+ "statusCounts": {
+  "corroborated": 6,
+  "UNREVIEWED": 29
+ },
+ "sourcesOpened": [
+  "intelligence/raw/2026-10-14-page-ixafrica-job.json",
+  "intelligence/raw/2026-10-14-page-oracle.json",
+  "intelligence/raw/2026-10-14-page-wiocc.json",
+  "intelligence/raw/2026-10-14-page-dpa.json",
+  "intelligence/raw/2026-10-14-page-dcd.json"
+ ],
+ "fetchFailures": [
+  "au-pida.org/prospectus/project.php?id=18 (datacenter-IP block suspected)"
+ ]
+}

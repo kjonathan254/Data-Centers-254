@@ -1,0 +1,57 @@
+[
+ {
+  "url": "https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279",
+  "fetch": {
+   "loadedUrl": "https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279",
+   "loadedTime": "2026-10-13T18:05:21.129Z",
+   "httpStatusCode": 200,
+   "contentLengthBytes": 58775,
+   "contentType": "text/html; charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279",
+   "title": "IT Intern — Data Centre Operations: 6-month Internship – East Africa’s first & largest Hyperscale, Carrier-neutral, AI-ready Data Centre",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:url",
+     "content": "https://ixafrica.co.ke/"
+    },
+    {
+     "property": "og:site_name",
+     "content": "East Africa’s first & largest Hyperscale, Carrier-neutral, AI-ready Data Centre"
+    },
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:type",
+     "content": "website"
+    },
+    {
+     "property": "og:title",
+     "content": "IT Intern — Data Centre Operations: 6-month Internship – East Africa’s first & largest Hyperscale, Carrier-neutral, AI-ready Data Centre"
+    }
+   ],
+   "jsonLd": null,
+   "headers": {
+    "connection": "keep-alive",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 13 Oct 2026 18:05:20 GMT",
+    "keep-alive": "timeout=5",
+    "link": "<https://ixafrica.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://ixafrica.co.ke/wp-json/wp/v2/awsm_job_openings/6279>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://ixafrica.co.ke/?p=6279>; rel=shortlink",
+    "server": "LiteSpeed",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-apify-unblocker-route": "GANYMEDE",
+    "x-powered-by": "PHP/8.1.34",
+    "x-turbo-charged-by": "LiteSpeed"
+   }
+  },
+  "markdown": "[Skip to main content](https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279#brx-content) [Skip to footer](https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279#brx-footer)\n\n# IT Intern — Data Centre Operations: 6-month Internship\n\nExpired on: Mar 15, 2026\n\nDepartment: IT  |  Type: Internship (6 months)  |  Location: On-site\n\n**ROLE OVERVIEW**\n\nWe are seeking a technically driven IT Intern to support data centre operations with a strong emphasis on automation, systems development, open-source tooling, and cybersecurity. This is a hands-on role designed to provide real-world exposure to enterprise infrastructure environments.\n\n**KEY RESPONSIBILITIES**\n\n*   Assist in the development and maintenance of automation scripts using Python, Bash, and Ansible to streamline data centre operations\n*   Deploy, configure, and manage open-source infrastructure tools including Terraform, Prometheus, Grafana, and Netdata for monitoring and provisioning\n*   Support the implementation of CI/CD pipelines using Git, Jenkins, and GitLab CI for system and application deployments\n*   Participate in server lifecycle management — provisioning, patching, decommissioning — across bare-metal and virtualised environments (KVM, Proxmox)\n*   Contribute to containerisation and orchestration initiatives using Docker and Kubernetes\n*   Assist with log aggregation and analysis using ELK Stack (Elasticsearch, Logstash, Kibana) or equivalent open-source solutions\n\n**CYBERSECURITY RESPONSIBILITIES**\n\n*   Support vulnerability scanning and remediation activities using open-source tools such as OpenVAS, Nmap, and Trivy\n*   Assist in the monitoring of SIEM dashboards (Wazuh / Security Onion) for anomaly detection and incident triage\n*   Apply CIS Benchmark hardening guidelines to Linux servers (Ubuntu / CentOS / Rocky Linux)\n*   Participate in access control reviews — enforcing least-privilege principles across user, service, and API accounts\n*   Document and report security incidents in accordance with established SOPs and escalation procedures\n\n**REQUIRED TECHNICAL SKILLS**\n\n*   Proficiency in Linux command line (Bash / Zsh); comfortable navigating and administering server environments\n*   Working knowledge of at least one scripting/programming language — Python strongly preferred\n*   Familiarity with version control systems (Git) and collaborative development workflows (branching, pull requests, code review)\n*   Understanding of TCP/IP networking fundamentals: DNS, DHCP, subnetting, routing protocols\n*   Basic knowledge of virtualisation technologies (VMware, KVM, Proxmox, or equivalent)\n*   Android application development experience using Kotlin or Java, with knowledge of Android Studio, Jetpack libraries, and the Android SDK\n*   Familiarity with RESTful API integration, JSON parsing, and connecting mobile applications to backend or data centre services\n\n**OPEN-SOURCE TOOLS & PLATFORMS**\n\n*   Monitoring & Observability: Prometheus, Grafana, Netdata, Zabbix\n*   Automation & IaC: Ansible, Terraform, Puppet\n*   Containerisation: Docker, Kubernetes (K3s / K8s), Helm\n*   CI/CD: Jenkins, GitLab CI, Drone CI\n*   Security: Wazuh, OpenVAS, Nmap, Fail2Ban, Suricata\n*   Logging: ELK Stack, Graylog, Loki + Promtail\n*   OS Platforms: Ubuntu Server, Rocky Linux, Debian, Alpine Linux\n\n**QUALIFICATIONS & EDUCATION**\n\n*   Currently enrolled in or recently completed a degree in Computer Science, Information Technology, Network Engineering, Software Engineering, or a related field\n*   Demonstrable interest in infrastructure, automation, cybersecurity, and/or mobile development through coursework, personal projects, or CTF participation\n*   Active GitHub account with publicly visible repositories showcasing personal or academic projects — this is mandatory for application consideration\n*   Hands-on experience with Android app development (Kotlin preferred); ability to build, test, and deploy functional Android applications\n*   Strong problem-solving mindset with the ability to work both independently and collaboratively in a fast-paced technical environment\n*   Excellent written and verbal communication skills — ability to document technical processes clearly\n\n**HOW TO APPLY**\n\n*   Submit a CV alongside a link to your active GitHub account — applications without a GitHub profile will not be considered\n*   Your GitHub profile must include a minimum of two (2) original projects with clear README documentation, commit history, and project descriptions\n*   For each showcased project, provide a direct link and a brief written summary (2–4 sentences) describing: the problem solved, technologies used, and your specific contribution\n*   Android development projects must be included in your GitHub portfolio; links to published apps on the Google Play Store or APK demo links are strongly encouraged\n*   Include links to any live deployments, hosted demos, lab writeups, CTF submissions, or open-source contributions that demonstrate practical experience\n*   Applications submitted without verifiable project links and a GitHub profile will not progress to the interview stage\n\n* * *\n\nPrior professional experience is not required, curiosity, initiative, and a passion for open-source technology are what matter most. Applications submitted without verifiable project links and a GitHub profile will not progress to the interview stage.\n\nEligible candidates to email their CV to **hr@ixafrica.co.ke by 10th March 2026.**\n\n⛔ Candidates without requisite qualifications should not apply and only candidates who meet the threshold will be contacted.\n\n**Job Category:** IT Intern — Data Centre Operations: 6-month Internship\n\n**Job Type:** Internship\n\n**Job Location:** Nairobi NBOX1 Data Centre\n\nSorry! This job has expired."
+ }
+]

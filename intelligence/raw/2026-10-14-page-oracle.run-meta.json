@@ -1,0 +1,69 @@
+{
+ "runId": "Nf64g7bOI82GnvZFq",
+ "actor": "apify~web-fetch",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-13T18:08:18.244Z",
+ "finishedAt": "2026-10-13T18:08:24.298Z",
+ "input": {
+  "url": "https://www.oracle.com/africa/cloud/public-cloud-regions/"
+ },
+ "itemsCollected": 1,
+ "usage": {
+  "stats": {
+   "inputBodyLen": 67,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 5892,
+   "resurrectCount": 0,
+   "runTimeSecs": 5.892,
+   "metamorph": 0,
+   "computeUnits": 0.0016366666666666667,
+   "memAvgBytes": 141769724.4485549,
+   "memMaxBytes": 174288896,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 27.948684070909447,
+   "cpuMaxUsage": 56.05635790800252,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 13040,
+   "netTxBytes": 9741
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "apifyMarginPercentage": 0.2,
+   "createdAt": "2026-09-10T09:36:43.089Z",
+   "startedAt": "2026-09-10T09:36:43.089Z",
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "fetch": {
+      "eventTitle": "Fetch",
+      "eventDescription": "Successful fetch",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.0015
+     },
+     "apify-actor-start": {
+      "eventTitle": "Actor Start",
+      "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+      "isOneTimeEvent": true,
+      "eventPriceUsd": 5e-05
+     }
+    }
+   }
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "usageTotalUsd": 0.00155,
+  "eventUsage": {
+   "fetch": {
+    "eventTitle": "Fetch",
+    "eventTotalUsd": 0.0015
+   },
+   "apify-actor-start": {
+    "eventTitle": "Actor Start",
+    "eventTotalUsd": 5e-05
+   }
+  }
+ }
+}

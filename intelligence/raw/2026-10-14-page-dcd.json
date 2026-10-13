@@ -1,0 +1,68 @@
+[
+ {
+  "url": "https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/",
+  "fetch": {
+   "loadedUrl": "https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/",
+   "loadedTime": "2026-10-13T18:09:28.863Z",
+   "httpStatusCode": 200,
+   "contentLengthBytes": 100149,
+   "contentType": "text/html; charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/",
+   "title": "iXAfrica to host Oracle cloud region in Nairobi, Kenya - DCD",
+   "description": "Oracle first announced plans for Kenyan region in 2024",
+   "author": null,
+   "keywords": null,
+   "languageCode": "en",
+   "openGraph": [
+    {
+     "property": "og:title",
+     "content": "iXAfrica to host Oracle cloud region in Nairobi, Kenya"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://media.datacenterdynamics.com/media/images/oracle_ixafrica.2e16d0ba.fill-1200x630.png"
+    },
+    {
+     "property": "og:description",
+     "content": "Oracle first announced plans for Kenyan region in 2024"
+    }
+   ],
+   "jsonLd": null,
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "s-maxage=14400, stale-while-revalidate=1200, stale-if-error=1200, public",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a4a04b9fb852cc98-EWR",
+    "connection": "keep-alive",
+    "content-type": "text/html; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "date": "Tue, 13 Oct 2026 18:09:27 GMT",
+    "keep-alive": "timeout=5",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "referrer-policy": "same-origin",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=q31cKCTIUZo%2FYFtobXlo5%2BYha04OcePChMyGighg6jPUcUomRAjxwJqX89Kq8nKopIH20p2aVnwTsmyvjcdUJg7u6bC96Gm2rD2Kq67wp27LJG82lLNUpYJYA%2BG30jBXKlQJNMfeyiX%2BMUr7\"}]}",
+    "server": "cloudflare",
+    "server-timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=12,cfOrigin;dur=0,cfWorker;dur=904",
+    "strict-transport-security": "max-age=2592000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "Cookie, accept-encoding",
+    "via": "1.1 google",
+    "x-apify-unblocker-route": "GANYMEDE",
+    "x-cloud-trace-context": "b7b5c6a3d9bdd80f4c12ba4086d3019f",
+    "x-content-type-options": "nosniff, nosniff, nosniff",
+    "x-frame-options": "DENY"
+   }
+  },
+  "markdown": "# iXAfrica to host Oracle cloud region in Nairobi, Kenya\n\nOracle first announced plans for Kenyan region in 2024\n\nJanuary 27, 2026\n\nBy\n\n[Dan Swinhoe](https://www.datacenterdynamics.com/en/profile/dan-swinhoe/)\n\n[Have your say](https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/#comments)\n\n[![Preferred source](https://www.datacenterdynamics.com/static/img/google_preferred_source.172e670ec003.png)](https://google.com/preferences/source?q=datacenterdynamics.com)\n\nEast African data center firm iXAfrica is to host Oracle’s Kenyan cloud region.\n\nThe company this week announced it has been selected as the host partner for the Oracle Cloud Infrastructure (OCI) region in Nairobi, Kenya.\n\n![oracle ixafrica](https://media.datacenterdynamics.com/media/images/oracle_ixafrica.width-358.png)\n\n– iXAfrica\n\n“We are delighted to be in execution mode to bring OCI to Kenya,” said Snehar Shah, CEO, iXAfrica. “With this collaboration, iXAfrica is leveraging the renewable energy, talent, and abundant submarine and national connectivity available in our market.”\n\nPlans for Oracle’s Kenyan cloud region were first [announced](https://www.datacenterdynamics.com/en/news/oracle-plans-cloud-region-in-nairobi-kenya/) in early 2024. A launch date hasn’t been provided, and the site is listed as “coming soon” on Oracle’s website.\n\nThis would be the company’s second cloud region in Africa. Oracle opened its Johannesburg OCI region in [January 2022](https://www.datacenterdynamics.com/en/news/oracle-opens-south-african-cloud-region-in-johannesburg/). A second South African region is planned for the future, and two regions in Morocco are also listed as coming soon.\n\n“Around the world, governments and enterprises rely on OCI for its security, scalability, and ability to run mission-critical workloads that enable innovation at scale,” said David Bunei, country leader for Kenya, Oracle. “These unique capabilities and our collaboration with iXAfrica will further support the growth of the country’s digital economy.”\n\niXAfrica’s NBOX1 is a 17,300 sqm (186,215 sq ft) [data center](https://ixafrica.co.ke/campus-specs/) located on Mombasa Road in Nairobi. Located on land that was formerly part of a Schneider Electric complex, the air-cooled site could offer more than 20MW at full build-out. The first building offers 4.5MW, while the second building will offer 18MW.\n\nA second campus in the city is planned.\n\nPan-African telecoms firm Paratus offers cloud services out of the NBOX1 site.\n\n## More in Cloud & Hyperscale\n\n*   ![INT.Market Snapshot - Financing the Data Center Buildout cover image_2](https://media.datacenterdynamics.com/media/images/INT_uln2gcZ.Market_Snapshot_-_Financing_the_D.height-150.png)\n    \n    # [DCD Intelligence: Financing the data center buildout](https://www.datacenterdynamics.com/en/whitepapers/dcd-intelligence-financing-the-data-center-buildout/)\n    \n*   ![schahfer generating station](https://media.datacenterdynamics.com/media/images/schahfer_generating_station.2e16d0ba.fill-280x185.png)\n    \n    03 Jun 2026\n    \n    # [Amazon plans nine-building data center campus in Wheatfield, Indiana](https://www.datacenterdynamics.com/en/news/amazon-plans-nine-building-data-center-campus-in-wheatfield-indiana/)\n    \n*   ![Substrate-AI-Talavera-Center](https://media.datacenterdynamics.com/media/images/Substrate-AI-Talavera-Center.a11caf3f.fill-280x185.jpg)\n    \n    03 Aug 2026\n    \n    # [Substrate AI establishes data center REIT to accelerate investments in AI infrastructure](https://www.datacenterdynamics.com/en/news/substrate-ai-establishes-data-center-reit-to-accelerate-investments-in-ai-infrastructure/)\n    \n\n## More in Africa\n\n*   ![spekboom-5](https://media.datacenterdynamics.com/media/images/spekboom-5.c926e544.fill-280x185.jpg)\n    \n    03 Jul 2026\n    \n    # [Amazon signs 1.95 million carbon removal deal in South Africa](https://www.datacenterdynamics.com/en/news/amazon-signs-195-million-carbon-removal-deal-in-south-africa/)\n    \n*   ![Ethio Telecom](https://media.datacenterdynamics.com/media/images/Screenshot_2026-08-04_081403.2e16d0ba.fill-280x185.png)\n    \n    04 Aug 2026\n    \n    # [Ethio Telecom expands renewable-powered telecoms infrastructure](https://www.datacenterdynamics.com/en/news/ethio-telecom-expands-renewable-powered-telecoms-infrastructure/)\n    \n*   ![Gabon data center inauguration](https://media.datacenterdynamics.com/media/images/Gabon_data_center_inauguration.14117c23.fill-280x185.jpg)\n    \n    06 Jul 2026\n    \n    # [Cameroon's ST Digital opens data center in Gabon](https://www.datacenterdynamics.com/en/news/cameroons-st-digital-opens-data-center-in-gabon/)\n    \n\n[![Preferred source](https://www.datacenterdynamics.com/static/img/google_preferred_source.172e670ec003.png)](https://google.com/preferences/source?q=datacenterdynamics.com)\n\n### Tags\n\n*   [IXAfrica](https://www.datacenterdynamics.com/en/tags/ixafrica/)\n*   [IXAfrica DataCentre](https://www.datacenterdynamics.com/en/tags/ixafrica-datacentre/)\n*   [Kenya](https://www.datacenterdynamics.com/en/tags/kenya/)\n*   [Nairobi](https://www.datacenterdynamics.com/en/tags/nairobi/)\n*   [OCI](https://www.datacenterdynamics.com/en/tags/oci/)\n*   [Oracle](https://www.datacenterdynamics.com/en/tags/oracle/)\n*   [Oracle Cloud](https://www.datacenterdynamics.com/en/tags/oracle-cloud/)\n\n## Comments"
+ }
+]

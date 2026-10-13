@@ -3,7 +3,7 @@
  "runIds": [
   "EYJrixtPCxsEDAnS2"
  ],
- "recordCount": 34,
+ "recordCount": 35,
  "records": [
   {
    "record_id": "dc254-workforce-20261013-001",
@@ -21,14 +21,18 @@
     "Location: On-site, Nairobi iXAfrica is looking for a technically driven IT Intern to support data centre operations with a focus on ...Read more"
    ],
    "evidence_excerpt": "Location: On-site, Nairobi iXAfrica is looking for a technically driven IT Intern to support data centre operations with a focus on ...Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label '70+ likes  ·  7 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label '70+ likes  ·  7 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Official iXAfrica careers page fetched 14 Oct 2026 confirms this advertisement verbatim (title, 6-month paid internship, Nairobi, on-site). The official page itself states 'Expired on: Mar 15, 2026', so this is evidence of advertised demand in early 2026, NOT current demand.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict corroborated applied (Task 143)"
     }
    ],
    "provenance": {
@@ -62,14 +66,18 @@
     "We are seeking a technically driven IT Intern to support data centre operations with a strong emphasis on automation, systems development, open-source tooling, ...Read more"
    ],
    "evidence_excerpt": "We are seeking a technically driven IT Intern to support data centre operations with a strong emphasis on automation, systems development, open-source tooling, ...Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label 'https://ixafrica.co.ke › ...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label 'https://ixafrica.co.ke › ...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Official page opened and fully captured 14 Oct 2026 (intelligence/raw/2026-10-14-page-ixafrica-job.json). Posting states 'Expired on: Mar 15, 2026'. Role titled Data Centre Operations but skill set is heavily automation/DevOps + security + Android development; GitHub portfolio mandatory. First fully-verified official-employer record of the Workforce Watch pilot.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict corroborated applied (Task 143)"
     }
    ],
    "provenance": {
@@ -80,11 +88,45 @@
     "displayedUrl": "https://ixafrica.co.ke › ..."
    },
    "topic_fields": {
-    "role_category": "unclassified",
-    "skills_required": [],
-    "qualifications_required": [],
-    "experience_required": "UNKNOWN",
-    "employment_type": "UNKNOWN"
+    "role_category": "cloud-it-operations",
+    "skills_required": [
+     "Linux administration",
+     "Python",
+     "Bash",
+     "Ansible",
+     "Terraform",
+     "Prometheus",
+     "Grafana",
+     "Netdata",
+     "Zabbix",
+     "Docker",
+     "Kubernetes (K3s/K8s)",
+     "Helm",
+     "Jenkins",
+     "GitLab CI",
+     "Drone CI",
+     "ELK Stack (Elasticsearch/Logstash/Kibana)",
+     "Graylog",
+     "Loki + Promtail",
+     "Wazuh",
+     "Security Onion",
+     "OpenVAS",
+     "Nmap",
+     "Trivy",
+     "Fail2Ban",
+     "Suricata",
+     "CIS Benchmark hardening",
+     "Git workflows",
+     "TCP/IP networking (DNS/DHCP/subnetting/routing)",
+     "virtualisation (VMware/KVM/Proxmox)",
+     "Android development (Kotlin/Java)",
+     "REST API integration",
+     "SIEM monitoring",
+     "vulnerability scanning"
+    ],
+    "qualifications_required": "Degree in Computer Science / IT / Network Engineering / Software Engineering (enrolled or recently completed); Active GitHub account with 2+ original documented projects (mandatory for consideration); Android development experience (Kotlin preferred)",
+    "experience_required": "Currently enrolled or recently completed (student/graduate)",
+    "employment_type": "Internship (6 months, paid, on-site)"
    }
   },
   {
@@ -227,13 +269,17 @@
    ],
    "evidence_excerpt": "iXAfrica Data Centres is hiring an Operations Team Leader On-site: Nairobi (iXAfrica Data Centre – NBOX1) The Operations Team Leader will ...",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label '10+ reactions  ·  6 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'Nairobi \"data centre\" jobs 2026'; SERP date label '10+ reactions  ·  6 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Reviews a DIFFERENT iXAfrica role (Operations Team Leader). Not independently opened this pass; check iXAfrica careers page for an equivalent official posting before any use.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -383,14 +429,18 @@
     "Greek energy group Amaco Energy is seeking approval for a $1.5 billion AI data centre in Mombasa that would operate independently of Kenya's ...Read more"
    ],
    "evidence_excerpt": "Greek energy group Amaco Energy is seeking approval for a $1.5 billion AI data centre in Mombasa that would operate independently of Kenya's ...Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://thetechcapital.com › Posts' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://thetechcapital.com › Posts' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Item matches the house record exactly: US$1.5B AMACO proposal first reported 17 Aug 2026 (Business Daily), GE Vernova cooperation 10 Sep 2026, permitting phase; no NEW milestone (approval actually filed or granted) found in this item. Hercules/AMACO remains proposed and outside the 27-record directory.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict corroborated applied (Task 143)"
     }
    ],
    "provenance": {
@@ -418,13 +468,17 @@
    ],
    "evidence_excerpt": "This will be achieved through onboarding government services in the Konza Data Centre and the completion an operationalization of the Disaster ...Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Verification search 14 Oct 2026 (two targeted queries incl. exact-phrase 'Specific Procurement Notice'): NO official KDIAP SPN located from this egress - only this LinkedIn post and the related Facebook post. The 'bids close 29 October' claim remains UNVERIFIED against a primary document. Do not publish the deadline until the official notice is located on World Bank or ministry portals.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -486,13 +540,17 @@
    ],
    "evidence_excerpt": "Bids close at 10:00 a.m. EAT on 29 October 2026. Tender documents ... Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub.Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Same verdict as 20261013-001: official SPN not located 14 Oct; LinkedIn post is a lead, not the document of record.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -539,7 +597,7 @@
   },
   {
    "record_id": "dc254-workforce-20261013-009",
-   "topic": "workforce",
+   "topic": "connectivity",
    "record_type": "search-result",
    "title": "iXAfrica Data Centres Collaborates with Oracle to Deliver ...",
    "organisation": "domain: africa24tv.com",
@@ -553,14 +611,18 @@
     "iXAfrica's 22 MW campus provides world-class and highly resilient Data Centre infrastructure to create a vital part of the internet backbone of East Africa.Read more"
    ],
    "evidence_excerpt": "iXAfrica's 22 MW campus provides world-class and highly resilient Data Centre infrastructure to create a vital part of the internet backbone of East Africa.Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://africa24tv.com › ixafrica-data-centres-collaborat...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://africa24tv.com › ixafrica-data-centres-collaborat...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. TOPIC FIX: topic corrected workforce->connectivity (cloud-region item misclassified by keyword rules); record_id retained for traceability REVIEW 2026-10-14T20:40:00Z: Corroborated with a material caveat: DCD (27 Jan 2026) confirms iXAfrica announced as host partner for Oracle's OCI Nairobi region (first announced 2024). Oracle's official public-cloud-regions page fetched 14 Oct 2026 lists Kenya as 'Coming soon' - NOT live. 'Kenya's first public cloud region' is company/press framing, not a DC254-verified operational status.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict corroborated applied (Task 143)"
     }
    ],
    "provenance": {
@@ -595,13 +657,17 @@
    ],
    "evidence_excerpt": "Microsoft and G42 said the proposed data centre campus would run entirely on renewable geothermal energy and incorporate water conservation ...Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://www.aljazeera.com › Economy › Energy' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query '\"data centre\" Kenya announcement October 2026'; SERP date label 'https://www.aljazeera.com › Economy › Energy' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Al Jazeera piece; publication date visible in URL (2026/8/24) but page not opened this pass. Candidate research thread (water use), not a dataset change.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -663,13 +729,17 @@
    ],
    "evidence_excerpt": "The review should test fees, compliance cost, entry, concentration, incidents and customer prices against an April 2026 baseline. A regulation ...Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label '30+ reactions  ·  1 month ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label '30+ reactions  ·  1 month ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Follow-up check 14 Oct 2026: no data-centre licence decision located. CA adopted licence conditions for OTHER categories under the revised market structure (Gazette Notice No. 12181, 14 Jul 2026, via Digital Policy Alert). Consultation outcome for the standalone DC licence remains open. Tracker note updated accordingly.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -697,13 +767,17 @@
    ],
    "evidence_excerpt": "The Energy and Petroleum Regulatory Authority (EPRA) invites applications from young innovators, students, researcher",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label 'https://www.epra.go.ke' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label 'https://www.epra.go.ke' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: EPRA domain is egress-blocked from this sandbox (known class, Task 140 precedent); no conclusion drawn from this result.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -874,13 +948,17 @@
    ],
    "evidence_excerpt": "The Communications Authority of Kenya has proposed a standalone licensing framework for data centres, with potential implications for operators ...",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label '5 reactions  ·  2 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'Kenya data centre tender OR regulation EPRA 2026'; SERP date label '5 reactions  ·  2 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Same follow-up check as 20261013-003: no DC licence finalisation found as of 14 Oct 2026.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -1051,13 +1129,17 @@
    ],
    "evidence_excerpt": "... submarine cable systems, thereby linking South Sudan directly to global ... Previous Project. Development of Data Centre Infrastructures... Next Project.Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://au-pida.org › prospectus › project' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://au-pida.org › prospectus › project' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Fetch FAILED from both the sandbox and Apify datacenter egress (14 Oct 2026); au-pida.org appears to block datacenter IPs. Manual review in a browser required before use as a map/tracker source.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -1084,14 +1166,18 @@
     "The new capital will be directed toward three priorities: accelerating the deployment and consolidation of data centre capacity, extending the open-access ...Read more"
    ],
    "evidence_excerpt": "The new capital will be directed toward three priorities: accelerating the deployment and consolidation of data centre capacity, extending the open-access ...Read more",
-   "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://wioccgroup.net › regional-presence' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
-   "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "verification_status": "corroborated",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://wioccgroup.net › regional-presence' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: wioccgroup.net/regional-presence fetched 14 Oct 2026: confirms the US$300M investment announcement dated 3 September 2026 (AFC + Vision Invest) - exactly matching the house record (Issue 003: announced 3 Sep, captured 10 Oct). Page confirms WIOCC Kenya Limited subsidiary and 'initiatives in DRC and Kenya currently in progress'. Strong primary-source corroboration for RR004 candidate 3.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict corroborated applied (Task 143)"
     }
    ],
    "provenance": {
@@ -1153,13 +1239,17 @@
    ],
    "evidence_excerpt": "data centre business. Oct 12, 2026 Vaughan O'Grady ...Read more",
    "verification_status": "UNREVIEWED",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://developingtelecoms.com › data-centres-networks' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'Kenya \"data centre\" fibre OR \"submarine cable\" OR IXP 2026'; SERP date label 'https://developingtelecoms.com › data-centres-networks' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Google four subsea connectivity hubs: global trend monitor; East Africa relevance unconfirmed. File under global watch unless a Nairobi touchpoint is verified.",
    "reviewed_by": null,
-   "last_checked_at": "2026-10-13T17:40:01Z",
+   "last_checked_at": "2026-10-14T20:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
      "what": "created from Apify run EYJrixtPCxsEDAnS2 (apify~google-search-scraper)"
+    },
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "review verdict UNREVIEWED applied (Task 143)"
     }
    ],
    "provenance": {
@@ -1237,6 +1327,43 @@
     "serpPosition": 9,
     "displayedUrl": "https://ixafrica.co.ke"
    }
+  },
+  {
+   "record_id": "dc254-policy-20261014-001",
+   "topic": "policy",
+   "record_type": "announcement",
+   "title": "CA adopted licence conditions for public communications access centres and communications equipment vendors (Gazette Notice No. 12181)",
+   "organisation": "Communications Authority of Kenya (recorded via Digital Policy Alert)",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+   "published_at": "2026-07-14",
+   "collected_at": "2026-10-14T20:40:00Z",
+   "event_date": "2026-07-14",
+   "claims_extracted": [
+    "On 14 July 2026, the Communications Authority of Kenya adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure.",
+    "Kenya Gazette Notice No. 12181 (National Council for Law Reporting, official) is cited as the source document."
+   ],
+   "evidence_excerpt": "On 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure.",
+   "verification_status": "corroborated",
+   "confidence_notes": "DPA event page fetched 14 Oct 2026 (intelligence/raw/2026-10-14-page-dpa.json). Relevant to /tracker/licensing as evidence the revised-market-structure rollout is progressing through 2026. It is NOT a data-centre licence decision: the categories are public communications access centres and communications equipment vendors. Kenya Law gazette URL not yet captured - locate before citing the gazette directly.",
+   "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
+   "last_checked_at": "2026-10-14T20:40:00Z",
+   "change_history": [
+    {
+     "at": "2026-10-14T20:40:00Z",
+     "what": "created during Task 143 review pass (Digital Policy Alert page opened)"
+    }
+   ],
+   "provenance": {
+    "runId": "manual-review",
+    "actor": "apify~web-fetch",
+    "queryTerm": "CA licence follow-up",
+    "serpPosition": null,
+    "displayedUrl": ""
+   }
   }
- ]
+ ],
+ "reviewedAt": "2026-10-14T20:40:00Z",
+ "reviewer": "Super Z (agent, editor authority 2026-10-14)"
 }

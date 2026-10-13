@@ -1,0 +1,173 @@
+{
+ "runId": "RIrOYtA0Pp9AfQo27",
+ "actor": "apify~google-search-scraper",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-13T18:01:53.778Z",
+ "finishedAt": "2026-10-13T18:02:51.380Z",
+ "input": {
+  "queries": "\"Kenya Digital Infrastructure Acceleration Project\" \"Specific Procurement Notice\"\n\"Kenya Digital Infrastructure Acceleration Project\" tender bids October 2026\nCommunications Authority Kenya \"data centre\" licensing framework 2026\niXAfrica Oracle cloud region Nairobi Kenya",
+  "resultsPerPage": 10,
+  "maxPages": 1
+ },
+ "itemsCollected": 4,
+ "usage": {
+  "statusMessage": "Processed 4 queries on 4 pages. Extracted: 20 organicResults, 4 relatedQueries, 3 aiOverviews, 4 itemsPushed",
+  "isStatusMessageTerminal": true,
+  "stats": {
+   "inputBodyLen": 998,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 57416,
+   "resurrectCount": 0,
+   "runTimeSecs": 57.416,
+   "metamorph": 0,
+   "computeUnits": 0.015948888888888887,
+   "memAvgBytes": 111331303.18419722,
+   "memMaxBytes": 117473280,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 5.5668358522075625,
+   "cpuMaxUsage": 90.35553299492386,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 1310573,
+   "netTxBytes": 1031989
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": 0.5,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "apifyMarginPercentage": 0.2,
+   "createdAt": "2026-10-07T10:39:55.497Z",
+   "startedAt": "2026-10-07T10:39:55.497Z",
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "search-page-scraped": {
+      "eventTitle": "Scraped search result page",
+      "eventDescription": "Cost per page of Google Search results successfully scraped.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.0045
+     },
+     "ai-overview-scraped": {
+      "eventTitle": "Add-on: Google AI Overview",
+      "eventDescription": "Extra cost per query when an AI Overview is successfully captured. Uses a specialized proxy to increase the probability of getting one.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.003
+     },
+     "ai-mode-result-scraped": {
+      "eventTitle": "Add-on: Google AI Mode",
+      "eventDescription": "Extra cost for using Google AI Mode per search query. This cost is applied when a successful Google AI Mode request is returned.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.2
+     },
+     "perplexity-ai-result-scraped": {
+      "eventTitle": "Add-on: Perplexity AI search",
+      "eventDescription": "Extra cost for using Perplexity AI search per search query. This cost is applied when a successful Perplexity AI search request is returned.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.2
+     },
+     "chatgpt-result-scraped": {
+      "eventTitle": "Add-on: ChatGPT search",
+      "eventDescription": "Extra cost for using ChatGPT search per search query. This cost is applied when a successful ChatGPT search request is returned.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.2
+     },
+     "copilot-result-scraped": {
+      "eventTitle": "Add-on: Copilot search",
+      "eventDescription": "Extra cost for using Copilot search per search query. This cost is applied when a successful Copilot search request is returned.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.2
+     },
+     "gemini-result-scraped": {
+      "eventTitle": "Add-on: Gemini search",
+      "eventDescription": "Extra cost for using Gemini search per search query. This cost is applied when a successful Gemini search request is returned.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.2
+     },
+     "lead-scraped": {
+      "eventTitle": "Add-on: Business leads enrichment",
+      "eventDescription": "Cost per successfully extracted business lead. Get key prospect details: full name, work email, phone number, job title, and LinkedIn profile. Business leads are extracted based on the found web domains.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.1
+     },
+     "lead-email-verified": {
+      "eventTitle": "Add-on: Email verification",
+      "eventDescription": "Cost per decisive email verification (valid, invalid, or disposable). You are not charged for catch-all, unknown, or error results.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.1
+     },
+     "ads-scraped": {
+      "eventTitle": "Add-on: Paid results (ads) extraction",
+      "eventDescription": "Extra cost per page for attempting to extract paid results (ads) from Google Search. This applies when the ads extraction feature is enabled, regardless of whether ads are found on the specific page.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0065
+     },
+     "website-content-scraped": {
+      "eventTitle": "Add-on: Full website page scraped",
+      "eventDescription": "Cost per website page successfully scraped.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.008
+     },
+     "apify-actor-start": {
+      "eventTitle": "Actor Start",
+      "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+      "isOneTimeEvent": true,
+      "eventPriceUsd": 5e-05
+     }
+    }
+   }
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "usageTotalUsd": 0.01805,
+  "eventUsage": {
+   "search-page-scraped": {
+    "eventTitle": "Scraped search result page",
+    "eventTotalUsd": 0.018
+   },
+   "ai-overview-scraped": {
+    "eventTitle": "Add-on: Google AI Overview",
+    "eventTotalUsd": 0
+   },
+   "ai-mode-result-scraped": {
+    "eventTitle": "Add-on: Google AI Mode",
+    "eventTotalUsd": 0
+   },
+   "perplexity-ai-result-scraped": {
+    "eventTitle": "Add-on: Perplexity AI search",
+    "eventTotalUsd": 0
+   },
+   "chatgpt-result-scraped": {
+    "eventTitle": "Add-on: ChatGPT search",
+    "eventTotalUsd": 0
+   },
+   "copilot-result-scraped": {
+    "eventTitle": "Add-on: Copilot search",
+    "eventTotalUsd": 0
+   },
+   "gemini-result-scraped": {
+    "eventTitle": "Add-on: Gemini search",
+    "eventTotalUsd": 0
+   },
+   "lead-scraped": {
+    "eventTitle": "Add-on: Business leads enrichment",
+    "eventTotalUsd": 0
+   },
+   "lead-email-verified": {
+    "eventTitle": "Add-on: Email verification",
+    "eventTotalUsd": 0
+   },
+   "ads-scraped": {
+    "eventTitle": "Add-on: Paid results (ads) extraction",
+    "eventTotalUsd": 0
+   },
+   "website-content-scraped": {
+    "eventTitle": "Add-on: Full website page scraped",
+    "eventTotalUsd": 0
+   },
+   "apify-actor-start": {
+    "eventTitle": "Actor Start",
+    "eventTotalUsd": 5e-05
+   }
+  }
+ }
+}

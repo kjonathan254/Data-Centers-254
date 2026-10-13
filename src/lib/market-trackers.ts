@@ -312,7 +312,7 @@ export const LICENSING_REGIMES: LicensingRegime[] = [
     status: "Proposed",
     keyFees: "Application KES 5,000; initial licence fee KES 100,000; annual operating fee KES 80,000 or 0.4% of annual gross turnover, whichever is higher",
     validity: "15 years (proposed)",
-    note: "CA public consultation opened 8 September 2026, 30-day window (comments due ~8 October 2026). Would remove colocation from NFP-T2; NFP and ASP licence holders would remain exempt. Finalisation scheduled FY2026/27, implementation FY2027/28. The Universal Service Fund levy (0.5% of annual gross revenue) still applies on top.",
+    note: "CA public consultation opened 8 September 2026, 30-day window (comments due ~8 October 2026). Would remove colocation from NFP-T2; NFP and ASP licence holders would remain exempt. Finalisation scheduled FY2026/27, implementation FY2027/28. The Universal Service Fund levy (0.5% of annual gross revenue) still applies on top. Follow-up check 14 October 2026: no finalisation decision located; the CA did adopt licence conditions for other categories under the revised market structure (Gazette Notice No. 12181, 14 July 2026), so the market-structure rollout is progressing, but the standalone data-centre licence outcome remains open.",
   },
   {
     regime: "Data Protection Act 2019 obligations (ODPC)",

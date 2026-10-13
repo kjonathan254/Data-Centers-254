@@ -1,0 +1,60 @@
+[
+ {
+  "url": "https://wioccgroup.net/regional-presence",
+  "fetch": {
+   "loadedUrl": "https://wioccgroup.net/regional-presence",
+   "loadedTime": "2026-10-13T18:08:15.477Z",
+   "httpStatusCode": 200,
+   "contentLengthBytes": 44261,
+   "contentType": "text/html; charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://wioccgroup.net/regional-presence",
+   "title": "Regional Presence | WIOCC Group | Pan-African Digital Infrastructure Leader",
+   "description": "Through strategic investments in subsea assets, terrestrial networks, metro infrastructure, hyperscale data centres and digital platforms, we underpin the expansion and scalability of digital services across the continent...",
+   "author": null,
+   "keywords": null,
+   "languageCode": "en",
+   "openGraph": [
+    {
+     "property": "og:title",
+     "content": "Regional Presence | WIOCC Group | Pan-African Digital Infrastructure Leader"
+    },
+    {
+     "property": "og:description",
+     "content": "Through strategic investments in subsea assets, terrestrial networks, metro infrastructure, hyperscale data centres and digital platforms, we underpin the expansion and scalability of digital services across the continent..."
+    },
+    {
+     "property": "og:type",
+     "content": "website"
+    }
+   ],
+   "jsonLd": null,
+   "headers": {
+    "age": "130252",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "HIT",
+    "cf-ray": "a4a049df78c56ac8-ATL",
+    "connection": "keep-alive",
+    "content-security-policy": "frame-ancestors 'self'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Tue, 13 Oct 2026 18:08:15 GMT",
+    "keep-alive": "timeout=5",
+    "last-modified": "Mon, 12 Oct 2026 07:33:40 GMT",
+    "link": "<https://cdn.prod.website-files.com>; rel=preconnect; crossorigin, <https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/css/wgrp-bb780d40266a5f2949af-0601598cd55d1.webflow.shared.4379218e8.css>; rel=preload; as=style; crossorigin; integrity=\"sha384-Q3khjodvJjVnBcDHUVlV4pKQJa86xuUBh4ImqAJp8CUJrXyj6XzLdTLQJUSxxn6f\", <https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css>; rel=preload; as=style",
+    "server": "cloudflare",
+    "set-cookie": "_cfuvid=YdF0hg8Ju4zkYE9rh5Pbz.sp_7R6YFeXmz5BQSD2Nk4-1791914895.2762737-1.0.1.1-WusNvSLFEHshkQV3C5HQWiof.zkPiMZNdlPnfTmAAdU; HttpOnly; SameSite=None; Secure; Path=/; Domain=wioccgroup.net",
+    "strict-transport-security": "max-age=31536000",
+    "surrogate-control": "max-age=432000",
+    "surrogate-key": "wioccgroup.net 69c522f293008e0ca38ce3fb pageId:69ce8391e6842b5e837fc121 69c522f293008e0ca38ce410",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-apify-unblocker-route": "GANYMEDE",
+    "x-frame-options": "SAMEORIGIN",
+    "x-lambda-id": "fae2a3ff-a9f0-44e7-9600-37efd62977cd",
+    "x-wf-region": "us-east-1"
+   }
+  },
+  "markdown": "# Regional Presence\n\n‍\n\n[![Arrow](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce625_Arrow.svg) Integrated Digital Infrastructure](https://wioccgroup.net/regional-presence#)\n\n![](https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)\n\n![](https://cdn.prod.website-files.com/692419bef028c691876c3283/692419bef028c691876c3517_Mask%20group%20-%202025-06-10T105415.698.webp)\n\n![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69ce8c1d9a6ec27616b4fd9e_69ce0ac7998d754ccd964283_Ayotunde.png)\n\n### West Africa\n\nWe deliver client connectivity both into and between multiple African countries through strong partnerships with local operators, complemented by our strategic investment in the WACS submarine cable system, which lands in the DRC, Congo Brazzaville, Cameroon, Nigeria, Togo, Ghana and Côte d’Ivoire.  \n  \nTo further strengthen West Africa’s international capacity, we prioritise strategic investments in the Equiano and 2Africa subsea cables.  These networks play a critical role in meeting the region’s current and future hyperscale international connectivity needs, unlocking new high-capacity routes between Africa and Europe. As Google’s landing partner for the Equiano cable in Lagos, WIOCC reinforces its strategic leadership within the region’s digital infrastructure ecosystem.  \n  \nTo support this growing capacity demand, OADC Lagos delivers customised colocation services to its anchor tenants, providing the resilient, hyperscale-ready infrastructure required to unlock the full value of these subsea investments. This integrated platform is further strengthened by the continued terrestrial fibre expansion of Open Access Metro across Nigeria, extending high-capacity metro and long-distance fibre routes that connect landing stations, data centres and enterprise clients across key commercial hubs.\n\n![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69ce8c31001aa49872dc89a6_southern%20africa.webp)\n\n### Southern Africa\n\nWe provide integrated end-to-end connectivity across the region, linking key cities and major Points-of-Presencethrough our extensive national terrestrial fibre networks and metro infrastructure. Our network seamlessly connects to international subsea cables, including EASSy, SAFE, SAT3, SEACOM, WACS, Equiano and 2Africa, creating high-capacity routes between Africa, Europe and Asia.  \n  \nTo meet South Africa’s surging demand, we enhanced our infrastructure, increasing second-line system capacity to provide higher bandwidth, real-time provisioning and improved service availability.  \n  \nAt the heart of our offering is a unique core-to-edge architecture. Nine hyperscale Tier-III data centres, strategically positioned and interconnected across multiple fibre networks, form the backbone of an open-access digital ecosystem. Complemented by more than thirty Edge data centres, this architecture extends data storage, processing and content delivery to the network edge, boosting application performance, enabling local processing of critical data and reducing backhaul costs.\n\n![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69ce8c41ef0ec18d4b1f6871_geca.webp)\n\n### Greater East and Central Africa (GECA)\n\nOur capability in Greater East Africa is built on the cross-border integration of extensive national terrestrial fibre networks owned and managed by our local shareholders, which include 11 African investors and the IFC.  \n  \nOur unique hyperscale network delivers broad terrestrial fibre reach and cross-border connectivity, seamlessly integrated with international submarine cables. In the DRC, OADC-TEXAF Kinshasa data centre is driving investment into the country and supporting increased broadband penetration, strengthening the digital ecosystem.  \n  \nExpansion across the GECA region is underway, with initiatives in DRC and Kenya currently in progress. As part of this growth, we have incorporated two subsidiaries, WIOCC Kenya Limited and WIOCC RDC, to underpin our expanding footprint and operations across the region.\n\nNew and Articles\n\n### In the Media\n\n[![](https://cdn.prod.website-files.com/69c522f293008e0ca38ce408/6a96dc92450c926afb54896d_Leap%202026.jpg) September 3, 2026 WIOCC Group Secures US$300 Million Investment to Drive its Next Phase of Pan-African Digital Infrastructure Growth The new capital will be directed toward three priorities: accelerating the deployment and consolidation of data centre capacity, extending the open-access terrestrial fibre footprint into new markets and adding strategically selected subsea assets that strengthen international connectivity.](https://wioccgroup.net/regional-presence#)\n\n[September 1, 2026 WIOCC Group Secures Strategic Investment from AFC and Vision Invest to Accelerate Its Digital Infrastructure Expansion Across Africa WIOCC Group, Africa's leading carrier-neutral digital infrastructure platform, today announced the signing of a Shareholder Subscription Agreement (SSA) with Africa Finance Corporation (AFC) and Vision International Investment Company (Vision Invest), through which the two investors will make a combined US $300 million investment in the company. ![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce433_white%20rotate%20arrow.svg)](https://wioccgroup.net/news/wiocc-group-secures-strategic-investment-from-afc-and-vision-invest)\n\n[June 1, 2026 Advancements Series with Ted Danson - Digital Infrastructure Bridging the Digital Divide This feature highlights the digital infrastructure and ecosystem underpinning the digital economy. ![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce433_white%20rotate%20arrow.svg)](https://wioccgroup.net/news/wiocc-group-digital-infrastructure-advancements-series-with-ted-danson)\n\n[May 26, 2026 Always-On Banking Is Not Optional Digital-first banking has accelerated across Africa, where explosive growth and pan-African expansion leave zero tolerance for disruption. ![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce433_white%20rotate%20arrow.svg)](https://wioccgroup.net/news/always-on-banking-is-not-optional)\n\nLet’s - Talk\n\n[![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce41e_fb.svg)](https://www.facebook.com/)[![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce42c_twitter.svg)](https://x.com/)[![image](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce421_instagram.svg)](https://www.instagram.com/)\n\n![](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/6a71a8d22ff6ec08f4a44986_associations.webp)\n\n[![](https://cdn.prod.website-files.com/69c522f293008e0ca38ce3fb/69c522f293008e0ca38ce7ca_linkedIn-w.png)](https://www.linkedin.com/company/wiocc-group)\n\nMenu\n\n[About](https://wioccgroup.net/about)[Regional Presence](https://wioccgroup.net/regional-presence)[Shareholders](https://wioccgroup.net/ownership)[News](https://wioccgroup.net/news)[Contact](https://wioccgroup.net/contact)[Careers](https://wioccgroup.net/careers)\n\nCompanies and Brands\n\n[WIOCC](https://wioccgroup.net/wiocc)\n\n[Open Access Data Centres](https://wioccgroup.net/open-access-data-centres)[Open Access Metro Services](https://wioccgroup.net/open-access-metro-services)[Open Access Technical Services](https://wioccgroup.net/open-access-technical-services)[Open Access Fabric](https://wioccgroup.net/open-access-data-centres)\n\nContact Us\n\n[info@wiocc.net](mailto:info@wiocc.net)\n\nQuick Links\n\n[Terms](https://wioccgroup.net/terms-and-conditions)[Privacy Policy](https://wioccgroup.net/privacy-policy)\n\nWIOCC Group © 2026. All Rights Reserved."
+ }
+]

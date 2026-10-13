@@ -26,6 +26,8 @@ Africa-1 has landed at Mombasa without announcing ready for service. One RFS cal
 
 T1 capture verified 10 October 2026 (`research/captures/2026-10-10-wiocc-300m-afc-vision-invest.md`): SSA instrument, data-centre capacity a stated priority. Registration as a reference record was deferred from the Issue 003 cycle to this one. Standing rule: the $300M stays independent of the US DFC $155M instrument (already covered in `content/articles/us-dfc-wiocc-155m-kenya-digital-infrastructure.md`); never sum without verified transaction structures.
 
+**Primary-source corroboration (Intelligence Monitor pilot, 14 Oct):** wioccgroup.net/regional-presence fetched via Apify (`intelligence/raw/2026-10-14-page-wiocc.json`) confirms the US$300M announcement dated **3 September 2026** on WIOCC's own site (matching the Issue 003 dating: announced 3 Sep, captured 10 Oct), the WIOCC Kenya Limited subsidiary, and "Expansion across the GECA region is underway, with initiatives in DRC and Kenya currently in progress." Verdict recorded in the review queue (`dc254-connectivity-20261013-004`, corroborated).
+
 ### 4. People and market signals (captures on request)
 
 From the Google Alerts triage (Task 102, 10 October): Cassava Technologies rehiring Dan Kwach (ex-Africa Data Centres MD East Africa) for its AI data-centre push, and Access Partnership / AfriTrade Group's approvals practice commentary (the 15 September CA-licence market commentary already feeds the disclosure article). Neither has a T1 capture yet; both need one before any RR004 paragraph.

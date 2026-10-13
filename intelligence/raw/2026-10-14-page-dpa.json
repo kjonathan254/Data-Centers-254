@@ -1,0 +1,74 @@
+[
+ {
+  "url": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+  "fetch": {
+   "loadedUrl": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+   "loadedTime": "2026-10-13T18:09:19.704Z",
+   "httpStatusCode": 200,
+   "contentLengthBytes": 47328,
+   "contentType": "text/html;charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+   "title": "Kenya: Communications Authority of Kenya adopted licence conditions for public communications access centres and communications equipment vendors - Digital Policy Alert",
+   "description": "On 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure. The CA regula…",
+   "author": null,
+   "keywords": null,
+   "languageCode": "en",
+   "openGraph": [
+    {
+     "property": "og:type",
+     "content": "website"
+    },
+    {
+     "property": "og:url",
+     "content": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors"
+    },
+    {
+     "property": "og:title",
+     "content": "Communications Authority of Kenya adopted licence conditions for public communications access centres and communications equipment vendors"
+    },
+    {
+     "property": "og:description",
+     "content": "On 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure. The CA regula…"
+    },
+    {
+     "property": "og:image",
+     "content": "https://digitalpolicyalert.org/img/main_image.png"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@type": "CreativeWork",
+     "name": "Communications Authority of Kenya adopted licence conditions for public communications access centres and communications equipment vendors",
+     "url": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+     "description": "On 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure. The CA regula…",
+     "datePublished": "2026-07-14",
+     "author": [
+      {
+       "@type": "Organization",
+       "name": "Kenya"
+      }
+     ],
+     "isPartOf": {
+      "@type": "CreativeWork",
+      "url": "https://digitalpolicyalert.org/change/21026-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors-under-the-kenya-information-and-communications-act-cap-411a"
+     }
+    }
+   ],
+   "headers": {
+    "cache-control": "no-store",
+    "connection": "keep-alive",
+    "content-type": "text/html;charset=utf-8",
+    "date": "Tue, 13 Oct 2026 18:09:19 GMT",
+    "keep-alive": "timeout=5",
+    "server": "nginx/1.17.9",
+    "transfer-encoding": "chunked",
+    "x-apify-unblocker-route": "GANYMEDE",
+    "x-powered-by": "Nuxt"
+   }
+  },
+  "markdown": "[Policy change overviewPolicy overview](https://digitalpolicyalert.org/change/21026-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors-under-the-kenya-information-and-communications-act-cap-411a)\n\nShare[![Twitter](https://digitalpolicyalert.org/_ipx/f_webp/icons/twitter.svg)](https://twitter.com/intent/tweet?text=Kenya%3A+Communications+Authority+of+Kenya+adopted+licence+conditions+for+public+communications+access+centres+and+communications+equipment+vendors&url=https%3A%2F%2Fdigitalpolicyalert.org%2Fevent%2F42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors)\n\n### Description\n\n### Communications Authority of Kenya adopted licence conditions for public communications access centres and communications equipment vendors\n\nOn 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licence categories under the Kenya Information and Communications Act (Cap. 411A), as part of the revised telecommunications market structure. The CA regula…\n\n*   Kenya Gazette Notice No. 12181: Licence conditions for the revised telecommunications market structure, National Council for Law Reporting (Kenya Law) (Official)\n\nSign in or create a free account to see full description and source\n\n### Scope\n\nPolicy Area\n\nAuthorisation, registration and licensing\n\nPolicy Instrument\n\nOperational license requirement\n\nRegulated Economic Activity\n\ninfrastructure provider: internet and telecom services\n\nImplementation Level\n\nnational\n\nGovernment Branch\n\nexecutive\n\nGovernment Body\n\nother regulatory body\n\n### Complete timeline of this policy change\n\nHide details\n\n2026-07-14\n\nadopted\n\nOn 14 July 2026, the Communications Authority of Kenya (CA) adopted licence conditions for 2 licenc…\n\n2026-09-07\n\nin force\n\nOn 7 September 2026, the licence conditions for public communications access centres and communicat…\n\nSign in to see more data"
+ }
+]

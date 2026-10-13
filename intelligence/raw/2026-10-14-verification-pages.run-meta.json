@@ -1,0 +1,92 @@
+{
+ "runId": "oAue8ha6xwlWQBBmg",
+ "actor": "apify~rag-web-browser",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-13T18:04:13.030Z",
+ "finishedAt": "2026-10-13T18:04:42.493Z",
+ "input": {
+  "query": "Extract the full main text content of each page verbatim, including dates, titles, status descriptions, job requirements, and any listed countries or regions.",
+  "urls": [
+   "https://ixafrica.co.ke/?post_type=awsm_job_openings&p=6279",
+   "https://au-pida.org/prospectus/project.php?id=18",
+   "https://wioccgroup.net/regional-presence",
+   "https://www.oracle.com/africa/cloud/public-cloud-regions/",
+   "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors",
+   "https://www.datacenterdynamics.com/en/news/ixafrica-to-host-oracle-cloud-region-in-nairobi-kenya/"
+  ]
+ },
+ "itemsCollected": 3,
+ "usage": {
+  "statusMessage": "Finished! Scraped 3 pages, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "stats": {
+   "inputBodyLen": 1253,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 29279,
+   "resurrectCount": 0,
+   "runTimeSecs": 29.279,
+   "metamorph": 0,
+   "computeUnits": 0.06506444444444444,
+   "memAvgBytes": 369638434.8461485,
+   "memMaxBytes": 495443968,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 20.850043325266583,
+   "cpuMaxUsage": 107.4599493670886,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 2013697,
+   "netTxBytes": 218726
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": false,
+   "reasonForChange": "We're setting more transparent and predictable price for each fetched page and search query.\nFeel free to reach out if the price changes too much for you.",
+   "startedAt": "2026-10-02T00:00:00.000Z",
+   "createdAt": "2026-09-18T19:21:46.182Z",
+   "apifyMarginPercentage": 0.2,
+   "notifiedAboutFutureChangeAt": "2026-09-18T19:46:55.146Z",
+   "notifiedAboutChangeAt": "2026-10-02T00:05:50.582Z",
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "fetch": {
+      "eventTitle": "Fetched page",
+      "eventDescription": "Returns content of a fetched page",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.00228
+     },
+     "search": {
+      "eventTitle": "Search result",
+      "eventDescription": "Returns a set of links to be fetched",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.00348
+     },
+     "apify-actor-start": {
+      "eventTitle": "Actor Start",
+      "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+      "isOneTimeEvent": true,
+      "eventPriceUsd": 0.000225
+     }
+    }
+   }
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "usageTotalUsd": 0.00984,
+  "eventUsage": {
+   "fetch": {
+    "eventTitle": "Fetched page",
+    "eventTotalUsd": 0.00456
+   },
+   "search": {
+    "eventTitle": "Search result",
+    "eventTotalUsd": 0.00348
+   },
+   "apify-actor-start": {
+    "eventTitle": "Actor Start",
+    "eventTotalUsd": 0.0018
+   }
+  }
+ }
+}

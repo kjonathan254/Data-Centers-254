@@ -1,0 +1,69 @@
+{
+ "runId": "BoP72UdYda5iPqEVP",
+ "actor": "apify~web-fetch",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-13T18:08:10.869Z",
+ "finishedAt": "2026-10-13T18:08:15.713Z",
+ "input": {
+  "url": "https://wioccgroup.net/regional-presence"
+ },
+ "itemsCollected": 1,
+ "usage": {
+  "stats": {
+   "inputBodyLen": 50,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 4685,
+   "resurrectCount": 0,
+   "runTimeSecs": 4.685,
+   "metamorph": 0,
+   "computeUnits": 0.0013013888888888888,
+   "memAvgBytes": 96893214.36265032,
+   "memMaxBytes": 144613376,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 46.387799563169416,
+   "cpuMaxUsage": 59.303028785982484,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 13004,
+   "netTxBytes": 8816
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "apifyMarginPercentage": 0.2,
+   "createdAt": "2026-09-10T09:36:43.089Z",
+   "startedAt": "2026-09-10T09:36:43.089Z",
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "fetch": {
+      "eventTitle": "Fetch",
+      "eventDescription": "Successful fetch",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.0015
+     },
+     "apify-actor-start": {
+      "eventTitle": "Actor Start",
+      "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+      "isOneTimeEvent": true,
+      "eventPriceUsd": 5e-05
+     }
+    }
+   }
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "usageTotalUsd": 5e-05,
+  "eventUsage": {
+   "fetch": {
+    "eventTitle": "Fetch",
+    "eventTotalUsd": 0
+   },
+   "apify-actor-start": {
+    "eventTitle": "Actor Start",
+    "eventTotalUsd": 5e-05
+   }
+  }
+ }
+}

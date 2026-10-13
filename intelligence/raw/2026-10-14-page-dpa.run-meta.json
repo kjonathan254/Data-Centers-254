@@ -1,0 +1,69 @@
+{
+ "runId": "e55Zca5URnKaLvHeX",
+ "actor": "apify~web-fetch",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-13T18:09:17.145Z",
+ "finishedAt": "2026-10-13T18:09:19.849Z",
+ "input": {
+  "url": "https://digitalpolicyalert.org/event/42990-communications-authority-of-kenya-adopted-licence-conditions-for-public-communications-access-centres-and-communications-equipment-vendors"
+ },
+ "itemsCollected": 1,
+ "usage": {
+  "stats": {
+   "inputBodyLen": 191,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 2442,
+   "resurrectCount": 0,
+   "runTimeSecs": 2.442,
+   "metamorph": 0,
+   "computeUnits": 0.0006783333333333333,
+   "memAvgBytes": 133977977.94909091,
+   "memMaxBytes": 158158848,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 58.49550400637663,
+   "cpuMaxUsage": 105.42030456852791,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 10166,
+   "netTxBytes": 8132
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "apifyMarginPercentage": 0.2,
+   "createdAt": "2026-09-10T09:36:43.089Z",
+   "startedAt": "2026-09-10T09:36:43.089Z",
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "fetch": {
+      "eventTitle": "Fetch",
+      "eventDescription": "Successful fetch",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.0015
+     },
+     "apify-actor-start": {
+      "eventTitle": "Actor Start",
+      "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+      "isOneTimeEvent": true,
+      "eventPriceUsd": 5e-05
+     }
+    }
+   }
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "usageTotalUsd": 5e-05,
+  "eventUsage": {
+   "fetch": {
+    "eventTitle": "Fetch",
+    "eventTotalUsd": 0
+   },
+   "apify-actor-start": {
+    "eventTitle": "Actor Start",
+    "eventTotalUsd": 5e-05
+   }
+  }
+ }
+}
