@@ -69,7 +69,7 @@ const cadence = [
   {
     icon: Database,
     title: "DC Directory: monthly sweep, quarterly re-verification",
-    body: "The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in September 2026.",
+    body: "The directory is swept monthly for status changes (new launches, expansions, outages reported in press). Every entry is fully re-verified against its sources each quarter. The current dataset was last verified in October 2026.",
   },
   {
     icon: Newspaper,

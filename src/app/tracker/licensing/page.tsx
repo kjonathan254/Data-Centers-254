@@ -77,7 +77,7 @@ export default function LicensingTrackerPage() {
               { icon: Landmark, label: "Regime of record", value: "NFP-T2", hint: "since 6 March 2026" },
               { icon: Scale, label: "Proposed initial fee", value: "KES 100,000", hint: "vs KES 15M under NFP-T2" },
               { icon: CalendarClock, label: "Consultation window", value: "30 days", hint: "opened 8 Sep 2026" },
-              { icon: Shield, label: "Dataset verified", value: "Sep 2026", hint: "against the CA's own document" },
+              { icon: Shield, label: "Dataset verified", value: "Oct 2026", hint: "against the CA's own document" },
             ].map((s) => {
               const Icon = s.icon;
               return (

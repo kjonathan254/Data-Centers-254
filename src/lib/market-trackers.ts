@@ -293,11 +293,11 @@ export const POWER_TARIFFS: TariffBenchmark[] = [
 ];
 
 export const TARIFF_SOURCES: TrackerSource[] = [
-  { label: "Kenya Power, tariff schedule", url: "https://www.kplc.co.ke/category/view/45/tariffs", kind: "operator" },
+  { label: "Kenya Power, tariff schedule (PDF)", url: "https://kplc.co.ke/storage/01J1ATVMZTY698754FJ9RHKH8H.pdf", kind: "operator" },
   { label: "Energy and Petroleum Regulatory Authority (EPRA)", url: "https://www.epra.go.ke/", kind: "gov" },
 ];
 
-export const LICENSING_LAST_VERIFIED = "2026-09";
+export const LICENSING_LAST_VERIFIED = "2026-10";
 
 export const LICENSING_REGIMES: LicensingRegime[] = [
   {

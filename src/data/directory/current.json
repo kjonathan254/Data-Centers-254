@@ -196,7 +196,7 @@
       "powerSource": "Kenya Power grid + on-site diesel generators",
       "renewableClaim": "Kenya grid is 75%+ renewable (geothermal, hydro, wind)",
       "notable": "Phase one (NBOX1.1) unveiled 28 February 2025 alongside a new KIXP point of presence, with LINX Nairobi also on site. Operator cites up to 40 kW per rack and a campus PUE target of 1.25. On 27 January 2026 iXAfrica announced it will host Oracle Cloud Infrastructure's Nairobi region, no launch date given. Official campus specs (retrieved 22 September 2026): NBOX1.1 live at 4.5 MW with 780 racks; NBOX1.2 adds 18 MW with 3,744 racks, for a campus design of 22.5 MW.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iXAfrica website and press releases; PeeringDB register",
       "dataConfidence": "High",
       "articleSlugs": [
@@ -294,7 +294,7 @@
       "powerSource": "Kenya Power",
       "renewableClaim": null,
       "notable": "Operator cites 18 MW and 3,744 racks for NBOX1.2, with design targets up to 50 kW per rack for AI workloads. Part of iXAfrica's announced 22.5 MW campus plan, backed by Actis investment.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iXAfrica press releases; Developing Telecoms; PeeringDB register",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -340,7 +340,7 @@
       "powerSource": "Kenya Power (planned)",
       "renewableClaim": null,
       "notable": "Land acquired in August 2023 (11 acres) in the Tilisi development. Planned for over 53 MW of IT load, iXAfrica's medium-term growth vector after NBOX1.2.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iXAfrica campus announcements, DC254 editorial",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -351,8 +351,8 @@
       "certifications": [],
       "sources": [
         {
-          "label": "iXAfrica, Tilisi campus announcements",
-          "url": "https://ixafrica.co.ke/media-center",
+          "label": "iXAfrica, official site (Tilisi campus announcements)",
+          "url": "https://ixafrica.co.ke/",
           "kind": "operator"
         }
       ],
@@ -381,7 +381,7 @@
       "powerSource": "Kenya Power + diesel backup",
       "renewableClaim": null,
       "notable": "Opened as East Africa Data Centre (EADC) and rebranded under Cassava Technologies, \"East Africa Data Centre\" and \"Africa Data Centres Nairobi\" are the same building. Operator states 2,000 m² of secured server space, \"available site capacity 7.5 MW\", four data halls certified Uptime Institute Tier 3, and PCI DSS (first in the region). Exchanges on site: KIXP Nairobi, LINX Nairobi, BGP.Exchange, PLUGINS IX.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Africa Data Centres website; PeeringDB register",
       "dataConfidence": "High",
       "articleSlugs": [
@@ -481,7 +481,7 @@
       "powerSource": "Kenya Power",
       "renewableClaim": null,
       "notable": "Announced November 2021 (two further Nairobi facilities, the second up to 20 MW) with a $200m+ commitment; Sameer expansion broke ground January 2023.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "ADC press releases via DataCenterDynamics",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -527,7 +527,7 @@
       "powerSource": "Kenya Power + diesel generators",
       "renewableClaim": null,
       "notable": "Supports M-Pesa (processes KES 20+ trillion annually), Safaricom's 4G/5G core, and enterprise cloud. Not carrier-neutral, primarily serves Safaricom's own services.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Safaricom Annual Reports; TechCabal",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -581,7 +581,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "The facility Safaricom registers on the PeeringDB facility register for network interconnection.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PeeringDB register; Uptime Institute directory; Safaricom",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -632,7 +632,7 @@
       "powerSource": "Kenya Power + solar supplement",
       "renewableClaim": "Free cooling supplemented by solar (operator-stated)",
       "notable": "Described by Safaricom as a three-building campus \"built to Tier III standards\", with phase one completed in March 2025 and phase two targeted for January 2026.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Safaricom announcements; Uptime Institute directory",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -657,12 +657,12 @@
       "sources": [
         {
           "label": "Uptime Institute, public certification directory",
-          "url": "https://uptimeinstitute.com/uptime-institute-professional-services",
+          "url": "https://uptimeinstitute.com/tier-certification/tier-certification-list",
           "kind": "gov"
         },
         {
-          "label": "Safaricom, Red Hill campus announcements",
-          "url": "https://www.safaricom.co.ke/media-centre",
+          "label": "Safaricom, investor disclosures (Red Hill campus)",
+          "url": "https://www.safaricom.co.ke/investor-relations",
           "kind": "operator"
         }
       ],
@@ -739,7 +739,7 @@
       "powerSource": "Dual standby gensets with A and B modular UPS",
       "renewableClaim": null,
       "notable": "Operator specifies 100+ racks of up to 52U rack height, 4 kW dual-input power per rack, and three diverse fibre routes to the site.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Telkom Kenya carrier-services page; PeeringDB register",
       "dataConfidence": "Medium",
       "operatorId": "telkom-ke",
@@ -760,8 +760,8 @@
       "certifications": [],
       "sources": [
         {
-          "label": "Telkom Kenya, carrier services & hosting",
-          "url": "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting",
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
           "kind": "operator"
         },
         {
@@ -803,7 +803,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": null,
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PeeringDB register; Telkom Kenya",
       "dataConfidence": "Medium",
       "operatorId": "telkom-ke",
@@ -816,8 +816,8 @@
           "kind": "registry"
         },
         {
-          "label": "Telkom Kenya, carrier services & hosting",
-          "url": "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting",
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
           "kind": "operator"
         }
       ],
@@ -854,7 +854,7 @@
       "powerSource": "Kenya Power",
       "renewableClaim": null,
       "notable": "Liquid (formerly Eaton/DBN) operates one of Africa's largest fibre networks spanning 100,000+ km across 13 countries. Parent company Cassava Technologies also owns Africa Data Centres.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Liquid Intelligent Technologies website",
       "dataConfidence": "Medium",
       "operatorId": "liquid-ke",
@@ -909,7 +909,7 @@
       "powerSource": "2N power (per Digital Realty listing)",
       "renewableClaim": null,
       "notable": "iColo (a Digital Realty company) runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing. Operator announced (Digital Realty launch PR, 7 Sep 2026, captured 10 Oct 2026) that iColo transitions to the Digital Realty brand in Kenya; the record retains iColo naming pending site-level rebrand evidence.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iColo website; Digital Realty listing; PeeringDB register",
       "dataConfidence": "High",
       "operatorId": "icolo",
@@ -1078,7 +1078,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "250 racks operational in 580 m², 80+ connectivity providers and three internet exchanges per the operator. iColo states the Miritini campus will eventually hold three data centres across 18,000 m², 13 MW and 1,800 racks. Current IT power on the 4,000 m² site is 0.9 MW per iColo's homepage. Correction (22 September 2026): the 13 MW figure is the planned Miritini campus total (three data centres, 1,800 racks), not an MBA1-only figure; MBA1 itself is documented at 250 racks and 580 sqm of customer space.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iColo website; PeeringDB register",
       "dataConfidence": "High",
       "operatorId": "icolo",
@@ -1154,7 +1154,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "1,200 m² of IT space on a 4,000 m² campus with 20+ networks, per iColo. Approximately 2 km to the nearest beach manhole, direct, short backhaul to submarine cable systems.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "iColo website; PeeringDB register",
       "dataConfidence": "High",
       "operatorId": "icolo",
@@ -1218,7 +1218,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "At launch specified at 240 cabinets, 1.5 MVA total power, 690 m² of whitespace and a 99.982% uptime guarantee. PAIX's Kenya page confirms both KIXP and Nairobi-IX on site. Its central location is genuinely useful when your staff, your bank and your regulator are all within walking distance.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PAIX website; PeeringDB register",
       "dataConfidence": "High",
       "operatorId": "paix",
@@ -1251,8 +1251,8 @@
       "certifications": [],
       "sources": [
         {
-          "label": "PAIX, Kenya facility page",
-          "url": "https://paix.io/datacentres/kenya/",
+          "label": "PAIX, official site",
+          "url": "https://www.paix.io/",
           "kind": "operator"
         },
         {
@@ -1293,7 +1293,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "Operated by the Konza Technopolis Development Authority (KoTDA). Primarily serves government workloads, not a mainstream commercial colocation option for a private business.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Uptime Institute directory; PeeringDB; KoTDA",
       "dataConfidence": "Medium",
       "operatorId": "kotda",
@@ -1315,7 +1315,7 @@
       "sources": [
         {
           "label": "Uptime Institute, public certification directory",
-          "url": "https://uptimeinstitute.com/uptime-institute-professional-services",
+          "url": "https://uptimeinstitute.com/tier-certification/tier-certification-list",
           "kind": "gov"
         },
         {
@@ -1354,7 +1354,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "Offers cross-connects to submarine cable systems. Telkom holds 23% of TEAMS, 10% of LION2 and 2.6% of EASSy, it is a cable landing party first and a colocation vendor second.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PeeringDB register; Telkom Kenya",
       "dataConfidence": "Medium",
       "operatorId": "telkom-ke",
@@ -1386,8 +1386,8 @@
           "kind": "registry"
         },
         {
-          "label": "Telkom Kenya, carrier services & hosting",
-          "url": "https://telkom.co.ke/carrier-services/our-solutions/carrier-services-hosting",
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
           "kind": "operator"
         }
       ],
@@ -1424,7 +1424,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": "SEACOM was the first private submarine cable to serve East Africa (2009). The landing station itself is registered on PeeringDB with 30+ networks, a measure of how much traffic is handed over here.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PeeringDB register; SEACOM",
       "dataConfidence": "High",
       "operatorId": "seacom",
@@ -1482,7 +1482,7 @@
       "powerSource": "Kenya Power + backup",
       "renewableClaim": null,
       "notable": null,
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "PeeringDB register; SimbaNET",
       "dataConfidence": "Medium",
       "operatorId": "simbanet",
@@ -1528,7 +1528,7 @@
       "powerSource": null,
       "renewableClaim": null,
       "notable": "Raxio Group is backed by IFC investment and operates facilities in Uganda, Ethiopia and elsewhere. Its Kenyan entry remains unconfirmed at facility level.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Raxio website (JS-gated); PeeringDB register (absence checked)",
       "dataConfidence": "Low",
       "operatorId": "raxio",
@@ -1589,7 +1589,7 @@
         }
       ],
       "certNote": null,
-      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists, figures are estimates from the operator's own materials, not independently confirmed."
+      "divergenceNote": "Not listed on the PeeringDB facility register (checked 8 Sep 2026) and minimal public data exists, figures are estimates from the operator's own materials, not independently confirmed. Operator site (septris.co.ke) did not resolve when re-checked (Oct 2026)."
     },
     {
       "id": "9",
@@ -1612,7 +1612,7 @@
       "powerSource": "Kenya Power",
       "renewableClaim": null,
       "notable": null,
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Operator website",
       "dataConfidence": "Low",
       "operatorId": "global-ts",
@@ -1649,7 +1649,7 @@
       "powerSource": "Kenya Power",
       "renewableClaim": null,
       "notable": "Primarily supports Wananchi's Zuku fibre and cable TV consumer services rather than commercial colocation.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Wananchi Group website",
       "dataConfidence": "Low",
       "operatorId": "wananchi",
@@ -1692,7 +1692,7 @@
       "powerSource": null,
       "renewableClaim": null,
       "notable": "Announced plans targeting Kenya's SME colocation segment, an underserved tier between enterprise carriers and hyperscale campuses. Capacity and site undisclosed.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "DC254 market outlook research",
       "dataConfidence": "Low",
       "articleSlugs": [
@@ -1732,7 +1732,7 @@
       "powerSource": "Grid supply with on-site backup; phases designed for high-density GPU racks (99.999% uptime target per Airtel announcements)",
       "renewableClaim": null,
       "notable": "Groundwork reported from September 2025 (Airtel/Nxtra groundbreaking coverage). Original commissioning target was Q1 2027, which would have made it East Africa's largest facility; August 2026 reporting (EdgeX Exchange) indicates launch has slipped to July 2027. Kenya News Agency coverage (September 2026, during a government visit) reiterated the facility's scale and East Africa-largest framing. Total investment reported at $150 million, delivered in two 22 MW phases.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Airtel Africa announcements; Data Centre Magazine (Sep 2025); EdgeX Exchange (Aug 2026); Kenya News Agency (Sep 2026)",
       "dataConfidence": "Medium",
       "articleSlugs": [
@@ -1783,7 +1783,7 @@
       "powerSource": "Ugandan grid with on-site backup generation",
       "renewableClaim": null,
       "notable": "Launched 25 May 2021 as Uganda's first Tier III certified carrier-neutral facility, with colocation space for up to 400 racks at full build-out. Raxio Group's first operational site and the reference facility for Uganda's commercial colocation market. Official facility page (retrieved 22 September 2026) states 1.5 MW IT power, 1,000 m2 of white space, Tier III certification and carrier-neutral operation with 15 connectivity providers, 15 km from Kampala CBD along the Kampala-Jinja Highway.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Raxio Group launch release (25 May 2021); DataCenterDynamics (26 May 2021); datacentermap.com register",
       "dataConfidence": "High",
       "sources": [
@@ -1837,7 +1837,7 @@
       "powerSource": null,
       "renewableClaim": null,
       "notable": "Operated by NITA-U for government workloads: hosting, DR and related services for ministries, agencies and local governments. A June 2025 NITA-U market study set the foundation for a third national data centre, confirming at least two sites already in service. Commercial colocation is not the facility's primary role.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "NITA-U releases (19 Jun 2025 market study); The Independent Uganda (23 Feb 2026)",
       "dataConfidence": "Medium",
       "sources": [
@@ -1847,9 +1847,9 @@
           "kind": "gov"
         },
         {
-          "label": "The Independent Uganda, NITA-U national data centre services coverage (23 Feb 2026)",
-          "url": "https://www.independent.co.ug",
-          "kind": "press"
+          "label": "ICT Ministry Uganda, NITA-U data centre progress (Jul 2026)",
+          "url": "https://ict.go.ug/media/news/familiarisation-visit-highlights-nita-us-digital-progress",
+          "kind": "gov"
         }
       ],
       "carrierNeutral": false,
@@ -1881,7 +1881,7 @@
       "powerSource": null,
       "renewableClaim": null,
       "notable": "Announced 23 March 2022 as a 'metro-edge', multi-megawatt colocation investment, with Master Power Technologies named for construction (Aug 2021). Commissioning was first flagged for 2024; as of July 2026 reporting the operator still 'expects to open' Tanzania's first carrier-neutral Tier III facility this year. IFC disclosures list Raxio's Tanzania build among its frontier-market data centre investments.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Raxio Group (23 Mar 2022); DataCenterDynamics (23 Mar 2022); Energy News Network (13 Jul 2026); IFC disclosure register",
       "dataConfidence": "Medium",
       "sources": [
@@ -1939,7 +1939,7 @@
       "powerSource": null,
       "renewableClaim": null,
       "notable": "Announced 28 November 2022 by Africa Data Centres (a Cassava Technologies business) as its first facility in Rwanda: 2 MW of IT load, groundbreaking targeted for Q1 2023. Third-party registers (baxtel, inflect) list the site as KGL1 with roughly 2.5 MW of total power. No ready-for-service announcement has been located as of 22 September 2026; the 22 Sep editorial review holds the record as Unsupported pending a primary source.",
-      "lastVerified": "2026-09",
+      "lastVerified": "2026-10",
       "dataSource": "Africa Data Centres / Cassava Technologies announcement (28 Nov 2022); DataCenterDynamics (28 Nov 2022); baxtel.com and inflect.com registers",
       "dataConfidence": "Medium",
       "sources": [
