@@ -2,6 +2,9 @@
 
 Focus: Kenya → East Africa → Africa. Evidence-graded; sources numbered at the end.
 Deliverable PDF: `download/dc254-morning-brief-2026-10-14.pdf` (workspace; cover Template 07, 8 pages).
+Updated 14 Oct after the Task 143 freshness/verification pass: item 1 status refined
+(Microsoft on-record response located; government engagement documented) — see
+`intelligence/reports/2026-10-14-freshness-pass.md`.
 
 ## Editor's assessment
 
@@ -9,8 +12,9 @@ Kenya has no clearly verified, major new data-centre opening or operational-capa
 announcement in the sources checked today. The strongest signals concern how global technology
 firms are recalibrating their African footprints, how public capital is being positioned ahead
 of infrastructure delivery, and how regulators on two fronts are moving from consultation to
-framework. The day's most consequential item is Microsoft's decision to wind down its Africa
-Development Centre in Nairobi (reported 13 Oct, not yet confirmed by Microsoft). Three dated
+framework. The day's most consequential item is Microsoft's wind-down of its Africa
+Development Centre in Nairobi (staff-reported 12–13 Oct; Microsoft acknowledges "proposed
+changes" to its Kenya engineering operations but has not confirmed the closure). Three dated
 deadlines anchor the calendar: KDEAP bids close 29 Oct, CA satellite framework comments close
 6 Nov. October tracker snapshot (27 tracked / 20 operational) unchanged.
 
@@ -18,7 +22,7 @@ deadlines anchor the calendar: KDEAP bids close 29 Oct, CA satellite framework c
 
 | # | Story | Market | Status | DC254 action |
 |---|-------|--------|--------|--------------|
-| 1 | Microsoft winds down Nairobi ADC (~400 roles) | Kenya | REPORTED — not confirmed by Microsoft | Watch for confirmation; talent-market signal |
+| 1 | Microsoft winds down Nairobi ADC (~400 roles) | Kenya | REPORTED — Microsoft acknowledges "proposed changes"; closure unconfirmed | Watch for headcount/dates; workforce-tracker signal |
 | 2 | National Infrastructure Fund deploys KSh 340B via bonds | Kenya | CONFIRMED (Reuters, 7 Oct) | Track digital-infrastructure eligibility |
 | 3 | KDEAP tender re-reported (US$100M equivalence); bids close 29 Oct | Kenya | HOUSE-COVERED (announced) | Countdown: 15 days to bid close |
 | 4 | Standalone DC licence — no finalisation decision yet | Kenya | PROPOSED (8 Sep) | Await CA final framework |
@@ -29,15 +33,23 @@ deadlines anchor the calendar: KDEAP bids close 29 Oct, CA satellite framework c
 
 ## The brief
 
-**1. Microsoft winds down its Nairobi Africa Development Centre** — KENYA | 12–14 OCT | REPORTED.
-Microsoft told staff Monday 12 Oct that the ADC closes, ending a seven-year, US$100M engineering
-bet; ~400 roles at risk (WeeTracker, Tuko, TechCabal 13 Oct; Kenya Times 14 Oct). Second ADC
-closure after Lagos (2024). WeeTracker links it to the stalled US$1B G42 data-centre project —
-which matches house records, but the ADC is a software-engineering hub, a different asset from
-the announced campus; the closure does not change the stalled campus record. No Microsoft
-corporate statement located as of 14 Oct → REPORTED, not CONFIRMED. Same reporting names Oracle's
-September Nairobi cuts alongside fresh Kenyan job adverts for DC technicians and AI
-infrastructure sales — a reallocation signal for the workforce tracker.
+**1. Microsoft winds down its Nairobi Africa Development Centre** — KENYA | 12–14 OCT | REPORTED
+(MICROSOFT ACKNOWLEDGES "PROPOSED CHANGES"). Staff accounts (CIO Africa 12 Oct, tech-ish) say
+employees were told Monday 12 Oct that the centre closes; ~400 roles at risk per staff reports
+and media (WeeTracker "nearly 400"; Kenyans.co.ke 400–500) — a reported figure, not a Microsoft
+number. Microsoft's on-record response (obtained by CIO Africa and tech-ish, carried by Business
+Insider Africa 13 Oct) acknowledges "proposed changes affecting its engineering operations in
+Kenya" and says it will continue operating in the country and supporting customers — it neither
+confirms nor denies the closure and gives no headcount or dates. Status stays REPORTED, not
+CONFIRMED. Context kept precise: the US$100M was the launch investment target (five years, up to
+500 engineers across Nairobi + Lagos), not a spent sum; the ADC is a software-engineering hub —
+a different asset from the stalled US$1B G42 campus, whose house record is unchanged; the ADC
+second-site closure follows Lagos (May 2024). CS William Kabogo met a Microsoft delegation led
+by Jeff Bullwinkel (VP, Deputy General Counsel) on 12 Oct and publicly stressed "retaining local
+talent, protecting jobs at Microsoft's Nairobi engineering centre and sustaining investor
+confidence". Same reporting names Oracle's September Nairobi cuts alongside fresh Kenyan job
+adverts for DC technicians and AI infrastructure sales — a reallocation signal for the
+workforce tracker.
 
 **2. National Infrastructure Fund begins deploying KSh 340B** — KENYA | 7 OCT | CONFIRMED
 (Reuters). Seed capital (≈US$2.6B) deploying initially via domestic government bonds; buying
@@ -106,7 +118,7 @@ absorbed by local operators, hyperscale DC teams or the postings the workforce p
 
 - 15 days: KDEAP framework-agreement bids close — 10:00 EAT, 29 Oct 2026 (verify vs ICTA on publish day).
 - 23 days: CA satellite framework comments close — 6 Nov 2026.
-- 48h watch: Microsoft confirmation/refutation; NIF pipeline naming ICT projects; CA DC-licence decision; ICASA submission tally.
+- 48h watch: Microsoft headcount and dates for the ADC changes; Kabogo follow-through; NIF pipeline naming ICT projects; CA DC-licence decision; ICASA submission tally.
 - Tracker unchanged: 27 facilities tracked, 20 operational; announced capacity stays announced until commissioning is verified.
 
 ## Sources
@@ -126,9 +138,12 @@ absorbed by local operators, hyperscale DC teams or the postings the workforce p
 13. PwC SA press room — https://www.pwc.co.za/en/press-room/africa-entertainment-media-outlook.html
 14. tech.afrika, 14 Oct 2026 — https://tech.africa/pwc-africa-media-outlook-2030/
 15. Kenyans.co.ke, 13 Oct 2026 — https://www.kenyans.co.ke/news/127814-kenyans-spend-76-entertainment-money-internet-connectivity-pwc-africa-report
+16. Business Insider Africa, 13 Oct 2026 — https://africa.businessinsider.com/local/markets/microsofts-nairobi-engineering-hub-faces-closure-as-kenya-moves-to-protect-jobs-at-us/kc3t7ge
+17. Kenyans.co.ke, 13 Oct 2026 — https://www.kenyans.co.ke/news/127805-microsofts-nairobi-development-centre-faces-possible-closure
+18. CIO Africa, 12 Oct 2026, and tech-ish staff accounts, as carried by Business Insider Africa (source 16); CS Kabogo X statement quoted there
 
 ## Candidate intelligence-queue records (for editor review — not auto-ingested)
 
-- Microsoft ADC Nairobi closure (facility/workforce adjacent; REPORTED pending Microsoft confirmation).
+- Microsoft ADC Nairobi closure (workforce/facility adjacent; ingested 14 Oct as dc254-workforce-20261014-001, corroborated — Microsoft acknowledges "proposed changes", closure itself unconfirmed).
 - CA Satellite Frequency Licensing Framework 2026 consultation (policy; comments due 6 Nov).
 - National Infrastructure Fund bond deployment (connectivity/policy context; digital-eligibility unproven).

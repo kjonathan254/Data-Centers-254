@@ -1,0 +1,66 @@
+{
+ "task": "Task 143 freshness pass (2026-10-14)",
+ "checkedAt": "2026-10-14T12:40:00Z",
+ "newRecords": 1,
+ "recordsChanged": [
+  "dc254-workforce-20261014-001",
+  "dc254-policy-20261013-001 (freshness note)",
+  "dc254-policy-20261013-002 (freshness note)"
+ ],
+ "statusCounts": {
+  "corroborated": 10,
+  "UNREVIEWED": 27
+ },
+ "verdicts": {
+  "microsoft_adc_closure": {
+   "record": "dc254-workforce-20261014-001",
+   "verdict": "corroborated",
+   "brief_item": "retained (editor: 'use both'); status stays REPORTED - Microsoft acknowledges 'proposed changes', closure unconfirmed",
+   "key_evidence": [
+    "Business Insider Africa 13 Oct page fetch (Microsoft response + Kabogo meeting)",
+    "Kenyans.co.ke 13 Oct (400-500 range)",
+    "WeeTracker 13 Oct ('nearly 400', retreat context)",
+    "8+ independent outlets; Tuko/Reuters bot-blocks not dead links"
+   ]
+  },
+  "kdeap_spn_timeliness": {
+   "verdict": "deadline stands (10:00 EAT, 29 Oct 2026)",
+   "basis": "PS posts re-surfaced with SPN reference + icta.go.ke/tenders pointer",
+   "caveat": "icta.go.ke egress-blocked; publish-day re-verify stands"
+  },
+  "ca_dc_licence_timeliness": {
+   "verdict": "still PROPOSED as of 14 Oct",
+   "basis": "no adoption notice found; newest proposal coverage remains 8-10 Sep; CA market-structure page notes ULF (Apr 2026) only"
+  },
+  "ca_satellite_consultation": {
+   "verdict": "secondary-sourced (TechTrendsKE), comments due 6 Nov",
+   "caveat": "ca.go.ke primary page bot-gated from this egress (JS challenge)"
+  },
+  "ixafrica_crawl_evaluation": {
+   "verdict": "crawl-permitted for Workforce Watch (robots.txt fetched 14 Oct)",
+   "basis": "robots.txt disallows only /wp-admin/; sitemap published; standard politeness + site-terms check on first collection run"
+  },
+  "nif_editorial_angle": {
+   "verdict": "angle closed: no documented ICT/data-centre-specific allocation",
+   "basis": "first named NIF project = JKIA expansion (Citizen TV); parliament record lists highways/rail/airports/seaports; digital infrastructure remains CEO eligibility language, not a named allocation; reporting test validated"
+  },
+  "brief_source_urls": {
+   "checked": 6,
+   "ok_200": [
+    "weetracker.com",
+    "thekenyatimes.com",
+    "kenyans.co.ke x2"
+   ],
+   "bot_blocked": [
+    "tuko.co.ke (403)",
+    "reuters.com (401)"
+   ],
+   "note": "bot-blocks verified live via search snippets, not dead links"
+  }
+ },
+ "spend": {
+  "apify_usd": 0.0,
+  "notes": "no Apify token in env (rotation pending); all checks via free web search + direct fetches; 0 credits"
+ },
+ "queueTotal": 37
+}

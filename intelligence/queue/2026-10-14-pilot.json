@@ -470,9 +470,9 @@
    ],
    "evidence_excerpt": "A major opportunity to extend Kenya's digital infrastructure and accelerate universal connectivity is now open.",
    "verification_status": "corroborated",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Verification search 14 Oct 2026 (two targeted queries incl. exact-phrase 'Specific Procurement Notice'): NO official KDIAP SPN located from this egress - only this LinkedIn post and the related Facebook post. The 'bids close 29 October' claim remains UNVERIFIED against a primary document. Do not publish the deadline until the official notice is located on World Bank or ministry portals. REVIEW 2026-10-13T20:05:33Z (Task 144): VERDICT corroborated via the author's LinkedIn twin post of the same announcement (activity 7505707320652345344, fetched in full) plus the ICTA open-tenders page and trade press (ITWeb Africa 16 Sep, Telecompaper 17 Sep). CORRECTIONS (documented): (1) earlier claims_extracted about onboarding government services in the Konza Data Centre and the Disaster Recovery operationalisation were Google snippet contamination - that text is NOT in this post; claims replaced with the twin-post verbatim text. (2) topic policy -> connectivity (id retained). The Facebook page itself was not fetched from this egress; verification rests on the LinkedIn twin and ICTA. The post's 'bids close 10:00 a.m. EAT on 29 October 2026' claim is CONFIRMED.",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use. REVIEW 2026-10-14T20:40:00Z: Verification search 14 Oct 2026 (two targeted queries incl. exact-phrase 'Specific Procurement Notice'): NO official KDIAP SPN located from this egress - only this LinkedIn post and the related Facebook post. The 'bids close 29 October' claim remains UNVERIFIED against a primary document. Do not publish the deadline until the official notice is located on World Bank or ministry portals. REVIEW 2026-10-13T20:05:33Z (Task 144): VERDICT corroborated via the author's LinkedIn twin post of the same announcement (activity 7505707320652345344, fetched in full) plus the ICTA open-tenders page and trade press (ITWeb Africa 16 Sep, Telecompaper 17 Sep). CORRECTIONS (documented): (1) earlier claims_extracted about onboarding government services in the Konza Data Centre and the Disaster Recovery operationalisation were Google snippet contamination - that text is NOT in this post; claims replaced with the twin-post verbatim text. (2) topic policy -> connectivity (id retained). The Facebook page itself was not fetched from this egress; verification rests on the LinkedIn twin and ICTA. The post's 'bids close 10:00 a.m. EAT on 29 October 2026' claim is CONFIRMED. REVIEW 2026-10-14T12:40:00Z (Task 143 freshness): PS Tanui posts re-surfaced 14 Oct with an explicit 'Specific Procurement Notice' reference (LinkedIn) and 'Bids close at 10:00 a.m. EAT on 29 October 2026. Tender documents: icta.go.ke/tenders' (Facebook). Deadline therefore has two official-adjacent anchors (PS office posts) plus ITWeb (16 Sep). ICTA direct fetch is egress-blocked from this sandbox (connection-level failure, same class as au-pida.org / EPRA). The brief's standing instruction 're-verify against ICTA records on publish day' stands. No field changes.",
    "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
-   "last_checked_at": "2026-10-13T20:05:33Z",
+   "last_checked_at": "2026-10-14T12:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
@@ -548,9 +548,9 @@
    ],
    "evidence_excerpt": "Through the Kenya Digital Economy Acceleration Project, the ICT Authority invites eligible private-sector partners to participate in a three-year framework for: National backbone links; Cross-border and metropolitan links.",
    "verification_status": "corroborated",
-   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'. REVIEW 2026-10-14T20:40:00Z (Task 143): official SPN not located from that egress; kept UNREVIEWED. REVIEW 2026-10-13T20:05:33Z (Task 144): post page fetched in FULL via og:description (page-level, not snippet). VERDICT corroborated. CORRECTIONS (documented, id retained): (1) SERP-derived title 'Kenya Digital Infrastructure Acceleration Project' is a mis-expansion - the post body states Kenya DIGITAL ECONOMY Acceleration Project (KDEAP); title fixed accordingly. (2) 'Konza Data Centre' / 'Disaster Recovery' claims previously associated with this lead were Google snippet contamination and are NOT present in the post text. (3) topic policy -> connectivity. Corroboration: ICTA open-tenders page (advert 'Framework agreement for extending national backbone & cross border links', Lot 1 + Lot 2, published 15 Sep 2026), ITWeb Africa (16 Sep 2026), Telecompaper (17 Sep 2026), PS pre-bid post 13 Oct 2026. The pilot 'bids close 29 Oct' claim is CONFIRMED (10:00 a.m. EAT). Tender-document link in post (lnkd.in/dMNg8U68) not resolved to a final URL from this egress; document of record = ICTA tenders page. published_at derived from LinkedIn activity ID timestamp (approximate).",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query '\"data centre\" Kenya announcement October 2026'. REVIEW 2026-10-14T20:40:00Z (Task 143): official SPN not located from that egress; kept UNREVIEWED. REVIEW 2026-10-13T20:05:33Z (Task 144): post page fetched in FULL via og:description (page-level, not snippet). VERDICT corroborated. CORRECTIONS (documented, id retained): (1) SERP-derived title 'Kenya Digital Infrastructure Acceleration Project' is a mis-expansion - the post body states Kenya DIGITAL ECONOMY Acceleration Project (KDEAP); title fixed accordingly. (2) 'Konza Data Centre' / 'Disaster Recovery' claims previously associated with this lead were Google snippet contamination and are NOT present in the post text. (3) topic policy -> connectivity. Corroboration: ICTA open-tenders page (advert 'Framework agreement for extending national backbone & cross border links', Lot 1 + Lot 2, published 15 Sep 2026), ITWeb Africa (16 Sep 2026), Telecompaper (17 Sep 2026), PS pre-bid post 13 Oct 2026. The pilot 'bids close 29 Oct' claim is CONFIRMED (10:00 a.m. EAT). Tender-document link in post (lnkd.in/dMNg8U68) not resolved to a final URL from this egress; document of record = ICTA tenders page. published_at derived from LinkedIn activity ID timestamp (approximate). REVIEW 2026-10-14T12:40:00Z (Task 143 freshness): PS Tanui posts re-surfaced 14 Oct with an explicit 'Specific Procurement Notice' reference (LinkedIn) and 'Bids close at 10:00 a.m. EAT on 29 October 2026. Tender documents: icta.go.ke/tenders' (Facebook). Deadline therefore has two official-adjacent anchors (PS office posts) plus ITWeb (16 Sep). ICTA direct fetch is egress-blocked from this sandbox (connection-level failure, same class as au-pida.org / EPRA). The brief's standing instruction 're-verify against ICTA records on publish day' stands. No field changes.",
    "reviewed_by": "Super Z (agent, editor authority 2026-10-14)",
-   "last_checked_at": "2026-10-13T20:05:33Z",
+   "last_checked_at": "2026-10-14T12:40:00Z",
    "change_history": [
     {
      "at": "2026-10-13T17:40:01Z",
@@ -1413,8 +1413,42 @@
     "serpPosition": null,
     "displayedUrl": ""
    }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-001",
+   "topic": "workforce",
+   "record_type": "news-report",
+   "title": "Microsoft wind-down of Nairobi Africa Development Centre; government presses for job protection",
+   "organisation": "Microsoft (Africa Development Centre, Nairobi); Ministry of ICT (Kenya)",
+   "country": "Kenya",
+   "location": "Dunhill Towers, Westlands, Nairobi",
+   "source_url": "https://africa.businessinsider.com/local/markets/microsofts-nairobi-engineering-hub-faces-closure-as-kenya-moves-to-protect-jobs-at-us/kc3t7ge",
+   "published_at": "2026-10-13",
+   "collected_at": "2026-10-14T12:40:00Z",
+   "event_date": "2026-10-12",
+   "claims_extracted": [
+    "Staff accounts (CIO Africa 12 Oct, tech-ish): Nairobi ADC employees were informed Monday 12 Oct 2026 that the centre closes; roles would end.",
+    "About 400 roles at risk per staff reports and media (WeeTracker 'nearly 400'; Kenyans.co.ke 400-500). Reported figure, NOT a Microsoft number.",
+    "Microsoft on-record response (obtained by CIO Africa and tech-ish, carried by Business Insider Africa 13 Oct): acknowledges 'proposed changes affecting its engineering operations in Kenya'; says it will continue operating in Kenya and supporting customers; neither confirms nor denies the closure; no headcount or dates given.",
+    "CS William Kabogo met a Microsoft delegation led by Jeff Bullwinkel (VP, Deputy General Counsel, Corporate) on 12 Oct; public X statement stresses 'retaining local talent, protecting jobs at Microsoft's Nairobi engineering centre and sustaining investor confidence'; meeting also covered AI adoption in government, digitisation, cybersecurity, digital infrastructure, digital skills, and Microsoft support for the National AI Policy.",
+    "Context: US$100M was the ADC launch investment target (five years, up to 500 engineers across Nairobi and Lagos), not a current valuation; second ADC site closure after Lagos (May 2024); ADC is a software-engineering hub, distinct from the stalled US$1B G42 campus (house record unchanged).",
+    "Same reporting names Oracle's September Nairobi cuts and fresh Kenyan job adverts for DC technicians and AI infrastructure sales - reallocation signal for the workforce tracker."
+   ],
+   "evidence_excerpt": "Microsoft confirms proposed changes to Kenyan engineering operations as staff report a Nairobi hub closure plan and the government seeks to protect jobs (Business Insider Africa og:description, fetched 2026-10-14). Microsoft has acknowledged proposed changes affecting its engineering operations in Kenya. It says it will continue operating in the country and supporting customers. The company has not publicly specified the number of affected employees or when the changes would take effect.",
+   "verification_status": "corroborated",
+   "confidence_notes": "Editor directive 2026-10-14: verify the Microsoft/ADC story; use both angles (layoffs + engineers leaving); bin if the facts fail. Verification pass 2026-10-14T12:40:00Z (Super Z (agent, editor verification authority 2026-10-14)): facts HOLD - kept, not binned. Evidence: 8+ independent outlets converge (WeeTracker, Tuko, TechCabal, Kenya Times, Kenyans.co.ke, TechAfrica News, Business Insider Africa, finalroundai; X/LinkedIn mirrors). Page-level fetches 2026-10-14: Business Insider Africa (og:description + full body: Microsoft response, Kabogo meeting, US$100M target qualification), Kenyans.co.ke 127805 (og:description, 400-500 range), WeeTracker (og:description, 'nearly 400'; X/Oracle/Meta retreat context). URL checks: WeeTracker/Kenya Times/Kenyans 200; Tuko 403 and Reuters 401 are bot-blocks, not dead links. One conflicting social snippet (closure 'affects only West Africa/Nigeria ops') recorded and outweighed by direct Nairobi reporting; noted, not trusted. STATUS CAVEAT: the closure itself remains STAFF-REPORTED - Microsoft's on-record position acknowledges 'proposed changes' without confirming or denying; do not upgrade to CONFIRMED until Microsoft names headcount/dates or confirms closure. The G42 campus record and the 27-facility directory snapshot are NOT affected.",
+   "last_checked_at": "2026-10-14T12:40:00Z",
+   "review_trail": [
+    {
+     "at": "2026-10-14T12:40:00Z",
+     "actor": "Super Z (agent, editor verification authority 2026-10-14)",
+     "action": "created + corroborated (page-level: ABI full body; Kenyans.co.ke; WeeTracker)",
+     "directive": "editor 2026-10-14: 'Use both ... if we don't have the correct facts just bin it'"
+    }
+   ]
   }
  ],
  "reviewedAt": "2026-10-14T20:40:00Z",
- "reviewer": "Super Z (agent, editor authority 2026-10-14)"
+ "reviewer": "Super Z (agent, editor authority 2026-10-14)",
+ "last_updated": "2026-10-14T12:40:00Z"
 }
