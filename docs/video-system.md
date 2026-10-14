@@ -67,6 +67,27 @@ IMAGE chip, all statistics source-chipped with dates. Delivered via
 pack). Storyboard gate held (8 stills, 3 defects found and fixed, re-inspected
 clean); post-encode frame extraction + video-understand QC passed.
 
+14 Oct 2026 - "Kenya's KSh 13 Billion Fibre Backbone Tender": the first
+NARRATED explainer and a new, dedicated production system:
+`/home/z/my-project/dc254-explainer/` (workspace-side like this project, own
+README). Built from the editor's full creative brief: 6 scenes from the Task
+144 KDEAP article, TTS narration (platform provider via z-ai-web-dev-sdk; WAV
+only + local ffmpeg transcode; 429 backoff), scene lengths + captions derived
+from ffprobe-measured audio (`src/captions/timing.json`), procedural music/SFX
+synthesiser (pure Node, 0 credits), SRT export, and a 29-check validator
+(`scripts/validate.mjs`) enforcing source chips, timing consistency, asset
+presence and secret hygiene. Voice `jam` @1.25 ~= 141 wpm (editorial spec
+135-145; kazi measured at 99 wpm and retired for this use). Rendered both
+compositions frame-exact (3,825 frames = 127.52s @30fps each): 16:9
+1080p + 9:16 vertical, delivered via `download/dc254-kdeap-explainer/`
+(cover still + SRT + narration manifest + validation checklist included).
+Storyboard still-QA gate held twice (7 + 6 frames; fixes: @remotion/fonts
+delayRender font loading, neighbour polygons + label collisions, stray packet
+dot, vertical kicker/wordmark collision, S02 caption-zone spacing). Sandbox
+notes: TTS endpoint rejects response_format 'mp3' (code 1214) and bursts hit
+429 (retry/backoff + 20s spacing added); ASR QA accepts WAV <= 30s (trim to
+28s before transcribe).
+
 ## Governance rules baked into the system
 
 1. Source policy: `statistic` scenes require `source` + `sourceDate`; without
