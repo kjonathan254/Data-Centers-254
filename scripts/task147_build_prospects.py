@@ -275,7 +275,7 @@ row("Savannah Training", "DC fire specialist course", "channel", "Nairobi",
 
 def main():
     here = os.path.dirname(os.path.abspath(__file__))
-    repo = os.path.dirname(os.path.dirname(here))
+    repo = os.path.dirname(here)  # <repo>/scripts -> <repo>
     out = os.path.join(repo, "intelligence", "prospects",
                        "2026-10-14-launch-list.csv")
     os.makedirs(os.path.dirname(out), exist_ok=True)
