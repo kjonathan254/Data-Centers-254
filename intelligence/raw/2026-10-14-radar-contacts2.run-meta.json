@@ -1,0 +1,79 @@
+{
+ "runId": "3H5OB4WiRyDe2Pf4i",
+ "actor": "apify~website-content-crawler",
+ "status": "SUCCEEDED",
+ "startedAt": "2026-10-14T14:19:01.312Z",
+ "finishedAt": "2026-10-14T14:19:44.116Z",
+ "input": {
+  "startUrls": [
+   {
+    "url": "https://atlancis.com/contact/"
+   },
+   {
+    "url": "https://www.almirianetworks.co.ke/contact-us/"
+   },
+   {
+    "url": "https://www.nuairtech.com/contact"
+   }
+  ],
+  "maxCrawlDepth": 0,
+  "maxCrawlPages": 3,
+  "maxPagesPerCrawl": 3
+ },
+ "itemsCollected": 3,
+ "usage": {
+  "statusMessage": "Finished! Total 3 requests: 3 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "stats": {
+   "inputBodyLen": 1621,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 42602,
+   "resurrectCount": 0,
+   "runTimeSecs": 42.602,
+   "metamorph": 0,
+   "computeUnits": 0.09467111111111111,
+   "memAvgBytes": 1463249734.4338624,
+   "memMaxBytes": 2052960256,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 71.9671613138952,
+   "cpuMaxUsage": 302.1024952501583,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 4306541,
+   "netTxBytes": 382500
+  },
+  "platformUsageBillingModel": "USER",
+  "usage": {
+   "ACTOR_COMPUTE_UNITS": 0.09467111111111111,
+   "DATASET_READS": 0,
+   "DATASET_WRITES": 4,
+   "KEY_VALUE_STORE_READS": 3,
+   "KEY_VALUE_STORE_WRITES": 7,
+   "KEY_VALUE_STORE_LISTS": 0,
+   "REQUEST_QUEUE_READS": 27,
+   "REQUEST_QUEUE_WRITES": 7,
+   "DATA_TRANSFER_INTERNAL_GBYTES": 0.0018402226269245148,
+   "DATA_TRANSFER_EXTERNAL_GBYTES": 0.0003406442701816559,
+   "PROXY_RESIDENTIAL_TRANSFER_GBYTES": 0,
+   "PROXY_SERPS": 0,
+   "PROXY_UNBLOCKER_UNITS": 0
+  },
+  "usageTotalUsd": 0.0042692886538969145,
+  "usageUsd": {
+   "ACTOR_COMPUTE_UNITS": 0.018934222222222224,
+   "DATASET_READS": 0,
+   "DATASET_WRITES": 2e-05,
+   "KEY_VALUE_STORE_READS": 1.5000000000000002e-05,
+   "KEY_VALUE_STORE_WRITES": 0.00035,
+   "KEY_VALUE_STORE_LISTS": 0,
+   "REQUEST_QUEUE_READS": 0.000108,
+   "REQUEST_QUEUE_WRITES": 7.000000000000001e-05,
+   "DATA_TRANSFER_INTERNAL_GBYTES": 9.201113134622575e-05,
+   "DATA_TRANSFER_EXTERNAL_GBYTES": 6.812885403633118e-05,
+   "PROXY_RESIDENTIAL_TRANSFER_GBYTES": 0,
+   "PROXY_SERPS": 0,
+   "PROXY_UNBLOCKER_UNITS": 0
+  }
+ }
+}

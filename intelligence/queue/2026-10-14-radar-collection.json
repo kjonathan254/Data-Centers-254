@@ -1,0 +1,3647 @@
+{
+ "generatedAt": "2026-10-14",
+ "runIds": [
+  "L3N8eUTYM3oCcq1lz",
+  "ie2ffvXALv1y2lnAV",
+  "r1R6cRisEnmtxDYzg"
+ ],
+ "recordCount": 102,
+ "records": [
+  {
+   "record_id": "dc254-policy-20261014-001",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Tenders – Kenya Digital Economy Acceleration Project - KDEAP",
+   "organisation": "domain: kdeap.icta.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://kdeap.icta.go.ke/tenders/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Procurement Tenders Contracts. Led by the Government of Kenya through the ICT Authority. Call/WhatsApp +254702953507. Emails: kdeapinfo@icta.go.ke Copyright ©  ..."
+   ],
+   "evidence_excerpt": "Procurement Tenders Contracts. Led by the Government of Kenya through the ICT Authority. Call/WhatsApp +254702953507. Emails: kdeapinfo@icta.go.ke Copyright ©  ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://kdeap.icta.go.ke › tenders' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 1,
+    "displayedUrl": "https://kdeap.icta.go.ke › tenders"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-002",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "KDEAP Market Engagement Report Published - August 2026",
+   "organisation": "domain: icta.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://icta.go.ke/news/kdeap-market-engagement-report-published-august-2026",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Engagement feedback from 87 firms shapes the World Bank-financed KDEAP procurement pipeline. 2026 ICT Authority Kenya."
+   ],
+   "evidence_excerpt": "Engagement feedback from 87 firms shapes the World Bank-financed KDEAP procurement pipeline. 2026 ICT Authority Kenya.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://icta.go.ke › news › kdeap-market-engagement-re...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 2,
+    "displayedUrl": "https://icta.go.ke › news › kdeap-market-engagement-re..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-003",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "P170941- Kenya Digital Economy Acceleration Project",
+   "organisation": "domain: policycommons.net",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://policycommons.net/artifacts/62064331/kenya/62962201/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "This document outlines the Procurement Plan for the Kenya Digital Economy Acceleration Project (KDEAP) from October 2023 to April 2025."
+   ],
+   "evidence_excerpt": "This document outlines the Procurement Plan for the Kenya Digital Economy Acceleration Project (KDEAP) from October 2023 to April 2025.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://policycommons.net › artifacts › kenya' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 3,
+    "displayedUrl": "https://policycommons.net › artifacts › kenya"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-004",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya digital infrastructure tender bids close 29 October ...",
+   "organisation": "domain: facebook.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.facebook.com/JOHNTANUI/posts/a-major-opportunity-to-extend-kenyas-digital-infrastructure-and-accelerate-unive/10165854212129579/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "ICT Authority invites eligible private-sector partners. Kenya Digital Economy Acceleration Project (KDEAP), which aims to accelerate the ..."
+   ],
+   "evidence_excerpt": "ICT Authority invites eligible private-sector partners. Kenya Digital Economy Acceleration Project (KDEAP), which aims to accelerate the ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'KDEAP ICT Authority procurement 2026'; SERP date label '20+ reactions  ·  4 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 4,
+    "displayedUrl": "20+ reactions  ·  4 weeks ago"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-005",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya Digital Economy Acceleration Project (KDEAP; ...",
+   "organisation": "domain: documents1.worldbank.org",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://documents1.worldbank.org/curated/en/099122725142527699/pdf/P170941-52934a6e-99f8-461f-bac9-5605334ce56a.pdf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "While the disbursement rate is still low, at US$12.61m (or 3.1%), the PIU has committed to reach 6% by December 2025 and 20% by June 2026. The ..."
+   ],
+   "evidence_excerpt": "While the disbursement rate is still low, at US$12.61m (or 3.1%), the PIU has committed to reach 6% by December 2025 and 20% by June 2026. The ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://documents1.worldbank.org › curated › pdf' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 5,
+    "displayedUrl": "https://documents1.worldbank.org › curated › pdf"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-006",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Tag: ICT Authority KDEAP Tender - Latest Tenders in Kenya",
+   "organisation": "domain: tenderyetu.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tenderyetu.com/tag/ict-authority-kdeap-tender/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "ICT Authority KDEAP Tender. Closing Date: 26th June, 2026 THE NATIONAL ASSEMBLY TENDER JUNE"
+   ],
+   "evidence_excerpt": "ICT Authority KDEAP Tender. Closing Date: 26th June, 2026 THE NATIONAL ASSEMBLY TENDER JUNE",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://www.tenderyetu.com › tag › ict-authority-kdeap...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.tenderyetu.com › tag › ict-authority-kdeap..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-007",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Tenders — ICT Authority Kenya",
+   "organisation": "domain: icta.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.icta.go.ke/tenders",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Review open, closing and closed procurement opportunities with the ICT Authority. All tenders comply with the Public Procurement and Asset Disposal Act."
+   ],
+   "evidence_excerpt": "Review open, closing and closed procurement opportunities with the ICT Authority. All tenders comply with the Public Procurement and Asset Disposal Act.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://www.icta.go.ke › tenders' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 7,
+    "displayedUrl": "https://www.icta.go.ke › tenders"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-008",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya Digital Economy Acceleration Project Stakeholder ...",
+   "organisation": "domain: linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.linkedin.com/posts/kenya-ict-board_ictauthorityke-kdeap-activity-7406356837438046209-Bhvp",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The ICT Authority today concluded a stakeholder engagement session under the Kenya Digital Economy Acceleration Project (KDEAP), ..."
+   ],
+   "evidence_excerpt": "The ICT Authority today concluded a stakeholder engagement session under the Kenya Digital Economy Acceleration Project (KDEAP), ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'KDEAP ICT Authority procurement 2026'; SERP date label '60+ reactions  ·  10 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 8,
+    "displayedUrl": "60+ reactions  ·  10 months ago"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-009",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "KENYA DIGITAL ECONOMY ACCELERATION PROJECT ( ...",
+   "organisation": "domain: tenders.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://tenders.go.ke/storage/Documents/1782198086278-tender-document.pdf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "KDEAP implementation is led by the Ministry of Information, Communication and the. Digital Economy (MICDE) through the Information and Communication Technology."
+   ],
+   "evidence_excerpt": "KDEAP implementation is led by the Ministry of Information, Communication and the. Digital Economy (MICDE) through the Information and Communication Technology.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'KDEAP ICT Authority procurement 2026'; SERP date label 'https://tenders.go.ke › storage › Documents › 178...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "KDEAP ICT Authority procurement 2026",
+    "serpPosition": 9,
+    "displayedUrl": "https://tenders.go.ke › storage › Documents › 178..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-010",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Supply, Delivery and Installation Tender, ID 134326604",
+   "organisation": "domain: kenyatenders.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.kenyatenders.com/tender/supply-delivery-and-installation-data-centre-equipment-servers-vmware-backup-solutions-atta-801a94c.php",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Tender for Supply, Delivery and Installation of Data Centre Equipment (Servers, VMWare, Backup Solutions.) - Attach any in Kenya, Ref Id: 134326604."
+   ],
+   "evidence_excerpt": "Tender for Supply, Delivery and Installation of Data Centre Equipment (Servers, VMWare, Backup Solutions.) - Attach any in Kenya, Ref Id: 134326604.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://www.kenyatenders.com › Tenders' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.kenyatenders.com › Tenders"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-011",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya Big Data Tenders, Bids & RFPs 2026",
+   "organisation": "domain: tendersontime.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tendersontime.com/kenya-tenders/big-data-tenders/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "TendersOnTime, the best online tenders portal, provides latest Kenya Big Data tenders, RFP, Bids and eprocurement notices from various states and counties ...Read more"
+   ],
+   "evidence_excerpt": "TendersOnTime, the best online tenders portal, provides latest Kenya Big Data tenders, RFP, Bids and eprocurement notices from various states and counties ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://www.tendersontime.com › kenya-tenders › big-dat...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 2,
+    "displayedUrl": "https://www.tendersontime.com › kenya-tenders › big-dat..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-012",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "UPGRADE, OPTIMISATION AND M.. Tender in Kenya, ...",
+   "organisation": "domain: tenderimpulse.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://tenderimpulse.com/government-tenders/kenya/upgrade-optimisation-and-maintenance-of-data-centre-host-environment-10973906",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The tender expired on 27 Jan 2026. This tender is sourced from PPIP Kenya and is eligible for suppliers interested in Data equipment. Interested ...Read more"
+   ],
+   "evidence_excerpt": "The tender expired on 27 Jan 2026. This tender is sourced from PPIP Kenya and is eligible for suppliers interested in Data equipment. Interested ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://tenderimpulse.com › ... › 2026 › 15 January 2026' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 3,
+    "displayedUrl": "https://tenderimpulse.com › ... › 2026 › 15 January 2026"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-013",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Data Center Services Tenders And GPN Opportunities 2026",
+   "organisation": "domain: biddetail.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.biddetail.com/global-tenders/data-center-services-tenders",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Data Center Services Tenders And GPN Opportunities 2026. We have identified 49 global data center services tenders from the public procurement domain worldwide.Read more"
+   ],
+   "evidence_excerpt": "Data Center Services Tenders And GPN Opportunities 2026. We have identified 49 global data center services tenders from the public procurement domain worldwide.Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://www.biddetail.com › global-tenders › data-cente...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.biddetail.com › global-tenders › data-cente..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-014",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "TENDER NO. PPRA/010/2020-2021 – SUPPLY AND ...",
+   "organisation": "domain: ppra.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ppra.go.ke/tender-no-ppra0102020-2021-supply-and-implementation-of-virtualized-server-infrastructure-data-storage-solution/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "1. The Public Procurement Regulatory Authority (PPRA) invites sealed tenders for the supply of SUPPLY AND IMPLEMENTATION OF VIRTUALIZED SERVER INFRASTRUCTURE & ...Read more"
+   ],
+   "evidence_excerpt": "1. The Public Procurement Regulatory Authority (PPRA) invites sealed tenders for the supply of SUPPLY AND IMPLEMENTATION OF VIRTUALIZED SERVER INFRASTRUCTURE & ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://ppra.go.ke › tender-no-ppra0102020-2021-supp...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 5,
+    "displayedUrl": "https://ppra.go.ke › tender-no-ppra0102020-2021-supp..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-015",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "RFP-2026-001 — AI Data Centre Infrastructure Partnership",
+   "organisation": "domain: photonai.ai",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://photonai.ai/rfp",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "This RFP seeks strategic partners who can scale advanced manufacturing, construction, and operations in support of PhotonAI's data centre programme across ...Read more"
+   ],
+   "evidence_excerpt": "This RFP seeks strategic partners who can scale advanced manufacturing, construction, and operations in support of PhotonAI's data centre programme across ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://photonai.ai › rfp' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 6,
+    "displayedUrl": "https://photonai.ai › rfp"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-016",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "PPIP Tenders",
+   "organisation": "domain: tenders.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tenders.go.ke/tenders",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "View and manage all tenders in your Procuring Entity. Open Tender Non Consultancy Services. REVIEW, MAINTENANCE AND TRAINING OF STAFF ON THE TEACHER ..."
+   ],
+   "evidence_excerpt": "View and manage all tenders in your Procuring Entity. Open Tender Non Consultancy Services. REVIEW, MAINTENANCE AND TRAINING OF STAFF ON THE TEACHER ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://www.tenders.go.ke › tenders' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 7,
+    "displayedUrl": "https://www.tenders.go.ke › tenders"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-017",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Data Centres in Kenya: Legal & Regulatory Guide",
+   "organisation": "domain: wamaeallen.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://wamaeallen.com/data-centres-in-kenya-legal-regulatory-guide/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Kenya's data centres sector is expanding. Explore the legal, energy, power and regulatory issues shaping new data centre investment."
+   ],
+   "evidence_excerpt": "Kenya's data centres sector is expanding. Explore the legal, energy, power and regulatory issues shaping new data centre investment.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://wamaeallen.com › data-centres-in-kenya-legal-re...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 8,
+    "displayedUrl": "https://wamaeallen.com › data-centres-in-kenya-legal-re..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-018",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Data Centre RFP, bids and Government Contracts",
+   "organisation": "domain: globaltenders.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.globaltenders.com/rfp-us/data-centre-bids",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Latest Data Centre RFPs, bids and solicitations. Bid on readily available Data Centre contracts with the best and most comprehensive government procurement ...Read more"
+   ],
+   "evidence_excerpt": "Latest Data Centre RFPs, bids and solicitations. Bid on readily available Data Centre contracts with the best and most comprehensive government procurement ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'data centre tender Kenya 2026 ppra'; SERP date label 'https://www.globaltenders.com › CPV Main Index › CPV' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre tender Kenya 2026 ppra",
+    "serpPosition": 9,
+    "displayedUrl": "https://www.globaltenders.com › CPV Main Index › CPV"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-019",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Tender Notice for supply of Generator",
+   "organisation": "domain: kstvet.ac.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.kstvet.ac.ke/download/tender-notice-for-supply-of-generator/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Tender Notice for supply of Generator ; Download 106 ; File Size 127.45 KB ; File Count 1 ; Create Date 29 April 2026 ; Last Updated 29 April 2026 ..."
+   ],
+   "evidence_excerpt": "Tender Notice for supply of Generator ; Download 106 ; File Size 127.45 KB ; File Count 1 ; Create Date 29 April 2026 ; Last Updated 29 April 2026 ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.kstvet.ac.ke › download' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.kstvet.ac.ke › download"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-020",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "View Tender Notice",
+   "organisation": "domain: egpkenya.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://egpkenya.go.ke/tender/view-tender-notice/5027/D908CA704E66D2D64013D1297E7C47A0CA637BDBA64294D2D9C8569AB1EB6A85",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Tender Advertisement Date and Time · 19/01/2026 16:30 ; Pre-Bid Meeting Date & Time · 19/01/2026 16:45 ; Pre-Bid Clarification End Date & Time · 19/01/2026 17:00."
+   ],
+   "evidence_excerpt": "Tender Advertisement Date and Time · 19/01/2026 16:30 ; Pre-Bid Meeting Date & Time · 19/01/2026 16:45 ; Pre-Bid Clarification End Date & Time · 19/01/2026 17:00.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://egpkenya.go.ke › tender › view-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 2,
+    "displayedUrl": "https://egpkenya.go.ke › tender › view-..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-021",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya UPS Tenders, Bids & RFPs 2026",
+   "organisation": "domain: tendersontime.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tendersontime.com/kenya-tenders/ups-tenders/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Latest Kenya UPS Tenders, Government Bids, RFP and other public procurement notices related to UPS from Kenya. Users can register and get updated ..."
+   ],
+   "evidence_excerpt": "Latest Kenya UPS Tenders, Government Bids, RFP and other public procurement notices related to UPS from Kenya. Users can register and get updated ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.tendersontime.com › ups-t...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.tendersontime.com › ups-t..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-022",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Tenders Are Invited For Provision Of Maintenance And ...",
+   "organisation": "domain: biddetail.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.biddetail.com/latest-tenders/107367128$c51471e7-c1d9-45b6-909d-77bd1e1717a4",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Tenders Are Invited For Provision Of Maintenance And Repair Of Uninterruptible Power Supply (Ups) in Kenya Tender, Apply for Tender Ref No 107367128 by 28 ..."
+   ],
+   "evidence_excerpt": "Tenders Are Invited For Provision Of Maintenance And Repair Of Uninterruptible Power Supply (Ups) in Kenya Tender, Apply for Tender Ref No 107367128 by 28 ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.biddetail.com › latest-ten...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.biddetail.com › latest-ten..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-023",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "cbk tender 2026 - precision cooling and air conditioning ...",
+   "organisation": "domain: facebook.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.facebook.com/jobsinkenya254/posts/central-bank-of-kenya-tender-2026-supply-installation-testing-and-commissioning-/1512083230949600/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "CENTRAL BANK OF KENYA TENDER 2026 - SUPPLY, INSTALLATION, TESTING AND COMMISSIONING OF PRECISION COOLING AND AIR CONDITIONING EQUIPMENT FOR CBK ..."
+   ],
+   "evidence_excerpt": "CENTRAL BANK OF KENYA TENDER 2026 - SUPPLY, INSTALLATION, TESTING AND COMMISSIONING OF PRECISION COOLING AND AIR CONDITIONING EQUIPMENT FOR CBK ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label '1 tháng trước' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 5,
+    "displayedUrl": "1 tháng trước"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-024",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "TENDER FOR THE SUPPLY, DELIVERY, INSTALLATION ...",
+   "organisation": "domain: tenderyetu.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tenderyetu.com/tender-for-the-supply-delivery-installation-testing-commissioning-of-120-kva-uninterruptable-power-supply-ups/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "6 thg 5, 2025 — TENDER FOR THE SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING OF 120 KVA UNINTERRUPTABLE POWER SUPPLY (UPS). Posted On: May 6, 2025 | ..."
+   ],
+   "evidence_excerpt": "6 thg 5, 2025 — TENDER FOR THE SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING OF 120 KVA UNINTERRUPTABLE POWER SUPPLY (UPS). Posted On: May 6, 2025 | ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.tenderyetu.com › tender-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.tenderyetu.com › tender-..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-025",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "tender – Ministry of Defence - Nairobi",
+   "organisation": "domain: mod.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.mod.go.ke/news-releases/notification-of-pre-qualified-bidders/attachment/tender/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Telephone No:2712054. Fax No:2722270. Email: publicaffairs@mod.go.ke. Ministry of Defence - Kenya © 2026. All Rights Reserved. Terms of Use and Privacy Policy."
+   ],
+   "evidence_excerpt": "Telephone No:2712054. Fax No:2722270. Email: publicaffairs@mod.go.ke. Ministry of Defence - Kenya © 2026. All Rights Reserved. Terms of Use and Privacy Policy.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.mod.go.ke › attachment' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 7,
+    "displayedUrl": "https://www.mod.go.ke › attachment"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-026",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Supply of Power Backup & Energy Solutions (generators, ...",
+   "organisation": "domain: globaltenders.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.globaltenders.com/tender-detail/supply-of-power-backup-energy-solutions-g-AUmVLxBxKTl7jeJd",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "19 thg 5, 2026 — The tender was released on May 16, 2026. Country - Kenya. Summary - Supply of Power Backup & Energy Solutions (generators, UPS batteries, solar ..."
+   ],
+   "evidence_excerpt": "19 thg 5, 2026 — The tender was released on May 16, 2026. Country - Kenya. Summary - Supply of Power Backup & Energy Solutions (generators, UPS batteries, solar ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://www.globaltenders.com › tend...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 8,
+    "displayedUrl": "https://www.globaltenders.com › tend..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-027",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Live tenders in Kenya, Uganda and Tanzania | TenderFlow",
+   "organisation": "domain: tenderflow.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://tenderflow.co.ke/tenders",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Browse live Government, NGO and SME tender opportunities from Kenya, Uganda and Tanzania ... Government of Kenya Counterpart funding for FY 2026/2027."
+   ],
+   "evidence_excerpt": "Browse live Government, NGO and SME tender opportunities from Kenya, Uganda and Tanzania ... Government of Kenya Counterpart funding for FY 2026/2027.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'UPS OR generator OR cooling tender Kenya ministry 2026'; SERP date label 'https://tenderflow.co.ke › tenders' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "UPS OR generator OR cooling tender Kenya ministry 2026",
+    "serpPosition": 9,
+    "displayedUrl": "https://tenderflow.co.ke › tenders"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-028",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya's New Data-Centre Licence Tests Whether Critical- ...",
+   "organisation": "domain: linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.linkedin.com/pulse/kenyas-new-data-centre-licence-tests-whether-lsahf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Its 2026 Cyber Security and Resilience proposal would put qualifying data centres under Ofcom, with thresholds based on rated IT load and duties"
+   ],
+   "evidence_excerpt": "Its 2026 Cyber Security and Resilience proposal would put qualifying data centres under Ofcom, with thresholds based on rated IT load and duties",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'Kenya data centre RFP November 2026'; SERP date label '30+ reactions  ·  1 month ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 1,
+    "displayedUrl": "30+ reactions  ·  1 month ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-001",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "DATA CENTRES IN AFRICA",
+   "organisation": "domain: africadca.org",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://africadca.org/wp-content/uploads/2026/02/DataCentresInAfrica2026-EN.pdf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The market is projected to grow to $9.2 billion by 2029, but capacity is highly concentrated in a few hubs in South. Africa, Egypt, Kenya, and Nigeria. Most ...Read more"
+   ],
+   "evidence_excerpt": "The market is projected to grow to $9.2 billion by 2029, but capacity is highly concentrated in a few hubs in South. Africa, Egypt, Kenya, and Nigeria. Most ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'Kenya data centre RFP November 2026'; SERP date label 'https://africadca.org › uploads › 2026/02 › Data...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 2,
+    "displayedUrl": "https://africadca.org › uploads › 2026/02 › Data..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-029",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "PROPOSED LICENSING FRAMEWORK FOR DATA ...",
+   "organisation": "domain: ca.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.ca.go.ke/sites/default/files/2026-09/Public%20Consultation%20on%20Data%20Centres%20September%202026.pdf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "This consultation document proposes a standalone licence category for co-location data centre operators rather than placing co-location data centres under ...Read more"
+   ],
+   "evidence_excerpt": "This consultation document proposes a standalone licence category for co-location data centre operators rather than placing co-location data centres under ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'Kenya data centre RFP November 2026'; SERP date label 'https://www.ca.go.ke › default › files › 2026-09' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.ca.go.ke › default › files › 2026-09"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-002",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Kenya's $1 Billion Data Centre Was Never the Problem. ...",
+   "organisation": "domain: cnbcafrica.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.cnbcafrica.com/2026/kenyas-1-billion-data-centre-was-never-the-problem-africas-infrastructure-gap-is",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Kenya's $1 Billion Data Centre. Published May 8, 2026 ・ announced a landmark $1 billion data centre partnership with Microsoft and UAE-based G ..."
+   ],
+   "evidence_excerpt": "Kenya's $1 Billion Data Centre. Published May 8, 2026 ・ announced a landmark $1 billion data centre partnership with Microsoft and UAE-based G ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'Kenya data centre RFP November 2026'; SERP date label 'https://www.cnbcafrica.com › 2026 › kenyas-1-billion-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.cnbcafrica.com › 2026 › kenyas-1-billion-..."
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-030",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Kenya proposes introduction of standalone data center ...",
+   "organisation": "domain: connectingafrica.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.connectingafrica.com/data-centers/kenya-proposes-introduction-of-standalone-data-center-license",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The regulator said the proposal aims to provide greater regulatory clarity, improve visibility of data center operations, and support investment ...Read more"
+   ],
+   "evidence_excerpt": "The regulator said the proposal aims to provide greater regulatory clarity, improve visibility of data center operations, and support investment ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'Kenya data centre RFP November 2026'; SERP date label 'https://www.connectingafrica.com › Data Centers' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.connectingafrica.com › Data Centers"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-003",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "PPPD/0&S/RFP/05",
+   "organisation": "domain: pppkenya.go.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://pppkenya.go.ke/wp-content/uploads/2020/07/Updated-ADDENDUM-III-TRANSACTION-ADVISORY-SERVICES-FOR-THE-KONZA-CLOUD-EXPANSION-AND-SAMRT-CITY-FACILITIES.pdf",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "This phase will include the installation of modular data centre units, enhanced power. Page 6. ADDENDUM 3-RFP FOR PROVISION OF TRANSACTION ADVISORY SERVICES FOR ...Read more"
+   ],
+   "evidence_excerpt": "This phase will include the installation of modular data centre units, enhanced power. Page 6. ADDENDUM 3-RFP FOR PROVISION OF TRANSACTION ADVISORY SERVICES FOR ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'Kenya data centre RFP November 2026'; SERP date label 'https://pppkenya.go.ke › uploads › 2020/07 › Up...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run r1R6cRisEnmtxDYzg (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "r1R6cRisEnmtxDYzg",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "Kenya data centre RFP November 2026",
+    "serpPosition": 7,
+    "displayedUrl": "https://pppkenya.go.ke › uploads › 2020/07 › Up..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-001",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Africa Data Centres: Home",
+   "organisation": "domain: africadatacentres.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.africadatacentres.com/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Africa Data Centres are designed, built and operated to the highest standards demanded by today's leading cloud providers, carriers and enterprises –"
+   ],
+   "evidence_excerpt": "Africa Data Centres are designed, built and operated to the highest standards demanded by today's leading cloud providers, carriers and enterprises –",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'data centre maintenance company Nairobi'; SERP date label 'https://www.africadatacentres.com' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.africadatacentres.com"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-002",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Why Data Centers are Kenya's Most Profitable Real Estate in ...",
+   "organisation": "domain: youtube.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=FQSC-4eztDA",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Why Data Centers are Kenya's Most Profitable Real Estate in ..."
+   ],
+   "evidence_excerpt": "Why Data Centers are Kenya's Most Profitable Real Estate in ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'data centre maintenance company Nairobi'; SERP date label '58.4K+ views  ·  6 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 2,
+    "displayedUrl": "58.4K+ views  ·  6 months ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-003",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Nairobi Data Centers - 15 Facilities from 7 Operators",
+   "organisation": "domain: datacentermap.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.datacentermap.com/kenya/nairobi/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "PAIX Nairobi is a state-of-the-art data center facility ideally located in Nairobi. Catering to content digital networks, e-commerce enterprises, broadcasting, ...Read more"
+   ],
+   "evidence_excerpt": "PAIX Nairobi is a state-of-the-art data center facility ideally located in Nairobi. Catering to content digital networks, e-commerce enterprises, broadcasting, ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'data centre maintenance company Nairobi'; SERP date label 'https://www.datacentermap.com › kenya › nairobi' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.datacentermap.com › kenya › nairobi"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-004",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Centre Infrastructure - TeleNET",
+   "organisation": "domain: telenet.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.telenet.co.ke/solutions/data-centre-infrastructure/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "We provide end-to-end data center infrastructure solutions. Nairobi info@telenet.co.ke +254 721 494 652. Support and Maintenance Project Management. Our ..."
+   ],
+   "evidence_excerpt": "We provide end-to-end data center infrastructure solutions. Nairobi info@telenet.co.ke +254 721 494 652. Support and Maintenance Project Management. Our ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'data centre maintenance company Nairobi'; SERP date label 'https://www.telenet.co.ke › solutions › data-centre-infrast...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.telenet.co.ke › solutions › data-centre-infrast..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-005",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "East Africa's first & largest Hyperscale, Carrier-neutral, AI ...",
+   "organisation": "domain: ixafrica.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ixafrica.co.ke/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Discover IXAfrica, East Africa&#39;s leading hyperscale data center. +254 793 973 584 info@ixafrica.co.ke Cabanas, Mombasa Road, Nairobi Kenya. ..."
+   ],
+   "evidence_excerpt": "Discover IXAfrica, East Africa&#39;s leading hyperscale data center. +254 793 973 584 info@ixafrica.co.ke Cabanas, Mombasa Road, Nairobi Kenya. ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'data centre maintenance company Nairobi'; SERP date label 'https://ixafrica.co.ke' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 5,
+    "displayedUrl": "https://ixafrica.co.ke"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-006",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "#13 Building East Africa's first Tier 3 data center with Dan Kwach",
+   "organisation": "domain: youtube.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=5nhsD8gqMeg",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "#13 Building East Africa's first Tier 3 data center with Dan Kwach"
+   ],
+   "evidence_excerpt": "#13 Building East Africa's first Tier 3 data center with Dan Kwach",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'data centre maintenance company Nairobi'; SERP date label '111.5K+ views  ·  12 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 6,
+    "displayedUrl": "111.5K+ views  ·  12 months ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-007",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Centre Solutions",
+   "organisation": "domain: carreltech.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "http://carreltech.com/site/industry-verticals/public-sector/data-centre-solutions/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "We specialize in the design and installation of data centers. Nairobi, Kenya Suite 4F, Nairobi, Kenya. Tel: +254 20 265 5746 info@carreltech.com"
+   ],
+   "evidence_excerpt": "We specialize in the design and installation of data centers. Nairobi, Kenya Suite 4F, Nairobi, Kenya. Tel: +254 20 265 5746 info@carreltech.com",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'data centre maintenance company Nairobi'; SERP date label 'http://carreltech.com › industry-verticals › public-sector' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 7,
+    "displayedUrl": "http://carreltech.com › industry-verticals › public-sector"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-008",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Top 26 Data Center Companies in Kenya (2026)",
+   "organisation": "domain: ensun.io",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ensun.io/search/data-center/kenya",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Discover all relevant Data Center Companies in Kenya, including iColo: A Digital Realty Company and Africa Data Centres."
+   ],
+   "evidence_excerpt": "Discover all relevant Data Center Companies in Kenya, including iColo: A Digital Realty Company and Africa Data Centres.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'data centre maintenance company Nairobi'; SERP date label 'https://ensun.io › search › data-center › kenya' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 8,
+    "displayedUrl": "https://ensun.io › search › data-center › kenya"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-009",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Maintenance - Kalcom Solutions Ltd",
+   "organisation": "domain: kalcomsolutions.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://kalcomsolutions.com/data-center-maintenance/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Data center Third-party Maintenance. Kalcom Solutions Limited is a youth-based IT company headquartered in Nairobi, Kenya, offering a comprehensive suite of ...Read more"
+   ],
+   "evidence_excerpt": "Data center Third-party Maintenance. Kalcom Solutions Limited is a youth-based IT company headquartered in Nairobi, Kenya, offering a comprehensive suite of ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'data centre maintenance company Nairobi'; SERP date label 'https://kalcomsolutions.com › data-center-maintenance' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre maintenance company Nairobi",
+    "serpPosition": 9,
+    "displayedUrl": "https://kalcomsolutions.com › data-center-maintenance"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-010",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data center fire protection",
+   "organisation": "domain: johnsoncontrols.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.johnsoncontrols.com/industries/data-centers/solutions/fire-protection",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Protect data center operations with end-to-end fire protection solutions, from early detection and monitoring to suppression and recovery."
+   ],
+   "evidence_excerpt": "Protect data center operations with end-to-end fire protection solutions, from early detection and monitoring to suppression and recovery.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'fire suppression data centre Kenya company'; SERP date label 'https://www.johnsoncontrols.com › ... › Solutions' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.johnsoncontrols.com › ... › Solutions"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-011",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "DCFS – Data Centre Fire Specialist Course",
+   "organisation": "domain: savannahtraining.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://savannahtraining.co.ke/pages/data-centre-fire-specialist",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Best practices in data centre design for fire prevention; Strategies for operating data centres with reduced fire risk; Risk assessments, audits, and recovery ...Read more"
+   ],
+   "evidence_excerpt": "Best practices in data centre design for fire prevention; Strategies for operating data centres with reduced fire risk; Risk assessments, audits, and recovery ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'fire suppression data centre Kenya company'; SERP date label 'https://savannahtraining.co.ke › pages › data-centre-fire-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 2,
+    "displayedUrl": "https://savannahtraining.co.ke › pages › data-centre-fire-..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-012",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Fire protection solution for data centers",
+   "organisation": "domain: vidfirekill.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://vidfirekill.com/solutions/data-centers/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The VID FIREKILL low pressure water mist system provides effective and reliable fire protection for data centers and data processing equipment."
+   ],
+   "evidence_excerpt": "The VID FIREKILL low pressure water mist system provides effective and reliable fire protection for data centers and data processing equipment.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'fire suppression data centre Kenya company'; SERP date label 'https://vidfirekill.com › solutions › data-centers' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 3,
+    "displayedUrl": "https://vidfirekill.com › solutions › data-centers"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-013",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Installation of fire suppression system for county data centre",
+   "organisation": "domain: tenderskenya.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.tenderskenya.co.ke/tender/installation-of-fire-suppression-system-for-county-data-centre",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Installation of fire suppression system for county data centre. Women and Persons With Disabilities Consultancies. KES 4,500 1 year. Privacy Policy Contact Us ..."
+   ],
+   "evidence_excerpt": "Installation of fire suppression system for county data centre. Women and Persons With Disabilities Consultancies. KES 4,500 1 year. Privacy Policy Contact Us ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'fire suppression data centre Kenya company'; SERP date label 'https://www.tenderskenya.co.ke › tender › installation-o...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.tenderskenya.co.ke › tender › installation-o..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-014",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Fike Fire Suppression and Data Centers",
+   "organisation": "domain: youtube.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=bF22J1degbM&xstg=CAMSBhUDze3xHw%3D%3D",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Fike Fire Suppression and Data Centers"
+   ],
+   "evidence_excerpt": "Fike Fire Suppression and Data Centers",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'fire suppression data centre Kenya company'; SERP date label '67.3K+ views  ·  13 years ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 5,
+    "displayedUrl": "67.3K+ views  ·  13 years ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-015",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Fire detection & gaseous suppression project for a data ...",
+   "organisation": "domain: mascsolutions.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://mascsolutions.com/fire-detection-gaseous-suppression-project-for-a-data-centre-group-with-a-pan-african-footprint/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Comprehensive fire detection system for the largest integrated logistics centre in Africa – completed in 2021. The system comprises more than 20 panels,"
+   ],
+   "evidence_excerpt": "Comprehensive fire detection system for the largest integrated logistics centre in Africa – completed in 2021. The system comprises more than 20 panels,",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'fire suppression data centre Kenya company'; SERP date label 'https://mascsolutions.com › Projects' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 6,
+    "displayedUrl": "https://mascsolutions.com › Projects"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-016",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Is your server room protected against fire? ...",
+   "organisation": "domain: instagram.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.instagram.com/p/Ddk3pTzFYtc/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Protect your data centres, server rooms & critical equipment with FM 200 clean-agent fire suppression. Kenya Limited today: 0746776040 | ..."
+   ],
+   "evidence_excerpt": "Protect your data centres, server rooms & critical equipment with FM 200 clean-agent fire suppression. Kenya Limited today: 0746776040 | ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'fire suppression data centre Kenya company'; SERP date label '1 like  ·  3 weeks ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 8,
+    "displayedUrl": "1 like  ·  3 weeks ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-017",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Projects",
+   "organisation": "domain: flammatech.africa",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://flammatech.africa/projects/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Flammatech is one of the leading organizations in supplying Fire Fighting Equipment, Fire Protection Systems, Fire Alarms, Fire Security and Safety Engineering ...Read more"
+   ],
+   "evidence_excerpt": "Flammatech is one of the leading organizations in supplying Fire Fighting Equipment, Fire Protection Systems, Fire Alarms, Fire Security and Safety Engineering ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'fire suppression data centre Kenya company'; SERP date label 'https://flammatech.africa › projects' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "fire suppression data centre Kenya company",
+    "serpPosition": 9,
+    "displayedUrl": "https://flammatech.africa › projects"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-018",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Structured cabling",
+   "organisation": "domain: en.wikipedia.org",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://en.wikipedia.org/wiki/Structured_cabling",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Structured cabling is the design and installation of a complete, standards-compliant telecommunications cabling infrastructure for building, platform, factory ..."
+   ],
+   "evidence_excerpt": "Structured cabling is the design and installation of a complete, standards-compliant telecommunications cabling infrastructure for building, platform, factory ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://en.wikipedia.org › wiki › Structured_cabling' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 1,
+    "displayedUrl": "https://en.wikipedia.org › wiki › Structured_cabling"
+   }
+  },
+  {
+   "record_id": "dc254-connectivity-20261014-001",
+   "topic": "connectivity",
+   "record_type": "search-result",
+   "title": "Cables",
+   "organisation": "domain: commscope.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.commscope.com/product-type/cables/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "CommScope innovates the end-to-end fiber cabling infrastructure that enables today's data center demands—and anticipates tomorrow's challenges. Data ...Read more"
+   ],
+   "evidence_excerpt": "CommScope innovates the end-to-end fiber cabling infrastructure that enables today's data center demands—and anticipates tomorrow's challenges. Data ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://www.commscope.com › Product Type' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 2,
+    "displayedUrl": "https://www.commscope.com › Product Type"
+   }
+  },
+  {
+   "record_id": "dc254-connectivity-20261014-002",
+   "topic": "connectivity",
+   "record_type": "search-result",
+   "title": "Submarine Cable Map",
+   "organisation": "domain: submarinecablemap.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.submarinecablemap.com/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "TeleGeography's comprehensive and regularly updated interactive map of the world's major submarine cable systems and landing stations."
+   ],
+   "evidence_excerpt": "TeleGeography's comprehensive and regularly updated interactive map of the world's major submarine cable systems and landing stations.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://www.submarinecablemap.com' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.submarinecablemap.com"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-019",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "MSL CABLING LIMITED overview - Companies House",
+   "organisation": "domain: find-and-update.company-information.service.gov.uk",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://find-and-update.company-information.service.gov.uk/company/11913117",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "MSL CABLING LIMITED - Free company information from Companies House including registered office address, filing history, accounts, annual return, officers, ..."
+   ],
+   "evidence_excerpt": "MSL CABLING LIMITED - Free company information from Companies House including registered office address, filing history, accounts, annual return, officers, ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://find-and-update.company-information.service.gov.uk › ...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 4,
+    "displayedUrl": "https://find-and-update.company-information.service.gov.uk › ..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-020",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Intro to Network Cabling and Connectors with Keith Barker",
+   "organisation": "domain: youtube.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=FOzJrtUAzjo",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Intro to Network Cabling and Connectors with Keith Barker"
+   ],
+   "evidence_excerpt": "Intro to Network Cabling and Connectors with Keith Barker",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'structured cabling data centre Kenya firm'; SERP date label '5.3K+ views  ·  2 years ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 5,
+    "displayedUrl": "5.3K+ views  ·  2 years ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-021",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "CABLE Definition & Meaning",
+   "organisation": "domain: merriam-webster.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.merriam-webster.com/dictionary/cable",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "The meaning of CABLE is a strong rope especially of 10 inches (25 centimeters) or more in circumference. How to use cable in a sentence."
+   ],
+   "evidence_excerpt": "The meaning of CABLE is a strong rope especially of 10 inches (25 centimeters) or more in circumference. How to use cable in a sentence.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://www.merriam-webster.com › dictionary › cable' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.merriam-webster.com › dictionary › cable"
+   }
+  },
+  {
+   "record_id": "dc254-connectivity-20261014-003",
+   "topic": "connectivity",
+   "record_type": "search-result",
+   "title": "Datwyler IT Infra – Successful digitalization starts with ...",
+   "organisation": "domain: datwyler-itinfra.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://datwyler-itinfra.com/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "High-quality services for your data center and data network Data centers ・ services for data centers, fiber networks ・ cabling in the data center"
+   ],
+   "evidence_excerpt": "High-quality services for your data center and data network Data centers ・ services for data centers, fiber networks ・ cabling in the data center",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'structured cabling data centre Kenya firm'; SERP date label 'https://datwyler-itinfra.com' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 7,
+    "displayedUrl": "https://datwyler-itinfra.com"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-022",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Cabling Without a Cable Needle // Technique Tuesday",
+   "organisation": "domain: youtube.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=-OvRxkdnmKI",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Cabling Without a Cable Needle // Technique Tuesday"
+   ],
+   "evidence_excerpt": "Cabling Without a Cable Needle // Technique Tuesday",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'structured cabling data centre Kenya firm'; SERP date label '61.9K+ views  ·  7 years ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 8,
+    "displayedUrl": "61.9K+ views  ·  7 years ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-023",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "How to Knit Cables For Beginners",
+   "organisation": "domain: youtube.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.youtube.com/watch?v=V0Gm9nTP1z4",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "How to Knit Cables For Beginners"
+   ],
+   "evidence_excerpt": "How to Knit Cables For Beginners",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'structured cabling data centre Kenya firm'; SERP date label '8.7L+ views  ·  10 years ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "structured cabling data centre Kenya firm",
+    "serpPosition": 9,
+    "displayedUrl": "8.7L+ views  ·  10 years ago"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-024",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "What Is Data Center Infrastructure Management (DCIM)?",
+   "organisation": "domain: vertiv.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.vertiv.com/en-us/about/news-and-events/articles/educational-articles/what-is-data-center-infrastructure-management-dcim/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "DCIM makes it possible to have a single view for monitoring and understanding non-compute resources like energy, cooling, and lighting, as well as compute ..."
+   ],
+   "evidence_excerpt": "DCIM makes it possible to have a single view for monitoring and understanding non-compute resources like energy, cooling, and lighting, as well as compute ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.vertiv.com › articles › educational-articles' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.vertiv.com › articles › educational-articles"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-025",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Top 10: DCIM Solution Providers",
+   "organisation": "domain: datacentremagazine.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://datacentremagazine.com/top10/top-10-dcim-solution-providers",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "ABB Ability Data Center Automation is the company's flagship DCIM offering, providing a comprehensive industrial-grade solution for monitoring, ...Read more"
+   ],
+   "evidence_excerpt": "ABB Ability Data Center Automation is the company's flagship DCIM offering, providing a comprehensive industrial-grade solution for monitoring, ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://datacentremagazine.com › top10 › top-10-dcim-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 2,
+    "displayedUrl": "https://datacentremagazine.com › top10 › top-10-dcim-..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-026",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "What Is DCIM? Data Center Management Software",
+   "organisation": "domain: sunbirddcim.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.sunbirddcim.com/what-dcim",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "What is DCIM? See how Sunbird DCIM improves data center uptime, capacity planning, energy efficiency, and operations with powerful DCIM software."
+   ],
+   "evidence_excerpt": "What is DCIM? See how Sunbird DCIM improves data center uptime, capacity planning, energy efficiency, and operations with powerful DCIM software.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.sunbirddcim.com › what-dcim' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.sunbirddcim.com › what-dcim"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-027",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Infrastructure Management (DCIM) Software",
+   "organisation": "domain: device42.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.device42.com/features/data-center-management/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "DCIM is the tool and best practices to monitor, manage, measure, and sometimes control resource utilization and energy consumption … monitoring vendors."
+   ],
+   "evidence_excerpt": "DCIM is the tool and best practices to monitor, manage, measure, and sometimes control resource utilization and energy consumption … monitoring vendors.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.device42.com › features › data-center-man...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.device42.com › features › data-center-man..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-028",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Infrastructure Management Tools",
+   "organisation": "domain: gartner.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.gartner.com/reviews/market/data-center-infrastructure-management-tools",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "DCIM Monitoring is a software designed for data center infrastructure management, providing monitoring and analysis of power usage, energy consumption, and ..."
+   ],
+   "evidence_excerpt": "DCIM Monitoring is a software designed for data center infrastructure management, providing monitoring and analysis of power usage, energy consumption, and ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.gartner.com › ... › IT Infrastructure and IoT' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 5,
+    "displayedUrl": "https://www.gartner.com › ... › IT Infrastructure and IoT"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-029",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "DCIM case study on Africa Data Centres",
+   "organisation": "domain: ekkosense.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.ekkosense.com/resources/case-studies/how-africa-data-centres-has-deployed-next-generation-dcim-to-gain-real-time-visibility-over-its-data-centre-operations/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "3DCIM solution provides comprehensive asset management and granular monitoring of rack space, data, power, and environmental data."
+   ],
+   "evidence_excerpt": "3DCIM solution provides comprehensive asset management and granular monitoring of rack space, data, power, and environmental data.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.ekkosense.com › resources › case-studies' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.ekkosense.com › resources › case-studies"
+   }
+  },
+  {
+   "record_id": "dc254-policy-20261014-001",
+   "topic": "policy",
+   "record_type": "search-result",
+   "title": "Data Center Infrastructure Management (DCIM) Market ...",
+   "organisation": "domain: fortunebusinessinsights.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.fortunebusinessinsights.com/data-center-infrastructure-management-market-105899",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "DCIM solutions enable government data centers to monitor power and cooling systems, ensure high availability, and meet strict regulatory ...Read more"
+   ],
+   "evidence_excerpt": "DCIM solutions enable government data centers to monitor power and cooling systems, ensure high availability, and meet strict regulatory ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.fortunebusinessinsights.com › data-center-in...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 7,
+    "displayedUrl": "https://www.fortunebusinessinsights.com › data-center-in..."
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-030",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Infrastructure Management | DCIM",
+   "organisation": "domain: eaton.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.eaton.com/gb/en-gb/digital/brightlayer/brightlayer-data-centers-suite/eaton-dcim-software.html",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "VCOM-Data Center Infrastructure Management (DCIM) software to monitor your entire infrastructure from utility to application. Designed to reduce data center ...Read more"
+   ],
+   "evidence_excerpt": "VCOM-Data Center Infrastructure Management (DCIM) software to monitor your entire infrastructure from utility to application. Designed to reduce data center ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.eaton.com › digital › eaton-dcim-software' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 8,
+    "displayedUrl": "https://www.eaton.com › digital › eaton-dcim-software"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-031",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Modern Data Center Infrastructure Management | Nlyte DCIM",
+   "organisation": "domain: nlyte.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.nlyte.com/solutions/data-center-infrastructure-management-dcim/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Optimize hybrid environments with Nlyte data center infrastructure management for insight, workflow automation, and improved uptime."
+   ],
+   "evidence_excerpt": "Optimize hybrid environments with Nlyte data center infrastructure management for insight, workflow automation, and improved uptime.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'DCIM monitoring Kenya data centre supplier'; SERP date label 'https://www.nlyte.com › Solutions' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "DCIM monitoring Kenya data centre supplier",
+    "serpPosition": 9,
+    "displayedUrl": "https://www.nlyte.com › Solutions"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-032",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Caterpillar, Cummins, Rehlko Powering the AI Data Center ...",
+   "organisation": "domain: equipmentworld.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.equipmentworld.com/business/article/15826765/caterpillar-cummins-rehlko-generators-power-data-center-boom",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Cummins has also been riding the data center wave with its diesel, natural-gas and hydrotreated-vegetable-oil generator sets."
+   ],
+   "evidence_excerpt": "Cummins has also been riding the data center wave with its diesel, natural-gas and hydrotreated-vegetable-oil generator sets.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.equipmentworld.com › business › article' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.equipmentworld.com › business › article"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-033",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Generator Service Providers Compared for 2026",
+   "organisation": "domain: letonpower.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://letonpower.com/comparing-leading-data-center-generator-service-providers-in-2026/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "You face a dynamic market in 2026 as leading data center generator service providers like Caterpillar, Cummins, LETON POWER, and others set new benchmarks ...Read more"
+   ],
+   "evidence_excerpt": "You face a dynamic market in 2026 as leading data center generator service providers like Caterpillar, Cummins, LETON POWER, and others set new benchmarks ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://letonpower.com › News' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 2,
+    "displayedUrl": "https://letonpower.com › News"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-034",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Map",
+   "organisation": "domain: google.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.google.com/search?q=generator+dealer+Kenya+data+centre+Caterpillar+Cummins&sca_esv=bcdf9297374b6ca0&hl=en&sxsrf=APpeQnvZiTv-jE3fn_PYDup0_HACcf3HhA:1791987367328&udm=local&lsack=p47PapiKE-6U0PEPj9P3iAM&sa=X&ved=2ahUKEwjY-eGT2bmXAxVuCjQIHY_pHTEQtgN6BAgqEAM",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Map"
+   ],
+   "evidence_excerpt": "Map",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label '' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 3,
+    "displayedUrl": ""
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-035",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Generator Companies - Key Players & More",
+   "organisation": "domain: mordorintelligence.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.mordorintelligence.com/industry-reports/data-center-generator-market/companies",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Contact +1 617-765-2493. Caterpillar Inc., Cummins Inc., and. Cummins remains a major player in data center focused product design,"
+   ],
+   "evidence_excerpt": "Contact +1 617-765-2493. Caterpillar Inc., Cummins Inc., and. Cummins remains a major player in data center focused product design,",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.mordorintelligence.com › industry-reports' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.mordorintelligence.com › industry-reports"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-036",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Centres Power | Data Centres Generators | Cat | Caterpillar",
+   "organisation": "domain: cat.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.cat.com/en_GB/by-industry/electric-power/electric-power-industries/data-centers.html",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Discover reliable data centre power solutions for emergency backup system support from Cat®. Cat® 3512C diesel generator sets. Caterpillar and your Cat dealer ..."
+   ],
+   "evidence_excerpt": "Discover reliable data centre power solutions for emergency backup system support from Cat®. Cat® 3512C diesel generator sets. Caterpillar and your Cat dealer ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.cat.com › en_GB › electric-power-industries' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 5,
+    "displayedUrl": "https://www.cat.com › en_GB › electric-power-industries"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-037",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Cummins Generator",
+   "organisation": "domain: cumminscargen.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://cumminscargen.com/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "We provide service and parts for Cummins generators and as well as for other OEM equipment including Hyundai, Shantui, Hitachi, Lugong, Foton and many others.Read more"
+   ],
+   "evidence_excerpt": "We provide service and parts for Cummins generators and as well as for other OEM equipment including Hyundai, Shantui, Hitachi, Lugong, Foton and many others.Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://cumminscargen.com' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 6,
+    "displayedUrl": "https://cumminscargen.com"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-038",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Generators",
+   "organisation": "domain: depco.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.depco.com/data-center-generators/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Inventory Generator SetsNew and used generator sets from Caterpillar, Cummins, and other major brands. from 100kW to 3,000kW Industrial EnginesDiesel.  ..."
+   ],
+   "evidence_excerpt": "Inventory Generator SetsNew and used generator sets from Caterpillar, Cummins, and other major brands. from 100kW to 3,000kW Industrial EnginesDiesel.  ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.depco.com › data-center-generators' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 7,
+    "displayedUrl": "https://www.depco.com › data-center-generators"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-039",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "The Surprising Winners of the AI Boom: Caterpillar and ...",
+   "organisation": "domain: businessinsider.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.businessinsider.com/caterpillar-cummins-power-generators-ai-boom-winners-2025-12",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Industrial giants like Caterpillar are supplying dozens of power generators fueling data centers. ... data center executive at Cummins ...Read more"
+   ],
+   "evidence_excerpt": "Industrial giants like Caterpillar are supplying dozens of power generators fueling data centers. ... data center executive at Cummins ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.businessinsider.com › AI › Tech' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 8,
+    "displayedUrl": "https://www.businessinsider.com › AI › Tech"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-040",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Data Center Generator Market Size & Growth Analysis 2034",
+   "organisation": "domain: imarcgroup.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.imarcgroup.com/data-center-generator-market",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Caterpillar leads the global data center generator market, with Cat Electric Power serving all capacity tiers (6 kW–4 MW+) and a global dealer ...Read more"
+   ],
+   "evidence_excerpt": "Caterpillar leads the global data center generator market, with Cat Electric Power serving all capacity tiers (6 kW–4 MW+) and a global dealer ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://www.imarcgroup.com › Technology & Media' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 9,
+    "displayedUrl": "https://www.imarcgroup.com › Technology & Media"
+   }
+  },
+  {
+   "record_id": "dc254-facility-20261014-041",
+   "topic": "facility",
+   "record_type": "search-result",
+   "title": "Generators for Sale Kenya | Diesel & Petrol ...",
+   "organisation": "domain: cargen.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://cargen.com/generators/?srsltid=AU7gw4W9aPqv8q8-ctjLNVjX37azOJRdn7yEduCxv8oA7rfBvuYvdTl9",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Car & General supplies Cummins diesel generator sets across multiple kVA capacities, allowing customers to choose equipment according to electrical load, ...Read more"
+   ],
+   "evidence_excerpt": "Car & General supplies Cummins diesel generator sets across multiple kVA capacities, allowing customers to choose equipment according to electrical load, ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 10; source query 'generator dealer Kenya data centre Caterpillar Cummins'; SERP date label 'https://cargen.com › generators' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run ie2ffvXALv1y2lnAV (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "ie2ffvXALv1y2lnAV",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "generator dealer Kenya data centre Caterpillar Cummins",
+    "serpPosition": 10,
+    "displayedUrl": "https://cargen.com › generators"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-001",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "203 Facilities Services Jobs in Kenya - Nairobi",
+   "organisation": "domain: ke.linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ke.linkedin.com/jobs/facilities-services-jobs",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "s top 203 Facilities Services jobs in Kenya. Leverage your professional network, and get hired. New Facilities Services jobs added daily."
+   ],
+   "evidence_excerpt": "s top 203 Facilities Services jobs in Kenya. Leverage your professional network, and get hired. New Facilities Services jobs added daily.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://ke.linkedin.com › jobs › facilities-services-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 1,
+    "displayedUrl": "https://ke.linkedin.com › jobs › facilities-services-jobs"
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-002",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Facilities Engineer Jobs, Vacancies in Kiambaa - Nairobi",
+   "organisation": "domain: careerjet.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.careerjet.co.ke/facilities-engineer-jobs/Kiambaa",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "All Facilities Engineer jobs in Kiambaa on Careerjet.co.ke, the search engine for jobs in Kenya. 6 jobs Within 25 km. Last 24 hours Last 7 days Last 30 days.  ..."
+   ],
+   "evidence_excerpt": "All Facilities Engineer jobs in Kiambaa on Careerjet.co.ke, the search engine for jobs in Kenya. 6 jobs Within 25 km. Last 24 hours Last 7 days Last 30 days.  ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.careerjet.co.ke › facilities-engineer-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 2,
+    "displayedUrl": "https://www.careerjet.co.ke › facilities-engineer-jobs"
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-003",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Datacenter Engineer Job Wave",
+   "organisation": "domain: corporatestaffing.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.corporatestaffing.co.ke/job/datacenter-engineer-job-wave/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Designing and deploying distributed micro-datacenter sites, This is a fully remote role. Wave provides a yearly $1,200 stipend"
+   ],
+   "evidence_excerpt": "Designing and deploying distributed micro-datacenter sites, This is a fully remote role. Wave provides a yearly $1,200 stipend",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.corporatestaffing.co.ke › job › datacenter-e...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 3,
+    "displayedUrl": "https://www.corporatestaffing.co.ke › job › datacenter-e..."
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-004",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Engineer Datacenter Campus Networks Planning And ...",
+   "organisation": "domain: myjobmag.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.myjobmag.co.ke/jobs-by-title/engineer-datacenter-campus-networks-planning-and-design/12",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Latest Engineer Datacenter Campus Networks Planning And Design jobs in Kenya. Data Engineering is responsible for the central data platform that receives and ..."
+   ],
+   "evidence_excerpt": "Latest Engineer Datacenter Campus Networks Planning And Design jobs in Kenya. Data Engineering is responsible for the central data platform that receives and ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.myjobmag.co.ke › jobs-by-title › engineer-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.myjobmag.co.ke › jobs-by-title › engineer-..."
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-005",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Data Center Engineer Jobs in Kenya October 2026",
+   "organisation": "domain: myjobmag.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.myjobmag.co.ke/jobs-by-title/data-center-engineer",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Latest Data Center Engineer jobs in Kenya on MyJobMag. Discover over 18 Data Center Engineer vacancies today and get hired. Apply now."
+   ],
+   "evidence_excerpt": "Latest Data Center Engineer jobs in Kenya on MyJobMag. Discover over 18 Data Center Engineer vacancies today and get hired. Apply now.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.myjobmag.co.ke › jobs-by-title › data-cent...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 5,
+    "displayedUrl": "https://www.myjobmag.co.ke › jobs-by-title › data-cent..."
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-006",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Data Centre Engineer Jobs in Kawangware (Nairobi)",
+   "organisation": "domain: careerjet.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.careerjet.co.ke/data-centre-engineer-jobs/Kawangware-(Nairobi)",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "All Data Centre Engineer jobs in Kawangware (Nairobi) on Careerjet.co.ke, search engine for jobs in Kenya. 10 jobs Within 25 km … jobs in just one click!"
+   ],
+   "evidence_excerpt": "All Data Centre Engineer jobs in Kawangware (Nairobi) on Careerjet.co.ke, search engine for jobs in Kenya. 10 jobs Within 25 km … jobs in just one click!",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.careerjet.co.ke › data-centre-engineer-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.careerjet.co.ke › data-centre-engineer-jobs"
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-007",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "What Facilities Engineer Jobs are in Kenya?",
+   "organisation": "domain: en-ke.whatjobs.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://en-ke.whatjobs.com/jobs/facilities-engineer?id=3699461",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "KES80,000 - KES150,000 per month. Bachelor's degree in Engineering. Minimum of 5 years of experience in facility maintenance management … ..."
+   ],
+   "evidence_excerpt": "KES80,000 - KES150,000 per month. Bachelor's degree in Engineering. Minimum of 5 years of experience in facility maintenance management … ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://en-ke.whatjobs.com › jobs › facilities-engineer' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 7,
+    "displayedUrl": "https://en-ke.whatjobs.com › jobs › facilities-engineer"
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-008",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Data Center Facilities Manager Jobs, Vacancies in Nairobi",
+   "organisation": "domain: careerjet.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.careerjet.co.ke/data-center-facilities-manager-jobs/Nairobi",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "All Data Center Facilities Manager jobs in Nairobi on Careerjet.co.ke, engine for jobs in Kenya. Duration: 3 years 0 months. Open Location: Nairobi Country:  ..."
+   ],
+   "evidence_excerpt": "All Data Center Facilities Manager jobs in Nairobi on Careerjet.co.ke, engine for jobs in Kenya. Duration: 3 years 0 months. Open Location: Nairobi Country:  ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://www.careerjet.co.ke › Nairobi' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 8,
+    "displayedUrl": "https://www.careerjet.co.ke › Nairobi"
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-009",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "251 Technical Field Engineer Jobs in Kenya - Nairobi",
+   "organisation": "domain: ke.linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ke.linkedin.com/jobs/technical-field-engineer-jobs",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "s top 251 Technical Field Engineer jobs in Kenya. Leverage your professional network, and get hired. New Technical Field Engineer jobs added daily."
+   ],
+   "evidence_excerpt": "s top 251 Technical Field Engineer jobs in Kenya. Leverage your professional network, and get hired. New Technical Field Engineer jobs added daily.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'facilities engineer data centre Kenya job'; SERP date label 'https://ke.linkedin.com › jobs › technical-field-engineer-j...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "facilities engineer data centre Kenya job",
+    "serpPosition": 9,
+    "displayedUrl": "https://ke.linkedin.com › jobs › technical-field-engineer-j..."
+   },
+   "topic_fields": {
+    "role_category": "cooling-facilities",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-010",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Careers – iColo (now Digital Realty)",
+   "organisation": "domain: icolo.io",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.icolo.io/careers/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "We're growing and constantly looking for new talent to join our team. Explore our open positions below and apply for your next exciting role.Read more"
+   ],
+   "evidence_excerpt": "We're growing and constantly looking for new talent to join our team. Explore our open positions below and apply for your next exciting role.Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://www.icolo.io › careers' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 1,
+    "displayedUrl": "https://www.icolo.io › careers"
+   },
+   "topic_fields": {
+    "role_category": "unclassified",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-012",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Job Type: Full Time - iXAfrica",
+   "organisation": "domain: ixafrica.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ixafrica.co.ke/job-type/full-time/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "East Africa's first & largest Hyperscale, Carrier-neutral, AI-ready Data Centre iXAfrica +254 793 973 584 info@ixafrica.co.ke. Job Type: Full Time"
+   ],
+   "evidence_excerpt": "East Africa's first & largest Hyperscale, Carrier-neutral, AI-ready Data Centre iXAfrica +254 793 973 584 info@ixafrica.co.ke. Job Type: Full Time",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 3; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://ixafrica.co.ke › job-type › full-time' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 3,
+    "displayedUrl": "https://ixafrica.co.ke › job-type › full-time"
+   },
+   "topic_fields": {
+    "role_category": "unclassified",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-013",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "1000+ Africa Data Centres jobs in Worldwide",
+   "organisation": "domain: linkedin.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.linkedin.com/jobs/africa-data-centres-jobs-worldwide",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "1,000+ Africa Data Centres Jobs in Worldwide · Country General Manager · Network Engineer - Core Infrastructure · Operations Engineer · Associate Director, Project ...Read more"
+   ],
+   "evidence_excerpt": "1,000+ Africa Data Centres Jobs in Worldwide · Country General Manager · Network Engineer - Core Infrastructure · Operations Engineer · Associate Director, Project ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://www.linkedin.com › jobs › africa-data-centres-job...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.linkedin.com › jobs › africa-data-centres-job..."
+   },
+   "topic_fields": {
+    "role_category": "networks-connectivity",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-014",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "icolo.io Job Vacancies - Hiring Now - Fuzu",
+   "organisation": "domain: fuzu.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.fuzu.com/kenya/company/icolo-io",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Find the latest job openings at icolo.io in Kenya. Upload your resume and apply for open vacancies today. Computers, software development and services. Senior ..."
+   ],
+   "evidence_excerpt": "Find the latest job openings at icolo.io in Kenya. Upload your resume and apply for open vacancies today. Computers, software development and services. Senior ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://www.fuzu.com › kenya › company › icolo-io' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 5,
+    "displayedUrl": "https://www.fuzu.com › kenya › company › icolo-io"
+   },
+   "topic_fields": {
+    "role_category": "unclassified",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-015",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "iColo: A Digital Realty Company Jobs in Kenya",
+   "organisation": "domain: myjobmag.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.myjobmag.co.ke/jobs-at/icolo-a-digital-realty-company",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Apply for the latest jobs at iColo: A Digital Realty Company in Kenya. Browse current vacancies, career opportunities and job openings."
+   ],
+   "evidence_excerpt": "Apply for the latest jobs at iColo: A Digital Realty Company in Kenya. Browse current vacancies, career opportunities and job openings.",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://www.myjobmag.co.ke › jobs-at › icolo-a-digital-...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 6,
+    "displayedUrl": "https://www.myjobmag.co.ke › jobs-at › icolo-a-digital-..."
+   },
+   "topic_fields": {
+    "role_category": "unclassified",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-016",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "IT Intern — Data Centre Operations (6-Month Paid ...",
+   "organisation": "domain: instagram.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.instagram.com/p/DVg2XCGCEzJ/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "iXAfrica is looking for a technically driven IT Intern to support data centre operations with a focus on automation, open-source infrastructure, ...Read more"
+   ],
+   "evidence_excerpt": "iXAfrica is looking for a technically driven IT Intern to support data centre operations with a focus on automation, open-source infrastructure, ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label '70+ likes  ·  7 months ago' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 7,
+    "displayedUrl": "70+ likes  ·  7 months ago"
+   },
+   "topic_fields": {
+    "role_category": "unclassified",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-017",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "iColo (now Digital Realty) – Carrier Neutral Data Centers in ...",
+   "organisation": "domain: icolo.io",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://www.icolo.io/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "bringing East Africa into one of the world's largest and most trusted data center platforms. Careers Contact PeeringDB"
+   ],
+   "evidence_excerpt": "bringing East Africa into one of the world's largest and most trusted data center platforms. Careers Contact PeeringDB",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'iXAfrica OR iColo OR \"Africa Data Centres\" careers'; SERP date label 'https://www.icolo.io' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "iXAfrica OR iColo OR \"Africa Data Centres\" careers",
+    "serpPosition": 8,
+    "displayedUrl": "https://www.icolo.io"
+   },
+   "topic_fields": {
+    "role_category": "networks-connectivity",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-019",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "56 Data Center jobs in Kenya - Nairobi",
+   "organisation": "domain: ke.linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ke.linkedin.com/jobs/data-center-jobs",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "56 Data Center jobs in Kenya. New Data Center jobs added daily. Data Center Technician - Kenya - Nairobi. Nairobi, Nairobi County, Kenya 2 months ago"
+   ],
+   "evidence_excerpt": "56 Data Center jobs in Kenya. New Data Center jobs added daily. Data Center Technician - Kenya - Nairobi. Nairobi, Nairobi County, Kenya 2 months ago",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 1; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://ke.linkedin.com › jobs › data-center-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 1,
+    "displayedUrl": "https://ke.linkedin.com › jobs › data-center-jobs"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-020",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Datacenter Technician at Oracle June, 2026",
+   "organisation": "domain: myjobmag.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.myjobmag.co.ke/job/datacenter-technician-oracle",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle ...Read more"
+   ],
+   "evidence_excerpt": "Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 2; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://www.myjobmag.co.ke › job › datacenter-technic...' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 2,
+    "displayedUrl": "https://www.myjobmag.co.ke › job › datacenter-technic..."
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-021",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Data Center Technician Jobs in Waithaka (Nairobi)",
+   "organisation": "domain: careerjet.co.ke",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://www.careerjet.co.ke/data-center-technician-jobs/Waithaka-(Nairobi)",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Job Description Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle ...Read more"
+   ],
+   "evidence_excerpt": "Job Description Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 4; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://www.careerjet.co.ke › data-center-technician-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 4,
+    "displayedUrl": "https://www.careerjet.co.ke › data-center-technician-jobs"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-022",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Datacenter Technician at Oracle - August 2026",
+   "organisation": "domain: jobsin-kenya.alljobspo.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://jobsin-kenya.alljobspo.com/job-details/10730044",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Search all the latest jobs in Kenya. Datacenter Technician at Oracle - August 2026. Free Aptitude Practice Test and Interview Questions with Explanations"
+   ],
+   "evidence_excerpt": "Search all the latest jobs in Kenya. Datacenter Technician at Oracle - August 2026. Free Aptitude Practice Test and Interview Questions with Explanations",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 5; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://jobsin-kenya.alljobspo.com › job-details' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 5,
+    "displayedUrl": "https://jobsin-kenya.alljobspo.com › job-details"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-023",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Data Center Technician - Kenya - Nairobi - On-site",
+   "organisation": "domain: bebee.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://bebee.com/ke/jobs/data-center-technician-kenya-nairobi-on-site-reboot-monkey-nairobi-nairobi-county--t7xk-837962730",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Join our team as a Data Center Technician in Nairobi, Kenya . KSh1,400,000-2,000,000/year (KES annual) Comprehensive benefits package including: Health, dental ..."
+   ],
+   "evidence_excerpt": "Join our team as a Data Center Technician in Nairobi, Kenya . KSh1,400,000-2,000,000/year (KES annual) Comprehensive benefits package including: Health, dental ...",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 6; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://bebee.com › Kenya › Jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 6,
+    "displayedUrl": "https://bebee.com › Kenya › Jobs"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-024",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "108 Data Centre jobs in Kenya - Nairobi",
+   "organisation": "domain: ke.linkedin.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ke.linkedin.com/jobs/data-centre-jobs",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "108 Data Centre Jobs in Kenya · Data Center Technician - Kenya - Karen - On-site · Data Center Technician - Kenya - Nyali - On-site · Data Center Technician - ...Read more"
+   ],
+   "evidence_excerpt": "108 Data Centre Jobs in Kenya · Data Center Technician - Kenya - Karen - On-site · Data Center Technician - Kenya - Nyali - On-site · Data Center Technician - ...Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 7; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://ke.linkedin.com › jobs › data-centre-jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 7,
+    "displayedUrl": "https://ke.linkedin.com › jobs › data-centre-jobs"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-025",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "2029+ Data Center Network Nairobi Jobs in Kenya",
+   "organisation": "domain: ke.expertini.com",
+   "country": "Kenya",
+   "location": "UNKNOWN",
+   "source_url": "https://ke.expertini.com/jobs/in/data-center-network-jobs-nairobi/",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle Cloud infrastructure"
+   ],
+   "evidence_excerpt": "Data Centre Technician at Nairobi, Kenya needed for hands-on rack & stack, break/fix, cabling, installs, and incident triage—keeping Oracle Cloud infrastructure",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 8; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://ke.expertini.com › Kenya › Jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 8,
+    "displayedUrl": "https://ke.expertini.com › Kenya › Jobs"
+   },
+   "topic_fields": {
+    "role_category": "cloud-it-operations",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  },
+  {
+   "record_id": "dc254-workforce-20261014-026",
+   "topic": "workforce",
+   "record_type": "search-result",
+   "title": "Job Title: Data Centre Maintenance Technician",
+   "organisation": "domain: careernub.com",
+   "country": "UNKNOWN",
+   "location": "UNKNOWN",
+   "source_url": "https://careernub.com/jobs/129",
+   "published_at": "UNKNOWN",
+   "collected_at": "2026-10-14",
+   "event_date": "UNKNOWN",
+   "claims_extracted": [
+    "Job Qualifications · Grade 12 education · Technical N3/4 Certification is required · Proficient computer skills · CDCP certification is mandatory.Read more"
+   ],
+   "evidence_excerpt": "Job Qualifications · Grade 12 education · Technical N3/4 Certification is required · Proficient computer skills · CDCP certification is mandatory.Read more",
+   "verification_status": "UNREVIEWED",
+   "confidence_notes": "Search-result lead only: snippet is Google-rendered text, not the publisher page. SERP position 9; source query 'data centre technician job Nairobi 2026'; SERP date label 'https://careernub.com › jobs' unverified. Organisation recorded as domain only; owner identity unverified. Open the source_url and confirm before any use.",
+   "reviewed_by": null,
+   "last_checked_at": "2026-10-14",
+   "change_history": [
+    {
+     "at": "2026-10-14",
+     "what": "created from Apify run L3N8eUTYM3oCcq1lz (apify~google-search-scraper)"
+    }
+   ],
+   "provenance": {
+    "runId": "L3N8eUTYM3oCcq1lz",
+    "actor": "apify~google-search-scraper",
+    "queryTerm": "data centre technician job Nairobi 2026",
+    "serpPosition": 9,
+    "displayedUrl": "https://careernub.com › jobs"
+   },
+   "topic_fields": {
+    "role_category": "operations-customer-services",
+    "skills_required": [],
+    "qualifications_required": [],
+    "experience_required": "UNKNOWN",
+    "employment_type": "UNKNOWN"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1858 @@
+[
+ {
+  "url": "https://www.almirianetworks.co.ke/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/",
+   "loadedTime": "2026-10-14T14:17:59.832Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 0,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/",
+   "title": "Security, CCTV, Telephony & Network Solutions in Kenya - Almiria Networks",
+   "description": "CCTV, access control, alarms, electric fences, IP PBX, Wi-Fi & cabling by certified engineers—design, install & support across Nairobi and Kenya.",
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Security, CCTV, Telephony & Network Solutions in Kenya - Almiria Networks"
+    },
+    {
+     "property": "og:description",
+     "content": "CCTV, access control, alarms, electric fences, IP PBX, Wi-Fi & cabling by certified engineers—design, install & support across Nairobi and Kenya."
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2016-02-18T15:10:52+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2026-08-02T18:04:55+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home"
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/#webpage",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Security, CCTV, Telephony & Network Solutions in Kenya - Almiria Networks",
+       "description": "CCTV, access control, alarms, electric fences, IP PBX, Wi-Fi & cabling by certified engineers—design, install & support across Nairobi and Kenya.",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/#breadcrumblist"
+       },
+       "datePublished": "2016-02-18T15:10:52+03:00",
+       "dateModified": "2026-08-02T21:04:55+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "LocalBusiness",
+     "name": "Almiria Networks",
+     "alternateName": "Almiria Networks Kenya",
+     "url": "https://www.almirianetworks.co.ke/",
+     "image": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final-300x168.png",
+     "telephone": "+254700449778",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Old Mutual Building, 2nd Floor, Room 221, Kimathi Street",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi County",
+      "addressCountry": "KE"
+     },
+     "areaServed": "Kenya",
+     "openingHours": [
+      "Mo-Fr 08:00-17:00",
+      "Sa 08:00-15:00"
+     ],
+     "sameAs": [
+      "https://web.facebook.com/almirianetworkskenya/",
+      "https://www.instagram.com/almiriatechstore/",
+      "https://www.youtube.com/channel/UC6t6tODYFntfQSkf8RJzokg"
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:17:58 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/1737>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Security, CCTV, Telephony & Network Solutions in Kenya\nIntegrated security\nCCTV systems built for clear, reliable protection\nIP and analogue HD surveillance, remote viewing, intelligent analytics and professional installation for homes and organisations.\nDeductible site surveySurvey fee credited when awarded the project\nCertified engineersSecurity, telephony, cabling and Wi-Fi\nProfessional handoverTesting, labelling, documents and training\nNationwide supportNairobi and projects across Kenya\nWhat we deliver\nOne engineering partner for connected, secure operations\nFrom a single office to a multi-site organisation, we design, supply, install and support systems that work together reliably.\n01\nCCTV installation\nIP and analogue HD surveillance with remote viewing and intelligent analytics.\nView solution → 02\nAccess control\nBiometric, card and facial access systems for doors, gates and turnstiles.\nView solution → 03\nBurglar alarms\nWired and wireless sensors, GSM alerts, sirens and app-based monitoring.\nView solution → 04\nElectric fences\nPerimeter security with dependable energisers, monitoring and neat installation.\nView solution → 05\nAutomated gates\nSliding and swing gate motors, remotes, safety beams and access integration.\nView solution → 06\nBusiness phone systems\nScalable voice solutions for SMEs, campuses and enterprise teams.\nView solution → 07\nIP PBX & PABX\nVoIP, SIP trunks, IVR, recording, queues and business call reporting.\nView solution → 08\nCall centre solutions\nInbound, outbound and omnichannel platforms with practical reporting.\nView solution → 09\nSchool phone systems\nPaging, PA, bell scheduling and emergency communication systems.\nView solution → 10\nStructured cabling\nCat6, Cat6A and fibre installation with racks, testing and clear labelling.\nView solution → 11\nWireless networks\nCampus Wi-Fi design, heat maps, deployment and performance optimisation.\nView solution → 12\nMasts & towers\nConnectivity backbones, radio alignment and professionally planned installations.\nView solution → \nIntegrated capability\nSecurity, communications and networks—designed as one system\n01\nSecurity\nCCTV, access control, burglar alarms, electric fences and automated gates.\n02\nBusiness telephony\nIP PBX, VoIP, call centres, school systems, IP phones and unified communications.\n03\nNetworks\nStructured cabling, campus Wi-Fi, fibre, masts and dependable inter-branch links.\nWhy Almiria\nGood technology is only as strong as its design and installation\nWe combine trusted technology with practical engineering, clear project ownership and support after handover.\nDiscuss your project\n01\nEngineering first\nSolutions are sized around your site, users, risks and growth—not a generic product list.\n02\nNeat documented work\nClear labelling, testing, handover documents and user training are built into delivery.\n03\nSupport that continues\nRemote support and service-level options help keep critical systems available.\n04\nScalable by design\nStart with what you need today while leaving a practical path for tomorrow.\nHow we work\nA clear route from requirement to reliable handover\nSite surveys are chargeable and fully deducted from the final invoice when Almiria is awarded the project.\n01\nDiscover\nWe clarify your objectives, site conditions, users and budget.\n02\nSurvey\nAn engineer assesses coverage, routes, power and installation requirements.\n03\nDesign & quote\nYou receive a clear solution, scope and itemised quotation.\n04\nInstall & support\nWe deploy, test, document, train and support your team.\nBrands we deploy\nProven platforms selected for the job\nHikvision\nYeastar\nYealink\nGrandstream\nCisco\nAjax\nOptex\nUbiquiti\nMikroTik\nDSC\nParadox",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Security, CCTV, Telephony & Network Solutions in Kenya\n\n![Professionally installed CCTV security cameras in Kenya](https://www.almirianetworks.co.ke/wp-content/uploads/2023/06/Step-Up-Your-Security-with-Almiria-Advanced-CCTV-Surveillance-Camera-System-Supply-and-Installation.jpg)\n\nIntegrated security\n\n## CCTV systems built for clear, reliable protection\n\nIP and analogue HD surveillance, remote viewing, intelligent analytics and professional installation for homes and organisations.\n\n**Deductible site survey**Survey fee credited when awarded the project\n\n**Certified engineers**Security, telephony, cabling and Wi-Fi\n\n**Professional handover**Testing, labelling, documents and training\n\n**Nationwide support**Nairobi and projects across Kenya\n\nWhat we deliver\n\n## One engineering partner for connected, secure operations\n\nFrom a single office to a multi-site organisation, we design, supply, install and support systems that work together reliably.\n\n[01\n\n### CCTV installation\n\nIP and analogue HD surveillance with remote viewing and intelligent analytics.\n\nView solution →](https://www.almirianetworks.co.ke/supply-and-installation-cctv-surveillance-camera-system/) [02\n\n### Access control\n\nBiometric, card and facial access systems for doors, gates and turnstiles.\n\nView solution →](https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/) [03\n\n### Burglar alarms\n\nWired and wireless sensors, GSM alerts, sirens and app-based monitoring.\n\nView solution →](https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/) [04\n\n### Electric fences\n\nPerimeter security with dependable energisers, monitoring and neat installation.\n\nView solution →](https://www.almirianetworks.co.ke/electric-fences-in-kenya/) [05\n\n### Automated gates\n\nSliding and swing gate motors, remotes, safety beams and access integration.\n\nView solution →](https://www.almirianetworks.co.ke/electric-remote-automated-gates/) [06\n\n### Business phone systems\n\nScalable voice solutions for SMEs, campuses and enterprise teams.\n\nView solution →](https://www.almirianetworks.co.ke/business-phone-system-installation/) [07\n\n### IP PBX & PABX\n\nVoIP, SIP trunks, IVR, recording, queues and business call reporting.\n\nView solution →](https://www.almirianetworks.co.ke/ip-pabx-pbx-system-kenya-telephone-system/) [08\n\n### Call centre solutions\n\nInbound, outbound and omnichannel platforms with practical reporting.\n\nView solution →](https://www.almirianetworks.co.ke/call-center-solutions-kenya-nairobi/) [09\n\n### School phone systems\n\nPaging, PA, bell scheduling and emergency communication systems.\n\nView solution →](https://www.almirianetworks.co.ke/telephone-systems-for-schools/) [10\n\n### Structured cabling\n\nCat6, Cat6A and fibre installation with racks, testing and clear labelling.\n\nView solution →](https://www.almirianetworks.co.ke/structured-cabling/) [11\n\n### Wireless networks\n\nCampus Wi-Fi design, heat maps, deployment and performance optimisation.\n\nView solution →](https://www.almirianetworks.co.ke/wireless-networks/) [12\n\n### Masts & towers\n\nConnectivity backbones, radio alignment and professionally planned installations.\n\nView solution →](https://www.almirianetworks.co.ke/masts-and-towers-installation-services/)\n\nIntegrated capability\n\n## Security, communications and networks—designed as one system\n\n01\n\n### Security\n\nCCTV, access control, burglar alarms, electric fences and automated gates.\n\n02\n\n### Business telephony\n\nIP PBX, VoIP, call centres, school systems, IP phones and unified communications.\n\n03\n\n### Networks\n\nStructured cabling, campus Wi-Fi, fibre, masts and dependable inter-branch links.\n\nWhy Almiria\n\n## Good technology is only as strong as its design and installation\n\nWe combine trusted technology with practical engineering, clear project ownership and support after handover.\n\n[Discuss your project](https://www.almirianetworks.co.ke/#contact)\n\n01\n\n### Engineering first\n\nSolutions are sized around your site, users, risks and growth—not a generic product list.\n\n02\n\n### Neat documented work\n\nClear labelling, testing, handover documents and user training are built into delivery.\n\n03\n\n### Support that continues\n\nRemote support and service-level options help keep critical systems available.\n\n04\n\n### Scalable by design\n\nStart with what you need today while leaving a practical path for tomorrow.\n\nHow we work\n\n## A clear route from requirement to reliable handover\n\nSite surveys are chargeable and fully deducted from the final invoice when Almiria is awarded the project.\n\n1.  01\n    \n    ### Discover\n    \n    We clarify your objectives, site conditions, users and budget.\n    \n2.  02\n    \n    ### Survey\n    \n    An engineer assesses coverage, routes, power and installation requirements.\n    \n3.  03\n    \n    ### Design & quote\n    \n    You receive a clear solution, scope and itemised quotation.\n    \n4.  04\n    \n    ### Install & support\n    \n    We deploy, test, document, train and support your team.\n    \n\nBrands we deploy\n\n## Proven platforms selected for the job\n\n*   Hikvision\n*   Yeastar\n*   Yealink\n*   Grandstream\n*   Cisco\n*   Ajax\n*   Optex\n*   Ubiquiti\n*   MikroTik\n*   DSC\n*   Paradox",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://atlancis.com/",
+  "crawl": {
+   "loadedUrl": "https://atlancis.com/",
+   "loadedTime": "2026-10-14T14:18:02.639Z",
+   "referrerUrl": "https://atlancis.com/",
+   "httpStatusCode": 200,
+   "depth": 0,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://atlancis.com/",
+   "title": "Best IT Company in Kenya - Private Cloud | Backup and Recovery",
+   "description": "We bring the cost and environmental benefits of Hyperscale technologies to African Service Providers , Enterprises and governments",
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:type",
+     "content": "website"
+    },
+    {
+     "property": "og:title",
+     "content": "Best IT Company in Kenya - Private Cloud | Backup and Recovery"
+    },
+    {
+     "property": "og:description",
+     "content": "We bring the cost and environmental benefits of Hyperscale technologies to African Service Providers , Enterprises and governments"
+    },
+    {
+     "property": "og:url",
+     "content": "https://atlancis.com/"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Atlancis"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-11-09T10:00:01+00:00"
+    },
+    {
+     "property": "og:image",
+     "content": "https://atlancis.com/wp-content/uploads/2020/02/shape1.png"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "WebSite",
+       "@id": "https://atlancis.com/#website",
+       "url": "https://atlancis.com/",
+       "name": "Atlancis",
+       "description": "Welcome",
+       "potentialAction": [
+        {
+         "@type": "SearchAction",
+         "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://atlancis.com/?s={search_term_string}"
+         },
+         "query-input": "required name=search_term_string"
+        }
+       ],
+       "inLanguage": "en-US"
+      },
+      {
+       "@type": "ImageObject",
+       "@id": "https://atlancis.com/#primaryimage",
+       "inLanguage": "en-US",
+       "url": "https://atlancis.com/wp-content/uploads/2020/02/shape1.png",
+       "contentUrl": "https://atlancis.com/wp-content/uploads/2020/02/shape1.png",
+       "width": 812,
+       "height": 800,
+       "caption": "qloud"
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://atlancis.com/#webpage",
+       "url": "https://atlancis.com/",
+       "name": "Best IT Company in Kenya - Private Cloud | Backup and Recovery",
+       "isPartOf": {
+        "@id": "https://atlancis.com/#website"
+       },
+       "primaryImageOfPage": {
+        "@id": "https://atlancis.com/#primaryimage"
+       },
+       "datePublished": "2020-02-15T06:02:04+00:00",
+       "dateModified": "2025-11-09T10:00:01+00:00",
+       "description": "We bring the cost and environmental benefits of Hyperscale technologies to African Service Providers , Enterprises and governments",
+       "breadcrumb": {
+        "@id": "https://atlancis.com/#breadcrumb"
+       },
+       "inLanguage": "en-US",
+       "potentialAction": [
+        {
+         "@type": "ReadAction",
+         "target": [
+          "https://atlancis.com/"
+         ]
+        }
+       ]
+      },
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://atlancis.com/#breadcrumb",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "position": 1,
+         "name": "Home"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "x-powered-by": "PHP/7.2.34",
+    "content-encoding": "gzip",
+    "vary": "Accept-Encoding",
+    "last-modified": "Wed, 14 Oct 2026 14:17:57 GMT",
+    "etag": "\"e926539536f156665dc86307009bc8ce\"",
+    "referrer-policy": "no-referrer-when-downgrade",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Wed, 14 Oct 2026 14:17:57 GMT",
+    "server": "Apache",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Best IT Company in Kenya - Private Cloud\nAbout Us\nOpen Approaches to Customer ICT Needs \nAtlancis Technologies is an ISO 9001 certified company, a member of the Open Compute Project (OCP) and a Top 100 Midsized Company headquartered in Nairobi, Kenya. Working with global Original Design Manufacturers, we bring the cost and environmental benefits of Hyperscale technologies to African Service Providers and Enterprises.\nEfficiency \nScalability \nOpenness \nRetention \nImpact \nOpen Hardware \n44 +\nEngineers and Developers\n88 k +\nSatisfied Customers\n88 +\nInstances Deployed\n21 /7 hrs\nUptime\nPricing\nPlans & Pricing \nBasic\nFree\nIt is a long established fact that a reader will be distracted\nFeedback System \nSocial Integration \nPush Notifications \nRelevant App Content \nLog-in via Social Media \nPremium\n$12/mo\nIt is a long established fact that a reader will be distracted\nFeedback System \nSocial Integration \nPush Notifications \nRelevant App Content \nLog-in via Social Media \nBusiness\n$38/mo\nIt is a long established fact that a reader will be distracted\nFeedback System \nSocial Integration \nPush Notifications \nRelevant App Content \nLog-in via Social Media \n11\nLocations\nSimplicity \nAcquire, build, deploy and support Open Turnkey solutions aimed at meeting your technical and business needs, within your available budgets . \nSpeed \nTimely resolution of issues and interventions through dedicated Technical Account Managers (TAM). \nConvenience \nOne port of call for all your support related queries and escalations across multiple technologies and vendor products in your footprint. \nAffordability \nLeverage on economies of scale by capitalizing on discounts and offers on our Master Service Level Agreement (MSLA) contracts. We guarantee 20+% discounts on our amalgamated MSLAs vs Individual SLAs. \nReliability \nBid farewell to expensive consultancies and get the best, first-hand IT roadmap, advisory on future upgrades and technologies, and trends across your product landscape at no extra cost, as part of our MSLA. \nExpertise \nLeverage on our extensive partner ecosystem to get the best value for your investment. Our dedicated TAMs will ensure you make the right choice, and the solution works for you. \nYour Applications \nIt is a long established fact that a reader will be distracted by the of readable content Deploy.\nTestimonials\nSome Awesome Words By Our Customers \nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\nSimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.\nJD Scot \nDesigner, Qloud \nDummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.\nHaris Morgan \nDesigner, Qloud \nText of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.\nNik Jorden \nDesigner, Qloud \nIpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer.\nRinks Cooper \nDesigner, Qloud \nBlog\nRecent Blog \nTech\nVideo\nPosted on March 16, 2021 \nOCP Solution Provider Spotlight: Africa’s future is open!\nAfrica’s IT market comprises some of the most interesting high growth areas in the world. Mobile money, exploding internet penetration and increased investment from both public and private sectors all point to an exciting future for Africa. This week I spoke with the executive team from Atlancis, our Solution Provider based in Nairobi, Kenya to […]\nTech\nTech\nleader\nTech\nUncategorized\nPosted on March 12, 2026 \nElementor #3473\nServernah Cloud launch signals new phase for the first sovereign AI infrastructure in East Africa Atlancis Technologies Limited (Atlancis), Everse Technology Limited (EverseTech) and iXAfrica Data Centres Limited (iXAfrica) today marked the launch of Servernah Cloud, Kenya’s first sovereign-hosted cloud and AI platform designed for regulated and mission-critical workloads. The launch brought together Atlancis’ Servernah […]\nNews\nTech\nPosted on November 11, 2025 \nAtlancis Technologies Ai Infrastructure Press release\nAtlancis Technologies, Everse Technology and iXAfrica Unveil East & Central Africa’s First GPU-Powered AI Infrastructure Atlancis Technologies, under its Servernah Cloud brand, announces the delivery and deployment of East and Central Africa’s first GPU-powered Artificial Intelligence (AI) factory, hosted at iXAfrica Data Centres, Kenya’s leading AI-ready carrier-neutral facility. This milestone marks a historic leap in […]\nocp\nTech\nPosted on February 9, 2023 \nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis\nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis The Atlancis Open Compute Project (OCP) Experience Center (AEC) is the first of its kind in Africa.The AEC supports customer “what-if” scenarios around upgrades or changes in hardware and software technologies might mean to their key stakeholders. Atlancis Consultants will work with our clients to define […]\nUncategorized\nPosted on May 22, 2022 \nBest Cloud Service Providers in Kenya – Ultimate Guide\nCloud service providers in Kenya allow organisations to lease cloud-based infrastructure, application, or storage services from them instead of maintaining in-house data centers. These cloud services are offered in various service models, including: Software as a Service (SaaS) Users are provided with a cloud application, its infrastructure and the platform on which the application runs. […]\nEducation\nTech\nPosted on November 8, 2021 \nKENET Deploys First Commercial OpenWiFi solution in Africa\nKENET Deploys First Commercial OpenWiFi solution in Africa Kenya Education Network (KENET), the National Research and Education Network (NREN) of Kenya, today announced it has signed an agreement with Atlancis Technologies Limited, Africa’s first Open OEM, to deploy Africa’s first true multi-vendor compatible Enterprise Wi-Fi network based on the Telecom Infra Project’s (TIP) OpenWiFi […]\nTech\nVideo\nPosted on March 16, 2021 \nOCP Solution Provider Spotlight: Africa’s future is open!\nAfrica’s IT market comprises some of the most interesting high growth areas in the world. Mobile money, exploding internet penetration and increased investment from both public and private sectors all point to an exciting future for Africa. This week I spoke with the executive team from Atlancis, our Solution Provider based in Nairobi, Kenya to […]\nTech\nTech\nleader\nTech\nUncategorized\nPosted on March 12, 2026 \nElementor #3473\nServernah Cloud launch signals new phase for the first sovereign AI infrastructure in East Africa Atlancis Technologies Limited (Atlancis), Everse Technology Limited (EverseTech) and iXAfrica Data Centres Limited (iXAfrica) today marked the launch of Servernah Cloud, Kenya’s first sovereign-hosted cloud and AI platform designed for regulated and mission-critical workloads. The launch brought together Atlancis’ Servernah […]\nNews\nTech\nPosted on November 11, 2025 \nAtlancis Technologies Ai Infrastructure Press release\nAtlancis Technologies, Everse Technology and iXAfrica Unveil East & Central Africa’s First GPU-Powered AI Infrastructure Atlancis Technologies, under its Servernah Cloud brand, announces the delivery and deployment of East and Central Africa’s first GPU-powered Artificial Intelligence (AI) factory, hosted at iXAfrica Data Centres, Kenya’s leading AI-ready carrier-neutral facility. This milestone marks a historic leap in […]\nocp\nTech\nPosted on February 9, 2023 \nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis\nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis The Atlancis Open Compute Project (OCP) Experience Center (AEC) is the first of its kind in Africa.The AEC supports customer “what-if” scenarios around upgrades or changes in hardware and software technologies might mean to their key stakeholders. Atlancis Consultants will work with our clients to define […]\nUncategorized\nPosted on May 22, 2022 \nBest Cloud Service Providers in Kenya – Ultimate Guide\nCloud service providers in Kenya allow organisations to lease cloud-based infrastructure, application, or storage services from them instead of maintaining in-house data centers. These cloud services are offered in various service models, including: Software as a Service (SaaS) Users are provided with a cloud application, its infrastructure and the platform on which the application runs. […]\nEducation\nTech\nPosted on November 8, 2021 \nKENET Deploys First Commercial OpenWiFi solution in Africa\nKENET Deploys First Commercial OpenWiFi solution in Africa Kenya Education Network (KENET), the National Research and Education Network (NREN) of Kenya, today announced it has signed an agreement with Atlancis Technologies Limited, Africa’s first Open OEM, to deploy Africa’s first true multi-vendor compatible Enterprise Wi-Fi network based on the Telecom Infra Project’s (TIP) OpenWiFi […]",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Best IT Company in Kenya - Private Cloud\n\nAbout Us\n\n## Open Approaches to Customer ICT Needs\n\nAtlancis Technologies is an ISO 9001 certified company, a member of the Open Compute Project (OCP) and a Top 100 Midsized Company headquartered in Nairobi, Kenya. Working with global Original Design Manufacturers, we bring the cost and environmental benefits of Hyperscale technologies to African Service Providers and Enterprises.\n\n*   Efficiency\n*   Scalability\n*   Openness\n*   Retention\n*   Impact\n*   Open Hardware\n\n44 +\n\n##### Engineers and Developers\n\n88 k +\n\n##### Satisfied Customers\n\n88 +\n\n##### Instances Deployed\n\n21 /7 hrs\n\n##### Uptime\n\nPricing\n\n## Plans & Pricing\n\nBasic\n\n#### Free\n\nIt is a long established fact that a reader will be distracted\n\n*   Feedback System\n*   Social Integration\n*   Push Notifications\n*   Relevant App Content\n*   Log-in via Social Media\n\nPremium\n\n#### $12/mo\n\nIt is a long established fact that a reader will be distracted\n\n*   Feedback System\n*   Social Integration\n*   Push Notifications\n*   Relevant App Content\n*   Log-in via Social Media\n\nBusiness\n\n#### $38/mo\n\nIt is a long established fact that a reader will be distracted\n\n*   Feedback System\n*   Social Integration\n*   Push Notifications\n*   Relevant App Content\n*   Log-in via Social Media\n\n![qloud](https://atlancis.com/wp-content/uploads/2020/02/shape1.png)\n\n![qloud](https://atlancis.com/wp-content/uploads/2020/02/shape1.png)\n\n## 11\n\nLocations\n\n![light-bulb](https://atlancis.com/wp-content/uploads/2020/04/light-bulb.svg \"light-bulb\")\n\n##### Simplicity\n\nAcquire, build, deploy and support Open Turnkey solutions aimed at meeting your technical and business needs, within your available budgets .\n\n![Speed-01](https://atlancis.com/wp-content/uploads/2020/04/Speed-01.svg \"Speed-01\")\n\n##### [Speed](https://atlancis.com/#)\n\nTimely resolution of issues and interventions through dedicated Technical Account Managers (TAM).\n\n![wristwatch](https://atlancis.com/wp-content/uploads/2020/04/wristwatch.svg \"wristwatch\")\n\n##### [Convenience](https://atlancis.com/#)\n\nOne port of call for all your support related queries and escalations across multiple technologies and vendor products in your footprint.\n\n![afford](https://atlancis.com/wp-content/uploads/2020/04/afford.svg \"afford\")\n\n##### [Affordability](https://atlancis.com/#)\n\nLeverage on economies of scale by capitalizing on discounts and offers on our Master Service Level Agreement (MSLA) contracts. We guarantee 20+% discounts on our amalgamated MSLAs vs Individual SLAs.\n\n![key](https://atlancis.com/wp-content/uploads/2020/04/key.svg \"key\")\n\n##### [Reliability](https://atlancis.com/#)\n\nBid farewell to expensive consultancies and get the best, first-hand IT roadmap, advisory on future upgrades and technologies, and trends across your product landscape at no extra cost, as part of our MSLA.\n\n![user](https://atlancis.com/wp-content/uploads/2020/04/user.svg \"user\")\n\n##### [Expertise](https://atlancis.com/#)\n\nLeverage on our extensive partner ecosystem to get the best value for your investment. Our dedicated TAMs will ensure you make the right choice, and the solution works for you.\n\n## Your Applications\n\nIt is a long established fact that a reader will be distracted by the of readable content Deploy.\n\nTestimonials\n\n## Some Awesome Words By Our Customers\n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n\nSimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.\n\nJD Scot\n\nDesigner, Qloud\n\nDummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.\n\nHaris Morgan\n\nDesigner, Qloud\n\nText of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.\n\nNik Jorden\n\nDesigner, Qloud\n\nIpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer.\n\nRinks Cooper\n\nDesigner, Qloud\n\nBlog\n\n## Recent Blog\n\n*   [Tech](https://atlancis.com/category/tech/)\n*   [Video](https://atlancis.com/category/uncategorized/video/)\n\n*   Posted on [March 16, 2021](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n[](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n##### [OCP Solution Provider Spotlight: Africa’s future is open!](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n[](https://atlancis.com/ocp-solution-provider-spotlight/)\n\nAfrica’s IT market comprises some of the most interesting high growth areas in the world. Mobile money, exploding internet penetration and increased investment from both public and private sectors all point to an exciting future for Africa.  This week I spoke with the executive team from Atlancis, our Solution Provider based in Nairobi, Kenya to \\[…\\]\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2020/02/Dan-CheerLeader-768x768-1.jpg)\n\n*   [leader](https://atlancis.com/category/leader/)\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2020/02/Atlancis-KPSA-768x512-1.jpg)\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   [Uncategorized](https://atlancis.com/category/uncategorized/)\n\n*   Posted on [March 12, 2026](https://atlancis.com/elementor-3473/)\n\n[](https://atlancis.com/elementor-3473/)\n\n##### [Elementor #3473](https://atlancis.com/elementor-3473/)\n\n[](https://atlancis.com/elementor-3473/)\n\nServernah Cloud launch signals new phase for the first sovereign AI infrastructure in East Africa Atlancis Technologies Limited (Atlancis), Everse Technology Limited (EverseTech) and iXAfrica Data Centres Limited (iXAfrica) today marked the launch of Servernah Cloud, Kenya’s first sovereign-hosted cloud and AI platform designed for regulated and mission-critical workloads. The launch brought together Atlancis’ Servernah \\[…\\]\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2025/11/GPU-1-of-3.png)\n\n*   [News](https://atlancis.com/category/news/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [November 11, 2025](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n[](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n##### [Atlancis Technologies Ai Infrastructure Press release](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n[](https://atlancis.com/atlancis-technologies-ai-infra/)\n\nAtlancis Technologies, Everse Technology and iXAfrica Unveil East & Central Africa’s First GPU-Powered AI Infrastructure Atlancis Technologies, under its Servernah Cloud brand, announces the delivery and deployment of East and Central Africa’s first GPU-powered Artificial Intelligence (AI) factory, hosted at iXAfrica Data Centres, Kenya’s leading AI-ready carrier-neutral facility. This milestone marks a historic leap in \\[…\\]\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2023/02/ocpafrika.jpeg)\n\n*   [ocp](https://atlancis.com/category/ocp/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [February 9, 2023](https://atlancis.com/ocpkenya/)\n\n[](https://atlancis.com/ocpkenya/)\n\n##### [OCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis](https://atlancis.com/ocpkenya/)\n\n[](https://atlancis.com/ocpkenya/)\n\nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis The Atlancis Open Compute Project (OCP) Experience Center (AEC) is the first of its kind in Africa.The AEC supports customer “what-if” scenarios around upgrades or changes in hardware and software technologies might mean to their key stakeholders. Atlancis Consultants will work with our clients to define \\[…\\]\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2022/05/cloud-computing-service-providers-in-kenya.jpg)\n\n*   [Uncategorized](https://atlancis.com/category/uncategorized/)\n\n*   Posted on [May 22, 2022](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n[](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n##### [Best Cloud Service Providers in Kenya – Ultimate Guide](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n[](https://atlancis.com/cloud-service-providers-in-kenya/)\n\nCloud service providers in Kenya allow organisations to lease cloud-based infrastructure, application, or storage services from them instead of maintaining in-house data centers.  These cloud services are offered in various service models, including: Software as a Service (SaaS) Users are provided with a cloud application, its infrastructure and the platform on which the application runs. \\[…\\]\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2021/11/ATL-Africa-OpenWiFi-768x512-1.png)\n\n*   [Education](https://atlancis.com/category/education/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [November 8, 2021](https://atlancis.com/openwifi-solution-in-africa/)\n\n[](https://atlancis.com/openwifi-solution-in-africa/)\n\n##### [KENET Deploys First Commercial OpenWiFi solution in Africa](https://atlancis.com/openwifi-solution-in-africa/)\n\n[](https://atlancis.com/openwifi-solution-in-africa/)\n\n  KENET Deploys First Commercial OpenWiFi solution in Africa Kenya Education Network (KENET), the National Research and Education Network (NREN) of Kenya, today announced it has signed an agreement with Atlancis Technologies Limited, Africa’s first Open OEM, to deploy Africa’s first true multi-vendor compatible Enterprise Wi-Fi network based on the Telecom Infra Project’s (TIP) OpenWiFi \\[…\\]\n\n![unisaas-blog](https://atlancis.com/wp-content/uploads/2021/03/Screenshot-2021-03-19-at-09.23.03.png)\n\n*   [Tech](https://atlancis.com/category/tech/)\n*   [Video](https://atlancis.com/category/uncategorized/video/)\n\n*   Posted on [March 16, 2021](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n[](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n##### [OCP Solution Provider Spotlight: Africa’s future is open!](https://atlancis.com/ocp-solution-provider-spotlight/)\n\n[](https://atlancis.com/ocp-solution-provider-spotlight/)\n\nAfrica’s IT market comprises some of the most interesting high growth areas in the world. Mobile money, exploding internet penetration and increased investment from both public and private sectors all point to an exciting future for Africa.  This week I spoke with the executive team from Atlancis, our Solution Provider based in Nairobi, Kenya to \\[…\\]\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   [leader](https://atlancis.com/category/leader/)\n\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   [Uncategorized](https://atlancis.com/category/uncategorized/)\n\n*   Posted on [March 12, 2026](https://atlancis.com/elementor-3473/)\n\n[](https://atlancis.com/elementor-3473/)\n\n##### [Elementor #3473](https://atlancis.com/elementor-3473/)\n\n[](https://atlancis.com/elementor-3473/)\n\nServernah Cloud launch signals new phase for the first sovereign AI infrastructure in East Africa Atlancis Technologies Limited (Atlancis), Everse Technology Limited (EverseTech) and iXAfrica Data Centres Limited (iXAfrica) today marked the launch of Servernah Cloud, Kenya’s first sovereign-hosted cloud and AI platform designed for regulated and mission-critical workloads. The launch brought together Atlancis’ Servernah \\[…\\]\n\n*   [News](https://atlancis.com/category/news/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [November 11, 2025](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n[](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n##### [Atlancis Technologies Ai Infrastructure Press release](https://atlancis.com/atlancis-technologies-ai-infra/)\n\n[](https://atlancis.com/atlancis-technologies-ai-infra/)\n\nAtlancis Technologies, Everse Technology and iXAfrica Unveil East & Central Africa’s First GPU-Powered AI Infrastructure Atlancis Technologies, under its Servernah Cloud brand, announces the delivery and deployment of East and Central Africa’s first GPU-powered Artificial Intelligence (AI) factory, hosted at iXAfrica Data Centres, Kenya’s leading AI-ready carrier-neutral facility. This milestone marks a historic leap in \\[…\\]\n\n*   [ocp](https://atlancis.com/category/ocp/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [February 9, 2023](https://atlancis.com/ocpkenya/)\n\n[](https://atlancis.com/ocpkenya/)\n\n##### [OCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis](https://atlancis.com/ocpkenya/)\n\n[](https://atlancis.com/ocpkenya/)\n\nOCP Experience Center (Nairobi, Kenya) – Hosted by Atlancis The Atlancis Open Compute Project (OCP) Experience Center (AEC) is the first of its kind in Africa.The AEC supports customer “what-if” scenarios around upgrades or changes in hardware and software technologies might mean to their key stakeholders. Atlancis Consultants will work with our clients to define \\[…\\]\n\n*   [Uncategorized](https://atlancis.com/category/uncategorized/)\n\n*   Posted on [May 22, 2022](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n[](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n##### [Best Cloud Service Providers in Kenya – Ultimate Guide](https://atlancis.com/cloud-service-providers-in-kenya/)\n\n[](https://atlancis.com/cloud-service-providers-in-kenya/)\n\nCloud service providers in Kenya allow organisations to lease cloud-based infrastructure, application, or storage services from them instead of maintaining in-house data centers.  These cloud services are offered in various service models, including: Software as a Service (SaaS) Users are provided with a cloud application, its infrastructure and the platform on which the application runs. \\[…\\]\n\n*   [Education](https://atlancis.com/category/education/)\n*   [Tech](https://atlancis.com/category/tech/)\n\n*   Posted on [November 8, 2021](https://atlancis.com/openwifi-solution-in-africa/)\n\n[](https://atlancis.com/openwifi-solution-in-africa/)\n\n##### [KENET Deploys First Commercial OpenWiFi solution in Africa](https://atlancis.com/openwifi-solution-in-africa/)\n\n[](https://atlancis.com/openwifi-solution-in-africa/)\n\n  KENET Deploys First Commercial OpenWiFi solution in Africa Kenya Education Network (KENET), the National Research and Education Network (NREN) of Kenya, today announced it has signed an agreement with Atlancis Technologies Limited, Africa’s first Open OEM, to deploy Africa’s first true multi-vendor compatible Enterprise Wi-Fi network based on the Telecom Infra Project’s (TIP) OpenWiFi \\[…\\]",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/",
+   "loadedTime": "2026-10-14T14:18:08.258Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/",
+   "title": "Access Control Systems in Kenya – Biometric, RFID & Face - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Access Control Systems in Kenya – Biometric, RFID & Face - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2023-06-24T08:18:45+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-19T05:33:26+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#listItem",
+          "name": "Access Control Systems in Kenya – Biometric, RFID &amp; Face"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#listItem",
+         "position": 2,
+         "name": "Access Control Systems in Kenya – Biometric, RFID &amp; Face",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#webpage",
+       "url": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/",
+       "name": "Access Control Systems in Kenya – Biometric, RFID & Face - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/#breadcrumblist"
+       },
+       "datePublished": "2023-06-24T11:18:45+03:00",
+       "dateModified": "2025-09-19T08:33:26+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do you offer free site surveys in Nairobi?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide free Nairobi surveys and same-day quotations."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Which reader types do you install?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fingerprint, face recognition, RFID/card, PIN—single or multi-factor."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can we integrate with CCTV and alarms?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We link door events to CCTV pop-ups, alarms, intercoms and PBX."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What about power cuts?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We size power supplies and can add UPS to keep doors operating safely."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How fast is deployment?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Small sites: 1–3 days. Larger/multi-building: project plan after survey."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:06 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/7898>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=7898>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Access Control Systems in Kenya – Biometric, RFID & Face\nControl who enters, when, and where. We design and install reliable door access, turnstiles and gates with audit trails, time-schedules and integrations—built for Kenyan businesses.\nWhy Kenyan Businesses Choose Us\nCertified installers for biometric, RFID, keypad, and face recognition readers\nNeat cabling & documentation: door schedules, wiring diagrams, user lists\nFast turnaround: same-day Nairobi site surveys and 1–3 day installations (scope-dependent)\nWarranty & support: 12-month workmanship + official brand warranties\nIntegrations: CCTV, alarm, electric fence, intercom, IP PBX/phones\nComplete Access Control Solutions\nDoor Access (Biometric/RFID/Face)\nSingle doors, multi-site controllers, elevator control, time schedules & holidays.\nTurnstiles & Gates\nTripod, swing, and full-height turnstiles; boom barriers and sliding/turning gates.\nVisitor & Staff Management\nBadge printing, contractors, temporary passes, audit trails and reports.\nIntegrations\nCCTV and VMS pop-ups on denied access, alarm linkage, intercom & IP PBX.\nRelated: Access Control (overview) · Biometric Access Control Systems · Automatic/Electric Gates · Alarm Systems\nTypical Pricing in Kenya\nSmall office (1–2 doors): KSh 85,000–190,000\nSME (3–8 doors): KSh 220,000–780,000\nEnterprise/Campus (9+ doors, turnstiles, gates): Site survey required\nIncludes controllers/readers, maglocks/strikes, exit buttons, power supply, cabling, configuration, and handover documentation. Turnstiles/gates quoted separately.\nBrands & Devices We Deploy\nZKTeco • Suprema • Hikvision • Dahua • Yeastar (intercom/PBX) • Ubiquiti/TP-Link (network)\nFace/fingerprint/RFID readers with anti-passback & multi-factor options\nDoor controllers (single/multi-door), elevator controllers\nTripod/swing/full-height turnstiles, flap barriers, boom barriers\nPower supplies, fail-safe/secure maglocks, emergency break-glass & door hardware\nHow We Work\nFree Nairobi site survey & requirements capture\nDesign & BoQ with door schedule, hardware list, timelines\nInstallation (neat cabling, labeling, commissioning)\nTraining & handover (users, access levels, reporting)\nSupport (SLA options & remote assistance)\nIndustries We Serve\nOffices and co-working • Schools & universities • Hospitals & clinics • Hotels & apartments • Manufacturing & warehouses • Estates & gated communities • Government & NGOs\nRequest a Free Site Survey\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n[fluentform id=”ACCESS_CONTROL_QUOTE”]\nDo you offer free site surveys in Nairobi?\nYes. We provide free Nairobi surveys and same-day quotations.\nWhich reader types do you install?\nFingerprint, face recognition, RFID/card, PIN—single or multi-factor.\nCan we integrate with CCTV and alarms?\nYes. We link door events to CCTV pop-ups, alarms, intercoms and PBX.\nWhat about power cuts?\nWe size power supplies and can add UPS to keep doors operating safely.\nHow fast is deployment?\nSmall sites: 1–3 days. Larger/multi-building: project plan after survey.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Access Control Systems in Kenya – Biometric, RFID & Face\n\nControl who enters, when, and where. We design and install reliable door access, turnstiles and gates with audit trails, time-schedules and integrations—built for Kenyan businesses.\n\n## Why Kenyan Businesses Choose Us\n\n*   **Certified installers** for biometric, RFID, keypad, and face recognition readers\n*   **Neat cabling & documentation**: door schedules, wiring diagrams, user lists\n*   **Fast turnaround**: same-day Nairobi site surveys and 1–3 day installations (scope-dependent)\n*   **Warranty & support**: 12-month workmanship + official brand warranties\n*   **Integrations**: CCTV, alarm, electric fence, intercom, IP PBX/phones\n\n## Complete Access Control Solutions\n\n### Door Access (Biometric/RFID/Face)\n\nSingle doors, multi-site controllers, elevator control, time schedules & holidays.\n\n### Turnstiles & Gates\n\nTripod, swing, and full-height turnstiles; boom barriers and sliding/turning gates.\n\n### Visitor & Staff Management\n\nBadge printing, contractors, temporary passes, audit trails and reports.\n\n### Integrations\n\nCCTV and VMS pop-ups on denied access, alarm linkage, intercom & IP PBX.\n\nRelated: [Access Control (overview)](https://www.almirianetworks.co.ke/access-control/) · [Biometric Access Control Systems](https://www.almirianetworks.co.ke/biometric-access-control-systems-kenya/) · [Automatic/Electric Gates](https://www.almirianetworks.co.ke/electric-remote-automated-gates/) · [Alarm Systems](https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/)\n\n## Typical Pricing in Kenya\n\n*   **Small office (1–2 doors):** KSh 85,000–190,000\n*   **SME (3–8 doors):** KSh 220,000–780,000\n*   **Enterprise/Campus (9+ doors, turnstiles, gates):** Site survey required\n\n_Includes controllers/readers, maglocks/strikes, exit buttons, power supply, cabling, configuration, and handover documentation. Turnstiles/gates quoted separately._\n\n## Brands & Devices We Deploy\n\nZKTeco • Suprema • Hikvision • Dahua • Yeastar (intercom/PBX) • Ubiquiti/TP-Link (network)\n\n*   Face/fingerprint/RFID readers with anti-passback & multi-factor options\n*   Door controllers (single/multi-door), elevator controllers\n*   Tripod/swing/full-height turnstiles, flap barriers, boom barriers\n*   Power supplies, fail-safe/secure maglocks, emergency break-glass & door hardware\n\n## How We Work\n\n1.  **Free Nairobi site survey** & requirements capture\n2.  **Design & BoQ** with door schedule, hardware list, timelines\n3.  **Installation** (neat cabling, labeling, commissioning)\n4.  **Training & handover** (users, access levels, reporting)\n5.  **Support** (SLA options & remote assistance)\n\n## Industries We Serve\n\nOffices and co-working • Schools & universities • Hospitals & clinics • Hotels & apartments • Manufacturing & warehouses • Estates & gated communities • Government & NGOs\n\n## Request a Free Site Survey\n\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n\n\\[fluentform id=”ACCESS\\_CONTROL\\_QUOTE”\\]\n\n### Do you offer free site surveys in Nairobi?\n\nYes. We provide free Nairobi surveys and same-day quotations.\n\n### Which reader types do you install?\n\nFingerprint, face recognition, RFID/card, PIN—single or multi-factor.\n\n### Can we integrate with CCTV and alarms?\n\nYes. We link door events to CCTV pop-ups, alarms, intercoms and PBX.\n\n### What about power cuts?\n\nWe size power supplies and can add UPS to keep doors operating safely.\n\n### How fast is deployment?\n\nSmall sites: 1–3 days. Larger/multi-building: project plan after survey.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.nuairtech.com/",
+  "crawl": {
+   "loadedUrl": "https://www.nuairtech.com/",
+   "loadedTime": "2026-10-14T14:18:09.959Z",
+   "referrerUrl": "https://www.nuairtech.com/",
+   "httpStatusCode": 200,
+   "depth": 0,
+   "contentLengthBytes": 65915,
+   "contentType": "text/html;charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.nuairtech.com/",
+   "title": "Nuair Technologies | HVAC & Electrical Services",
+   "description": "Leading HVAC contractor & precision cooling solutions in Nairobi, Kenya. air conditioning, heating & electrical services across Kenya, and East Africa.",
+   "author": null,
+   "keywords": "Nuair Technologies,Cooling system services in Kenya,Electrical services in Kenya,Control room services \n,Air conditioning solutions in Kenya,HVAC companies in Kenya,",
+   "languageCode": "en",
+   "openGraph": [
+    {
+     "property": "og:type",
+     "content": "website"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.nuairtech.com/"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Nuair Technologies"
+    },
+    {
+     "property": "og:image:width",
+     "content": "1200"
+    },
+    {
+     "property": "og:image:height",
+     "content": "650"
+    },
+    {
+     "property": "og:description",
+     "content": "Leading HVAC contractor & precision cooling solutions in Nairobi, Kenya. air conditioning, heating & electrical services across Kenya, and East Africa."
+    },
+    {
+     "property": "og:title",
+     "content": "Nuair Technologies | HVAC & Electrical Services"
+    },
+    {
+     "property": "og:image",
+     "content": "https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/logo-203592af+%281%29-1920w.png"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@type": "WebSite",
+     "name": "Nuair Technologies",
+     "url": "https://www.nuairtech.com/"
+    },
+    {
+     "@context": {
+      "@vocab": "http://schema.org/"
+     },
+     "@type": "HVACBusiness",
+     "name": "Nuair Technologies",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Baba Dogo Rd",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+     },
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-1.24412",
+      "longitude": "36.884"
+     },
+     "url": "https://www.nuairtech.com",
+     "telephone": "0720829363",
+     "email": "info@newedgetechno.com",
+     "logo": "https://de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/421-3aa426d1-250w.png",
+     "sameAs": [
+      "https://wa.me/+2540720829363",
+      "https://linkedin.com/company/new-edge-technologies-ltd"
+     ],
+     "openingHoursSpecification": [
+      {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+       ],
+       "opens": "08:00",
+       "closes": "17:00"
+      }
+     ],
+     "@id": "https://www.nuairtech.com"
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:06 GMT",
+    "content-type": "text/html;charset=utf-8",
+    "content-length": "65915",
+    "etag": "\"682746571\"",
+    "d-cache": "from-cache",
+    "content-encoding": "gzip",
+    "strict-transport-security": "max-age=31536000; preload",
+    "x-frame-options": "SAMEORIGIN",
+    "content-security-policy": "frame-ancestors 'self'",
+    "x-content-type-options": "nosniff",
+    "vary": "user-agent, accept-encoding",
+    "link": "<https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/slider_1-1920w.webp>; rel=preload; as=image; fetchpriority=high",
+    "cache-control": "no-cache, must-revalidate",
+    "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "speculation-rules": "\"https://static.cdn-website.com/speculations/rules/prerender-1.0.3.json\"",
+    "d-geo": "EU",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Nuair Technologies | HVAC & Electrical Services\nReliable HVAC & Electrical Solutions for Every Industry\nDelivering top-tier heating, cooling, and electrical systems designed \nfor efficiency, durability, and performance across all sectors.\nAir Duct Fabrication\nElectrical Power Upgrades\nRefrigeration\nData Centre Infrastructure monitoring\nAbout us\nYour One-Stop Destination for All HVAC and Electrical Solutions\nWelcome to Nuair Technologies. Established in the year 2009 as New-Edge Technologies Ltd, we are one of the leading Building Services Engineering Contracting Company dealing with HVAC and Electrical Services in Kenya and Eastern Africa region.\nOur company provides a range of specialist skills harnessed through our mechanical and electrical engineering services.\nWe provide our customers with building service solutions and technologies in the fields of conventional and specialized HVAC and electrical services.\nWe pride ourselves as an HVAC Company with the latest state of the art duct manufacturing workshop in Nairobi. We also hold the following Category Licenses:\nClass A Electrical License EPRA\nNational Construction Authority NCA 1 Electrical Services\nNational Construction Authority NCA 1 Mechanical Services \nRefrigeration, Cold-rooms, Air-conditioning and Ventilation.\nWhy Choose Us\nExcellence in Every Solution\nIt is our aim to always deliver beyond the client’s expectations and within the time frame agreed. We take clients through any project they present to us and ensure that we understand their needs. With our vast knowledge and experience in the field, you can rest assured that we are equipped to handle all your heating, ventilation, air conditioning and other electrical and engineering needs. \nOur 20-member team is ready to offer you high quality services whether it’s technical or customer service support. In the event of an emergency, we respond immediately and arrive at your location within reasonable time – 30 minutes for Nairobi and 30 minutes to 4 hours outside Nairobi. For those outside the country, we arrive within 6 hours at least.\nQuality Services\nReliable HVAC and electrical solutions tailored to your needs.\nExperienced Team\nSkilled professionals Dedicated to delivering top-tier service.\nAffordable Pricing\nCost-effective solutions crafted without compromise.\nSuperior Products\nHigh-performance, durable, and efficient systems.\n787+\nHappy Customers\n16\nYear Experience\n931+\nProjects Delivered\nSolutions\nCutting-Edge Solutions for Every Industry\nData Centre Infrastructure monitoring\nAir Duct Fabrication\nElectrical Power Upgrades\nAir-conditioning & Room Air-Handlers \nRaised Flooring Solutions \nDirect and Indirect Adiabatic Cooling Systems\nOur IndusTries\nOur markets cover the following sectors\nWe offer a wide range of services to meet every type of business.\nOffices\nData Centers\nAviation\nTelecoms\nControl Centers\nSecurity\nEnergy Sector\nLogistics Hub\nHealth Care\nLaboratories\nPartners\nCompanies We Work With",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Nuair Technologies | HVAC & Electrical Services\n\n## **Reliable**  **HVAC & Electrical Solutions for Every Industry**\n\nDelivering top-tier heating, cooling, and electrical systems designed\n\nfor efficiency, durability, and performance across all sectors.\n\n**Air Duct Fabrication**\n\n**Electrical Power Upgrades**\n\n**Refrigeration**\n\n**Data Centre Infrastructure monitoring**\n\n## About us\n\n**Your One-Stop Destination for All HVAC and Electrical Solutions**\n\nWelcome to Nuair Technologies. Established in the year 2009 as New-Edge Technologies Ltd, we are one of the leading Building Services Engineering Contracting Company dealing with HVAC and Electrical Services in Kenya and Eastern Africa region.\n\nOur company provides a range of specialist skills harnessed through our mechanical and electrical engineering services.  \nWe provide our customers with building service solutions and technologies in the fields of conventional and specialized HVAC and electrical services.  \nWe pride ourselves as an HVAC Company with the latest state of the art duct manufacturing workshop in Nairobi. We also hold the following Category Licenses:\n\nClass A Electrical License EPRA  \n\nNational Construction Authority NCA 1 Electrical Services  \n\nNational Construction Authority NCA 1 Mechanical Services   \n\nRefrigeration, Cold-rooms, Air-conditioning and Ventilation.  \n\n## Why Choose Us\n\n### Excellence in Every Solution\n\nIt is our aim to always deliver beyond the client’s expectations and within the time frame agreed. We take clients through any project they present to us and ensure that we understand their needs. With our vast knowledge and experience in the field, you can rest assured that we are equipped to handle all your heating, ventilation, air conditioning and other electrical and engineering needs. \n\nOur 20-member team is ready to offer you high quality services whether it’s technical or customer service support. In the event of an emergency, we respond immediately and arrive at your location within reasonable time – 30 minutes for Nairobi and 30 minutes to 4 hours outside Nairobi. For those outside the country, we arrive within 6 hours at least.\n\n**Quality Services**\n\nReliable HVAC and electrical solutions tailored to your needs.\n\n**Experienced Team**\n\nSkilled professionals Dedicated to delivering top-tier service.\n\n**Affordable Pricing**\n\nCost-effective solutions crafted without compromise.\n\n**Superior Products**\n\nHigh-performance, durable, and efficient systems.\n\n## 787+\n\n**Happy Customers**\n\n## 16\n\n**Year Experience**\n\n## 931+\n\n**Projects  Delivered**\n\n## **Solutions**\n\n### Cutting-Edge Solutions for Every Industry\n\n![A photo taken on july 24 2014 at 18:15](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Data_Centre-687w.webp)\n\nData Centre Infrastructure monitoring\n\n![A black and white photo of a kitchen with stainless steel ducts.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Air+_Duct-687w.webp)\n\nAir Duct Fabrication\n\n![A row of servers are being installed in a data center.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Power_Upgrades-687w.webp)\n\nElectrical Power Upgrades\n\n![A room with a desk , chair , computer and servers.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Room_Air_Handlers-687w.webp)\n\nAir-conditioning & Room Air-Handlers﻿\n\n![A photo taken on july 24 2014 at  16:15](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Raised_Flooring_Solutions-687w.webp)\n\nRaised Flooring Solutions﻿\n\n![A man is working on the roof of a building.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/Adiabatic_Cooling+_Systems-687w.webp)\n\nDirect and Indirect Adiabatic Cooling Systems\n\n## Our IndusTries\n\n### Our markets cover the following sectors\n\nWe offer a wide range of services to meet every type of business.\n\n**Offices**\n\n**Data Centers**\n\n**Aviation**\n\n**Telecoms**\n\n**Control Centers**\n\n**Security**\n\n**Energy Sector**\n\n**Logistics Hub**\n\n**Health Care**\n\n**Laboratories**\n\n## **Partners**\n\n### Companies We Work With\n\n![The tripp lite logo is blue and white on a white background.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/tripp_lite-480a79f3-640w.webp)\n\n![The nuaire logo is blue and white and has a blue circle around it.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/nuaire-df0025d0-640w.webp)\n\n![A blue and white logo for a company called kstar](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/kstar-c8707b49-640w.webp)\n\n![A blue and red logo for firmac engineering services ltd](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/firmac-17b2ae30-640w.webp)\n\n![The logo for bergvik is blue and black and says custom solutions our standard](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/bergvik-3b162a00-640w.webp)\n\n![The fujitsu logo is on a red background.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/fujitsu-588c27fb-1920w.webp)\n\n![The logo for contec is on a colorful background.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/conteg1-dbe9937b-1920w.webp)\n\n![A red and white sign that says climate . customized.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/stulz-4733a45e-1920w.webp)\n\n![A blue and yellow logo for socomec innovative power solutions.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/socomec-9b194fb7-1920w.webp)\n\n![A green , orange , and white geometric pattern on a white background.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/conteg-286a7f8e-1920w.webp)\n\n![The tripp lite logo is blue and white on a white background.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/tripp_lite-480a79f3-640w.webp)\n\n![The nuaire logo is blue and white and has a blue circle around it.](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/nuaire-df0025d0-640w.webp)\n\n![A blue and white logo for a company called kstar](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/kstar-c8707b49-640w.webp)\n\n![A blue and red logo for firmac engineering services ltd](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/firmac-17b2ae30-640w.webp)",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/",
+   "loadedTime": "2026-10-14T14:18:17.856Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/",
+   "title": "Burglar Alarm Systems in Kenya – Wired & Wireless - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Burglar Alarm Systems in Kenya – Wired & Wireless - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2018-04-23T16:24:58+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-18T06:32:26+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#listItem",
+          "name": "Burglar Alarm Systems in Kenya – Wired &#038; Wireless"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#listItem",
+         "position": 2,
+         "name": "Burglar Alarm Systems in Kenya – Wired &#038; Wireless",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#webpage",
+       "url": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/",
+       "name": "Burglar Alarm Systems in Kenya – Wired & Wireless - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/#breadcrumblist"
+       },
+       "datePublished": "2018-04-23T16:24:58+03:00",
+       "dateModified": "2025-09-18T09:32:26+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do you offer free site surveys in Nairobi?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide free Nairobi surveys and same-day quotations."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Should I choose wired or wireless?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wired is robust and low-maintenance; wireless is faster to deploy and ideal for finished spaces. We often use hybrid panels for flexibility."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can the alarm notify me on my phone?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Via GSM/4G SMS/voice and secure app push notifications with event history."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Will pets trigger false alarms?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can use pet-immune sensors or beam placement to avoid nuisance triggers."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do you integrate with CCTV and access control?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Alarm events can trigger CCTV bookmarks/pop-ups, lock/unlock doors, or activate lighting/sirens."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:15 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/169>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=169>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Burglar Alarm Systems in Kenya – Wired & Wireless\nProtect your premises with professionally installed alarm systems: motion & door sensors, glass‑breaks, sirens, GSM/4G alerts, and app control—designed for Kenyan homes and businesses.\nWhy Choose Almiria for Burglar Alarms\nCertified installers for wired/wireless panels and hybrid systems\nNeat cabling & documentation: zone lists, labels and user guides\nSmart notifications: app control, SMS/voice (GSM), and email alerts\nReliable power: proper PSU sizing, battery backup & surge protection\nFast turnaround: free Nairobi site survey; same‑day quotation\nIntegrations: CCTV, access control, intercom and automation\nBurglar Alarm Solutions We Install\nPanels & Keypads\nWired, wireless and hybrid control panels with LCD/touch keypads and partitions.\nSensors\nPIR motion, door/window magnetic contacts, glass‑break, vibration and smoke/heat.\nSirens & Strobes\nIndoor/outdoor sirens with tamper protection and high‑visibility strobes.\nCommunications\nGSM/4G dialers, Wi‑Fi/Ethernet modules, push alerts and optional monitoring.\nIntegration\nTrigger CCTV pop‑ups, lock doors, or fire automation scenes on alarm events.\nRelated: CCTV Installation · Access Control · Automatic & Electric Gates · Wireless Networks\nTypical Burglar Alarm Pricing in Kenya\nHome/Shop Starter (6–8 zones): KSh 35,000–95,000\nSME (12–24 zones, mixed sensors): KSh 120,000–350,000\nEnterprise/Campus (24+ zones, automation): Site survey required\nIncludes panel, keypad, selected sensors, siren(s), PSU/battery, cabling or wireless pairing, configuration and user training. Monitoring/SIM/data billed separately.\nBrands & Devices We Deploy\nHikvision • DSC • Paradox • Ajax • Optex • Bosch (site‑fit)\nHybrid panels with app control and multiple partitions\nIndoor/outdoor PIRs including pet‑immune and dual‑tech options\nReed contacts, shock/vibration and glass‑break detectors\nGSM/4G communicators, Ethernet/Wi‑Fi modules, cloud services\nBackup batteries, surge/lighting protection and tamper switches\nOur Alarm Installation Process\nFree Nairobi site survey & risk assessment\nDesign & BoQ: zone plan, sensor selection & communication method\nInstallation: neat cabling/mounting, commissioning and testing\nTraining & handover: arming modes, users & alarm actions\nSupport: SLA options, health checks & remote assistance\nIndustries We Serve\nHomes & apartments • Retail & shops • Offices • Schools • Clinics • Warehouses • Estates • NGOs & Government\nRequest a Free Alarm Site Survey\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n[fluentform id=”ALARM_QUOTE”]\nDo you offer free site surveys in Nairobi?\nYes. We provide free Nairobi surveys and same‑day quotations.\nShould I choose wired or wireless?\nWired is robust and low‑maintenance; wireless is faster to deploy and ideal for finished spaces. We often use hybrid panels for flexibility.\nCan the alarm notify me on my phone?\nYes. Via GSM/4G SMS/voice and secure app push notifications with event history.\nWill pets trigger false alarms?\nWe can use pet‑immune sensors or beam placement to avoid nuisance triggers.\nDo you integrate with CCTV and access control?\nYes. Alarm events can trigger CCTV bookmarks/pop‑ups, lock/unlock doors, or activate lighting/sirens.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Burglar Alarm Systems in Kenya – Wired & Wireless\n\nProtect your premises with professionally installed alarm systems: motion & door sensors, glass‑breaks, sirens, GSM/4G alerts, and app control—designed for Kenyan homes and businesses.\n\n## Why Choose Almiria for Burglar Alarms\n\n*   **Certified installers** for wired/wireless panels and hybrid systems\n*   **Neat cabling & documentation**: zone lists, labels and user guides\n*   **Smart notifications**: app control, SMS/voice (GSM), and email alerts\n*   **Reliable power**: proper PSU sizing, battery backup & surge protection\n*   **Fast turnaround**: free Nairobi site survey; same‑day quotation\n*   **Integrations**: CCTV, access control, intercom and automation\n\n## Burglar Alarm Solutions We Install\n\n### Panels & Keypads\n\nWired, wireless and hybrid control panels with LCD/touch keypads and partitions.\n\n### Sensors\n\nPIR motion, door/window magnetic contacts, glass‑break, vibration and smoke/heat.\n\n### Sirens & Strobes\n\nIndoor/outdoor sirens with tamper protection and high‑visibility strobes.\n\n### Communications\n\nGSM/4G dialers, Wi‑Fi/Ethernet modules, push alerts and optional monitoring.\n\n### Integration\n\nTrigger CCTV pop‑ups, lock doors, or fire automation scenes on alarm events.\n\nRelated: [CCTV Installation](https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/) · [Access Control](https://www.almirianetworks.co.ke/access-control/) · [Automatic & Electric Gates](https://www.almirianetworks.co.ke/automatic-gates/) · [Wireless Networks](https://www.almirianetworks.co.ke/wireless-networks/)\n\n## Typical Burglar Alarm Pricing in Kenya\n\n*   **Home/Shop Starter (6–8 zones):** KSh 35,000–95,000\n*   **SME (12–24 zones, mixed sensors):** KSh 120,000–350,000\n*   **Enterprise/Campus (24+ zones, automation):** Site survey required\n\n_Includes panel, keypad, selected sensors, siren(s), PSU/battery, cabling or wireless pairing, configuration and user training. Monitoring/SIM/data billed separately._\n\n## Brands & Devices We Deploy\n\nHikvision • DSC • Paradox • Ajax • Optex • Bosch (site‑fit)\n\n*   Hybrid panels with app control and multiple partitions\n*   Indoor/outdoor PIRs including pet‑immune and dual‑tech options\n*   Reed contacts, shock/vibration and glass‑break detectors\n*   GSM/4G communicators, Ethernet/Wi‑Fi modules, cloud services\n*   Backup batteries, surge/lighting protection and tamper switches\n\n## Our Alarm Installation Process\n\n1.  **Free Nairobi site survey** & risk assessment\n2.  **Design & BoQ**: zone plan, sensor selection & communication method\n3.  **Installation**: neat cabling/mounting, commissioning and testing\n4.  **Training & handover**: arming modes, users & alarm actions\n5.  **Support**: SLA options, health checks & remote assistance\n\n## Industries We Serve\n\nHomes & apartments • Retail & shops • Offices • Schools • Clinics • Warehouses • Estates • NGOs & Government\n\n## Request a Free Alarm Site Survey\n\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n\n\\[fluentform id=”ALARM\\_QUOTE”\\]\n\n### Do you offer free site surveys in Nairobi?\n\nYes. We provide free Nairobi surveys and same‑day quotations.\n\n### Should I choose wired or wireless?\n\nWired is robust and low‑maintenance; wireless is faster to deploy and ideal for finished spaces. We often use hybrid panels for flexibility.\n\n### Can the alarm notify me on my phone?\n\nYes. Via GSM/4G SMS/voice and secure app push notifications with event history.\n\n### Will pets trigger false alarms?\n\nWe can use pet‑immune sensors or beam placement to avoid nuisance triggers.\n\n### Do you integrate with CCTV and access control?\n\nYes. Alarm events can trigger CCTV bookmarks/pop‑ups, lock/unlock doors, or activate lighting/sirens.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/",
+   "loadedTime": "2026-10-14T14:18:18.184Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/",
+   "title": "CCTV Installation in Kenya – Supply & Installation - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "CCTV Installation in Kenya – Supply & Installation - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2018-10-31T10:35:40+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-18T09:48:31+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#listItem",
+          "name": "CCTV Installation in Kenya – Supply &amp; Installation"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#listItem",
+         "position": 2,
+         "name": "CCTV Installation in Kenya – Supply &amp; Installation",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#webpage",
+       "url": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/",
+       "name": "CCTV Installation in Kenya – Supply & Installation - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/#breadcrumblist"
+       },
+       "datePublished": "2018-10-31T10:35:40+03:00",
+       "dateModified": "2025-09-18T12:48:31+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do you offer free site surveys in Nairobi?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide free Nairobi surveys and same-day quotations."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Which is better—IP or Analog HD?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IP offers higher resolutions and smarter analytics; Analog HD is cost-effective for upgrades. We recommend based on your site, budget and retention goals."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I view cameras on my phone?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We set up secure remote access with user roles and audit trails."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many days of video can I store?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 7 to 90+ days depending on camera count, resolution, and motion. We size disks/NAS accordingly and enable H.265+ for efficiency."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do you integrate with access control and alarms?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Door or alarm events can trigger camera pop-ups, bookmarks and notifications."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:16 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/908>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=908>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "CCTV Installation in Kenya – Supply & Installation\nSecure your premises with clear, reliable surveillance. We design and install CCTV systems with remote viewing, AI motion alerts, and compliant storage—built for Kenyan homes and businesses.\nWhy Choose Almiria for CCTV\nCertified installers for IP and Analog HD (H.265+/H.265)\nNeat cabling & documentation: camera layouts, labeling, and user guides\nRemote access: secure mobile/desktop viewing with role-based permissions\nReliable storage: NVR/DVR sizing, RAID options & retention planning\nIntegrations: access control, alarms, intercom, and video analytics\nFast turnaround: free Nairobi site survey; same-day quotation\nCCTV Solutions We Install\nIP Cameras (PoE)\nHigh-resolution 4MP–8MP+ with smart analytics, PoE switches, and secure VLANs.\nAnalog HD (Coax)\nCost-effective 1080p–4K over coax with XVRs; ideal for upgrades of legacy systems.\nPTZ & Specialist Cameras\nPan-tilt-zoom, varifocal, turret/dome/bullet, low-light ColorVu/Full-Color, LPR.\nAI Analytics & Alerts\nHuman/vehicle classification, line crossing, intrusion, smart search & push alerts.\nStorage & Monitoring\nNVR/DVR sizing, RAID options, NAS, control room displays, health monitoring.\nIntegration\nLink CCTV events to access control, alarms, intercom and PA systems.\nRelated: Biometric Access Control · Alarm Systems · Automatic & Electric Gates · Wireless Networks\nTypical CCTV Pricing in Kenya\nHome/Small Office (2–4 cameras): KSh 45,000–120,000\nSME (8–16 cameras): KSh 180,000–550,000\nEnterprise (16–64+ cameras, control room): Site survey required\nIncludes cameras, NVR/DVR, cabling (Cat6/coax), power supplies/PoE, configuration, and user training. Storage retention and specialized cameras quoted case-by-case.\nBrands & Devices We Deploy\nHikvision • Dahua • Uniview • TP-Link VIGI • Ubiquiti UniFi Protect (site-fit)\nFixed bullet, turret and vandal-proof domes (2MP–8MP+)\nPTZ cameras (speed domes) with presets and tours\nColor night vision, built-in mics/sirens where applicable\nNVR/XVR with H.265+, AI events, and remote viewing apps\nEnterprise PoE switches, UPS, racks & surge protection\nOur CCTV Installation Process\nFree Nairobi site survey & risk assessment\nDesign & BoQ: coverage plan, camera list, storage & network design\nInstallation: neat cabling, aiming, commissioning, and hardening\nTraining & handover: mobile/desktop apps, roles & backups\nSupport: SLA options, health checks & remote assistance\nIndustries We Serve\nHomes & apartments • Offices & co-working • Hotels & malls • Schools & campuses • Hospitals & clinics • Factories & warehouses • Estates & gated communities • Government & NGOs\nRequest a Free CCTV Site Survey\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n[fluentform id=”CCTV_QUOTE”]\nCCTV FAQs (Kenya)\nDo you offer free site surveys in Nairobi?\nYes. We provide free Nairobi surveys and same-day quotations.\nWhich is better—IP or Analog HD?\nIP offers higher resolutions and smarter analytics; Analog HD is cost-effective for upgrades. We recommend based on your site, budget and retention goals.\nCan I view cameras on my phone?\nYes. We set up secure remote access with user roles and audit trails.\nHow many days of video can I store?\nFrom 7 to 90+ days depending on camera count, resolution, and motion. We size disks/NAS accordingly and enable H.265+ for efficiency.\nDo you integrate with access control and alarms?\nYes. Door or alarm events can trigger camera pop-ups, bookmarks and notifications.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# CCTV Installation in Kenya – Supply & Installation\n\nSecure your premises with clear, reliable surveillance. We design and install CCTV systems with remote viewing, AI motion alerts, and compliant storage—built for Kenyan homes and businesses.\n\n## Why Choose Almiria for CCTV\n\n*   **Certified installers** for IP and Analog HD (H.265+/H.265)\n*   **Neat cabling & documentation**: camera layouts, labeling, and user guides\n*   **Remote access**: secure mobile/desktop viewing with role-based permissions\n*   **Reliable storage**: NVR/DVR sizing, RAID options & retention planning\n*   **Integrations**: access control, alarms, intercom, and video analytics\n*   **Fast turnaround**: free Nairobi site survey; same-day quotation\n\n## CCTV Solutions We Install\n\n### IP Cameras (PoE)\n\nHigh-resolution 4MP–8MP+ with smart analytics, PoE switches, and secure VLANs.\n\n### Analog HD (Coax)\n\nCost-effective 1080p–4K over coax with XVRs; ideal for upgrades of legacy systems.\n\n### PTZ & Specialist Cameras\n\nPan-tilt-zoom, varifocal, turret/dome/bullet, low-light ColorVu/Full-Color, LPR.\n\n### AI Analytics & Alerts\n\nHuman/vehicle classification, line crossing, intrusion, smart search & push alerts.\n\n### Storage & Monitoring\n\nNVR/DVR sizing, RAID options, NAS, control room displays, health monitoring.\n\n### Integration\n\nLink CCTV events to access control, alarms, intercom and PA systems.\n\nRelated: [Biometric Access Control](https://www.almirianetworks.co.ke/biometric-access-control-systems-kenya/) · [Alarm Systems](https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/) · [Automatic & Electric Gates](https://www.almirianetworks.co.ke/automatic-gates/) · [Wireless Networks](https://www.almirianetworks.co.ke/wireless-networks/)\n\n## Typical CCTV Pricing in Kenya\n\n*   **Home/Small Office (2–4 cameras):** KSh 45,000–120,000\n*   **SME (8–16 cameras):** KSh 180,000–550,000\n*   **Enterprise (16–64+ cameras, control room):** Site survey required\n\n_Includes cameras, NVR/DVR, cabling (Cat6/coax), power supplies/PoE, configuration, and user training. Storage retention and specialized cameras quoted case-by-case._\n\n## Brands & Devices We Deploy\n\nHikvision • Dahua • Uniview • TP-Link VIGI • Ubiquiti UniFi Protect (site-fit)\n\n*   Fixed bullet, turret and vandal-proof domes (2MP–8MP+)\n*   PTZ cameras (speed domes) with presets and tours\n*   Color night vision, built-in mics/sirens where applicable\n*   NVR/XVR with H.265+, AI events, and remote viewing apps\n*   Enterprise PoE switches, UPS, racks & surge protection\n\n## Our CCTV Installation Process\n\n1.  **Free Nairobi site survey** & risk assessment\n2.  **Design & BoQ**: coverage plan, camera list, storage & network design\n3.  **Installation**: neat cabling, aiming, commissioning, and hardening\n4.  **Training & handover**: mobile/desktop apps, roles & backups\n5.  **Support**: SLA options, health checks & remote assistance\n\n## Industries We Serve\n\nHomes & apartments • Offices & co-working • Hotels & malls • Schools & campuses • Hospitals & clinics • Factories & warehouses • Estates & gated communities • Government & NGOs\n\n## Request a Free CCTV Site Survey\n\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n\n\\[fluentform id=”CCTV\\_QUOTE”\\]\n\n## CCTV FAQs (Kenya)\n\n### Do you offer free site surveys in Nairobi?\n\nYes. We provide free Nairobi surveys and same-day quotations.\n\n### Which is better—IP or Analog HD?\n\nIP offers higher resolutions and smarter analytics; Analog HD is cost-effective for upgrades. We recommend based on your site, budget and retention goals.\n\n### Can I view cameras on my phone?\n\nYes. We set up secure remote access with user roles and audit trails.\n\n### How many days of video can I store?\n\nFrom 7 to 90+ days depending on camera count, resolution, and motion. We size disks/NAS accordingly and enable H.265+ for efficiency.\n\n### Do you integrate with access control and alarms?\n\nYes. Door or alarm events can trigger camera pop-ups, bookmarks and notifications.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/",
+   "loadedTime": "2026-10-14T14:18:18.075Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/",
+   "title": "Electric Fences in Kenya – Supply & Installation - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Electric Fences in Kenya – Supply & Installation - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2018-04-23T16:23:05+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-18T06:42:40+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#listItem",
+          "name": "Electric Fences in Kenya – Supply &#038; Installation"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#listItem",
+         "position": 2,
+         "name": "Electric Fences in Kenya – Supply &#038; Installation",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#webpage",
+       "url": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/",
+       "name": "Electric Fences in Kenya – Supply & Installation - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/electric-fences-in-kenya/#breadcrumblist"
+       },
+       "datePublished": "2018-04-23T16:23:05+03:00",
+       "dateModified": "2025-09-18T09:42:40+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is an electric fence legal in Kenya?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—when properly installed with earthing, warning signs and safe energizer placement. We follow manufacturer and local guidelines for safety."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Wall‑top vs freestanding—what should I choose?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wall‑top suits existing compounds; freestanding works for new perimeters, farms or long boundaries. We recommend after a site survey."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What happens during a breach or short?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The energizer triggers sirens/strobes and can send alerts or signal your alarm/CCTV. Multi‑zone systems help locate faults quickly."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do you protect against lightning?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We install arrestors, surge protection and correct earthing to protect equipment and users."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do you offer repairs and upgrades?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We repair broken strands, failed energizers, poor earthing and can upgrade old fences to multi‑zone monitored systems."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:15 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/197>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=197>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Electric Fences in Kenya – Supply & Installation\nDeter intruders with reliable, compliant electric fencing. We design and install wall‑top and standalone electric fences with energizers, zones, lightning protection, alarms and CCTV integration—built for Kenyan homes, estates and businesses.\nWhy Choose Almiria for Electric Fencing\nCertified installers for wall‑top, freestanding and razor/flat wrap combinations\nCompliant & safe: correct earthing, warning signage and energizer placement\nNeat workmanship: strong posts, proper insulators, tidy cabling and labeling\nReliability: surge/lightning protection, battery backup, weather‑proofing\nFast turnaround: free Nairobi site survey with a same‑day quotation\nIntegrations: alarm sirens/strobes, CCTV pop‑ups, access control & gates\nElectric Fence Solutions We Install\nWall‑Top Electric Fence\nIdeal for homes and compounds—mounted on masonry/metal walls with multiple live strands.\nFreestanding Perimeter\nGalvanized posts and strainers with high‑tensile wires for estates, schools and factories.\nEnergizers & Zones\nSingle/multi‑zone energizers, fence monitors, keypads and remote arming/disarming.\nLightning & Earthing\nProper earth spikes, arrestors and surge devices to protect equipment and users.\nRazor/Barbed Integration\nCombine electric strands with razor/flat wrap or barbed wire for extra deterrence.\nAlarms & CCTV\nFence breach/short alarms, sirens, strobes and CCTV linkage for event verification.\nRelated: Burglar Alarm Systems · CCTV Installation · Access Control · Automatic & Electric Gates\nTypical Electric Fence Pricing in Kenya\nHome/Small Perimeter (≤ 70m wall‑top): KSh 95,000–220,000\nSME/Compound (70–200m): KSh 230,000–650,000\nEstates/Industrial (200m+ or multi‑zone): Site survey required\nIncludes posts/insulators, high‑tensile wire, energizer, earth kit, warning signs, cabling, commissioning and user training. Gate wiring, razor wire and civil works quoted separately.\nBrands & Devices We Deploy\nNemtek • Stafix • JVA • Zareba • Gallagher (site‑fit) • Surge/earthing components\nSingle/dual‑zone energizers with LCD keypads and tamper detection\nHigh‑tensile galvanized wires, tensioners and corner strain insulators\nLightning arrestors, surge protectors and proper earthing kits\nWarning signs, strobe/siren, battery backup and enclosure boxes\nI/O for alarms, CCTV and gate/turnstile integration\nOur Electric Fence Installation Process\nFree Nairobi site survey & risk/terrain assessment\nDesign & BoQ: route, posts, strands, zones and power/earthing plan\nInstallation: posts, wiring, energizer setup and safety signage\nTesting & handover: voltage checks, alarm/breach tests, documentation\nSupport: SLA options, annual checks and repair services\nWho We Secure\nHomes & apartments • Gated estates • Schools & colleges • Warehouses & factories • Farms & perimeter fences • Offices & business parks • NGOs & Government\nRequest a Free Electric Fence Site Survey\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\nElectric Fence FAQs (Kenya)\nIs an electric fence legal in Kenya?\nYes—when properly installed with earthing, warning signs and safe energizer placement. We follow manufacturer and local guidelines for safety.\nWall‑top vs freestanding—what should I choose?\nWall‑top suits existing compounds; freestanding works for new perimeters, farms or long boundaries. We recommend after a site survey.\nWhat happens during a breach or short?\nThe energizer triggers sirens/strobes and can send alerts or signal your alarm/CCTV. Multi‑zone systems help locate faults quickly.\nHow do you protect against lightning?\nWe install arrestors, surge protection and correct earthing to protect equipment and users.\nDo you offer repairs and upgrades?\nYes. We repair broken strands, failed energizers, poor earthing and can upgrade old fences to multi‑zone monitored systems.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Electric Fences in Kenya – Supply & Installation\n\nDeter intruders with reliable, compliant electric fencing. We design and install wall‑top and standalone electric fences with energizers, zones, lightning protection, alarms and CCTV integration—built for Kenyan homes, estates and businesses.\n\n## Why Choose Almiria for Electric Fencing\n\n*   **Certified installers** for wall‑top, freestanding and razor/flat wrap combinations\n*   **Compliant & safe**: correct earthing, warning signage and energizer placement\n*   **Neat workmanship**: strong posts, proper insulators, tidy cabling and labeling\n*   **Reliability**: surge/lightning protection, battery backup, weather‑proofing\n*   **Fast turnaround**: free Nairobi site survey with a same‑day quotation\n*   **Integrations**: alarm sirens/strobes, CCTV pop‑ups, access control & gates\n\n## Electric Fence Solutions We Install\n\n### Wall‑Top Electric Fence\n\nIdeal for homes and compounds—mounted on masonry/metal walls with multiple live strands.\n\n### Freestanding Perimeter\n\nGalvanized posts and strainers with high‑tensile wires for estates, schools and factories.\n\n### Energizers & Zones\n\nSingle/multi‑zone energizers, fence monitors, keypads and remote arming/disarming.\n\n### Lightning & Earthing\n\nProper earth spikes, arrestors and surge devices to protect equipment and users.\n\n### Razor/Barbed Integration\n\nCombine electric strands with razor/flat wrap or barbed wire for extra deterrence.\n\n### Alarms & CCTV\n\nFence breach/short alarms, sirens, strobes and CCTV linkage for event verification.\n\nRelated: [Burglar Alarm Systems](https://www.almirianetworks.co.ke/burglar-alarm-systems-kenya/) · [CCTV Installation](https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/) · [Access Control](https://www.almirianetworks.co.ke/access-control/) · [Automatic & Electric Gates](https://www.almirianetworks.co.ke/automatic-gates/)\n\n## Typical Electric Fence Pricing in Kenya\n\n*   **Home/Small Perimeter (≤ 70m wall‑top):** KSh 95,000–220,000\n*   **SME/Compound (70–200m):** KSh 230,000–650,000\n*   **Estates/Industrial (200m+ or multi‑zone):** Site survey required\n\n_Includes posts/insulators, high‑tensile wire, energizer, earth kit, warning signs, cabling, commissioning and user training. Gate wiring, razor wire and civil works quoted separately._\n\n## Brands & Devices We Deploy\n\nNemtek • Stafix • JVA • Zareba • Gallagher (site‑fit) • Surge/earthing components\n\n*   Single/dual‑zone energizers with LCD keypads and tamper detection\n*   High‑tensile galvanized wires, tensioners and corner strain insulators\n*   Lightning arrestors, surge protectors and proper earthing kits\n*   Warning signs, strobe/siren, battery backup and enclosure boxes\n*   I/O for alarms, CCTV and gate/turnstile integration\n\n## Our Electric Fence Installation Process\n\n1.  **Free Nairobi site survey** & risk/terrain assessment\n2.  **Design & BoQ**: route, posts, strands, zones and power/earthing plan\n3.  **Installation**: posts, wiring, energizer setup and safety signage\n4.  **Testing & handover**: voltage checks, alarm/breach tests, documentation\n5.  **Support**: SLA options, annual checks and repair services\n\n## Who We Secure\n\nHomes & apartments • Gated estates • Schools & colleges • Warehouses & factories • Farms & perimeter fences • Offices & business parks • NGOs & Government\n\n## Request a Free Electric Fence Site Survey\n\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n\n## Electric Fence FAQs (Kenya)\n\n### Is an electric fence legal in Kenya?\n\nYes—when properly installed with earthing, warning signs and safe energizer placement. We follow manufacturer and local guidelines for safety.\n\n### Wall‑top vs freestanding—what should I choose?\n\nWall‑top suits existing compounds; freestanding works for new perimeters, farms or long boundaries. We recommend after a site survey.\n\n### What happens during a breach or short?\n\nThe energizer triggers sirens/strobes and can send alerts or signal your alarm/CCTV. Multi‑zone systems help locate faults quickly.\n\n### How do you protect against lightning?\n\nWe install arrestors, surge protection and correct earthing to protect equipment and users.\n\n### Do you offer repairs and upgrades?\n\nYes. We repair broken strands, failed energizers, poor earthing and can upgrade old fences to multi‑zone monitored systems.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/",
+   "loadedTime": "2026-10-14T14:18:19.902Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/",
+   "title": "Electric Remote Automated Gates in Kenya - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Electric Remote Automated Gates in Kenya - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2018-04-23T16:26:49+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-18T07:00:38+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#listItem",
+          "name": "Electric Remote Automated Gates in Kenya"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#listItem",
+         "position": 2,
+         "name": "Electric Remote Automated Gates in Kenya",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#webpage",
+       "url": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/",
+       "name": "Electric Remote Automated Gates in Kenya - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/electric-remote-automated-gates/#breadcrumblist"
+       },
+       "datePublished": "2018-04-23T16:26:49+03:00",
+       "dateModified": "2025-09-18T10:00:38+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Which is better—sliding or swing?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sliding gates suit tight driveways or slopes; swing gates work where there’s clear swing space. We recommend after a site survey."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What happens during a power cut?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Systems include manual release. We can add UPS/battery backup to keep operation running."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How secure are remote controls?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use rolling-code remotes and can add keypads, RFID or biometric readers for stronger control."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can the gate integrate with access control and intercoms?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We link gates to door controllers, visitor intercoms, CCTV and ANPR where needed."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do you fabricate gates as well?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can integrate with your fabricator or quote fabrication/civil works separately when required."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:18 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/200>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=200>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Electric Remote Automated Gates in Kenya\nWe design and install reliable automated gates—sliding, swing and cantilever—with quiet motors, remotes, keypads, safety beams and access control integration. Built for Kenyan homes, estates and commercial sites.\nWhy Choose Almiria for Automated Gates\nCertified installers for sliding, swing and cantilever gates\nDurable hardware: heavy‑duty motors, racks, hinges and wheels suited to local conditions\nSafe & compliant: photocell beams, edge sensors and manual release for power cuts\nNeat workmanship: sturdy mounting, weatherproof enclosures and clean cabling\nFast turnaround: free Nairobi site survey with a same‑day quotation\nIntegrations: access control, intercom, CCTV and boom barriers\nAutomated Gate Solutions We Install\nSliding Gates\nFor driveways with limited swing space. Smooth rack & pinion drive, soft start/stop, obstacle detection.\nSwing Gates (Single/Double)\nArticulated/linear actuators for steel or timber gates; adjustable speed and safety limits.\nCantilever & Industrial\nRobust carriage systems without ground tracks—ideal for uneven surfaces and heavy duty sites.\nControls & Safety\nRemotes, keypads, RFID/biometric readers, intercom, photocells, safety edges & flashing beacons.\nAccess Integration\nLink with access control, visitor management, CCTV, ANPR and alarm events.\nPower & Backup\nCorrect PSU sizing, UPS/backup batteries and surge/lightning protection for reliability.\nRelated: Access Control · Intercom Systems · CCTV Installation · Electric Fencing\nTypical Automated Gate Pricing in Kenya\nResidential Sliding/Swing: KSh 120,000–280,000 (motor kit, controls, install)\nHeavy‑Duty / Wide Gates: KSh 280,000–650,000 (higher torque motors, safety set)\nIndustrial/Cantilever: Site survey required (custom hardware & ground works)\nPricing covers motor/actuators, control board, remotes/keypads, photocells, wiring, configuration and handover. Gate fabrication/civil works quoted separately if needed.\nBrands & Devices We Deploy\nFAAC • BFT • Nice • Centurion • CAME • Roger Technology (site‑fit)\nSliding motors with steel racks, limit switches and obstacle detection\nLinear/articulated swing actuators with soft start/stop\nPhotocell beams, safety edges, flashing beacons and magnetic locks\nKeypads, RFID readers, remote controls and GSM/4G open via phone\nWeather‑sealed enclosures, surge protection and UPS/battery backup\nOur Automated Gate Installation Process\nFree Nairobi site survey & measurement\nDesign & BoQ: motor sizing, controls, safety & power plan\nInstallation: mounting, wiring, safety beam placement, commissioning\nTraining & handover: remotes, manual release, maintenance tips\nSupport: SLA options, annual checks & repair services\nWho We Secure\nHomes & apartments • Gated estates • Schools & colleges • Warehouses & factories • Office parks • Hotels & malls • NGOs & Government\nRequest a Free Automated Gate Site Survey\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\nAutomated Gate FAQs (Kenya)\nWhich is better—sliding or swing?\nSliding gates suit tight driveways or slopes; swing gates work where there’s clear swing space. We recommend after a site survey.\nWhat happens during a power cut?\nSystems include manual release. We can add UPS/battery backup to keep operation running.\nHow secure are remote controls?\nWe use rolling‑code remotes and can add keypads, RFID or biometric readers for stronger control.\nCan the gate integrate with access control and intercoms?\nYes. We link gates to door controllers, visitor intercoms, CCTV and ANPR where needed.\nDo you fabricate gates as well?\nWe can integrate with your fabricator or quote fabrication/civil works separately when required.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Electric Remote Automated Gates in Kenya\n\nWe design and install reliable automated gates—sliding, swing and cantilever—with quiet motors, remotes, keypads, safety beams and access control integration. Built for Kenyan homes, estates and commercial sites.\n\n## Why Choose Almiria for Automated Gates\n\n*   **Certified installers** for sliding, swing and cantilever gates\n*   **Durable hardware**: heavy‑duty motors, racks, hinges and wheels suited to local conditions\n*   **Safe & compliant**: photocell beams, edge sensors and manual release for power cuts\n*   **Neat workmanship**: sturdy mounting, weatherproof enclosures and clean cabling\n*   **Fast turnaround**: free Nairobi site survey with a same‑day quotation\n*   **Integrations**: access control, intercom, CCTV and boom barriers\n\n## Automated Gate Solutions We Install\n\n### Sliding Gates\n\nFor driveways with limited swing space. Smooth rack & pinion drive, soft start/stop, obstacle detection.\n\n### Swing Gates (Single/Double)\n\nArticulated/linear actuators for steel or timber gates; adjustable speed and safety limits.\n\n### Cantilever & Industrial\n\nRobust carriage systems without ground tracks—ideal for uneven surfaces and heavy duty sites.\n\n### Controls & Safety\n\nRemotes, keypads, RFID/biometric readers, intercom, photocells, safety edges & flashing beacons.\n\n### Access Integration\n\nLink with access control, visitor management, CCTV, ANPR and alarm events.\n\n### Power & Backup\n\nCorrect PSU sizing, UPS/backup batteries and surge/lightning protection for reliability.\n\nRelated: [Access Control](https://www.almirianetworks.co.ke/access-control/) · [Intercom Systems](https://www.almirianetworks.co.ke/intercom-systems-kenya/) · [CCTV Installation](https://www.almirianetworks.co.ke/cctv-surveillance-camera-system/) · [Electric Fencing](https://www.almirianetworks.co.ke/electric-fences-in-kenya/)\n\n## Typical Automated Gate Pricing in Kenya\n\n*   **Residential Sliding/Swing:** KSh 120,000–280,000 (motor kit, controls, install)\n*   **Heavy‑Duty / Wide Gates:** KSh 280,000–650,000 (higher torque motors, safety set)\n*   **Industrial/Cantilever:** Site survey required (custom hardware & ground works)\n\n_Pricing covers motor/actuators, control board, remotes/keypads, photocells, wiring, configuration and handover. Gate fabrication/civil works quoted separately if needed._\n\n## Brands & Devices We Deploy\n\nFAAC • BFT • Nice • Centurion • CAME • Roger Technology (site‑fit)\n\n*   Sliding motors with steel racks, limit switches and obstacle detection\n*   Linear/articulated swing actuators with soft start/stop\n*   Photocell beams, safety edges, flashing beacons and magnetic locks\n*   Keypads, RFID readers, remote controls and GSM/4G open via phone\n*   Weather‑sealed enclosures, surge protection and UPS/battery backup\n\n## Our Automated Gate Installation Process\n\n1.  **Free Nairobi site survey** & measurement\n2.  **Design & BoQ**: motor sizing, controls, safety & power plan\n3.  **Installation**: mounting, wiring, safety beam placement, commissioning\n4.  **Training & handover**: remotes, manual release, maintenance tips\n5.  **Support**: SLA options, annual checks & repair services\n\n## Who We Secure\n\nHomes & apartments • Gated estates • Schools & colleges • Warehouses & factories • Office parks • Hotels & malls • NGOs & Government\n\n## Request a Free Automated Gate Site Survey\n\nShare a few details and we’ll call you within 30–60 minutes (Mon–Sat, 8 am–6 pm).\n\n## Automated Gate FAQs (Kenya)\n\n### Which is better—sliding or swing?\n\nSliding gates suit tight driveways or slopes; swing gates work where there’s clear swing space. We recommend after a site survey.\n\n### What happens during a power cut?\n\nSystems include manual release. We can add UPS/battery backup to keep operation running.\n\n### How secure are remote controls?\n\nWe use rolling‑code remotes and can add keypads, RFID or biometric readers for stronger control.\n\n### Can the gate integrate with access control and intercoms?\n\nYes. We link gates to door controllers, visitor intercoms, CCTV and ANPR where needed.\n\n### Do you fabricate gates as well?\n\nWe can integrate with your fabricator or quote fabrication/civil works separately when required.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/",
+   "loadedTime": "2026-10-14T14:18:24.992Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/",
+   "httpStatusCode": 200,
+   "depth": 1,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/",
+   "title": "Biometric Time & Attendance Systems in Kenya - Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "openGraph": [
+    {
+     "property": "og:locale",
+     "content": "en_US"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Almiria Networks Kenya - Security, Voice & Network Solutions"
+    },
+    {
+     "property": "og:type",
+     "content": "article"
+    },
+    {
+     "property": "og:title",
+     "content": "Biometric Time & Attendance Systems in Kenya - Almiria Networks Kenya"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/"
+    },
+    {
+     "property": "og:image",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:secure_url",
+     "content": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png"
+    },
+    {
+     "property": "og:image:width",
+     "content": "467"
+    },
+    {
+     "property": "og:image:height",
+     "content": "261"
+    },
+    {
+     "property": "article:published_time",
+     "content": "2018-10-04T04:57:45+00:00"
+    },
+    {
+     "property": "article:modified_time",
+     "content": "2025-09-18T07:59:11+00:00"
+    },
+    {
+     "property": "article:publisher",
+     "content": "https://www.facebook.com/almiriatech"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#listItem",
+          "name": "Biometric Time &#038; Attendance Systems in Kenya"
+         }
+        },
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#listItem",
+         "position": 2,
+         "name": "Biometric Time &#038; Attendance Systems in Kenya",
+         "previousItem": {
+          "@type": "ListItem",
+          "@id": "https://www.almirianetworks.co.ke/#listItem",
+          "name": "Home"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#webpage",
+       "url": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/",
+       "name": "Biometric Time & Attendance Systems in Kenya - Almiria Networks Kenya",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/biometric-time-attendance-systems-in-kenya/#breadcrumblist"
+       },
+       "datePublished": "2018-10-04T04:57:45+03:00",
+       "dateModified": "2025-09-18T10:59:11+03:00"
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Face vs fingerprint—which is better?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Face is touch‑free and fast for high‑traffic sites; fingerprint is cost‑effective. We can deploy hybrid readers."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can staff clock in via phone?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—mobile app with GPS/geofence and selfie verification, with manager approvals."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Does it handle complex shifts?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—split shifts, rotations, grace periods, overtime caps and public holidays."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can it integrate with payroll?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—CSV/Excel exports and optional connectors to popular payroll/HR systems."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What happens during power/internet outages?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Readers buffer logs offline; we size UPS and enable sync on restore. 4G options available."
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:18:24 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\", <https://www.almirianetworks.co.ke/wp-json/wp/v2/pages/765>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.almirianetworks.co.ke/?p=765>; rel=shortlink",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-9w93",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Biometric Time & Attendance Systems in Kenya\nAutomate attendance with face & fingerprint terminals, mobile clock‑in, shifts/rotations, overtime rules and payroll exports. Integrates with turnstiles, access control and HR/payroll.\nWhy Choose Almiria for Time & Attendance\nCertified installers for ZKTeco, Hikvision, Suprema & Anviz terminals\nAccurate biometrics: face, fingerprint, palm & RFID card combos\nFlexible software: shifts, rotations, approvals, leave & exceptions\nPayroll ready: overtime, lateness, allowances & CSV/Excel exports\nAnywhere clock‑in: mobile app with GPS/geofencing & selfie verification\nIntegrations: turnstiles, access control, HR/payroll (Sage, QuickBooks, etc.)\nNeat rollout: labelling, user training, admin handbook & backups\nFast turnaround: free Nairobi site survey & same‑day quotation\nBiometric Attendance Solutions We Deliver\nFace & Fingerprint Terminals\nTouch‑free face terminals with mask detection; fast optical fingerprint sensors; RFID for visitors.\nCloud & On‑Prem Software\nBrowser dashboards, role permissions, approvals & alerts—hosted or on your server.\nMobile Clock‑in (GPS)\nSmartphone app with geofencing, selfie proof, offline capture & supervisor approvals.\nShifts & Overtime Rules\nDay/night shifts, split shifts, grace periods, OT caps, holidays & leave calendars.\nPayroll & HR Integrations\nExport CSV/Excel to payroll; APIs for HR; scheduled emails & audit logs.\nTurnstiles & Access Control\nSync entry permissions by roster; air‑gap or real‑time mode with anti‑passback.\nRelated: Access Control · Automated Gates · CCTV Installation · Structured Cabling\nTypical Biometric Attendance Pricing in Kenya\nSME Starter (1–2 terminals, 50–150 staff): KSh 65,000–190,000\nMulti‑site (3–6 terminals, 150–500 staff): KSh 210,000–680,000\nEnterprise (7+ terminals, 500+ staff): Site survey required\nIncludes terminals, controller/software setup, user enrolment (baseline), reports, training & documentation. Turnstiles, advanced HR/payroll connectors and mobile app licences quoted as needed.\nBrands & Devices We Deploy\nZKTeco • Hikvision • Suprema • Anviz (site‑fit)\nFace, fingerprint, palm & RFID terminals with Wi‑Fi/Ethernet/4G options\nControllers, enrolment kits, UPS & surge protection\nDesktop & mobile admin tools; CSV/API integrations\nOur Deployment Process\nDiscovery & free Nairobi site survey – headcount, sites, shifts, payroll\nDesign & BoQ – terminals, software (cloud/on‑prem), rules & reports\nInstallation & enrolment – mounting, cabling/power, user capture\nTraining & handover – admin handbook, backups & support contacts\nSupport – SLAs, monitoring and change requests\nWho We Equip\nFactories & warehouses • Retail & branches • Schools & universities • Hospitals & clinics • Hotels • Construction & field teams • Government & NGOs\nTalk to a Biometric Attendance Engineer\nTell us your staff count, number of sites, shift rules and if you need mobile clock‑in—we’ll size and quote quickly.\nFace vs fingerprint—which is better?\nFace is touch‑free and fast for high‑traffic sites; fingerprint is cost‑effective. We can deploy hybrid readers.\nCan staff clock in via phone?\nYes—mobile app with GPS/geofence and selfie verification, with manager approvals.\nDoes it handle complex shifts?\nYes—split shifts, rotations, grace periods, overtime caps and public holidays.\nCan it integrate with payroll?\nYes—CSV/Excel exports and optional connectors to popular payroll/HR systems.\nWhat happens during power/internet outages?\nReaders buffer logs offline; we size UPS and enable sync on restore. 4G options available.",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Biometric Time & Attendance Systems in Kenya\n\nAutomate attendance with face & fingerprint terminals, mobile clock‑in, shifts/rotations, overtime rules and payroll exports. Integrates with turnstiles, access control and HR/payroll.\n\n## Why Choose Almiria for Time & Attendance\n\n*   **Certified installers** for ZKTeco, Hikvision, Suprema & Anviz terminals\n*   **Accurate biometrics**: face, fingerprint, palm & RFID card combos\n*   **Flexible software**: shifts, rotations, approvals, leave & exceptions\n*   **Payroll ready**: overtime, lateness, allowances & CSV/Excel exports\n*   **Anywhere clock‑in**: mobile app with GPS/geofencing & selfie verification\n*   **Integrations**: turnstiles, access control, HR/payroll (Sage, QuickBooks, etc.)\n*   **Neat rollout**: labelling, user training, admin handbook & backups\n*   **Fast turnaround**: free Nairobi site survey & same‑day quotation\n\n## Biometric Attendance Solutions We Deliver\n\n### Face & Fingerprint Terminals\n\nTouch‑free face terminals with mask detection; fast optical fingerprint sensors; RFID for visitors.\n\n### Cloud & On‑Prem Software\n\nBrowser dashboards, role permissions, approvals & alerts—hosted or on your server.\n\n### Mobile Clock‑in (GPS)\n\nSmartphone app with geofencing, selfie proof, offline capture & supervisor approvals.\n\n### Shifts & Overtime Rules\n\nDay/night shifts, split shifts, grace periods, OT caps, holidays & leave calendars.\n\n### Payroll & HR Integrations\n\nExport CSV/Excel to payroll; APIs for HR; scheduled emails & audit logs.\n\n### Turnstiles & Access Control\n\nSync entry permissions by roster; air‑gap or real‑time mode with anti‑passback.\n\nRelated: [Access Control](https://www.almirianetworks.co.ke/revolutionizing-access-control-in-kenya/) · [Automated Gates](https://www.almirianetworks.co.ke/electric-remote-automated-gates/) · [CCTV Installation](https://www.almirianetworks.co.ke/supply-and-installation-cctv-surveillance-camera-system/) · [Structured Cabling](https://www.almirianetworks.co.ke/structured-cabling-and-networking/)\n\n## Typical Biometric Attendance Pricing in Kenya\n\n*   **SME Starter (1–2 terminals, 50–150 staff):** KSh 65,000–190,000\n*   **Multi‑site (3–6 terminals, 150–500 staff):** KSh 210,000–680,000\n*   **Enterprise (7+ terminals, 500+ staff):** Site survey required\n\n_Includes terminals, controller/software setup, user enrolment (baseline), reports, training & documentation. Turnstiles, advanced HR/payroll connectors and mobile app licences quoted as needed._\n\n## Brands & Devices We Deploy\n\nZKTeco • Hikvision • Suprema • Anviz (site‑fit)\n\n*   Face, fingerprint, palm & RFID terminals with Wi‑Fi/Ethernet/4G options\n*   Controllers, enrolment kits, UPS & surge protection\n*   Desktop & mobile admin tools; CSV/API integrations\n\n## Our Deployment Process\n\n1.  **Discovery & free Nairobi site survey** – headcount, sites, shifts, payroll\n2.  **Design & BoQ** – terminals, software (cloud/on‑prem), rules & reports\n3.  **Installation & enrolment** – mounting, cabling/power, user capture\n4.  **Training & handover** – admin handbook, backups & support contacts\n5.  **Support** – SLAs, monitoring and change requests\n\n## Who We Equip\n\nFactories & warehouses • Retail & branches • Schools & universities • Hospitals & clinics • Hotels • Construction & field teams • Government & NGOs\n\n## Talk to a Biometric Attendance Engineer\n\nTell us your staff count, number of sites, shift rules and if you need mobile clock‑in—we’ll size and quote quickly.\n\n### Face vs fingerprint—which is better?\n\nFace is touch‑free and fast for high‑traffic sites; fingerprint is cost‑effective. We can deploy hybrid readers.\n\n### Can staff clock in via phone?\n\nYes—mobile app with GPS/geofence and selfie verification, with manager approvals.\n\n### Does it handle complex shifts?\n\nYes—split shifts, rotations, grace periods, overtime caps and public holidays.\n\n### Can it integrate with payroll?\n\nYes—CSV/Excel exports and optional connectors to popular payroll/HR systems.\n\n### What happens during power/internet outages?\n\nReaders buffer logs offline; we size UPS and enable sync on restore. 4G options available.",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ }
+]

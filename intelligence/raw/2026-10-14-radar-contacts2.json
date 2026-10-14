@@ -1,0 +1,267 @@
+[
+ {
+  "url": "https://atlancis.com/contact/",
+  "crawl": {
+   "loadedUrl": "https://atlancis.com/contact/",
+   "loadedTime": "2026-10-14T14:19:09.109Z",
+   "referrerUrl": "https://atlancis.com/contact/",
+   "httpStatusCode": 200,
+   "depth": 0,
+   "contentLengthBytes": 7142,
+   "contentType": "text/html; charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://atlancis.com/contact/",
+   "title": "One moment, please...",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en",
+   "jsonLd": null,
+   "headers": {
+    "content-type": "text/html; charset=utf-8",
+    "cache-control": "private, no-cache, no-store, must-revalidate, max-age=0",
+    "cf-edge-cache": "no-cache",
+    "content-length": "7142",
+    "date": "Wed, 14 Oct 2026 14:19:08 GMT",
+    "server": "Apache",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "One moment, please...\nPlease wait while your request is being verified...",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# One moment, please...\n\nPlease wait while your request is being verified...",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.almirianetworks.co.ke/contact-us/",
+  "crawl": {
+   "loadedUrl": "https://www.almirianetworks.co.ke/contact-us/",
+   "loadedTime": "2026-10-14T14:19:16.978Z",
+   "referrerUrl": "https://www.almirianetworks.co.ke/contact-us/",
+   "httpStatusCode": 404,
+   "depth": 0,
+   "contentType": "text/html; charset=UTF-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.almirianetworks.co.ke/contact-us/",
+   "title": "Page not found – Almiria Networks Kenya",
+   "description": null,
+   "author": null,
+   "keywords": null,
+   "languageCode": "en-US",
+   "jsonLd": [
+    {
+     "@context": "https://schema.org",
+     "@graph": [
+      {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.almirianetworks.co.ke/contact-us/#breadcrumblist",
+       "itemListElement": [
+        {
+         "@type": "ListItem",
+         "@id": "https://www.almirianetworks.co.ke/#listItem",
+         "position": 1,
+         "name": "Home",
+         "item": "https://www.almirianetworks.co.ke/",
+         "nextItem": {
+          "@type": "ListItem",
+          "@id": "#listItem",
+          "name": "404 - Page Not Found"
+         }
+        }
+       ]
+      },
+      {
+       "@type": "Organization",
+       "@id": "https://www.almirianetworks.co.ke/#organization",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "url": "https://www.almirianetworks.co.ke/",
+       "telephone": "+254700449778",
+       "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.almirianetworks.co.ke/wp-content/uploads/2021/11/Almiria-Logo-today-Final.png",
+        "@id": "https://www.almirianetworks.co.ke/contact-us/#organizationLogo",
+        "width": 467,
+        "height": 261,
+        "caption": "Almiria Kenya"
+       },
+       "image": {
+        "@id": "https://www.almirianetworks.co.ke/contact-us/#organizationLogo"
+       },
+       "sameAs": [
+        "https://www.facebook.com/almiriatech",
+        "https://www.instagram.com/almiriatechstore/",
+        "https://www.tiktok.com/@almirialtd",
+        "https://www.pinterest.com/almiriake/",
+        "https://www.youtube.com/@ALMIRIAKENYA-hi8bx"
+       ]
+      },
+      {
+       "@type": "WebPage",
+       "@id": "https://www.almirianetworks.co.ke/contact-us/#webpage",
+       "url": "https://www.almirianetworks.co.ke/contact-us/",
+       "inLanguage": "en-US",
+       "isPartOf": {
+        "@id": "https://www.almirianetworks.co.ke/#website"
+       },
+       "breadcrumb": {
+        "@id": "https://www.almirianetworks.co.ke/contact-us/#breadcrumblist"
+       }
+      },
+      {
+       "@type": "WebSite",
+       "@id": "https://www.almirianetworks.co.ke/#website",
+       "url": "https://www.almirianetworks.co.ke/",
+       "name": "Almiria Networks Kenya",
+       "description": "Security, Voice & Network Solutions",
+       "inLanguage": "en-US",
+       "publisher": {
+        "@id": "https://www.almirianetworks.co.ke/#organization"
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:19:10 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "vary": "Accept-Encoding",
+    "expires": "Wed, 11 Jan 1984 05:00:00 GMT",
+    "cache-control": "no-cache, must-revalidate, max-age=0, no-store, private",
+    "x-cache-enabled": "True",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "link": "<https://www.almirianetworks.co.ke/wp-json/>; rel=\"https://api.w.org/\"",
+    "x-httpd-modphp": "1",
+    "x-cdn-c": "static",
+    "content-encoding": "gzip",
+    "x-sg-cdn": "1",
+    "x-ce": "us-east4-bncz",
+    "x-proxy-cache": "MISS",
+    "x-proxy-cache-info": "0 NC:000000 UP:",
+    "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "Page not found – Almiria Networks Kenya\nOops! That page can’t be found.\nIt looks like nothing was found at this location. Maybe try one of the links below or a search?",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# Page not found – Almiria Networks Kenya\n\n## Oops! That page can’t be found.\n\nIt looks like nothing was found at this location. Maybe try one of the links below or a search?",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ },
+ {
+  "url": "https://www.nuairtech.com/contact",
+  "crawl": {
+   "loadedUrl": "https://www.nuairtech.com/contact",
+   "loadedTime": "2026-10-14T14:19:29.704Z",
+   "referrerUrl": "https://www.nuairtech.com/contact",
+   "httpStatusCode": 200,
+   "depth": 0,
+   "contentLengthBytes": 24938,
+   "contentType": "text/html;charset=utf-8"
+  },
+  "metadata": {
+   "canonicalUrl": "https://www.nuairtech.com/Contact",
+   "title": "HVAC & Electrical Services | Nuair Technologies | Kenya",
+   "description": "Contact Nuair Technologies for expert HVAC & electrical solutions. Reach out for tailored services today!",
+   "author": null,
+   "keywords": "Nuair Technologies,Cooling system services in Kenya,Electrical services in Kenya,Control room services \n,Air conditioning solutions in Kenya,HVAC companies in Kenya,",
+   "languageCode": "en",
+   "openGraph": [
+    {
+     "property": "og:type",
+     "content": "website"
+    },
+    {
+     "property": "og:url",
+     "content": "https://www.nuairtech.com/Contact"
+    },
+    {
+     "property": "og:site_name",
+     "content": "Nuair Technologies"
+    },
+    {
+     "property": "og:image:width",
+     "content": "1200"
+    },
+    {
+     "property": "og:image:height",
+     "content": "650"
+    },
+    {
+     "property": "og:description",
+     "content": "Contact Nuair Technologies for expert HVAC & electrical solutions. Reach out for tailored services today!"
+    },
+    {
+     "property": "og:title",
+     "content": "HVAC & Electrical Services | Nuair Technologies | Kenya"
+    },
+    {
+     "property": "og:image",
+     "content": "https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/logo-203592af+%281%29-1920w.png"
+    }
+   ],
+   "jsonLd": [
+    {
+     "@context": "http://schema.org/",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "item": {
+        "name": "Home",
+        "id": "/"
+       }
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "item": {
+        "name": "Contact"
+       }
+      }
+     ]
+    }
+   ],
+   "headers": {
+    "server": "nginx",
+    "date": "Wed, 14 Oct 2026 14:19:26 GMT",
+    "content-type": "text/html;charset=utf-8",
+    "content-length": "24938",
+    "etag": "\"-1614989729\"",
+    "d-cache": "from-cache",
+    "content-encoding": "gzip",
+    "strict-transport-security": "max-age=31536000; preload",
+    "x-frame-options": "SAMEORIGIN",
+    "content-security-policy": "frame-ancestors 'self'",
+    "x-content-type-options": "nosniff",
+    "vary": "user-agent, accept-encoding",
+    "link": "<https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/brd7-2880w.webp>; rel=preload; as=image; fetchpriority=high",
+    "cache-control": "no-cache, must-revalidate",
+    "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "speculation-rules": "\"https://static.cdn-website.com/speculations/rules/prerender-1.0.3.json\"",
+    "d-geo": "EU",
+    "x-firefox-spdy": "h2"
+   }
+  },
+  "screenshotUrl": null,
+  "text": "HVAC & Electrical Services | Nuair Technologies\nContact\nContact Us\nCONTACT US\nGet In Touch\nReach out for expert HVAC and electrical solutions tailored to your needs.\nLocation\nJasmaya Business Park, Go Down No. 1, Abacus Lane, Off Baba Dogo Road, Ruaraka, Nairobi\nPhone\nEmail\nNuair Technologies offers reliable HVAC and electrical solutions across East Africa, delivering quality and innovation for diverse industries.\nGet In Touch\nLocation\nJasmaya Business Park, Go Down No. 1, Abacus Lane, Off Baba Dogo Road, Ruaraka, Nairobi\nPhone\nEmail\nUseful Links\nOperating Hours\nMonday to Saturday\n8:00am – 5:00pm\nSundays: Closed\n© 2026 \nAll Rights Reserved to Nuair Technologies",
+  "html": null,
+  "htmlUrl": null,
+  "markdown": "# HVAC & Electrical Services | Nuair Technologies\n\n[![logo](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/logo-203592af-1920w.png)](https://www.nuairtech.com/)\n\nContact\n\n## **Contact Us**\n\n## **CONTACT US**  \n\n### Get In Touch  \n\nReach out for expert HVAC and electrical solutions tailored to your needs.  \n\n**Location**\n\nJasmaya Business Park, Go Down No. 1, Abacus Lane, Off Baba Dogo Road, Ruaraka, Nairobi  \n\n**Phone**\n\n**Email**\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39480!3i32994!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=64957)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39481!3i32994!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=63664)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39482!3i32993!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=90296)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39480!3i32993!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=92882)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39482!3i32994!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=62371)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39479!3i32994!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=60710)\n\n![](https://www.nuairtech.com/maps/vt?pb=!1m5!1m4!1i16!2i39483!3i32993!4i256!2m3!1e0!2sm!3i799565184!2m3!1e2!2sspotlit!5i1!3m13!2sen!3sKE!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m15!299174093m14!14m13!1m8!1m2!1y1742635631762082527!2y2393429078629465673!2s%2Fg%2F11pcn6z3y7!4m2!1x4282544723!2x368787035!15sgcid%3Aelectrician!2b0!3b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=89003)\n\n[![A white background with a few lines on it](https://le-de.cdn-website.com/794b9dc5977f4abd905852f3e85344c5/dms3rep/multi/opt/logo_footer-1920w.webp)](https://www.nuairtech.com/)\n\nNuair Technologies offers reliable HVAC and electrical solutions across East Africa, delivering quality and innovation for diverse industries.\n\n**Get In Touch**\n\n**Location**\n\nJasmaya Business Park, Go Down No. 1, Abacus Lane, Off Baba Dogo Road, Ruaraka, Nairobi\n\n**Phone**\n\n**Email**\n\n**Useful Links**\n\n**Operating**  **Hours**\n\nMonday to Saturday  \n8:00am – 5:00pm\n\nSundays: Closed\n\n© 2026 \n\nAll Rights Reserved to Nuair Technologies",
+  "debug": {
+   "requestHandlerMode": "browser"
+  }
+ }
+]

@@ -1,19 +1,26 @@
 {
- "generatedAt": "2026-10-13T17:40:01Z",
+ "generatedAt": "2026-10-14",
  "inputs": [
-  "intelligence/raw/2026-10-14-pilot-news.json"
+  "intelligence/raw/2026-10-14-radar-tenders.json",
+  "intelligence/raw/2026-10-14-radar-vendors.json",
+  "intelligence/raw/2026-10-14-radar-jobs.json"
  ],
  "runIds": [
-  "EYJrixtPCxsEDAnS2"
+  "L3N8eUTYM3oCcq1lz",
+  "ie2ffvXALv1y2lnAV",
+  "r1R6cRisEnmtxDYzg"
  ],
- "recordsIn": 34,
- "recordsOut": 34,
- "dupesRemoved": 0,
- "dupes": [],
+ "recordsIn": 104,
+ "recordsOut": 102,
+ "dupesRemoved": 2,
+ "dupes": [
+  "https://www.africadatacentres.com/",
+  "https://ixafrica.co.ke/"
+ ],
  "topicCounts": {
-  "workforce": 11,
-  "connectivity": 8,
-  "facility": 5,
-  "policy": 10
+  "policy": 31,
+  "facility": 44,
+  "connectivity": 3,
+  "workforce": 24
  }
 }

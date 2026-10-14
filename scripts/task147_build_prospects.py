@@ -210,6 +210,68 @@ row("KDEAP PMU (ICT Authority)", "Donor-funded program", "icp6-kdeap",
     "PMU Lead", "C",
     "Reader/validator relationship, not a payer yet")
 
+# ---------------- Apify sweep additions (Task 148, 2026-10-14) ---------------
+# Source: intelligence/raw/2026-10-14-radar-vendors.json + radar-jobs.json
+# (google-search-scraper, 8 queries, 71 organic results, all UNREVIEWED)
+row("TeleNET", "DC infrastructure solutions", "icp1-vendor", "Nairobi",
+    "Dedicated data centre infrastructure solutions page (rack, cooling, "
+    "power)", "https://www.telenet.co.ke/solutions/data-centre-infrastructure/",
+    "Website contact", "Business Development Manager", "A",
+    "Source: Apify vendor sweep 2026-10-14")
+row("Kalcom Solutions", "DC maintenance services", "icp1-vendor", "Nairobi",
+    "Dedicated data center maintenance offering; recurring-service fit with "
+    "the Radar", "https://kalcomsolutions.com/data-center-maintenance/",
+    "Website contact", "Managing Director", "A",
+    "Source: Apify vendor sweep 2026-10-14")
+row("Carrel Technologies", "DC solutions (public-sector vertical)",
+    "icp1-vendor", "Nairobi",
+    "Data centre solutions under public-sector industry verticals",
+    "http://carreltech.com/site/industry-verticals/public-sector/"
+    "data-centre-solutions", "Website contact", "Business Development "
+    "Manager", "B", "Source: Apify vendor sweep 2026-10-14")
+row("MASC Solutions", "Fire detection + gaseous suppression", "icp1-vendor",
+    "Nairobi", "Public data centre fire detection and gaseous suppression "
+    "project case on site", "https://mascsolutions.com",
+    "Website contact", "Managing Director", "B",
+    "Source: Apify vendor sweep 2026-10-14")
+row("Flammatech Africa", "Fire suppression projects", "icp1-vendor",
+    "Nairobi", "Fire suppression projects portfolio includes data centres",
+    "https://flammatech.africa/projects/", "Website contact",
+    "Business Development Manager", "B",
+    "Source: Apify vendor sweep 2026-10-14")
+row("Cargen (Cummins East Africa)", "Generator dealer (OEM channel)",
+    "icp1-vendor", "Nairobi", "Regional Cummins generator dealer; AI/DC "
+    "power demand rising (Cat/Cummins DC generator boom coverage)",
+    "https://cumminscargen.com/", "Website contact",
+    "Sales Director", "B", "Source: Apify vendor sweep 2026-10-14")
+row("Ekkosense", "DCIM software (active at ADC)", "icp1-vendor",
+    "Global (active in KE)", "Public DCIM case study with Africa Data "
+    "Centres", "https://www.ekkosense.com", "Website contact",
+    "Regional Sales Manager", "C",
+    "International vendor already selling into the Kenyan market")
+row("Oracle Kenya", "Hyperscaler DC operations", "icp2-operator", "Nairobi",
+    "Hiring datacenter technicians in Nairobi (multiple 2026 postings) = "
+    "active DC spend", "https://www.myjobmag.co.ke/job/"
+    "datacenter-technician-oracle", "Careers + LinkedIn",
+    "Data Centre Site Lead", "B",
+    "Source: Apify job sweep 2026-10-14; hiring is a signal, not status")
+row("Wamae Allen", "Law firm, DC regulatory practice", "icp3-analyst",
+    "Nairobi", "Published 'Data Centres in Kenya: Legal and Regulatory "
+    "Guide'; natural Radar subscriber for regulatory tracking",
+    "https://wamaeallen.com/data-centres-in-kenya-legal-regulatory-guide/",
+    "Website contact", "Partner, Technology", "C",
+    "Source: Apify tender sweep 2026-10-14")
+row("TenderFlow", "Tender aggregator KE/UG/TZ", "channel", "Nairobi",
+    "Runs live tender listings for East Africa; competitor and potential "
+    "data partner", "https://tenderflow.co.ke/tenders",
+    "Website contact", "Founder", "C",
+    "channel bucket: map coverage overlap before any partnership")
+row("Savannah Training", "DC fire specialist course", "channel", "Nairobi",
+    "Runs Data Centre Fire Specialist course; training ecosystem contact "
+    "for Workforce Watch", "https://savannahtraining.co.ke/pages/"
+    "data-centre-fire-specialist", "Website contact", "Director", "C",
+    "Source: Apify vendor sweep 2026-10-14")
+
 
 def main():
     here = os.path.dirname(os.path.abspath(__file__))

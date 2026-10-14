@@ -5,8 +5,9 @@ Separate from `intelligence/queue/` (which tracks market evidence records).
 
 ## Files
 
-- `2026-10-14-launch-list.csv` - 43 named organizations for the first-dollar
-  outreach sequence (10 priority A / 13 B / 20 C).
+- `2026-10-14-launch-list.csv` - 54 named organizations for the first-dollar
+  outreach sequence (12 priority A / 18 B / 24 C; 43 from the Task 147
+  research battery + 11 added from the Task 148 Apify sweep).
 
 ## Schema
 
@@ -14,7 +15,7 @@ Separate from `intelligence/queue/` (which tracks market evidence records).
 | --- | --- |
 | org | Company name (no individual person names) |
 | category | What they do |
-| icp | ICP bucket from docs/revenue/first-dollar-plan.md (icp1-vendor, icp2-operator, icp3-analyst, icp4-recruiter, events, icp6-kdeap) |
+| icp | ICP bucket from docs/revenue/first-dollar-plan.md (icp1-vendor, icp2-operator, icp3-analyst, icp4-recruiter, events, icp6-kdeap, channel) |
 | city | Primary location |
 | why_now | The dated reason to contact them now |
 | evidence_url | Public source for the why_now claim |
