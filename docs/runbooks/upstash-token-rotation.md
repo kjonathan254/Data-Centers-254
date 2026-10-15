@@ -71,38 +71,49 @@ and records survive.
 | Date | Action | Evidence |
 |------|--------|----------|
 | 2026-10 (D01 remediation) | Token created, configured in Vercel | commit fb01852 redeploy |
-| 2026-10-15 | **Database replaced, not just the token**: owner migrated the original database to a new one (`ethical-kangaroo-235877`), then deleted the original. Both `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` rotated in one step | incident note below |
+| 2026-10-15 | **Reported database replacement investigated and DISPROVEN**: a production traffic canary showed no writes landing in the new database (`dbsize` stayed 0), so production remains on the original database — which must therefore still be alive. No data loss. | incident note below |
 | pending | First plain token rotation | this runbook, step 5 output |
 
-## Incident 2026-10-15 — database replaced instead of token reset
+## Incident 2026-10-15 — "database deleted after migration" (disproven)
 
-**What happened.** The owner ran a migration to a new Upstash database
-(`ethical-kangaroo-235877`) and deleted the original database afterwards —
-a legitimate migration path, but a step beyond what this runbook described
-(the runbook's "Reset token" keeps the same database and URL). With both
-URL and token dead, every production Redis path failed closed: OB enquiries
-answered 503, subscribe degraded, rate limiting fell back to per-instance
-memory with the one-time `MEMORY MODE active` warning. Nothing was silently
-lost during the outage window — fail-closed did its job.
+**The claim.** The owner reported migrating the production database to a new
+one (`ethical-kangaroo-235877`) and deleting the original afterwards. If
+true, production would have been fail-closed (503 on enquiries, memory-mode
+rate limiting) from the moment of deletion.
 
-**Data status (verified by direct REST probe on the day).** The new database
-reported `dbsize: 0` — the migration did not carry keys across (or the
-source export step never completed before deletion). Consequences:
+**The investigation (same day, direct REST probes + production canary).**
 
-- Newsletter list: verified subscribers may be recoverable from the Resend
-  segment/audience if `RESEND_SEGMENT_ID` was configured (double opt-in
-  mirrors contacts there).
-- `ob:enquiry:*` enquiry history and rate-limit counters: not present in
-  the new database; Upstash backups were never enabled (vibe-checklist
-  triage gap, still open), so unless an export exists outside Upstash these
-  are unrecoverable.
-- The fail-closed design means no *new* enquiries were accepted-and-dropped
-  during the outage; visitors saw 503s instead.
+1. New database: `PING` → PONG, but `DBSIZE` → **0** and `SCAN` → empty,
+   checked twice ~30 minutes apart. A completed migration would have left
+   keys behind. Nothing ever landed in `ethical-kangaroo`.
+2. Production canary: two rapid `GET /api/search` requests (each one INCRs
+   an `rl:*` key when the limiter is persistent), then `SCAN` of the new
+   database again — **still zero keys**. Production's limiter writes are
+   going somewhere else.
+3. `/api/health` reports `reachable: true` + `persistent`, and
+   `/api/opportunity-brief/inquiry` answers 400 (validation) instead of 503
+   — production has a healthy, reachable Redis. Combined with (2), that
+   Redis is the **original** database.
 
-**Recovery actions.** (1) Owner: check Upstash console for any automatic
-snapshot/backup of the deleted database and raise an Upstash support ticket
-if the data matters. (2) Reconcile the newsletter list from Resend. (3)
-Enable Upstash backups on `ethical-kangaroo-235877` (owner toggle, still
-pending from the checklist triage). (4) Production was re-pointed at the
-new database by updating the Vercel env vars and redeploying — verify with
-`/api/health` (`redis.reachable: true`, `rateLimiting: "persistent"`).
+**Verdict.** The migration never ran and the deletion never happened (the
+second such false alarm — see UPSTASH-RECONNECT-1). The original database
+is alive and holds everything: subscriber list, OB enquiries, counters.
+`ethical-kangaroo` is an empty, parked database whose credentials live only
+in gitignored local env files.
+
+**Standing risk.** If the original database is deleted while the migration
+is *believed* complete, that is a real outage with real data loss — Upstash
+backups were never enabled (open gap in the checklist triage). Do not
+delete any database until the new one demonstrably serves production
+traffic (`DBSIZE` grows under real load AND `/api/health` names it healthy
+after a deliberate env-var switch + redeploy).
+
+**Resolution paths.**
+
+- *Path A (recommended):* keep the original database; run the plain token
+  rotation above; delete the empty `ethical-kangaroo`. Zero data movement.
+- *Path B:* perform an actual migration while the original still exists
+  (Upstash console data migration, or a scripted scan-and-copy over REST),
+  verify `DBSIZE > 0` on the new database, switch BOTH env vars in Vercel
+  (URL *and* token), redeploy, verify `/api/health`, watch `rl:*` keys
+  appear in the new database, and only then delete the original.
