@@ -36,8 +36,8 @@ import {
  *      answer, the honest deterministic reply stands.
  *
  * Env (all optional; see src/lib/chatbot/llm.ts for resolution order):
- *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN /
- *   DATACENTRE254_JIBU, or any groq-or-jibu-named var holding a gsk_… key)
+ *   GROQ_API_KEY (or CHAT_LLM_API_KEY / GROQ_KEY / GROQ_TOKEN, or any
+ *   groq-or-jibu-named var holding a gsk_… key)
  *   NVIDIA_API_KEY, free nvapi-… key from build.nvidia.com; dormant fail-over
  *   HF_TOKEN, HuggingFace Inference Providers token; dormant third slot
  *   GROQ_MODEL / NVIDIA_MODEL / HF_MODEL, pin a provider's first candidate;

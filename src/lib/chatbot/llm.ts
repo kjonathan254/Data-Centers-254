@@ -9,9 +9,8 @@
  * are fail-over slots that activate the moment their key appears in env):
  *
  *   1. groq       , GROQ_API_KEY (recommended) / CHAT_LLM_API_KEY /
- *                    GROQ_KEY / GROQ_TOKEN / DATACENTRE254_JIBU, or any env
- *                    var whose name mentions "groq"/"jibu" holding a gsk_…
- *                    key.  Base: https://api.groq.com/openai/v1
+ *                    GROQ_KEY / GROQ_TOKEN, or any env var whose name
+ *                    mentions "groq"/"jibu" holding a gsk_… key.  Base: https://api.groq.com/openai/v1
  *                    Also serves the playai-tts HD voice (Groq-only).
  *   2. nvidia     , NVIDIA_API_KEY (nvapi-…), free from build.nvidia.com →
  *                    "Get API Key".  Base: https://integrate.api.nvidia.com/v1
@@ -75,7 +74,6 @@ export function resolveGroqKey(): string | null {
     "CHAT_LLM_API_KEY",
     "GROQ_KEY",
     "GROQ_TOKEN",
-    "DATACENTRE254_JIBU",
   );
   if (named) return named;
   for (const [name, value] of Object.entries(process.env)) {

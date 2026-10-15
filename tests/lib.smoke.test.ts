@@ -110,30 +110,43 @@ describe("rate-limit (memory backend)", () => {
     expect(otherIp.limited).toBe(false);
   });
 
-  it("derives the client IP from x-forwarded-for when no trusted header exists", () => {
-    // XFF is now the LAST-resort fallback (local dev / other hosts) — on
-    // Vercel a caller-supplied XFF used to let clients mint fresh buckets.
-    const headers = new Headers({ "x-forwarded-for": "203.0.113.7, 10.0.0.1" });
-    expect(clientIp({ headers })).toBe("203.0.113.7");
-  });
-
-  it("prefers x-real-ip over a spoofed x-forwarded-for (audit S01)", () => {
-    // Vercel sets x-real-ip server-side and it cannot be overridden by the
-    // caller; a client-sent XFF must never outrank it.
+  // Security audit S01 (supersedes the cf-first order): DC254 runs on Vercel
+  // without Cloudflare, so a client-supplied cf-connecting-ip arrives
+  // untouched and is spoofable. x-real-ip (Vercel-controlled) is the only
+  // fully trusted header; the rightmost XFF entry is the fallback.
+  it("trusts x-real-ip over spoofable client headers (S01)", () => {
     const headers = new Headers({
-      "x-real-ip": "198.51.100.9",
-      "x-forwarded-for": "203.0.113.7, 198.51.100.9",
+      "x-real-ip": "203.0.113.9",
+      "x-forwarded-for": "6.6.6.6, 10.0.0.1",
+      "cf-connecting-ip": "6.6.6.6",
     });
-    expect(clientIp({ headers })).toBe("198.51.100.9");
+    expect(clientIp({ headers })).toBe("203.0.113.9");
   });
 
-  it("prefers cf-connecting-ip above all (Cloudflare-fronted traffic)", () => {
+  it("never trusts a client-supplied cf-connecting-ip on Vercel", () => {
+    // If DC254 is ever deliberately fronted by Cloudflare, re-add
+    // cf-connecting-ip above x-real-ip in clientIp() with a test like the
+    // old "prefers cf-connecting-ip above all" one. Until then it is data.
     const headers = new Headers({
       "cf-connecting-ip": "192.0.2.44",
       "x-real-ip": "198.51.100.9",
       "x-forwarded-for": "203.0.113.7",
     });
-    expect(clientIp({ headers })).toBe("192.0.2.44");
+    expect(clientIp({ headers })).toBe("198.51.100.9");
+  });
+
+  it("ignores a spoofed leftmost XFF entry and reads the rightmost", () => {
+    // Vercel preserves a client-supplied chain ahead of the platform-appended
+    // address, so the entry the edge actually observed sits last. XFF is the
+    // LAST-resort fallback (local dev / other hosts).
+    const headers = new Headers({
+      "x-forwarded-for": "6.6.6.6, 203.0.113.7",
+    });
+    expect(clientIp({ headers })).toBe("203.0.113.7");
+  });
+
+  it("returns unknown when no trusted header is present", () => {
+    expect(clientIp({ headers: new Headers() })).toBe("unknown");
   });
 });
 

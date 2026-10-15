@@ -161,26 +161,28 @@ export function persistentLimitingActive(): boolean {
 /**
  * Consistent client-IP extraction across all API routes and the proxy.
  *
- * Precedence (audit S01, 2026-10-15):
- *   1. cf-connecting-ip — set by Cloudflare when it fronts the deployment.
- *   2. x-real-ip        — set by Vercel's edge to the actual peer address and
- *                          NOT overridable by the caller, so it is the
- *                          trustworthy default on Vercel.
- *   3. x-forwarded-for  — FIRST entry only as a last resort (local dev,
- *                          other hosts). On Vercel a caller-supplied XFF is
- *                          preserved ahead of the real IP, so trusting the
- *                          first entry let any client rotate fresh
- *                          rate-limit buckets per request (spoofed header →
- *                          unlimited chat/TTS/contact quotas). XFF stays the
- *                          dev fallback so the limiter still works locally.
+ * Security audit S01: the previous chain trusted client-spoofable headers
+ * first (cf-connecting-ip, then x-forwarded-for's first entry), so an
+ * attacker could mint a fresh rate-limit bucket for every request by sending
+ * a random XFF value. Vercel sets x-real-ip itself and strips client-supplied
+ * values, so it is the only header fully trusted here. The fallback reads
+ * the RIGHTMOST x-forwarded-for entry — the IP as observed by the nearest
+ * trusted proxy — because a client-supplied chain is preserved ahead of the
+ * platform-appended address. If the site ever moves behind Cloudflare,
+ * re-add cf-connecting-ip above x-real-ip deliberately, not by default.
  */
 export function clientIp(req: HeadersLike): string {
-  return (
-    req.headers.get("cf-connecting-ip") ||
-    req.headers.get("x-real-ip") ||
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    "unknown"
-  );
+  const realIp = req.headers.get("x-real-ip")?.trim();
+  if (realIp) return realIp;
+  const xff = req.headers.get("x-forwarded-for");
+  if (xff) {
+    const parts = xff
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean);
+    if (parts.length > 0) return parts[parts.length - 1];
+  }
+  return "unknown";
 }
 
 /**
