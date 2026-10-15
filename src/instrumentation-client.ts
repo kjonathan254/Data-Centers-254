@@ -46,11 +46,11 @@ Sentry.init({
         Sentry.replayIntegration(),
       ]
     : [],
-  // Session Replay sampling. While verifying the integration this is 1.0 (the
-  // wizard's recommended verify setting); once confirmed end-to-end it drops
-  // to 0.1. replaysOnErrorSampleRate stays 1.0 permanently: every
-  // error-carrying consented session is always recorded.
-  replaysSessionSampleRate: 1.0,
+  // Session Replay sampling (production values, verified end-to-end at 1.0 on
+  // 2026-10-15 — replay 887744c8… in project data-centers-254): 10% of
+  // consented sessions, and 100% of consented sessions that hit a client
+  // error, permanently.
+  replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
 });
 
