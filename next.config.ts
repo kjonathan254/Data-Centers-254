@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import { existsSync, readdirSync } from "fs";
 import { join } from "path";
 
@@ -232,4 +233,24 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Sentry build wrapper (Task SENTRY-SETUP-1): uploads source maps when
+// SENTRY_AUTH_TOKEN exists at build time (Vercel/CI), injects the /monitoring
+// tunnel handler that the client SDK posts browser events to (keeps the
+// enforced CSP at connect-src 'self'), and no-ops otherwise — local builds
+// and CI runs without a token behave exactly as before.
+export default withSentryConfig(nextConfig, {
+  org: process.env.SENTRY_ORG ?? "datacentre254",
+  project: process.env.SENTRY_PROJECT ?? "data-centers-254",
+  authToken: process.env.SENTRY_AUTH_TOKEN,
+  // No token at build time -> skip the upload attempt entirely instead of
+  // emitting a warning on every local build and CI run.
+  sourcemaps: { disable: !process.env.SENTRY_AUTH_TOKEN },
+  // Browser events POST to our own origin (/monitoring), proxied to Sentry
+  // server-side: CSP stays at connect-src 'self' and ad-blockers can't eat
+  // *.ingest.sentry.io requests.
+  tunnelRoute: "/monitoring",
+  telemetry: false,
+  // Silence the Next.js 16 "turbopack + instrumentation" experimental warning
+  // noise; the SDK's Turbopack source map support is stable in v11.
+  reactComponentAnnotation: { enabled: false },
+});
