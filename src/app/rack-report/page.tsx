@@ -364,11 +364,7 @@ export default function RackReportPage() {
                 Rack Report is a specialist channel, one sponsor per issue,
                 clearly labelled, with a tracked click report every month.
                 Current audience numbers and pricing are always live, never
-                inflated. Prefer to buy research outright? The{" "}
-                <a href="/opportunity-brief" className="text-cyan underline hover:underline">
-                  Kenya Data Centre Opportunity Brief
-                </a>{" "}
-                is the first buy-now product for suppliers.
+                inflated.
               </p>
               <Link
                 href="/advertise"
