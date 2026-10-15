@@ -93,6 +93,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/data-exports`, lastModified: fixedDate, changeFrequency: "monthly", priority: 0.6 },
+    // Commercial product page; figures derive from the verified dataset, so it
+    // dates with the directory's verification month like the tracker pages.
+    { url: `${baseUrl}/opportunity-brief`, lastModified: verifiedDate, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/rack-report`, lastModified: contentDate, changeFrequency: "monthly", priority: 0.9 },
     // /search is deliberately noindexed (internal search tool, empty state
     // without JS), so it must not be listed in the sitemap: a sitemap entry

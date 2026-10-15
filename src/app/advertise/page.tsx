@@ -112,7 +112,7 @@ export default async function AdvertisePage() {
           {/* Commercial ladder */}
           <h2 className="text-xl font-semibold text-foreground mb-2">The commercial ladder</h2>
           <p className="text-sm text-muted-foreground mb-6">Start where the fit is right, each rung deepens the relationship.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
             {opportunities.map((o) => (
               <div key={o.num} className="rounded-xl border border-border/50 p-6 hover:border-cyan/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
@@ -123,6 +123,26 @@ export default async function AdvertisePage() {
                 <p className="text-sm leading-relaxed text-muted-foreground">{o.body}</p>
               </div>
             ))}
+          </div>
+
+          {/* Buying intelligence, not advertising */}
+          <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-14">
+            <h3 className="text-base font-semibold text-foreground mb-2">
+              Buying intelligence rather than advertising?
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+              The Kenya Data Centre Opportunity Brief is our focused
+              market-intelligence product: one decision question per edition,
+              answered with source-linked evidence, confidence levels and a
+              watchlist. See the redacted sample to judge the quality before
+              spending anything.
+            </p>
+            <a
+              href="/opportunity-brief"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 h-11 text-sm font-medium text-foreground hover:border-cyan/40 hover:text-cyan transition-all"
+            >
+              View the Opportunity Brief
+            </a>
           </div>
 
           {/* Briefing sponsorship, slot pricing */}

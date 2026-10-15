@@ -132,6 +132,26 @@ export default function DataExportsPage() {
             </div>
           </div>
 
+          {/* Decision product cross-link: snapshot -> opportunity brief */}
+          <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8 mb-12">
+            <h2 className="text-lg font-semibold text-foreground mb-2">
+              Need one question answered faster?
+            </h2>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+              The Market Snapshot benchmarks the whole market each quarter. If
+              you need a decision, the Kenya Data Centre Opportunity Brief
+              answers a single question, such as where usable capacity is most
+              likely to emerge next, in a 4-6 page sourced brief with
+              confidence levels and a watchlist.
+            </p>
+            <a
+              href="/opportunity-brief"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 h-11 text-sm font-medium text-foreground hover:border-cyan/40 hover:text-cyan transition-all"
+            >
+              See the Opportunity Brief
+            </a>
+          </div>
+
           {/* Capture, checkout arrives with Stripe */}
           <ExportInterestForm />
         </div>

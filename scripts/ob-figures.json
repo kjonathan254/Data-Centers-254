@@ -1,0 +1,914 @@
+{
+  "generatedAt": "2026-10-15",
+  "dataset": {
+    "datasetId": "dc254-directory",
+    "version": "2026-Q3",
+    "quarter": "2026-Q3",
+    "releasedAt": "2026-09-19"
+  },
+  "platform": {
+    "totalTracked": 31,
+    "kenyaFacilities": 27,
+    "regionalRecords": 4,
+    "operators": 18,
+    "publishedItLoadMw": 10.5,
+    "designedLiveMw": 42.9,
+    "pipelineMw": 230,
+    "totalSupplyMw": 272.9,
+    "cables": {
+      "tracked": 10,
+      "inService": 7,
+      "landedRfsPending": 1,
+      "inDevelopment": 2
+    },
+    "lastVerified": "2026-10"
+  },
+  "stages": [
+    {
+      "stage": "Operational",
+      "count": 20,
+      "mw": 42.9
+    },
+    {
+      "stage": "Under Construction",
+      "count": 3,
+      "mw": 77
+    },
+    {
+      "stage": "Committed",
+      "count": 1,
+      "mw": 53
+    },
+    {
+      "stage": "Early Stage",
+      "count": 3,
+      "mw": 100
+    }
+  ],
+  "lastVerified": "2026-10",
+  "kenyaFacilities": [
+    {
+      "name": "iXAfrica NBOX1",
+      "slug": "ixafrica-nbox1",
+      "operator": "iXAfrica Data Centres",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 22.5,
+      "itLoadMw": 4.5,
+      "tier": "III",
+      "aiReady": true,
+      "openedDate": "2024",
+      "expansionDate": null,
+      "notable": "Phase one (NBOX1.1) unveiled 28 February 2025 alongside a new KIXP point of presence, with LINX Nairobi also on site. Operator cites up to 40 kW per rack and a campus PUE target of 1.25. On 27 January 2026 iXAfrica announced it will host Oracle Cloud Infrastructure's Nairobi region, no launch date given. Official campus specs (retrieved 22 September 2026): NBOX1.1 live at 4.5 MW with 780 racks; NBOX1.2 adds 18 MW with 3,744 racks, for a campus design of 22.5 MW.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "iXAfrica, NBOX1 facility page",
+          "url": "https://ixafrica.co.ke/",
+          "kind": "operator"
+        },
+        {
+          "label": "iXAfrica, OCI Nairobi announcement (27 Jan 2026)",
+          "url": "https://ixafrica.co.ke/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/13572",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "iXAfrica NBOX1.2",
+      "slug": "ixafrica-nbox1-2",
+      "operator": "iXAfrica Data Centres",
+      "city": "Nairobi",
+      "status": "Under Construction",
+      "designedMw": 18,
+      "itLoadMw": null,
+      "tier": "III",
+      "aiReady": true,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Operator cites 18 MW and 3,744 racks for NBOX1.2, with design targets up to 50 kW per rack for AI workloads. Part of iXAfrica's announced 22.5 MW campus plan, backed by Actis investment.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "iXAfrica, campus plans and press releases",
+          "url": "https://ixafrica.co.ke/",
+          "kind": "operator"
+        },
+        {
+          "label": "DataCenterDynamics, iXAfrica coverage",
+          "url": "https://www.datacenterdynamics.com/en/search/?q=iXAfrica",
+          "kind": "press"
+        }
+      ]
+    },
+    {
+      "name": "iXAfrica NBOX2 (Tilisi)",
+      "slug": "ixafrica-tilisi",
+      "operator": "iXAfrica Data Centres",
+      "city": "Nairobi",
+      "status": "Committed",
+      "designedMw": 53,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": true,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Land acquired in August 2023 (11 acres) in the Tilisi development. Planned for over 53 MW of IT load, iXAfrica's medium-term growth vector after NBOX1.2.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "iXAfrica, official site (Tilisi campus announcements)",
+          "url": "https://ixafrica.co.ke/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Africa Data Centres Nairobi 1 (NBO1)",
+      "slug": "africa-dc-nairobi-1",
+      "operator": "Africa Data Centres",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 7.5,
+      "itLoadMw": null,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": "2019",
+      "expansionDate": null,
+      "notable": "Opened as East Africa Data Centre (EADC) and rebranded under Cassava Technologies, \"East Africa Data Centre\" and \"Africa Data Centres Nairobi\" are the same building. Operator states 2,000 m² of secured server space, \"available site capacity 7.5 MW\", four data halls certified Uptime Institute Tier 3, and PCI DSS (first in the region). Exchanges on site: KIXP Nairobi, LINX Nairobi, BGP.Exchange, PLUGINS IX.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "Africa Data Centres, Nairobi facility page",
+          "url": "https://www.africadatacentres.com/nairobi/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/1964",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "Africa Data Centres Nairobi 2 (planned expansion)",
+      "slug": "africa-dc-nairobi-2",
+      "operator": "Africa Data Centres",
+      "city": "Nairobi",
+      "status": "Under Construction",
+      "designedMw": 15,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Announced November 2021 (two further Nairobi facilities, the second up to 20 MW) with a $200m+ commitment; Sameer expansion broke ground January 2023.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "DataCenterDynamics, ADC Nairobi expansion coverage",
+          "url": "https://www.datacenterdynamics.com/en/search/?q=Africa+Data+Centres+Nairobi",
+          "kind": "press"
+        },
+        {
+          "label": "Africa Data Centres, facility list (only NBO1 listed as operating)",
+          "url": "https://www.africadatacentres.com/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Safaricom Data Centre (Waiyaki Way)",
+      "slug": "safaricom-dc-waiyaki",
+      "operator": "Safaricom",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 2,
+      "itLoadMw": 1.5,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": "2013",
+      "expansionDate": null,
+      "notable": "Supports M-Pesa (processes KES 20+ trillion annually), Safaricom's 4G/5G core, and enterprise cloud. Not carrier-neutral, primarily serves Safaricom's own services.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Safaricom, annual reports and investor disclosures",
+          "url": "https://www.safaricom.co.ke/investor-relations",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Safaricom Thika Data Centre",
+      "slug": "safaricom-thika",
+      "operator": "Safaricom",
+      "city": "Thika",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "The facility Safaricom registers on the PeeringDB facility register for network interconnection.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/5802",
+          "kind": "registry"
+        },
+        {
+          "label": "Safaricom, enterprise colocation",
+          "url": "https://www.safaricom.co.ke/business",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Safaricom Red Hill (Limuru) Campus",
+      "slug": "safaricom-red-hill",
+      "operator": "Safaricom",
+      "city": "Limuru",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": "2025",
+      "expansionDate": null,
+      "notable": "Described by Safaricom as a three-building campus \"built to Tier III standards\", with phase one completed in March 2025 and phase two targeted for January 2026.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Uptime Institute, public certification directory",
+          "url": "https://uptimeinstitute.com/tier-certification/tier-certification-list",
+          "kind": "gov"
+        },
+        {
+          "label": "Safaricom, investor disclosures (Red Hill campus)",
+          "url": "https://www.safaricom.co.ke/investor-relations",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Microsoft–G42 AI Data Centre",
+      "slug": "microsoft-g42-ai-dc",
+      "operator": "Safaricom",
+      "city": "Nairobi",
+      "status": "Early Stage",
+      "designedMw": 100,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": true,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Would be the largest single foreign direct investment in Kenya's digital infrastructure. Partnership between Microsoft and G42 (UAE-based AI company). Safaricom named as local partner.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Semafor, Microsoft/G42 Kenya exclusive",
+          "url": "https://www.semafor.com/",
+          "kind": "press"
+        },
+        {
+          "label": "Business Daily, Kenya coverage",
+          "url": "https://www.businessdailyafrica.com/",
+          "kind": "press"
+        }
+      ]
+    },
+    {
+      "name": "Telkom Kenya: Milimani Exchange",
+      "slug": "telkom-milimani-nairobi",
+      "operator": "Telkom Kenya",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Operator specifies 100+ racks of up to 52U rack height, 4 kW dual-input power per rack, and three diverse fibre routes to the site.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/6929",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "Telkom Kenya: Telephone House (Nairobi)",
+      "slug": "telkom-telephone-house-nairobi",
+      "operator": "Telkom Kenya",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": null,
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/6931",
+          "kind": "registry"
+        },
+        {
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Liquid Nairobi Data Centre",
+      "slug": "liquid-nairobi",
+      "operator": "Liquid Intelligent Technologies Kenya",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 1.5,
+      "itLoadMw": 1,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": "2018",
+      "expansionDate": null,
+      "notable": "Liquid (formerly Eaton/DBN) operates one of Africa's largest fibre networks spanning 100,000+ km across 13 countries. Parent company Cassava Technologies also owns Africa Data Centres.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Liquid Intelligent Technologies, Kenya",
+          "url": "https://www.liquid.tech/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "iColo Nairobi One (NBO1)",
+      "slug": "icolo-nbo1",
+      "operator": "iColo (Digital Realty)",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2019",
+      "expansionDate": null,
+      "notable": "iColo (a Digital Realty company) runs the largest facility count in Kenya. NBO1: 624 m² of customer space, 60+ connectivity providers and four internet exchanges on site per the operator; 30-day CCTV retention, PCI-DSS and ISO 27001 per the Digital Realty listing. Operator announced (Digital Realty launch PR, 7 Sep 2026, captured 10 Oct 2026) that iColo transitions to the Digital Realty brand in Kenya; the record retains iColo naming pending site-level rebrand evidence.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "iColo, Nairobi One facility page",
+          "url": "https://www.icolo.io/",
+          "kind": "operator"
+        },
+        {
+          "label": "Digital Realty, NBO1 listing",
+          "url": "https://www.digitalrealty.com/",
+          "kind": "operator"
+        },
+        {
+          "label": "Digital Realty, NBO2 launch press release (brand transition announcement; 7 Sep 2026; captured 10 Oct 2026)",
+          "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/6448",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "iColo Nairobi Two (NBO2)",
+      "slug": "icolo-nbo2",
+      "operator": "iColo (Digital Realty)",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 6.4,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2026",
+      "expansionDate": null,
+      "notable": "Launched 7 September 2026 at an event attended by ICT Principal Secretary John Tanui, who framed it as part of Kenya's push to become East Africa's leading digital hub. Designed to serve cloud providers, financial institutions, enterprises and ISPs. Developing Telecoms reported (August 2024) a 6.5 MW IT load within a master plan of three data centres; the Digital Realty listing describes a 3,600 m² building with 2N power, N+2 cooling, PCI-DSS, ISO 27001 and 90-day CCTV retention. Capacity is 6.4 MW per Digital Realty's launch announcement (7 September 2026); an earlier iColo X post (January 2026) and Developing Telecoms (August 2024) cited 6.5 MW IT load, recorded as a pre-launch discrepancy. Digital Realty's listing places NBO2 on the Karen campus about 300 m from NBO1. Digital Realty's launch PR (7 Sep 2026) also announces that iColo transitions to the Digital Realty brand in Kenya; the record retains iColo naming pending site-level rebrand evidence.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Capital FM (via allAfrica), NBO2 launch, 7 Sep 2026",
+          "url": "https://allafrica.com/stories/202609080028.html",
+          "kind": "press"
+        },
+        {
+          "label": "Digital Realty, NBO2 launch press release (7 Sep 2026; captured 10 Oct 2026)",
+          "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/14166",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "iColo Mombasa One (MBA1)",
+      "slug": "icolo-mba1",
+      "operator": "iColo (Digital Realty)",
+      "city": "Mombasa",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": 0.9,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2017",
+      "expansionDate": null,
+      "notable": "250 racks operational in 580 m², 80+ connectivity providers and three internet exchanges per the operator. iColo states the Miritini campus will eventually hold three data centres across 18,000 m², 13 MW and 1,800 racks. Current IT power on the 4,000 m² site is 0.9 MW per iColo's homepage. Correction (22 September 2026): the 13 MW figure is the planned Miritini campus total (three data centres, 1,800 racks), not an MBA1-only figure; MBA1 itself is documented at 250 racks and 580 sqm of customer space.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "iColo, Mombasa facility page",
+          "url": "https://www.icolo.io/locations/mombasa/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/5019",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "iColo Mombasa Two (MBA2)",
+      "slug": "icolo-mba2",
+      "operator": "iColo (Digital Realty)",
+      "city": "Mombasa",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": 1.75,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2022",
+      "expansionDate": null,
+      "notable": "1,200 m² of IT space on a 4,000 m² campus with 20+ networks, per iColo. Approximately 2 km to the nearest beach manhole, direct, short backhaul to submarine cable systems.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "iColo, locations",
+          "url": "https://www.icolo.io/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/10232",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "PAIX Nairobi (NBO-1)",
+      "slug": "paix-nairobi",
+      "operator": "PAIX Data Centres",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 1.5,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2020",
+      "expansionDate": null,
+      "notable": "At launch specified at 240 cabinets, 1.5 MVA total power, 690 m² of whitespace and a 99.982% uptime guarantee. PAIX's Kenya page confirms both KIXP and Nairobi-IX on site. Its central location is genuinely useful when your staff, your bank and your regulator are all within walking distance.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "PAIX, official site",
+          "url": "https://www.paix.io/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/7995",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "Konza National Data Centre",
+      "slug": "konza-national-dc",
+      "operator": "Konza Technopolis Development Authority (KoTDA)",
+      "city": "Konza",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": "III",
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Operated by the Konza Technopolis Development Authority (KoTDA). Primarily serves government workloads, not a mainstream commercial colocation option for a private business.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Uptime Institute, public certification directory",
+          "url": "https://uptimeinstitute.com/tier-certification/tier-certification-list",
+          "kind": "gov"
+        },
+        {
+          "label": "Konza Technopolis, National Data Centre",
+          "url": "https://konza.go.ke/",
+          "kind": "gov"
+        }
+      ]
+    },
+    {
+      "name": "Telkom Kenya: Telephone House (Mombasa)",
+      "slug": "telkom-telephone-house-mombasa",
+      "operator": "Telkom Kenya",
+      "city": "Mombasa",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Offers cross-connects to submarine cable systems. Telkom holds 23% of TEAMS, 10% of LION2 and 2.6% of EASSy, it is a cable landing party first and a colocation vendor second.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/6930",
+          "kind": "registry"
+        },
+        {
+          "label": "Telkom Kenya, wholesale data centre services",
+          "url": "https://telkom.co.ke/business/wholesale-content/data-centre",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "SEACOM Mombasa Cable Landing Station",
+      "slug": "seacom-mombasa-cls",
+      "operator": "SEACOM",
+      "city": "Mombasa",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": "2009",
+      "expansionDate": null,
+      "notable": "SEACOM was the first private submarine cable to serve East Africa (2009). The landing station itself is registered on PeeringDB with 30+ networks, a measure of how much traffic is handed over here.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "High",
+      "sources": [
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/1648",
+          "kind": "registry"
+        },
+        {
+          "label": "SEACOM, network and landing stations",
+          "url": "https://www.seacom.mu/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "SimbaNET Nairobi",
+      "slug": "simbanet-nairobi",
+      "operator": "SimbaNET Kenya",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": null,
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "PeeringDB facility record (fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/fac/4533",
+          "kind": "registry"
+        },
+        {
+          "label": "SimbaNET Kenya",
+          "url": "https://www.simbanet.co.ke/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Raxio Nairobi (unverified)",
+      "slug": "raxio-nairobi",
+      "operator": "Raxio Data Centres",
+      "city": "Nairobi",
+      "status": "Early Stage",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Raxio Group is backed by IFC investment and operates facilities in Uganda, Ethiopia and elsewhere. Its Kenyan entry remains unconfirmed at facility level.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Low",
+      "sources": [
+        {
+          "label": "Raxio Group, company site",
+          "url": "https://www.raxio.com/",
+          "kind": "operator"
+        },
+        {
+          "label": "PeeringDB Kenya register (no Raxio facility listed, fetched 8 Sep 2026)",
+          "url": "https://www.peeringdb.com/api/fac?country=KE",
+          "kind": "registry"
+        }
+      ]
+    },
+    {
+      "name": "Septris Data Centre",
+      "slug": "septris-nairobi",
+      "operator": "Septris EO Ltd",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 0.5,
+      "itLoadMw": 0.3,
+      "tier": "II",
+      "aiReady": false,
+      "openedDate": "2016",
+      "expansionDate": null,
+      "notable": null,
+      "lastVerified": "2026-09",
+      "dataConfidence": "Low",
+      "sources": [
+        {
+          "label": "Septris EO Ltd",
+          "url": "https://septris.co.ke/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Global TS Data Centre",
+      "slug": "global-ts-nairobi",
+      "operator": "Global Telecommunications & Services",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 0.5,
+      "itLoadMw": 0.3,
+      "tier": "II",
+      "aiReady": false,
+      "openedDate": "2015",
+      "expansionDate": null,
+      "notable": null,
+      "lastVerified": "2026-10",
+      "dataConfidence": "Low",
+      "sources": [
+        {
+          "label": "Global Telecommunications & Services",
+          "url": "https://www.global-ts.com/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Wananchi Group Data Centre",
+      "slug": "wananchi-nairobi",
+      "operator": "Wananchi Group",
+      "city": "Nairobi",
+      "status": "Operational",
+      "designedMw": 0.5,
+      "itLoadMw": 0.2,
+      "tier": "II",
+      "aiReady": false,
+      "openedDate": "2012",
+      "expansionDate": null,
+      "notable": "Primarily supports Wananchi's Zuku fibre and cable TV consumer services rather than commercial colocation.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Low",
+      "sources": [
+        {
+          "label": "Wananchi Group / Zuku",
+          "url": "https://www.zuku.co.ke/",
+          "kind": "operator"
+        }
+      ]
+    },
+    {
+      "name": "Kenya Data Centres SME Facility",
+      "slug": "kenya-data-centres-sme",
+      "operator": "Kenya Data Centres (ICT Authority)",
+      "city": "Nairobi",
+      "status": "Early Stage",
+      "designedMw": null,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "notable": "Announced plans targeting Kenya's SME colocation segment, an underserved tier between enterprise carriers and hyperscale campuses. Capacity and site undisclosed.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Low",
+      "sources": [
+        {
+          "label": "Kenya ICT Authority, digital infrastructure programmes",
+          "url": "https://www.ict.go.ke/",
+          "kind": "gov"
+        }
+      ]
+    },
+    {
+      "name": "Nxtra by Airtel Tatu City",
+      "slug": "nxtra-tatu-city",
+      "operator": "Nxtra by Airtel",
+      "city": "Ruiru",
+      "status": "Under Construction",
+      "designedMw": 44,
+      "itLoadMw": null,
+      "tier": null,
+      "aiReady": true,
+      "openedDate": null,
+      "expansionDate": "2027",
+      "notable": "Groundwork reported from September 2025 (Airtel/Nxtra groundbreaking coverage). Original commissioning target was Q1 2027, which would have made it East Africa's largest facility; August 2026 reporting (EdgeX Exchange) indicates launch has slipped to July 2027. Kenya News Agency coverage (September 2026, during a government visit) reiterated the facility's scale and East Africa-largest framing. Total investment reported at $150 million, delivered in two 22 MW phases.",
+      "lastVerified": "2026-10",
+      "dataConfidence": "Medium",
+      "sources": [
+        {
+          "label": "Airtel Africa, Tatu City data centre announcements",
+          "url": "https://www.airtel.africa/",
+          "kind": "operator"
+        },
+        {
+          "label": "Eng. John K. Tanui (PS ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub (15 Sep 2026; 44 MW in two phases, commissioning targeted 2027)",
+          "url": "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf",
+          "kind": "gov"
+        },
+        {
+          "label": "DataCenterDynamics, Nxtra Kenya coverage (groundbreaking reported 12 Sep 2025; US$150M)",
+          "url": "https://www.datacenterdynamics.com/en/search/?q=Nxtra+Kenya",
+          "kind": "press"
+        }
+      ]
+    }
+  ],
+  "cables": [
+    {
+      "name": "TEAMS",
+      "status": "In service",
+      "rfsDate": "2009",
+      "kenyanLandings": [
+        "Mombasa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "SEACOM",
+      "status": "In service",
+      "rfsDate": "2009",
+      "kenyanLandings": [
+        "Mombasa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "EASSy",
+      "status": "In service",
+      "rfsDate": "2010",
+      "kenyanLandings": [
+        "Mombasa (branch)"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "LION2",
+      "status": "In service",
+      "rfsDate": "2012",
+      "kenyanLandings": [
+        "Mombasa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "DARE1",
+      "status": "In service",
+      "rfsDate": "2021",
+      "kenyanLandings": [
+        "Mombasa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "PEACE",
+      "status": "In service",
+      "rfsDate": "2022",
+      "kenyanLandings": [
+        "Mombasa (branch)"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "Medium"
+    },
+    {
+      "name": "2Africa",
+      "status": "In service",
+      "rfsDate": "2024",
+      "kenyanLandings": [
+        "Mombasa",
+        "Mtwapa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "High"
+    },
+    {
+      "name": "Africa-1",
+      "status": "Landed, RFS pending",
+      "rfsDate": null,
+      "kenyanLandings": [
+        "Mombasa"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "Medium"
+    },
+    {
+      "name": "Daraja",
+      "status": "Announced",
+      "rfsDate": null,
+      "kenyanLandings": [
+        "Mombasa (planned)"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "Medium"
+    },
+    {
+      "name": "LuLu",
+      "status": "Planned",
+      "rfsDate": null,
+      "kenyanLandings": [
+        "Mombasa to Lamu coastal corridor: Vipingo SEZ, Kilifi, Malindi"
+      ],
+      "lastVerified": "2026-09",
+      "confidence": "Medium"
+    }
+  ],
+  "licensing": [
+    {
+      "regime": "NFP-T2 (Network Facilities Provider Tier 2)",
+      "status": "Current"
+    },
+    {
+      "regime": "Standalone Data Centre licence (proposed)",
+      "status": "Proposed"
+    },
+    {
+      "regime": "Data Protection Act 2019 obligations (ODPC)",
+      "status": "Current"
+    }
+  ]
+}

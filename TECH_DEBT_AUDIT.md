@@ -54,7 +54,7 @@ This model matches the README's claims; no drift found between documented and ac
 - [x] F008 safeJsonLd helper + 15-site swap (S, Medium)
 - [x] F011 generate llms-full.txt at build + cache headers (S, Low)
 - [x] F005 vitest + `npm test` + 13 smoke tests (M, High)
-- [ ] Wire `npm test` into CI alongside eslint + build when CI config is next touched (S)
+- [x] Wire `npm test` into CI alongside eslint + build — done in .github/workflows/ci.yml (audit O02, CI run e353825 green)
 
 ## Things that look bad but are actually fine
 

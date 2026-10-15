@@ -22,19 +22,20 @@ const sections = [
     body: [
       "Briefing subscriptions. When you subscribe to The Rack Report, our monthly intelligence briefing, we collect your email address, the page or campaign you subscribed from, and an optional, self-declared role descriptor (for example \"investor\" or \"journalist\") and organisation name you may choose to provide. Subscribing is a two-step, double opt-in process: your request is stored locally and a confirmation email is sent with a signed, single-purpose link - your address is only added to the briefing list after you follow that link, and only then is it shared with Resend, our email service provider. The role and organisation fields are entirely optional and are used only in aggregate, anonymised form to describe our audience to prospective sponsors. You can unsubscribe at any time using the link in every briefing email; unsubscribing erases the personal details in your subscription record (email, role, organisation, source) immediately, leaving only an anonymised placeholder so the same address is not counted twice.",
       "Contact form messages. When you contact us through the contact form, we receive your name, email address, subject, and message. This is delivered to our email inbox through Resend and is used solely to respond to you.",
+      "Opportunity Brief enquiries. When you request the Kenya Data Centre Opportunity Brief through /opportunity-brief, we collect your name, work email address, and (optionally) your organisation, role, the buyer category you select, the decision question you type, and your preferred format. We use this solely to reply to you, confirm scope and pricing, and deliver the brief you asked about. Enquiries are stored in our hosting infrastructure's data store (Upstash Redis) with a reference number shown to you, are never used for marketing lists, and are automatically erased two years after the enquiry. Asking us to delete an enquiry earlier erases it immediately.",
       "Analytics and consent. We use Google Analytics 4 and Microsoft Clarity to understand aggregate site usage - pages visited, approximate location (country/city), device and browser type, and referring sources, plus Clarity's heatmaps and scroll-depth data. Neither tool loads until you agree through the consent banner shown on your first visit; your choice is stored on your device, applies across visits, and analytics stay off entirely if you decline. The site remains fully functional either way. GA4 may use cookies and collects IP addresses, which Google truncates/anonymises for GA4 properties. Clarity is cookieless, masks all text that visitors type, records no form entries or passwords, and sets no cookies.",
     ],
   },
   {
     title: "3. What We Do NOT Collect",
     body: [
-      "We do not require accounts or logins, DC254 is a read-only publication. We do not collect names, phone numbers, or payment details through this website. We do not sell, rent, or trade your personal data to anyone, and we do not use your data for automated decision-making or profiling.",
+      "We do not require accounts or logins; apart from the briefing subscription and the enquiry forms described above, DC254 is a read-only publication. Apart from those forms, we do not collect names or phone numbers. We do not collect payment details through this website (pilot purchases are invoiced through direct communication instead). We do not sell, rent, or trade your personal data to anyone, and we do not use your data for automated decision-making or profiling.",
     ],
   },
   {
     title: "4. Third-Party Services",
     body: [
-      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Resend (briefing contact storage and email delivery), Google Analytics 4 (aggregate audience analytics), and Microsoft Clarity (cookieless, masked usage analytics). Each processes data on our instructions under its own privacy terms.",
+      "We rely on a small number of processors to run the site: Vercel (web hosting and content delivery), Upstash (data storage for subscription records, enquiry records, rate-limit counters and aggregate click tallies), Resend (briefing contact storage and email delivery), Google Analytics 4 (aggregate audience analytics), and Microsoft Clarity (cookieless, masked usage analytics). Each processes data on our instructions under its own privacy terms.",
     ],
   },
   {
@@ -46,7 +47,7 @@ const sections = [
   {
     title: "6. How Long We Keep Data",
     body: [
-      "Briefing contacts are kept until you unsubscribe or ask us to delete them; unsubscribing erases the personal details of the record immediately, leaving an anonymised placeholder. Unconfirmed (double opt-in) signup requests that are never verified are treated as abandoned and erased after 60 days. Contact form correspondence is kept for as long as needed to handle your enquiry and for our records. Analytics data, where consented to, is retained by Google according to its standard retention settings.",
+      "Briefing contacts are kept until you unsubscribe or ask us to delete them; unsubscribing erases the personal details of the record immediately, leaving an anonymised placeholder. Unconfirmed (double opt-in) signup requests that are never verified are treated as abandoned and erased automatically after 60 days. Opportunity Brief enquiries are kept for up to two years from the enquiry date, then erased automatically; quote your reference number and we will erase one earlier on request. Contact form correspondence is kept for as long as needed to handle your enquiry and for our records. Analytics data, where consented to, is retained by Google according to its standard retention settings.",
     ],
   },
   {
@@ -59,7 +60,7 @@ const sections = [
   {
     title: "8. Changes to This Policy",
     body: [
-      "We may update this policy as the platform grows. Material changes will be reflected on this page with a revised effective date. This policy was last revised on 19 September 2026.",
+      "We may update this policy as the platform grows. Material changes will be reflected on this page with a revised effective date. This policy was last revised on 15 October 2026.",
     ],
   },
 ];
@@ -73,7 +74,7 @@ export default function PrivacyPage() {
           <p className="text-section-label mb-4">Legal</p>
           <h1 className="text-display-sm text-foreground mb-4">Privacy Policy</h1>
           <p className="text-sm text-muted-foreground mb-12">
-            Effective 29 August 2026 · Revised 19 September 2026 · data-centers-254.vercel.app
+            Effective 29 August 2026 · Revised 15 October 2026 · data-centers-254.vercel.app
           </p>
 
           <div className="space-y-10">

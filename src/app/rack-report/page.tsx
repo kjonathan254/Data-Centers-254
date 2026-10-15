@@ -375,6 +375,30 @@ export default function RackReportPage() {
             </div>
           </div>
         </section>
+
+        {/* Commercial cross-link: briefing -> decision product */}
+        <section className="section-y">
+          <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div className="rounded-xl border border-border/50 bg-card/60 p-6 sm:p-8">
+              <h2 className="text-lg font-semibold text-foreground mb-3">
+                Need to decide where to focus, not just stay current?
+              </h2>
+              <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-5">
+                The Rack Report keeps you current every month. The Kenya Data
+                Centre Opportunity Brief is the next step: a short, sourced
+                brief on one decision question, such as where usable capacity
+                is most likely to emerge next. A redacted sample shows exactly
+                how each signal is presented.
+              </p>
+              <Link
+                href="/opportunity-brief"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 h-11 text-sm font-medium text-foreground hover:border-cyan/40 hover:text-cyan transition-all"
+              >
+                See the Opportunity Brief
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

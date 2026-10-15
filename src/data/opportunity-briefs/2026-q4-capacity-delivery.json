@@ -1,0 +1,171 @@
+{
+  "id": "ob-2026-q4-capacity-delivery",
+  "edition": "Pilot 01",
+  "title": "Kenya capacity and delivery signals",
+  "decisionQuestion": "Where is usable data-centre capacity most likely to emerge next in Kenya?",
+  "headline": "Kenya's next capacity story is concentrated, staged and not yet fully live.",
+  "oneLineAnswer": "The immediate opportunity sits with facilities already operating or under construction in Nairobi and Ruiru; the largest early-stage announcements are watchlist signals, not evidence of demand.",
+  "audience": ["vendor", "investor", "operator", "consultant", "technology-provider", "policy-research"],
+  "intendedBuyers": "Infrastructure vendors, investors, operators, consultants and technology providers assessing where Kenya's data-centre capacity is actually delivering.",
+  "verifiedThrough": "2026-10",
+  "publishedAt": "2026-10-31",
+  "lastUpdated": "2026-10-15",
+  "status": "pilot-sample",
+  "format": "4-6 page PDF plus evidence appendix",
+  "dataset": {
+    "source": "DC254 Data Centre Directory, versioned dataset (src/data/directory/current.json)",
+    "note": "Market-level figures (facility counts, MW, cable counts) are never stored here; they render live from the same canonical accessors the directory and tracker use, so the brief can never drift from the public data."
+  },
+  "signals": [
+    {
+      "id": "SIG-01",
+      "signal": "iColo Nairobi Two (NBO2) launched as live capacity in September 2026",
+      "project": "iColo Nairobi Two (NBO2)",
+      "organisation": "iColo (Digital Realty)",
+      "location": "Karen campus, Nairobi (about 300 m from NBO1)",
+      "status": "Operational",
+      "whatChanged": "Digital Realty's launch announcement of 7 September 2026 confirms NBO2 as operational at 6.4 MW designed capacity, on a campus with 2N power and N+2 cooling; the launch PR also states iColo transitions to the Digital Realty brand in Kenya.",
+      "sources": [
+        { "label": "Digital Realty, NBO2 launch press release (7 Sep 2026; captured 10 Oct 2026)", "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center", "kind": "operator" },
+        { "label": "Capital FM (via allAfrica), NBO2 launch, 7 Sep 2026", "url": "https://allafrica.com/stories/202609080028.html", "kind": "press" },
+        { "label": "PeeringDB facility record (fetched 8 Sep 2026)", "url": "https://www.peeringdb.com/fac/14166", "kind": "registry" }
+      ],
+      "supplierRelevance": "A newly operational facility moves the supplier conversation from project bidding to operations and phase two: ongoing maintenance, monitoring, spares, and any expansion fit-out. Vendors of power distribution, cooling service and monitoring should treat NBO2 as a live account, not a prospect.",
+      "confidence": "Medium",
+      "confidenceReason": "Launch is operator-announced and independently reported; the 6.4 MW figure is from the launch PR while an earlier 6.5 MW IT-load figure from 2024 is recorded as a pre-launch discrepancy.",
+      "nextQuestion": "Verify whether a second phase or hall expansion is scheduled, and who holds the maintenance contracts for the live plant.",
+      "lastChecked": "2026-10"
+    },
+    {
+      "id": "SIG-02",
+      "signal": "iXAfrica NBOX1.2 adds 18 MW of high-density capacity under construction in Nairobi",
+      "project": "iXAfrica NBOX1.2",
+      "organisation": "iXAfrica Data Centres",
+      "location": "Nairobi (NBOX campus)",
+      "status": "Under construction",
+      "whatChanged": "Operator campus specifications (retrieved 22 September 2026) cite NBOX1.2 at 18 MW and 3,744 racks with design targets up to 50 kW per rack for AI workloads, completing a 22.5 MW campus with the operational NBOX1.1 (4.5 MW live).",
+      "sources": [
+        { "label": "iXAfrica, campus plans and specifications (retrieved 22 Sep 2026)", "url": "https://ixafrica.co.ke/", "kind": "operator" },
+        { "label": "DataCenterDynamics, iXAfrica coverage", "url": "https://www.datacenterdynamics.com/en/search/?q=iXAfrica", "kind": "press" },
+        { "label": "PeeringDB facility record (fetched 8 Sep 2026)", "url": "https://www.peeringdb.com/fac/13572", "kind": "registry" }
+      ],
+      "supplierRelevance": "3,744 racks at up to 50 kW per rack implies liquid or high-density cooling, high-capacity busway and power trains, and structured cabling at rack scale. The construction stage is the window in which those specifications are still being finalised with the developer.",
+      "confidence": "Medium",
+      "confidenceReason": "Specifications are operator-cited and consistent with credible trade coverage, but no independent commissioning milestone has been published yet.",
+      "nextQuestion": "Ask the developer for the hall handover sequence and which phase of NBOX1.2 procurement is still open.",
+      "lastChecked": "2026-10"
+    },
+    {
+      "id": "SIG-03",
+      "signal": "Nxtra by Airtel Tatu City: commissioning timing has slipped to July 2027",
+      "project": "Nxtra by Airtel Tatu City",
+      "organisation": "Nxtra by Airtel",
+      "location": "Tatu City, Ruiru (Kiambu County)",
+      "status": "Under construction",
+      "whatChanged": "Groundwork has been reported since September 2025 and government visits in September 2026 reiterated the facility's scale, but August 2026 reporting indicates the launch has slipped from the original Q1 2027 target to July 2027. US$150 million total investment across two 22 MW phases.",
+      "sources": [
+        { "label": "Eng. John K. Tanui (PS ICT and Digital Economy), Positioning Kenya as Africa's Preferred Data-Centre and Compute Hub (15 Sep 2026)", "url": "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf", "kind": "gov" },
+        { "label": "DataCenterDynamics, Nxtra Kenya coverage (groundbreaking reported 12 Sep 2025; US$150M)", "url": "https://www.datacenterdynamics.com/en/search/?q=Nxtra+Kenya", "kind": "press" },
+        { "label": "Airtel Africa, Tatu City data centre announcements", "url": "https://www.airtel.africa/", "kind": "operator" }
+      ],
+      "supplierRelevance": "A slipped date compresses later procurement windows: vendors quoting against a Q1 2027 assumption should re-qualify timing before committing pipeline. The two-phase structure means two procurement cycles, not one.",
+      "confidence": "Medium",
+      "confidenceReason": "Scale is corroborated by government and trade sources; the slipped date rests on single-trade-press reporting and should be confirmed with the developer.",
+      "nextQuestion": "Confirm the current commissioning date for phase one directly, and whether phase-two procurement runs in parallel or sequential.",
+      "lastChecked": "2026-10"
+    },
+    {
+      "id": "SIG-04",
+      "signal": "Africa-1 submarine cable has landed at Mombasa but is not yet counted as live",
+      "project": "Africa-1 submarine cable system",
+      "organisation": "Telecom Egypt-led consortium",
+      "location": "Mombasa landing",
+      "status": "Landed, RFS pending",
+      "whatChanged": "The cable has come ashore at Mombasa, but its ready-for-service date has not been announced, so DC254 does not count it among the seven live systems yet.",
+      "sources": [
+        { "label": "Africa-1 Submarine Cable System (consortium site)", "url": "https://www.africa-1.africa/", "kind": "operator" }
+      ],
+      "supplierRelevance": "An eighth live system changes the redundancy and bandwidth math for every Nairobi operator; terrestrial backhaul and interconnection vendors should watch for RFS rather than the landing announcement.",
+      "confidence": "Medium",
+      "confidenceReason": "Landing is consortium-reported; ready-for-service is not yet announced.",
+      "nextQuestion": "Watch for the RFS announcement, then re-check which operators are offering capacity on the system.",
+      "lastChecked": "2026-09"
+    },
+    {
+      "id": "SIG-05",
+      "signal": "Microsoft-G42 100 MW AI data centre remains an announced early-stage project",
+      "project": "Microsoft-G42 AI Data Centre",
+      "organisation": "Microsoft and G42, with Safaricom named as local partner",
+      "location": "Nairobi (site not independently confirmed)",
+      "status": "Early stage",
+      "whatChanged": "No new construction, financing or customer milestone has been verified since the partnership announcements; the 100 MW figure is the developer-announced design, not published demand.",
+      "sources": [
+        { "label": "Semafor, Microsoft/G42 Kenya exclusive", "url": "https://www.semafor.com/", "kind": "press" },
+        { "label": "Business Daily, Kenya coverage", "url": "https://www.businessdailyafrica.com/", "kind": "press" }
+      ],
+      "supplierRelevance": "Treat as a market-direction signal, not a sales target. No procurement programme is evidenced; engaging now means positioning and relationship-building, not quoting.",
+      "confidence": "Medium",
+      "confidenceReason": "Widely reported by credible press, but no operator-published milestone or independent corroboration of the 100 MW design has been verified.",
+      "nextQuestion": "Look for land, financing, construction or customer-evidence milestones before treating this as a live opportunity.",
+      "lastChecked": "2026-10"
+    }
+  ],
+  "watchlist": [
+    {
+      "item": "iXAfrica NBOX1.2 construction milestones",
+      "trigger": "Hall handover, first commissioning or a published energisation date",
+      "timeframe": "Sourced dates only; none published yet",
+      "confidence": "Medium"
+    },
+    {
+      "item": "Nxtra Tatu City phase-one commissioning",
+      "trigger": "Confirmed commissioning date replacing the reported July 2027 slip",
+      "timeframe": "Reported July 2027 (single trade source, unconfirmed)",
+      "confidence": "Medium"
+    },
+    {
+      "item": "Africa-1 ready-for-service",
+      "trigger": "RFS announcement at the Mombasa landing",
+      "timeframe": "Not announced",
+      "confidence": "Medium"
+    },
+    {
+      "item": "CA standalone data-centre licence framework",
+      "trigger": "Final instrument, effective date or operator guidance after the public consultation",
+      "timeframe": "Consultation opened 8 September 2026; outcome not yet published",
+      "confidence": "Medium"
+    },
+    {
+      "item": "Microsoft-G42 AI data centre",
+      "trigger": "Land, financing, construction or customer evidence",
+      "timeframe": "None sourced",
+      "confidence": "Low until corroborated"
+    },
+    {
+      "item": "Operator capacity disclosure",
+      "trigger": "Any operator publishing live IT load or commissioned capacity, which DC254 records immediately",
+      "timeframe": "Continuous",
+      "confidence": "High when directly published"
+    }
+  ],
+  "sourcesRegister": [
+    { "label": "Digital Realty, NBO2 launch press release (7 Sep 2026)", "url": "https://www.digitalrealty.com/about/newsroom/press-releases/3357028/digital-realty-strengthens-nairobi-as-east-africa-digital-gateway-with-new-data-center", "kind": "operator", "usedFor": "SIG-01" },
+    { "label": "iXAfrica, campus plans and specifications (retrieved 22 Sep 2026)", "url": "https://ixafrica.co.ke/", "kind": "operator", "usedFor": "SIG-02" },
+    { "label": "Eng. John K. Tanui (PS ICT), Kenya compute-hub positioning (15 Sep 2026)", "url": "https://www.linkedin.com/pulse/positioning-kenya-africas-preferred-data-centre-hub-tanui-cbs-ic3jf", "kind": "gov", "usedFor": "SIG-03" },
+    { "label": "DataCenterDynamics, Nxtra Kenya coverage", "url": "https://www.datacenterdynamics.com/en/search/?q=Nxtra+Kenya", "kind": "press", "usedFor": "SIG-03" },
+    { "label": "Africa-1 consortium site", "url": "https://www.africa-1.africa/", "kind": "operator", "usedFor": "SIG-04" },
+    { "label": "Semafor / Business Daily, Microsoft-G42 Kenya coverage", "url": "https://www.semafor.com/", "kind": "press", "usedFor": "SIG-05" },
+    { "label": "PeeringDB facility records (fetched 8 Sep 2026)", "url": "https://www.peeringdb.com/", "kind": "registry", "usedFor": "SIG-01, SIG-02" }
+  ],
+  "redactedFields": [
+    "Buyer-specific target lists",
+    "Procurement triggers and named contacts",
+    "Commercial prioritisation scores",
+    "Private contact details",
+    "Sensitive site-security details",
+    "Internal scoring logic and buyer-lens rankings"
+  ],
+  "methodologyNote": "Every facility, cable and licensing record in this brief comes from DC254's versioned dataset, where each claim carries named sources, a last-verified month and a confidence grade. Reported claims are labelled as reported; DC254 estimates say so; a record is never quietly deleted, it gets a divergence note. Market-level figures in the sample are generated from the same dataset the public directory renders.",
+  "limitations": "Kenya coverage is the scope of this edition; four East Africa reference records exist in the directory but are excluded from Kenyan figures. Capacity is designed (developer-stated) unless explicitly labelled as published IT load. Announced pipeline figures are not demand.",
+  "privacyVersion": "2026-10-15"
+}
