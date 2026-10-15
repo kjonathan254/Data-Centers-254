@@ -24,15 +24,19 @@ export async function POST(request: NextRequest) {
   }
 
   const contentType = request.headers.get("content-type") ?? "";
-  // The browser SDK posts envelopes as text/plain (a CORS-safelisted type, so
-  // its direct-to-ingest fallback needs no preflight); the tunnel inherits
-  // that behaviour. Callers scripting the canonical type are also accepted.
-  // Either way the destination below is pinned to the configured DSN, so this
-  // check is hygiene — the real open-relay defence is the pinned destination.
-  if (
-    !contentType.includes("application/x-sentry-envelope") &&
-    !contentType.startsWith("text/plain")
-  ) {
+  // Three legitimate shapes, observed against the real SDK (2026-10-15):
+  //  - text envelopes: text/plain (fetch's default for string bodies, chosen
+  //    by the SDK because it is CORS-safelisted);
+  //  - binary-serialized envelopes — compressed replay segments — go out with
+  //    NO content-type header at all (fetch omits it for Uint8Array bodies);
+  //  - hand-scripted callers: the canonical application/x-sentry-envelope.
+  // Anything else is refused. The destination below is pinned to the
+  // configured DSN — that, not this check, is the open-relay defence.
+  const contentTypeAllowed =
+    contentType.startsWith("text/plain") ||
+    contentType.includes("application/x-sentry-envelope") ||
+    contentType.length === 0;
+  if (!contentTypeAllowed) {
     return NextResponse.json({ error: "Unexpected content type" }, { status: 415 });
   }
 
