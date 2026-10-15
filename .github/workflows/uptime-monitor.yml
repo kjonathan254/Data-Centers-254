@@ -6,21 +6,12 @@
 # (GitHub's default notification for failed scheduled runs), which is the
 # alerting channel with zero extra accounts or credentials.
 #
-# What it checks (single source of truth: the health contract):
-#   - HTTP 200 + ok:true                       → the site is up
-#   - rateLimiting == "persistent"             → Redis env still wired; a
-#                                                silent flip to "memory"
-#                                                (removed var, wrong scope)
-#                                                pages the owner
-#   - emailStack.subscribeSecret == true       → newsletter double opt-in
-#                                                signing still configured
-#   - redis.reachable != false                 → the limiter's live PING
-#                                                still reaches Upstash
-#                                                (P0-6: degradation visible)
+# All probe logic lives in scripts/uptime_probe.py (kept out of YAML so the
+# assertions are testable locally with plain `python3 scripts/uptime_probe.py`).
+# It checks the /api/health contract: ok:true, rateLimiting == "persistent",
+# emailStack.subscribeSecret == true, and redis.reachable != false (P0-6).
 #
-# Transient network blips shouldn't page anyone: two attempts, 15s apart,
-# before the run fails. NOTE: resubscribe-alerts = depends on GitHub email
-# notifications for the owner being enabled (default on).
+# Transient blips don't page anyone: two attempts, 15s apart, inside the script.
 
 name: Uptime monitor
 
@@ -39,35 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Probe /api/health (2 attempts)
-        run: |
-          set -uo pipefail
-          URL="https://data-centers-254.vercel.app/api/health"
-          for attempt in 1 2; do
-            BODY=$(curl -sS --max-time 20 "${URL}?cb=$(date +%s)" 2>/dev/null) && \
-            echo "$BODY" | python3 -c '
-import json, sys
-d = json.load(sys.stdin)
-problems = []
-if d.get("ok") is not True:
-    problems.append("health ok != true")
-if d.get("rateLimiting") != "persistent":
-    problems.append(f"rateLimiting degraded: {d.get(\"rateLimiting\")!r}")
-es = d.get("emailStack") or {}
-if es.get("subscribeSecret") is not True:
-    problems.append("subscribeSecret missing in production")
-redis = d.get("redis")
-if isinstance(redis, dict) and redis.get("reachable") is False:
-    problems.append(f"Redis unreachable from runtime (latencyMs={redis.get(\"latencyMs\")})")
-if problems:
-    print("HEALTH CHECK FAILED:")
-    for p in problems:
-        print(" -", p)
-    sys.exit(1)
-print("uptime check passed | redis:", redis)
-' && exit 0
-            echo "attempt $attempt failed; retrying in 15s" >&2
-            sleep 15
-          done
-          echo "Both probe attempts failed - production unreachable or degraded" >&2
-          exit 1
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Probe production health
+        run: python3 scripts/uptime_probe.py
