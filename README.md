@@ -11,7 +11,11 @@ Live at [data-centers-254.vercel.app](https://data-centers-254.vercel.app).
 ## What It Does
 
 - **DC Directory** — Verified directory of Kenya's data centre facilities plus the first East Africa regional records (Tanzania, Uganda, Rwanda), from a versioned, quarterly-snapshotted dataset (`src/data/directory/`)
-- **111 Articles** — Researched explainers across 8 clusters: Beginner, Kenya, Internet, Energy, AI, Careers, Infrastructure, Policy
+<<<<<<< HEAD
+- **112 Articles** — Researched explainers across 8 clusters: Beginner, Kenya, Internet, Energy, AI, Careers, Infrastructure, Policy
+=======
+- **112 Articles** — Researched explainers across 8 clusters: Beginner, Kenya, Internet, Energy, AI, Careers, Infrastructure, Policy
+>>>>>>> 7e68292 (content: 15 Oct market update - Tanzania LNG nears final agreements, AI infrastructure debt repriced, tracker holds)
 - **Market Trackers** — Capacity pipeline (`/tracker`), subsea cables (`/tracker/cables`), power tariffs (`/tracker/power`) and licensing (`/tracker/licensing`), every row sourced and dated
 - **State of the Market** — Quarterly report with a frozen dataset snapshot and a free CC BY dataset bundle (`/research/state-of-the-market-2026-q3`)
 - **Search** — Unified search across articles and facilities
@@ -75,7 +79,11 @@ src/
 │       ├── current.json     #   live dataset (31 facilities, 18 operators)
 │       └── snapshots/       #   frozen quarterly snapshots (2026-Q3.json)
 content/
-└── articles/                # 111 markdown articles with YAML frontmatter
+<<<<<<< HEAD
+└── articles/                # 112 markdown articles with YAML frontmatter
+=======
+└── articles/                # 112 markdown articles with YAML frontmatter
+>>>>>>> 7e68292 (content: 15 Oct market update - Tanzania LNG nears final agreements, AI infrastructure debt repriced, tracker holds)
 ```
 
 ## Newsletter & Contact (Resend)
