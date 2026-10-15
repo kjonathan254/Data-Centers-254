@@ -4,11 +4,16 @@
  * Analytics consent gate (Kenya DPA 2019 / GDPR friendly).
  *
  * Google Analytics 4 and Microsoft Clarity are NOT loaded until the visitor
- * explicitly agrees via the on-site banner. The choice is stored on the
+ * explicitly agrees via the on-site banner. Sentry Session Replay (browser
+ * session recording for debugging) rides the same switch: src/
+ * instrumentation-client.ts only attaches the replay integration after this
+ * choice is "1", and listens for dc254:consent-granted / dc254:consent-reset
+ * to attach or stop recording mid-session. The choice is stored on the
  * visitor's device (localStorage) and can be changed any time by clearing
  * site data. Declining leaves the site fully functional - analytics are the
- * only thing gated. Vercel Analytics (<Analytics /> in the layout) stays on
- * unconditionally: it is cookieless and sets no identifiers.
+ * only thing gated (Sentry error monitoring stays on: it is operational
+ * telemetry, not analytics). Vercel Analytics (<Analytics /> in the layout)
+ * stays on unconditionally: it is cookieless and sets no identifiers.
  *
  * Note: GA4 sets cookies; Clarity is cookieless but still behavioural, so
  * both sit behind the same yes/no choice rather than a granular CMP.
@@ -63,6 +68,12 @@ export default function ConsentGate() {
       // Private-mode storage quota errors: treat as session-only choice.
     }
     setConsent(value === "1" ? "granted" : "denied");
+    // Sentry Session Replay attaches to the live session the moment consent
+    // is granted (listener in src/instrumentation-client.ts); withdrawal is
+    // handled by dc254:consent-reset, which also fires below via the footer.
+    if (value === "1") {
+      window.dispatchEvent(new Event("dc254:consent-granted"));
+    }
   }
 
   return (
@@ -97,7 +108,8 @@ export default function ConsentGate() {
           className="fixed bottom-3 left-3 right-3 z-[100] mx-auto flex max-w-2xl flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-white/10 bg-[#0b1e3c]/95 px-4 py-3 shadow-2xl backdrop-blur sm:bottom-4 sm:left-4 sm:right-auto"
         >
           <p className="min-w-0 flex-1 text-xs leading-relaxed text-white/75">
-            Privacy-first analytics — GA4 and cookieless Clarity. Nothing analytical
+            Privacy-first analytics — GA4, cookieless Clarity and optional
+            session recording. Nothing analytical
             loads until you agree.{" "}
             <a href="/privacy" className="text-sky-300 underline underline-offset-2">
               Privacy details

@@ -106,6 +106,10 @@ const securityHeaders = [
       "font-src 'self' data:",
       "media-src 'self' blob:",
       "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms",
+      // Session Replay (2026-10-15): the Sentry replay compression worker is
+      // spawned from a self-authored blob: URL. Without worker-src the browser
+      // blocks the worker and replay segments silently never send.
+      "worker-src 'self' blob:",
       "report-uri /api/csp-report",
     ].join("; "),
   },
