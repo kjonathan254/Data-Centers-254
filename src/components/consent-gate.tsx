@@ -40,6 +40,22 @@ export default function ConsentGate() {
     );
   }, []);
 
+  useEffect(() => {
+    // Consent withdrawal (Kenya DPA 2019 / GDPR: withdrawing consent must be
+    // as easy as giving it). The footer "Privacy settings" button dispatches
+    // this event; the gate forgets the stored choice and re-shows the banner.
+    function reset() {
+      try {
+        window.localStorage.removeItem(STORAGE_KEY);
+      } catch {
+        // Nothing stored (or storage unavailable) - banner shows anyway.
+      }
+      setConsent("unknown");
+    }
+    window.addEventListener("dc254:consent-reset", reset);
+    return () => window.removeEventListener("dc254:consent-reset", reset);
+  }, []);
+
   function decide(value: "1" | "0") {
     try {
       window.localStorage.setItem(STORAGE_KEY, value);
@@ -107,5 +123,23 @@ export default function ConsentGate() {
         </div>
       )}
     </>
+  );
+}
+
+/**
+ * Footer control that re-opens the consent banner (audit D03: consent had to
+ * be withdrawn by clearing browser storage — the only element gated behind
+ * consent re-appears, so granting, declining and re-choosing are all one
+ * click). Purely client-side; renders as a plain button.
+ */
+export function PrivacySettingsButton({ className }: { className?: string }) {
+  return (
+    <button
+      type="button"
+      onClick={() => window.dispatchEvent(new Event("dc254:consent-reset"))}
+      className={className}
+    >
+      Privacy settings
+    </button>
   );
 }

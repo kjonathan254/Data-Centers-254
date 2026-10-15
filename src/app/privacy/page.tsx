@@ -40,7 +40,7 @@ const sections = [
   {
     title: "5. Cookies",
     body: [
-      "The website itself sets no tracking cookies of its own, and no analytics of any kind runs before you consent through the on-site banner. Once you accept, the only cookies on this site come from Google Analytics, used to measure aggregate traffic; Microsoft Clarity, our other analytics tool, is cookieless and sets no cookies at all. You can block or delete analytics cookies through your browser settings, or withdraw consent by clearing this site's storage in your browser, without losing access to any part of the site.",
+      "The website itself sets no tracking cookies of its own, and no analytics of any kind runs before you consent through the on-site banner. Once you accept, the only cookies on this site come from Google Analytics, used to measure aggregate traffic; Microsoft Clarity, our other analytics tool, is cookieless and sets no cookies at all. You can block or delete analytics cookies through your browser settings, without losing access to any part of the site. To change or withdraw your consent at any time, use the \"Privacy settings\" link in the footer of every page - it re-opens the consent banner so you can accept or decline again, and analytics stop (or start) immediately according to your new choice.",
     ],
   },
   {

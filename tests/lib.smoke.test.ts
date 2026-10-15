@@ -110,9 +110,30 @@ describe("rate-limit (memory backend)", () => {
     expect(otherIp.limited).toBe(false);
   });
 
-  it("derives the client IP from x-forwarded-for", () => {
+  it("derives the client IP from x-forwarded-for when no trusted header exists", () => {
+    // XFF is now the LAST-resort fallback (local dev / other hosts) — on
+    // Vercel a caller-supplied XFF used to let clients mint fresh buckets.
     const headers = new Headers({ "x-forwarded-for": "203.0.113.7, 10.0.0.1" });
     expect(clientIp({ headers })).toBe("203.0.113.7");
+  });
+
+  it("prefers x-real-ip over a spoofed x-forwarded-for (audit S01)", () => {
+    // Vercel sets x-real-ip server-side and it cannot be overridden by the
+    // caller; a client-sent XFF must never outrank it.
+    const headers = new Headers({
+      "x-real-ip": "198.51.100.9",
+      "x-forwarded-for": "203.0.113.7, 198.51.100.9",
+    });
+    expect(clientIp({ headers })).toBe("198.51.100.9");
+  });
+
+  it("prefers cf-connecting-ip above all (Cloudflare-fronted traffic)", () => {
+    const headers = new Headers({
+      "cf-connecting-ip": "192.0.2.44",
+      "x-real-ip": "198.51.100.9",
+      "x-forwarded-for": "203.0.113.7",
+    });
+    expect(clientIp({ headers })).toBe("192.0.2.44");
   });
 });
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Linkedin, Mail } from "lucide-react";
 import BrandLogo from "@/components/brand-logo";
+import { PrivacySettingsButton } from "@/components/consent-gate";
 
 // Nav links live in one module (was copy-pasted in navbar + mobile sheet —
 // Task 130 backlog). Footer keeps its long "Policy & Regulation" label and its
@@ -134,6 +135,9 @@ export default function Footer() {
         </div>
         <div className="pb-6 flex flex-wrap items-center justify-center sm:justify-between gap-x-5 gap-y-2 text-xs text-muted-foreground">
           <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+          {/* Kenya DPA consent withdrawal: re-opens the analytics consent
+              banner instead of asking visitors to clear browser storage. */}
+          <PrivacySettingsButton className="hover:text-foreground transition-colors" />
           <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Use</Link>
           <Link href="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>
           <Link href="/methodology" className="hover:text-foreground transition-colors">Data Methodology</Link>

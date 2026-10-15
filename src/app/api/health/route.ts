@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { persistentLimitingActive } from '@/lib/rate-limit';
+import { persistentLimitingActive, probeRedis } from '@/lib/rate-limit';
 
 /**
  * Deployment self-check for operators (the site owner, not the public).
@@ -27,6 +27,14 @@ export async function GET() {
   const fromEmail = Boolean(process.env.RESEND_FROM_EMAIL);
   const rawSecret = process.env.SUBSCRIBE_SECRET;
   const secretOk = Boolean(rawSecret && rawSecret.trim().length >= 32);
+  const persistent = persistentLimitingActive();
+
+  // Audit P0-6 (2026-10-15): a configured-but-broken Redis used to be
+  // invisible — rate limiting silently degraded to per-instance memory and
+  // the health field still said "persistent" because it only reflects env
+  // presence. The live PING below makes degradation observable here and by
+  // the uptime monitor. Fail-soft by design: never throws, 1.5s cap.
+  const redis = persistent ? await probeRedis() : null;
 
   return NextResponse.json(
     {
@@ -38,7 +46,8 @@ export async function GET() {
         resendFromEmail: fromEmail,
         subscribeSecret: secretOk,
       },
-      rateLimiting: persistentLimitingActive() ? 'persistent' : 'memory',
+      rateLimiting: persistent ? 'persistent' : 'memory',
+      redis,
     },
     { headers: { 'Cache-Control': 'no-store' } }
   );

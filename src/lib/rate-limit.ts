@@ -158,12 +158,54 @@ export function persistentLimitingActive(): boolean {
   return PERSISTENT;
 }
 
-/** Consistent client-IP extraction across all API routes and the proxy. */
+/**
+ * Consistent client-IP extraction across all API routes and the proxy.
+ *
+ * Precedence (audit S01, 2026-10-15):
+ *   1. cf-connecting-ip — set by Cloudflare when it fronts the deployment.
+ *   2. x-real-ip        — set by Vercel's edge to the actual peer address and
+ *                          NOT overridable by the caller, so it is the
+ *                          trustworthy default on Vercel.
+ *   3. x-forwarded-for  — FIRST entry only as a last resort (local dev,
+ *                          other hosts). On Vercel a caller-supplied XFF is
+ *                          preserved ahead of the real IP, so trusting the
+ *                          first entry let any client rotate fresh
+ *                          rate-limit buckets per request (spoofed header →
+ *                          unlimited chat/TTS/contact quotas). XFF stays the
+ *                          dev fallback so the limiter still works locally.
+ */
 export function clientIp(req: HeadersLike): string {
   return (
     req.headers.get("cf-connecting-ip") ||
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     req.headers.get("x-real-ip") ||
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     "unknown"
   );
+}
+
+/**
+ * Live reachability probe for the health endpoint (audit P0-6: Redis
+ * degradation must be visible, not silently absorbed). Returns the Round
+ * trip latency of a PING, or reachable:false on any failure. Never throws.
+ */
+export async function probeRedis(): Promise<{
+  reachable: boolean;
+  latencyMs: number | null;
+}> {
+  if (!UPSTASH_URL || !UPSTASH_TOKEN) {
+    return { reachable: false, latencyMs: null };
+  }
+  const t0 = Date.now();
+  try {
+    const res = await fetch(`${UPSTASH_URL}/ping`, {
+      headers: { Authorization: `Bearer ${UPSTASH_TOKEN}` },
+      cache: "no-store",
+      signal: AbortSignal.timeout(1_500),
+    });
+    if (!res.ok) return { reachable: false, latencyMs: Date.now() - t0 };
+    const data = (await res.json()) as { result?: string };
+    return { reachable: data?.result === "PONG", latencyMs: Date.now() - t0 };
+  } catch {
+    return { reachable: false, latencyMs: Date.now() - t0 };
+  }
 }

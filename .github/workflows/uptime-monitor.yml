@@ -1,0 +1,73 @@
+# External uptime + degradation monitor for DC254 production.
+#
+# Audit O03 (2026-10-15): /api/health existed but nothing watched it — an
+# outage was only detectable when a visitor complained. This workflow pings
+# production every 10 minutes; a failing run emails the repository owner
+# (GitHub's default notification for failed scheduled runs), which is the
+# alerting channel with zero extra accounts or credentials.
+#
+# What it checks (single source of truth: the health contract):
+#   - HTTP 200 + ok:true                       → the site is up
+#   - rateLimiting == "persistent"             → Redis env still wired; a
+#                                                silent flip to "memory"
+#                                                (removed var, wrong scope)
+#                                                pages the owner
+#   - emailStack.subscribeSecret == true       → newsletter double opt-in
+#                                                signing still configured
+#   - redis.reachable != false                 → the limiter's live PING
+#                                                still reaches Upstash
+#                                                (P0-6: degradation visible)
+#
+# Transient network blips shouldn't page anyone: two attempts, 15s apart,
+# before the run fails. NOTE: resubscribe-alerts = depends on GitHub email
+# notifications for the owner being enabled (default on).
+
+name: Uptime monitor
+
+on:
+  schedule:
+    # Every 10 minutes, offset from the top of the hour like CI.
+    - cron: "4,14,24,34,44,54 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    name: Production health probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe /api/health (2 attempts)
+        run: |
+          set -uo pipefail
+          URL="https://data-centers-254.vercel.app/api/health"
+          for attempt in 1 2; do
+            BODY=$(curl -sS --max-time 20 "${URL}?cb=$(date +%s)" 2>/dev/null) && \
+            echo "$BODY" | python3 -c '
+import json, sys
+d = json.load(sys.stdin)
+problems = []
+if d.get("ok") is not True:
+    problems.append("health ok != true")
+if d.get("rateLimiting") != "persistent":
+    problems.append(f"rateLimiting degraded: {d.get(\"rateLimiting\")!r}")
+es = d.get("emailStack") or {}
+if es.get("subscribeSecret") is not True:
+    problems.append("subscribeSecret missing in production")
+redis = d.get("redis")
+if isinstance(redis, dict) and redis.get("reachable") is False:
+    problems.append(f"Redis unreachable from runtime (latencyMs={redis.get(\"latencyMs\")})")
+if problems:
+    print("HEALTH CHECK FAILED:")
+    for p in problems:
+        print(" -", p)
+    sys.exit(1)
+print("uptime check passed | redis:", redis)
+' && exit 0
+            echo "attempt $attempt failed; retrying in 15s" >&2
+            sleep 15
+          done
+          echo "Both probe attempts failed - production unreachable or degraded" >&2
+          exit 1

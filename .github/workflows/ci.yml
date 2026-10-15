@@ -44,6 +44,12 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # Audit O02 (2026-10-15): the 13 trust-boundary smoke tests existed but
+      # CI never ran them — a regression in subscribe-tokens, the rate limiter
+      # or safeJsonLd could ship green. Failed tests now fail the build job.
+      - name: Test
+        run: npm test
+
       - name: Build
         run: npm run build
 
