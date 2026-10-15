@@ -117,3 +117,19 @@ after a deliberate env-var switch + redeploy).
   verify `DBSIZE > 0` on the new database, switch BOTH env vars in Vercel
   (URL *and* token), redeploy, verify `/api/health`, watch `rl:*` keys
   appear in the new database, and only then delete the original.
+
+**Resolution — Path B executed later the same day (2026-10-15).** With a
+team-scoped Vercel token supplied by the owner, the agent pulled the
+production env (production was still pointed at
+`handy-aardvark-175653.upstash.io` — original DB alive, 4 keys, one real
+enquiry record), copied all 4 keys to `ethical-kangaroo-235877` with types
+and TTLs preserved (`scripts/migrate_upstash_old_to_new.py`, value-verified),
+switched `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` (+ the legacy
+`KV_REST_API_*` pair) for all environments via the Vercel API, deleted a
+mis-pasted junk env var (`Datacentre254` ×3), and redeployed (45e8b28).
+Verification: `/api/health` persistent + reachable; two `/api/search` hits
+decrement `x-ratelimit-remaining` 59 → 58 (true global counting) and leave
+an `rl:*` crumb visible in the new database; the old database shows no new
+writes. The original database is STILL ALIVE — the owner may delete it once
+a few days of clean `/api/health` have passed (upstash backups remain off,
+so it is the only existing copy until then).
