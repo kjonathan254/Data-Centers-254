@@ -39,6 +39,29 @@ interface ApiReply {
 
 let messageId = 0;
 
+/**
+ * Anonymous per-tab chat session id: groups one conversation's turns in
+ * Sentry's Conversations view (gen_ai.conversation.id). Opaque random string
+ * with no identity content, kept in sessionStorage for the tab's lifetime.
+ * Storage unavailable → no id is sent, and the server omits the grouping
+ * attribute (Sentry's convention: never derive one from a request or trace).
+ */
+function jibuSessionId(): string | null {
+  try {
+    const KEY = "dc254_jibu_sid";
+    let id = window.sessionStorage.getItem(KEY);
+    if (!id) {
+      id =
+        globalThis.crypto?.randomUUID?.() ??
+        `s${Date.now().toString(36)}${Math.random().toString(36).slice(2, 14)}`;
+      window.sessionStorage.setItem(KEY, id);
+    }
+    return id;
+  } catch {
+    return null;
+  }
+}
+
 export function JibuAvatar({ className = "size-8" }: { className?: string }) {
   return (
     <span
@@ -135,7 +158,13 @@ export default function JibuChat({ variant }: { variant: "panel" | "page" }) {
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text, history }),
+          body: JSON.stringify({
+            message: text,
+            history,
+            // Optional anonymous conversation grouping for our monitoring;
+            // the API ignores it when absent (JSON.stringify drops undefined).
+            sessionId: jibuSessionId() ?? undefined,
+          }),
         });
         const data = (await res.json()) as ApiReply;
         setMessages((m) => [
