@@ -134,6 +134,14 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 828, 1080, 1920],
     imageSizes: [64, 128, 256, 384],
   },
+  async rewrites() {
+    return [
+      // RFC 9116 security.txt must be reachable at /.well-known/security.txt.
+      // The file lives at public/security.txt because the App Router ignores
+      // dot-prefixed route folders; this rewrite bridges the two.
+      { source: "/.well-known/security.txt", destination: "/security.txt" },
+    ];
+  },
   async redirects() {
     return [
       // /index was a duplicate of /directory — permanently redirect legacy links
