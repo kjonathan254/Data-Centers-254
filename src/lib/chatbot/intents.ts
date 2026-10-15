@@ -37,6 +37,27 @@ function mw(n: number | null | undefined): string {
   return n == null ? "capacity not disclosed" : `${n} MW`;
 }
 
+/**
+ * Basis-labelled capacity phrases. Editorial rule: a MW figure is meaningless
+ * without its basis (verified live IT load vs developer-designed capacity),
+ * and a null must never reach the reader as text. The 2026-10-16 "null MW"
+ * incident: the biggest intent ranked ADC NBO1 on its 7.5 MW *designed*
+ * figure above NBOX1's 4.5 MW *live* load, then printed `null MW` — both
+ * fixed at the root here and pinned by tests/chatbot-intents.test.ts.
+ */
+function capacityLabel(f: Facility): string {
+  if (f.itLoadMw != null) return `${f.itLoadMw} MW live IT load`;
+  if (f.totalCapacityMw != null) return `${f.totalCapacityMw} MW designed capacity`;
+  return "capacity not disclosed";
+}
+
+/** Compact variant for inline listings: "7.5 MW designed", "0.9 MW live". */
+function capacityTag(f: Facility): string {
+  if (f.itLoadMw != null) return `${f.itLoadMw} MW live`;
+  if (f.totalCapacityMw != null) return `${f.totalCapacityMw} MW designed`;
+  return "capacity not disclosed";
+}
+
 // ─── Entity extraction ───────────────────────────────────────────────────────
 
 const GENERIC_WORDS = new Set(["data","centre","center","centres","centers","facility","facilities","dc","kenya","the","of","and","group","ltd","limited","campus"]);
@@ -318,14 +339,38 @@ const INTENTS: Intent[] = [
     run: (q, e) => {
       if (e.facilities.length >= 2) {
         const [a, b] = e.facilities;
-        const la = a.itLoadMw ?? a.totalCapacityMw ?? 0;
-        const lb = b.itLoadMw ?? b.totalCapacityMw ?? 0;
-        const leader = la === lb ? null : la > lb ? a : b;
-        const summary = leader
-          ? `${leader.name} is the bigger of the two on ${leader.itLoadMw != null ? "live IT load" : "designed capacity"} at ${leader.itLoadMw ?? leader.totalCapacityMw} MW.`
-          : `${a.name} and ${b.name} are neck and neck on disclosed figures.`;
+        const spec = (f: Facility): string =>
+          `${f.name}: ${capacityLabel(f)}, ${f.city}, ${f.tierRating ? `Tier ${f.tierRating}` : "tier not disclosed"}.`;
+
+        // Like-for-like only: live load competes with live load, designed with
+        // designed. A live figure must never be ranked against a designed one.
+        let summary: string;
+        if (a.itLoadMw != null && b.itLoadMw != null) {
+          const leader = a.itLoadMw === b.itLoadMw ? null : a.itLoadMw > b.itLoadMw ? a : b;
+          summary = leader
+            ? `${leader.name} is the bigger of the two on verified live IT load at ${leader.itLoadMw} MW.`
+            : `${a.name} and ${b.name} are neck and neck on verified live IT load (${a.itLoadMw} MW each).`;
+        } else if (a.itLoadMw == null && b.itLoadMw == null) {
+          const designed = a.totalCapacityMw != null && b.totalCapacityMw != null;
+          const leader = designed
+            ? (a.totalCapacityMw === b.totalCapacityMw ? null : a.totalCapacityMw! > b.totalCapacityMw! ? a : b)
+            : null;
+          summary = designed
+            ? (leader
+              ? `Neither publishes verified live IT load, so this ranking rests on designed capacity: ${leader!.name} is the bigger of the two at ${leader!.totalCapacityMw} MW designed.`
+              : `${a.name} and ${b.name} are neck and neck on disclosed designed capacity.`)
+            : `Neither facility discloses capacity figures, so the dataset can't rank them; the spec lines below are what's verified.`;
+        } else {
+          // Mixed basis: one live figure, one designed-only (or undisclosed).
+          const [live, other] = a.itLoadMw != null ? [a, b] : [b, a];
+          const otherPart = other.totalCapacityMw != null
+            ? `${other.name} only discloses ${other.totalCapacityMw} MW of designed capacity, live load not published, so on paper it is the bigger site`
+            : `${other.name} publishes no capacity figures at all`;
+          summary = `The dataset can't rank these two like-for-like: ${live.name} runs ${live.itLoadMw} MW of verified live IT load, and ${otherPart}. On verified in-service load, ${live.name} is the only one of the two with a number.`;
+        }
+
         return ok({
-          reply: `${summary} ${a.name}: ${mw(a.itLoadMw ?? a.totalCapacityMw)}, ${a.city}, ${a.tierRating ? `Tier ${a.tierRating}` : "tier not disclosed"}. ${b.name}: ${mw(b.itLoadMw ?? b.totalCapacityMw)}, ${b.city}, ${b.tierRating ? `Tier ${b.tierRating}` : "tier not disclosed"}. Open the side-by-side view for the full spec-by-spec table.`,
+          reply: `${summary} ${spec(a)} ${spec(b)} Open the side-by-side view for the full spec-by-spec table.`,
           citations: [
             { label: "Compare side by side", href: `/directory/compare?ids=${encodeURIComponent(`${a.slug},${b.slug}`)}` },
             { label: a.name, href: `/directory/${a.slug}` },
@@ -367,14 +412,67 @@ const INTENTS: Intent[] = [
     test: (q) => /(largest|biggest|leading|most (capacity|power)|top (facility|data ?cent|site))/.test(q),
     run: (_q, e) => {
       const pool = e.city ? operational.filter((f) => f.city === e.city) : operational;
-      const sorted = [...pool].sort((a, b) => (b.itLoadMw ?? b.totalCapacityMw ?? 0) - (a.itLoadMw ?? a.totalCapacityMw ?? 0));
-      const top = sorted.slice(0, 3);
-      if (!top.length) return null;
-      const pipelineBiggest = [...pipeline].sort((a, b) => (b.totalCapacityMw ?? 0) - (a.totalCapacityMw ?? 0))[0];
+      if (!pool.length) return null;
+      const scope = e.city ? `in ${e.city}` : "the market";
+      const cityPipeline = e.city ? pipeline.filter((f) => f.city === e.city) : pipeline;
+      const pipelineBiggest = [...cityPipeline].sort((a, b) => (b.totalCapacityMw ?? 0) - (a.totalCapacityMw ?? 0))[0];
+      const horizon = pipelineBiggest
+        ? ` On the horizon, ${pipelineBiggest.name} dwarfs everything built so far at ${mw(pipelineBiggest.totalCapacityMw)} announced, but announced is not built.`
+        : "";
+
+      // Rank on verified live IT load only where a facility actually publishes
+      // it. Mixing designed figures into the sort is what produced the "null
+      // MW" answer of 2026-10-16 (ADC NBO1's 7.5 MW designed outranking
+      // NBOX1's 4.5 MW live, then printing null). Live and designed never
+      // compete in the same ranking.
+      const withLive = pool
+        .filter((f) => f.itLoadMw != null)
+        .sort((a, b) => (b.itLoadMw ?? 0) - (a.itLoadMw ?? 0));
+
+      if (withLive.length) {
+        const [lead, ...rest] = withLive;
+        const runners = rest.slice(0, 2).map((f) => `${f.name} at ${f.itLoadMw} MW`);
+        const followed = runners.length ? `, followed by ${runners.join(" and ")}` : "";
+        // A designed-only figure big enough to top the live leader would flip
+        // a naive league table; name it and say why it isn't ranked.
+        const designedOnly = pool
+          .filter((f) => f.itLoadMw == null && (f.totalCapacityMw ?? 0) > (lead.itLoadMw ?? 0))
+          .sort((a, b) => (b.totalCapacityMw ?? 0) - (a.totalCapacityMw ?? 0))[0];
+        const caveat = designedOnly
+          ? ` Careful with league tables: ${designedOnly.name} discloses ${designedOnly.totalCapacityMw} MW, but that is designed capacity, its live IT load is not published, so it isn't ranked against verified load.`
+          : "";
+        return ok({
+          reply: `By verified live IT load, ${lead.name} leads ${scope} at ${lead.itLoadMw} MW${followed}.${caveat}${horizon}`,
+          citations: [
+            { label: lead.name, href: `/directory/${lead.slug}` },
+            { label: "See the pipeline", href: "/tracker" },
+          ],
+          suggestions: ["What's under construction right now?", "How much capacity does Kenya have in total?"],
+          intent: "biggest",
+          verifiedAsOf: lastVerified,
+        });
+      }
+
+      // No live figures in this pool: the honest ranking is designed, labelled as such.
+      const byDesigned = [...pool].sort((a, b) => (b.totalCapacityMw ?? 0) - (a.totalCapacityMw ?? 0));
+      const lead = byDesigned[0];
+      if (lead.totalCapacityMw == null) {
+        return ok({
+          reply: `No facility ${e.city ? `in ${e.city}` : "in the market"} publishes capacity figures I can rank, live IT load or designed. The directory pages carry whatever each operator has disclosed.`,
+          citations: [{ label: "Browse the directory", href: "/directory" }],
+          suggestions: ["Which data centres are AI-ready?", "How much capacity does Kenya have in total?"],
+          intent: "biggest",
+        });
+      }
+      const runners = byDesigned
+        .slice(1, 3)
+        .filter((f) => f.totalCapacityMw != null)
+        .map((f) => `${f.name} at ${f.totalCapacityMw} MW`);
+      const followed = runners.length ? `, followed by ${runners.join(" and ")}` : "";
       return ok({
-        reply: `By live IT load, ${top[0].name} leads${e.city ? ` in ${e.city}` : " the market"} at ${top[0].itLoadMw} MW, followed by ${top[1] ? `${top[1].name} (${top[1].itLoadMw ?? "n/a"} MW)` : ""}${top[2] ? ` and ${top[2].name} (${top[2].itLoadMw ?? "n/a"} MW)` : ""}. On the horizon, ${pipelineBiggest?.name ?? "the Microsoft–G42 project"} dwarfs everything built so far at ${mw(pipelineBiggest?.totalCapacityMw ?? null)} announced, but announced is not built.`,
+        reply: `No facility ${e.city ? `in ${e.city}` : "in the market"} publishes verified live IT load, so the honest ranking is by disclosed designed capacity: ${lead.name} at ${lead.totalCapacityMw} MW${followed}.${horizon}`,
         citations: [
-          { label: top[0].name, href: `/directory/${top[0].slug}` },
+          { label: lead.name, href: `/directory/${lead.slug}` },
           { label: "See the pipeline", href: "/tracker" },
         ],
         suggestions: ["What's under construction right now?", "How much capacity does Kenya have in total?"],
@@ -452,7 +550,7 @@ const INTENTS: Intent[] = [
     name: "pipeline",
     test: (q) => /(under construction|being built|pipeline|coming (online|soon)|planned|committed|early stage|upcoming|future (facility|project|capacity)|new build|expansion)/.test(q),
     run: () => {
-      const lines = pipeline.map((f) => `${f.name} (${f.operator.name}, ${mw(f.totalCapacityMw ?? f.itLoadMw)}, ${f.status.toLowerCase()})`);
+      const lines = pipeline.map((f) => `${f.name} (${f.operator.name}, ${capacityTag(f)}, ${f.status.toLowerCase()})`);
       return ok({
         reply: `The pipeline is where the market's growth lives: ${lines.join("; ")}. All up, roughly ${pipeline.reduce((s, f) => s + (f.totalCapacityMw ?? 0), 0).toFixed(0)} MW of announced capacity, the Microsoft–G42 campus alone would more than double Kenya's built base. Remember the staged reality: announced → committed → under construction → live. Only the last one serves a server.`,
         citations: [
@@ -560,7 +658,7 @@ const INTENTS: Intent[] = [
       if (e.operatorIds.length > 0 && (asksListing || e.facilities.length === 0)) {
         const list = facilities.filter((f) => f.operatorId === e.operatorIds[0]);
         if (list.length) {
-          const items = list.map((f) => `${f.name} (${mw(f.totalCapacityMw ?? f.itLoadMw)}, ${f.status.toLowerCase()})`);
+          const items = list.map((f) => `${f.name} (${capacityTag(f)}, ${f.status.toLowerCase()})`);
           return ok({
             reply: `${list[0].operator.name} runs ${list.length} tracked ${list.length === 1 ? "facility" : "facilities"}: ${items.join("; ")}.`,
             citations: [{ label: "All operators", href: "/directory" }],
@@ -585,7 +683,7 @@ const INTENTS: Intent[] = [
       }
       const opFacilities = facilities.filter((f) => f.operatorId === e.operatorIds[0]);
       if (opFacilities.length) {
-        const list = opFacilities.map((f) => `${f.name} (${mw(f.totalCapacityMw ?? f.itLoadMw)}, ${f.status.toLowerCase()})`);
+        const list = opFacilities.map((f) => `${f.name} (${capacityTag(f)}, ${f.status.toLowerCase()})`);
         return ok({
           reply: `${opFacilities[0].operator.name} runs ${opFacilities.length} tracked ${opFacilities.length === 1 ? "facility" : "facilities"}: ${list.join("; ")}.`,
           citations: [{ label: "All operators", href: "/directory" }],

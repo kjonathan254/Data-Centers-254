@@ -127,7 +127,7 @@ function escalate(query: string): EngineResult {
   };
 }
 
-export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): EngineResult {
+function solveQuestion(rawQuery: string, history: ChatTurn[] = []): EngineResult {
   const query = rawQuery.trim().slice(0, 500);
   const lower = query.toLowerCase();
   const historyTail = history.slice(-4).map((t) => t.content);
@@ -213,6 +213,24 @@ export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): Engi
 
   // Tier 3, escalate: completely outside my world.
   return escalate(query);
+}
+
+/**
+ * Last line of defence against template leaks: no user-visible reply may ever
+ * contain "null MW", "undefined" or "NaN". The 2026-10-16 incident shipped
+ * "at null MW" to a reader because the biggest intent interpolated an
+ * unguarded `itLoadMw`; root causes are fixed at the source, this guard
+ * catches whatever a future composer (or model) misses.
+ */
+export function scrubReply(text: string): string {
+  return text
+    .replace(/\b(?:null|undefined|NaN)\s+MW\b/gi, "capacity not disclosed")
+    .replace(/\b(?:null|undefined|NaN)\b/gi, "not disclosed");
+}
+
+export function answerQuestion(rawQuery: string, history: ChatTurn[] = []): EngineResult {
+  const result = solveQuestion(rawQuery, history);
+  return { ...result, reply: scrubReply(result.reply) };
 }
 
 export { fmtVerified };

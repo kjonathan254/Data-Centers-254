@@ -6,7 +6,7 @@ import {
   isSameOriginRequest,
   originRejectedResponse,
 } from "@/lib/api-guards";
-import { answerQuestion, type ChatTurn } from "@/lib/chatbot/engine";
+import { answerQuestion, scrubReply, type ChatTurn } from "@/lib/chatbot/engine";
 import { BOT_IDENTITY } from "@/lib/chatbot/identity";
 import {
   activeProviders,
@@ -382,7 +382,9 @@ export async function POST(request: NextRequest) {
     body.sessionId ?? null,
   );
   if (polished) {
-    reply = polished;
+    // The model is under a strict ground-in-the-material contract, but its
+    // output is still untrusted text: the leak scrub applies to it too.
+    reply = scrubReply(polished);
     mode = "llm";
     if (result.weak) {
       // The rescue took: upgrade the reply to a real, vouched answer.
