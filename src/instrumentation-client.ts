@@ -12,9 +12,10 @@ Sentry.init({
   tracesSampleRate: 1.0,
   // sendDefaultPii deliberately left at its default (false).
   // Browser events are POSTed to our own origin (/monitoring) and proxied to
-  // Sentry server-side by the withSentryConfig tunnelRoute option. Two wins:
+  // Sentry server-side by src/app/monitoring/route.ts. Two wins:
   //  - the enforced CSP stays untouched (tunnel traffic is connect-src 'self')
   //  - ad-blockers that filter *.ingest.sentry.io can't eat the events
+  tunnel: "/monitoring",
 });
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
