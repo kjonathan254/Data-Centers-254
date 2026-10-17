@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #05060A; font-family: 'Carlito','Liberation Sans',sans-serif; }
+
+  .frame { background: #0B0C12; width: 1200px; position: relative;
+           overflow: hidden; display: flex; flex-direction: column; }
+  #scale { height: 1300px; }
+  #fervo { height: 940px; }
+  #terms { height: 1300px; }
+  .frame::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 85% 0%, rgba(56,196,216,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 10% 100%, rgba(56,196,216,0.06), transparent 60%);
+    pointer-events: none;
+  }
+  .grid-lines {
+    position: absolute; inset: 0; opacity: 0.5; pointer-events: none;
+    background-image: linear-gradient(rgba(56,196,216,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(56,196,216,0.04) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .inner { position: relative; z-index: 2; display: flex; flex-direction: column; flex: 1;
+           padding: 52px 60px; }
+
+  .kicker { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #38C4D8;
+            font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+  .kicker::after { content: ''; flex: 1; height: 1px;
+                   background: linear-gradient(90deg, rgba(56,196,216,0.5), rgba(56,196,216,0.05)); }
+
+  h1 { color: #F1F5F9; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; font-size: 42px; }
+  .sub { color: #8A93A6; font-size: 19px; line-height: 1.45; margin-top: 10px; }
+
+  .foot { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+          font-size: 13px; display: flex; justify-content: space-between; align-items: center;
+          margin-top: auto; padding-top: 22px; border-top: 1px solid rgba(148,163,184,0.12); }
+  .foot .brand { color: #38C4D8; font-weight: 700; letter-spacing: 0.12em; }
+
+  .punch { color: #F1F5F9; font-weight: 700; font-size: 23px; line-height: 1.4;
+           border-left: 3px solid #38C4D8; padding-left: 20px; margin-top: 26px; }
+  .punch .cy { color: #38C4D8; }
+
+  /* ---- Frame 1: scale gap ---- */
+  .band { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+          font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+          margin: 26px 0 6px; display: flex; align-items: center; gap: 12px; }
+  .band::after { content: ''; flex: 1; height: 1px; background: rgba(148,163,184,0.14); }
+  .band.cyan { color: #38C4D8; }
+  .row { padding: 13px 0 15px; border-bottom: 1px solid rgba(148,163,184,0.09); }
+  .row:last-of-type { border-bottom: none; }
+  .row .head { display: flex; align-items: baseline; gap: 16px; }
+  .row .v { color: #F1F5F9; font-weight: 700; font-size: 30px; font-variant-numeric: tabular-nums;
+            min-width: 168px; letter-spacing: -0.01em; }
+  .row .v.cyan { color: #38C4D8; }
+  .row .v.dim { color: #AAB3C5; }
+  .row .l { flex: 1; color: #8A93A6; font-size: 19px; line-height: 1.35; }
+  .row .l b { color: #F1F5F9; font-weight: 700; }
+  .row .src { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+              font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;
+              white-space: nowrap; }
+  .track { height: 9px; border-radius: 5px; background: rgba(148,163,184,0.08);
+           margin-top: 10px; position: relative; overflow: hidden; }
+  .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px;
+          background: #38C4D8; }
+  .fill.slate { background: #42506A; }
+  .fill.ghost { background: transparent; border: 1.5px solid #C7D0DE; }
+  .fill.dimmed { background: #2A3348; }
+
+  /* ---- Frame 2: Fervo ladder ---- */
+  .ml { display: flex; align-items: center; gap: 20px; padding: 17px 0;
+        border-bottom: 1px solid rgba(148,163,184,0.12); }
+  .ml:last-of-type { border-bottom: none; }
+  .ml .d { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #5B6478;
+           font-size: 13px; letter-spacing: 0.08em; min-width: 176px; }
+  .ml .m { color: #F1F5F9; font-weight: 700; font-size: 29px; font-variant-numeric: tabular-nums;
+           min-width: 138px; letter-spacing: -0.01em; }
+  .ml .m.cyan { color: #38C4D8; }
+  .ml .e { flex: 1; color: #8A93A6; font-size: 18.5px; line-height: 1.35; }
+  .ml .e b { color: #F1F5F9; font-weight: 700; }
+  .chip { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 12px;
+          letter-spacing: 0.16em; padding: 7px 14px; border-radius: 999px;
+          white-space: nowrap; }
+  .chip.done   { background: #38C4D8; color: #06222A; font-weight: 700; }
+  .chip.signed { border: 1.5px solid #38C4D8; color: #38C4D8; }
+  .chip.funded { border: 1.5px solid #C7D0DE; color: #F1F5F9; }
+  .chip.plan   { border: 1.5px solid rgba(148,163,184,0.45); color: #8A93A6; }
+  .strip { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #8A93A6;
+           font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+           background: rgba(56,196,216,0.07); border: 1px solid rgba(56,196,216,0.25);
+           border-radius: 10px; padding: 14px 20px; margin-top: 24px; }
+  .strip b { color: #38C4D8; }
+
+  /* ---- Frame 3: terms / two geologies ---- */
+  .panel { margin-top: 24px; }
+  .panel-h { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; font-size: 13px;
+             letter-spacing: 0.2em; text-transform: uppercase; color: #F1F5F9; margin-bottom: 10px; }
+  .panel-h span { color: #38C4D8; }
+  .geo { display: block; width: 100%; height: auto; border-radius: 12px;
+         border: 1px solid rgba(148,163,184,0.18); background: #070810; }
+  .defs { margin-top: 14px; }
+  .defs .def { display: flex; gap: 12px; align-items: baseline; padding: 5px 0; }
+  .defs .n { font-family: 'Liberation Mono','DejaVu Sans Mono',monospace; color: #38C4D8;
+             font-size: 13px; }
+  .defs .t { color: #8A93A6; font-size: 17.5px; line-height: 1.4; }
+  .defs .t b { color: #F1F5F9; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ============ FRAME 1: THE SCALE GAP ============ -->
+<div class="frame" id="scale">
+  <div class="grid-lines"></div>
+  <div class="inner">
+    <div class="kicker">Olkaria vs the Grid &middot; Every Figure With Its Basis</div>
+    <h1>The scale gap, precisely attributed</h1>
+    <div class="sub">Megawatts, drawn to one linear scale against Kenya's installed generation. What is verified, what is announced, and what the reporting describes are three different things.</div>
+
+    <div class="band cyan">Verified &middot; DC254 dataset</div>
+    <div class="row">
+      <div class="head"><div class="v cyan">10.5 MW</div>
+        <div class="l"><b>Published live IT load</b> &mdash; what 20 operational Kenyan facilities report serving today</div>
+        <div class="src">DC254</div></div>
+      <div class="track"><div class="fill" style="width:0.35%"></div></div>
+    </div>
+    <div class="row">
+      <div class="head"><div class="v cyan">42.9 MW</div>
+        <div class="l"><b>Designed capacity at those live sites</b> &mdash; what the operational halls were built to hold</div>
+        <div class="src">DC254</div></div>
+      <div class="track"><div class="fill" style="width:1.43%"></div></div>
+    </div>
+    <div class="row">
+      <div class="head"><div class="v cyan">77 MW</div>
+        <div class="l"><b>Genuinely under construction</b> &mdash; iXAfrica NBOX1.2 (18), ADC Nairobi 2 (15), Nxtra Tatu (44)</div>
+        <div class="src">DC254</div></div>
+      <div class="track"><div class="fill" style="width:2.57%"></div></div>
+    </div>
+
+    <div class="band">Announced</div>
+    <div class="row">
+      <div class="head"><div class="v">100 MW</div>
+        <div class="l"><b>Microsoft-G42 announced first phase</b> &mdash; Olkaria campus, entirely on geothermal</div>
+        <div class="src">May 2024 &middot; via DCD</div></div>
+      <div class="track"><div class="fill slate" style="width:3.33%"></div></div>
+    </div>
+    <div class="row">
+      <div class="head"><div class="v">230 MW</div>
+        <div class="l"><b>Full tracked pipeline</b> &mdash; 77 under construction + 53 committed + 100 early stage</div>
+        <div class="src">DC254</div></div>
+      <div class="track"><div class="fill slate" style="width:7.67%"></div></div>
+    </div>
+
+    <div class="band">Reported &middot; requirement</div>
+    <div class="row">
+      <div class="head"><div class="v dim">~1,000 MW</div>
+        <div class="l"><b>The power requirement President Ruto described</b> &mdash; about a third of installed capacity; Kenyan press tracked the request growing from 60 MW</div>
+        <div class="src">Semafor &middot; Kenyans.co.ke &middot; BD</div></div>
+      <div class="track"><div class="fill ghost" style="width:33.3%"></div></div>
+    </div>
+
+    <div class="band">The national grid</div>
+    <div class="row">
+      <div class="head"><div class="v dim">~3,000 MW</div>
+        <div class="l"><b>Kenya's installed generation capacity</b> &mdash; record peak demand reached 2,439 MW in December 2025</div>
+        <div class="src">EPRA &middot; TechCabal</div></div>
+      <div class="track"><div class="fill dimmed" style="width:100%"></div></div>
+    </div>
+
+    <div class="punch">10.5 MW is what the fleet serves today. <span class="cy">100 MW</span> was the announced entry ticket. <span class="cy">~1,000 MW</span> is the load the reporting describes.</div>
+    <div class="foot">
+      <span>ONE LINEAR SCALE &middot; 0 TO 3,000 MW</span>
+      <span class="brand">DC254 &middot; OCT 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FRAME 2: FERVO LADDER ============ -->
+<div class="frame" id="fervo">
+  <div class="grid-lines"></div>
+  <div class="inner">
+    <div class="kicker">What Utah Did Differently &middot; Fervo Energy</div>
+    <h1>One signed rung at a time</h1>
+    <div class="sub">Each milestone is a dated public announcement, with its status named. Delivered, signed, funded and planned are kept apart on purpose.</div>
+
+    <div class="ml">
+      <div class="d">2023</div><div class="m cyan">3.5 MW</div>
+      <div class="e"><b>Project Red pilot</b> with Google in Nevada, the first enhanced-geothermal power delivered to a data centre operator</div>
+      <div class="chip done">DELIVERED</div>
+    </div>
+    <div class="ml">
+      <div class="d">25 JUN 2024</div><div class="m cyan">320 MW</div>
+      <div class="e"><b>15-year PPAs with Southern California Edison</b> for Cape Station, in standard blocks</div>
+      <div class="chip signed">SIGNED</div>
+    </div>
+    <div class="ml">
+      <div class="d">19 MAR 2026</div><div class="m">$421M</div>
+      <div class="e"><b>Non-recourse project financing</b> closed for Cape Station Phase I construction</div>
+      <div class="chip funded">FUNDED</div>
+    </div>
+    <div class="ml">
+      <div class="d">1 SEP 2026</div><div class="m cyan">396 MW</div>
+      <div class="e"><b>PPA with Google</b> at Cape Station, the largest corporate geothermal deal on record</div>
+      <div class="chip signed">SIGNED</div>
+    </div>
+    <div class="ml">
+      <div class="d">30 SEP 2026</div><div class="m cyan">33 MW</div>
+      <div class="e"><b>First GeoBlock declares commercial operation</b>, one day ahead of its contractual date; announced 1 October 2026</div>
+      <div class="chip done">DELIVERED</div>
+    </div>
+    <div class="ml">
+      <div class="d">BY 1 JAN 2027</div><div class="m">~100 MW</div>
+      <div class="e"><b>Phase I completes</b> under contract: three standard 33 MW GeoBlocks</div>
+      <div class="chip plan">CONTRACT</div>
+    </div>
+    <div class="ml">
+      <div class="d">2028</div><div class="m">+400 MW</div>
+      <div class="e"><b>Next phase under construction</b>, expected commercial operation in 2028</div>
+      <div class="chip plan">BUILDING</div>
+    </div>
+
+    <div class="strip">OVER <b>1 GW</b> OF BINDING PPAS SIGNED ACROSS FERVO'S PORTFOLIO</div>
+    <div class="punch">Every rung carries a price, a term, and a block size a bank can underwrite.</div>
+    <div class="foot">
+      <span>SOURCE: FERVO ENERGY ANNOUNCEMENTS, 2023-2026</span>
+      <span class="brand">DC254 &middot; OCT 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FRAME 3: TERMS / TWO GEOLOGIES ============ -->
+<div class="frame" id="terms">
+  <div class="grid-lines"></div>
+  <div class="inner">
+    <div class="kicker">The Terms, Decoded &middot; Two Ways To Get Steam</div>
+    <h1>Olkaria's steam is given. Fervo's is engineered.</h1>
+
+    <div class="panel">
+      <div class="panel-h">Conventional hydrothermal &middot; <span>what Olkaria uses</span></div>
+      <svg class="geo" viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-section of a conventional hydrothermal field">
+        <defs>
+          <linearGradient id="hotA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3A2A22"/><stop offset="1" stop-color="#7A3B24"/>
+          </linearGradient>
+          <linearGradient id="aq" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1B4E5C"/><stop offset="1" stop-color="#2E7D8F"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="1080" height="360" fill="#070810"/>
+        <!-- surface + plant -->
+        <rect x="0" y="78" width="1080" height="3" fill="#5B6478"/>
+        <rect x="96" y="40" width="120" height="38" fill="#141B2A" stroke="#42506A"/>
+        <rect x="112" y="24" width="26" height="16" fill="#141B2A" stroke="#42506A"/>
+        <rect x="150" y="28" width="22" height="12" fill="#141B2A" stroke="#42506A"/>
+        <rect x="262" y="30" width="34" height="48" rx="16" fill="#141B2A" stroke="#42506A"/>
+        <path d="M272 26 q6 -12 0 -22 M284 28 q6 -12 0 -22" stroke="#5B6478" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="96" y="103" fill="#8A93A6" font-family="Carlito,sans-serif" font-size="15">Olkaria power plant</text>
+        <!-- cap rock -->
+        <rect x="0" y="81" width="1080" height="46" fill="#232B3D"/>
+        <text x="24" y="110" fill="#8A93A6" font-family="Carlito,sans-serif" font-size="15">Cap rock seals the system</text>
+        <!-- aquifer -->
+        <rect x="0" y="127" width="1080" height="92" fill="url(#aq)" opacity="0.8"/>
+        <circle cx="180" cy="160" r="5" fill="#7FD8E6" opacity="0.5"/>
+        <circle cx="420" cy="185" r="4" fill="#7FD8E6" opacity="0.4"/>
+        <circle cx="640" cy="155" r="6" fill="#7FD8E6" opacity="0.35"/>
+        <circle cx="860" cy="190" r="4.5" fill="#7FD8E6" opacity="0.45"/>
+        <text x="24" y="165" fill="#C9EEF4" font-family="Carlito,sans-serif" font-size="16" font-weight="bold">Natural steam reservoir: magma-heated groundwater, already boiling</text>
+        <!-- basement -->
+        <rect x="0" y="219" width="1080" height="80" fill="url(#hotA)"/>
+        <text x="24" y="262" fill="#E8C6B2" font-family="Carlito,sans-serif" font-size="15">Hot basement rock, heated by magma below</text>
+        <!-- magma -->
+        <path d="M0 320 q200 -26 420 0 q240 30 660 -6 L1080 360 L0 360 Z" fill="#B4491F" opacity="0.85"/>
+        <!-- wells -->
+        <rect x="356" y="84" width="7" height="96" fill="#C7D0DE"/>
+        <rect x="704" y="84" width="7" height="96" fill="#C7D0DE"/>
+        <path d="M359.5 160 L359.5 108 M355 116 L359.5 106 L364 116" stroke="#7FD8E6" stroke-width="3" fill="none"/>
+        <path d="M707.5 160 L707.5 108 M703 116 L707.5 106 L712 116" stroke="#7FD8E6" stroke-width="3" fill="none"/>
+        <text x="378" y="140" fill="#7FD8E6" font-family="Carlito,sans-serif" font-size="15" font-weight="bold">wells: steam rises on its own</text>
+        <text x="726" y="196" fill="#8A93A6" font-family="Carlito,sans-serif" font-size="15">943.7 MW installed in Kenya</text>
+      </svg>
+      <div class="defs">
+        <div class="def"><div class="n">01</div><div class="t"><b>A natural steam field.</b> Magma heats groundwater trapped under cap rock; the resource made itself over geological time.</div></div>
+        <div class="def"><div class="n">02</div><div class="t"><b>Wells tap the reservoir.</b> Steam arrives under its own pressure and spins turbines; Kenya has run this way for four decades.</div></div>
+        <div class="def"><div class="n">03</div><div class="t"><b>Proven at scale.</b> 943.7 MW installed nationally, about 40 percent of the country's electricity.</div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h">Enhanced geothermal (EGS) &middot; <span>what Fervo builds at Cape Station</span></div>
+      <svg class="geo" viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-section of an enhanced geothermal system">
+        <defs>
+          <linearGradient id="hotB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2E2019"/><stop offset="1" stop-color="#8A4526"/>
+          </linearGradient>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#7FD8E6"/>
+          </marker>
+          <marker id="arrW" viewBox="0 0 10 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0 L10 4 L0 8 z" fill="#5B9BD5"/>
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="1080" height="360" fill="#070810"/>
+        <rect x="0" y="60" width="1080" height="3" fill="#5B6478"/>
+        <text x="20" y="46" fill="#8A93A6" font-family="Carlito,sans-serif" font-size="15">Surface: no natural steam at the site</text>
+        <!-- hot dry rock -->
+        <rect x="0" y="63" width="1080" height="297" fill="url(#hotB)"/>
+        <text x="24" y="330" fill="#E8C6B2" font-family="Carlito,sans-serif" font-size="15">Hot dry rock: the heat is there, the water is not</text>
+        <!-- injection well: down then right -->
+        <path d="M330 63 L330 208 L520 208" stroke="#5B9BD5" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M356 120 L356 168 M349 158 L356 172 L363 158" stroke="#5B9BD5" stroke-width="4" fill="none" marker-end="url(#arrW)"/>
+        <text x="150" y="150" fill="#9BC4E8" font-family="Carlito,sans-serif" font-size="16" font-weight="bold">water pumped down</text>
+        <!-- fractures -->
+        <g stroke="#E2825A" stroke-width="2" opacity="0.75">
+          <path d="M560 208 l26 -30 M560 208 l34 -12 M560 208 l30 26 M600 208 l-10 -38 M600 208 l12 36 M600 208 l36 -6 M640 208 l-20 -30 M640 208 l22 30 M640 208 l-38 10 M640 208 l30 -24 M640 208 l8 36 M600 208 l-32 22 M600 208 l14 -38 M660 208 l-6 -40 M660 208 l16 34 M560 208 l-16 28"/>
+        </g>
+        <text x="500" y="140" fill="#E8A382" font-family="Carlito,sans-serif" font-size="16" font-weight="bold">engineered fractures = the reservoir</text>
+        <!-- production well: left then up -->
+        <path d="M740 208 L900 208 L900 63" stroke="#38C4D8" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M874 208 L900 208 M892 200 L904 208 L892 216" stroke="#7FD8E6" stroke-width="4" fill="none"/>
+        <path d="M900 150 L900 100 M893 112 L900 98 L907 112" stroke="#7FD8E6" stroke-width="4" fill="none" marker-end="url(#arr)"/>
+        <text x="920" y="150" fill="#7FD8E6" font-family="Carlito,sans-serif" font-size="16" font-weight="bold">steam</text>
+        <text x="920" y="172" fill="#C9EEF4" font-family="Carlito,sans-serif" font-size="15">comes back up</text>
+        <!-- block chip -->
+        <rect x="24" y="80" width="238" height="40" rx="10" fill="#0B0C12" stroke="#38C4D8"/>
+        <text x="143" y="106" fill="#38C4D8" text-anchor="middle" font-family="Liberation Mono,monospace" font-size="15" letter-spacing="2">33 MW STANDARD BLOCK</text>
+      </svg>
+      <div class="defs">
+        <div class="def"><div class="n">01</div><div class="t"><b>No natural steam field.</b> Water is pumped into hot dry rock; the driller manufactures the reservoir the geology did not provide.</div></div>
+        <div class="def"><div class="n">02</div><div class="t"><b>Horizontal wells and engineered fractures.</b> Injection and production wells connect sideways through the heated rock.</div></div>
+        <div class="def"><div class="n">03</div><div class="t"><b>Built like a factory.</b> Standard 33 MW blocks, financed one PPA at a time; the first block delivered in September 2026.</div></div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>FOR NEW READERS &middot; THE TWO SYSTEMS BEHIND THIS ARTICLE</span>
+      <span class="brand">DC254 &middot; OCT 2026</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

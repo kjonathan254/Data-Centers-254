@@ -60,3 +60,4 @@ research/task129-shots/
 # Task 130 QA renders (local-only)
 research/task130-*.png
 research/og-render-*.png
+scripts/olkaria-visuals/*.png
