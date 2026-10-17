@@ -21,6 +21,7 @@ import { ArticleImageBlock } from "./article-media";
 import type {
   Article, ArticleFaq,
 } from "@/lib/articles";
+import { siteUrl } from "@/lib/site";
 import { CLUSTER_META } from "@/lib/cluster-meta";
 import { getClusterImage } from "@/lib/imagery";
 
@@ -152,7 +153,12 @@ function FaqSection({ faq }: { faq: ArticleFaq[] }) {
 
 function ShareButtons({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false);
-  const url = (typeof window !== 'undefined' ? window.location.origin : '') + `/articles/${slug}`;
+  // siteUrl() (NEXT_PUBLIC_SITE_URL) is identical on server and client, so the
+  // rendered hrefs match at hydration. window.location.origin here was the
+  // bug: SSR produced relative share URLs while hydration produced absolute
+  // ones — a live hydration mismatch on every article page (Sentry issue
+  // 154090917), and broken share intents in the no-JS HTML.
+  const url = siteUrl(`/articles/${slug}`);
 
   async function copyLink() {
     try {
