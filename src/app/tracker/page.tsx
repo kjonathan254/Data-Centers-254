@@ -8,6 +8,7 @@ import {
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import TrackerNav from "@/components/tracker-nav";
+import CapacityExplorer, { type ExplorerRow } from "@/components/tracker/capacity-explorer";
 import { getFacilities, getMarketSnapshot, STATUS_ORDER } from "@/lib/directory-data";
 import { SITE_URL } from "@/lib/site";
 import { safeJsonLd } from "@/lib/jsonld";
@@ -147,6 +148,25 @@ export default function TrackerPage() {
   const aiReady = facilities.filter((f) => f.aiReady).length;
   const lastVerified = snap.lastVerified;
 
+  // Capacity Explorer rows: Kenya records only, lean serialization. The
+  // regional reference records are excluded so the explorer's unfiltered
+  // totals reproduce the canonical site-stats figures exactly (external
+  // review 2026-10-18: totals must be traceable, never scope-mixed).
+  const explorerRows: ExplorerRow[] = facilities
+    .filter((f) => f.country === "Kenya")
+    .map((f) => ({
+      id: f.id,
+      name: f.name,
+      slug: f.slug,
+      operator: f.operator.name,
+      city: f.city,
+      status: f.status,
+      itLoadMw: f.itLoadMw,
+      totalCapacityMw: f.totalCapacityMw,
+      lastVerified: f.lastVerified,
+      dataConfidence: f.dataConfidence,
+    }));
+
   // Phase 1: schema.org Dataset markup so the tracker is citable as a
   // structured object (mirrors the directory page's Dataset JSON-LD).
   const trackerJsonLd = {
@@ -234,25 +254,45 @@ export default function TrackerPage() {
           {/* Momentum strip */}
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {[
-              { icon: CheckCircle, label: "Live facilities", value: String(snap.stages[0].count), hint: "operational today" },
-              { icon: Zap, label: "Verified live IT load", value: `${snap.liveItLoadMw.toFixed(1)} MW`, hint: "in service, not announced" },
-              { icon: HardHat, label: "Pipeline facilities", value: String(pipeline.length), hint: `${pipelineMw.toFixed(1)} MW announced` },
-              { icon: Wifi, label: "AI-ready", value: String(aiReady), hint: "of all tracked facilities" },
+              { icon: CheckCircle, label: "Live facilities", value: String(snap.stages[0].count), hint: "operational today", href: null as string | null },
+              { icon: Zap, label: "Verified live IT load", value: `${snap.liveItLoadMw.toFixed(1)} MW`, hint: "in service, not announced", href: null as string | null },
+              { icon: HardHat, label: "Pipeline facilities", value: String(pipeline.length), hint: `${pipelineMw.toFixed(1)} MW announced`, href: null as string | null },
+              { icon: Wifi, label: "AI-ready", value: String(aiReady), hint: "operator-stated AI-grade design", href: "/methodology#ai-ready-label" as string | null },
             ].map((s) => {
               const Icon = s.icon;
-              return (
-                <div key={s.label} className="card-solid rounded-xl p-4 sm:p-5">
+              const card = (
+                <>
                   <Icon className="size-4 text-cyan" />
                   <p className="mt-2 text-2xl font-semibold tabular-nums text-foreground">
                     {s.value}
                   </p>
                   <p className="text-2xs leading-snug text-muted-foreground">
                     {s.label} · {s.hint}
+                    {s.href ? " · what the label means" : ""}
                   </p>
+                </>
+              );
+              return s.href ? (
+                <Link
+                  key={s.label}
+                  href={s.href}
+                  className="card-solid rounded-xl p-4 transition-colors hover:border-cyan/40 sm:p-5"
+                >
+                  {card}
+                </Link>
+              ) : (
+                <div key={s.label} className="card-solid rounded-xl p-4 sm:p-5">
+                  {card}
                 </div>
               );
             })}
           </div>
+
+          {/* Capacity explorer: the working tool (filters + measure switcher,
+              external review 2026-10-18 flagship). Sits between the momentum
+              cards and the pipeline board so the static story and the
+              interactive view share one screen. */}
+          <CapacityExplorer rows={explorerRows} />
 
           {/* Pipeline board */}
           <section aria-labelledby="board-title" className="mt-16">

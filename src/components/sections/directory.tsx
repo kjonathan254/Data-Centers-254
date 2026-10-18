@@ -104,7 +104,7 @@ const QUICK_VIEWS: { id: string; label: string; hint: string; match: (f: Facilit
   { id: "op-nbo", label: "Operational · Nairobi", hint: "Operational facilities in the Nairobi metro", match: (f) => f.status === "Operational" && f.city === "Nairobi" },
   { id: "uc", label: "Under construction", hint: "Projects being built now", match: (f) => f.status === "Under Construction" },
   { id: "carrier", label: "Carrier-neutral", hint: "Open to any carrier or customer", match: (f) => f.carrierNeutral === true },
-  { id: "ai", label: "AI-ready", hint: "Designed for high-density AI workloads", match: (f) => f.aiReady === true },
+  { id: "ai", label: "AI-ready", hint: "Operator-stated AI-grade design — definition in the methodology", match: (f) => f.aiReady === true },
 ];
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -492,7 +492,7 @@ export default function DirectorySection({
                     {cap && <div className="flex items-center gap-1.5 text-xs text-muted-foreground" title={cap.tip}><Zap className="size-3.5 text-cyan" /><span className="font-mono text-2xs font-bold tracking-wider text-cyan">{cap.tag}</span><span className="font-medium text-foreground/80 tabular-nums">{cap.mw} MW</span></div>}
                     {f.rackCount && <div className="flex items-center gap-1.5 text-xs text-muted-foreground"><Server className="size-3.5 text-cyan" /><span>{f.rackCount.toLocaleString()} racks</span></div>}
                     {f.carrierNeutral === true && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-neon/25 text-neon bg-neon/5">CARRIER-NEUTRAL</Badge>}
-                    {f.aiReady && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
+                    {f.aiReady && <Badge variant="outline" title="AI-ready: operator-stated AI-grade design, defined in DC254's methodology (/methodology#ai-ready-label)" className="rounded-full px-2 py-0 text-2xs font-medium border-neon/25 text-neon bg-neon/5">AI-READY</Badge>}
                     {f.tierRating && <Badge variant="outline" className="rounded-full px-2 py-0 text-2xs font-medium border-border text-muted-foreground">{f.tierRating}</Badge>}
                   </div>
                   {f.description && <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{f.description}</p>}

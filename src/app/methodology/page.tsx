@@ -240,6 +240,44 @@ export default function MethodologyPage() {
             ))}
           </div>
 
+          {/* The AI-ready label, fixed definition (external review 2026-10-18) */}
+          <h2 id="ai-ready-label" className="text-xl font-semibold text-foreground mb-2">
+            The AI-ready label
+          </h2>
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground mb-6">
+            &quot;AI-ready&quot; is the most misused phrase in this market, so it
+            carries a fixed definition here. A facility is marked AI-ready on
+            DC254 when its operator or developer publicly states an
+            AI-specific design capability for it: in practice, supported rack
+            power densities in the 30 kW-and-above class, or a build explicitly
+            positioned for AI workloads in operator documentation or launch
+            coverage.
+          </p>
+          <div className="rounded-xl border border-border/50 bg-accent/30 p-6 mb-6">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+              Three limits, stated plainly. The label is operator-stated design
+              intent, not an independent certification, DC254 does not audit
+              buildings. It says nothing about AI workloads actually delivered
+              today. And absence of the label is not a criticism: a facility
+              without it may simply not publish density figures.
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Five records carry the label in the current dataset:{" "}
+              <Link href="/directory/ixafrica-nbox1" className="text-cyan hover:underline">iXAfrica NBOX1</Link>{" "}
+              (operator-cited densities up to 40 kW per rack),{" "}
+              <Link href="/directory/ixafrica-nbox1-2" className="text-cyan hover:underline">NBOX1.2</Link>{" "}
+              (design targets up to 50 kW per rack for AI workloads),{" "}
+              <Link href="/directory/ixafrica-tilisi" className="text-cyan hover:underline">the NBOX2 Tilisi expansion</Link>{" "}
+              (the AI-positioned campus plan those figures belong to),{" "}
+              <Link href="/directory/microsoft-g42-ai-dc" className="text-cyan hover:underline">the Microsoft–G42 campus</Link>{" "}
+              (an AI data centre as announced) and{" "}
+              <Link href="/directory/nxtra-tatu-city" className="text-cyan hover:underline">Nxtra by Airtel Tatu City</Link>{" "}
+              (AI-positioned launch coverage). The evidence behind each flag
+              sits on its directory record, with sources and a verification
+              date.
+            </p>
+          </div>
+
           {/* Update cadence */}
           <h2 className="text-xl font-semibold text-foreground mb-2">
             Update cadence

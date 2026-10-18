@@ -31,9 +31,21 @@ function fmtVerified(iso: string): string {
   return new Date(local).toLocaleDateString("en-KE", { month: "short", year: "numeric" });
 }
 
+/**
+ * Capacity label, status-aware (external review 2026-10-18): an Operational
+ * facility must never wear "planned capacity". The figure basis follows the
+ * canonical site-stats definitions: live IT load, designed capacity for built
+ * sites, announced capacity for pipeline projects. Record-level nuance (e.g.
+ * NBO1's 7.5 MW being the operator's "available site capacity") lives on the
+ * directory record's divergence note, one click away.
+ */
 function capacityLabel(f: Facility): { value: string; label: string } {
   if (f.itLoadMw) return { value: `${f.itLoadMw}`, label: "MW live IT load" };
-  if (f.totalCapacityMw) return { value: `${f.totalCapacityMw}`, label: "MW planned capacity" };
+  if (f.totalCapacityMw) {
+    return f.status === "Operational"
+      ? { value: `${f.totalCapacityMw}`, label: "MW designed capacity" }
+      : { value: `${f.totalCapacityMw}`, label: "MW announced capacity" };
+  }
   return { value: "-", label: "capacity undisclosed" };
 }
 
@@ -117,7 +129,10 @@ export default function FeaturedFacilities() {
                       {meta.label}
                     </span>
                     {f.aiReady && (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 font-mono text-2xs uppercase tracking-widest text-cyan">
+                      <span
+                        title="AI-ready: operator-stated AI-grade design, defined in DC254's methodology"
+                        className="inline-flex items-center gap-1 rounded-full border border-cyan/25 bg-cyan/10 px-2 py-0.5 font-mono text-2xs uppercase tracking-widest text-cyan"
+                      >
                         <Cpu className="size-3" />
                         AI-ready
                       </span>
