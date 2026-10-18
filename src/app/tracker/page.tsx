@@ -103,10 +103,18 @@ export default function TrackerPage() {
   const dated = pipeline.filter((f) => f.openedDate || f.expansionDate);
   const undated = pipeline.filter((f) => !(f.openedDate || f.expansionDate));
 
-  // Operator scoreboard
+  // Operator scoreboard (external spec 2026-10-18, aggregate rule 4: only
+  // compatible measures are ever summed). Two pure columns, one measure
+  // family each: live IT load is published in-service load (only operational
+  // records carry it - verified below the dataset has none on pipeline
+  // records), designed & announced sums the design-basis MW (designed
+  // capacity for built sites, developer-announced for pipeline). The old
+  // single column fell back totalCapacityMw ?? itLoadMw per record and
+  // silently added electrons to announcements (iColo = 6.4 designed + 2.65
+  // live under one "Designed capacity" heading). Missing stays a dash.
   const byOperator = new Map<
     string,
-    { name: string; type: string; parent: string | null; count: number; mw: number; stages: Set<string> }
+    { name: string; type: string; parent: string | null; count: number; liveMw: number; designedMw: number; stages: Set<string> }
   >();
   for (const f of facilities) {
     const row = byOperator.get(f.operatorId) ?? {
@@ -114,15 +122,19 @@ export default function TrackerPage() {
       type: f.operator.type,
       parent: f.operator.parentCompany,
       count: 0,
-      mw: 0,
+      liveMw: 0,
+      designedMw: 0,
       stages: new Set<string>(),
     };
     row.count += 1;
-    row.mw += facilityMw(f) ?? 0;
+    row.liveMw += f.itLoadMw ?? 0;
+    row.designedMw += f.totalCapacityMw ?? 0;
     row.stages.add(f.status);
     byOperator.set(f.operatorId, row);
   }
-  const scoreboard = [...byOperator.values()].sort((a, b) => b.mw - a.mw || b.count - a.count);
+  const scoreboard = [...byOperator.values()].sort(
+    (a, b) => b.designedMw - a.designedMw || b.liveMw - a.liveMw || b.count - a.count,
+  );
 
   // Data-confidence watchlist: lowest confidence first (stable sort keeps
   // that order when gap counts tie), with the fields we couldn't verify.
@@ -604,20 +616,23 @@ export default function TrackerPage() {
                 Operator scoreboard
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Designed capacity across all four stages, per operator. Pipeline
-                megawatts are developer-announced and marked as such, sort
-                accordingly.
+                Two measures per operator, never summed together: published
+                in-service IT load, and design-basis megawatts (designed
+                capacity for built sites, developer-announced figures for
+                pipeline projects). A dash means nothing has been published,
+                not zero.
               </p>
             </div>
             <div className="card-solid mt-6 overflow-x-auto rounded-xl">
-              <table className="w-full min-w-[560px] border-collapse text-sm">
-                <caption className="sr-only">Operators ranked by total tracked capacity</caption>
+              <table className="w-full min-w-[640px] border-collapse text-sm">
+                <caption className="sr-only">Operators ranked by designed and announced capacity, with published live IT load listed separately</caption>
                 <thead>
                   <tr className="border-b border-border/60 text-left text-xs font-mono uppercase tracking-widest text-muted-foreground">
                     <th scope="col" className="px-4 py-3 font-medium">Operator</th>
                     <th scope="col" className="px-4 py-3 font-medium">Facilities</th>
                     <th scope="col" className="px-4 py-3 font-medium">Stages</th>
-                    <th scope="col" className="px-4 py-3 text-right font-medium">Capacity (MW)</th>
+                    <th scope="col" className="px-4 py-3 text-right font-medium">Live IT load (MW)</th>
+                    <th scope="col" className="px-4 py-3 text-right font-medium">Designed &amp; announced (MW)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -643,8 +658,11 @@ export default function TrackerPage() {
                           ))}
                         </span>
                       </td>
+                      <td className="px-4 py-3 text-right tabular-nums text-muted-foreground">
+                        {o.liveMw > 0 ? o.liveMw.toFixed(1) : "-"}
+                      </td>
                       <td className="px-4 py-3 text-right font-semibold tabular-nums text-foreground">
-                        {o.mw > 0 ? o.mw.toFixed(1) : "-"}
+                        {o.designedMw > 0 ? o.designedMw.toFixed(1) : "-"}
                       </td>
                     </tr>
                   ))}
