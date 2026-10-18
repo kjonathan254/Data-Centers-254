@@ -167,6 +167,27 @@ export default function TrackerPage() {
       dataConfidence: f.dataConfidence,
     }));
 
+  // Data-gap counts (external spec 2026-10-18 #11): what the market has not
+  // published is part of the record. Computed from the same dataset as every
+  // other figure on this page - never hand-typed - and the live-load line
+  // deep-links into an explorer view that reproduces the exact count.
+  const noLiveLoad = explorerRows.filter((r) => r.itLoadMw == null).length;
+  const noLiveOperational = explorerRows.filter(
+    (r) => r.itLoadMw == null && r.status === "Operational",
+  ).length;
+  const noMwFigure = explorerRows.filter(
+    (r) => r.itLoadMw == null && r.totalCapacityMw == null,
+  ).length;
+  const singleSourceCount = facilities.filter(
+    (f) => f.country === "Kenya" && (f.sources?.length ?? 0) <= 1,
+  ).length;
+  const kenyaPipeline = facilities.filter(
+    (f) => f.country === "Kenya" && f.status !== "Operational",
+  );
+  const kenyaUndated = kenyaPipeline.filter(
+    (f) => !(f.openedDate || f.expansionDate),
+  ).length;
+
   // Phase 1: schema.org Dataset markup so the tracker is citable as a
   // structured object (mirrors the directory page's Dataset JSON-LD).
   const trackerJsonLd = {
@@ -288,11 +309,117 @@ export default function TrackerPage() {
             })}
           </div>
 
+          {/* How to read this page (external spec 2026-10-18 #3): status
+              vocabulary and the never-sum rule live on the page itself,
+              before any filter or table, so the tracker can be read without
+              a methodology detour. */}
+          <section aria-labelledby="howto-title" className="mt-10">
+            <div className="card-solid rounded-xl p-5 sm:p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h2 id="howto-title" className="text-base font-semibold text-foreground">
+                  How to read this page
+                </h2>
+                <Link href="/methodology" className="text-xs font-medium text-cyan hover:underline">
+                  Full methodology
+                </Link>
+              </div>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                DC254 separates live infrastructure from planned capacity. Live
+                IT load is not designed capacity, and an announcement is not
+                operating supply. The three measures are never added into one
+                headline number, and every figure traces to a dated source on
+                its record page.
+              </p>
+              <dl className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    t: "Live",
+                    d: "Evidence supports the facility operating today. An opening ceremony or a licence is not operation.",
+                  },
+                  {
+                    t: "Being built",
+                    d: "Evidence of active construction on a named site. Groundbreakings and proposed start dates do not qualify.",
+                  },
+                  {
+                    t: "Committed",
+                    d: "A documented investment or contractual commitment, with the evidence on the record.",
+                  },
+                  {
+                    t: "Announced / early stage",
+                    d: "Publicly proposed. The evidence does not yet support a later stage, and we say so.",
+                  },
+                ].map((s) => (
+                  <div key={s.t} className="rounded-lg border border-border/40 bg-background/40 p-3.5">
+                    <dt className="text-2xs font-bold uppercase tracking-wider text-cyan">{s.t}</dt>
+                    <dd className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.d}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
           {/* Capacity explorer: the working tool (filters + measure switcher,
               external review 2026-10-18 flagship). Sits between the momentum
               cards and the pipeline board so the static story and the
               interactive view share one screen. */}
           <CapacityExplorer rows={explorerRows} />
+
+          {/* Where the market is still unclear (external spec 2026-10-18
+              #11): the gaps are a published feature, not a weakness. Every
+              count is reproducible from the linked view or the dataset. */}
+          <section aria-labelledby="gaps-title" className="mt-10">
+            <div className="card-solid rounded-xl p-5 sm:p-6">
+              <h2 id="gaps-title" className="text-base font-semibold text-foreground">
+                Where the market is still unclear
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                What operators have not published is part of the market record
+                too. We print the gaps rather than guessing past them, and a
+                missing figure is never counted as zero.
+              </p>
+              <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <li className="rounded-lg border border-border/40 bg-background/40 p-4">
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">{noLiveLoad}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    records with no published live IT load, {noLiveOperational} of them
+                    operating facilities.{" "}
+                    <a
+                      href="/tracker?measure=live&amp;missing=1"
+                      className="text-cyan hover:underline"
+                    >
+                      Inspect them in the explorer
+                    </a>.
+                  </p>
+                </li>
+                <li className="rounded-lg border border-border/40 bg-background/40 p-4">
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">{noMwFigure}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    records carry no public megawatt figure at all; they show as
+                    capacity n/a in the directory rather than an invented number.
+                  </p>
+                </li>
+                <li className="rounded-lg border border-border/40 bg-background/40 p-4">
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">{singleSourceCount}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    records rest on a single public source and want
+                    corroboration.{" "}
+                    <Link href="/corrections" className="text-cyan hover:underline">
+                      Challenge or strengthen a record
+                    </Link>.
+                  </p>
+                </li>
+                <li className="rounded-lg border border-border/40 bg-background/40 p-4">
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">
+                    {kenyaUndated} of {kenyaPipeline.length}
+                  </p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    pipeline projects have no announced target date; they are
+                    listed by name under Coming online below.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
 
           {/* Pipeline board */}
           <section aria-labelledby="board-title" className="mt-16">

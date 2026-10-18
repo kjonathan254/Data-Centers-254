@@ -13,7 +13,7 @@ const FEATURED_SLUGS = [
   "ixafrica-nbox1",
   "microsoft-g42-ai-dc",
   "africa-dc-nairobi-1",
-  "africa-dc-mombasa",
+  "icolo-mba1",
 ];
 
 const STATUS_META: Record<string, { label: string; cls: string; icon: typeof CheckCircle }> = {

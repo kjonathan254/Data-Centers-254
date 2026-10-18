@@ -31,7 +31,7 @@
 
 ## 4. Cadence & deliverables
 
-- Rack Report: WEEKLY Monday. Issue 003 = October edition (published 13 Oct 2026). Issue 004 = Mon 2 Nov 2026. Cadence doc is the source of truth.
+- Rack Report: MONTHLY, first Monday, 06:00 EAT (docs/NEWSLETTER-CADENCE.md is the source of truth; the "WEEKLY" note here was a stale leftover, corrected 2026-10-18). Issue 003 = October edition (published 13 Oct 2026). Issue 004 = Mon 2 Nov 2026.
 - Friday: DC254 Intelligence flagship. Wednesday: investigation day feeding Friday.
 - Every RR issue: master copy in docs/newsletter/, PDF to public/reports/, /rack-report archive block updated (featured/past/next slots), sample-issue link points at latest.
 - Social packs: platform-exact dimensions (banner-design skill), LinkedIn post copy saved in the master doc for the editor to post.

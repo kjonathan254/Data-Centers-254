@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { RotateCcw, Search } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Link2, RotateCcw, Search } from "lucide-react";
 
 /**
  * Capacity Explorer, the working view of the tracker (external review
@@ -15,6 +15,12 @@ import { RotateCcw, Search } from "lucide-react";
  * site-stats figures (10.5 live / 42.9 designed / 230 announced) exactly.
  * Fully client-side over a Kenya-scoped snapshot passed from the server
  * page; no fetching, no invented values.
+ *
+ * External spec round 2 (2026-10-18): every filter choice is mirrored into
+ * the URL query (history.replaceState, no history pollution) so a filtered
+ * view is shareable and restorable, with a "copy link to this view" action;
+ * a gap filter ("only records not disclosing this measure") turns missing
+ * figures from an absence into an inspectable, deep-linkable state.
  */
 
 export interface ExplorerRow {
@@ -32,6 +38,25 @@ export interface ExplorerRow {
 
 type Measure = "live" | "designed" | "announced";
 type SortKey = "mw" | "name" | "verified";
+
+/** Everything the explorer can be tuned to; mirrored one-to-one into the URL. */
+interface ExplorerState {
+  measure: Measure;
+  stage: string;
+  operator: string;
+  city: string;
+  sort: SortKey;
+  missingOnly: boolean;
+}
+
+const DEFAULT_STATE: ExplorerState = {
+  measure: "live",
+  stage: "all",
+  operator: "all",
+  city: "all",
+  sort: "mw",
+  missingOnly: false,
+};
 
 const MEASURES: { key: Measure; label: string; blurb: string }[] = [
   {
@@ -111,11 +136,13 @@ function stageBadgeClass(stage: string): string {
 }
 
 export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
-  const [measure, setMeasure] = useState<Measure>("live");
-  const [stage, setStage] = useState("all");
-  const [operator, setOperator] = useState("all");
-  const [city, setCity] = useState("all");
-  const [sort, setSort] = useState<SortKey>("mw");
+  const [measure, setMeasure] = useState<Measure>(DEFAULT_STATE.measure);
+  const [stage, setStage] = useState(DEFAULT_STATE.stage);
+  const [operator, setOperator] = useState(DEFAULT_STATE.operator);
+  const [city, setCity] = useState(DEFAULT_STATE.city);
+  const [sort, setSort] = useState<SortKey>(DEFAULT_STATE.sort);
+  const [missingOnly, setMissingOnly] = useState(DEFAULT_STATE.missingOnly);
+  const [copied, setCopied] = useState(false);
 
   const stages = useMemo(() => {
     const present = new Set(rows.map((r) => r.status));
@@ -133,12 +160,98 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
     [rows],
   );
 
+  // URL state (external spec 2026-10-18): a filtered view must be shareable
+  // and restorable. Written with history.replaceState so filter changes
+  // never pollute the back stack; read once on mount so a pasted link
+  // restores the exact view. Unknown or stale values fall back to defaults.
+  function syncUrl(next: ExplorerState) {
+    if (typeof window === "undefined") return;
+    const p = new URLSearchParams();
+    if (next.measure !== DEFAULT_STATE.measure) p.set("measure", next.measure);
+    if (next.stage !== "all") p.set("stage", next.stage);
+    if (next.operator !== "all") p.set("operator", next.operator);
+    if (next.city !== "all") p.set("city", next.city);
+    if (next.sort !== "mw") p.set("sort", next.sort);
+    if (next.missingOnly) p.set("missing", "1");
+    const qs = p.toString();
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${qs ? `?${qs}` : ""}`,
+    );
+  }
+
+  function patchState(patch: Partial<ExplorerState>) {
+    const next: ExplorerState = {
+      measure, stage, operator, city, sort, missingOnly, ...patch,
+    };
+    setMeasure(next.measure);
+    setStage(next.stage);
+    setOperator(next.operator);
+    setCity(next.city);
+    setSort(next.sort);
+    setMissingOnly(next.missingOnly);
+    syncUrl(next);
+  }
+
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const m = p.get("measure");
+    const st = p.get("stage");
+    const op = p.get("operator");
+    const ct = p.get("city");
+    const so = p.get("sort");
+    const next: ExplorerState = {
+      measure: m === "designed" || m === "announced" ? m : DEFAULT_STATE.measure,
+      stage: st && (st === "all" || stages.includes(st)) ? st : DEFAULT_STATE.stage,
+      operator: op && (op === "all" || operators.includes(op)) ? op : DEFAULT_STATE.operator,
+      city: ct && (ct === "all" || cities.includes(ct)) ? ct : DEFAULT_STATE.city,
+      sort: so === "name" || so === "verified" ? so : DEFAULT_STATE.sort,
+      missingOnly: p.get("missing") === "1",
+    };
+    if (
+      next.measure !== DEFAULT_STATE.measure ||
+      next.stage !== DEFAULT_STATE.stage ||
+      next.operator !== DEFAULT_STATE.operator ||
+      next.city !== DEFAULT_STATE.city ||
+      next.sort !== DEFAULT_STATE.sort ||
+      next.missingOnly !== DEFAULT_STATE.missingOnly
+    ) {
+      setMeasure(next.measure);
+      setStage(next.stage);
+      setOperator(next.operator);
+      setCity(next.city);
+      setSort(next.sort);
+      setMissingOnly(next.missingOnly);
+    }
+    // Runs once on mount; the option lists derive from the stable rows prop.
+  }, []);
+
+  async function copyView() {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+    } catch {
+      // Clipboard API can be unavailable (permissions, older engines);
+      // fall back to the textarea trick rather than failing silently.
+      const ta = document.createElement("textarea");
+      ta.value = window.location.href;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  }
+
   const filtered = useMemo(() => {
     const list = rows.filter(
       (r) =>
         (stage === "all" || r.status === stage) &&
         (operator === "all" || r.operator === operator) &&
-        (city === "all" || r.city === city),
+        (city === "all" || r.city === city) &&
+        (!missingOnly ||
+          (measureApplies(r, measure) && valueFor(r, measure) == null)),
     );
     const val = (r: ExplorerRow) => valueFor(r, measure);
     return list.sort((a, b) => {
@@ -151,7 +264,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
       if (bv == null) return -1;
       return bv - av || a.name.localeCompare(b.name);
     });
-  }, [rows, stage, operator, city, measure, sort]);
+  }, [rows, stage, operator, city, measure, sort, missingOnly]);
 
   const { total, disclosed, undisclosed } = useMemo(() => {
     let t = 0;
@@ -167,13 +280,19 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
   }, [filtered, measure]);
 
   const active = MEASURES.find((m) => m.key === measure) ?? MEASURES[0];
-  const isFiltered = stage !== "all" || operator !== "all" || city !== "all";
+  const isFiltered =
+    stage !== "all" || operator !== "all" || city !== "all" || missingOnly;
 
   function reset() {
-    setStage("all");
-    setOperator("all");
-    setCity("all");
-    setSort("mw");
+    // Clears filters and the gap view; the chosen measure is kept, it is a
+    // reading preference, not a filter.
+    patchState({
+      stage: "all",
+      operator: "all",
+      city: "all",
+      sort: "mw",
+      missingOnly: false,
+    });
   }
 
   return (
@@ -201,7 +320,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
               key={m.key}
               type="button"
               aria-pressed={measure === m.key}
-              onClick={() => setMeasure(m.key)}
+              onClick={() => patchState({ measure: m.key })}
               className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
                 measure === m.key
                   ? "bg-background text-foreground shadow-sm border border-border/60"
@@ -226,7 +345,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
           <select
             id="cx-stage"
             value={stage}
-            onChange={(e) => setStage(e.target.value)}
+            onChange={(e) => patchState({ stage: e.target.value })}
             className="w-full rounded-lg border border-border/60 bg-background px-3 py-2 text-sm text-foreground focus:border-cyan focus:outline-none"
           >
             <option value="all">All stages</option>
@@ -242,7 +361,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
           <select
             id="cx-operator"
             value={operator}
-            onChange={(e) => setOperator(e.target.value)}
+            onChange={(e) => patchState({ operator: e.target.value })}
             className="w-full rounded-lg border border-border/60 bg-background px-3 py-2 text-sm text-foreground focus:border-cyan focus:outline-none"
           >
             <option value="all">All operators</option>
@@ -258,7 +377,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
           <select
             id="cx-city"
             value={city}
-            onChange={(e) => setCity(e.target.value)}
+            onChange={(e) => patchState({ city: e.target.value })}
             className="w-full rounded-lg border border-border/60 bg-background px-3 py-2 text-sm text-foreground focus:border-cyan focus:outline-none"
           >
             <option value="all">All locations</option>
@@ -274,7 +393,7 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
           <select
             id="cx-sort"
             value={sort}
-            onChange={(e) => setSort(e.target.value as SortKey)}
+            onChange={(e) => patchState({ sort: e.target.value as SortKey })}
             className="w-full rounded-lg border border-border/60 bg-background px-3 py-2 text-sm text-foreground focus:border-cyan focus:outline-none"
           >
             <option value="mw">Capacity (high to low)</option>
@@ -284,13 +403,30 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
         </div>
       </div>
 
+      {/* Gap filter (external spec 2026-10-18 #11): "where the market is
+          still unclear" is an inspectable state, deep-linkable via ?missing=1.
+          A missing figure is an honest gap, never a zero. */}
+      <label
+        htmlFor="cx-missing"
+        className="mt-3 inline-flex cursor-pointer items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <input
+          id="cx-missing"
+          type="checkbox"
+          checked={missingOnly}
+          onChange={(e) => patchState({ missingOnly: e.target.checked })}
+          className="size-3.5 accent-cyan"
+        />
+        Show only records not disclosing this measure
+      </label>
+
       {/* Traceable summary, announced to screen readers on every change */}
       <div
         aria-live="polite"
         className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border border-border/50 bg-accent/30 px-4 py-3 text-sm"
       >
         <span className="font-semibold tabular-nums text-foreground">
-          {fmtMw(total)} MW
+          {disclosed > 0 ? `${fmtMw(total)} MW` : "–"}
         </span>
         <span className="text-muted-foreground">{active.label.toLowerCase()} total</span>
         <span className="text-muted-foreground" aria-hidden="true">·</span>
@@ -298,19 +434,35 @@ export default function CapacityExplorer({ rows }: { rows: ExplorerRow[] }) {
           {filtered.length} of {rows.length} records shown
         </span>
         <span className="text-muted-foreground" aria-hidden="true">·</span>
-        <span className="tabular-nums text-muted-foreground">
-          {disclosed} with a published figure{undisclosed > 0 ? `, ${undisclosed} not disclosed` : ""}
-        </span>
-        {isFiltered && (
+        {missingOnly ? (
+          <span className="tabular-nums text-muted-foreground">
+            showing only the {undisclosed} record{undisclosed === 1 ? "" : "s"} without a published figure
+          </span>
+        ) : (
+          <span className="tabular-nums text-muted-foreground">
+            {disclosed} with a published figure{undisclosed > 0 ? `, ${undisclosed} not disclosed` : ""}
+          </span>
+        )}
+        <span className="ml-auto inline-flex items-center gap-4">
+          {isFiltered && (
+            <button
+              type="button"
+              onClick={reset}
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan hover:underline"
+            >
+              <RotateCcw className="size-3" />
+              Reset filters
+            </button>
+          )}
           <button
             type="button"
-            onClick={reset}
-            className="ml-auto inline-flex items-center gap-1.5 text-xs font-medium text-cyan hover:underline"
+            onClick={copyView}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan hover:underline"
           >
-            <RotateCcw className="size-3" />
-            Reset filters
+            <Link2 className="size-3" aria-hidden="true" />
+            {copied ? "Link copied" : "Copy link to this view"}
           </button>
-        )}
+        </span>
       </div>
 
       {/* Desktop table */}
