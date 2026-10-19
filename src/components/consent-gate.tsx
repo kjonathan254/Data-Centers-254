@@ -40,16 +40,20 @@ const CLARITY_INIT =
 // rendered, so this file is safe to deploy before the env vars exist.
 // Data-minimisation defaults: session recording off (Clarity/Sentry own
 // replay), DNT respected, person profiles only for identified users.
-// request_batching false: DC254 is low-traffic, so each event sends
-// immediately instead of waiting on the 10s batch timer — verified live
-// 2026-10-20 (batched sends stalled in headless/edge-timer environments
-// while unbatched sends fired instantly; at this volume batching buys
-// nothing and risks stranded events).
+//
+// Verification note (learned 2026-10-20, took a full debug session): PostHog
+// SILENTLY DROPS all capture() events from bots - posthog-js _is_bot() gates
+// capture on HeadlessChrome UAs / navigator.webdriver, so headless smoke
+// tests never see events reach us.i.posthog.com even though the SDK is fully
+// initialised (flags POST still fires - it is not bot-gated). To verify
+// ingestion, POST a probe event directly to https://us.i.posthog.com/e/
+// with the project key (HTTP 200 {"status":"Ok"}), and confirm the browser
+// side loads array.js + POSTs /flags/?v=2 - both observable in headless.
 const PH_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY || "";
 const PH_HOST =
   process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
 const POSTHOG_INIT = PH_KEY
-  ? `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=s;void 0!==a?e[a]=u:e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('${PH_KEY}',{api_host:'${PH_HOST}',autocapture:true,capture_pageview:true,respect_dnt:true,disable_session_recording:true,person_profiles:'identified_only',request_batching:false});`
+  ? `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=s;void 0!==a?e[a]=u:e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('${PH_KEY}',{api_host:'${PH_HOST}',autocapture:true,capture_pageview:true,respect_dnt:true,disable_session_recording:true,person_profiles:'identified_only'});`
   : "";
 
 export default function ConsentGate() {
