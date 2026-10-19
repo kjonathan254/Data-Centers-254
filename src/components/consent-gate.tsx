@@ -40,11 +40,16 @@ const CLARITY_INIT =
 // rendered, so this file is safe to deploy before the env vars exist.
 // Data-minimisation defaults: session recording off (Clarity/Sentry own
 // replay), DNT respected, person profiles only for identified users.
+// request_batching false: DC254 is low-traffic, so each event sends
+// immediately instead of waiting on the 10s batch timer — verified live
+// 2026-10-20 (batched sends stalled in headless/edge-timer environments
+// while unbatched sends fired instantly; at this volume batching buys
+// nothing and risks stranded events).
 const PH_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY || "";
 const PH_HOST =
   process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
 const POSTHOG_INIT = PH_KEY
-  ? `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=s;void 0!==a?e[a]=u:e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('${PH_KEY}',{api_host:'${PH_HOST}',autocapture:true,capture_pageview:true,respect_dnt:true,disable_session_recording:true,person_profiles:'identified_only'});`
+  ? `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=s;void 0!==a?e[a]=u:e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('${PH_KEY}',{api_host:'${PH_HOST}',autocapture:true,capture_pageview:true,respect_dnt:true,disable_session_recording:true,person_profiles:'identified_only',request_batching:false});`
   : "";
 
 export default function ConsentGate() {
