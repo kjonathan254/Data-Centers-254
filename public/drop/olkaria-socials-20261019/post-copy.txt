@@ -1,0 +1,91 @@
+DC254 — Olkaria case-study pack (6-card carousel 1080x1350 @2x + 55s 9:16 explainer video)
+Rendered 19 October 2026 · every figure checked against the live article
+(olkaria-geothermal-ai-data-centre-race) and the DC254 directory
+
+WHAT CHANGED VS THE DRAFT PACK
+- Draft was factually sound but generic. Added DC254's verified-number edge:
+  the 100 MW announced first phase set against the market's 10.5 MW verified
+  live IT load, and the 77 MW genuinely under construction.
+- Replaced all placeholder images (OpenAI-hosted hotlinks, licensing unclear)
+  with the repo's own licensed imagery + original graphics.
+- Copy passes the house no-AI-tells rules: no em dashes, no negation lists,
+  no engagement bait. Evidence labels kept: "announced" vs "reported" vs
+  "verified" are distinct words on the cards and in the video captions.
+- X copy tightened to a single 280-char tweet (draft was 2 loose sentences).
+
+FILES
+  dc254-olkaria-01..06.png   LinkedIn carousel, 1080x1350 @2x
+  dc254-olkaria-video.mp4    55s vertical 1080x1920, narration + burned captions
+  dc254-olkaria-video.srt    sidecar captions (for platforms that accept uploads)
+  narration.txt               the exact voiceover script with scene timings
+
+── LINKEDIN (publish first, per editor call; ~200 chars visible before "more") ──
+
+Kenya has the steam. So where are the AI data centres?
+
+Olkaria has powered Kenya for four decades. In May 2024, Microsoft and G42 announced a $1 billion digital ecosystem investment with a geothermal-powered data centre campus at its centre. The announced first phase was 100 MW. Kenya's entire verified live IT load today: 10.5 MW.
+
+Two years on, the campus is still an announcement. Reporting in 2026 points to two obstacles: a power requirement that grew toward 1,000 MW, about a third of the country's installed capacity, and a dispute over guaranteed capacity payments that stalled the talks. The government position is that the project is "not failed or withdrawn".
+
+The bigger lesson: renewable energy is an advantage, and it is not the entire equation. Power procurement, grid capacity, transmission and bankable contracts all decide whether announcements become live load.
+
+Our latest analysis examines what happened at Olkaria, what Fervo's geothermal project in Utah teaches about commercial structure, and what would move Kenya from announcements to live capacity. While you read, note the 77 MW already under construction in Nairobi. That build is the market's quiet answer.
+
+Read the article: https://data-centers-254.vercel.app/articles/olkaria-geothermal-ai-data-centre-race
+
+#DataCentres #Kenya #Geothermal #AIInfrastructure #DC254
+
+── X / TWITTER (single tweet, 279 chars; link in first reply per reach practice) ──
+
+Kenya has the steam. So why is the Olkaria AI data-centre campus still an announcement?
+
+The first phase: 100 MW announced. Kenya's verified live IT load: 10.5 MW. Steam was never the hard part.
+
+What Utah's Fervo ladder teaches: data-centers-254.vercel.app/articles/olkaria-geothermal-ai-data-centre-race
+
+#DataCentres #Kenya
+
+── FACEBOOK (conversational; same facts, softer close) ──
+
+Kenya has geothermal power. It has ambitious digital infrastructure plans. So what stands between the two?
+
+Olkaria was meant to host a major geothermal-powered data-centre campus announced by Microsoft and G42 in 2024. The first phase was announced at 100 MW. For scale: Kenya's whole verified data centre fleet runs on 10.5 MW today.
+
+By 2026 the project was being reconsidered. The power ask had grown toward 1,000 MW and the two sides could not agree on guaranteed capacity payments. The government says the project is not failed or withdrawn, it still needs structuring.
+
+In our latest DC254 article we examine the Olkaria project, compare it with Fervo's geothermal project in Utah, and look at what Kenya needs to turn announcements into live capacity.
+
+Read the full analysis:
+https://data-centers-254.vercel.app/articles/olkaria-geothermal-ai-data-centre-race
+
+#Kenya #DataCentres #GeothermalEnergy #DigitalInfrastructure
+
+── VIDEO POST CAPTIONS (LinkedIn, Reels/TikTok, Shorts) ──
+
+LinkedIn: The 55-second version of our Olkaria analysis: steam was ready on day one, the contract structure was not. Full analysis via the link in the first comment. #DataCentres #Kenya #Geothermal
+
+Reels/TikTok: Kenya has the steam. What is missing is the contract. 55 seconds on the Olkaria AI campus. #Kenya #DataCentres #Geothermal #AI
+
+Shorts title: Kenya has the steam. So where are the AI data centres? | DC254
+Shorts description: The Olkaria AI data-centre campus, explained in 55 seconds. Full analysis: https://data-centers-254.vercel.app/articles/olkaria-geothermal-ai-data-centre-race
+
+── NOTES FOR THE EDITOR ──
+- Figure bases: $1B = announced investment (company release, 22 May 2024), not
+  confirmed spend. 100 MW = first phase, from DCD project reporting, not the
+  announcement text. 1,000 MW = reported requirement (Semafor May 2026, Ruto
+  quoted; 60 MW -> 1,000 MW growth per Kenyans.co.ke 22 Aug 2026 and Business
+  Daily 10 Sep 2026). 10.5 MW / 42.9 MW / 230 MW / 77 MW = DC254 directory,
+  verified October 2026. Fervo figures: company announcements and reporting
+  through 1 Oct 2026 commercial operation of the first 33 MW block.
+- Project language: "stalled" / "under review", never "cancelled" (Tanui:
+  "not failed or withdrawn").
+- Video voice is synthetic (TTS). If it reads too synthetic for the brand,
+  the narration script (narration.txt) is written for a human re-record;
+  scene timings and captions survive a re-record.
+- Suggested first comment on LinkedIn/X: the article link (X copy keeps the
+  link out of the tweet body for reach; if you prefer it inline, swap in the
+  Facebook closing line).
+- Alt text, card 1: "Dark DC254 card: Kenya has the steam. So where are the
+  AI data centres? The Olkaria case study in six cards."
+- If the directory updates before posting, re-check 10.5 / 42.9 / 230 / 77 on
+  /tracker and re-render card 4 + scene captions (scripts/olkaria-pack/).
