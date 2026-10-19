@@ -74,13 +74,16 @@ const securityHeaders = [
   // after codebase-wide verification: no iframes, no external scripts/fonts/
   // CDNs, no client-side external fetches, no eval/importScripts).
   //
-  // Third parties covered: GA4 (googletagmanager + google-analytics) and
-  // Microsoft Clarity (www.clarity.ms). Clarity was loaded by layout.tsx but
+  // Third parties covered: GA4 (googletagmanager + google-analytics),
+  // Microsoft Clarity (www.clarity.ms) and PostHog (us.i/us-assets.i.posthog.com).
+  // Clarity was loaded by layout.tsx but
   // NOT permitted by this policy — every real browser silently blocked the
   // tag and fired CSP violations at /api/csp-report (security audit
-  // remediation). The three Clarity origins below are the minimal documented
-  // set: script-src for the tag itself, connect-src for the beacon, img-src
-  // for the pixel fallback.
+  // remediation). PostHog hit the identical trap on launch (2026-10-20):
+  // array.js downloaded but the nonce-less injected tag could not execute.
+  // The PostHog origins below are the minimal documented set: script-src for
+  // array.js (assets host), connect-src for event capture (ingestion host),
+  // img-src for the pixel fallback.
   //
   // What this policy does for the site: even if an article, dependency or
   // comment ever tried to inject malicious content, the browser refuses to
@@ -100,12 +103,12 @@ const securityHeaders = [
       "object-src 'none'",
       "frame-ancestors 'self'",
       "form-action 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://us-assets.i.posthog.com",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://*.clarity.ms",
+      "img-src 'self' data: blob: https://*.clarity.ms https://us.i.posthog.com",
       "font-src 'self' data:",
       "media-src 'self' blob:",
-      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://us.i.posthog.com",
       // Session Replay (2026-10-15): the Sentry replay compression worker is
       // spawned from a self-authored blob: URL. Without worker-src the browser
       // blocks the worker and replay segments silently never send.
