@@ -191,8 +191,8 @@ export default function RootLayout({
         </a>
         {children}
         <ChatWidget />
-        {/* GA4 + Clarity load only after the visitor consents via this gate;
-            see src/components/consent-gate.tsx and the privacy policy. */}
+        {/* GA4 + Clarity + PostHog load only after the visitor consents via this
+            gate; see src/components/consent-gate.tsx and the privacy policy. */}
         <ConsentGate />
         <Analytics />
         <PwaRegister />

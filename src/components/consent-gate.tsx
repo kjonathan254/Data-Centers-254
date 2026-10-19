@@ -3,9 +3,9 @@
 /**
  * Analytics consent gate (Kenya DPA 2019 / GDPR friendly).
  *
- * Google Analytics 4 and Microsoft Clarity are NOT loaded until the visitor
- * explicitly agrees via the on-site banner. Sentry Session Replay (browser
- * session recording for debugging) rides the same switch: src/
+ * Google Analytics 4, Microsoft Clarity and PostHog are NOT loaded until the
+ * visitor explicitly agrees via the on-site banner. Sentry Session Replay
+ * (browser session recording for debugging) rides the same switch: src/
  * instrumentation-client.ts only attaches the replay integration after this
  * choice is "1", and listens for dc254:consent-granted / dc254:consent-reset
  * to attach or stop recording mid-session. The choice is stored on the
@@ -15,8 +15,11 @@
  * telemetry, not analytics). Vercel Analytics (<Analytics /> in the layout)
  * stays on unconditionally: it is cookieless and sets no identifiers.
  *
- * Note: GA4 sets cookies; Clarity is cookieless but still behavioural, so
- * both sit behind the same yes/no choice rather than a granular CMP.
+ * Note: GA4 and PostHog set cookies/localStorage identifiers; Clarity is
+ * cookieless but still behavioural, so they sit behind the same yes/no choice
+ * rather than a granular CMP. PostHog additionally respects DNT, runs with
+ * session recording off (Clarity/Sentry own replay, with masking) and builds
+ * person profiles only for identified users.
  */
 
 import { useEffect, useState } from "react";
@@ -31,6 +34,18 @@ const GA4_INIT =
 
 const CLARITY_INIT =
   '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "yimqsgqdql");';
+
+// PostHog product analytics (project token, US ingestion). Build-time inlined
+// from NEXT_PUBLIC_POSTHOG_* env vars; when unset the script is simply never
+// rendered, so this file is safe to deploy before the env vars exist.
+// Data-minimisation defaults: session recording off (Clarity/Sentry own
+// replay), DNT respected, person profiles only for identified users.
+const PH_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY || "";
+const PH_HOST =
+  process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
+const POSTHOG_INIT = PH_KEY
+  ? `!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=s;void 0!==a?e[a]=u:e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('${PH_KEY}',{api_host:'${PH_HOST}',autocapture:true,capture_pageview:true,respect_dnt:true,disable_session_recording:true,person_profiles:'identified_only'});`
+  : "";
 
 export default function ConsentGate() {
   const [consent, setConsent] = useState<Consent>("unknown");
@@ -98,6 +113,16 @@ export default function ConsentGate() {
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{ __html: CLARITY_INIT }}
           />
+          {/* PostHog: product analytics + autocapture. The inline bootstrap queues
+              init params; the loader injects array.js from the -assets host once
+              this runs. ~80KB fetch happens after consent only. */}
+          {POSTHOG_INIT && (
+            <Script
+              id="posthog-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{ __html: POSTHOG_INIT }}
+            />
+          )}
         </>
       )}
 
@@ -108,8 +133,8 @@ export default function ConsentGate() {
           className="fixed bottom-3 left-3 right-3 z-[100] mx-auto flex max-w-2xl flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-white/10 bg-[#0b1e3c]/95 px-4 py-3 shadow-2xl backdrop-blur sm:bottom-4 sm:left-4 sm:right-auto"
         >
           <p className="min-w-0 flex-1 text-xs leading-relaxed text-white/75">
-            Privacy-first analytics — GA4, cookieless Clarity and optional
-            session recording. Nothing analytical
+            Privacy-first analytics — GA4, cookieless Clarity, PostHog and
+            optional session recording. Nothing analytical
             loads until you agree.{" "}
             <a href="/privacy" className="text-sky-300 underline underline-offset-2">
               Privacy details
