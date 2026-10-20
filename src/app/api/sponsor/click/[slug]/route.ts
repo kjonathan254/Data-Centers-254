@@ -61,7 +61,7 @@ function safeTarget(raw: string | null, origin: string): string | null {
 
 export async function GET(req: NextRequest) {
   const { searchParams, origin } = new URL(req.url);
-  const slug = (searchParams.get('s') || 'generic').slice(0, 40);
+  const slug = (searchParams.get('s') || 'generic').replace(/[\x00-\x1f\x7f]/g, '').slice(0, 40);
   const target = safeTarget(searchParams.get('to'), origin);
 
   if (!target) {

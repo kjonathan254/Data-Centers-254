@@ -38,6 +38,9 @@ export interface PolicyClaim {
   sourceIds: string[];
   state: PolicyState;
   note: string;
+  /** Machine-readable editor hold: when present, the claim must never reach a
+   *  public surface (security audit C3, 2026-10-20). Editor-side data only. */
+  publicationHold?: string;
 }
 
 export interface PillarGap {
@@ -103,17 +106,34 @@ export function policyCaptureUrl(note: string | null | undefined): string | unde
 
 // ─── Dataset access ────────────────────────────────────────────────────────
 
-export function getPolicyDataset(): PolicyDatasetJson {
-  return data;
+// Publication gate (security audit C3, 2026-10-20): claims carrying the
+// editor's publicationHold are excluded from EVERY public accessor, mirroring
+// the enforced editorial gate in lib/evidence. Pass includeHeld=true only
+// from editor-side tooling that deliberately needs held claims.
+const isHeld = (c: PolicyClaim): boolean =>
+  typeof c.publicationHold === "string" && c.publicationHold.length > 0;
+
+export function getPolicyDataset(includeHeld = false): PolicyDatasetJson {
+  if (includeHeld) return data;
+  const countries = Object.fromEntries(
+    Object.entries(data.countries).map(([key, country]) => [
+      key,
+      { ...country, claims: country.claims.filter((c) => !isHeld(c)) },
+    ]),
+  ) as PolicyDatasetJson["countries"];
+  return { ...data, countries };
 }
 
 /** Countries in research order (Uganda first — the pilot pipeline). */
 const COUNTRY_ORDER = ["uganda", "rwanda", "tanzania", "kenya"] as const;
 
-export function getPolicyCountries(): Array<{ key: string } & PolicyCountry> {
+export function getPolicyCountries(includeHeld = false): Array<{ key: string } & PolicyCountry> {
   return COUNTRY_ORDER.filter((k) => data.countries[k]).map((key) => ({
     key,
     ...data.countries[key],
+    claims: includeHeld
+      ? data.countries[key].claims
+      : data.countries[key].claims.filter((c) => !isHeld(c)),
   }));
 }
 
