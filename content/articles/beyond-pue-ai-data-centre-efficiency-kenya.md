@@ -1,5 +1,5 @@
 ---
-title: "Beyond PUE: What AI Data Centre Efficiency Means for Kenya"
+title: "Beyond PUE: AI Data Centre Efficiency in Kenya"
 slug: "beyond-pue-ai-data-centre-efficiency-kenya"
 meta_description: "PUE alone no longer describes AI-era data centre efficiency. What LG's CEO argument, Uptime's rack numbers and IEA forecasts mean for Kenyan operators."
 primary_keyword: "beyond PUE AI data centre efficiency"
