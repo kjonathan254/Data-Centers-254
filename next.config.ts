@@ -179,6 +179,32 @@ const nextConfig: NextConfig = {
       ...articleSlugRedirects(),
     ];
   },
+  // PostHog ingestion reverse proxy. The deployed client (consent-gate.tsx)
+  // reads NEXT_PUBLIC_POSTHOG_HOST from Vercel — set to "/ingest" — so
+  // posthog-js sends everything to /ingest/* on this origin and these
+  // rewrites proxy it to PostHog US cloud. Two wins:
+  //  1. CSP — same-origin requests need no policy change (script-src and
+  //     connect-src 'self' both cover /ingest/*); the us-assets/us.i PostHog
+  //     origins in the CSP remain as fallback for when the env var is unset.
+  //  2. Ad-blockers — tracker endpoints pointed at posthog.com domains get
+  //     blocked; same-origin requests do not.
+  // ⚠️ These rewrites MUST stay in place while NEXT_PUBLIC_POSTHOG_HOST
+  // points at "/ingest" — removing one without the other silently kills
+  // client-side ingestion (array.js 404s, zero events, nothing errors).
+  // The static/* rule must come first so PostHog's asset paths resolve
+  // before the catch-all.
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+    ];
+  },
   async headers() {
     return [
       {
