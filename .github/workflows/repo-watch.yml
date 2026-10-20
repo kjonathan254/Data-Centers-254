@@ -1,0 +1,61 @@
+# Repo Watch (weekly) - scheduler for the product repo audience sheet (brick #4).
+#
+# Runs scripts/analytics/repo_watch.mjs every Monday 09:05 Nairobi time
+# (06:05 UTC, five minutes after the Trust Brief so both sheets land in the
+# same morning read) and uploads the report as a workflow ARTIFACT.
+# Deliberately NOT committed: this repo is PUBLIC and the report carries
+# operational intel (traffic levels, referrers, who starred). Artifacts
+# need a GitHub login to download.
+#
+# Download: Actions tab -> "Repo Watch (weekly)" -> latest run -> Artifacts.
+# Run by hand: Actions tab -> "Repo Watch (weekly)" -> Run workflow.
+#
+# The report is the robot's hands; interpretation (what the referrers mean
+# for distribution) is written by the agent on top of it.
+#
+# Requires repo secrets:
+#   GH_PAT                 - personal access token with PUSH access to the
+#                            watched repo (GitHub traffic API rule). Read-only
+#                            to everything else; scoped to repo:read is NOT
+#                            enough for traffic data.
+#   WATCH_SNAPSHOT_URL     - Upstash REST URL, stores last week's numbers
+#   WATCH_SNAPSHOT_TOKEN   - Upstash REST token
+name: Repo Watch (weekly)
+
+on:
+  schedule:
+    - cron: "5 6 * * 1" # Monday 06:05 UTC = 09:05 EAT (after Trust Brief)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repo-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate repo watch sheet
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          WATCH_SNAPSHOT_URL: ${{ secrets.WATCH_SNAPSHOT_URL }}
+          WATCH_SNAPSHOT_TOKEN: ${{ secrets.WATCH_SNAPSHOT_TOKEN }}
+          WATCH_REPO: "kjonathan254/posthog-trust-kit"
+        run: node scripts/analytics/repo_watch.mjs --quiet --out repo-watch-$(date -u +%F).md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-watch-sheet
+          path: repo-watch-*.md
+          retention-days: 90
+          if-no-files-found: error
