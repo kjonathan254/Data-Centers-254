@@ -1,0 +1,53 @@
+# Trust Brief (weekly) - scheduler for the analytics data sheet (brick #2).
+#
+# Runs scripts/analytics/trust_brief.mjs every Monday 09:00 Nairobi time
+# (06:00 UTC; Kenya is EAT = UTC+3, no DST) and uploads the sheet as a
+# workflow ARTIFACT. Deliberately NOT committed to the repo: this repo is
+# PUBLIC and the sheet carries operational intel (guardrail counts, CSP
+# tripwire detail). Artifacts need a GitHub login to download.
+#
+# Download: Actions tab -> "Trust Brief (weekly)" -> latest run -> Artifacts.
+# Run by hand: Actions tab -> "Trust Brief (weekly)" -> Run workflow.
+#
+# The interpreted Trust Brief (meaning + decisions) is written by the agent
+# on top of this sheet - the script is the hands, the agent is the brain.
+#
+# Requires repo secret: POSTHOG_PERSONAL_API_KEY (a PostHog personal API
+# key; read-only scope is sufficient - every call in the script is a read).
+name: Trust Brief (weekly)
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Monday 06:00 UTC = 09:00 EAT
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trust-brief
+  cancel-in-progress: false
+
+jobs:
+  datasheet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate data sheet
+        env:
+          POSTHOG_PERSONAL_API_KEY: ${{ secrets.POSTHOG_PERSONAL_API_KEY }}
+          POSTHOG_PROJECT_ID: "674556"
+        run: node scripts/analytics/trust_brief.mjs --quiet --out trust-brief-$(date -u +%F).md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trust-brief-datasheet
+          path: trust-brief-*.md
+          retention-days: 90
+          if-no-files-found: error

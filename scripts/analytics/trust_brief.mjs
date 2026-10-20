@@ -14,6 +14,10 @@
  *   export POSTHOG_PERSONAL_API_KEY=phx_...
  *   node scripts/analytics/trust_brief.mjs                 # data sheet to stdout
  *   node scripts/analytics/trust_brief.mjs --out brief.md  # also write to file
+ *   node scripts/analytics/trust_brief.mjs --out brief.md --quiet  # file only
+ *                                                    (CI: public Action logs
+ *                                                     would otherwise leak
+ *                                                     the sheet contents)
  *
  * Env: POSTHOG_HOST (default https://us.posthog.com), POSTHOG_PROJECT_ID (default 674556).
  */
@@ -173,7 +177,7 @@ async function main() {
   L.push("");
 
   const sheet = L.join("\n");
-  console.log(sheet);
+  if (!process.argv.includes("--quiet")) console.log(sheet);
 
   const outIdx = process.argv.indexOf("--out");
   if (outIdx > -1 && process.argv[outIdx + 1]) {
