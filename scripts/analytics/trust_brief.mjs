@@ -51,18 +51,27 @@ function fail(context, status, body) {
 }
 
 async function api(path, opts = {}) {
-  const res = await fetch(`${HOST}/api/projects/${PROJECT}${path}`, {
-    ...opts,
-    headers: {
-      Authorization: `Bearer ${process.env.POSTHOG_PERSONAL_API_KEY}`,
-      "Content-Type": "application/json",
-      ...(opts.headers || {}),
-    },
-    body: opts.body ? JSON.stringify(opts.body) : undefined,
-  });
-  const json = await res.json().catch(() => ({}));
-  if (!res.ok) fail((opts.method || "GET") + " " + path, res.status, json);
-  return json;
+  // Weekly automation must survive transient PostHog 5xx (seen live:
+  // 503 clickhouse_at_capacity). Retry 429/502/503/504 with linear backoff.
+  const url = `${HOST}/api/projects/${PROJECT}${path}`;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    const res = await fetch(url, {
+      ...opts,
+      headers: {
+        Authorization: `Bearer ${process.env.POSTHOG_PERSONAL_API_KEY}`,
+        "Content-Type": "application/json",
+        ...(opts.headers || {}),
+      },
+      body: opts.body ? JSON.stringify(opts.body) : undefined,
+    });
+    if (res.ok) return res.json().catch(() => ({}));
+    const json = await res.json().catch(() => ({}));
+    if ([429, 502, 503, 504].includes(res.status) && attempt < 4) {
+      await new Promise((r) => setTimeout(r, attempt * 4000));
+      continue;
+    }
+    fail((opts.method || "GET") + " " + path, res.status, json);
+  }
 }
 
 // one multi-series trends query; returns {label: total}
