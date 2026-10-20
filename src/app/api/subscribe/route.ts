@@ -186,6 +186,10 @@ export async function POST(req: NextRequest) {
     const source = sanitizeSource(body?.source);
     const role = sanitizeRole(body?.role);
     const companyType = sanitizeCompany(body?.companyType);
+    // Anonymous PostHog id from the (consent-gated) client — captureServerEvent
+    // validates it and falls back to "server" when absent/invalid. Never PII.
+    const analyticsId =
+      typeof body?.distinctId === 'string' ? body.distinctId : undefined;
 
     if (!email || typeof email !== 'string') {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
@@ -245,12 +249,12 @@ export async function POST(req: NextRequest) {
         role,
         company_type: companyType,
         source,
-      });
+      }, analyticsId);
       return NextResponse.json({ message }, { status: 200 });
     }
 
     // 3. Already verified.
-    await captureServerEvent('subscribe_repeat');
+    await captureServerEvent('subscribe_repeat', undefined, analyticsId);
     return NextResponse.json({ message: 'Already subscribed' }, { status: 200 });
   } catch (err) {
     console.error('[subscribe] Unexpected error:', err);

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { analyticsDistinctId } from "@/lib/analytics-client";
 
 /**
  * The one subscribe form (Task 132 consolidation — was copy-pasted three
@@ -117,6 +118,10 @@ export default function SubscribeForm({
           companyType: "",
           source,
           website: honeypot || "",
+          // Anonymous PostHog id (only present after consent) — lets the
+          // server conversion event link to the browsing person so funnels
+          // work. No personal data; see src/lib/analytics-client.ts.
+          distinctId: analyticsDistinctId(),
         }),
       });
       const data = await res.json();

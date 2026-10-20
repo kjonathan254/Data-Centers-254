@@ -50,15 +50,26 @@ function getClient(): PostHog | null {
  * can freeze right after the response is returned, so fire-and-forget sends
  * get lost. The cost is one POST to PostHog (~100ms), acceptable for rare,
  * high-value events.
+ *
+ * distinctId: optional anonymous client-side PostHog id (see
+ * src/lib/analytics-client.ts). When valid it links the server event to the
+ * browsing person so funnels work; anything that does not match the safe
+ * pattern falls back to the aggregate "server" id. Never pass emails,
+ * names, or any user-typed string here.
  */
+const SAFE_DISTINCT_ID = /^[A-Za-z0-9_-]{8,200}$/;
+
 export async function captureServerEvent(
   event: string,
   properties?: Record<string, unknown>,
+  distinctId?: string,
 ): Promise<void> {
   const ph = getClient();
   if (!ph) return;
+  const id =
+    distinctId && SAFE_DISTINCT_ID.test(distinctId) ? distinctId : "server";
   try {
-    ph.capture({ event, distinctId: "server", properties });
+    ph.capture({ event, distinctId: id, properties });
     await ph.flush();
   } catch {
     // Analytics must never break a business route.
