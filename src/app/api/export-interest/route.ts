@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { saveExportInterest } from '@/lib/newsletter-store';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
+import { captureServerEvent } from '@/lib/posthog-server';
 import {
   isSameOriginRequest,
   originRejectedResponse,
@@ -66,6 +67,8 @@ export async function POST(req: NextRequest) {
     }
 
     const created = await saveExportInterest(email, kind);
+    // kind is a server-side enum; email never leaves this route.
+    await captureServerEvent('export_interest', { kind, created });
     return NextResponse.json(
       { message: created ? 'Noted' : 'Already on the list' },
       { status: created ? 201 : 200 }

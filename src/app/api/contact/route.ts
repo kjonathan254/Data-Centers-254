@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { captureServerEvent } from "@/lib/posthog-server";
 import {
   isSameOriginRequest,
   originRejectedResponse,
@@ -132,6 +133,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
     }
 
+    // Lead captured. No properties — the message body/name/subject never
+    // leave this route.
+    await captureServerEvent("contact_message_sent");
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
+import { captureServerEvent } from '@/lib/posthog-server';
 import {
   isSameOriginRequest,
   originRejectedResponse,
@@ -176,6 +177,8 @@ export async function POST(req: NextRequest) {
 
     // Honeypot, bots fill every field. Pretend success, record nothing.
     if (typeof body.website === 'string' && body.website.trim() !== '') {
+      // Bot signal — aggregate count only, no submitted content.
+      await captureServerEvent('subscribe_honeypot_hit');
       return NextResponse.json({ message: 'Check your inbox to confirm your subscription' }, { status: 201 });
     }
 
@@ -236,10 +239,18 @@ export async function POST(req: NextRequest) {
         console.log(`[subscribe] dev mode: skipping confirmation email to ${maskEmail(normalized)}`);
       }
       const message = 'Check your inbox to confirm your subscription';
+      // Conversion event. Properties are sanitized enums only (no email —
+      // see src/lib/posthog-server.ts privacy posture).
+      await captureServerEvent('subscribe_optin_started', {
+        role,
+        company_type: companyType,
+        source,
+      });
       return NextResponse.json({ message }, { status: 200 });
     }
 
     // 3. Already verified.
+    await captureServerEvent('subscribe_repeat');
     return NextResponse.json({ message: 'Already subscribed' }, { status: 200 });
   } catch (err) {
     console.error('[subscribe] Unexpected error:', err);

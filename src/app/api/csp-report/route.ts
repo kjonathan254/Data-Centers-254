@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rate-limit";
+import { captureServerEventAsync } from "@/lib/posthog-server";
 import {
   isSameOriginRequest,
   originRejectedResponse,
@@ -73,6 +74,15 @@ export async function POST(req: NextRequest) {
     console.log(
       `[csp-report] path=${docPath} directive=${directiveClean} blocked=${blocked}`
     );
+    // Best-effort mirror into PostHog (fire-and-forget: violations can be
+    // voluminous and the log line above is the durable record). This is the
+    // tripwire that would reveal a misconfigured analytics endpoint the
+    // moment the CSP starts blocking it.
+    captureServerEventAsync('csp_violation', {
+      path: docPath,
+      directive: directiveClean,
+      blocked,
+    });
   } catch {
     // Malformed body, not worth a 400 round trip; browsers treat 2xx as delivered.
   }

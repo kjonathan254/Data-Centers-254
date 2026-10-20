@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { trackSponsorClick } from '@/lib/newsletter-store';
+import { captureServerEvent } from '@/lib/posthog-server';
 
 /**
  * Sponsor click-through tracker.
@@ -73,12 +74,20 @@ export async function GET(req: NextRequest) {
     console.warn(
       `[sponsor-click] rejected redirect target host="${rejectedHost}" slug="${slug}"`
     );
+    // Security telemetry: open-redirect attempts against this endpoint.
+    await captureServerEvent('sponsor_click_rejected', {
+      host: rejectedHost,
+      slug,
+    });
     return NextResponse.json({ error: 'Invalid target' }, { status: 400 });
   }
 
   try {
     const clicks = await trackSponsorClick(slug);
     console.log(`[sponsor-click] ${slug} -> ${clicks} total`);
+    // Mirrors the tally into PostHog so sponsor performance shows up in the
+    // same dashboards as site funnels. slug is a short internal identifier.
+    await captureServerEvent('sponsor_click', { slug });
   } catch (err) {
     // never block the redirect on a tracking failure
     console.error('[sponsor-click] tracking failed:', err);
