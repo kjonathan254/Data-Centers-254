@@ -463,7 +463,7 @@
       "peeringdbIxs": 4,
       "carrierNeutral": true,
       "certNote": "Operator wording: \"4 data halls certified Uptime Institute Tier 3 facility\", plus PCI DSS. Uptime Institute's records file the building under Liquid Telecom Group (legacy name).",
-      "divergenceNote": "ADC announced two further Nairobi facilities (Nov 2021, the second up to 20 MW) and broke ground on a Sameer expansion in January 2023, starting at 5 MW and scaling to an additional 15 MW, targeted for H1 2024 completion. No ADC page confirms that expansion completed or states the current commissioned IT load. \"7.5 MW\" is the operator's available site capacity, not an as-built commissioned figure, ask for as-built capacity in the specific hall."
+      "divergenceNote": "ADC announced two further Nairobi facilities (Nov 2021, the second up to 20 MW) and broke ground on a Sameer expansion in January 2023, starting at 5 MW and scaling to an additional 15 MW, targeted for H1 2024 completion, which passed without a commissioning announcement. No ADC page confirms that expansion completed or states the current commissioned IT load. \"7.5 MW\" is the operator's available site capacity, not an as-built commissioned figure, ask for as-built capacity in the specific hall."
     },
     {
       "id": "3",
@@ -497,8 +497,13 @@
       "certifications": [],
       "sources": [
         {
-          "label": "DataCenterDynamics, ADC Nairobi expansion coverage",
-          "url": "https://www.datacenterdynamics.com/en/search/?q=Africa+Data+Centres+Nairobi",
+          "label": "DataCenterDynamics, Africa Data Centres announces two facilities in Nairobi (12 November 2021)",
+          "url": "https://www.datacenterdynamics.com/en/news/africa-data-centres-announces-two-facilities-in-nairobi-kenya",
+          "kind": "press"
+        },
+        {
+          "label": "Capacity, What is driving Kenya's data centre boom (13 August 2026), source of the August 2026 company reaffirmation",
+          "url": "https://capacityglobal.com/news/what-is-driving-kenyas-data-centre-boom",
           "kind": "press"
         },
         {
