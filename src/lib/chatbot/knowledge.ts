@@ -187,7 +187,7 @@ export function getFaqPairs(): FaqPair[] {
     },
     {
       q: "How much new data centre capacity is coming to Kenya?",
-      a: `Developer-announced pipeline (under construction, committed and early-stage projects) totals roughly ${PIPELINE_MW} MW. That includes 77 MW under construction across iXAfrica's NBOX1.2 expansion, Africa Data Centres' Nairobi 2 and Nxtra by Airtel's Tatu City campus, plus the Microsoft–G42 announcement, which reporting links to grid power constraints. Pipeline figures are developer-announced, not independently measured.`,
+      a: `Developer-announced pipeline (under construction, committed and early-stage projects) totals roughly ${PIPELINE_MW} MW. That includes 62 MW under construction across iXAfrica's NBOX1.2 expansion and Nxtra by Airtel's Tatu City campus, plus Africa Data Centres' Nairobi 2, reclassified to committed in October 2026 pending visible build progress, and the Microsoft–G42 announcement, which reporting links to grid power constraints. Pipeline figures are developer-announced, not independently measured.`,
       keywords: ["how much new capacity", "coming online", "new capacity", "pipeline capacity"],
       links: [{ label: "How we count capacity", href: "/methodology" }],
     },

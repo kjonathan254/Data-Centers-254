@@ -469,8 +469,8 @@
       "id": "3",
       "name": "Africa Data Centres Nairobi 2 (planned expansion)",
       "slug": "africa-dc-nairobi-2",
-      "description": "Announced second Nairobi facility at the Sameer Business Park campus, groundbreaking January 2023, first phase from 5 MW scaling toward an additional 15 MW.",
-      "status": "Under Construction",
+      "description": "Second Nairobi facility at the Sameer Business Park campus, announced December 2022 and groundbreaking January 2023 for up to an additional 15 MW. The original H1 2024 completion target passed with no go-live announced; reclassified from Under Construction to Committed in October 2026 pending visible build progress.",
+      "status": "Committed",
       "address": "Sameer Business Park, Mombasa Road",
       "city": "Nairobi",
       "region": "Nairobi County",
@@ -485,9 +485,9 @@
       "coolingType": null,
       "powerSource": "Kenya Power",
       "renewableClaim": null,
-      "notable": "Announced November 2021 (two further Nairobi facilities, the second up to 20 MW) with a $200m+ commitment; Sameer expansion broke ground January 2023.",
+      "notable": "Announced November 2021 (two further Nairobi facilities, the second up to 20 MW) with a $200m+ commitment; Sameer expansion broke ground January 2023. Company reaffirmation, August 2026: ADC says it is building a second Nairobi facility of up to 20 MW, has begun securing land for a third, and puts total Kenya investment above $200m (company statement via Capacity, 13 Aug 2026).",
       "lastVerified": "2026-10",
-      "dataSource": "ADC press releases via DataCenterDynamics",
+      "dataSource": "ADC press releases via DataCenterDynamics; Capacity (13 Aug 2026) on the $200m Kenya programme; ADC website and Baxtel register re-checked Oct 2026",
       "dataConfidence": "Medium",
       "articleSlugs": [
         "africa-data-centres-kenya-operations"
@@ -509,7 +509,7 @@
       ],
       "carrierNeutral": true,
       "certNote": null,
-      "divergenceNote": "ADC's own website lists only NBO1 under Nairobi, this expansion does not yet appear as an operating facility, and no completion date has been published. Capacity shown is the announced plan, not a confirmed as-built figure."
+      "divergenceNote": "No completion has been announced and no go-live is evidenced: the original H1 2024 target passed, ADC's own website still lists only NBO1 (7.5 MW available site capacity) under Nairobi, and the Baxtel register shows no ADC construction or planned projects in Nairobi (both re-checked October 2026). The capacity figure is the announced plan - up to an additional 15 MW per Cassava (December 2022), while later company framing cites up to 20 MW for the second facility (Capacity, August 2026); both are ADC statements, not as-built facts. Reclassified Under Construction to Committed on 2026-10; a dated commissioning announcement or an operator site update would settle it."
     },
     {
       "id": "4",

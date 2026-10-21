@@ -26,6 +26,16 @@ export const CORRECTIONS_SLA = {
 
 export const correctionsLog: CorrectionEntry[] = [
   {
+    date: "2026-10-21",
+    summary: "ADC Nairobi 2 reclassified from Under Construction to Committed.",
+    changes: [
+      "Directory record africa-dc-nairobi-2: status Under Construction -> Committed. The original H1 2024 completion target (Cassava press release, Dec 2022) passed with no go-live announced; ADC's own website still lists only NBO1 (7.5 MW available site capacity) in Nairobi, and the Baxtel register shows no ADC construction or planned projects there (both re-checked 21 Oct 2026).",
+      "Divergence note records the company's August 2026 reaffirmation (building a second Nairobi facility of up to 20 MW, land secured for a third, $200m+ total Kenya investment) as a company statement via Capacity (13 Aug 2026); the 15 MW and 20 MW figures are announced plans, not as-built facts.",
+      "Infrastructure map pin and the chatbot pipeline answer synced: the under-construction bucket is now 62 MW across iXAfrica NBOX1.2 and Nxtra by Airtel Tatu City, with Kenya totals at 2 under construction and 2 committed.",
+      "The 2026-Q3 dataset bundle and snapshot stay at their release state per convention; this reclassification flows into the Q4 sync.",
+    ],
+  },
+  {
     date: "2026-09-26",
     summary:
       "Three-model energy framing wired across the Energy cluster: the Olkaria corridor and Ethiopia exports articles now cross-link the Dangote Lamu analysis in both directions, and the /energy hub, chatbot fact base and green-power answer name the three competing models with figures kept separate.",
