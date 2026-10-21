@@ -1954,3 +1954,11 @@ then commit+push, or apply the 4-line edit manually in the GitHub UI.
 - Build scripts persisted: /home/z/my-project/scripts/task149_cover.html, task149_body_lib.py, task149_build_body.py, task149_merge.py (rerunnable for future editions).
 - Spend: 0 credits, 0 Apify this task.
 - Follow-ups: editor reads the playbook + skims 12 priority-A evidence links; export Radar Issue 000 one-pager for outreach; Tuesday start of the 20/day cadence.
+
+### 2026-10-21 (session 19) - ADC Nairobi 2 duplicate-execution reconciliation + source patch (Task 150)
+- Context: fresh sandbox restored 10 days stale (c926c55). The ADC verification + "just update the site" instruction had ALREADY been executed and pushed as Task 122 (3227d81: Committed disposition, UC 77->62 MW, corrections entry, chatbot/map synced) while this sandbox was dark. A conflicting local re-scope (Early Stage, 15 MW excluded -> totals 272.9->257.9) was drafted in parallel and DISCARDED via reset --hard origin/main before push: Task 122 is editor-authorized (standing rule 8, G42 Task 75 precedent) and stands.
+- Additive patch only (ce94a56): sources[] upgraded - generic DCD search URL -> the specific 12 Nov 2021 announcement article; Capacity 13 Aug 2026 article added to sources[] as the citation behind the August reaffirmation; NBO1 divergenceNote H1-2024 clause tightened ("passed without a commissioning announcement"). Zero status/numeric changes.
+- Evidence re-verified live: Capacity verbatim ("building a second Nairobi facility with up to 20MW of capacity and has begun securing land for a third... more than $200m in total", no timelines); DCD 12 Nov 2021 article located and confirmed (second facility up to 20 MW, land search for a third).
+- OPEN EDITOR DECISION flagged: Task 122 keeps the announced 15 MW in Committed, so total tracked supply stays 272.9 MW. The drafted alternative (exclude announced MW until build evidence -> UC 2/62 MW, pipeline 215 MW, total 257.9 MW, confidence Low) is available as a one-field flip pending the editor's call.
+- Gates: tsc PASS, vitest 75/75, article_validator ALL OK, eslint clean; CI lint-and-build success + IndexNow success at publish time (content-validation job stalled on GitHub runners; passed locally, monitor next run). Production probed: ADC2 Committed/15 MW live, UC bucket 2 records/62 MW live.
+- Spend: 0 credits.
