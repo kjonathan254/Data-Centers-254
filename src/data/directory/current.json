@@ -261,6 +261,11 @@
           "kind": "operator"
         },
         {
+          "label": "iXAfrica and RMB, financing announcement (Sep 2025; first phase stated as 2.25 MW already in service)",
+          "url": "https://ixafrica.co.ke/ixafrica-secures-rmb-financing-to-fast-track-20-mw-of-growth-at-its-nairobi-campus",
+          "kind": "operator"
+        },
+        {
           "label": "PeeringDB facility record (fetched 8 Sep 2026)",
           "url": "https://www.peeringdb.com/fac/13572",
           "kind": "registry"
@@ -271,7 +276,7 @@
       "peeringdbIxs": 3,
       "carrierNeutral": true,
       "certNote": "Widely described as \"Tier III standard\", but iXAfrica does not appear in Uptime Institute's Kenya awards directory, and no Uptime Tier certification, ISO 27001 or PCI DSS claim appeared on its own site when checked (Sep 2026). \"Built to Tier III standards\" is a design statement, not a third-party certification.",
-      "divergenceNote": "Marketing materials describe a 22.5 MW campus (NBOX1.1 4.5 MW + NBOX1.2 at 18 MW / 3,744 racks). Only phase one is verifiable as operating; the 18 MW second building is under construction, not confirmed complete."
+      "divergenceNote": "Marketing materials describe a 22.5 MW campus (NBOX1.1 4.5 MW + NBOX1.2 at 18 MW / 3,744 racks). Only phase one is verifiable as operating; the 18 MW second building is under construction, not confirmed complete. Live load has the same shape: the operator's campus-specs page states NBOX1.1 live at 4.5 MW, while its RMB financing announcement (Sep 2025) describes the first phase as '2.25 MW already in service'. Published live IT load therefore sits between 2.25 and 4.5 MW pending confirmation of the ramp; the dataset keeps 4.5 MW as the operator's standing published figure for the building."
     },
     {
       "id": "6",
