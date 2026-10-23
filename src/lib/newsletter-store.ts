@@ -295,21 +295,76 @@ export async function scrubSubscriber(email: string): Promise<boolean> {
 
 /* ---------------- export interests ---------------- */
 
+/**
+ * Run a Lua script atomically via the Upstash REST API.
+ *
+ * EVAL executes as a single Redis command: no other command can interleave
+ * between its reads and writes. The JSON-body POST form avoids the
+ * URL-encoding pitfalls of the path-style /eval/ endpoint with long
+ * scripts and JSON payloads.
+ */
+async function upstashEval(
+  script: string,
+  keys: string[],
+  args: string[]
+): Promise<unknown> {
+  const cfg = upstashConfig();
+  if (!cfg) throw new Error("upstash not configured");
+  const res = await fetch(cfg.url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${cfg.token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify([
+      "EVAL",
+      script,
+      String(keys.length),
+      ...keys,
+      ...args,
+    ]),
+    cache: "no-store",
+    // Bounded so a hung Upstash connection can never stall the route.
+    signal: AbortSignal.timeout(5_000),
+  });
+  if (!res.ok) throw new Error(`upstash EVAL failed: ${res.status}`);
+  const json = (await res.json()) as { result?: unknown; error?: string };
+  if (json.error) throw new Error(`upstash EVAL: ${json.error}`);
+  return json.result;
+}
+
+/**
+ * Atomic capture of a pre-checkout export interest.
+ *
+ * Tech-audit 2026-10-23 (enquiry-store atomicity finding): the previous
+ * implementation issued three separate REST round-trips (exists, then set,
+ * then incr). A failure or a concurrent duplicate between them could
+ * persist a record without its counter increment, or count one submission
+ * twice. The check-and-write now runs as one Lua script, so the exists
+ * gate, the record write and the counter increment either all happen or
+ * none do, and two concurrent submissions of the same address can never
+ * both count.
+ *
+ * Returns true when this call created the record.
+ */
 export async function saveExportInterest(
   email: string,
   kind: string
 ): Promise<boolean> {
   const hash = await emailHash(email);
   if (storageBackend() === "upstash") {
-    const exists = (await upstash("exists", `nl:exp:${hash}`)) as number;
-    if (exists) return false;
-    await upstash(
-      "set",
-      `nl:exp:${hash}`,
-      JSON.stringify({ email, kind, at: new Date().toISOString() })
-    );
-    await upstash("incr", "nl:count:export");
-    return true;
+    const script = `
+      if redis.call('exists', KEYS[1]) == 1 then return 0 end
+      redis.call('set', KEYS[1], ARGV[1])
+      redis.call('incr', KEYS[2])
+      return 1
+    `;
+    const result = (await upstashEval(
+      script,
+      [`nl:exp:${hash}`, "nl:count:export"],
+      [JSON.stringify({ email, kind, at: new Date().toISOString() })]
+    )) as number;
+    return result === 1;
   }
   if (memExport.has(hash)) return false;
   memExport.add(hash);

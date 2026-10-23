@@ -50,10 +50,19 @@ const MINOR_BELOW = parseFloat(arg("minor", "98"));
 // ---- key
 function loadKey() {
   if (process.env.FIRECRAWL_API_KEY) return process.env.FIRECRAWL_API_KEY;
-  const envLocal = readFileSync(resolve(ROOT, ".env.local"), "utf8");
-  const m = envLocal.match(/^FIRECRAWL_API_KEY=(.+)$/m);
-  if (m) return m[1].trim();
-  console.error("FIRECRAWL_API_KEY missing (env or .env.local).");
+  // .env.local is gitignored: present on the owner's machine, absent in CI.
+  // In CI the key must arrive via the FIRECRAWL_API_KEY repo secret; if it
+  // is unset there, fail with a clean message instead of an ENOENT crash
+  // (tech-audit 2026-10-23: dispatch run 39967433292 crashed here because
+  // the repo secret was missing).
+  const envLocal = resolve(ROOT, ".env.local");
+  if (existsSync(envLocal)) {
+    const m = readFileSync(envLocal, "utf8").match(/^FIRECRAWL_API_KEY=(.+)$/m);
+    if (m) return m[1].trim();
+  }
+  console.error(
+    "FIRECRAWL_API_KEY missing: set the repo secret (Settings -> Secrets -> Actions) or FIRECRAWL_API_KEY in .env.local."
+  );
   process.exit(2);
 }
 

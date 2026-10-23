@@ -1,0 +1,82 @@
+# Production smoke monitor - DC254
+#
+# Tech-audit 2026-10-23 (monitoring recommendation): a healthy /api/health
+# can coexist with a broken CSV export, a stale dataset or a failed search.
+# This workflow exercises the public surfaces users actually depend on,
+# every 30 minutes. A failure notifies the owner through GitHub's default
+# "scheduled workflow failed" email; one isolated blip retries once before
+# the run is marked failed so a single dropped request does not page.
+#
+# The deep local-vs-live dataset comparison (verify_production_data.py)
+# runs on demand via workflow_dispatch, e.g. after a data-correction push.
+name: Production smoke
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-smoke
+  cancel-in-progress: false
+
+env:
+  BASE_URL: https://data-centers-254.vercel.app
+
+jobs:
+  smoke:
+    name: Public routes respond
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check public routes (retry once on failure)
+        run: |
+          set -uo pipefail
+          routes=(
+            "/"
+            "/directory"
+            "/tracker"
+            "/articles"
+            "/api/health"
+            "/api/directory"
+            "/api/directory/csv"
+            "/api/search?q=nairobi"
+          )
+          fail=0
+          for route in "${routes[@]}"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$BASE_URL$route") || code=000
+            if [ "$code" != "200" ]; then
+              echo "::warning::$route returned $code, retrying in 60s"
+              sleep 60
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$BASE_URL$route") || code=000
+              if [ "$code" != "200" ]; then
+                echo "::error::$route failed twice (last code $code)"
+                fail=1
+              fi
+            fi
+            echo "$route -> $code"
+          done
+          # CSV must actually carry the dataset, not an empty shell
+          rows=$(curl -s --max-time 20 "$BASE_URL/api/directory/csv" | tail -n +2 | grep -c . || true)
+          echo "CSV data rows: $rows"
+          if [ "$rows" -lt 25 ]; then
+            echo "::error::CSV export looks truncated ($rows data rows)"
+            fail=1
+          fi
+          exit $fail
+
+  dataset-sync:
+    name: Deployed data matches repo dataset
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare live surfaces with src/data/directory/current.json
+        run: python3 scripts/verify_production_data.py "$BASE_URL"
