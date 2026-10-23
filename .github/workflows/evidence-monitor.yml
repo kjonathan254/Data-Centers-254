@@ -15,13 +15,19 @@ on:
   # froze Firecrawl use until the 2026-10-23 credit refill.
   # Re-enable by uncommenting the two schedule lines below.
   #
-  # REFILL CHECK 2026-10-23 (tech-audit follow-up): the workflow was
-  # dispatched manually. Result: run 39967433292 FAILED before any scrape -
-  # the FIRECRAWL_API_KEY repo secret is unset, so the key loader crashed.
-  # Credit status is therefore still unknown. To resume monitoring:
-  #   1. Re-add the FIRECRAWL_API_KEY secret (Settings -> Secrets -> Actions)
-  #   2. Dispatch this workflow manually and confirm it passes
-  #   3. Uncomment the two schedule lines below
+  # REFILL CHECK 2026-10-23 (two-step result):
+  #   Step 1 (morning): manual dispatch run 39967433292 FAILED before any
+  #     scrape - the FIRECRAWL_API_KEY repo secret was unset.
+  #   Step 2 (same day): key supplied; repo secret SET via API (verified in
+  #     repo secrets list). Key validated against api.firecrawl.dev: VALID,
+  #     but the account reports 0/1000 plan credits (billing period started
+  #     2026-10-22T17:51Z) and a minimal scrape returns HTTP 402. One full
+  #     monitor run costs ~48 credits (Tier-1 captured sources in the
+  #     dataset), so the workflow stays paused until credits exist.
+  #   Resume checklist (owner):
+  #     1. Confirm or top up credits at firecrawl.dev (usage / billing page)
+  #     2. Dispatch this workflow manually and confirm it passes
+  #     3. Uncomment the two schedule lines below
   # schedule:
   #   - cron: "0 6 * * 1" # Mondays 06:00 UTC
   workflow_dispatch:
