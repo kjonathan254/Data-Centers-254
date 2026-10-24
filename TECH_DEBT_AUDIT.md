@@ -98,3 +98,25 @@ The IndexNow implementation (commit 026a095) was audited as if it were foreign c
 
 The deploy-triggered workflow (`.github/workflows/indexnow.yml`, staged in the workspace at pending/indexnow.workflow.yml) cannot be pushed: the current Personal Access Token lacks the `workflow` scope, which GitHub enforces for any commit touching workflows. **RESOLVED same day:** the editor supplied a token with Contents + Workflows write; the workflow shipped in commit 2818699 (CI double-green) and now fires on production `deployment_status: success`. The in-session `npm run indexnow` step remains as belt-and-braces. Residual nicety, not debt: the token lacks Actions write, so CLI dispatch 403s — editor-side UI dispatch or an Actions-permission grant covers manual runs.
 
+
+## Repeat run — 2026-10-24 (skills-exercise session, storage cleanup + content verification)
+
+Scoped repeat run per protocol: verify prior resolutions, tag new findings. No full 9-dimension sweep — 24h since the 2026-10-23 pass and 6 commits since.
+
+### Verified still-resolved (spot checks against working tree)
+
+- **F001** dead files: `src/components/sections/breaking-news-bar.tsx`, `ui/accordion.tsx`, `ui/dialog.tsx` all absent (removals held).
+- **F005** test runner: `package.json:10` `"test": "vitest run"` present; CI authoritative for green status (no node_modules in session).
+- **F008** safeJsonLd: 11 files under `src/app` + `src/components` import/use it.
+- **F011** llms-full.txt: `scripts/generate_llms_full.mjs` exists, `next.config.ts` references llms-full (2 sites).
+- **Dependency hygiene:** zod `^4.6.7` in place (dd40d1b, GHSA-mrhx-c7xc-m3w5 fix, release-gate caught).
+
+### New finding
+
+| ID | Category | File:Line | Severity | Effort | Description | Recommendation |
+|----|----------|-----------|----------|--------|-------------|----------------|
+| F013 (NEW) | Consistency rot (scripts/) | scripts/ (85 .py/.mjs/.sh files, counted 2026-10-24) | Low | M | F007's own growth threshold (~60 files) has passed: 85 one-off editorial generators, capture fetchers and directory-update passes now accumulate in scripts/. Nothing in src/ imports them, so runtime risk is nil; the cost is navigability and the risk of name collisions (evidence_v02_fetch2-6 pattern). | Execute F007's pre-agreed remedy: create `scripts/archive/`, bulk-move dated one-off passes in a single documented commit, update AGENT_CONTEXT path references in the same commit. Do not delete (audit-trail value stands). |
+
+### Session context (why this run happened)
+
+Storage-cleanup + content-verification session: 10 superseded production deployments deleted on Vercel (13→3), both 24 Oct articles (world-bank-shared-ai-compute-kenya, konza-ppp-data-centre-funding) verified live with repo gates ALL OK (article_validator 118, validate_policy PASS 62/68, validate_jsonld). No src/ or content/ changes made this run.
