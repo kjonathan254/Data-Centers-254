@@ -15,17 +15,17 @@ published_date: "2026-10-24"
 updated_date: "2026-10-24"
 category: "Cloud Computing"
 cluster: "AI"
-og_image: "/images/worldbank-ai-training-illustrative.webp"
+og_image: "/images/worldbank-dc-server-row.webp"
 reading_time: "8 min"
 images:
-  - src: "/images/worldbank-ai-training-illustrative.webp"
-    alt: "Illustrative AI-generated image of African engineers and data scientists training an AI model in a compute lab"
-    caption: "Illustrative image, generated with AI: the readiness half of the initiative is people who can train and run models, not only buildings that house GPUs."
-    position: "hero"
   - src: "/images/worldbank-dc-server-row.webp"
     alt: "Long row of illuminated server racks in a data centre hall"
     caption: "The pooled-capacity idea: shared racks serving many workloads at once, wherever the GPUs end up sitting."
-    position: "section-break"
+    position: "hero"
+  - src: "/images/worldbank-ai-training-illustrative.webp"
+    alt: "Illustrative AI-generated image of African engineers and data scientists training an AI model in a compute lab"
+    caption: "Illustrative image, generated with AI: the readiness half of the initiative is people who can train and run models, not only buildings that house GPUs."
+    position: "inline"
   - src: "/images/worldbank-dc-corridor.webp"
     alt: "Corridor between server racks inside a modern data centre"
     caption: "Workloads under Kenya's residency rules stay with in-country facilities like this one, not with an undisclosed GPU pool abroad."
@@ -82,13 +82,13 @@ Read that framing carefully, because it contains a quiet provocation. The World 
 
 The Bank's own figures explain the urgency. Sub-Saharan Africa accounts for about 18 percent of the world's population but holds roughly 0.6 percent of global data centre capacity, and only around 5 percent of existing African facilities are ready for AI workloads, according to figures the Bank has circulated with the announcement. Measured differently, Africa averages about 0.33 MW of data centre capacity per million people, against roughly 15 MW globally.
 
-![Long row of illuminated server racks in a data centre hall](/images/worldbank-dc-server-row.webp)
-
 The readiness picture is just as uneven as the infrastructure. The Bank's Africa Economic Update, published a day after the announcement, finds AI adoption concentrated in a small set of leading economies, with Nigeria, South Africa and Kenya ahead of the pack, and most African countries using AI below the levels seen in lower-middle-income economies. More than 2 billion people were offline in 2025, and internet use in low-income countries stood at 23 percent against 94 percent in high-income ones. Those are the conditions the shared-compute proposal is designed for: governments that need results before they can finance concrete.
 
 ## The Rent-versus-Build Question
 
 The initiative's premise deserves a fair hearing before a verdict. Building a national AI data centre means solving power first, then cooling, connectivity, financing and finally demand. Kenya's own pipeline shows how slow that chain runs: the Konza expansion is only now entering [PPP preparation funding](/articles/konza-ppp-data-centre-funding), years after entering the pipeline. For a ministry that wants crop disease detection for farmers or an inventory tool for clinics, waiting for a national facility to reach financial close is not a plan. Renting pooled capacity turns a capital problem into an operating expense and lets useful work start this fiscal year.
+
+![Illustrative AI-generated image of African engineers and data scientists training an AI model in a compute lab](/images/worldbank-ai-training-illustrative.webp)
 
 But renting has a catch that the announcement leaves entirely open, and early reporting noticed. As written, the initiative does not say how governments will access the infrastructure, what it will cost, which countries participate first, or, most importantly for this audience, where the shared GPUs would physically be located. Every one of those unknowns sits upstream of the decision the Bank is asking governments to make. [The compute-gap story we covered in September](/articles/aws-1-5bn-africa-compute-gap-kenya) made a related point about private capital: announcements are easy, the terms sheet is where reality lives.
 
