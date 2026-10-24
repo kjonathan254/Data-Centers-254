@@ -26,8 +26,8 @@ images:
     alt:  "Server racks in a Nairobi data centre hall"
     caption: "Nairobi hosts Kenya's primary colocation facilities along the Mombasa Road corridor"
     position: "section-break"
-  - src: "/images/dc-gpu-cluster.webp"
-    alt:  "GPU cluster racks in a colocation facility"
+  - src: "/images/worldbank-dc-corridor.webp"
+    alt:  "Corridor between server racks in a colocation data centre"
     caption: "Colocation providers offer diverse connectivity options from multiple ISPs and submarine cable providers"
     position: "infographic"
   - src: "/images/dc-security-camera.webp"
@@ -180,7 +180,7 @@ Once you select a provider and sign a contract, the onboarding process typically
 
 Reputable providers assign a dedicated account manager or onboarding coordinator who manages this process. If a provider treats onboarding as your problem rather than a shared process, it is a warning sign for how they will handle ongoing support.
 
-![GPU cluster racks in a colocation facility](/images/dc-gpu-cluster.webp)
+![Corridor between server racks in a colocation data centre](/images/worldbank-dc-corridor.webp)
 
 ## Colocation vs Cloud vs Build-Your-Own: A Direct Comparison
 

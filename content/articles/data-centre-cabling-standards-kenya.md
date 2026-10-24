@@ -26,8 +26,8 @@ images:
     alt:  "Fibre optic termination equipment in a data centre"
     caption: "Patch panels and structured cabling hierarchy form the backbone of reliable data centre connectivity"
     position: "section-break"
-  - src: "/images/dc-gpu-cluster-2-wide.webp"
-    alt:  "Secured server racks with locking cabinets"
+  - src: "/images/worldbank-dc-server-row.webp"
+    alt:  "Long row of server racks with managed fibre cabling in a data centre hall"
     caption: "AI and GPU workloads are driving demand for 400G Ethernet cabling standards in Kenyan facilities"
     position: "infographic"
   - src: "/images/diagram-cable-gauge-breaker-chart.webp"
@@ -172,7 +172,7 @@ Nairobi sits at approximately 1,795 metres above sea level, with an average temp
 
 ## 400G Ethernet and Cabling for AI Workloads
 
-![Secured server racks with locking cabinets](/images/dc-gpu-cluster-2-wide.webp)
+![Long row of server racks with managed fibre cabling in a data centre hall](/images/worldbank-dc-server-row.webp)
 
 The rapid growth of **GPU computing and AI workloads** in Kenya (driven by financial services, agritech, and government digitisation initiatives) is accelerating the adoption of **400G Ethernet (IEEE 802.3bs)**. This has profound implications for cabling infrastructure:
 

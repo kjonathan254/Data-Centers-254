@@ -26,8 +26,8 @@ images:
     alt: "AI GPU server systems with dense cabling"
     caption: "AI servers are hungry in a way ordinary servers are not: more power, more heat, heavier racks. Buildings have to be built or rebuilt for that"
     position: "inline"
-  - src: "/images/dc-server-chip-wide.webp"
-    alt: "Close view of a server processor chip"
+  - src: "/images/worldbank-nvidia-gpu-board.webp"
+    alt: "Close-up of NVIDIA GPU chips mounted on a circuit board"
     caption: "A GPU is a chip built to do thousands of small maths jobs at once, which is exactly what training an AI model requires"
     position: "inline"
   - src: "/images/diagram-power-chain-grid-to-gpu.webp"
@@ -106,7 +106,7 @@ So where would a Kenyan team actually rent GPU power today? The honest map, as o
 
 Beyond iXAfrica, the pattern to know is this: Kenya's operational colocation market (NBO1 on Mombasa Road, the new NBO2, iColo, PAIX, all covered in our [Nairobi colocation buyer's guide](/articles/colocation-data-centres-nairobi-buyers-guide)) provides the shells, and AI-ready capability is arriving as those shells upgrade their power and cooling. The loudest sign of where this is heading is the [Amaco HERCULES proposal](/articles/amaco-hercules-mombasa-ai-data-centre): a $1.5 billion AI data centre plan for Mombasa that would generate its own electricity on a floating power barge, precisely because AI at scale is a power story before it is a software story.
 
-![Close view of a server processor chip](/images/dc-server-chip-wide.webp)
+![Close-up of NVIDIA GPU chips mounted on a circuit board](/images/worldbank-nvidia-gpu-board.webp)
 
 ## The power problem, in one paragraph
 

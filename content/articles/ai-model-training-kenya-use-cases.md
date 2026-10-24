@@ -15,13 +15,17 @@ published_date: '2026-08-28'
 updated_date: '2026-08-28'
 category: AI & Machine Learning
 cluster: AI
-og_image: /images/dc-gpu-cluster-2-wide.webp
+og_image: /images/worldbank-ai-training-illustrative.webp
 reading_time: "12 min"
 images:
+- src: /images/worldbank-ai-training-illustrative.webp
+  alt:  "Illustrative AI-generated image of African data scientists training an AI model at workstations"
+  caption: "Illustrative image, generated with AI: model training is people and process as much as hardware, and Kenya's talent pipeline is part of the readiness story."
+  position: hero
 - src: /images/ai-gpu-servers.webp
   alt:  "GPU servers racked in a data centre"
   caption: "Training clusters need dense, well-cooled compute, the kind Kenya's new facilities are being built for."
-  position: hero
+  position: section-break
 - src: /images/fibre-splicing-termination.webp
   alt:  "Technician terminating fibre optic cable"
   caption: "Training demands accelerators, fast interconnects, and storage that can feed them, interconnects that begin with fibre work like this."

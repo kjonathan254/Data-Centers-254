@@ -22,8 +22,8 @@ images:
     alt: "Power and battery infrastructure supporting server racks in a data centre"
     caption: "A server is a computer whose job never ends, and it takes this kind of power and cooling infrastructure behind the racks to keep it that way"
     position: hero
-  - src: "/images/dc-gpu-cluster.webp"
-    alt:  "GPU cluster racks in a colocation facility"
+  - src: "/images/worldbank-dc-server-row.webp"
+    alt:  "Rows of enterprise server racks in a data centre hall"
     caption: "Consumer parts share DNA with server hardware but trade reliability and manageability for price."
     position: "section-break"
   - src: "/images/fibre-splicing-technician-data-hall.webp"
@@ -79,7 +79,7 @@ Servers use **ECC memory** (Error-Correcting Code RAM), which can detect and cor
 
 Servers have **redundant power supplies**, two or more power supply units (PSUs) in each server, each capable of powering the entire server independently. If one PSU fails, the other takes over seamlessly. This is why servers connected to data centre power systems (which already have redundant power paths) can achieve near-perfect uptime, there are multiple layers of redundancy between the grid and the processor.
 
-![GPU cluster racks in a colocation facility](/images/dc-gpu-cluster.webp)
+![Rows of enterprise server racks in a data centre hall](/images/worldbank-dc-server-row.webp)
 
 Servers use **hot-swappable components**, drives, fans, and even power supplies can be replaced while the server is running, without shutting it down. In a data centre environment, shutting down a server to replace a failed drive would disrupt services. Hot-swap capability means a technician can slide out a failed drive and slide in a replacement while the server continues operating.
 
