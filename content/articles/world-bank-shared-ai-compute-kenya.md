@@ -15,25 +15,25 @@ published_date: "2026-10-24"
 updated_date: "2026-10-24"
 category: "Cloud Computing"
 cluster: "AI"
-og_image: "/images/dc-gpu-cluster-3-wide.webp"
+og_image: "/images/worldbank-ai-training-illustrative.webp"
 reading_time: "8 min"
 images:
-  - src: "/images/dc-gpu-cluster-3-wide.webp"
-    alt: "Rows of GPU servers in a shared compute facility"
-    caption: "Shared GPU pools are the Bank's answer to a 0.6 percent share of global data centre capacity."
+  - src: "/images/worldbank-ai-training-illustrative.webp"
+    alt: "Illustrative AI-generated image of African engineers and data scientists training an AI model in a compute lab"
+    caption: "Illustrative image, generated with AI: the readiness half of the initiative is people who can train and run models, not only buildings that house GPUs."
     position: "hero"
-  - src: "/images/africa-dc-map.webp"
-    alt: "Map of data centre capacity across Africa"
-    caption: "Africa's capacity is thin and concentrated in a handful of markets; Kenya is one of the continental leaders."
+  - src: "/images/worldbank-dc-server-row.webp"
+    alt: "Long row of illuminated server racks in a data centre hall"
+    caption: "The pooled-capacity idea: shared racks serving many workloads at once, wherever the GPUs end up sitting."
     position: "section-break"
-  - src: "/images/constitution-of-kenya-2010.webp"
-    alt: "The Constitution of Kenya 2010"
-    caption: "Kenya's data protection and public-sector hosting rules already decide where much of the demand must live."
+  - src: "/images/worldbank-dc-corridor.webp"
+    alt: "Corridor between server racks inside a modern data centre"
+    caption: "Workloads under Kenya's residency rules stay with in-country facilities like this one, not with an undisclosed GPU pool abroad."
     position: "section-break"
-  - src: "/images/africa-power-hero.webp"
-    alt: "Power infrastructure across African landscapes"
-    caption: "Power, not GPUs, remains the binding constraint on local build-out."
-    position: "infographic"
+  - src: "/images/worldbank-nvidia-gpu-board.webp"
+    alt: "Close-up of NVIDIA GPU chips mounted on a circuit board"
+    caption: "NVIDIA is one of the initiative's knowledge partners, alongside Cassava Technologies, an operator with its own continental build-out plan."
+    position: "section-break"
 internal_links:
   - text: "AWS commits $1.5bn to Africa: the compute gap behind it"
     href: "/articles/aws-1-5bn-africa-compute-gap-kenya"
@@ -82,7 +82,7 @@ Read that framing carefully, because it contains a quiet provocation. The World 
 
 The Bank's own figures explain the urgency. Sub-Saharan Africa accounts for about 18 percent of the world's population but holds roughly 0.6 percent of global data centre capacity, and only around 5 percent of existing African facilities are ready for AI workloads, according to figures the Bank has circulated with the announcement. Measured differently, Africa averages about 0.33 MW of data centre capacity per million people, against roughly 15 MW globally.
 
-![Map of data centre capacity across Africa](/images/africa-dc-map.webp)
+![Long row of illuminated server racks in a data centre hall](/images/worldbank-dc-server-row.webp)
 
 The readiness picture is just as uneven as the infrastructure. The Bank's Africa Economic Update, published a day after the announcement, finds AI adoption concentrated in a small set of leading economies, with Nigeria, South Africa and Kenya ahead of the pack, and most African countries using AI below the levels seen in lower-middle-income economies. More than 2 billion people were offline in 2025, and internet use in low-income countries stood at 23 percent against 94 percent in high-income ones. Those are the conditions the shared-compute proposal is designed for: governments that need results before they can finance concrete.
 
@@ -96,7 +96,7 @@ But renting has a catch that the announcement leaves entirely open, and early re
 
 Here is the part of the debate that happens in Nairobi rather than Seoul. Kenya's Data Protection Act and the public-sector hosting expectations built around it already require much government and personal data to remain in-country. That legal fact does most of the work in the rent-versus-build argument before economics enters at all.
 
-![The Constitution of Kenya 2010](/images/constitution-of-kenya-2010.webp)
+![Corridor between server racks inside a modern data centre](/images/worldbank-dc-corridor.webp)
 
 A shared GPU pool whose location is undisclosed cannot host a workload the law says must live in Kenya. It cannot process citizen records for a ministry, back a government cloud, or touch the datasets that localisation rules protect. What it can serve is the wide upper layer of AI work that carries no residency constraint: model experimentation, non-sensitive inference, prototyping for agriculture and small business tools. Kenya's [data sovereignty push](/articles/kenya-data-sovereignty-localisation) is not a mood or a preference; it is a compliance perimeter. Any government computing plan splits cleanly along that line, and the Bank's initiative, as announced, only serves one side of it.
 
@@ -106,7 +106,7 @@ That is also why the rent-versus-build framing is a false binary for Kenya. The 
 
 Cassava and NVIDIA's role deserves scrutiny, because the Bank has handed its credibility to two parties with a commercial roadmap of their own. Cassava is not a neutral consultancy; it is an operator building paid AI capacity across the continent, with Kenya on its expansion list. If the initiative's shared pools end up riding on commercial infrastructure like Cassava's AI factories, the programme becomes a demand-aggregation vehicle that channels government spending into private facilities. That would be defensible, arguably elegant, but it should be said plainly. It would also mean the GPU location question answers itself: the capacity would sit where the operators build, including, eventually, in the region.
 
-![Power infrastructure across African landscapes](/images/africa-power-hero.webp)
+![Close-up of NVIDIA GPU chips mounted on a circuit board](/images/worldbank-nvidia-gpu-board.webp)
 
 The optimistic read and the cynical read converge on the same watch item. If the shared pools sit in-region, the initiative seeds utilisation for exactly the local facilities DC254 tracks and lowers the unit cost of government AI. If they sit outside Africa, the initiative becomes an off-ramp that quietly ships commodity AI workloads abroad while the hard local problems of power and financing remain unsolved. The announcement, as it stands, supports either interpretation, which is precisely why the GPU location and data residency terms are the details to watch.
 
