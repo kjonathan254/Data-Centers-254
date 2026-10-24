@@ -15,24 +15,28 @@ published_date: "2026-10-24"
 updated_date: "2026-10-24"
 category: "Kenya Market"
 cluster: "Kenya"
-og_image: "/images/construction-crane-scaffolding.webp"
+og_image: "/images/konza-ppp-signing-exchange.webp"
 reading_time: "7 min"
 images:
-  - src: "/images/construction-crane-scaffolding.webp"
-    alt: "Scaffolding and a crane on a construction site in early works stage"
-    caption: "Preparation funding pays for the stage before this one: advisory, feasibility and structuring work."
+  - src: "/images/konza-ppp-signing-exchange.webp"
+    alt: "KoTDA and National Treasury PPP Directorate officials holding the signed funding agreement documents"
+    caption: "KoTDA and National Treasury PPP Directorate officials exchange the signed project-preparation funding agreement."
     position: "hero"
-  - src: "/images/construction-workers-site-review.webp"
-    alt: "Professionals reviewing plans and documents on site"
-    caption: "Transaction advisory and feasibility assessment are the deliverables the agreement actually funds."
+  - src: "/images/konza-ppp-signing-handshake.webp"
+    alt: "Two officials shaking hands while holding the signed agreement"
+    caption: "The agreement commits both sides to transaction advisory, feasibility work and an investment framework before anything is built."
     position: "section-break"
-  - src: "/images/dc-server-chip-wide.webp"
-    alt: "Server racks in an operating data hall"
-    caption: "The operating Konza National Data Centre was delivered under a 2019 concessional loan with Huawei as contractor."
+  - src: "/images/konza-ppp-signing-group.webp"
+    alt: "Group photo of KoTDA and National Treasury officials at the signing"
+    caption: "The signing closes the preparation-funding stage of the Konza Cloud Expansion and Smart City Facilities PPP."
     position: "section-break"
-  - src: "/images/dc-business-investment.webp"
-    alt: "Investment and business analysis materials"
-    caption: "The PPP route puts the expansion in front of competing bidders instead of a single appointed contractor."
+  - src: "/images/konza-national-dc-render.webp"
+    alt: "The Konza National Data Centre building"
+    caption: "The operating Konza National Data Centre: Tier III certified in August 2022, around 140 racks, built under a Chinese concessional loan."
+    position: "inline"
+  - src: "/images/konza-technopolis-aerial.webp"
+    alt: "Aerial view of the Konza Technopolis Complex with solar panels on the roof"
+    caption: "Konza Technopolis, 60 kilometres south of Nairobi. The proposed expansion sits within the smart city's serviced Phase 1 area."
     position: "infographic"
 internal_links:
   - text: "Konza Technopolis and Kenya's data centre future"
@@ -78,6 +82,8 @@ Kenya's National Treasury, through the Public-Private Partnerships Project Facil
 
 The money does not build anything. It pays for the work that comes before a shovel moves: transaction advisory services, feasibility assessments, and the development of an investment and implementation framework. The PPP Directorate's own announcement describes the funding as support for project preparation, including the engagement of a transaction advisor to structure the project for market engagement.
 
+![Group photo of KoTDA and National Treasury officials at the signing](/images/konza-ppp-signing-group.webp)
+
 That distinction matters more than it may look. Data centre announcements in this region routinely blur the line between a signed construction contract and an early preparation step. This is firmly the second kind, and reading it correctly is the difference between a market signal and wishful thinking.
 
 ## What Preparation Funding Actually Buys
@@ -92,7 +98,7 @@ For the Konza expansion, the agreement covers three things:
 
 Only after that work lands does the project go to market. If it reaches financial close, private capital funds the build under a PPP contract. If the feasibility or the market engagement fails, the project stays a pipeline entry, which is where several Kenyan PPP projects have historically stalled.
 
-![Professionals reviewing plans and documents on site](/images/construction-workers-site-review.webp)
+![Two officials shaking hands while holding the signed agreement](/images/konza-ppp-signing-handshake.webp)
 
 ## The Paper Trail Behind This Project
 
@@ -115,7 +121,7 @@ Two things stand out. First, the expansion has been in the PPP pipeline since at
 
 The operating facility at Konza, tracked by DC254 as the [Konza National Data Centre](/directory/konza-national-dc), was not built through a PPP. It was financed by the RMB 1.225 billion concessional loan from China Eximbank, signed in April 2019 with a 19.5-year maturity, a 2 percent fixed rate and a seven-year grace period. Huawei held the underlying commercial contract, signed in June 2017, and delivered the facility as contractor.
 
-![Server racks in an operating data hall](/images/dc-server-chip-wide.webp)
+![The Konza National Data Centre building](/images/konza-national-dc-render.webp)
 
 That facility carries a Uptime Institute Tier III Constructed Facility certification dated 23 August 2022, has around 140 racks, and primarily serves government workloads. The loan's grace period ended in March 2026, so repayment obligations now sit on the government's books for the facility the loan built.
 
@@ -131,7 +137,7 @@ Three differences are worth watching.
 
 **A published reference point.** Because the PPP process runs through documented stages, the expansion now has public milestones to be held against: the advisor award, the market engagement documents, and eventually the contract and financial close terms. Facilities built inside bilateral loan agreements rarely publish that much.
 
-![Investment and business analysis materials](/images/dc-business-investment.webp)
+![Aerial view of the Konza Technopolis Complex with solar panels on the roof](/images/konza-technopolis-aerial.webp)
 
 ## How DC254's Tracker Reads It
 
