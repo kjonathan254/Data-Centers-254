@@ -6,7 +6,7 @@
     "releasedAt": "2026-09-19",
     "scope": "Data centre facilities and operators tracked by DC254. Kenya census plus the first East Africa regional records (Tanzania, Uganda, Rwanda).",
     "recordCounts": {
-      "facilities": 31,
+      "facilities": 32,
       "operators": 18
     }
   },
@@ -1340,7 +1340,8 @@
       "articleSlugs": [
         "konza-technopolis-data-centres-kenya",
         "kenya-ict-policy-framework-data-centres",
-        "kenya-data-centre-compute-hub-plan-explained"
+        "kenya-data-centre-compute-hub-plan-explained",
+        "konza-ppp-data-centre-funding"
       ]
     },
     {
@@ -1980,6 +1981,58 @@
         "east-africa-data-centres-compared",
         "raxio-vs-africa-data-centres-kenya-comparison"
       ]
+    },
+    {
+      "id": "35",
+      "name": "Konza Cloud Expansion and Smart City Facilities (PPP)",
+      "slug": "konza-cloud-expansion-ppp",
+      "description": "PPP-structured expansion of the Konza National Data Centre, moving through Kenya's PPP pipeline: preparation funding signed October 2026, feasibility study November 2025, transaction advisor tender in progress.",
+      "status": "Early Stage",
+      "address": "Konza Technopolis, Machakos County",
+      "city": "Konza",
+      "region": "Machakos County",
+      "itLoadMw": null,
+      "totalCapacityMw": null,
+      "rackCount": null,
+      "tierRating": null,
+      "facilityType": "Government",
+      "aiReady": false,
+      "openedDate": null,
+      "expansionDate": null,
+      "coolingType": null,
+      "powerSource": "Konza Technopolis dedicated substation (planned)",
+      "renewableClaim": null,
+      "notable": "Kenya's PPP Project Facilitation Fund (National Treasury) signed a project-preparation funding agreement with KoTDA, reported 23 October 2026: transaction advisory, feasibility assessments and an investment and implementation framework for expanding the national data centre. A feasibility study report (Nov 2025) and a transaction advisor tender (pre-bid meeting 17 Mar 2026) precede the agreement. Services scoped in the feasibility documentation: SaaS, PaaS, IaaS and colocation. No capacity figure, contract value or construction timeline is public yet.",
+      "lastVerified": "2026-10",
+      "dataSource": "National Treasury PPP Directorate; Konza Technopolis; TechAfrica News",
+      "dataConfidence": "Medium",
+      "articleSlugs": [
+        "konza-ppp-data-centre-funding",
+        "konza-technopolis-data-centres-kenya",
+        "kenya-data-centre-compute-hub-plan-explained"
+      ],
+      "operatorId": "kotda",
+      "connectivityFacility": [],
+      "certifications": [],
+      "sources": [
+        {
+          "label": "National Treasury PPP Directorate, Transaction Advisory Services for the Konza Cloud Expansion and Smart City Facilities (tender documents)",
+          "url": "https://pppkenya.go.ke/wp-content/uploads/2020/07/Updated-ADDENDUM-III-TRANSACTION-ADVISORY-SERVICES-FOR-THE-KONZA-CLOUD-EXPANSION-AND-SAMRT-CITY-FACILITIES.pdf",
+          "kind": "gov"
+        },
+        {
+          "label": "Konza Technopolis, Data Centre Cloud and Smart City Facility feasibility study report executive summary (Nov 2025)",
+          "url": "https://konza.go.ke/wp-content/uploads/2026/04/6.-Annex-I-to-Addendum-II-Feasibility-study-Report-Nov-2025-EXECUTIVE-SUMMARY-Rev.pdf",
+          "kind": "gov"
+        },
+        {
+          "label": "TechAfrica News, Konza Technopolis secures funding agreement for data centre and smart city project (23 Oct 2026)",
+          "url": "https://techafricanews.com/2026/10/23/kenyas-konza-technopolis-secures-funding-agreement-for-data-centre-and-smart-city-project/",
+          "kind": "press"
+        }
+      ],
+      "certNote": null,
+      "divergenceNote": "Stage reflects project preparation only: no operator, no published capacity and no financial close exist yet. Stage would move to Committed on PPP contract signature and financing, to Under Construction on groundbreaking."
     }
   ]
 }
