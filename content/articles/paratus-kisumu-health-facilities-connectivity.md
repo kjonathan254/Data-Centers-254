@@ -22,14 +22,6 @@ images:
     alt: "A health worker in a white coat using a tablet in a hospital ward"
     caption: "Digital health at the point of care runs on a chain that starts at the clinic and ends in a data centre. Photo: supplied"
     position: "hero"
-  - src: "/images/paratus-hospital-wifi-install.webp"
-    alt: "A technician installing Wi-Fi access points on a hospital wall"
-    caption: "Last-mile work: a technician installs hospital Wi-Fi access points, the kind of site-level gap an assessment like Kisumu's is built to find. Photo: supplied"
-    position: "section-break"
-  - src: "/images/paratus-clinic-staff-tablet.webp"
-    alt: "Clinic staff reviewing records on a tablet at a reception desk"
-    caption: "Digital records and Social Health Authority claims are the near-term workloads a connection has to carry. Photo: supplied"
-    position: "section-break"
   - src: "/images/paratus-emr-registration-desk.webp"
     alt: "Staff and patients gathered around a computer at a registration desk"
     caption: "Registration desks are where paper queues become database transactions, and where a dropped link is visible immediately. Photo: supplied"
@@ -85,8 +77,6 @@ A digital health service is a chain, and the assessment addresses its first link
 
 Two different infrastructure products meet in that table. Satellite access reaches places terrestrial fibre reaches slowly or expensively, which is the same property that makes [Starlink a backup option for Kenyan data centres](/articles/starlink-kenya-data-centres-backup-link). Hosted cloud in Nairobi, meanwhile, is only as good as the facility it runs in, which is why the [iXAfrica campus](/articles/ixafrica-data-centres-kenya) matters to this story even though it sits 350 kilometres from Kisumu.
 
-![A technician installing Wi-Fi access points on a hospital wall](/images/paratus-hospital-wifi-install.webp)
-
 ## What the Workloads Actually Demand
 
 The three services named in the initiative stress the chain differently. Digital records are bursty and interactive: staff read and write patient data through the day, and a slow or dropped connection turns a two-minute lookup into a queue. SHA claims processing is transactional and deadline-bound, since facilities' cash flow depends on submissions going through. Telemedicine is the most demanding, adding sustained video and the latency sensitivity that comes with it.
@@ -104,8 +94,6 @@ Kisumu follows Paratus's earlier county programme in Murang'a, where the company
 ![Health workers using a tablet during a community outreach session](/images/paratus-community-health-outreach.webp)
 
 The honest read is that an assessment is a starting line. What would demonstrate the demand story in practice: how many of the 160 facilities get working connections, what uptime and throughput the service levels actually hold, whether records and claims systems see real daily use, and what portion of the hosting load lands at iXAfrica rather than offshore. Those numbers would also show whether the model needs more than one cloud location to serve the western regions well.
-
-![Clinic staff reviewing records on a tablet at a reception desk](/images/paratus-clinic-staff-tablet.webp)
 
 ## Why This Belongs on a Data Centre Radar
 
