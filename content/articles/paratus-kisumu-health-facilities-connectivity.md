@@ -14,7 +14,7 @@ author_bio_link: "/about"
 published_date: "2026-10-28"
 updated_date: "2026-10-28"
 category: "Connectivity"
-cluster: "Kenya"
+cluster: "Internet"
 og_image: "/images/paratus-health-worker-tablet.webp"
 reading_time: "7 min"
 images:
@@ -85,21 +85,33 @@ A digital health service is a chain, and the assessment addresses its first link
 
 Two different infrastructure products meet in that table. Satellite access reaches places terrestrial fibre reaches slowly or expensively, which is the same property that makes [Starlink a backup option for Kenyan data centres](/articles/starlink-kenya-data-centres-backup-link). Hosted cloud in Nairobi, meanwhile, is only as good as the facility it runs in, which is why the [iXAfrica campus](/articles/ixafrica-data-centres-kenya) matters to this story even though it sits 350 kilometres from Kisumu.
 
+![A technician installing Wi-Fi access points on a hospital wall](/images/paratus-hospital-wifi-install.webp)
+
 ## What the Workloads Actually Demand
 
 The three services named in the initiative stress the chain differently. Digital records are bursty and interactive: staff read and write patient data through the day, and a slow or dropped connection turns a two-minute lookup into a queue. SHA claims processing is transactional and deadline-bound, since facilities' cash flow depends on submissions going through. Telemedicine is the most demanding, adding sustained video and the latency sensitivity that comes with it.
 
+![Staff and patients gathered around a computer at a registration desk](/images/paratus-emr-registration-desk.webp)
+
 None of these workloads is heavy by data centre standards. The demand story is about volume of sites and reliability rather than megawatts: hundreds of facilities generating steady, latency-sensitive traffic that has to land somewhere, be stored somewhere, and comply with health data rules. Patient data is personal data, so [Kenya's Data Protection Act](/articles/kenya-data-protection-act-data-centres) shapes where that somewhere can be. That residency requirement is what turns a health connectivity programme into potential demand for in-country facilities rather than offshore hosting.
+
+![A health worker and patient reviewing information on a tablet](/images/paratus-patient-tablet-consult.webp)
 
 ## Building on Murang'a, and What Would Prove It
 
 Kisumu follows Paratus's earlier county programme in Murang'a, where the company says it connected 170 healthcare facilities through Essential Access. Two counties do not make a national programme, but the repeat pattern is the interesting part: the same connectivity-plus-hosted-cloud package being rolled out county by county, each one adding facilities whose digital services depend on hosted infrastructure.
 
+![Health workers using a tablet during a community outreach session](/images/paratus-community-health-outreach.webp)
+
 The honest read is that an assessment is a starting line. What would demonstrate the demand story in practice: how many of the 160 facilities get working connections, what uptime and throughput the service levels actually hold, whether records and claims systems see real daily use, and what portion of the hosting load lands at iXAfrica rather than offshore. Those numbers would also show whether the model needs more than one cloud location to serve the western regions well.
+
+![Clinic staff reviewing records on a tablet at a reception desk](/images/paratus-clinic-staff-tablet.webp)
 
 ## Why This Belongs on a Data Centre Radar
 
 Data centre coverage in Kenya tracks supply well and demand poorly. Stories like this one are the demand side made visible: public sector digitisation, facility by facility, creating steady traffic and residency-bound data that has to be hosted in-country. The K2M fibre route Paratus [brought live to Mombasa](/articles/paratus-g2m-fibre-route-live) and assessment work like Kisumu's are complementary halves of the same market forming.
+
+![Health staff working with a laptop and connected devices in a clinic room](/images/paratus-telehealth-laptop-session.webp)
 
 ## What DC254 Will Watch
 

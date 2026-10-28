@@ -72,6 +72,8 @@ Infragora Global Capital, a South African infrastructure investment firm, is pre
 
 The US Trade and Development Agency has approved a $1.87 million grant for a feasibility study, not a construction programme. The study covers two Nigerian facilities: a primary data centre in Lagos State, planned as an AI-ready, cloud-enabled Tier IV facility, and a secondary site in Delta State, a Tier III or IV facility designated for disaster recovery.
 
+![Modern data centre building exterior with rooftop plant](/images/infragora-facility-exterior.webp)
+
 The capacity maths in the filing is specific. The study assesses 60-70 MW of combined initial capacity, with room to expand to a combined 100 MW. That floor space would hold 3,600 traditional 10 kW racks for CPU servers and 480 racks of 50 kW each for the GPU workloads AI training and inference require. The TechCabal report that broke the story frames the total investment at $650 million to $1 billion, with construction targeted for the second and third quarters of 2027, subject to financial close.
 
 | Element | Detail | Status |
@@ -91,6 +93,8 @@ The reported power arrangement is the part of this story with the most direct Ke
 
 That is the same logic behind [Amaco's HERCULES proposal for Mombasa](/articles/amaco-hercules-mombasa-ai-data-centre), which plans a floating power barge because AI at scale is a power story before it is a software story. It is also why the [Microsoft-G42 project in Kenya](/articles/microsoft-g42-kenya-data-centre) was designed around Olkaria's geothermal, and why its delays over commercial arrangements, including reported disagreements about payment guarantees for capacity, are worth studying. Investors who solve power early still struggle to close; investors who ignore power rarely get that far.
 
+![Solar panels and wind turbines beside an industrial power plant](/images/infragora-power-solar-wind.webp)
+
 ## Kenya's Place on the Roadmap
 
 The USTDA filing states that Infragora is planning AFRIDATA special purpose vehicles in Angola, Cameroon, Cote d'Ivoire, Egypt, Ghana, Kenya and South Africa, with Infragora offices in the United Kingdom and the United States. Nigeria comes first. Kenya's name on that list is a signal worth tracking, and it is worth tracking precisely because it is only a signal.
@@ -99,11 +103,15 @@ No Kenyan project company has been announced. No site has been identified, no ca
 
 For a country already running a [national compute hub plan](/articles/kenya-data-centre-compute-hub-plan-explained), a serious new capital entrant is a competitive development rather than a threatening one. Kenya's constraint has never been a shortage of announced ambition; it is the gap between announcement and delivery that [previous capital commitments](/articles/us-dfc-wiocc-155m-kenya-digital-infrastructure) have had to cross.
 
+![Bright data centre hall with rows of server racks](/images/infragora-dc-hall-aisle.webp)
+
 ## Announced Money and Delivered Capacity Are Different Things
 
 Africa's AI infrastructure pipeline now carries announcements from development lenders, hyperscalers, commercial operators and, with AFRIDATA, a dedicated platform investor. The [World Bank's shared compute initiative](/articles/world-bank-shared-ai-compute-kenya) and private builds sit side by side in the same headlines, and the totals sound enormous.
 
 The discipline that keeps this coverage honest is stage separation. A feasibility study is not a financed project. A financed project is not a construction site. A construction site is not commissioned capacity, and commissioned capacity is not customers. AFRIDATA currently sits at the earliest end of that chain: a funded study for two sites, with financial close still ahead of it. Each later stage has claimed projects that never crossed it, which is why DC254 counts operational facilities separately from everything else.
+
+![Dark data centre hall with long rows of illuminated racks](/images/infragora-dc-hall-dark.webp)
 
 ## What DC254 Will Watch
 

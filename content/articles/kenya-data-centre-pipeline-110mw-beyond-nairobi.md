@@ -89,15 +89,23 @@ The reconciliation cuts both ways. The tracker's 20 operational facilities outnu
 
 Nairobi's advantages are structural. The metro area concentrates the [internet exchange point](/articles/kixp-internet-exchange-point-kenya) where Kenyan networks meet, the terrestrial fibre that carries traffic from the Mombasa cable landings, and the enterprise and government demand that fills racks. That is why 15 of 20 operational facilities sit there.
 
+![Aerial view of a data centre facility in a Nairobi suburb](/images/kenya-pipeline-dc-aerial-suburban.webp)
+
 Mombasa's case rests on a different input: proximity to the subsea systems that land on the coast. Capacity there can serve latency-sensitive work for the port economy and the coastal region, and proposals like HERCULES argue generation can be built alongside it. Kisumu's case is the most open question of the three. The city anchors western Kenya's population and trade, sits near the Lake Victoria basin economies, and has no operational facility to build on. A facility there would be a bet on regional demand materialising, with connectivity, power reliability and an operating model all to be proven.
 
 Each proposed regional project still has to clear the same hurdles as any Nairobi build: customers, metered power, fibre routes, cooling and a commercially viable price per kilowatt. Location is a thesis, not a business case.
+
+![Aerial view of a large data centre building](/images/kenya-pipeline-dc-facility-aerial.webp)
 
 ## How to Read a Pipeline Megawatt
 
 The 110 MW headline will be quoted, so it is worth fixing what such a number can and cannot mean. It cannot mean available capacity, because none of it is operational. It cannot be verified project by project from the public announcement, because the breakdown sits behind the paywall. And it bundles stages: an announced concept and a building with switchgear installed contribute the same headline megawatts but carry completely different probabilities of ever delivering them.
 
+![High voltage transmission pylons against a partly cloudy sky](/images/kenya-pipeline-power-transmission.webp)
+
 For buyers and investors the practical read is narrower. Treat the figure as evidence that developers are looking outside Nairobi, then demand the three details that turn a claim into a fact for each project: the site, the capacity measure, and the stage. That is the standard we apply to [operator disclosures](/articles/kenya-data-centres-what-operators-should-disclose), and it applies to research databases too.
+
+![Aerial view of a facility with extensive rooftop solar panels](/images/kenya-pipeline-dc-solar-rooftop.webp)
 
 ## What DC254 Will Track Next
 
