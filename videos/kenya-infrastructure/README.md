@@ -8,7 +8,20 @@ in the last mile → the phone in your hand.
 Built with **Remotion + React Three Fiber** (true 3D camera inside the video
 pipeline), narrated with TTS and a procedurally generated ambient bed.
 
-**Output:** `out/kenya-infrastructure.mp4` — 1280×720, 30 fps, 60s, h264+aac.
+**v2 — Marble edition:** the five "ground level" beats now cut to photorealistic
+3D worlds generated with **Worldlabs Marble** (`marble-1.1`, text-to-world):
+the undersea cable on the seabed, the Mombasa landing at golden hour, a Nairobi
+data-centre aisle, a cell tower over the city at dusk, and the M-Pesa tap on a
+phone in hand. The stylised map flight remains the connective spine — a
+"THE JOURNEY" chip (Kenya silhouette + route + you-are-here stage) keeps
+orientation during every world cut. Marble worlds are rendered as equirect
+panoramas on an inverted sphere with an animated virtual camera
+(`src/scenes/WorldScene.tsx` + calibrated shots in `src/scenes/worldShots.ts`);
+world assets live in `public/worlds/*.jpg` (panoramas, ~600 KB each; Marble
+world ids in `work/dc254/marble/ops.json` if regenerating).
+
+**Output:** `out/kenya-infrastructure-marble.mp4` — 1280×720, 30 fps, 60s,
+h264+aac.
 
 ## The journey (8 beats, audio-driven timing)
 
@@ -55,7 +68,7 @@ python3 scripts/make_bed.py
 python3 scripts/mix_audio.py
 
 # 4. render
-npx remotion render KeMapFlight out/kenya-infrastructure.mp4
+npx remotion render KeMapFlight out/kenya-infrastructure-marble.mp4
 ```
 
 Headless rendering uses the `swangle` (SwiftShader) GL renderer — see

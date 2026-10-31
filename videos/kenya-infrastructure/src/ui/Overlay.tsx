@@ -7,7 +7,8 @@ import { BEATS, BEAT_IDS, BEAT_LABELS, CAPTIONS, beatOf, beatAlpha, TOTAL, BeatI
 const CYAN = "#00d2d3";
 const CYAN_SOFT = "rgba(0,133,133,0.5)";
 import { SHOTS } from "../scenes/Map3D";
-import { CABLES } from "../geo/kenya";
+import { CABLES, RING, BACKBONE, MOMBASA, NAIROBI, CITIES } from "../geo/kenya";
+import { STAGES, STAGE_BY_BEAT, worldAlpha } from "../scenes/worldShots";
 
 /* ---------- font ---------- */
 
@@ -185,8 +186,10 @@ const LABELS: LabelDef[] = [
 export const Labels3D: React.FC = () => {
   const frame = useCurrentFrame();
   const cam = useCam();
+  // labels are projected from the map camera — hide them during Marble world cuts
+  const wa = worldAlpha(frame);
   return (
-    <>
+    <div style={{ opacity: 1 - wa }}>
       {LABELS.map((l) => {
         const a = beatAlpha(frame, l.beat, (l.delay ?? 0) + 10, 12);
         if (a <= 0.02) return null;
@@ -260,7 +263,110 @@ export const Labels3D: React.FC = () => {
           </div>
         );
       })}
-    </>
+    </div>
+  );
+};
+
+/* ---------- journey chip (you-are-here inset during world cuts) ---------- */
+
+const MAP_SVG_W = 112;
+const MAP_SVG_H = 132;
+const mapPx = (x: number, z: number): [number, number] => [
+  10 + x * 11.5,
+  10 + (z + 10.13) * 11.0,
+];
+
+export const JourneyChip: React.FC = () => {
+  const frame = useCurrentFrame();
+  const a = worldAlpha(frame);
+  if (a <= 0.01) return null;
+  const beat = beatOf(frame);
+  const stageId = STAGE_BY_BEAT[beat.id];
+  const stage = STAGES.find((s) => s.id === stageId);
+  const outline = RING.map(([x, z]) => mapPx(x, z).join(",")).join(" L");
+  const route = BACKBONE.map(([x, z]) => mapPx(x, z).join(",")).join(" ");
+  return (
+    <div
+      style={{
+        position: "absolute",
+        right: 44,
+        bottom: 52,
+        width: 178,
+        opacity: a,
+        transform: `translateY(${(1 - a) * 10}px)`,
+        background: "rgba(6,10,17,0.78)",
+        border: "1px solid rgba(0,210,211,0.28)",
+        borderRadius: 14,
+        padding: "13px 14px 12px",
+        pointerEvents: "none",
+        boxShadow: "0 8px 30px rgba(2,4,8,0.5)",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: FONT,
+          fontSize: 9.5,
+          fontWeight: 700,
+          letterSpacing: "0.24em",
+          color: COLORS.muted,
+          marginBottom: 8,
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <span>THE JOURNEY</span>
+        <span style={{ color: CYAN }}>{stage?.label}/06</span>
+      </div>
+      <svg width={MAP_SVG_W} height={MAP_SVG_H} style={{ display: "block" }}>
+        <path
+          d={`M${outline}`}
+          fill="rgba(18,31,48,0.85)"
+          stroke="rgba(0,210,211,0.45)"
+          strokeWidth={1}
+        />
+        <polyline
+          points={route}
+          fill="none"
+          stroke="rgba(0,210,211,0.55)"
+          strokeWidth={1.4}
+          strokeDasharray="3 2.4"
+        />
+        {STAGES.map((s) => {
+          const [cx, cy] = mapPx(s.at[0], s.at[1]);
+          const activePulse = s.id === stageId;
+          const r = activePulse ? 4.6 : 2;
+          const passed =
+            STAGES.findIndex((x) => x.id === stageId) >
+            STAGES.findIndex((x) => x.id === s.id);
+          const pulseR = 7 + 2.5 * (0.5 + 0.5 * Math.sin(frame / 6));
+          return (
+            <g key={s.id}>
+              {activePulse && (
+                <circle cx={cx} cy={cy} r={pulseR} fill="rgba(0,210,211,0.18)" />
+              )}
+              <circle
+                cx={cx}
+                cy={cy}
+                r={r}
+                fill={activePulse ? CYAN : passed ? "rgba(0,210,211,0.75)" : "rgba(159,178,200,0.55)"}
+              />
+            </g>
+          );
+        })}
+      </svg>
+      <div
+        style={{
+          marginTop: 9,
+          fontFamily: FONT,
+          fontSize: 9.5,
+          fontWeight: 600,
+          letterSpacing: "0.14em",
+          color: CYAN,
+        }}
+      >
+        {stage?.hint}
+      </div>
+    </div>
   );
 };
 
@@ -572,6 +678,7 @@ export const Overlay: React.FC = () => (
     <Labels3D />
     <HookTitle />
     <Caption />
+    <JourneyChip />
     <Brand />
     <EndCard />
     <Progress />

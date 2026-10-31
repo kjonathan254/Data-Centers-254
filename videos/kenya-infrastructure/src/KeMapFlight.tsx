@@ -2,12 +2,14 @@ import React from "react";
 import { AbsoluteFill, Audio, staticFile } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { Scene3D } from "./scenes/Map3D";
+import { WorldScene, WorldLayerOpacity, Dip } from "./scenes/WorldScene";
 import { Overlay } from "./ui/Overlay";
 import { COLORS, W, H } from "./theme";
 
 export const KeMapFlight: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: COLORS.bg }}>
+      {/* spine: the 3D map flight */}
       <ThreeCanvas
         width={W}
         height={H}
@@ -22,6 +24,24 @@ export const KeMapFlight: React.FC = () => {
       >
         <Scene3D />
       </ThreeCanvas>
+      {/* ground level: Marble (Worldlabs) world cuts */}
+      <WorldLayerOpacity>
+        <ThreeCanvas
+          width={W}
+          height={H}
+          style={{ position: "absolute", top: 0, left: 0 }}
+          camera={{
+            fov: 60,
+            near: 0.1,
+            far: 120,
+            position: [0, 0, 0],
+            up: [0, 1, 0],
+          }}
+        >
+          <WorldScene />
+        </ThreeCanvas>
+      </WorldLayerOpacity>
+      <Dip />
       <Overlay />
       <Audio src={staticFile("audio/mix.mp3")} />
     </AbsoluteFill>
