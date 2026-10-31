@@ -1,0 +1,19 @@
+{
+  "name": "dc254-kenya-infrastructure-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DC254 - 60s explainer: Kenya's digital infrastructure from submarine cable landing in Mombasa to your phone. True 3D (R3F) in Remotion.",
+  "scripts": {
+    "render": "remotion render KeMapFlight out/kenya-infrastructure.mp4"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/media-utils": "^4.0.0",
+    "@remotion/three": "^4.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "^4.0.0",
+    "three": "^0.169.0"
+  }
+}
