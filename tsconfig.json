@@ -39,6 +39,7 @@
   "exclude": [
     "node_modules",
     "scripts",
-    "dc254-skills-campaign/remotion-project"
+    "dc254-skills-campaign/remotion-project",
+    "videos"
   ]
 }
