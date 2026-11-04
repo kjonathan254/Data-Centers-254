@@ -1,8 +1,8 @@
 ---
-title: "Kenya Has Renewable Power. Why Do Businesses Pay 17.5¢?"
-slug: kenya-power-costs-data-centres-world-bank
-meta_description: "Kenya has renewable power, yet businesses pay 17.5 US cents per kWh, more than double Viet Nam. The World Bank points to PPA governance. What it means for data centres."
-primary_keyword: "Kenya power costs data centres"
+title: "Kenya Data Centre Power Costs: What the World Bank Says"
+slug: kenya-data-centre-power-costs-world-bank
+meta_description: "What is driving Kenya's electricity costs? Explore the World Bank's findings on power-sector governance, electricity pricing and implications for data centres."
+primary_keyword: "Kenya data centre power costs"
 secondary_keywords:
   - "Kenya electricity prices businesses"
   - "World Bank Kenya Economic Update 2026"
@@ -15,24 +15,28 @@ published_date: "2026-11-04"
 updated_date: "2026-11-05"
 category: "Power & Energy"
 cluster: "Energy"
-og_image: "/images/kenya-hv-substation-yard.webp"
+og_image: "/images/kenya-data-centre-substation-aerial.webp"
 reading_time: "9 min"
 images:
-  - src: "/images/kenya-hv-substation-yard.webp"
-    alt: "High voltage substation yard with transformers and transmission equipment in Kenya"
-    caption: "Every shilling of grid cost is contracted years before it reaches a meter, and the World Bank now argues governance inside those contracts is why Kenyan power is expensive"
+  - src: "/images/kenya-data-centre-substation-aerial.webp"
+    alt: "Aerial view of a data centre campus with its on-site high voltage substation and transmission towers"
+    caption: "The industry and its fuel in one frame: data centre halls and the substation that feeds them. The World Bank's findings are about why the power behind Kenya's digital infrastructure costs what it does"
     position: "hero"
-  - src: "/images/hv-power-transformer-bay.webp"
-    alt: "High voltage power transformer bay at an electrical installation"
-    caption: "Power purchase agreements with independent power producers set the price base that Kenya Power passes through to business and industrial customers"
+  - src: "/images/olkaria-geothermal-field-aerial.webp"
+    alt: "Aerial view of the Olkaria geothermal field with steam rising from wells and cooling facilities"
+    caption: "Kenya's energy advantage is real: the Olkaria steam fields anchor a grid that runs on roughly 90 percent renewables. The cost gap opens between the wellhead and the customer"
     position: "section-break"
-  - src: "/images/diagram-power-chain-grid-to-gpu.webp"
-    alt: "Diagram of the power chain from grid connection to GPU server racks"
-    caption: "Grid price flows straight into data centre operating cost: a 1 MW IT load at a typical PUE draws 1.5 to 1.8 MW of facility power, every hour of every year"
-    position: "inline"
-  - src: "/images/kenya-geothermal-plant-olkaria.webp"
-    alt: "Geothermal power plant at Olkaria in Kenya"
-    caption: "The resource is not the problem: Kenya's grid runs on about 90 percent renewables with firm geothermal base load, which is exactly why the cost gap needs another explanation"
+  - src: "/images/kenya-business-electricity-prices-comparison.webp"
+    alt: "DC254 chart comparing business and household electricity prices in Kenya, Uganda, Morocco, South Africa and Viet Nam"
+    caption: "The economic problem in one chart: Kenyan businesses pay 17.5 US cents per kWh, the highest of the five comparators in the World Bank's Table 5"
+    position: "infographic"
+  - src: "/images/kenya-hv-transformer-substation.webp"
+    alt: "High voltage transformer and transmission equipment at a substation in Kenya"
+    caption: "Power purchase agreements and their take-or-pay clauses set the price base that passes through Kenya Power to business and industrial customers"
+    position: "section-break"
+  - src: "/images/kenya-transmission-lines-savanna.webp"
+    alt: "High voltage transmission towers crossing savanna grassland in Kenya"
+    caption: "More than 23 percent of Kenya's power is lost between plant and meter against an EPRA target of 16.5 percent, and the cost lands on the tariffs of customers who do pay"
     position: "section-break"
 internal_links:
   - text: "how Kenya Power tariffs are structured for data centres"
@@ -59,7 +63,7 @@ faq:
     answer: "The World Bank puts losses at over 23 percent against an EPRA target of 16.5 percent and 15 percent by 2029/30, citing underinvestment in grids, rapid rural access expansion, and theft and billing anomalies enabled by collusion. Losses are recovered through tariffs, so paying customers fund power that never reaches their meters."
   - question: "What would power sector reform mean for data centre investment?"
     answer: "The report points to competitive procurement, beneficial ownership transparency and loss reduction as the fixes that address high-cost contracts, and notes that competitively procured solar projects are about 47 percent cheaper than directly negotiated deals. Its reform modeling is economy-wide rather than a tariff forecast, so the effect on power prices arrives on contract timelines measured in years, not quarters."
-canonical_url: "https://data-centers-254.vercel.app/articles/kenya-power-costs-data-centres-world-bank"
+canonical_url: "https://data-centers-254.vercel.app/articles/kenya-data-centre-power-costs-world-bank"
 ---
 
 Kenya has built one of the cleaner electricity grids on the continent: roughly 90 percent renewable generation, anchored by firm geothermal capacity at Olkaria. The World Bank's Kenya Economic Update, published on 3 November 2026, puts a number on what businesses actually pay for that power: about 17.5 US cents per kilowatt-hour, more than double Viet Nam and described by the report as close to 50 percent higher than in Uganda. One clarification before anything else: that figure is a business electricity-price benchmark, not a tariff paid by data centres. But for an industry where electricity is the largest recurring operating cost, the report's explanation of the gap matters as much as the number itself. Its special focus this year is governance, and its diagnosis is that Kenya's power premium is made in contracting and system management, not in the steam field.
@@ -77,7 +81,7 @@ Kenya is the most expensive of the five for both customer classes. Businesses in
 
 It is worth being precise about what the 17.5 cents measures. It is an economy-wide business electricity-price benchmark: an average across business customer sizes, not a published tariff and not a verified average bill for data centres. DC254's own [power tariff tracker](/tracker/power) estimates the effective all-in cost of data-centre-scale supply at KES 15-20 per kWh, about 10 to 13 US cents, blending the industrial energy charge with demand charges, fuel levy and other pass-through costs. The two figures are different measures with different methodologies and different customer categories, and they are not contradictory: a hyperscale load contracted at industrial class lands in our range, while the World Bank benchmark describes the average price facing Kenyan businesses of every size. Both point the same direction. Power is a material cost line in Kenya, and the governance findings explain the pressure inside the tariff base. [How Kenya Power's tariffs are structured for data centres](/articles/kenya-power-tariffs-data-centres) explains where the metered number comes from.
 
-![High voltage power transformer bay at an electrical installation](/images/hv-power-transformer-bay.webp)
+![DC254 chart comparing business and household electricity prices in Kenya, Uganda, Morocco, South Africa and Viet Nam](/images/kenya-business-electricity-prices-comparison.webp)
 
 ## The Gap Is Not the Resource
 
@@ -95,6 +99,8 @@ How inconsistent? A 2021 assessment by EED Advisory and the Energy for Growth Hu
 
 The report's Box 6, titled "High-cost IPPs and conflicts of interest", goes further. It records that the integrity of power purchase agreements has been investigated by both the Presidency and the National Assembly, that some public officials involved in approving IPP projects were later employed by or owned the relevant generation companies, and that beneficial ownership of IPP contractors remains largely opaque: when the Business Registration Service gave a parliamentary committee a list of IPP owners and shareholders, the majority were foreign corporations whose ultimate beneficial owners were unknown. The report also cites the Lake Turkana Wind Power case, where delays in constructing the transmission line left the government paying the equivalent of US$150 million under take-or-pay deemed-energy clauses for power that was never used.
 
+![High voltage transformer and transmission equipment at a substation in Kenya](/images/kenya-hv-transformer-substation.webp)
+
 These are institutional findings about procurement and contract governance, not proof of criminal wrongdoing by particular individuals or companies. But their cost lands on every meter, because the contracts feed Kenya Power's tariff base and pass through to business and industrial customers.
 
 ## Losses: Paying for Power That Never Reaches a Meter
@@ -103,11 +109,11 @@ The second cost layer is the network itself. The World Bank finds that Kenya's t
 
 Losses matter because the cost of generating and purchasing power must be recovered whether or not the electricity reaches a paying customer. Every percentage point above target is spread across the tariffs of customers who do pay. For a large electricity user, the efficiency of the wider network affects the bill as much as the capacity of any individual power plant.
 
+![High voltage transmission towers crossing savanna grassland in Kenya](/images/kenya-transmission-lines-savanna.webp)
+
 ## What This Means for Data Centre Competitiveness
 
 Data centres run continuously, and their electricity draw extends well beyond servers: cooling, electrical infrastructure, lighting and security all ride on the same meter. Power is typically the largest recurring operating cost, and the meter runs harder than the IT load suggests. A 1 megawatt IT load at a power usage effectiveness of 1.6 consumes about 14.0 gigawatt-hours a year. Measured on the benchmark rates, the spread against South Africa's 10.0 cents works out to roughly 1.05 million dollars a year for every megawatt of IT load, before a single rack is sold. That is the arithmetic that either compresses operator margins or surfaces in Nairobi rack prices, and against the effective all-in rates in our [power tariff tracker](/tracker/power) it is the spread investors will model first.
-
-![Diagram of the power chain from grid connection to GPU server racks](/images/diagram-power-chain-grid-to-gpu.webp)
 
 The demand side is growing. The report expects investment growth to stay above 5 percent a year, supported partly by digital infrastructure and technology-related projects, and DC254's [data centre tracker](/tracker) separates live facilities from projects under construction, committed developments and early-stage proposals that would add meaningful load if they proceed. Pipeline is potential demand, not current consumption, and the World Bank's own account of the power sector shows why that distinction matters: excessive demand projections were part of how the sector accumulated expensive capacity in the first place. Developers planning a 20, 50 or 100 megawatt facility need answers on the cost of grid connection, the capacity available at the site, supply reliability, applicable energy and demand charges, backup generation and the contract terms for long-term supply. So do the planners on the other side of the table. [Kenya's pipeline beyond Nairobi](/articles/kenya-data-centre-pipeline-110mw-beyond-nairobi) shows where that load is expected to land.
 
@@ -115,7 +121,7 @@ The demand side is growing. The report expects investment growth to stay above 5
 
 The clearest illustration of the gap between renewable advantage and delivered power is at Olkaria itself. In May 2024, during President William Ruto's state visit to Washington, Microsoft and G42 committed around 1 billion dollars to a geothermal-powered data centre campus in the region of 100 megawatts of IT load, planned for the area of Kenya's largest steam fields. The project never broke ground. By May 2026, Semafor reported President Ruto saying the facility would have required about a third of Kenya's roughly 3,000 megawatts of installed capacity, and that the National Treasury never approved the technology ministry's funding concept note. Our directory records the project as early stage, with no confirmed site.
 
-![Geothermal power plant at Olkaria in Kenya](/images/kenya-geothermal-plant-olkaria.webp)
+![Aerial view of the Olkaria geothermal field with steam rising from wells and cooling facilities](/images/olkaria-geothermal-field-aerial.webp)
 
 The lesson is not that Olkaria is the wrong location. It is that a renewable proposition and a bankable power arrangement are different things. A developer needs confidence in scale, price and reliability; the power provider needs confidence that the demand and revenue used to justify investment will actually materialise. [What stalled the Microsoft and G42 project at Olkaria](/articles/olkaria-geothermal-data-centre-corridor) follows the corridor idea, putting compute near the wells, as the response to exactly the transmission and contracting costs the World Bank describes. The same governance questions the report raises are the ones that decide whether such projects get financed.
 

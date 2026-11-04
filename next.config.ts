@@ -188,6 +188,12 @@ const nextConfig: NextConfig = {
         destination: "/articles/kenya-data-centre-licensing-framework",
         permanent: true,
       },
+      // Recovery redirect: the World Bank power-cost article shipped for one
+      // day under the ...-world-bank slug before the editor rename to
+      // kenya-data-centre-power-costs-world-bank (title + image refresh,
+      // 5 Nov 2026). 308 heals the feed, sitemap and social links that
+      // picked up the original URL overnight.
+      { source: "/articles/kenya-power-costs-data-centres-world-bank", destination: "/articles/kenya-data-centre-power-costs-world-bank", permanent: true },
       // Recovery redirects for the submarine-cables explainer. Bing indexed
       // /articles/submarine-cables-kenya-explained (404, crawled 14 Sep 2026)
       // and production logs show visitors guessing more variants of the
