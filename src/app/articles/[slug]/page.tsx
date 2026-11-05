@@ -20,6 +20,14 @@ export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
 
+// Security audit 2026-11-05 (lead articles-slug-fs-path-join-traversal):
+// getArticleBySlug joins the slug into an fs path. Sibling dynamic routes
+// (directory/[facility], pillars/[pillar]) set dynamicParams = false so only
+// generated slugs ever render; this route was the one exception, leaving the
+// fs read reachable with arbitrary runtime input. Unknown slugs now 404
+// before the page runs.
+export const dynamicParams = false;
+
 // ─── Metadata ────────────────────────────────────────────────────────────
 
 interface PageProps {

@@ -356,19 +356,56 @@ export async function saveExportInterest(
     const script = `
       if redis.call('exists', KEYS[1]) == 1 then return 0 end
       redis.call('set', KEYS[1], ARGV[1])
+      redis.call('expire', KEYS[1], ARGV[2])
       redis.call('incr', KEYS[2])
       return 1
     `;
     const result = (await upstashEval(
       script,
       [`nl:exp:${hash}`, "nl:count:export"],
-      [JSON.stringify({ email, kind, at: new Date().toISOString() })]
+      [
+        JSON.stringify({ email, kind, at: new Date().toISOString() }),
+        // Security audit 2026-11-05 (finding newsletter-store:nl:exp:no-ttl-no-erasure):
+        // the record used to persist forever with no erasure path. Bounded
+        // retention now, matching the sibling stores' lifecycle pattern.
+        String(EXPORT_INTEREST_TTL_SECONDS),
+      ]
     )) as number;
     return result === 1;
   }
   if (memExport.has(hash)) return false;
   memExport.add(hash);
   memIncr("nl:count:export");
+  return true;
+}
+
+/** Retention bound for export-interest records (180 days, disclosed in /privacy). */
+export const EXPORT_INTEREST_TTL_SECONDS = 180 * 24 * 60 * 60;
+
+/**
+ * Erasure path for export-interest records (security audit 2026-11-05).
+ * Idempotent: returns true only when a live record was removed, and keeps the
+ * aggregate counter consistent either way. Mirrors scrubSubscriber semantics.
+ */
+export async function deleteExportInterest(email: string): Promise<boolean> {
+  const hash = await emailHash(email);
+  if (storageBackend() === "upstash") {
+    const script = `
+      if redis.call('exists', KEYS[1]) == 0 then return 0 end
+      redis.call('del', KEYS[1])
+      redis.call('decr', KEYS[2])
+      return 1
+    `;
+    const result = (await upstashEval(
+      script,
+      [`nl:exp:${hash}`, "nl:count:export"],
+      []
+    )) as number;
+    return result === 1;
+  }
+  if (!memExport.has(hash)) return false;
+  memExport.delete(hash);
+  memDecr("nl:count:export");
   return true;
 }
 

@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { timingSafeEqual } from 'node:crypto';
 import { persistentLimitingActive, probeRedis } from '@/lib/rate-limit';
 
 /**
@@ -22,7 +23,35 @@ import { persistentLimitingActive, probeRedis } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
+// Security audit 2026-11-05 (finding api/health:anonymous-config-state-disclosure):
+// the detailed diagnostics below are operator-only per the docblock above, so
+// they are now gated behind HEALTH_TOKEN exactly like /api/chat/health —
+// constant-time compare, fail-closed when the env var is unset, Authorization
+// header only (never a query parameter: query strings land in access logs).
+// Anonymous callers still get a liveness verdict so uptime checks keep working.
+function tokenMatches(presented: string | null): boolean {
+  const expected = process.env.HEALTH_TOKEN;
+  if (!expected || !presented) return false;
+  const a = Buffer.from(presented);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+function isAuthorized(request: NextRequest): boolean {
+  const auth = request.headers.get('authorization');
+  const bearer = auth?.startsWith('Bearer ') ? auth.slice(7).trim() : null;
+  return tokenMatches(bearer);
+}
+
+export async function GET(request: NextRequest) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json(
+      { ok: true, service: 'dc254' },
+      { headers: { 'Cache-Control': 'no-store' } }
+    );
+  }
+
   const resendKey = Boolean(process.env.RESEND_API_KEY);
   const fromEmail = Boolean(process.env.RESEND_FROM_EMAIL);
   const rawSecret = process.env.SUBSCRIBE_SECRET;

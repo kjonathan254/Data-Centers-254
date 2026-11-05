@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { clientIp, rateLimit } from "@/lib/rate-limit";
 
 // Sentry envelope tunnel (manual-setup pattern from Sentry's Next.js docs).
 // The browser SDK POSTs envelopes to this same-origin path; the route forwards
@@ -16,11 +17,31 @@ import { NextRequest, NextResponse } from "next/server";
 // host — never attacker-chosen.
 
 const MAX_ENVELOPE_BYTES = 1_000_000;
+const RATE_LIMIT = 20;
+const WINDOW_MS = 60_000;
 
 export async function POST(request: NextRequest) {
   const dsn = process.env.NEXT_PUBLIC_SENTRY_DSN;
   if (!dsn) {
     return NextResponse.json({ error: "Sentry DSN not configured" }, { status: 500 });
+  }
+
+  // Security audit 2026-11-05 (finding monitoring:tunnel:unthrottled-vendor-relay):
+  // this route lives outside the /api/* proxy matcher, so the global per-IP
+  // limiter never applies. It converts anonymous requests into metered Sentry
+  // ingest, so it carries its own bucket like every sibling spend endpoint.
+  const limited = await rateLimit("sentry-tunnel", clientIp(request), RATE_LIMIT, WINDOW_MS);
+  if (limited.limited) {
+    return new NextResponse(null, {
+      status: 429,
+      headers: { "Retry-After": String(Math.ceil(WINDOW_MS / 1000)) },
+    });
+  }
+
+  // Reject oversized bodies before buffering them.
+  const declaredLength = Number(request.headers.get("content-length") ?? "0");
+  if (declaredLength > MAX_ENVELOPE_BYTES) {
+    return NextResponse.json({ error: "Envelope too large" }, { status: 413 });
   }
 
   const contentType = request.headers.get("content-type") ?? "";

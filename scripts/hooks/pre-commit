@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Pre-commit guard — security audit 2026-11-05, finding
+# dc254.git-history.workspace-snapshot-679f4b3.
+#
+# Commit 679f4b3 (2026-08-19) swept ~1074 internal workspace files (skills/
+# AI-skill tree, db/custom.db, .zscripts/, internal strategy docs) into the
+# public repo. They were removed from HEAD in d72190a but remain retrievable
+# from history. Verified: no secrets, no PII — but this guard ensures the
+# internal workspace can never enter the public repo again.
+#
+# Install (one-time, per clone):
+#   git config core.hooksPath scripts/hooks
+#
+# To bypass deliberately (never for the paths below): git commit --no-verify
+
+set -u
+
+BLOCKED='^(skills/|db/|\.zscripts/|OUTREACH_TEMPLATES\.md|DAY_3_4_FACILITY_RESEARCH\.md)'
+
+STAGED="$(git diff --cached --name-only)"
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+if echo "$STAGED" | grep -Eq "$BLOCKED"; then
+  echo "" >&2
+  echo "ERROR: internal workspace paths staged for commit:" >&2
+  echo "$STAGED" | grep -E "$BLOCKED" | sed 's/^/  - /' >&2
+  echo "" >&2
+  echo "These paths belong to the operator workspace, not the public repo" >&2
+  echo "(see audit finding dc254.git-history.workspace-snapshot-679f4b3)." >&2
+  echo "Unstage them:  git restore --staged <path>" >&2
+  exit 1
+fi
+
+# Defense-in-depth: refuse secret-shaped file names even outside blocked dirs.
+if echo "$STAGED" | grep -Eq '(^|/)\.env($|\.)|\.pem$|\.key$|credentials'; then
+  echo "" >&2
+  echo "WARNING: secret-shaped file staged:" >&2
+  echo "$STAGED" | grep -E '(^|/)\.env($|\.)|\.pem$|\.key$|credentials' | sed 's/^/  - /' >&2
+  echo "If this is intentional (e.g. .env.example), commit with --no-verify." >&2
+  exit 1
+fi
+
+exit 0

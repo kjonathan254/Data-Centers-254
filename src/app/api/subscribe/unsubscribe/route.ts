@@ -36,10 +36,15 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const scrubbed = await scrubSubscriber(parsed.email);
-    if (scrubbed) {
-      await removeContactFromAudience(parsed.email);
-    }
+    await scrubSubscriber(parsed.email);
+    // Security audit 2026-11-05 (finding N1/resend-erasure-paths-skip-
+    // audience-contact-removal, condition b): vendor removal must not be
+    // gated on the LOCAL record existing - after an Upstash flush, the 60-day
+    // unverified TTL, or a prior scrub, the Resend contact can still exist
+    // while scrubSubscriber returns false. removeContactFromAudience is
+    // documented idempotent (missing contact just logs), so call it
+    // unconditionally.
+    await removeContactFromAudience(parsed.email);
   } catch (err) {
     console.error(
       '[unsubscribe] failed:',

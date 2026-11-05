@@ -22,7 +22,12 @@
 # + push. This keeps respawn exposure to a single work chunk.
 #
 # USAGE:
-#   DC254_PUSH_TOKEN=<token> bash scripts/auto_checkpoint.sh --once
+#   bash scripts/auto_checkpoint.sh --once
+#   (paste the token when prompted, or export DC254_PUSH_TOKEN from a
+#   0600 file you source yourself - do NOT put it on the command line:
+#   an env-prefixed invocation is recorded verbatim in shell history,
+#   and the push URL form leaks it via the process table. Security
+#   audit 2026-11-05, finding scripts:auto_checkpoint.sh:token-in-push-url.)
 #   (daemon mode below still works where long-lived shells exist)
 #
 # Logs: /home/z/my-project/checkpoint.log
@@ -78,7 +83,12 @@ while :; do
   UNPUSHED="$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)"
   if [ "$UNPUSHED" -gt 0 ]; then
     if [ -n "${DC254_PUSH_TOKEN:-}" ]; then
-      if git push "https://${DC254_PUSH_TOKEN}@github.com/kjonathan254/Data-Centers-254.git" main --quiet 2>>"$LOG"; then
+      # Security audit 2026-11-05: deliver the credential env-only via a
+      # one-shot credential helper so the token never appears in argv (ps /
+      # /proc/<pid>/cmdline) or in any log. git redacts credentials it
+      # receives from the helper in its own error output.
+      if git -c credential.helper='!f(){ echo "password=$DC254_PUSH_TOKEN"; };f' \
+         push "https://x-access-token@github.com/kjonathan254/Data-Centers-254.git" main --quiet 2>>"$LOG"; then
         log "pushed $UNPUSHED commit(s) to origin/main"
       else
         log "WARN: push failed ($UNPUSHED commit(s) unpushed; token invalid/expired or network issue)"

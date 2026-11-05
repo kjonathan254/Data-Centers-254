@@ -196,7 +196,7 @@ describe("export-interest Upstash path (atomic EVAL contract)", () => {
     vi.unstubAllGlobals();
   });
 
-  it("sends exists + set + incr as ONE atomic EVAL command", async () => {
+  it("sends exists + set + expire + incr as ONE atomic EVAL command", async () => {
     const calls: { url: string; body: string }[] = [];
     vi.stubGlobal(
       "fetch",
@@ -221,8 +221,34 @@ describe("export-interest Upstash path (atomic EVAL contract)", () => {
     expect(script).toContain("exists");
     expect(script).toContain("redis.call('set'");
     expect(script).toContain("redis.call('incr'");
+    // Security audit 2026-11-05 (newsletter-store:nl:exp:no-ttl-no-erasure):
+    // the record must be written with a bounded retention, in the same
+    // atomic script - a record without EXPIRE is a PII retention violation.
+    expect(script).toContain("redis.call('expire'");
+    expect(Number(cmd[6])).toBe(store.EXPORT_INTEREST_TTL_SECONDS);
+    expect(store.EXPORT_INTEREST_TTL_SECONDS).toBe(180 * 24 * 60 * 60);
     // the record payload travels inside the script's ARGV, not a second call
     expect(cmd[5]).toContain("buyer@example.com");
+  });
+
+  it("erases an export-interest record atomically (audit erasure-path requirement)", async () => {
+    const calls: { url: string; body: string }[] = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string | URL, init?: RequestInit) => {
+        calls.push({ url: String(url), body: String(init?.body) });
+        return new Response(JSON.stringify({ result: 1 }), { status: 200 });
+      })
+    );
+    const store = await import("@/lib/newsletter-store");
+    const erased = await store.deleteExportInterest("gone@example.com");
+    expect(erased).toBe(true);
+    const cmd = JSON.parse(calls[0].body) as string[];
+    expect(cmd[0]).toBe("EVAL");
+    expect(cmd[1]).toContain("redis.call('del'");
+    expect(cmd[1]).toContain("redis.call('decr'");
+    // counter stays consistent: DEL + DECR happen only when the record exists
+    expect(cmd[1].indexOf("exists")).toBeGreaterThan(-1);
   });
 
   it("maps the script's 0 (already exists) to created=false", async () => {

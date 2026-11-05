@@ -144,6 +144,11 @@ export function getArticleHeroImage(
 // ─── Core: read a single article ─────────────────────────────────────────────
 
 export function getArticleBySlug(slug: string): Article | null {
+  // Security audit 2026-11-05 (lead articles-slug-fs-path-join-traversal):
+  // defense-in-depth behind dynamicParams = false — article slugs are always
+  // lowercase-dataset ids, so refuse anything that could reshape the joined
+  // path (dot-dot, separators, encoded tricks) before it reaches the fs.
+  if (!/^[a-z0-9-]+$/.test(slug)) return null;
   const filePath = path.join(ARTICLES_DIR, `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
 

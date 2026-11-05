@@ -13,6 +13,13 @@ on:
   # Manual trigger from the Actions tab (e.g. before a release or report).
   workflow_dispatch:
 
+# Security audit 2026-11-05 (lead github-workflows:ci.yml:default-github-token-scope):
+# this was the only workflow without an explicit permissions block, so job
+# tokens inherited the repo-wide default scope. CI needs no API access -
+# least privilege, matching the other six workflows.
+permissions:
+  contents: read
+
 jobs:
   content:
     name: Content validation

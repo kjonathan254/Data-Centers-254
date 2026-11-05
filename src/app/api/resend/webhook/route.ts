@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createHmac, timingSafeEqual } from 'crypto';
 import { rateLimit, clientIp } from '@/lib/rate-limit';
 import { scrubSubscriber } from '@/lib/newsletter-store';
+import { removeContactFromAudience } from '@/lib/resend-audience';
 
 /**
  * Resend webhook receiver: keeps the local store honest when mail bounces
@@ -112,11 +113,17 @@ export async function POST(req: NextRequest) {
     if (email) {
       try {
         await scrubSubscriber(email);
+        // Security audit 2026-11-05 (finding N1/resend-erasure-paths-skip-
+        // audience-contact-removal, condition a): erasure must also reach the
+        // Resend audience per resend-audience.ts's own contract. Removal is
+        // documented idempotent; a missing contact just logs. Failures are
+        // non-fatal (ack 200 so Resend does not retry-storm) but logged.
+        await removeContactFromAudience(email);
       } catch (err) {
         // Acknowledge anyway so Resend does not retry-storm; the record
         // stays until the next event arrives (scrub is idempotent).
         console.error(
-          '[resend-webhook] scrub failed:',
+          '[resend-webhook] erasure failed:',
           err instanceof Error ? err.message : err
         );
       }

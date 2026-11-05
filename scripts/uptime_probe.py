@@ -8,17 +8,24 @@ fails the scheduled run, which sends the repository owner a GitHub
 notification - the alerting channel that needs no extra accounts.
 
 Invariants checked (single source of truth: the /api/health contract):
-  ok == true                        the site answers
+  ok == true                        the site answers (anonymous verdict, always)
+With HEALTH_TOKEN configured on the runner (full diagnostics), also:
   rateLimiting == "persistent"      Redis env still wired in production;
                                     a silent flip to "memory" alerts
   emailStack.subscribeSecret true   newsletter double opt-in still signed
   redis.reachable is not False      the limiter's live PING still reaches
                                     Upstash (P0-6 degradation visibility)
 
-Two attempts, 15 s apart, so a transient network blip does not page anyone.
+Since the 2026-11-05 security audit, /api/health returns full diagnostics only
+to callers presenting HEALTH_TOKEN (Authorization: Bearer). Set HEALTH_TOKEN as
+a GitHub Actions secret AND a Vercel environment variable to keep the full
+invariant checks; without it this probe verifies liveness only and prints a
+notice. Two attempts, 15 s apart, so a transient network blip does not page
+anyone.
 """
 
 import json
+import os
 import sys
 import time
 import urllib.request
@@ -31,7 +38,11 @@ TIMEOUT_S = 20
 
 def fetch_health() -> dict:
     url = f"{HEALTH_URL}?cb={int(time.time() * 1000)}"
-    req = urllib.request.Request(url, headers={"User-Agent": "dc254-uptime/1.0"})
+    headers = {"User-Agent": "dc254-uptime/1.0"}
+    token = os.environ.get("HEALTH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=TIMEOUT_S) as res:
         if res.status != 200:
             raise RuntimeError(f"HTTP {res.status}")
@@ -42,6 +53,11 @@ def check(d: dict) -> list[str]:
     problems: list[str] = []
     if d.get("ok") is not True:
         problems.append("health ok != true")
+    if not os.environ.get("HEALTH_TOKEN"):
+        # Anonymous mode: full diagnostics are gated server-side (security
+        # audit 2026-11-05). Liveness only; add HEALTH_TOKEN to the workflow
+        # secrets to restore the full invariant checks.
+        return problems
     if d.get("rateLimiting") != "persistent":
         problems.append(f"rateLimiting degraded: {d.get('rateLimiting')!r}")
     email_stack = d.get("emailStack") or {}
@@ -67,7 +83,10 @@ def main() -> int:
 
         problems = check(data)
         if not problems:
-            print(f"uptime check passed | rateLimiting={data.get('rateLimiting')} | redis={data.get('redis')}")
+            if not os.environ.get("HEALTH_TOKEN"):
+                print("uptime check passed (liveness only - HEALTH_TOKEN not set on runner)")
+            else:
+                print(f"uptime check passed | rateLimiting={data.get('rateLimiting')} | redis={data.get('redis')}")
             return 0
         last_error = "; ".join(problems)
         print(f"attempt {attempt}: HEALTH CHECK FAILED: {last_error}", file=sys.stderr)
