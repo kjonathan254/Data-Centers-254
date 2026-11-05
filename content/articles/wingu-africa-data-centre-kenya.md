@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-08-29"
-updated_date: "2026-08-29"
+updated_date: "2026-11-06"
 category: "Operators"
 cluster: "Kenya"
 og_image: "/images/dc-gpu-cluster-3-wide.webp"
@@ -42,9 +42,13 @@ external_sources:
     url: "https://wingu.africa"
   - title: "Wingu Group"
     url: "https://wingu.co.ke"
+  - title: "EIN Presswire, Wingu Africa achieves Uptime Institute Tier III Certification of Design Documents for Tanzania Phase 2 data centre (4 November 2026)"
+    url: "https://www.einpresswire.com/article/954177083/wingu-africa-achieves-uptime-institute-tier-iii-certification-of-design-documents-for-tanzania-phase-2-data-centre"
 faq:
   - question: "What is Wingu Africa?"
     answer: "Wingu Africa is a Kenyan-born data centre company operating a carrier-neutral edge facility in Nairobi. It focuses on cloud-on-ramp services, content delivery, and enterprise colocation rather than hyperscale capacity."
+  - question: "Does Wingu operate only in Kenya?"
+    answer: "No. Wingu is executing a multi-market East African buildout. In November 2026 the company announced that its Phase 2 data centre expansion in Dar es Salaam, Tanzania achieved Uptime Institute Tier III Certification of Design Documents, with a stated peak IT load of 507 kilowatts across the Phase 2 data hall and designated meet-me rooms. The facility remains under construction."
   - question: "How does Wingu differ from iXAfrica and Africa Data Centres?"
     answer: "Wingu is smaller and focused on edge computing and cloud interconnection rather than hyperscale capacity. While iXAfrica targets 16+ MW and ADC has continental scale, Wingu serves the mid-market need for localised, flexible infrastructure with lower power density requirements."
 canonical_url: "https://data-centers-254.vercel.app/articles/wingu-africa-data-centre-kenya"
@@ -162,6 +166,14 @@ Wingu Africa's growth trajectory will follow the demand it serves. As Kenya's di
 
 Wingu's natural expansion path would involve increasing capacity at its existing Nairobi facility and potentially establishing additional edge nodes in other locations within Kenya or the wider East African region. The edge computing model is inherently distributed, meaning growth for Wingu is more likely to take the form of additional, smaller facilities in strategic locations rather than a single massive campus expansion.
 
+## Update: Tier III Certification and the Tanzania Build (November 2026)
+
+In November 2026, Wingu announced that its Phase 2 data centre expansion in Dar es Salaam, Tanzania has achieved Uptime Institute Tier III Certification of Design Documents, covering a Phase 2 data hall and designated meet-me rooms with a stated peak IT load of 507 kilowatts. The facility is under construction, and no completion date has been announced. The announcement is worth two readings for the market this article covers.
+
+First, Wingu is not a Nairobi-only story. The group is executing a genuine East African buildout, which is what a regional edge operator actually looks like: same philosophy, smaller footprints, multiple markets, cloud and content workloads rather than hyperscale campuses.
+
+Second, the numbers illustrate edge economics with unusual clarity. A 507 kilowatt peak IT load is a rounding error next to iXAfrica's 16 megawatt NBOX1 target or the 20 megawatt class facilities rising in Lagos, and that is the point rather than a weakness. Certification of design documents is becoming competitive currency in East African colocation because it lets a mid-market operator signal enterprise-grade reliability, concurrently maintainable power and cooling, without pretending to be a hyperscaler. Buyers should ask the follow-up question, though: certifying drawings and certifying a built, commissioned facility are different Uptime milestones, so the question to put to any Design Documents certificate is when and whether the constructed facility itself gets certified.
+
 ## Role in Kenya's Digital Ecosystem
 
 Wingu Africa occupies a specific and valuable niche in Kenya's data centre landscape. It is not trying to be the largest facility or to attract the biggest hyperscale deployments. Instead, it serves as the accessible, flexible, locally-owned infrastructure option for the broad middle of the Kenyan digital market.
@@ -170,4 +182,4 @@ This role matters. It provides infrastructure access to SMEs and mid-market ente
 
 The presence of operators like Wingu, alongside iXAfrica and Africa Data Centres, signals the maturation of Kenya's data centre market. A healthy ecosystem requires providers at different scales, serving different customer segments, with different ownership structures and strategic orientations. Wingu Africa's edge-focused, carrier-neutral, locally-rooted approach is a necessary and complementary part of that ecosystem.
 
-For a full list of data centre operators and facilities in Kenya, visit our [data centre directory](/directory). To learn more about the demand driving edge infrastructure, see our article on [edge computing in East Africa](/articles/edge-computing-east-africa). If you are new to colocation, our guide to [colocation in Kenya](/articles/what-is-colocation-kenya) covers the fundamentals.
+For a full list of data centre operators and facilities in Kenya, including Wingu's regional peers, visit our [data centre directory](/directory). To learn more about the demand driving edge infrastructure, see our article on [edge computing in East Africa](/articles/edge-computing-east-africa). If you are new to colocation, our guide to [colocation in Kenya](/articles/what-is-colocation-kenya) covers the fundamentals.

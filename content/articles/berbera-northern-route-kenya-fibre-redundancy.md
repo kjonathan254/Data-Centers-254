@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
-updated_date: "2026-09-16"
+updated_date: "2026-11-06"
 category: "Connectivity"
 cluster: "Internet"
 og_image: "/images/mombasa-cable-landing-3.webp"
@@ -40,6 +40,8 @@ external_sources:
     url: "https://www.businessdailyafrica.com/bd/corporate/technology/somaliland-fibre-route-tests-kenya-s-regional-digital-edge-5596496"
   - title: "The Star, Kenya's digital future takes shape as data giants converge in Nairobi (14 September 2026)"
     url: "https://www.the-star.co.ke/news/2026-09-14-kenyas-digital-future-takes-shape-as-data-giants-converge-in-nairobi"
+  - title: "tech.africa, Bayobab East to West Connectivity Project: fibre laid (4 November 2026)"
+    url: "https://tech.africa/bayobab-east-west-fibre-south-sudan/"
 faq:
   - question: "How many submarine cables land in Kenya?"
     answer: "Seven major submarine cable systems are live in Kenya as of September 2026: SEACOM, TEAMS, EASSy, LION2, DARE1, PEACE and 2Africa, per the DC254 verified register. Africa-1 landed at Mombasa in 2024 and awaits full service, and Daraja (Salalah to Mombasa, hosted by Safaricom) was announced in October 2025 and is in development. Mombasa is the most connected coastal city in East and Central Africa."
@@ -73,6 +75,12 @@ That caveat has bitten. The Star's ITW coverage (14 September 2026) noted that K
 Berbera's geography is the story. The port city sits on the Gulf of Aden, directly opposite the Arabian peninsula, and the two systems Somcable lands there (2Africa and PEACE) approach the Horn from route corridors that differ from the ones carrying most Mombasa-bound traffic. On top of the landings, Somcable is building the terrestrial leg: fibre from Berbera inland through Hargeisa into Ethiopia, with the company describing extensions toward South Sudan, and lease negotiations with Ethio Telecom that would turn that backbone into sellable international capacity.
 
 Kenya is not a stranger to northern alternatives. DARE1, live since 2015, already runs a direct express route from Mombasa to Djibouti, giving Kenyan operators a second coastal exit toward the north. What Berbera adds is a different kind of option: a gateway outside Kenya's borders that can carry landlocked traffic (Ethiopia, South Sudan) without touching Mombasa at all, and that strengthens the overall mesh the region's networks can fail over onto. For Principal Secretary for Broadcasting and Telecommunications Stephen Isaboke, who opened the ITW gathering, the framing was confident rather than defensive: Kenya's strategic location, regulatory environment and skilled workforce keep it positioned as the regional gateway for connectivity, data centres and cloud services. A stronger northern neighbour is consistent with that pitch, Kenya's hub status has always been about aggregation, and aggregation is easier when the surrounding mesh is dense.
+
+## Update: Bayobab's East to West Corridor Completes Its Kenya and South Sudan Segments (November 2026)
+
+The route-diversity thesis gained a second data point in November 2026, from a different builder. Bayobab, MTN Group's fibre company, announced it has completed the Kenya and South Sudan segments of its East to West connectivity corridor, with 2,038 kilometres of fibre installed and civil works and fibre deployment finished. The project is now in a final optimisation and readiness phase ahead of service activation, with no activation date announced. Bayobab operates more than 153,000 kilometres of fibre across over 50 African countries and is developing the corridor alongside Africa Data Hub Holding Limited, an investment venture with UAE backing.
+
+This is not the Somcable gateway. It is a terrestrial corridor anchored on the Kenyan coast's cable landings and reaching into South Sudan, a market Bayobab describes as underserved, rather than a Berbera-anchored path north into the Gulf of Aden. The two projects are complementary rather than competing: Somcable's pitch is a physically diverse international gateway at Berbera, while Bayobab's is inland reach for landlocked traffic on the western side of the region. For the redundancy argument this article makes, the direction of travel is what matters. Landlocked East African markets are acquiring exactly the physically diverse paths they have lacked, and Kenya anchors the eastern end of both. That deepens, rather than dilutes, Nairobi's aggregation role, and it gives Kenyan carriers and data centre buyers one more diverse corridor to fold into failover planning once service activation is announced.
 
 ## What It Means for Kenyan Buyers
 

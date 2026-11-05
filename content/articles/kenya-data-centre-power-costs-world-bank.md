@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-11-04"
-updated_date: "2026-11-05"
+updated_date: "2026-11-06"
 category: "Power & Energy"
 cluster: "Energy"
 og_image: "/images/kenya-data-centre-substation-aerial.webp"
@@ -52,6 +52,8 @@ external_sources:
     url: "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099110226121518967"
   - title: "Global Petrol Prices, electricity prices (underlying data for the World Bank's Table 5 comparison)"
     url: "https://www.globalpetrolprices.com/electricity_prices/"
+  - title: "Forbes Africa, Africa's Data Centers: Plugged Into Progress (4 November 2026)"
+    url: "https://www.forbesafrica.com/focus/2026/11/04/africas-data-centers-plugged-into-progress"
 faq:
   - question: "How much do businesses in Kenya pay for electricity?"
     answer: "The World Bank's Kenya Economic Update published in November 2026 puts the business electricity price at about 17.5 US cents per kWh, compared with 7.8 in Viet Nam, 10.9 in Morocco, 10.0 in South Africa and 11.8 in Uganda. Households pay about 22.0 US cents per kWh. The figures come from Table 5 of the report, using Global Petrol Prices data."
@@ -114,6 +116,8 @@ Losses matter because the cost of generating and purchasing power must be recove
 ## What This Means for Data Centre Competitiveness
 
 Data centres run continuously, and their electricity draw extends well beyond servers: cooling, electrical infrastructure, lighting and security all ride on the same meter. Power is typically the largest recurring operating cost, and the meter runs harder than the IT load suggests. A 1 megawatt IT load at a power usage effectiveness of 1.6 consumes about 14.0 gigawatt-hours a year. Measured on the benchmark rates, the spread against South Africa's 10.0 cents works out to roughly 1.05 million dollars a year for every megawatt of IT load, before a single rack is sold. That is the arithmetic that either compresses operator margins or surfaces in Nairobi rack prices, and against the effective all-in rates in our [power tariff tracker](/tracker/power) it is the spread investors will model first.
+
+Capital is pricing the same constraint from the industry side. Forbes Africa's November 2026 market review, drawing on Africa Data Centres Association figures, puts the continent's live capacity at roughly 360 megawatts, with 238 megawatts under construction and 656 megawatts planned, about 0.6 percent of global capacity for a continent holding a fifth of the world's population. Its central observation matches this article's diagnosis: power availability, not connectivity, has become the principal constraint on African data centre expansion, and the capital that is moving, from OADC's 240 million dollar Lagos expansion toward 24 megawatts by 2027 to MTN's 240 million dollar Dabengwa facility and Kasi Cloud's 250 million dollar campus, is moving toward markets that can secure firm, affordable power. That is exactly the axis the World Bank's governance findings sit on. Kenya competes with Nigeria, Morocco and South Africa for the same digital infrastructure investment, and Table 5 shows businesses in Morocco and South Africa paying roughly 38 to 43 percent less per unit than Kenyan businesses do. Delivered power cost is now a siting decision, not a footnote.
 
 The demand side is growing. The report expects investment growth to stay above 5 percent a year, supported partly by digital infrastructure and technology-related projects, and DC254's [data centre tracker](/tracker) separates live facilities from projects under construction, committed developments and early-stage proposals that would add meaningful load if they proceed. Pipeline is potential demand, not current consumption, and the World Bank's own account of the power sector shows why that distinction matters: excessive demand projections were part of how the sector accumulated expensive capacity in the first place. Developers planning a 20, 50 or 100 megawatt facility need answers on the cost of grid connection, the capacity available at the site, supply reliability, applicable energy and demand charges, backup generation and the contract terms for long-term supply. So do the planners on the other side of the table. [Kenya's pipeline beyond Nairobi](/articles/kenya-data-centre-pipeline-110mw-beyond-nairobi) shows where that load is expected to land.
 
