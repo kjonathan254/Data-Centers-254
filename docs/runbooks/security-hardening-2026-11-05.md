@@ -46,6 +46,16 @@ findings.json, coverage-ledger.json). 13 findings: 5 confirmed, 8 needs-validati
 7. **Residual leads** (full plans in NEEDS-VALIDATION.md): Upstash probe caching on
    /api/health, /ingest matcher extension, consent SDK-level stop, CI repo default
    permissions check, action SHA pinning (priority: repo-watch GH_PAT first).
+8. **Restore global rate-limit enforcement** (found in post-deploy verification, 2026-11-05):
+   production is running the fail-open memory fallback. Evidence: 30 concurrent POSTs to
+   /monitoring (limit 20/min) and 70 concurrent /api/search GETs (limit 60/min) produced zero
+   429s; a follow-up request reported `x-ratelimit-remaining: 40` — its instance had counted
+   only ~20 of the 71 requests. Check Vercel runtime logs for
+   `[rate-limit] MEMORY MODE active (…)` for the exact reason, then verify
+   `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` in Vercel → **Production** scope
+   (prime suspect: the token rotation was not mirrored into the Vercel env — see
+   `docs/runbooks/upstash-token-rotation.md`). After redeploy, re-run the 70-request burst:
+   expect 429s from #61 and `x-ratelimit-remaining: 0`.
 
 ## Verification
 
