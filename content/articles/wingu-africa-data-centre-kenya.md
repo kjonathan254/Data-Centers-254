@@ -42,8 +42,8 @@ external_sources:
     url: "https://wingu.africa"
   - title: "Wingu Group"
     url: "https://wingu.co.ke"
-  - title: "EIN Presswire, Wingu Africa achieves Uptime Institute Tier III Certification of Design Documents for Tanzania Phase 2 data centre (4 November 2026)"
-    url: "https://www.einpresswire.com/article/954177083/wingu-africa-achieves-uptime-institute-tier-iii-certification-of-design-documents-for-tanzania-phase-2-data-centre"
+  - title: "Wingu Africa, Wingu Africa achieves Uptime Institute Tier III Certification of Design Documents for Tanzania Phase 2 data centre (3 November 2026; peak IT load 507 kW)"
+    url: "https://wingu.africa/latest-news/wingu-africa-achieves-uptime-institute-tier-iii-certification-of-design-documents-for-tanzania-phase-2-data-centre"
 faq:
   - question: "What is Wingu Africa?"
     answer: "Wingu Africa is a Kenyan-born data centre company operating a carrier-neutral edge facility in Nairobi. It focuses on cloud-on-ramp services, content delivery, and enterprise colocation rather than hyperscale capacity."

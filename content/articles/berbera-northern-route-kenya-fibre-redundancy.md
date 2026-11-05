@@ -40,7 +40,7 @@ external_sources:
     url: "https://www.businessdailyafrica.com/bd/corporate/technology/somaliland-fibre-route-tests-kenya-s-regional-digital-edge-5596496"
   - title: "The Star, Kenya's digital future takes shape as data giants converge in Nairobi (14 September 2026)"
     url: "https://www.the-star.co.ke/news/2026-09-14-kenyas-digital-future-takes-shape-as-data-giants-converge-in-nairobi"
-  - title: "tech.africa, Bayobab East to West Connectivity Project: fibre laid (4 November 2026)"
+  - title: "tech.africa, Bayobab East to West Connectivity Project: fibre laid (3 November 2026)"
     url: "https://tech.africa/bayobab-east-west-fibre-south-sudan/"
 faq:
   - question: "How many submarine cables land in Kenya?"
@@ -88,4 +88,4 @@ For enterprises that depend on international bandwidth, the practical lessons ar
 
 For data centre siting, the calculus barely moves but the options sharpen. Nairobi remains where the customers, exchanges and skills are, and Mombasa's landing stations (with facilities like [iColo MBA2](/directory/icolo-mba2) minutes from the beach manholes) remain the natural home for latency-critical international transit. What Berbera adds is insurance: a second gateway that lowers the odds of a regional outage isolating Kenyan infrastructure, and a future negotiating lever on international capacity prices. Watch two things through 2027: whether the Ethio Telecom lease agreements convert into lit capacity, and whether Daraja lands on schedule. Both would measurably deepen the region's route diversity, which is the metric that actually matters.
 
-Sources: Business Daily (15 September 2026, Somcable landings, terrestrial build, Ethio Telecom talks, executive quotes); The Star (14 September 2026, ITW and Datacloud Africa 2026, Red Sea disruption impact, PS Isaboke remarks). Cable register (seven live systems, Africa-1 landed pending service, Daraja in development, DARE1 route detail, Daraja announcement October 2025) from the DC254 verified map register, corrected 16 September 2026 after verification showed EIG never landed in Kenya. Facts verified 16 September 2026.
+Sources: Business Daily (15 September 2026, Somcable landings, terrestrial build, Ethio Telecom talks, executive quotes); The Star (14 September 2026, ITW and Datacloud Africa 2026, Red Sea disruption impact, PS Isaboke remarks). Cable register (seven live systems, Africa-1 landed pending service, Daraja in development, DARE1 route detail, Daraja announcement October 2025) from the DC254 verified map register, corrected 16 September 2026 after verification showed EIG never landed in Kenya. Bayobab update verified 6 November 2026 from tech.africa, 3 November 2026 (2,038 km installed, civil works 100 percent, pre-activation stage, 153,000 km network across 50-plus countries, Africa Data Hub Holding Limited venture with UAE backing). Facts verified 16 September 2026; Bayobab update verified 6 November 2026.

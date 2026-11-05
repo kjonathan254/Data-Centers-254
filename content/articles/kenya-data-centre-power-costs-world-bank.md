@@ -53,7 +53,7 @@ external_sources:
   - title: "Global Petrol Prices, electricity prices (underlying data for the World Bank's Table 5 comparison)"
     url: "https://www.globalpetrolprices.com/electricity_prices/"
   - title: "Forbes Africa, Africa's Data Centers: Plugged Into Progress (4 November 2026)"
-    url: "https://www.forbesafrica.com/focus/2026/11/04/africas-data-centers-plugged-into-progress"
+    url: "https://www.forbesafrica.com/focus/2026/11/04/africas-data-centers-plugged-into-progress/"
 faq:
   - question: "How much do businesses in Kenya pay for electricity?"
     answer: "The World Bank's Kenya Economic Update published in November 2026 puts the business electricity price at about 17.5 US cents per kWh, compared with 7.8 in Viet Nam, 10.9 in Morocco, 10.0 in South Africa and 11.8 in Uganda. Households pay about 22.0 US cents per kWh. The figures come from Table 5 of the report, using Global Petrol Prices data."

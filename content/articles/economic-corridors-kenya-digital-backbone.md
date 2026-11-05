@@ -12,7 +12,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-10-20"
-updated_date: "2026-10-20"
+updated_date: "2026-11-06"
 category: "Policy"
 cluster: "Policy"
 og_image: "/images/africa-dc-map.webp"
@@ -56,6 +56,8 @@ external_sources:
     url: "https://aid.nepad.org/aid/public/api/country-projects.php?country=Kenya"
   - title: "PIDA - Programme for Infrastructure Development in Africa (African Union / AUDA-NEPAD / AfDB)"
     url: "https://www.nepad.org/programme/programme-infrastructure-development-africa-pida"
+  - title: "tech.africa, Bayobab East to West Connectivity Project: fibre laid in Kenya, South Sudan (3 November 2026)"
+    url: "https://tech.africa/bayobab-east-west-fibre-south-sudan/"
 faq:
   - question: "What is an economic corridor?"
     answer: "An economic corridor is more than a road or railway between two cities. It is an integrated system that connects production centres to markets and layers industrial zones, energy infrastructure, border posts and logistics onto the transport spine, so that moving goods along the route creates processing, jobs and trade rather than just transit. PIDA, the African Union's infrastructure programme, currently identifies 42 such priority corridors across the continent."
@@ -174,6 +176,21 @@ the **$45 million Juba-Nairobi fibre link**, whose Kenyan segment is
 operational, is best understood as corridor plumbing for landlocked demand:
 every kilometre completed turns South Sudanese traffic into Kenyan
 colocation and transit revenue.
+
+That plumbing is no longer hypothetical, and November 2026 delivered the
+proof. Bayobab, MTN Group's fibre company, confirmed that the Kenya and
+South Sudan segments of Northern Route 1 of its East to West Connectivity
+Project are fully built: 2,038 kilometres of optical fibre installed, civil
+works and fibre deployment 100 percent complete, and the route now in a
+final optimisation and readiness phase ahead of service activation, for
+which no date has been announced (tech.africa, 3 November 2026). Bayobab's
+proprietary network spans more than 153,000 kilometres across more than 50
+African countries, and the data centre leg of its infrastructure play runs
+through Africa Data Hub Holding Limited, the venture with a UAE investment
+platform starting in Nigeria and South Africa. Read through the corridor
+lens, it is the landlocked-market pattern this article has been describing,
+arriving on schedule: fibre reaching into South Sudan, with Nairobi as the
+aggregation point the traffic will ride.
 
 ![Nairobi Expressway](/images/nairobi-expressway-wide.webp)
 

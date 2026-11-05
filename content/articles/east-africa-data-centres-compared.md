@@ -13,7 +13,7 @@ secondary_keywords:
 author: "Kevin Jonathan Otieno"
 author_bio_link: "/about"
 published_date: "2026-09-16"
-updated_date: "2026-09-16"
+updated_date: "2026-11-06"
 category: "Market Analysis"
 cluster: "Kenya"
 og_image: "/images/africa-dc-map.webp"
@@ -61,6 +61,8 @@ external_sources:
     url: "https://www.datacenterdynamics.com/"
   - title: "Africa Data Centres Association, Wingu Africa secures $60 million (11 Jun 2025; regional expansion funding)"
     url: "https://africadca.org/"
+  - title: "Wingu Africa, Uptime Institute Tier III Certification of Design Documents for Tanzania Phase 2 data centre (3 November 2026; peak IT load 507 kW)"
+    url: "https://wingu.africa/latest-news/wingu-africa-achieves-uptime-institute-tier-iii-certification-of-design-documents-for-tanzania-phase-2-data-centre"
 faq:
   - question: "Which East African country has the most data centres?"
     answer: "Kenya, by a wide margin. Nairobi hosts the region's densest cluster of carrier-neutral and enterprise facilities, from Africa Data Centres and Raxio to Wingu, ixafrica and carrier campuses, plus Mombasa's coastal capacity at iColo, and Kenya's directory of tracked facilities is the region's largest. Kenya combines cable landings, geothermal power, a big enterprise economy and the region's oldest internet exchange, which is a combination no neighbour can match yet."
@@ -97,7 +99,7 @@ Uganda's constraint is power economics. Hydro generation is cheap when the lakes
 
 ## Tanzania: the big market finally getting carrier-neutral capacity
 
-Dar es Salaam has long been East Africa's second-biggest economy with the least independent data infrastructure, its traffic historically riding through Kenya or South Africa. That is changing on two fronts. Raxio Tanzania, a 6 megawatt facility in Dar es Salaam, is set to launch in 2026 as the country's first carrier-neutral Tier III data centre (Raxio Group), the kind of facility that lets Tanzanian banks and telcos interconnect without leaving the country. Wingu, which already runs a Dar facility as part of its regional network (Datacenters.com), adds competition and choice.
+Dar es Salaam has long been East Africa's second-biggest economy with the least independent data infrastructure, its traffic historically riding through Kenya or South Africa. That is changing on two fronts. Raxio Tanzania, a 6 megawatt facility in Dar es Salaam, is set to launch in 2026 as the country's first carrier-neutral Tier III data centre (Raxio Group), the kind of facility that lets Tanzanian banks and telcos interconnect without leaving the country. Wingu, which already runs a Dar facility as part of its regional network (Datacenters.com), adds competition and choice, and its Phase 2 Dar es Salaam expansion reached a milestone in November 2026: Uptime Institute Tier III Certification of Design Documents, covering a Phase 2 data hall and designated meet-me rooms with a stated peak IT load of 507 kilowatts. The building itself is still under construction, so the milestone to watch next is the constructed-facility certification, but the signal is clear: the region's edge operators are building enterprise-grade footprints outside Nairobi.
 
 Tanzania's advantages: gas-fired generation gives its grid a fuel-based stability, its own submarine cable landings mean it is not dependent on Kenyan routes for international bandwidth, and a large domestic market with data localisation instincts. Its frictions: historically restrictive policy instincts and a slower enterprise cloud adoption curve. Watch the Raxio launch; carrier-neutral capacity is the catalyst that turned Nairobi's market competitive, and Dar is running the same playbook five years later.
 
@@ -123,7 +125,7 @@ Ethiopia's resources are real: hydro generation at enormous scale, a population 
 | --- | --- | --- | --- | --- |
 | Kenya | ADC NBO1/NBO2, Raxio Nairobi, Wingu, ixafrica, iColo MBA1 (Mombasa) | About 45 percent geothermal baseload | 7 live cable systems, KIXP peering | Grid capacity limits shaping hyperscale deals |
 | Uganda | Raxio Kampala (2020, first certified Tier III, up to 400 racks), Wingu Kampala | Hydro, seasonal exposure | Transit via Kenyan routes | In-country hosting mandates pulling workloads home |
-| Tanzania | Raxio Dar (6 MW, launching 2026), Wingu Dar | Gas-fired stability | Own cable landings | Carrier-neutral launch as the market catalyst |
+| Tanzania | Raxio Dar (6 MW, launching 2026), Wingu Dar (Phase 2, Tier III design-certified, 507 kW) | Gas-fired stability | Own cable landings | Carrier-neutral launch as the market catalyst |
 | Rwanda | Raxio Kigali (2022, first carrier-neutral Tier III) | Modest hydro grid | Landlocked, transits neighbours | High-trust niche and government workloads |
 | Ethiopia | Raxio Addis (about 3 MW), Wingu at Ethio ICT Park | Massive hydro potential | Largest population, thinnest base | Liberalisation pace and currency risk |
 
